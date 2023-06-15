@@ -26,21 +26,21 @@ public class collisionheroemulti : NetworkBehaviour
     public void OnTriggerEnter(Collider col)
     {
         
-        if (col.gameObject.tag == "enemigo")
+        if (col.gameObject.tag == "enemigo" && IsOwner)
         {
             
             if (heroe.activar == true)
             {
                 Debug.Log("no");
             
-                heroe2.hp -= heroe.ataque;
+                heroe2.hpr.Value -= heroe.ataque;
                 heroe.activar = false;
                 heroe2.danos.Play();
                 
 
             }
         }
-        if (col.gameObject.tag == "pini")
+        if (col.gameObject.tag == "pini" && IsOwner)
         {
             heroe.ataque = 0;
             

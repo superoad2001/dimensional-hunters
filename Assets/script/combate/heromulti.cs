@@ -112,6 +112,31 @@ public class heromulti : NetworkBehaviour
     public managermulti managermulti;
 
 
+
+    public NetworkVariable<FixedString64Bytes> hnamer = new NetworkVariable<FixedString64Bytes>(" ", 
+    NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
+    public NetworkVariable<FixedString64Bytes> bichor = new NetworkVariable<FixedString64Bytes>(" ", 
+    NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
+
+    public NetworkVariable<float> hpr = new NetworkVariable<float>(0, 
+    NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
+    public NetworkVariable<float> manar = new NetworkVariable<float>(0, 
+    NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
+    public NetworkVariable<float> manarecr = new NetworkVariable<float>(0, 
+    NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
+    public NetworkVariable<float> fuerzar = new NetworkVariable<float>(0, 
+    NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
+
+    public NetworkVariable<bool> defr = new NetworkVariable<bool>(false, 
+    NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
+
+    public NetworkVariable<float> atbr = new NetworkVariable<float>(2, 
+    NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
+
+    public NetworkVariable<float> turbor = new NetworkVariable<float>(2, 
+    NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
+
+
     
     // Start is called before the first frame update
     public void Start()
@@ -151,9 +176,10 @@ public class heromulti : NetworkBehaviour
     public void Update()
     {   
         
-    if(carga == false && managermulti.comenzar == true)
+    if(carga == false && managermulti.comenzar.Value == true)
     {
-        if(NetworkManager.IsHost)
+        carga = true;
+        if(IsOwner)
         
         {
         hp = PlayerPrefs.GetFloat("hps", 100);
@@ -162,8 +188,17 @@ public class heromulti : NetworkBehaviour
         fuerza = PlayerPrefs.GetFloat("fuerzas", 1);
         hname = (string)PlayerPrefs.GetString("names", "misigno");
         bicho = (string)PlayerPrefs.GetString("bichosh", "madcat");
+
+        cargadatos();
         }
-        
+        hp = hpr.Value;
+        mana = manar.Value;
+        manarec = manarecr.Value;
+        fuerza = fuerzar.Value;
+        hname = hnamer.Value.ToString();
+        bicho = bichor.Value.ToString();
+
+
         hpmax = (int)hp;
         manamax = (int)mana;
 
@@ -356,9 +391,20 @@ public class heromulti : NetworkBehaviour
             dano1 = dano1cat;
             dano2 = dano2cat;
         }
-        carga = true;
+        
     }
-        if(managermulti.comenzar == false) return;
+        if(!IsOwner)
+        {
+        hp = hpr.Value;
+        mana = manar.Value;
+        manarec = manarecr.Value;
+        fuerza = fuerzar.Value;
+        atb = atbr.Value;
+        turbobar = turbor.Value;
+        hname = hnamer.Value.ToString();
+        bicho = bichor.Value.ToString();
+        }
+        if(managermulti.comenzar.Value == false) return;
         if (dano == 0)
         {
             danos = dano0;
@@ -493,6 +539,7 @@ public class heromulti : NetworkBehaviour
                 prot2.enabled = false;
                 prot3.enabled = false;
                 escudo.gameObject.SetActive(true);
+                defr.Value = true;
                 defusar = true;
             }
             else if (def == true && mana > 0  && mana < 5 && permiso == false && defusar == true)
@@ -503,10 +550,11 @@ public class heromulti : NetworkBehaviour
                 prot2.enabled = false;
                 prot3.enabled = false;
                 escudo.gameObject.SetActive(true);
+                defr.Value = true;
             }
             else if(def == true)
             {botno.Play();}
-            else 
+            else if(IsOwner)
             {   
                 botebool = false;
                 bote.Stop();
@@ -530,6 +578,7 @@ public class heromulti : NetworkBehaviour
                     {mana+= 4f * manarec * Time.deltaTime;}
                 }
                 escudo.gameObject.SetActive(false);
+                defr.Value = false;
             
             }
             
@@ -568,11 +617,37 @@ public class heromulti : NetworkBehaviour
         }
         mename.text = hname;
 
-
-        if(managermulti.check1 == false)
-        {carga = false;}
+        if(IsOwner == false && defr.Value == true)
+        {
+            prot.enabled = false;
+            prot2.enabled = false;
+            prot3.enabled = false;
+            escudo.gameObject.SetActive(true);
+        }
+        if(IsOwner == false && defr.Value == false)
+        {
+            prot.enabled = true;
+            prot2.enabled = true;
+            prot3.enabled = true;
+            escudo.gameObject.SetActive(false);
+        }
+        if(IsOwner)
+        {
+            cargadatos();
+        }
 
         
+    }
+    private void cargadatos()
+    {
+        hpr.Value = hp;
+        manar.Value = mana;
+        manarecr.Value = manarec;
+        fuerzar.Value = fuerza;
+        hnamer.Value = hname;
+        bichor.Value = bicho;
+        turbor.Value = turbobar;
+        atbr.Value = atb;
     }
     
     

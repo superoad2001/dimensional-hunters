@@ -9,7 +9,25 @@ using Unity.Netcode;
 public class heromulti2  : NetworkBehaviour
 {
     
+    public NetworkVariable<FixedString64Bytes> hnamer = new NetworkVariable<FixedString64Bytes>("misigno", 
+    NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
+    public NetworkVariable<FixedString64Bytes> bichor = new NetworkVariable<FixedString64Bytes>("shitfloor", 
+    NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
 
+    public NetworkVariable<float> hpr = new NetworkVariable<float>(100, 
+    NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
+    public NetworkVariable<float> manar = new NetworkVariable<float>(100, 
+    NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
+    public NetworkVariable<float> manarecr = new NetworkVariable<float>(2, 
+    NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
+    public NetworkVariable<float> fuerzar = new NetworkVariable<float>(2, 
+    NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
+
+    public NetworkVariable<float> atbr = new NetworkVariable<float>(2, 
+    NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
+
+    public NetworkVariable<float> turbor = new NetworkVariable<float>(2, 
+    NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
     public string hname;
     public string bicho;
     public float hp;
@@ -17,7 +35,8 @@ public class heromulti2  : NetworkBehaviour
     public float manarec;
     public float fuerza;
 
-
+    public NetworkVariable<bool> defr = new NetworkVariable<bool>(false, 
+    NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
 
 
 
@@ -159,11 +178,11 @@ public class heromulti2  : NetworkBehaviour
     public void Update()
     {  
 
-        if(carga == false && managermulti.comenzar == true)
+        if(carga == false && managermulti.comenzar.Value == true)
         {
-
+        carga = true;
         
-        if(!NetworkManager.IsHost)
+        if(!IsOwner)
         {
         hp = PlayerPrefs.GetFloat("hps", 100);
         mana = PlayerPrefs.GetFloat("manas", 100);
@@ -172,8 +191,20 @@ public class heromulti2  : NetworkBehaviour
         hname = (string)PlayerPrefs.GetString("names", "misigno");
         bicho = (string)PlayerPrefs.GetString("bichosh", "madcat");
 
+        cargadatosServerRpc(hp,mana,manarec,fuerza,hname,bicho,turbobar,atb);
+
     
         }
+        if(IsOwner)
+        {
+        hp = hpr.Value;
+        mana = manar.Value;
+        manarec = manarecr.Value;
+        fuerza = fuerzar.Value;
+        hname = hnamer.Value.ToString();
+        bicho = bichor.Value.ToString();
+        }
+
 
         hpmax = (int)hp;
         manamax = (int)mana;
@@ -367,9 +398,22 @@ public class heromulti2  : NetworkBehaviour
             dano1 = dano1cat;
             dano2 = dano2cat;
         }
+
+
         carga = true;
         }
-        if(managermulti.comenzar == false) return;
+        if(IsOwner)
+        {
+        hp = hpr.Value;
+        mana = manar.Value;
+        manarec = manarecr.Value;
+        fuerza = fuerzar.Value;
+        atb = atbr.Value;
+        turbobar = turbor.Value;
+        hname = hnamer.Value.ToString();
+        bicho = bichor.Value.ToString();
+        }
+        if(managermulti.comenzar.Value == false) return;
         if (dano == 0)
         {
             danos = dano0;
@@ -504,6 +548,7 @@ public class heromulti2  : NetworkBehaviour
                 prot2.enabled = false;
                 prot3.enabled = false;
                 escudo.gameObject.SetActive(true);
+                defServerRpc(true);
                 defusar = true;
             }
             else if (def == true && mana > 0  && mana < 5 && permiso == false && defusar == true)
@@ -514,10 +559,11 @@ public class heromulti2  : NetworkBehaviour
                 prot2.enabled = false;
                 prot3.enabled = false;
                 escudo.gameObject.SetActive(true);
+                defServerRpc(true);
             }
             else if(def == true)
             {botno.Play();}
-            else 
+            else if(!IsOwner)
             {   
                 botebool = false;
                 bote.Stop();
@@ -541,6 +587,7 @@ public class heromulti2  : NetworkBehaviour
                     {mana+= 4f * manarec * Time.deltaTime;}
                 }
                 escudo.gameObject.SetActive(false);
+                defServerRpc(false);
             
             }
             
@@ -580,9 +627,42 @@ public class heromulti2  : NetworkBehaviour
         mename.text = hname;
     
 
-        if(managermulti.check1 == false)
-        {carga = false;}
+        if(IsOwner && defr.Value == true)
+        {
+            prot.enabled = false;
+            prot2.enabled = false;
+            prot3.enabled = false;
+            escudo.gameObject.SetActive(true);
+        }
+        if(IsOwner && defr.Value == false)
+        {
+            prot.enabled = true;
+            prot2.enabled = true;
+            prot3.enabled = true;
+            escudo.gameObject.SetActive(false);
+        }
+        if(!IsOwner)
+        {
+            cargadatosServerRpc(hp,mana,manarec,fuerza,hname,bicho,turbobar,atb);
+        }
         
+    }
+    [ServerRpc(RequireOwnership = false)]
+    private void cargadatosServerRpc(float hpc,float manac,float manarecc,float fuerzac,string hnamec,string bichoc,float turboc,float atbc)
+    {
+        hpr.Value = hpc;
+        manar.Value = manac;
+        manarecr.Value = manarecc;
+        fuerzar.Value = fuerzac;
+        hnamer.Value = hnamec;
+        bichor.Value = bichoc;
+        turbor.Value = turboc;
+        atbr.Value = atbc;
+    }
+    [ServerRpc(RequireOwnership = false)]
+    public void defServerRpc(bool defrc)
+    {
+        defr.Value = defrc;
     }
 
     

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Unity.Netcode;
+using Unity.Netcode.Transports.UTP;
+
 
 public class networkui : NetworkBehaviour
 {
@@ -10,61 +12,73 @@ public class networkui : NetworkBehaviour
 
     public heromulti heroe;
     public heromulti2 heroe2;
-    
+    public Text input;
     public Text codigo;
     public managermulti manamulti;
+
+    public Unity.Netcode.Transports.UTP.UnityTransport.ConnectionAddressData UnityTransport;
+
+    public bool activar = false;
+
+    
     // Start is called before the first frame update
     void Start()
     {
         codigo.text = "";
     }
-    public ulong clientId;
     // Update is called once per frame
+    
     void Update()
     {
-        
-        heroe.carga = false;
-        heroe2.carga = false;
-        if(!IsOwner)
+        if(IsOwner)
         {
-            clientId = OwnerClientId;
-            if(clientId > 0)
-            {
-                NetworkManager.Singleton.Shutdown();
-                manamulti.check2 = false;
-                heroe2.carga = false;
-            }
+        if(NetworkManager.Singleton.ConnectedClients.Count == 2)
+        {
+            manamulti.check2.Value = true;
         }
-        Debug.Log(clientId);
+        }
+        if(IsOwner){
+        Debug.Log("clientes: "+NetworkManager.Singleton.ConnectedClients.Count);}
     }
     public void starthost()
     {
-        
+        if(activar == false)
+        {
+        UnityTransport.Address = Random.Range(1200,9999).ToString();
         NetworkManager.Singleton.StartHost();
-        if(!NetworkManager.IsHost)return;
-        manamulti.check1 = true;
+        codigo.text = "CODIGO DE SALA:"+ UnityTransport.Address;
+        activar = true;
         heroe.carga = false;
-        codigo.text = "CODIGO DE SALA: XXXXXXX";
+        manamulti.check1.Value = true;
+        }
     }
     public void startclient()
     {
+        if(activar == false && input.text != "")
+        {
+        UnityTransport.ServerListenAddress = input.text;
         NetworkManager.Singleton.StartClient();
-        if(NetworkManager.IsHost)return;
-        manamulti.check2 = true;
+        activar = true;
         heroe2.carga = false;
-        
-        
+        manamulti.check2c = true;
+        }
     }
+
+
     public void apagar()
     {
-        NetworkManager.Singleton.Shutdown();
+        activar = false;
         heroe.carga = false;
         heroe2.carga = false;
-        if(NetworkManager.IsHost)
-        {manamulti.check1 = false;}
-        if(!NetworkManager.IsHost)
-        {manamulti.check2 = false;}
         codigo.text = "";
+        if(IsOwner == true)
+        {manamulti.check1.Value = false;
+        manamulti.check2.Value = false;}
+        NetworkManager.Singleton.Shutdown();
+        manamulti.check1c = false;
+        manamulti.check2c = false;
+
         
     }
+
 }

@@ -194,8 +194,8 @@ public class obtenermenu : MonoBehaviour
         catalogo.Add("madcat");
 
         
-        hp = PlayerPrefs.GetFloat("hpr", 10);
-        mana = PlayerPrefs.GetFloat("manar", 10);
+        hp = PlayerPrefs.GetFloat("hpr", 10000);
+        mana = PlayerPrefs.GetFloat("manar", 10000);
         manarec = PlayerPrefs.GetFloat("manarecr",1);
         fuerza = PlayerPrefs.GetFloat("fuerzar",1);
         elemento =  PlayerPrefs.GetString("tipor", "terreno");

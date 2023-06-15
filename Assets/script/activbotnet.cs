@@ -17,12 +17,12 @@ public class activbotnet : NetworkBehaviour
     void Update()
     {
         //Debug.Log(NetworkObject.OwnerClientId);
-        if(!NetworkManager.IsHost)
+        if(!IsOwner)
         {
             jugador2.SetActive(true);
             jugador1.SetActive(false);
         }
-        if(NetworkManager.IsHost)
+        if(IsOwner)
         {
             jugador1.SetActive(true);
             jugador2.SetActive(false);

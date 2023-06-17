@@ -34,8 +34,7 @@ public class menu2 : MonoBehaviour
     }
     public void _tienda()
     {
-        if(tutorial3 == 1)
-        {SceneManager.LoadScene("tienda");}
+        SceneManager.LoadScene("tienda");
     }
     public void _atras()
     {

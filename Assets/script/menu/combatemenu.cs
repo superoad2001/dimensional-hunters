@@ -190,9 +190,6 @@ public class combatemenu : MonoBehaviour
     void Start()
     {
 
-        tutorial2 = PlayerPrefs.GetInt("tutorial2",0);
-        if(tutorial2 == 0)
-        {tornetext.text = "bloqueado";}
 
         ciuda = new string[6];
 

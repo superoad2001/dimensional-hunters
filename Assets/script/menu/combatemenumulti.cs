@@ -299,7 +299,7 @@ public class combatemenumulti : MonoBehaviour
 
         inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
         if(inventario1 == true && atras == true)
-        {SceneManager.LoadScene("seleccion");}
+        {SceneManager.LoadScene("combatemenu");}
         if (actc == true)
         {
             if (inv.name.Count == 0)
@@ -332,6 +332,8 @@ public class combatemenumulti : MonoBehaviour
         }
         if (intercambioc == true)
         {
+            if (inv.name.Count == 0)
+            {actnobichos2 = true;}
             inventario1 = false;
             elemento_.gameObject.SetActive(false);
             elemt.gameObject.SetActive(false);

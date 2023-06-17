@@ -47,8 +47,7 @@ public class zonacaza : MonoBehaviour
     }
     public void omega()
     {
-        if(tutorial5 == 1)
-        {SceneManager.LoadScene("cazasomega");}
+    SceneManager.LoadScene("cazasomega");
     }
     void Start()
     {
@@ -95,8 +94,6 @@ public class zonacaza : MonoBehaviour
     void Update()
     {
         inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
-        if(tutorial5 == 0)
-        {omegatext.text = "bloqueado";}
         if (alt == 1)
         {
             if (derb == true && i < 9)

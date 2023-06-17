@@ -42,9 +42,10 @@ public class networkui2 : NetworkBehaviour
     {
         if(activar == false)
         {
-        UnityTransport.Address = Random.Range(10000,99999).ToString();
+        int en = Random.Range(1000,9999);
+        UnityTransport.Address = "I"+en.ToString();
         NetworkManager.Singleton.StartHost();
-        codigo.text = "CODIGO DE SALA:"+ UnityTransport.Address;
+        codigo.text = "CODIGO DE SALA:"+ en;
         activar = true;
         manamulti.check1.Value = true;
         }
@@ -53,7 +54,7 @@ public class networkui2 : NetworkBehaviour
     {
         if(activar == false && input.text != "")
         {
-        UnityTransport.ServerListenAddress = input.text;
+        UnityTransport.ServerListenAddress = "I"+input.text;
         NetworkManager.Singleton.StartClient();
         activar = true;
         manamulti.check2c = true;

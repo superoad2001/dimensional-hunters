@@ -1965,7 +1965,7 @@ MonoBehaviour:
   menu: {fileID: 525215624}
   combate: {fileID: 0}
   botones: {fileID: 0}
-  listo: {fileID: 0}
+  listo: {fileID: 187840293}
   comenzar:
     m_InternalValue: 0
   cambio:
@@ -1977,8 +1977,8 @@ MonoBehaviour:
   check1c: 0
   check2c: 0
   temp: 0
-  intercambio1: {fileID: 0}
-  intercambio2: {fileID: 0}
+  intercambio1: {fileID: 48044983}
+  intercambio2: {fileID: 48044985}
 --- !u!1 &872898113
 GameObject:
   m_ObjectHideFlags: 0
@@ -2390,7 +2390,7 @@ MonoBehaviour:
   m_LineType: 0
   m_HideMobileInput: 0
   m_CharacterValidation: 1
-  m_CharacterLimit: 5
+  m_CharacterLimit: 4
   m_OnSubmit:
     m_PersistentCalls:
       m_Calls: []
@@ -3594,7 +3594,7 @@ MonoBehaviour:
       SourceHashToOverride: 0
       OverridingTargetPrefab: {fileID: 0}
     - Override: 0
-      Prefab: {fileID: 0}
+      Prefab: {fileID: 48044981}
       SourcePrefabToOverride: {fileID: 0}
       SourceHashToOverride: 0
       OverridingTargetPrefab: {fileID: 0}

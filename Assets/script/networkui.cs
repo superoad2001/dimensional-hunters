@@ -44,7 +44,8 @@ public class networkui : NetworkBehaviour
     {
         if(activar == false)
         {
-        UnityTransport.Address = Random.Range(1200,9999).ToString();
+        int en = Random.Range(1000,9999);
+        UnityTransport.Address = "C"+en.ToString();
         NetworkManager.Singleton.StartHost();
         codigo.text = "CODIGO DE SALA:"+ UnityTransport.Address;
         activar = true;
@@ -56,7 +57,7 @@ public class networkui : NetworkBehaviour
     {
         if(activar == false && input.text != "")
         {
-        UnityTransport.ServerListenAddress = input.text;
+        UnityTransport.ServerListenAddress = "C"+input.text;
         NetworkManager.Singleton.StartClient();
         activar = true;
         heroe2.carga = false;

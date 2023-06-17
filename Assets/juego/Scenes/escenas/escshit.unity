@@ -417,6 +417,73 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 202171524}
   m_CullTransparentMesh: 1
+--- !u!1001 &416228836
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3516857995048794724, guid: 8d5c652d822954a0aad35ae5518eaab4, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3516857995048794724, guid: 8d5c652d822954a0aad35ae5518eaab4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3516857995048794724, guid: 8d5c652d822954a0aad35ae5518eaab4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3516857995048794724, guid: 8d5c652d822954a0aad35ae5518eaab4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3516857995048794724, guid: 8d5c652d822954a0aad35ae5518eaab4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3516857995048794724, guid: 8d5c652d822954a0aad35ae5518eaab4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3516857995048794724, guid: 8d5c652d822954a0aad35ae5518eaab4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3516857995048794724, guid: 8d5c652d822954a0aad35ae5518eaab4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3516857995048794724, guid: 8d5c652d822954a0aad35ae5518eaab4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3516857995048794724, guid: 8d5c652d822954a0aad35ae5518eaab4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3516857995048794724, guid: 8d5c652d822954a0aad35ae5518eaab4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3516857995048794725, guid: 8d5c652d822954a0aad35ae5518eaab4, type: 3}
+      propertyPath: m_TargetCamera
+      value: 
+      objectReference: {fileID: 947204408}
+    - target: {fileID: 3516857995048794726, guid: 8d5c652d822954a0aad35ae5518eaab4, type: 3}
+      propertyPath: m_Name
+      value: YoutubePlayer (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3516857995048794727, guid: 8d5c652d822954a0aad35ae5518eaab4, type: 3}
+      propertyPath: youtubeUrl
+      value: https://www.youtube.com/watch?v=2NS4t1MUUaQ&t=1s
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3516857995483875015, guid: 8d5c652d822954a0aad35ae5518eaab4, type: 3}
+    - {fileID: 3516857995483875014, guid: 8d5c652d822954a0aad35ae5518eaab4, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 8d5c652d822954a0aad35ae5518eaab4, type: 3}
 --- !u!1 &634764182
 GameObject:
   m_ObjectHideFlags: 0
@@ -825,87 +892,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!1 &1360191545
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1360191548}
-  - component: {fileID: 1360191547}
-  - component: {fileID: 1360191546}
-  m_Layer: 0
-  m_Name: YoutubePlayer
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!328 &1360191546
-VideoPlayer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1360191545}
-  m_Enabled: 1
-  m_VideoClip: {fileID: 0}
-  m_TargetCameraAlpha: 1
-  m_TargetCamera3DLayout: 0
-  m_TargetCamera: {fileID: 947204408}
-  m_TargetTexture: {fileID: 0}
-  m_TimeReference: 0
-  m_TargetMaterialRenderer: {fileID: 133145646}
-  m_TargetMaterialProperty: _MainTex
-  m_RenderMode: 1
-  m_AspectRatio: 2
-  m_DataSource: 0
-  m_PlaybackSpeed: 1
-  m_AudioOutputMode: 2
-  m_TargetAudioSources:
-  - {fileID: 0}
-  m_DirectAudioVolumes:
-  - 1
-  m_Url: 
-  m_EnabledAudioTracks: 01
-  m_DirectAudioMutes: 00
-  m_ControlledAudioTrackCount: 1
-  m_PlayOnAwake: 0
-  m_SkipOnDrop: 1
-  m_Looping: 0
-  m_WaitForFirstFrame: 1
-  m_FrameReadyEventEnabled: 0
-  m_VideoShaders: []
---- !u!114 &1360191547
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1360191545}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d7e51279da0f40399329f6d4cf01775, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  videoUrl: https://www.youtube.com/watch?v=1PuGuqpHQGo
---- !u!4 &1360191548
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1360191545}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1395604991
 GameObject:
   m_ObjectHideFlags: 0
@@ -1174,7 +1160,7 @@ RectTransform:
   m_Children:
   - {fileID: 634764183}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

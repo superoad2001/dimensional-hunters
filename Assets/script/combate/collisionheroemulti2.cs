@@ -15,10 +15,14 @@ public class collisionheroemulti2 : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.localPosition == new Vector3(-3.8599999f,0.583000004f,5.58799982f)  && heroe.temp4 > 1)
+        if (transform.localPosition == new Vector3(-3.8599999F,0.583000004F,5.58799982F)  && heroe.temp4 > 0.4f && NetworkManager.IsHost == false)
             {
                 heroe.permiso = false;
                 heroe.temp4 = 0;
+                int atk = 0;
+                permisoServerRpc(false);
+                heroe.atkServerRpc(atk);
+                
             }
 
 
@@ -26,29 +30,37 @@ public class collisionheroemulti2 : NetworkBehaviour
     public void OnTriggerEnter(Collider col)
     {
         
-        if (col.gameObject.tag == "enemigo" && IsOwner == false)
+        if (col.gameObject.tag == "Player" && NetworkManager.IsHost == false)
         {
-            
+            Debug.Log("jugador2: 1");
             if (heroe.activar == true)
             {
-                Debug.Log("no");
-                golpeServerRpc(heroe.ataque);
+                float atke = heroe.ataque;
+                int atk = 0;
+                Debug.Log("jugador2: 2");
+                heroe2.golpeServerRpc(atke);
+                heroe.atkServerRpc(atk);
+                heroe2.hp = heroe2.hpr.Value;
                 heroe.activar = false;
                 heroe2.danos.Play();
                 
 
             }
         }
-        if (col.gameObject.tag == "pine" && IsOwner == false)
+        if (col.gameObject.tag == "pine" && NetworkManager.IsHost == false)
         {
             heroe.ataque = 0;
             
         }
 
     }
+    
+
+
+
     [ServerRpc(RequireOwnership = false)]
-    public void golpeServerRpc(float atk)
+    public void permisoServerRpc(bool permisoc)
     {
-        heroe2.hpr.Value -= atk;
+        heroe.permisor.Value = permisoc;
     }
 }

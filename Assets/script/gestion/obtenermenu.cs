@@ -385,8 +385,7 @@ public class obtenermenu : MonoBehaviour
                 if(atras == true && temp > 0.3f)
                 {
                    
-                    //SceneManager.LoadScene("seleccion");
-                    SceneManager.LoadScene("combatemenumulti");
+                    SceneManager.LoadScene("seleccion");
                 }
         }
         if(nombre2 == true)
@@ -441,8 +440,7 @@ public class obtenermenu : MonoBehaviour
                     }
                     inv.indexmax = inv.name.Count;
                     PlayerPrefs.SetFloat("index",inv.indexmax);
-                    //SceneManager.LoadScene("seleccion");
-                    SceneManager.LoadScene("combatemenumulti");
+                    SceneManager.LoadScene("seleccion");
                 }
         }
         if(borrarpre == true)

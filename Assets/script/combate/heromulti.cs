@@ -77,6 +77,7 @@ public class heromulti : NetworkBehaviour
     public float mana;
     public float manarec;
     public float fuerza;
+    public float nivel;
 
     public int hpmax;
     public int manamax;
@@ -136,6 +137,20 @@ public class heromulti : NetworkBehaviour
     public NetworkVariable<float> turbor = new NetworkVariable<float>(2, 
     NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
 
+    public NetworkVariable<float> hpmaxr = new NetworkVariable<float>(100, 
+    NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
+    public NetworkVariable<float> manamaxr = new NetworkVariable<float>(100, 
+    NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
+
+    public NetworkVariable<float> atkr = new NetworkVariable<float>(0, 
+    NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
+
+    public NetworkVariable<bool> permisor = new NetworkVariable<bool>(false, 
+    NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
+
+    public NetworkVariable<float> nivelr = new NetworkVariable<float>(1, 
+    NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
+
 
     
     // Start is called before the first frame update
@@ -175,7 +190,50 @@ public class heromulti : NetworkBehaviour
 
     public void Update()
     {   
-        
+    if(!IsOwner)
+        {
+            if(atkr.Value == 0)
+            {
+                baseanim.SetBool("atkrapfue", false);
+                baseanim.SetBool("atkvel", false);
+                baseanim.SetBool("atkfue", false);
+                baseanim.SetBool("atkturbo", false);
+
+                baseanim2.SetBool("atkrapfue", false);
+                baseanim2.SetBool("atkvel", false);
+                baseanim2.SetBool("atkfue", false);
+                baseanim2.SetBool("atkturbo", false);
+
+                baseanim3.SetBool("atkrapfue", false);
+                baseanim3.SetBool("atkvel", false);
+                baseanim3.SetBool("atkfue", false);
+                baseanim3.SetBool("atkturbo", false);
+            }
+            if(atkr.Value == 1)
+            {
+                baseanim.SetBool("atkvel", true);
+                baseanim2.SetBool("atkvel", true);
+                baseanim3.SetBool("atkvel", true);
+            }
+            if(atkr.Value == 2)
+            {
+                baseanim.SetBool("atkfue", true);
+                baseanim2.SetBool("atkfue", true);
+                baseanim3.SetBool("atkfue", true);
+            }
+            if(atkr.Value == 3)
+            {
+                baseanim.SetBool("atkrapfue", true);
+                baseanim2.SetBool("atkrapfue", true);
+                baseanim3.SetBool("atkrapfue", true);
+            }
+            if(atkr.Value == 4)
+            {
+                baseanim.SetBool("atkturbo", true);
+                baseanim2.SetBool("atkturbo", true);
+                baseanim3.SetBool("atkturbo", true);
+            }
+        }
     if(carga == false && managermulti.comenzar.Value == true)
     {
         carga = true;
@@ -188,6 +246,9 @@ public class heromulti : NetworkBehaviour
         fuerza = PlayerPrefs.GetFloat("fuerzas", 1);
         hname = (string)PlayerPrefs.GetString("names", "misigno");
         bicho = (string)PlayerPrefs.GetString("bichosh", "madcat");
+        nivel = PlayerPrefs.GetFloat("nivelss", 1);
+        hpmax = (int)hp;
+        manamax = (int)mana;
 
         cargadatos();
         }
@@ -197,11 +258,301 @@ public class heromulti : NetworkBehaviour
         fuerza = fuerzar.Value;
         hname = hnamer.Value.ToString();
         bicho = bichor.Value.ToString();
+        hpmax = (int)hpmaxr.Value;
+        manamax = (int)manamaxr.Value;
+
+        modelos();
+        
+    }
+    managerdecombatemulti manager = UnityEngine.Object.FindObjectOfType<managerdecombatemulti>();
+    if(managermulti.comenzar.Value == true)
+    {
+        if(IsOwner == false && manager.comienzo == false)
+        {
+            modelos();
+        }
+        hp = hpr.Value;
+        if(!IsOwner)
+        {
+        mana = manar.Value;
+        manarec = manarecr.Value;
+        fuerza = fuerzar.Value;
+        atb = atbr.Value;
+        turbobar = turbor.Value;
+        hpmax = (int)hpmaxr.Value;
+        manamax = (int)manamaxr.Value;
+        hname = hnamer.Value.ToString();
+        bicho = bichor.Value.ToString();
+        permiso = permisor.Value;
+        }
+        if (dano == 0)
+        {
+            danos = dano0;
+        }
+        if (dano == 1)
+        {
+            danos = dano1;
+        }
+        if (dano == 2)
+        {
+            danos = dano2;
+        }
+        if (manager.comienzo == true)
+        {
+            if(IsOwner)
+            {
+            baseanim.SetBool("atkrapfue", false);
+            baseanim.SetBool("atkvel", false);
+            baseanim.SetBool("atkfue", false);
+            baseanim.SetBool("atkturbo", false);
+
+            baseanim2.SetBool("atkrapfue", false);
+            baseanim2.SetBool("atkvel", false);
+            baseanim2.SetBool("atkfue", false);
+            baseanim2.SetBool("atkturbo", false);
+
+            baseanim3.SetBool("atkrapfue", false);
+            baseanim3.SetBool("atkvel", false);
+            baseanim3.SetBool("atkfue", false);
+            baseanim3.SetBool("atkturbo", false);
+            if (rapido == true && atb == 100 && mana >= 20 && permiso == false && enemigo.permiso == false)
+            {
+                activar = true;
+                permiso = true;
+                atkr.Value = 1;
+                mana -= 20;
+                turbobar += 10;
+                ataque = Random.Range(10,16) * fuerza;
+                atb = 0;
+                rapsound.Play();
+                baseanim.SetBool("atkvel", true);
+                baseanim2.SetBool("atkvel", true);
+                baseanim3.SetBool("atkvel", true);
+                dano = Random.Range(0,3);
+                botcl.Play();
+                
+            }
+            else if (fuerte == true && atb == 100 && mana >= 30 && permiso == false && enemigo.permiso == false)
+            {
+            
+                activar = true;
+                permiso = true;
+                atkr.Value = 2;
+                mana -= 30;
+                fuesound.Play();
+                turbobar += 15;
+                ataque = Random.Range(16,20) * fuerza;
+                atb = 0;
+                baseanim.SetBool("atkfue", true);
+                baseanim2.SetBool("atkfue", true);
+                baseanim3.SetBool("atkfue", true);
+                dano = Random.Range(0,3);
+                botcl.Play();
+                botno.Stop();
+                
+            }
+            else if (rapfue == true && atb == 100 && mana >= 40 && permiso == false && enemigo.permiso == false)
+            {
+                activar = true;
+                permiso = true;
+                atkr.Value = 3;
+                mana -= 50;
+                rapfuesound.Play();
+                turbobar += 35;
+                ataque = Random.Range(18,25) * fuerza;
+                atb = 0;
+                baseanim.SetBool("atkrapfue", true);
+                baseanim2.SetBool("atkrapfue", true);
+                baseanim3.SetBool("atkrapfue", true);
+                dano = Random.Range(0,3);
+                botcl.Play();
+                botno.Stop();
+                
+            }
+            else if (turbo == true && atb == 100 && turbobar == 100 && permiso == false && enemigo.permiso == false)
+            {
+                activar = true;
+                permiso = true;
+                atkr.Value = 4;
+                turbobar = 0;
+                turbosound.Play();
+                ataque = Random.Range(40,50) * fuerza;
+                atb = 0;
+                baseanim.SetBool("atkturbo", true);
+                baseanim2.SetBool("atkturbo", true);
+                baseanim3.SetBool("atkturbo", true);
+                dano = Random.Range(0,3);
+                botcl.Play();
+                botno.Stop();
+                
+            }
+            else if (turbo == true || rapfue == true || fuerte == true || rapido == true)
+            {
+                botno.Play();
+                
+            }
+            else
+            {
+                baseanim.SetBool("atkrapfue", false);
+                baseanim.SetBool("atkvel", false);
+                baseanim.SetBool("atkfue", false);
+                baseanim.SetBool("atkturbo", false);
+
+                baseanim2.SetBool("atkrapfue", false);
+                baseanim2.SetBool("atkvel", false);
+                baseanim2.SetBool("atkfue", false);
+                baseanim2.SetBool("atkturbo", false);
+
+                baseanim3.SetBool("atkrapfue", false);
+                baseanim3.SetBool("atkvel", false);
+                baseanim3.SetBool("atkfue", false);
+                baseanim3.SetBool("atkturbo", false);
+        
+
+            }
+            if (def == true && mana >= 5 && permiso == false && permiso == false)
+            {
+
+                if(botebool == false)
+                {bote.Play();}
+                botno.Stop();
+                botebool = true;
+                mana -= 3.5f * Time.deltaTime;
+                turbobar += 0.7f * Time.deltaTime;
+                prot.enabled = false;
+                prot2.enabled = false;
+                prot3.enabled = false;
+                escudo.gameObject.SetActive(true);
+                defr.Value = true;
+                defusar = true;
+            }
+            else if (def == true && mana > 0  && mana < 5 && permiso == false && defusar == true)
+            {
+                mana -= 3.5f * Time.deltaTime;
+                turbobar += 0.7f * Time.deltaTime;
+                prot.enabled = false;
+                prot2.enabled = false;
+                prot3.enabled = false;
+                escudo.gameObject.SetActive(true);
+                defr.Value = true;
+            }
+            else if(def == true)
+            {botno.Play();}
+            else
+            {   
+                botebool = false;
+                bote.Stop();
+                defusar = false;
+                prot.enabled = true;
+                prot2.enabled = true;
+                prot3.enabled = true;
+                if(mana > -1)
+                {
+                    if (mana < manamax)
+                    {mana+= 3f * manarec * Time.deltaTime;}
+                }
+                if(mana > 50)
+                {
+                    if (mana < manamax)
+                    {mana+= 3.5f * manarec * Time.deltaTime;}
+                }
+                if(mana > 75)
+                {
+                    if (mana < manamax)
+                    {mana+= 4f * manarec * Time.deltaTime;}
+                }
+                escudo.gameObject.SetActive(false);
+                defr.Value = false;
+            
+            }
+            
+            
+            
+
+            if (temp < 15)
+            {temp += 1 * Time.deltaTime;}
+            rapfue = false;
+            fuerte = false;
+            rapido = false;
+            turbo = false;
+
+            if (mana < 0)
+            {mana = 0;}
+            
+            if (turbobar > 100)
+            {turbobar = 100;}
+            if (hp > hpmax)
+            {hp = hpmax;}
+            if (mana > manamax)
+            {mana = manamax;}
+            if (hp < 0)
+            {hp = 0;}
+            if (mana < 0)
+            {mana = 0;}
+            }
+
+            mehp.text = "vit "+(int)hp+" / " + hpmax;
+            memana.text = "Stamina "+(int)mana+" / " + manamax;
 
 
-        hpmax = (int)hp;
-        manamax = (int)mana;
+            if (atb < 100)
+            {atb += 15 * Time.deltaTime;}
+            if (atb > 99) {atb = 100;}
+        }
+        mename.text = hname;
 
+        if(IsOwner == false && defr.Value == true)
+        {
+            prot.enabled = false;
+            prot2.enabled = false;
+            prot3.enabled = false;
+            escudo.gameObject.SetActive(true);
+        }
+        if(IsOwner == false && defr.Value == false)
+        {
+            prot.enabled = true;
+            prot2.enabled = true;
+            prot3.enabled = true;
+            escudo.gameObject.SetActive(false);
+        }
+        if(IsOwner)
+        {
+            cargadatos2();
+        }
+        }
+        if (temp4 < 15)
+        {temp4 += 1 * Time.deltaTime;}
+
+        
+    }
+    private void cargadatos()
+    {
+        hpr.Value = hp;
+        manar.Value = mana;
+        manarecr.Value = manarec;
+        fuerzar.Value = fuerza;
+        hnamer.Value = hname;
+        bichor.Value = bicho;
+        turbor.Value = turbobar;
+        atbr.Value = atb;
+        hpmaxr.Value = hpmax;
+        manamaxr.Value = manamax;
+        nivelr.Value = nivel;
+    }
+    private void cargadatos2()
+    {
+        permisor.Value = permiso;
+        manar.Value = mana;
+        turbor.Value = turbobar;
+        atbr.Value = atb;
+    }
+    [ServerRpc(RequireOwnership = false)]
+    public void golpeServerRpc(float atk)
+    {
+        hpr.Value -= atk;
+    }
+    public void modelos()
+    {
         if(bicho == "madcat")
         {
             
@@ -391,263 +742,6 @@ public class heromulti : NetworkBehaviour
             dano1 = dano1cat;
             dano2 = dano2cat;
         }
-        
-    }
-        if(!IsOwner)
-        {
-        hp = hpr.Value;
-        mana = manar.Value;
-        manarec = manarecr.Value;
-        fuerza = fuerzar.Value;
-        atb = atbr.Value;
-        turbobar = turbor.Value;
-        hname = hnamer.Value.ToString();
-        bicho = bichor.Value.ToString();
-        }
-        if(managermulti.comenzar.Value == false) return;
-        if (dano == 0)
-        {
-            danos = dano0;
-        }
-        if (dano == 1)
-        {
-            danos = dano1;
-        }
-        if (dano == 2)
-        {
-            danos = dano2;
-        }
-        managerdecombatemulti manager = UnityEngine.Object.FindObjectOfType<managerdecombatemulti>();
-        if (manager.comienzo == true)
-        {
-   
-            baseanim.SetBool("atkrapfue", false);
-            baseanim.SetBool("atkvel", false);
-            baseanim.SetBool("atkfue", false);
-            baseanim.SetBool("atkturbo", false);
-
-            baseanim2.SetBool("atkrapfue", false);
-            baseanim2.SetBool("atkvel", false);
-            baseanim2.SetBool("atkfue", false);
-            baseanim2.SetBool("atkturbo", false);
-
-            baseanim3.SetBool("atkrapfue", false);
-            baseanim3.SetBool("atkvel", false);
-            baseanim3.SetBool("atkfue", false);
-            baseanim3.SetBool("atkturbo", false);
-            if (rapido == true && atb == 100 && mana >= 20 && permiso == false && enemigo.permiso == false)
-            {
-                activar = true;
-                permiso = true;
-                mana -= 20;
-                turbobar += 10;
-                ataque = Random.Range(10,16) * fuerza;
-                atb = 0;
-                rapsound.Play();
-                baseanim.SetBool("atkvel", true);
-                baseanim2.SetBool("atkvel", true);
-                baseanim3.SetBool("atkvel", true);
-                dano = Random.Range(0,3);
-                botcl.Play();
-                
-            }
-            else if (fuerte == true && atb == 100 && mana >= 30 && permiso == false && enemigo.permiso == false)
-            {
-            
-                activar = true;
-                permiso = true;
-                mana -= 30;
-                fuesound.Play();
-                turbobar += 15;
-                ataque = Random.Range(16,20) * fuerza;
-                atb = 0;
-                baseanim.SetBool("atkfue", true);
-                baseanim2.SetBool("atkfue", true);
-                baseanim3.SetBool("atkfue", true);
-                dano = Random.Range(0,3);
-                botcl.Play();
-                botno.Stop();
-                
-            }
-            else if (rapfue == true && atb == 100 && mana >= 40 && permiso == false && enemigo.permiso == false)
-            {
-                activar = true;
-                permiso = true;
-                mana -= 50;
-                rapfuesound.Play();
-                turbobar += 35;
-                ataque = Random.Range(18,25) * fuerza;
-                atb = 0;
-                baseanim.SetBool("atkrapfue", true);
-                baseanim2.SetBool("atkrapfue", true);
-                baseanim3.SetBool("atkrapfue", true);
-                dano = Random.Range(0,3);
-                botcl.Play();
-                botno.Stop();
-                
-            }
-            else if (turbo == true && atb == 100 && turbobar == 100 && permiso == false && enemigo.permiso == false)
-            {
-                activar = true;
-                permiso = true;
-                turbobar = 0;
-                turbosound.Play();
-                ataque = Random.Range(40,50) * fuerza;
-                atb = 0;
-                baseanim.SetBool("atkturbo", true);
-                baseanim2.SetBool("atkturbo", true);
-                baseanim3.SetBool("atkturbo", true);
-                dano = Random.Range(0,3);
-                botcl.Play();
-                botno.Stop();
-                
-            }
-            else if (turbo == true || rapfue == true || fuerte == true || rapido == true)
-            {
-                botno.Play();
-                
-            }
-            else
-            {
-                baseanim.SetBool("atkrapfue", false);
-                baseanim.SetBool("atkvel", false);
-                baseanim.SetBool("atkfue", false);
-                baseanim.SetBool("atkturbo", false);
-
-                baseanim2.SetBool("atkrapfue", false);
-                baseanim2.SetBool("atkvel", false);
-                baseanim2.SetBool("atkfue", false);
-                baseanim2.SetBool("atkturbo", false);
-
-                baseanim3.SetBool("atkrapfue", false);
-                baseanim3.SetBool("atkvel", false);
-                baseanim3.SetBool("atkfue", false);
-                baseanim3.SetBool("atkturbo", false);
-        
-
-            }
-            if (def == true && mana >= 5 && permiso == false && permiso == false)
-            {
-
-                if(botebool == false)
-                {bote.Play();}
-                botno.Stop();
-                botebool = true;
-                mana -= 3.5f * Time.deltaTime;
-                turbobar += 0.7f * Time.deltaTime;
-                prot.enabled = false;
-                prot2.enabled = false;
-                prot3.enabled = false;
-                escudo.gameObject.SetActive(true);
-                defr.Value = true;
-                defusar = true;
-            }
-            else if (def == true && mana > 0  && mana < 5 && permiso == false && defusar == true)
-            {
-                mana -= 3.5f * Time.deltaTime;
-                turbobar += 0.7f * Time.deltaTime;
-                prot.enabled = false;
-                prot2.enabled = false;
-                prot3.enabled = false;
-                escudo.gameObject.SetActive(true);
-                defr.Value = true;
-            }
-            else if(def == true)
-            {botno.Play();}
-            else if(IsOwner)
-            {   
-                botebool = false;
-                bote.Stop();
-                defusar = false;
-                prot.enabled = true;
-                prot2.enabled = true;
-                prot3.enabled = true;
-                if(mana > -1)
-                {
-                    if (mana < manamax)
-                    {mana+= 3f * manarec * Time.deltaTime;}
-                }
-                if(mana > 50)
-                {
-                    if (mana < manamax)
-                    {mana+= 3.5f * manarec * Time.deltaTime;}
-                }
-                if(mana > 75)
-                {
-                    if (mana < manamax)
-                    {mana+= 4f * manarec * Time.deltaTime;}
-                }
-                escudo.gameObject.SetActive(false);
-                defr.Value = false;
-            
-            }
-            
-            
-
-            if (temp < 15)
-            {temp += 1 * Time.deltaTime;}
-            if (temp4 < 15)
-            {temp4 += 1 * Time.deltaTime;}
-            rapfue = false;
-            fuerte = false;
-            rapido = false;
-            turbo = false;
-
-            if (mana < 0)
-            {mana = 0;}
-            
-            if (turbobar > 100)
-            {turbobar = 100;}
-            if (hp > hpmax)
-            {hp = hpmax;}
-            if (mana > manamax)
-            {mana = manamax;}
-            if (hp < 0)
-            {hp = 0;}
-            if (mana < 0)
-            {mana = 0;}
-
-            mehp.text = "vit "+(int)hp+" / " + hpmax;
-            memana.text = "Stamina "+(int)mana+" / " + manamax;
-
-
-            if (atb < 100)
-            {atb += 15 * Time.deltaTime;}
-            if (atb > 99) {atb = 100;}
-        }
-        mename.text = hname;
-
-        if(IsOwner == false && defr.Value == true)
-        {
-            prot.enabled = false;
-            prot2.enabled = false;
-            prot3.enabled = false;
-            escudo.gameObject.SetActive(true);
-        }
-        if(IsOwner == false && defr.Value == false)
-        {
-            prot.enabled = true;
-            prot2.enabled = true;
-            prot3.enabled = true;
-            escudo.gameObject.SetActive(false);
-        }
-        if(IsOwner)
-        {
-            cargadatos();
-        }
-
-        
-    }
-    private void cargadatos()
-    {
-        hpr.Value = hp;
-        manar.Value = mana;
-        manarecr.Value = manarec;
-        fuerzar.Value = fuerza;
-        hnamer.Value = hname;
-        bichor.Value = bicho;
-        turbor.Value = turbobar;
-        atbr.Value = atb;
     }
     
     

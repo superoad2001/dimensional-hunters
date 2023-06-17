@@ -16,6 +16,7 @@ public class combatemenumulti : MonoBehaviour
     public bool bichoselec;
     public bool cajonentr;
     public bool actentre;
+    public Text libera;
 
     public List<string> name = new List<string>();
     public List<float> hp = new List<float>();
@@ -85,6 +86,10 @@ public class combatemenumulti : MonoBehaviour
     public GameObject botlib;
     public GameObject bichno;
 
+    public GameObject intercambiom;
+    
+    public bool intercambio;
+
     public Text bicho;
     public Text bicho1;
     public float temp = 0;
@@ -120,6 +125,8 @@ public class combatemenumulti : MonoBehaviour
 
     public Text tornetext;
     public int tutorial2;
+
+    public bool intercambioc;
 
     // Start is called before the first frame update
 
@@ -166,6 +173,10 @@ public class combatemenumulti : MonoBehaviour
     public void _entr()
     {
         actentre = true;
+    }
+    public void _inter()
+    {
+        intercambioc = true;
     }
     public void _tut()
     {
@@ -300,6 +311,7 @@ public class combatemenumulti : MonoBehaviour
             nobichos.gameObject.SetActive(false);
             botlib.gameObject.SetActive(false);
             bichno.gameObject.SetActive(false);
+            intercambiom.gameObject.SetActive(false);
             bicho = bicho1;
             i = 0;
             cajonbarcelona = false;
@@ -312,6 +324,35 @@ public class combatemenumulti : MonoBehaviour
             nobich = false;
             nobich2 = false;
             
+            vez1 = false;
+            intercambioc = false;
+            
+            
+            
+        }
+        if (intercambioc == true)
+        {
+            inventario1 = false;
+            elemento_.gameObject.SetActive(false);
+            elemt.gameObject.SetActive(false);
+            ciu.gameObject.SetActive(false);
+            nobichos.gameObject.SetActive(false);
+            botlib.gameObject.SetActive(false);
+            bichno.gameObject.SetActive(false);
+            intercambiom.gameObject.SetActive(true);
+            bicho = bicho1;
+            i = 0;
+            cajonbarcelona = false;
+            cajoncomb = false;
+            acta = false;
+            ciudades1 = false;
+            cajon = false;
+            actc = false;
+            actheroe = false;
+            nobich = false;
+            nobich2 = false;
+            intercambioc = false;
+            intercambio = true;
             vez1 = false;
             
             
@@ -326,6 +367,7 @@ public class combatemenumulti : MonoBehaviour
             nobichos.gameObject.SetActive(true);
             botlib.gameObject.SetActive(false);
             bichno.gameObject.SetActive(false);
+            intercambiom.gameObject.SetActive(false);
             bicho = bicho1;
             cajonbarcelona = false;
             cajoncomb = false;
@@ -337,6 +379,7 @@ public class combatemenumulti : MonoBehaviour
             nobich = true;
             nobich2 = false;
             actnobichos = false;
+            intercambioc = false;
             
             
             
@@ -350,6 +393,7 @@ public class combatemenumulti : MonoBehaviour
             nobichos.gameObject.SetActive(false);
             botlib.gameObject.SetActive(false);
             bichno.gameObject.SetActive(false);
+            intercambiom.gameObject.SetActive(false);
             cajon = false;
             cajonbarcelona = false;
             cajoncomb = false;
@@ -359,6 +403,7 @@ public class combatemenumulti : MonoBehaviour
             bichom.SetActive(false);
             actentre = false;
             cajonentr = false;
+            intercambioc = false;
             
             
             
@@ -372,6 +417,7 @@ public class combatemenumulti : MonoBehaviour
             nobichos.gameObject.SetActive(false);
             botlib.gameObject.SetActive(false);
             bichno.gameObject.SetActive(false);
+            intercambiom.gameObject.SetActive(false);
             bicho = bicho1;
             i = 0;
             cajon = false;
@@ -383,6 +429,7 @@ public class combatemenumulti : MonoBehaviour
             actheroe = false;
             vez1 = false;
             actentre = false;
+            intercambioc = false;
             
             
             
@@ -394,6 +441,7 @@ public class combatemenumulti : MonoBehaviour
             ciu.gameObject.SetActive(false);
             nobichos.gameObject.SetActive(false);
             botlib.gameObject.SetActive(false);
+            intercambiom.gameObject.SetActive(false);
             bichno.gameObject.SetActive(false);
             inventario1 = false;
             bicho = bicho1;
@@ -407,6 +455,7 @@ public class combatemenumulti : MonoBehaviour
             actheroe = false;
             vez1 = false;
             actentre = false;
+            intercambioc = false;
             
             
             
@@ -418,6 +467,7 @@ public class combatemenumulti : MonoBehaviour
             elemento_.gameObject.SetActive(false);
             elemt.gameObject.SetActive(true);
             ciu.gameObject.SetActive(false);
+            intercambiom.gameObject.SetActive(false);
             nobichos.gameObject.SetActive(false);
             botlib.gameObject.SetActive(false);
             bichno.gameObject.SetActive(false);
@@ -433,6 +483,8 @@ public class combatemenumulti : MonoBehaviour
             actheroe = false;
             vez1 = false;
             actentre = false;
+            intercambioc = false;
+            
             cajonentr = true;
             
             
@@ -448,6 +500,7 @@ public class combatemenumulti : MonoBehaviour
             ciu.gameObject.SetActive(true);
             nobichos.gameObject.SetActive(false);
             botlib.gameObject.SetActive(false);
+            intercambiom.gameObject.SetActive(false);
             bichno.gameObject.SetActive(false);
             inventario1 = false;
             cajon = false;
@@ -458,6 +511,8 @@ public class combatemenumulti : MonoBehaviour
             ciudades1 = true;
             ciudades = false;
             actheroe = false;
+            intercambioc = false;
+
             i = 0;
             
             
@@ -470,6 +525,7 @@ public class combatemenumulti : MonoBehaviour
             elemento_.gameObject.SetActive(false);
             elemt.gameObject.SetActive(false);
             ciu.gameObject.SetActive(false);
+            intercambiom.gameObject.SetActive(false);
             nobichos.gameObject.SetActive(false);
             botlib.gameObject.SetActive(false);
             bichno.gameObject.SetActive(true);
@@ -485,6 +541,8 @@ public class combatemenumulti : MonoBehaviour
             nobich2 = true;
             actnobichos2 = false;
             cajonentr = false;
+            intercambioc = false;
+
             
             
             
@@ -632,11 +690,13 @@ public class combatemenumulti : MonoBehaviour
                 PlayerPrefs.SetFloat("fuerzas",inv.fuerza[i]);
                 PlayerPrefs.SetString("names", inv.name[i]);
                 PlayerPrefs.SetString("bichosh", bichos[i]);
+                PlayerPrefs.SetString("elementoh", inv.elemento[i]);
+                PlayerPrefs.SetFloat("exph", inv.exp[i]);
                 PlayerPrefs.SetFloat("nivelss", inv.nivel[i]);
                 PlayerPrefs.SetFloat("selec", i);
                 cajon = false;
                 temp = 0;
-                SceneManager.LoadScene("entrenamiento");
+                SceneManager.LoadScene("intercambiador");
                 }
         
             if (izq == true && i > 0 && temp > 0.3f)
@@ -658,9 +718,29 @@ public class combatemenumulti : MonoBehaviour
                 if(atras == true)
                 {acta = true;}
                 ciudatext.text = "1vs1";
-                if(bichoselec == true && temp > 0.3f)
+                if(bichoselec == true && temp > 0.3f && inv.dinero >= 200)
                 {
-                        actheroe = true;
+                    inv.dinero -= 200;
+                    PlayerPrefs.SetFloat("dinerosave",inv.dinero);
+                    actheroe = true;
+                }
+        
+        }
+        if(intercambio == true)
+        {
+                bichom.SetActive(false);
+                if(atras == true)
+                {acta = true;}
+                ciudatext.text = "Intercambiador";
+                if(bichoselec == true && temp > 0.3f && inv.dinero >= 50 && inv.indexmax != inv.limite)
+                {
+                        inv.dinero -= 50;
+                        PlayerPrefs.SetFloat("dinerosave",inv.dinero);
+                        actentre = true;
+                }
+                else if(inv.indexmax == inv.limite)
+                {
+                    libera.text = "libera a un heroe para intercambiar";
                 }
         
         }

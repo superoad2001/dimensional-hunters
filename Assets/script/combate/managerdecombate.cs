@@ -71,7 +71,7 @@ public class managerdecombate : MonoBehaviour
             temp = 0;
             pip.Play();
         }
-        if (heroe.hp <= 0)
+        if (heroe.hp < 1)
         {
             cuenta_.gameObject.SetActive(true);
             combate_.gameObject.SetActive(false);
@@ -81,7 +81,7 @@ public class managerdecombate : MonoBehaviour
             if(temp > 5)
             {SceneManager.LoadScene("menu");}
         }
-        if (enemigo.hp <= 0)
+        if (enemigo.hp < 1)
         {
             cuenta_.gameObject.SetActive(true);
             combate_.gameObject.SetActive(false);

@@ -16,6 +16,7 @@ public class collisionenemigo : MonoBehaviour
         enemigo enemigo = UnityEngine.Object.FindObjectOfType<enemigo>();
         if (transform.localPosition == new Vector3(-3.8599999f,0.583000004f,5.58799982f) && enemigo.temp4 > 1)
             {
+                enemigo.activar = false;
                 enemigo.permiso = false;
                 enemigo.temp4 = 0;
             }

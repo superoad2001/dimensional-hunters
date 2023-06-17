@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Unity.Netcode;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 
 public class managermulti : NetworkBehaviour
 {
@@ -36,6 +37,11 @@ public class managermulti : NetworkBehaviour
             cambio.Value = true;
             comenzar.Value = true;
         }
+        
+    }
+    public void atras()
+    {
+        SceneManager.LoadScene("combatemenumulti");
         
     }
 

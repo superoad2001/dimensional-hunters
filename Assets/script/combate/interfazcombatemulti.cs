@@ -45,8 +45,8 @@ public class interfazcombatemulti : MonoBehaviour
         barrat.fillAmount = heroe.turbobar/100;
         barraatb.fillAmount = heroe.atb/100;
 
-        barrahp2.fillAmount = heroe2.hp/heroe.hpmax;
-        barrama2.fillAmount = heroe2.mana/heroe.manamax;
+        barrahp2.fillAmount = heroe2.hp/heroe2.hpmax;
+        barrama2.fillAmount = heroe2.mana/heroe2.manamax;
         barrat2.fillAmount = heroe2.turbobar/100;
         barraatb2.fillAmount = heroe2.atb/100;
 

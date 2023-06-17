@@ -123,6 +123,10 @@ public class combatemenu : MonoBehaviour
 
     // Start is called before the first frame update
 
+    public void _multi()
+    {
+       SceneManager.LoadScene("combatemenumulti");
+    }
     public void _cajon()
     {
         actc = true;

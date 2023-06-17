@@ -16,6 +16,7 @@ public class collisionheroe : MonoBehaviour
         hero heroe = UnityEngine.Object.FindObjectOfType<hero>();
         if (transform.position == new Vector3(-3.83999991f,0.583000004f,5.58799982f)  && heroe.temp4 > 1)
             {
+                heroe.activar = false;
                 heroe.permiso = false;
                 heroe.temp4 = 0;
             }

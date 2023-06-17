@@ -36,6 +36,7 @@ public class managerdecombatemulti : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
+        inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
         if (iniciotem > 2 && inicio == false)
         {
             inicio = true;
@@ -80,19 +81,22 @@ public class managerdecombatemulti : NetworkBehaviour
             if (temp6 < 15)
             {temp6 += 1 * Time.deltaTime;}
             if(temp > 5)
-            {SceneManager.LoadScene("menu");}
+            {SceneManager.LoadScene("cola");}
         }
         if (heroe2.hp < 1 && IsOwner)
         {
             cuenta_.gameObject.SetActive(true);
             combate_.gameObject.SetActive(false);
             cuenta.text = "ganaste";
+            inv.dinero += 200;
+            PlayerPrefs.SetFloat("dinerosave",inv.dinero);
+            PlayerPrefs.SetFloat("nivelg",heroe2.nivel);
             if (temp6 < 15)
             {temp6 += 1 * Time.deltaTime;}
             if(temp > 5)
-            {SceneManager.LoadScene("menu");}
+            {SceneManager.LoadScene("findecombate");}
         }
-        if (heroe2.hp < 1 && IsClient)
+        if (heroe2.hp < 1 && IsOwner == false)
         {
             cuenta_.gameObject.SetActive(true);
             combate_.gameObject.SetActive(false);
@@ -100,17 +104,20 @@ public class managerdecombatemulti : NetworkBehaviour
             if (temp6 < 15)
             {temp6 += 1 * Time.deltaTime;}
             if(temp > 5)
-            {SceneManager.LoadScene("menu");}
+            {SceneManager.LoadScene("cola");}
         }
-        if (heroe.hp < 1 && IsClient)
+        if (heroe.hp < 1 && IsOwner == false)
         {
             cuenta_.gameObject.SetActive(true);
             combate_.gameObject.SetActive(false);
             cuenta.text = "ganaste";
+            inv.dinero += 200;
+            PlayerPrefs.SetFloat("dinerosave",inv.dinero);
+            PlayerPrefs.SetFloat("nivelg",heroe.nivel);
             if (temp6 < 15)
             {temp6 += 1 * Time.deltaTime;}
             if(temp > 5)
-            {SceneManager.LoadScene("menu");}
+            {SceneManager.LoadScene("findecombate");}
         }
         if (temp < 15)
         {temp += 1 * Time.deltaTime;}

@@ -19,7 +19,7 @@ public class findecombat : MonoBehaviour
         {
             PlayerPrefs.SetInt("tutorial3",1);
         }
-        nivelg = (int)PlayerPrefs.GetFloat("nivelss", 0);
+        nivelg = (int)PlayerPrefs.GetFloat("nivelg", 0);
         if(nivelg == 1)
         {obj = (int)inv.exp[o] + Random.Range(20,27);
         dobj = (int)inv.dinero + Random.Range(10,20);}
@@ -66,7 +66,7 @@ public class findecombat : MonoBehaviour
         {dobj = (int)inv.dinero + Random.Range(800,999);}
 
         o = (int)PlayerPrefs.GetFloat("selec", 0);
-        nivelg = (int)PlayerPrefs.GetFloat("nivelss", 0);
+        nivelg = (int)PlayerPrefs.GetFloat("nivelg", 0);
         
 
 

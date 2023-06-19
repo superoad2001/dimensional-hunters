@@ -35,7 +35,7 @@ public class escerna1 : MonoBehaviour
     void Update()
     {
         temp += 1 * Time.deltaTime;
-        if (temp >= max + 7)
+        if (temp >= max + 1)
         {SceneManager.LoadScene(escena);}
         if(temp >= 10)
         {

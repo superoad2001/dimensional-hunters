@@ -489,7 +489,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 49998512}
-  - {fileID: 1708934871}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -506,7 +505,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   temp: 0
-  max: 75
+  max: 23
   escena: seleccion
   con1: {fileID: 659064250}
   con2: {fileID: 222362048}
@@ -670,73 +669,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 726624767}
   m_CullTransparentMesh: 1
---- !u!1001 &1062561303
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3516857995048794724, guid: 8d5c652d822954a0aad35ae5518eaab4, type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3516857995048794724, guid: 8d5c652d822954a0aad35ae5518eaab4, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3516857995048794724, guid: 8d5c652d822954a0aad35ae5518eaab4, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3516857995048794724, guid: 8d5c652d822954a0aad35ae5518eaab4, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3516857995048794724, guid: 8d5c652d822954a0aad35ae5518eaab4, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3516857995048794724, guid: 8d5c652d822954a0aad35ae5518eaab4, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3516857995048794724, guid: 8d5c652d822954a0aad35ae5518eaab4, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3516857995048794724, guid: 8d5c652d822954a0aad35ae5518eaab4, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3516857995048794724, guid: 8d5c652d822954a0aad35ae5518eaab4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3516857995048794724, guid: 8d5c652d822954a0aad35ae5518eaab4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3516857995048794724, guid: 8d5c652d822954a0aad35ae5518eaab4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3516857995048794725, guid: 8d5c652d822954a0aad35ae5518eaab4, type: 3}
-      propertyPath: m_TargetCamera
-      value: 
-      objectReference: {fileID: 396792141}
-    - target: {fileID: 3516857995048794726, guid: 8d5c652d822954a0aad35ae5518eaab4, type: 3}
-      propertyPath: m_Name
-      value: YoutubePlayer (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3516857995048794727, guid: 8d5c652d822954a0aad35ae5518eaab4, type: 3}
-      propertyPath: youtubeUrl
-      value: https://www.youtube.com/watch?v=2NS4t1MUUaQ&t=1s
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3516857995483875015, guid: 8d5c652d822954a0aad35ae5518eaab4, type: 3}
-    - {fileID: 3516857995483875014, guid: 8d5c652d822954a0aad35ae5518eaab4, type: 3}
-  m_SourcePrefab: {fileID: 100100000, guid: 8d5c652d822954a0aad35ae5518eaab4, type: 3}
 --- !u!1 &1069408887
 GameObject:
   m_ObjectHideFlags: 0
@@ -1042,9 +974,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1708934871}
-  - component: {fileID: 1708934875}
-  - component: {fileID: 1708934874}
-  - component: {fileID: 1708934873}
   - component: {fileID: 1708934872}
   m_Layer: 0
   m_Name: Quad (1)
@@ -1061,12 +990,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1708934870}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 7.7}
+  m_LocalPosition: {x: 0, y: 1, z: -2.3000002}
   m_LocalScale: {x: 16, y: 9, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 396792142}
-  m_RootOrder: 1
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!328 &1708934872
 VideoPlayer:
@@ -1076,24 +1005,24 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1708934870}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: aedce0d7cac466e4cab0d01e388cb5cf, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 497d0f15966027a40ba7251066b7d4ee, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
-  m_TargetCamera: {fileID: 0}
+  m_TargetCamera: {fileID: 396792141}
   m_TargetTexture: {fileID: 0}
   m_TimeReference: 0
   m_TargetMaterialRenderer: {fileID: 0}
   m_TargetMaterialProperty: <noninit>
-  m_RenderMode: 3
+  m_RenderMode: 1
   m_AspectRatio: 2
-  m_DataSource: 0
+  m_DataSource: 1
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
   m_TargetAudioSources:
   - {fileID: 0}
   m_DirectAudioVolumes:
   - 1
-  m_Url: 
+  m_Url: https://rr4---sn-4g5edndd.googlevideo.com/videoplayback?expire=1687228872&ei=aL2QZM3lJ82K8wS5vYDgDQ&ip=194.105.159.215&id=o-ABIP99Z7vPTBggE9jO-nbr5dA5HcSPbnYau6xDD2e_8Z&itag=22&source=youtube&requiressl=yes&spc=qEK7B665qU4J9QxvLBBKDKdiwFC2UhY&vprv=1&svpuc=1&mime=video%2Fmp4&cnr=14&ratebypass=yes&dur=22.082&lmt=1687201557705304&fexp=24007246,24350017,24362685&beids=24350017&c=ANDROID&txp=6218224&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRQIhAMMhzjip3FTm-YwuI2BAMBrCqE8FqjFrL18nUeK4jEC4AiBDiNDGwYfCypKkYeuHp_Q06zcWoq7w-SjSlS7ow_vp-Q%3D%3D&title=introduccion&rm=sn-gjo-w43l7e&req_id=54d4bc522055a3ee&redirect_counter=2&cm2rm=sn-ab5eed7l&cms_redirect=yes&cmsv=e&mh=1x&mip=195.55.20.233&mm=34&mn=sn-4g5edndd&ms=ltu&mt=1687207007&mv=m&mvi=4&pl=18&lsparams=mh,mip,mm,mn,ms,mv,mvi,pl&lsig=AG3C_xAwRAIgdLWss12dAKKISQrIuLPibY8MQy7Cpr-MBOYuJz6UgwYCIHybqr0WKkd3CLuwP4bimzWFsehEmduArGT_Rt6hqzMK
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
@@ -1103,67 +1032,3 @@ VideoPlayer:
   m_WaitForFirstFrame: 1
   m_FrameReadyEventEnabled: 0
   m_VideoShaders: []
---- !u!64 &1708934873
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1708934870}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &1708934874
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1708934870}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 5aeaf1a2b8907a2408fb3dc85b533602, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1708934875
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1708934870}
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}

@@ -28,10 +28,10 @@ public class zonacazaomega : MonoBehaviour
     }
     void Start()
     {
-        bicho.Add( "bicho1");
-        bicho.Add( "bicho2");
-        bicho.Add( "bicho3");
-        bicho.Add( "bicho4");
+        bicho.Add( "bicho bloqueado n1");
+        bicho.Add( "bicho bloqueado n2");
+        bicho.Add( "bicho bloqueado n3");
+        bicho.Add( "bicho bloqueado n4");
 
         
     }

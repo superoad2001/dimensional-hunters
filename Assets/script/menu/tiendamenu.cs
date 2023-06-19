@@ -62,6 +62,13 @@ public class tiendamenu : MonoBehaviour
     public Text text5;
     public Text text6;
 
+    public GameObject sel1;
+    public GameObject sel2;
+    public GameObject sel3;
+    public GameObject sel4;
+    public GameObject sel5;
+    public GameObject sel6;
+
     // Start is called before the first frame update
 
     public void _cajon()
@@ -143,17 +150,55 @@ public class tiendamenu : MonoBehaviour
                 puesto6.text = "";
                 din.text = "dolares : "+(int)inv.dinero;
                 if (i == 0)
-                {uitext.text = text1.text;}
+                {uitext.text = text1.text;
+                sel1.SetActive(true);
+                sel2.SetActive(false);
+                sel3.SetActive(false);
+                sel4.SetActive(false);
+                sel5.SetActive(false);
+                sel6.SetActive(false);
+                
+                }
                 if (i == 1)
-                {uitext.text = text2.text;}
+                {uitext.text = text2.text;
+                sel1.SetActive(false);
+                sel2.SetActive(true);
+                sel3.SetActive(false);
+                sel4.SetActive(false);
+                sel5.SetActive(false);
+                sel6.SetActive(false);}
                 if (i == 2)
-                {uitext.text = text3.text;}
+                {uitext.text = text3.text;
+                sel1.SetActive(false);
+                sel2.SetActive(false);
+                sel3.SetActive(true);
+                sel4.SetActive(false);
+                sel5.SetActive(false);
+                sel6.SetActive(false);}
                 if (i == 3)
-                {uitext.text = text4.text;}
+                {uitext.text = text4.text;
+                sel1.SetActive(false);
+                sel2.SetActive(false);
+                sel3.SetActive(false);
+                sel4.SetActive(true);
+                sel5.SetActive(false);
+                sel6.SetActive(false);}
                 if (i == 4)
-                {uitext.text = text5.text;}
+                {uitext.text = text5.text;
+                sel1.SetActive(false);
+                sel2.SetActive(false);
+                sel3.SetActive(false);
+                sel4.SetActive(false);
+                sel5.SetActive(true);
+                sel6.SetActive(false);}
                 if (i == 5)
-                {uitext.text = text6.text;}
+                {uitext.text = text6.text;
+                sel1.SetActive(false);
+                sel2.SetActive(false);
+                sel3.SetActive(false);
+                sel4.SetActive(false);
+                sel5.SetActive(false);
+                sel6.SetActive(true);}
                 ptext1.text = (int)inv.pocvp+"                 10";
                 ptext2.text = (int)inv.pocmp+"                 5";
                 ptext3.text = "";
@@ -225,17 +270,55 @@ public class tiendamenu : MonoBehaviour
                 puesto6.text = "";
                 din.text = "dolares : "+(int)inv.dinero;
                 if (i == 0)
-                {uitext.text = text1.text;}
+                {uitext.text = text1.text;
+                sel1.SetActive(true);
+                sel2.SetActive(false);
+                sel3.SetActive(false);
+                sel4.SetActive(false);
+                sel5.SetActive(false);
+                sel6.SetActive(false);
+                
+                }
                 if (i == 1)
-                {uitext.text = text2.text;}
+                {uitext.text = text2.text;
+                sel1.SetActive(false);
+                sel2.SetActive(true);
+                sel3.SetActive(false);
+                sel4.SetActive(false);
+                sel5.SetActive(false);
+                sel6.SetActive(false);}
                 if (i == 2)
-                {uitext.text = text3.text;}
+                {uitext.text = text3.text;
+                sel1.SetActive(false);
+                sel2.SetActive(false);
+                sel3.SetActive(true);
+                sel4.SetActive(false);
+                sel5.SetActive(false);
+                sel6.SetActive(false);}
                 if (i == 3)
-                {uitext.text = text4.text;}
+                {uitext.text = text4.text;
+                sel1.SetActive(false);
+                sel2.SetActive(false);
+                sel3.SetActive(false);
+                sel4.SetActive(true);
+                sel5.SetActive(false);
+                sel6.SetActive(false);}
                 if (i == 4)
-                {uitext.text = text5.text;}
+                {uitext.text = text5.text;
+                sel1.SetActive(false);
+                sel2.SetActive(false);
+                sel3.SetActive(false);
+                sel4.SetActive(false);
+                sel5.SetActive(true);
+                sel6.SetActive(false);}
                 if (i == 5)
-                {uitext.text = text6.text;}
+                {uitext.text = text6.text;
+                sel1.SetActive(false);
+                sel2.SetActive(false);
+                sel3.SetActive(false);
+                sel4.SetActive(false);
+                sel5.SetActive(false);
+                sel6.SetActive(true);}
                 ptext1.text = (int)inv.pocvm+"                 50";
                 ptext2.text = (int)inv.pocmm+"                 25";
                 ptext3.text = (int)inv.tipohierba[10]+"                 50";
@@ -332,17 +415,55 @@ public class tiendamenu : MonoBehaviour
                 puesto6.text = "";
                 din.text = "dolares : "+(int)inv.dinero;
                 if (i == 0)
-                {uitext.text = text1.text;}
+                {uitext.text = text1.text;
+                sel1.SetActive(true);
+                sel2.SetActive(false);
+                sel3.SetActive(false);
+                sel4.SetActive(false);
+                sel5.SetActive(false);
+                sel6.SetActive(false);
+                
+                }
                 if (i == 1)
-                {uitext.text = text2.text;}
+                {uitext.text = text2.text;
+                sel1.SetActive(false);
+                sel2.SetActive(true);
+                sel3.SetActive(false);
+                sel4.SetActive(false);
+                sel5.SetActive(false);
+                sel6.SetActive(false);}
                 if (i == 2)
-                {uitext.text = text3.text;}
+                {uitext.text = text3.text;
+                sel1.SetActive(false);
+                sel2.SetActive(false);
+                sel3.SetActive(true);
+                sel4.SetActive(false);
+                sel5.SetActive(false);
+                sel6.SetActive(false);}
                 if (i == 3)
-                {uitext.text = text4.text;}
+                {uitext.text = text4.text;
+                sel1.SetActive(false);
+                sel2.SetActive(false);
+                sel3.SetActive(false);
+                sel4.SetActive(true);
+                sel5.SetActive(false);
+                sel6.SetActive(false);}
                 if (i == 4)
-                {uitext.text = text5.text;}
+                {uitext.text = text5.text;
+                sel1.SetActive(false);
+                sel2.SetActive(false);
+                sel3.SetActive(false);
+                sel4.SetActive(false);
+                sel5.SetActive(true);
+                sel6.SetActive(false);}
                 if (i == 5)
-                {uitext.text = text6.text;}
+                {uitext.text = text6.text;
+                sel1.SetActive(false);
+                sel2.SetActive(false);
+                sel3.SetActive(false);
+                sel4.SetActive(false);
+                sel5.SetActive(false);
+                sel6.SetActive(true);}
                 ptext1.text = (int)inv.pocvg+"                 100";
                 ptext2.text = (int)inv.pocmg+"                 50";
                 ptext3.text = (int)inv.tipohierba[20]+"                 100";

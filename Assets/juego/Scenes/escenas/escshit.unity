@@ -417,73 +417,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 202171524}
   m_CullTransparentMesh: 1
---- !u!1001 &416228836
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3516857995048794724, guid: 8d5c652d822954a0aad35ae5518eaab4, type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3516857995048794724, guid: 8d5c652d822954a0aad35ae5518eaab4, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3516857995048794724, guid: 8d5c652d822954a0aad35ae5518eaab4, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3516857995048794724, guid: 8d5c652d822954a0aad35ae5518eaab4, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3516857995048794724, guid: 8d5c652d822954a0aad35ae5518eaab4, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3516857995048794724, guid: 8d5c652d822954a0aad35ae5518eaab4, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3516857995048794724, guid: 8d5c652d822954a0aad35ae5518eaab4, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3516857995048794724, guid: 8d5c652d822954a0aad35ae5518eaab4, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3516857995048794724, guid: 8d5c652d822954a0aad35ae5518eaab4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3516857995048794724, guid: 8d5c652d822954a0aad35ae5518eaab4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3516857995048794724, guid: 8d5c652d822954a0aad35ae5518eaab4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3516857995048794725, guid: 8d5c652d822954a0aad35ae5518eaab4, type: 3}
-      propertyPath: m_TargetCamera
-      value: 
-      objectReference: {fileID: 947204408}
-    - target: {fileID: 3516857995048794726, guid: 8d5c652d822954a0aad35ae5518eaab4, type: 3}
-      propertyPath: m_Name
-      value: YoutubePlayer (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3516857995048794727, guid: 8d5c652d822954a0aad35ae5518eaab4, type: 3}
-      propertyPath: youtubeUrl
-      value: https://www.youtube.com/watch?v=2NS4t1MUUaQ&t=1s
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3516857995483875015, guid: 8d5c652d822954a0aad35ae5518eaab4, type: 3}
-    - {fileID: 3516857995483875014, guid: 8d5c652d822954a0aad35ae5518eaab4, type: 3}
-  m_SourcePrefab: {fileID: 100100000, guid: 8d5c652d822954a0aad35ae5518eaab4, type: 3}
 --- !u!1 &634764182
 GameObject:
   m_ObjectHideFlags: 0
@@ -650,7 +583,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   temp: 0
-  max: 0
+  max: 27
   escena: shitfloor
   con1: {fileID: 76412826}
   con2: {fileID: 202171526}
@@ -1167,3 +1100,70 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &2090935153
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2090935155}
+  - component: {fileID: 2090935154}
+  m_Layer: 0
+  m_Name: Quad (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!328 &2090935154
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2090935153}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 32900000, guid: 497d0f15966027a40ba7251066b7d4ee, type: 3}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 947204408}
+  m_TargetTexture: {fileID: 0}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: <noninit>
+  m_RenderMode: 1
+  m_AspectRatio: 2
+  m_DataSource: 1
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 2
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
+  m_Url: https://rr2---sn-4g5e6nsz.googlevideo.com/videoplayback?expire=1687229320&ei=KL-QZNOELJSW_9EPzMeL2AU&ip=188.119.115.215&id=o-AEZQnYrM-0P66yAb0MzmNUW3NjcYF6Zn8UVw6DcZwRMi&itag=22&source=youtube&requiressl=yes&spc=qEK7B3gaZl6qRl1jZ65Xsp2Amos6CLI&vprv=1&svpuc=1&mime=video%2Fmp4&cnr=14&ratebypass=yes&dur=26.145&lmt=1687201461854000&fexp=24007246,24350017,51000022&beids=24350017&c=ANDROID&txp=6218224&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRQIhAKQaJXZ59YywLzf5Fz32Od4sJr6a7PHZDnmC44nVloJUAiBbbA051C6uayXO_mqTw-3A6H8ScEV8zydluJPTg5Rz8w%3D%3D&title=cazar+un+shitfloor&rm=sn-gjo-w43s7l&req_id=5d55a7b8ba73a3ee&ipbypass=yes&redirect_counter=2&cm2rm=sn-ab5ele7z&cms_redirect=yes&cmsv=e&mh=SY&mip=195.55.20.233&mm=34&mn=sn-4g5e6nsz&ms=ltu&mt=1687207490&mv=m&mvi=2&pl=18&lsparams=ipbypass,mh,mip,mm,mn,ms,mv,mvi,pl&lsig=AG3C_xAwRQIhAIb4cmECRVTWlAqcDYJjZx8YZ0pAhaJqxTSVhIwtCCLYAiABxKVLvdAbD7ojn_pHat15IOYKZddxTRqZXcd_hyOkbQ%3D%3D
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
+  m_PlayOnAwake: 1
+  m_SkipOnDrop: 1
+  m_Looping: 0
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
+--- !u!4 &2090935155
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2090935153}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: -2.3000002}
+  m_LocalScale: {x: 16, y: 9, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

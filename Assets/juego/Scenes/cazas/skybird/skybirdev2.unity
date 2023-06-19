@@ -442,6 +442,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &131846966
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -545,6 +546,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &182142943
 GameObject:
   m_ObjectHideFlags: 0
@@ -572,9 +574,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 699cfef512c935446b9c7ae2d833c05e, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 1376dad3215167a4591840f14fa50a63, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.283
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1843,6 +1845,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &751582391
 GameObject:
   m_ObjectHideFlags: 0
@@ -2229,6 +2232,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1091246757
 GameObject:
   m_ObjectHideFlags: 0
@@ -3343,6 +3347,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1694960212
 GameObject:
   m_ObjectHideFlags: 0
@@ -3577,6 +3582,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1745511744
 GameObject:
   m_ObjectHideFlags: 0
@@ -4195,3 +4201,4 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

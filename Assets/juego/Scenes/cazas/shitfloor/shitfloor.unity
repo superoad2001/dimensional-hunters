@@ -1216,6 +1216,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!54 &843030515
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1741,9 +1742,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 08d7e13bd89594e4397d4c4d6b5ba06d, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 7de02edb56d4aad45a99aafb00e5b857, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.283
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0

@@ -22,11 +22,12 @@ public class interfazcombatemulti : MonoBehaviour
 
     public Text uitext;
     public string com;
+    public GameObject cam;
 
     public bool salir = false;
     void Start()
     {
-        arSession.Reset();
+        cam.transform.position = new Vector3(0,0,0f);
     }
     public void _salir()
     {

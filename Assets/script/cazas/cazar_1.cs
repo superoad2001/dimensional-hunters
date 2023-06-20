@@ -10,12 +10,12 @@ public class cazar_1 : MonoBehaviour
     public float iniciotem = 0;
     //cuando comienzas hay un solido negro que tapa la carga del nivel
     public GameObject negro;
+    public GameObject cam;
     void Start()
     {
         
-
+        cam.transform.position = new Vector3(0,0,0);
         //resetea el espacio de juego entre sesiones asi no se guarada la posicion cuando cambias de nivel
-        arSession.Reset();
     }
     
     public void _salir()

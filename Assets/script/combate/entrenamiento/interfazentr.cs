@@ -21,9 +21,10 @@ public class interfazentr : MonoBehaviour
     public string com;
 
     public bool salir = false;
+    public GameObject cam;
     void Start()
     {
-        arSession.Reset();
+        cam.transform.position = new Vector3(0,0,0f);
     }
     public void _salir()
     {

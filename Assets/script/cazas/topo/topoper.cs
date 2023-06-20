@@ -39,8 +39,7 @@ public class topoper : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        arSession.Reset();
-        cam1.transform.position = new Vector3(0,0,0);
+         new Vector3(0,0,0);
         cam.transform.position = new Vector3(0,0,0f);
     }
 

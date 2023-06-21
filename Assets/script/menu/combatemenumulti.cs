@@ -326,6 +326,7 @@ public class combatemenumulti : MonoBehaviour
             
             vez1 = false;
             intercambioc = false;
+            intercambio = false;
             
             
             
@@ -382,6 +383,7 @@ public class combatemenumulti : MonoBehaviour
             nobich2 = false;
             actnobichos = false;
             intercambioc = false;
+            intercambio = false;
             
             
             
@@ -406,6 +408,7 @@ public class combatemenumulti : MonoBehaviour
             actentre = false;
             cajonentr = false;
             intercambioc = false;
+            intercambio = false;
             
             
             
@@ -432,6 +435,7 @@ public class combatemenumulti : MonoBehaviour
             vez1 = false;
             actentre = false;
             intercambioc = false;
+            intercambio = false;
             
             
             
@@ -458,6 +462,7 @@ public class combatemenumulti : MonoBehaviour
             vez1 = false;
             actentre = false;
             intercambioc = false;
+            intercambio = false;
             
             
             
@@ -486,7 +491,7 @@ public class combatemenumulti : MonoBehaviour
             vez1 = false;
             actentre = false;
             intercambioc = false;
-            
+            intercambio = false;
             cajonentr = true;
             
             
@@ -514,6 +519,7 @@ public class combatemenumulti : MonoBehaviour
             ciudades = false;
             actheroe = false;
             intercambioc = false;
+            intercambio = false;
 
             i = 0;
             
@@ -544,6 +550,7 @@ public class combatemenumulti : MonoBehaviour
             actnobichos2 = false;
             cajonentr = false;
             intercambioc = false;
+            intercambio = false;
 
             
             
@@ -668,8 +675,7 @@ public class combatemenumulti : MonoBehaviour
         {
                 bichos = inv.bichosmios;
                 indexmax = bichos.Count;
-                if(atras == true)
-                {acta = true;}
+
                 if(vez1 == false)
                 {modelos();}
                 vez1 = true;

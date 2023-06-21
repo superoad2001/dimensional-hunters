@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using Unity.Netcode;
 using Unity.Netcode.Transports.UTP;
+using System.Net;
+using System.Net.Sockets;
 
 
 public class networkui2 : NetworkBehaviour
@@ -11,18 +13,30 @@ public class networkui2 : NetworkBehaviour
 
 
     public Text input;
+    public Text input1;
+    public Text input2;
+    public Text input3;
     public Text codigo;
     public managermulti2 manamulti;
 
-    public Unity.Netcode.Transports.UTP.UnityTransport.ConnectionAddressData UnityTransport;
 
     public bool activar = false;
+
+    private bool pcAssigned;
+
+    [SerializeField] string ipAddress;
+
+    [SerializeField] UnityTransport transport;
 
     
     // Start is called before the first frame update
     void Start()
     {
         codigo.text = "";
+        ipAddress = "0.0.0.0";
+		SetIpAddress(); // Set the Ip to the above address
+		pcAssigned = false;
+		InvokeRepeating("assignPlayerController", 0.1f, 0.1f);
     }
     // Update is called once per frame
     
@@ -42,22 +56,22 @@ public class networkui2 : NetworkBehaviour
     {
         if(activar == false)
         {
-        int en = Random.Range(1000,9999);
-        UnityTransport.Address = "I"+en.ToString();
+
         NetworkManager.Singleton.StartHost();
-        codigo.text = "CODIGO DE SALA:"+ en;
+        GetLocalIPAddress();
         activar = true;
         manamulti.check1.Value = true;
         }
     }
     public void startclient()
     {
-        if(activar == false && input.text != "")
+        if(activar == false && input.text != ""  && input1.text != ""  && input2.text != ""  && input3.text != "")
         {
-        UnityTransport.ServerListenAddress = "I"+input.text;
+        ipAddress = input.text+"."+input1.text+"."+input2.text+"."+input3.text;
+        SetIpAddress();
         NetworkManager.Singleton.StartClient();
         activar = true;
-        manamulti.check2c = true;
+        manamulti.check2i = true;
         }
     }
 
@@ -70,10 +84,26 @@ public class networkui2 : NetworkBehaviour
         {manamulti.check1.Value = false;
         manamulti.check2.Value = false;}
         NetworkManager.Singleton.Shutdown();
-        manamulti.check1c = false;
-        manamulti.check2c = false;
+        manamulti.check1i = false;
+        manamulti.check2i = false;
 
         
     }
+
+    public string GetLocalIPAddress() {
+		var host = Dns.GetHostEntry(Dns.GetHostName());
+		foreach (var ip in host.AddressList) {
+			if (ip.AddressFamily == AddressFamily.InterNetwork) {
+				codigo.text = "IP: "+ ip.ToString();
+				ipAddress = ip.ToString();
+				return ip.ToString();
+			}
+		}
+		throw new System.Exception("No network adapters with an IPv4 address in the system!");
+	}
+    public void SetIpAddress() {
+		transport = NetworkManager.Singleton.GetComponent<UnityTransport>();
+		transport.ConnectionData.Address = ipAddress;
+	}
 
 }

@@ -13,6 +13,8 @@ public class combatecomp : MonoBehaviour
     public bool cancela = false;
     public Text uitext;
     public int lim = 3;
+
+    public Text obj;
     // Update is called once per frame
     public void _cancela()
     {
@@ -20,6 +22,7 @@ public class combatecomp : MonoBehaviour
     }
     void Update()
     {
+        obj.text = lim.ToString();
         inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
         hero heroe = UnityEngine.Object.FindObjectOfType<hero>();
         if(uitext.text == "ataque rápidos" ||uitext.text == "ataques rápido")

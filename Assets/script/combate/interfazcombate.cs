@@ -11,6 +11,7 @@ public class interfazcombate : MonoBehaviour
     public Image barrahp;
     public Image barrahpene;
     public Image barrama;
+    public float iniciotem = 0;
     public Image barramaene;
     public Image barrat;
     public Image barratene;
@@ -18,6 +19,7 @@ public class interfazcombate : MonoBehaviour
     public Image barraatbene;
 
     public Text uitext;
+
     public string com;
 
     public bool salir = false;
@@ -34,6 +36,11 @@ public class interfazcombate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (iniciotem > 1 && iniciotem < 2)
+        {
+            arSession.Reset ();
+
+        }
 
         if(salir == true)
         {SceneManager.LoadScene("seleccion");}
@@ -53,6 +60,8 @@ public class interfazcombate : MonoBehaviour
 
         if(uitext.text.Length > 27)
         {uitext.text = com;}
+        if(iniciotem < 15)
+        {iniciotem += 1 * Time.deltaTime;}
         com = uitext.text;
     }
 }

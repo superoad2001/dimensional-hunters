@@ -41,7 +41,7 @@ public class disparoshitfloor1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        arSession.Reset ();
          new Vector3(0,0,0);
         cam.transform.position = new Vector3(0,0,0f);
     }

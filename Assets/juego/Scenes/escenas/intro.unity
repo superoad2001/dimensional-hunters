@@ -504,6 +504,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 016c7fa3a6286fa49ba399b515ea979b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  video: {fileID: 1708934872}
+  url: WtPCqtOvM6YEquoCnj_uYUeIVu-jcTLb
   temp: 0
   max: 23
   escena: seleccion
@@ -1005,7 +1007,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1708934870}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 497d0f15966027a40ba7251066b7d4ee, type: 3}
+  m_VideoClip: {fileID: 0}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 396792141}
@@ -1022,7 +1024,7 @@ VideoPlayer:
   - {fileID: 0}
   m_DirectAudioVolumes:
   - 1
-  m_Url: https://rr4---sn-4g5edndd.googlevideo.com/videoplayback?expire=1687228872&ei=aL2QZM3lJ82K8wS5vYDgDQ&ip=194.105.159.215&id=o-ABIP99Z7vPTBggE9jO-nbr5dA5HcSPbnYau6xDD2e_8Z&itag=22&source=youtube&requiressl=yes&spc=qEK7B665qU4J9QxvLBBKDKdiwFC2UhY&vprv=1&svpuc=1&mime=video%2Fmp4&cnr=14&ratebypass=yes&dur=22.082&lmt=1687201557705304&fexp=24007246,24350017,24362685&beids=24350017&c=ANDROID&txp=6218224&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRQIhAMMhzjip3FTm-YwuI2BAMBrCqE8FqjFrL18nUeK4jEC4AiBDiNDGwYfCypKkYeuHp_Q06zcWoq7w-SjSlS7ow_vp-Q%3D%3D&title=introduccion&rm=sn-gjo-w43l7e&req_id=54d4bc522055a3ee&redirect_counter=2&cm2rm=sn-ab5eed7l&cms_redirect=yes&cmsv=e&mh=1x&mip=195.55.20.233&mm=34&mn=sn-4g5edndd&ms=ltu&mt=1687207007&mv=m&mvi=4&pl=18&lsparams=mh,mip,mm,mn,ms,mv,mvi,pl&lsig=AG3C_xAwRAIgdLWss12dAKKISQrIuLPibY8MQy7Cpr-MBOYuJz6UgwYCIHybqr0WKkd3CLuwP4bimzWFsehEmduArGT_Rt6hqzMK
+  m_Url: https://drive.google.com/uc?export=download&id=1WtPCqtOvM6YEquoCnj_uYUeIVu-jcTLb
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1

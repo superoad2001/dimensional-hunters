@@ -73,7 +73,7 @@ public class managerdecombatemulti : NetworkBehaviour
             temp = 0;
             pip.Play();
         }
-        if (heroe.hp < 1 && IsOwner)
+        if (heroe.hp < 1 && NetworkManager.IsHost == true)
         {
             cuenta_.gameObject.SetActive(true);
             combate_.gameObject.SetActive(false);
@@ -81,9 +81,9 @@ public class managerdecombatemulti : NetworkBehaviour
             if (temp6 < 15)
             {temp6 += 1 * Time.deltaTime;}
             if(temp > 5)
-            {SceneManager.LoadScene("cola");}
+            {SceneManager.LoadScene("combatemenumulti");}
         }
-        if (heroe2.hp < 1 && IsOwner)
+        if (heroe2.hp < 1 && NetworkManager.IsHost == true)
         {
             cuenta_.gameObject.SetActive(true);
             combate_.gameObject.SetActive(false);
@@ -96,7 +96,7 @@ public class managerdecombatemulti : NetworkBehaviour
             if(temp > 5)
             {SceneManager.LoadScene("findecombate");}
         }
-        if (heroe2.hp < 1 && IsOwner == false)
+        if (heroe2.hp < 1 && NetworkManager.IsHost == false)
         {
             cuenta_.gameObject.SetActive(true);
             combate_.gameObject.SetActive(false);
@@ -104,9 +104,9 @@ public class managerdecombatemulti : NetworkBehaviour
             if (temp6 < 15)
             {temp6 += 1 * Time.deltaTime;}
             if(temp > 5)
-            {SceneManager.LoadScene("cola");}
+            {SceneManager.LoadScene("combatemenumulti");}
         }
-        if (heroe.hp < 1 && IsOwner == false)
+        if (heroe.hp < 1 && NetworkManager.IsHost == false)
         {
             cuenta_.gameObject.SetActive(true);
             combate_.gameObject.SetActive(false);

@@ -21,8 +21,9 @@ public class collisionheroemulti : NetworkBehaviour
                 heroe.activar = false;
                 heroe.permiso = false;
                 heroe.temp4 = 0;
-                heroe.atkr.Value = 0;
-                heroe.permisor.Value = heroe.permiso;
+                int atk = 0;
+                heroe._permiso(false);
+                heroe._atk(atk);
             }
 
 
@@ -38,10 +39,12 @@ public class collisionheroemulti : NetworkBehaviour
             {
 
                 Debug.Log("jugador1: 2");
-                heroe2.hpr.Value -= heroe.ataque;
+                float atke = heroe.ataque;
+                int atk = 0;
+                heroe._atk(atk);
+                heroe2._golpe(atke);
                 heroe2.hp = heroe2.hpr.Value;
                 heroe.activar = false;
-                heroe.atkr.Value = 0;
                 heroe2.danos.Play();
                 
 
@@ -50,6 +53,8 @@ public class collisionheroemulti : NetworkBehaviour
         }
         if (col.gameObject.tag == "pini" && NetworkManager.IsHost == true)
         {
+            heroe._permiso(false);
+            heroe._atk(0);
             heroe.ataque = 0;
             
         }

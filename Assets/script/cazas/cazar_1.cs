@@ -25,6 +25,11 @@ public class cazar_1 : MonoBehaviour
     void Update()
     {
 
+        if (iniciotem > 1 && iniciotem < 2)
+        {
+            arSession.Reset ();
+
+        }
         // a los 2 segundo el solido negro desaparece
         if (iniciotem > 2)
         {

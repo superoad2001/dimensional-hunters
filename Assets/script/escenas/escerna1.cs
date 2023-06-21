@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class escerna1 : MonoBehaviour
 {
+    public VideoPlayer video;
+    public string url;
     public float temp;
     public float max;
 
@@ -21,6 +23,7 @@ public class escerna1 : MonoBehaviour
     {
         con1.text = "cargando";
         con2.text = "";
+        //video.url = "https://drive.google.com/uc?export=download&id="+url;
     }
     void Awake()
     {
@@ -37,7 +40,7 @@ public class escerna1 : MonoBehaviour
         temp += 1 * Time.deltaTime;
         if (temp >= max + 1)
         {SceneManager.LoadScene(escena);}
-        if(temp >= 10)
+        if(temp >= 5)
         {
             con1.text = "sin conexion";
             con2.text = "no puedes ver esta cinematica sin conexion a internet";

@@ -12,7 +12,7 @@ public class intercambio1 : NetworkBehaviour
 
 
 
-    public int o;
+    public float o;
 
 
     public string hname;
@@ -58,7 +58,16 @@ public managermulti2 managermulti;
     public void Start()
     {   
         
-        
+        hp = PlayerPrefs.GetFloat("hps", 100);
+        mana = PlayerPrefs.GetFloat("manas", 100);
+        manarec = PlayerPrefs.GetFloat("manarecs", 1);
+        fuerza = PlayerPrefs.GetFloat("fuerzas", 1);
+        hname = (string)PlayerPrefs.GetString("names", "misigno");
+        bicho = (string)PlayerPrefs.GetString("bichosh", "madcat");
+        nivel = PlayerPrefs.GetFloat("nivelss", 1);
+        exp = PlayerPrefs.GetFloat("exph", 0);
+        elemento = (string)PlayerPrefs.GetString("elementoh", "nulo");
+        o = PlayerPrefs.GetFloat("selec", 0);
         
 
         
@@ -80,9 +89,13 @@ public managermulti2 managermulti;
         nivel = PlayerPrefs.GetFloat("nivelss", 1);
         exp = PlayerPrefs.GetFloat("exph", 0);
         elemento = (string)PlayerPrefs.GetString("elementoh", "nulo");
-        o = PlayerPrefs.GetInt("selec", 0);
+        o = PlayerPrefs.GetFloat("selec", 0);
         cargadatos();
         }
+
+
+        
+    }
         hp = hpr.Value;
         mana = manar.Value;
         manarec = manarecr.Value;
@@ -92,9 +105,6 @@ public managermulti2 managermulti;
         nivel = nivelr.Value;
         exp = expr.Value;
         elemento = elementor.Value.ToString();
-
-        
-    }
 
         
     }

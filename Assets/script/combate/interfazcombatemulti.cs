@@ -21,6 +21,7 @@ public class interfazcombatemulti : MonoBehaviour
     public heromulti2 heroe2;
 
     public Text uitext;
+    public float iniciotem = 0;
     public string com;
     public GameObject cam;
 
@@ -36,6 +37,11 @@ public class interfazcombatemulti : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (iniciotem > 0 && iniciotem < 1)
+        {
+            arSession.Reset ();
+
+        }
 
         if(salir == true)
         {SceneManager.LoadScene("seleccion");}
@@ -50,9 +56,8 @@ public class interfazcombatemulti : MonoBehaviour
         barrama2.fillAmount = heroe2.mana/heroe2.manamax;
         barrat2.fillAmount = heroe2.turbobar/100;
         barraatb2.fillAmount = heroe2.atb/100;
+        if(iniciotem < 15)
+        {iniciotem += 1 * Time.deltaTime;}
 
-        if(uitext.text.Length > 27)
-        {uitext.text = com;}
-        com = uitext.text;
     }
 }

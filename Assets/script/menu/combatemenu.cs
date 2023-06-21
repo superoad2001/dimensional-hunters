@@ -616,8 +616,6 @@ public class combatemenu : MonoBehaviour
         {
                 bichos = inv.bichosmios;
                 indexmax = bichos.Count;
-                if(atras == true)
-                {acta = true;}
                 if(vez1 == false)
                 {modelos();}
                 vez1 = true;

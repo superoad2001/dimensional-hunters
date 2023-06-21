@@ -22,6 +22,7 @@ public class interfazentr : MonoBehaviour
 
     public bool salir = false;
     public GameObject cam;
+    public float iniciotem = 0;
     void Start()
     {
         cam.transform.position = new Vector3(0,0,0f);
@@ -33,6 +34,11 @@ public class interfazentr : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (iniciotem > 1 && iniciotem < 2)
+        {
+            arSession.Reset ();
+
+        }
 
         if(salir == true)
         {SceneManager.LoadScene("seleccion");}
@@ -50,6 +56,8 @@ public class interfazentr : MonoBehaviour
 
         if(uitext.text.Length > 28)
         {uitext.text = com;}
+        if(iniciotem < 15)
+        {iniciotem += 1 * Time.deltaTime;}
         com = uitext.text;
     }
 }

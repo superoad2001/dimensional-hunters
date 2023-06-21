@@ -106,11 +106,11 @@ public class inventario : MonoBehaviour
 
         hierbaomega = PlayerPrefs.GetFloat("hierbaomega",0);
 
-        pocvp = PlayerPrefs.GetFloat("pocvp",0);
+        pocvp = PlayerPrefs.GetFloat("pocvp",2);
         pocvp = PlayerPrefs.GetFloat("pocvm",0);
         pocvp = PlayerPrefs.GetFloat("pocvg",0);
 
-        pocmp = PlayerPrefs.GetFloat("pocmp",0);
+        pocmp = PlayerPrefs.GetFloat("pocmp",1);
         pocmp = PlayerPrefs.GetFloat("pocmm",0);
         pocmp = PlayerPrefs.GetFloat("pocmg",0);
 

@@ -14,11 +14,6 @@ public class findecombat : MonoBehaviour
     void Start()
     {
         inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
-        jefe1 = PlayerPrefs.GetInt("jefe1",0);
-        if(jefe1 == 1)
-        {
-            PlayerPrefs.SetInt("tutorial3",1);
-        }
         nivelg = (int)PlayerPrefs.GetFloat("nivelg", 0);
         if(nivelg == 1)
         {obj = (int)inv.exp[o] + Random.Range(20,27);

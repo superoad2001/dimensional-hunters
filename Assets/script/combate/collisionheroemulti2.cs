@@ -17,10 +17,11 @@ public class collisionheroemulti2 : NetworkBehaviour
     {
         if (transform.localPosition == new Vector3(-3.8599999F,0.583000004F,5.58799982F)  && heroe.temp4 > 0.4f && NetworkManager.IsHost == false)
             {
+                heroe.activar = false;
                 heroe.permiso = false;
                 heroe.temp4 = 0;
                 int atk = 0;
-                permisoServerRpc(false);
+                heroe.permisoServerRpc(false);
                 heroe.atkServerRpc(atk);
                 
             }
@@ -49,6 +50,8 @@ public class collisionheroemulti2 : NetworkBehaviour
         }
         if (col.gameObject.tag == "pine" && NetworkManager.IsHost == false)
         {
+            heroe.permisoServerRpc(false);
+            heroe.atkServerRpc(0);
             heroe.ataque = 0;
             
         }
@@ -57,10 +60,4 @@ public class collisionheroemulti2 : NetworkBehaviour
     
 
 
-
-    [ServerRpc(RequireOwnership = false)]
-    public void permisoServerRpc(bool permisoc)
-    {
-        heroe.permisor.Value = permisoc;
-    }
 }

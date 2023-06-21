@@ -62,7 +62,7 @@ public class managermulti : NetworkBehaviour
         {
             listo.text = "Esperando al Rival";
         }
-        if(NetworkManager.IsHost == false && check2c == true && check1c == false)
+        if(check2c == true && check1c == false)
         {
             listo.text = "Esperando al Host";
         }

@@ -271,6 +271,10 @@ public class heromulti : NetworkBehaviour
         {
             modelos();
         }
+        if(IsOwner)
+        {
+            permiso = permisor.Value;
+        }
         hp = hpr.Value;
         if(!IsOwner)
         {
@@ -283,7 +287,6 @@ public class heromulti : NetworkBehaviour
         manamax = (int)manamaxr.Value;
         hname = hnamer.Value.ToString();
         bicho = bichor.Value.ToString();
-        permiso = permisor.Value;
         }
         if (dano == 0)
         {
@@ -519,6 +522,10 @@ public class heromulti : NetworkBehaviour
         {
             cargadatos2();
         }
+        if(IsOwner)
+        {
+            PlayerPrefs.SetFloat("nivelg",enemigo.nivel);
+        }
         }
         if (temp4 < 15)
         {temp4 += 1 * Time.deltaTime;}
@@ -550,6 +557,10 @@ public class heromulti : NetworkBehaviour
     public void golpeServerRpc(float atk)
     {
         hpr.Value -= atk;
+    }
+    public void _atk(int tipo)
+    {
+       atkr.Value = tipo;
     }
     public void modelos()
     {
@@ -742,6 +753,10 @@ public class heromulti : NetworkBehaviour
             dano1 = dano1cat;
             dano2 = dano2cat;
         }
+    }
+    public void _permiso(bool permisoc)
+    {
+        permisor.Value = permisoc;
     }
     
     

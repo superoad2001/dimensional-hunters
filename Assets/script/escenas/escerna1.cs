@@ -38,9 +38,9 @@ public class escerna1 : MonoBehaviour
     void Update()
     {
         temp += 1 * Time.deltaTime;
-        if (temp >= max + 1)
+        if (temp >= max + 5)
         {SceneManager.LoadScene(escena);}
-        if(temp >= 5)
+        if(temp >= 10)
         {
             con1.text = "sin conexion";
             con2.text = "no puedes ver esta cinematica sin conexion a internet";

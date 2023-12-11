@@ -10,15 +10,22 @@ public class shitene : MonoBehaviour
     public Image barrahp2;
     public float hp = 100;
     public float hpmax = 100;
+    public float ataquetemp = 3;
     public float temp;
     public Quaternion rota;
     public GameObject BalaInicio;
 	public GameObject BalaPrefab;
     public GameObject player;
+    public string bicho = "madcat";
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (bicho == "madcat")
+        {
+            hpmax = 100;
+            hp = 100;
+            ataquetemp = 3;
+        }
     }
     // Update is called once per frame
     void Update()
@@ -30,7 +37,7 @@ public class shitene : MonoBehaviour
             barrahp2.fillAmount = hp/hpmax;
             if(hp <= 0)
             {UnityEngine.Object.Destroy(this.gameObject);}
-            if(temp > 3)
+            if(temp > ataquetemp)
             {
                 rota = BalaInicio.transform.rotation;
                 GameObject BalaTemporal = Instantiate(BalaPrefab, BalaInicio.transform.position,rota) as GameObject;

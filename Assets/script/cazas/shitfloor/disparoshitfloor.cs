@@ -22,12 +22,8 @@ public class disparoshitfloor : MonoBehaviour
     public GameObject cuenta_;
     public GameObject caza_;
 
-    public GameObject vida1;
-    public GameObject vida2;
-    public GameObject vida3;
-
-    public float hp = 3;
-
+    public float hp;
+    public float hpmax = 3;
     public float temp = 0.7f;
     public float temp2 = 0;
     public float temp3 = 120;
@@ -38,12 +34,19 @@ public class disparoshitfloor : MonoBehaviour
     public bool vez1;
     public GameObject cam;
     public GameObject cam1;
+    public bool escudo = false;
+    public bool escudoact = false;
+    public float mana = 100;
+    public Image barrahp;
+    public Image barramana;
+    public string bicho = "madcat";
     // Start is called before the first frame update
     void Start()
     {
         arSession.Reset ();
          new Vector3(0,0,0);
         cam.transform.position = new Vector3(0,0,0f);
+        hp = hpmax;
     }
 
     public bool salir = false;
@@ -56,6 +59,16 @@ public class disparoshitfloor : MonoBehaviour
     {
         salir = true;
     }
+    public void _escudo()
+    {
+
+            escudoact = true;
+            
+    }
+    public void _noescudo()
+    {
+        escudoact = false;
+    }
     public void disparo()
     {
         disp = true;
@@ -67,18 +80,10 @@ public class disparoshitfloor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(hp == 2)
-        {
-            vida3.gameObject.SetActive(false);
-        }
-        if(hp == 1)
-        {
-            vida2.gameObject.SetActive(false);
-        }
-        if(hp == 0)
-        {
-            vida1.gameObject.SetActive(false);
-        }
+
+            barrahp.fillAmount = hp/hpmax;
+            barramana.fillAmount = mana/100;
+
         shitene enemigo = UnityEngine.Object.FindObjectOfType<shitene>();
         if (iniciotem > 2 && inicio == false)
         {
@@ -147,11 +152,23 @@ public class disparoshitfloor : MonoBehaviour
 
             
             }
+            if(escudoact == true && mana > 1)
+            {
+                escudo = true;
+                mana -= 5 * Time.deltaTime;
+                if(mana < 0){mana = 0;}
+            }
+            else
+            {
+                escudo = false;
+                mana += 2 * Time.deltaTime;
+                if(mana > 100)
+                {mana = 100;}
+            }
             if (temp3 > -1)
             {temp3 -= 1 * Time.deltaTime;}
             if (temp < 15)
             {temp += 1 * Time.deltaTime;}
-            cuetemp.text = "tiempo: "+(int)temp3;
         }
         if(enemigo.hp <=  0 && vez1 == false)
         {
@@ -161,7 +178,8 @@ public class disparoshitfloor : MonoBehaviour
             comienzo = false;
             vez1 = true;
             temp4 = 0;
-
+            if(bicho == "madcatn1")
+            {
             PlayerPrefs.SetFloat("hpr", (int)Random.Range(90f,130));
             PlayerPrefs.SetFloat("manar", (int)Random.Range(80f,110));
             PlayerPrefs.SetFloat("manarecr", Random.Range(0.7f,0.9f));
@@ -169,8 +187,19 @@ public class disparoshitfloor : MonoBehaviour
             PlayerPrefs.SetString("tipor", "viscoso");
             PlayerPrefs.SetFloat("nivelr", 1);
             PlayerPrefs.SetString("razar", "shitfloor");
+            }
+            if(bicho == "madcatn6")
+            {
+            PlayerPrefs.SetFloat("hpr", (int)Random.Range(90f,130));
+            PlayerPrefs.SetFloat("manar", (int)Random.Range(80f,110));
+            PlayerPrefs.SetFloat("manarecr", Random.Range(0.7f,0.9f));
+            PlayerPrefs.SetFloat("fuerzar", Random.Range(0.7f,0.9f));
+            PlayerPrefs.SetString("tipor", "viscoso");
+            PlayerPrefs.SetFloat("nivelr", 1);
+            PlayerPrefs.SetString("razar", "shitfloor");
+            }
         }
-        if(temp3 <= 0 || hp <=  0 && vez1 == false)
+        if( hp <=  0 && vez1 == false)
         {
             cuenta_.gameObject.SetActive(true);
             caza_.gameObject.SetActive(false);
@@ -194,7 +223,7 @@ public class disparoshitfloor : MonoBehaviour
     }
     public void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.tag == "balaene")
+        if (col.gameObject.tag == "balaene" && escudo == false)
 		{
             hp -= 1;
             UnityEngine.Object.Destroy(col.gameObject);

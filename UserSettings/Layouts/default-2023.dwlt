@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 989
   m_ShowMode: 4
-  m_Title: Simulator
+  m_Title: Project
   m_RootView: {fileID: 10}
   m_MinSize: {x: 875, y: 421}
   m_MaxSize: {x: 10000, y: 10000}
@@ -42,7 +42,7 @@ MonoBehaviour:
     x: 1079
     y: 0
     width: 468
-    height: 463
+    height: 403
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 18}
@@ -70,11 +70,11 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1547
-    height: 463
+    height: 403
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 33
+  controlID: 21
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -93,7 +93,7 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1079
-    height: 463
+    height: 403
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 19}
@@ -116,10 +116,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 917
+    x: 862
     y: 0
-    width: 630
-    height: 476
+    width: 685
+    height: 536
   m_MinSize: {x: 232, y: 271}
   m_MaxSize: {x: 10002, y: 10021}
   m_ActualView: {fileID: 16}
@@ -147,13 +147,13 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 463
+    y: 403
     width: 1547
-    height: 476
+    height: 536
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 90
+  controlID: 60
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -178,7 +178,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 151
+  controlID: 121
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -222,15 +222,15 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 917
-    height: 476
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+    width: 862
+    height: 536
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 21}
   m_Panes:
-  - {fileID: 21}
   - {fileID: 20}
-  m_Selected: 0
+  - {fileID: 21}
+  m_Selected: 1
   m_LastSelected: 1
 --- !u!114 &10
 MonoBehaviour:
@@ -327,7 +327,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 89
+  controlID: 59
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -608,7 +608,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 66368
+  m_LastSelectedObjectID: 86746
 --- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -630,10 +630,10 @@ MonoBehaviour:
     m_TextWithWhitespace: "Project\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 917
-    y: 536
-    width: 628
-    height: 455
+    x: 862
+    y: 476
+    width: 683
+    height: 515
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -656,7 +656,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/juego/Scenes/cazas
+    - Assets/juego/Scenes
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -666,16 +666,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/juego/Scenes/cazas
+  - Assets/juego/Scenes
   m_LastFoldersGridSize: 16
-  m_LastProjectPath: E:\REPO\dimensional-hunters
+  m_LastProjectPath: D:\REPO\dimensional-hunters
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 7e7e0000
-    m_LastClickedID: 32382
-    m_ExpandedIDs: 00000000d67d0000fc7d00007c7e000000ca9a3b
+    m_SelectedIDs: 6c740000
+    m_LastClickedID: 29804
+    m_ExpandedIDs: 00000000e8730000047400000a7400006c7400001639010000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -703,7 +703,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000d67d0000
+    m_ExpandedIDs: 00000000e8730000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -734,18 +734,18 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: c62300003c5e0000d80c0200000000005c5e000096ef0100
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: cazar1_2
+      m_OriginalName: cazar1_2
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 29996
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 5}
     m_CreateAssetUtility:
@@ -758,7 +758,7 @@ MonoBehaviour:
     m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 16
   m_SkipHiddenPackages: 0
-  m_DirectoriesAreaWidth: 202
+  m_DirectoriesAreaWidth: 259
 --- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -832,7 +832,7 @@ MonoBehaviour:
     x: 1079
     y: 73
     width: 466
-    height: 442
+    height: 382
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -847,23 +847,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 827e0000
+      m_SelectedIDs: 8e740000
       m_LastClickedID: 0
-      m_ExpandedIDs: f0f5ffffc2faffff
+      m_ExpandedIDs: 589dfcff1ea3fcffeaa8fcff4ea9fcffb2a9fcffe4abfcff7ab2fcff8abdfcff50c3fcff1cc9fcfff8cefcffc4d4fcff90dafcffa0e5fcff04e6fcff68e6fcffcce6fcff30e7fcff94e7fcff6cedfcffd0edfcffa8eefcffcef0fcff00f3fcff60f5fcff86f7fcffb8f9fcff00fcfcff26fefcff4200fdff7802fdff9e04fdffd406fdfffa08fdff2610fdff2616fdff9416fdfff816fdfff4d0feff4cd5feff26dbfefff2e0feffbee6feffcef1feff3af2feff4afdfeff1603ffffcc0effff8e10fffff210ffff5611ffffb011ffff2812ffff8c12ffffe612ffff4a13ffffae13ffff1214ffff7614ffff4e1affffb21affff7e20ffff4426ffff002cffffcc31ffff9837ffff3246ffffe06effff446fffffa86fffff0c70ffff7070ffff4876ffffac76ffff1077ffff4279ffffa679ffffd87bffff3c7cffffa07cffff047dffff687dffffcc7dfffffe7fffff6280ffffc680ffff8c86ffff588cffff2492ffff349dffff989dffffa8a8ffff74aeffff40b4ffff5abfffff26c5fffff2caffff1ed6ffff50d8ffffc0d8fffff2daffff56dbffffbadbffff86e1ffff54e7ffff20edfffff4f2ffff60f3ffffc4f3ffff28f4ffff64f6ffff8af8ffff08f9ffff08fbffff08ce000014ce00008ad200006ad3000036100100563701006437010098370100d2370100f23701001e380100a4520100b252010074720100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: musica
+        m_OriginalName: musica
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: 86804
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 2}
       m_SearchString: 
@@ -897,7 +897,7 @@ MonoBehaviour:
     x: 0
     y: 73
     width: 1078
-    height: 442
+    height: 382
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1172,9 +1172,9 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 48, y: 48}
+      snapOffset: {x: -207, y: -242}
       snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
+      snapCorner: 3
       id: AINavigationOverlay
       index: 11
       layout: 4
@@ -1323,6 +1323,19 @@ MonoBehaviour:
       layout: 4
       size: {x: 236, y: 152}
       sizeOverridden: 1
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 1
+      snapOffset: {x: 48, y: 48}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: UnityEditor.SceneViewCameraOverlay
+      index: 16
+      layout: 4
+      size: {x: 240, y: 135}
+      sizeOverridden: 1
     m_ContainerData:
     - containerId: overlay-toolbar__top
       scrollOffset: 0
@@ -1349,9 +1362,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0, y: 0, z: 0}
+    m_Target: {x: 1574.1562, y: 490.3145, z: -24.558105}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 0}
+    m_Value: {x: 1574.1562, y: 490.3145, z: -24.558105}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1397,13 +1410,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+    m_Target: {x: -0.07971887, y: 0.012556821, z: -0.0010042464, w: -0.99673903}
     speed: 2
-    m_Value: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+    m_Value: {x: -0.079718776, y: 0.012556806, z: -0.0010042452, w: -0.99673784}
   m_Size:
-    m_Target: 10
+    m_Target: 564.78973
     speed: 2
-    m_Value: 10
+    m_Value: 564.78973
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1450,9 +1463,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 536
-    width: 916
-    height: 455
+    y: 356
+    width: 1108
+    height: 635
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1486,9 +1499,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 536
-    width: 916
-    height: 455
+    y: 476
+    width: 861
+    height: 515
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1503,12 +1516,12 @@ MonoBehaviour:
   m_SerializedViewNames:
   - UnityEditor.GameView
   m_SerializedViewValues:
-  - D:\juegos\musicp\invizimals\Library\PlayModeViewStates\280bbe32511eff749ae587080061c910
+  - D:\REPO\dimensional-hunters\Library\PlayModeViewStates\2f30dbc4578b32c45869fe09217f7cf0
   m_PlayModeViewName: Device Simulator
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 1}
-  m_TargetSize: {x: 2640, y: 1200}
+  m_TargetSize: {x: 2340, y: 1080}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -1526,11 +1539,11 @@ MonoBehaviour:
     pluginStates:
     - '{}'
     - '{}'
-    scale: 33
+    scale: 35
     fitToScreenEnabled: 1
     rotationDegree: 270
     highlightSafeAreaEnabled: 1
-    friendlyName: Huawei P40 Pro
+    friendlyName: Google Pixel 5
     screenIndex: 0
     networkReachability: 1
     systemLanguage: 10

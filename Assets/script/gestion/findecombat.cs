@@ -502,7 +502,6 @@ public class findecombat : MonoBehaviour
             inv.nivel[o]++;
             nivelt.text = "nivel : "+inv.nivel[o];
             obj -= 250;
-            subiste.text = "has evolucionado";
             if(inv.bichosmios[o] == "terreno")
             {
                 inv.hp[o] +=10;
@@ -519,7 +518,6 @@ public class findecombat : MonoBehaviour
             {
                 inv.manarec[o] +=0.1f;
             }
-            evo2();
             modelos();
             bichoti.text = "raza : "+inv.bichosmios[o];
             inv.hp[o] +=20;
@@ -873,7 +871,6 @@ public class findecombat : MonoBehaviour
             inv.nivel[o]++;
             nivelt.text = "nivel : "+inv.nivel[o];
             obj -= 780;
-            subiste.text = "has evolucionado";
             if(inv.bichosmios[o] == "terreno")
             {
                 inv.hp[o] +=10;
@@ -890,7 +887,6 @@ public class findecombat : MonoBehaviour
             {
                 inv.manarec[o] +=0.1f;
             }
-            evo3();
             modelos();
             bichoti.text = "raza : "+inv.bichosmios[o];
             inv.hp[o] +=20;
@@ -1431,47 +1427,5 @@ public class findecombat : MonoBehaviour
             bichom = skybird3;
         }
         bichom.SetActive(true);
-    }
-    public void evo2()
-    {
-        inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
-        if(inv.bichosmios[o] == "madcat")
-        {
-            inv.bichosmios[o] = "happycat";
-        }
-        if(inv.bichosmios[o] == "shitfloor")
-        {
-            inv.bichosmios[o] = "shitplus";
-        }
-        if(inv.bichosmios[o] == "topo topo")
-        {
-            inv.bichosmios[o] = "toto topo";
-        }
-        if(inv.bichosmios[o] == "skybird")
-        {
-            inv.bichosmios[o] = "sunbird";
-        }
-  
-    }
-    public void evo3()
-    {
-        inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
-        if(inv.bichosmios[o] == "happycat")
-        {
-            inv.bichosmios[o] = "crazycat";
-        }
-        if(inv.bichosmios[o] == "shitplus")
-        {
-            inv.bichosmios[o] = "shitplusplus";
-        }
-        if(inv.bichosmios[o] == "toto topo")
-        {
-            inv.bichosmios[o] = "poro topo";
-        }
-        if(inv.bichosmios[o] == "sunbird")
-        {
-            inv.bichosmios[o] = "moonbird";
-        }
-
     }
 }

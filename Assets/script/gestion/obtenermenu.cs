@@ -367,7 +367,7 @@ public class obtenermenu : MonoBehaviour
                 mat.text = "STAMINA :"+(int)mana;
                 rect.text = "REC :"+manarec.ToString("F2");
                 danot.text = "FUE :"+fuerza.ToString("F2");
-                elementot.text = "ELEM : "+ elemento;
+                elementot.text = "CAT : "+ elemento;
                 nivelt.text = "NIVEL : "+nivel;
                 
                 if(bichoselec == true && temp > 0.3f)
@@ -472,7 +472,7 @@ public class obtenermenu : MonoBehaviour
                 mat2.text = "STAMINA :"+inv.mana[i].ToString("F2");
                 rect2.text = "REC :"+inv.manarec[i].ToString("F2");
                 danot2.text = "FUE :"+inv.fuerza[i].ToString("F2");
-                elementot2.text = "ELEM : "+inv.elemento[i];
+                elementot2.text = "CAT : "+inv.elemento[i];
                 nivelt2.text = "NIVEL : "+inv.nivel[i];
                 who.text = "TUS HEROES";
                 modelos();

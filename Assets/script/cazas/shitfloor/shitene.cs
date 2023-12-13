@@ -25,6 +25,7 @@ public class shitene : MonoBehaviour
     public int rango;
     public float rangoexp;
     public float fuerzajug;
+    public Text nombre;
 
     public int hierba;
     public float hierbaexp;
@@ -153,6 +154,7 @@ public class shitene : MonoBehaviour
             defensa = 0 * rangoexp;
             fuerza = 10 * rangoexp * hierbaexp;
             }
+            nombre.text = "madcat";
         }
         if (bicho == "skybird")
         {
@@ -170,6 +172,7 @@ public class shitene : MonoBehaviour
             defensa = 0 * rangoexp;
             fuerza = 10 * rangoexp * hierbaexp;
             }
+            nombre.text = "skybird";
 
         }
         if (bicho == "shitfloor")
@@ -188,6 +191,7 @@ public class shitene : MonoBehaviour
             defensa = 0 * rangoexp;
             fuerza = 20 * rangoexp * hierbaexp;
             }
+            nombre.text = "shitfloor";
 
         }
         if (bicho == "topo")
@@ -206,6 +210,7 @@ public class shitene : MonoBehaviour
             defensa = 0 * rangoexp;
             fuerza = 10 * rangoexp * hierbaexp;
             }
+            nombre.text = "topo topo";
 
         }
         hp = hpmax;

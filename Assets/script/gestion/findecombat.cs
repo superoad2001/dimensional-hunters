@@ -71,7 +71,7 @@ public class findecombat : MonoBehaviour
         manat.text = "sta : "+inv.mana[o];
         manarect.text = "rec : "+inv.manarec[o].ToString("F2");
         danot.text = "fue : "+inv.fuerza[o].ToString("F2");
-        elementot.text = "elemento : "+inv.elemento[o];
+        elementot.text = "categoria : "+inv.elemento[o];
         bichoti.text = "raza : "+inv.bichosmios[o];
         nivelt.text = "nivel : "+inv.nivel[o];
 
@@ -239,7 +239,7 @@ public class findecombat : MonoBehaviour
             manat.text = "sta : "+inv.mana[o];
             manarect.text = "rec : "+inv.manarec[o].ToString("F2");
             danot.text = "fue : "+inv.fuerza[o].ToString("F2");
-            elementot.text = "elemento : "+inv.elemento[o];
+            elementot.text = "categoria : "+inv.elemento[o];
             bichoti.text = "raza : "+inv.bichosmios[o];
             nivelt.text = "nivel : "+inv.nivel[o];
             subiste.text = "";
@@ -321,7 +321,7 @@ public class findecombat : MonoBehaviour
             manat.text = "sta : "+inv.mana[o];
             manarect.text = "rec : "+inv.manarec[o].ToString("F2");
             danot.text = "fue : "+inv.fuerza[o].ToString("F2");
-            elementot.text = "elemento : "+inv.elemento[o];
+            elementot.text = "categoria : "+inv.elemento[o];
             bichoti.text = "raza : "+inv.bichosmios[o];
             nivelt.text = "nivel : "+inv.nivel[o];
             subiste.text = "";
@@ -393,7 +393,7 @@ public class findecombat : MonoBehaviour
             manat.text = "sta : "+inv.mana[o];
             manarect.text = "rec : "+inv.manarec[o].ToString("F2");
             danot.text = "fue : "+inv.fuerza[o].ToString("F2");
-            elementot.text = "elemento : "+inv.elemento[o];
+            elementot.text = "categoria : "+inv.elemento[o];
             bichoti.text = "raza : "+inv.bichosmios[o];
             nivelt.text = "nivel : "+inv.nivel[o];
             subiste.text = "";
@@ -464,7 +464,7 @@ public class findecombat : MonoBehaviour
             manat.text = "sta : "+inv.mana[o];
             manarect.text = "rec : "+inv.manarec[o].ToString("F2");
             danot.text = "fue : "+inv.fuerza[o].ToString("F2");
-            elementot.text = "elemento : "+inv.elemento[o];
+            elementot.text = "categoria : "+inv.elemento[o];
             bichoti.text = "raza : "+inv.bichosmios[o];
             nivelt.text = "nivel : "+inv.nivel[o];
             subiste.text = "";
@@ -535,7 +535,7 @@ public class findecombat : MonoBehaviour
             manat.text = "sta : "+inv.mana[o];
             manarect.text = "rec : "+inv.manarec[o].ToString("F2");
             danot.text = "fue : "+inv.fuerza[o].ToString("F2");
-            elementot.text = "elemento : "+inv.elemento[o];
+            elementot.text = "categoria : "+inv.elemento[o];
             bichoti.text = "raza : "+inv.bichosmios[o];
             nivelt.text = "nivel : "+inv.nivel[o];
             subiste.text = "";
@@ -619,7 +619,7 @@ public class findecombat : MonoBehaviour
             manat.text = "sta : "+inv.mana[o];
             manarect.text = "rec : "+inv.manarec[o].ToString("F2");
             danot.text = "fue : "+inv.fuerza[o].ToString("F2");
-            elementot.text = "elemento : "+inv.elemento[o];
+            elementot.text = "categoria : "+inv.elemento[o];
             bichoti.text = "raza : "+inv.bichosmios[o];
             nivelt.text = "nivel : "+inv.nivel[o];
             subiste.text = "";
@@ -691,7 +691,7 @@ public class findecombat : MonoBehaviour
             manat.text = "sta : "+inv.mana[o];
             manarect.text = "rec : "+inv.manarec[o].ToString("F2");
             danot.text = "fue : "+inv.fuerza[o].ToString("F2");
-            elementot.text = "elemento : "+inv.elemento[o];
+            elementot.text = "categoria : "+inv.elemento[o];
             bichoti.text = "raza : "+inv.bichosmios[o];
             nivelt.text = "nivel : "+inv.nivel[o];
             subiste.text = "";
@@ -762,7 +762,7 @@ public class findecombat : MonoBehaviour
             manat.text = "sta : "+inv.mana[o];
             manarect.text = "rec : "+inv.manarec[o].ToString("F2");
             danot.text = "fue : "+inv.fuerza[o].ToString("F2");
-            elementot.text = "elemento : "+inv.elemento[o];
+            elementot.text = "categoria : "+inv.elemento[o];
             bichoti.text = "raza : "+inv.bichosmios[o];
             nivelt.text = "nivel : "+inv.nivel[o];
             subiste.text = "";
@@ -833,7 +833,7 @@ public class findecombat : MonoBehaviour
             manat.text = "sta : "+inv.mana[o];
             manarect.text = "rec : "+inv.manarec[o].ToString("F2");
             danot.text = "fue : "+inv.fuerza[o].ToString("F2");
-            elementot.text = "elemento : "+inv.elemento[o];
+            elementot.text = "categoria : "+inv.elemento[o];
             bichoti.text = "raza : "+inv.bichosmios[o];
             nivelt.text = "nivel : "+inv.nivel[o];
             subiste.text = "";
@@ -904,7 +904,7 @@ public class findecombat : MonoBehaviour
             manat.text = "sta : "+inv.mana[o];
             manarect.text = "rec : "+inv.manarec[o].ToString("F2");
             danot.text = "fue : "+inv.fuerza[o].ToString("F2");
-            elementot.text = "elemento : "+inv.elemento[o];
+            elementot.text = "categoria : "+inv.elemento[o];
             bichoti.text = "raza : "+inv.bichosmios[o];
             nivelt.text = "nivel : "+inv.nivel[o];
             subiste.text = "";
@@ -986,7 +986,7 @@ public class findecombat : MonoBehaviour
             manat.text = "sta : "+inv.mana[o];
             manarect.text = "rec : "+inv.manarec[o].ToString("F2");
             danot.text = "fue : "+inv.fuerza[o].ToString("F2");
-            elementot.text = "elemento : "+inv.elemento[o];
+            elementot.text = "categoria : "+inv.elemento[o];
             bichoti.text = "raza : "+inv.bichosmios[o];
             nivelt.text = "nivel : "+inv.nivel[o];
             subiste.text = "";
@@ -1052,7 +1052,7 @@ public class findecombat : MonoBehaviour
             manat.text = "sta : "+inv.mana[o];
             manarect.text = "rec : "+inv.manarec[o].ToString("F2");
             danot.text = "fue : "+inv.fuerza[o].ToString("F2");
-            elementot.text = "elemento : "+inv.elemento[o];
+            elementot.text = "categoria : "+inv.elemento[o];
             bichoti.text = "raza : "+inv.bichosmios[o];
             nivelt.text = "nivel : "+inv.nivel[o];
             subiste.text = "";
@@ -1118,7 +1118,7 @@ public class findecombat : MonoBehaviour
             manat.text = "sta : "+inv.mana[o];
             manarect.text = "rec : "+inv.manarec[o].ToString("F2");
             danot.text = "fue : "+inv.fuerza[o].ToString("F2");
-            elementot.text = "elemento : "+inv.elemento[o];
+            elementot.text = "categoria : "+inv.elemento[o];
             bichoti.text = "raza : "+inv.bichosmios[o];
             nivelt.text = "nivel : "+inv.nivel[o];
             subiste.text = "";
@@ -1184,7 +1184,7 @@ public class findecombat : MonoBehaviour
             manat.text = "sta : "+inv.mana[o];
             manarect.text = "rec : "+inv.manarec[o].ToString("F2");
             danot.text = "fue : "+inv.fuerza[o].ToString("F2");
-            elementot.text = "elemento : "+inv.elemento[o];
+            elementot.text = "categoria : "+inv.elemento[o];
             bichoti.text = "raza : "+inv.bichosmios[o];
             nivelt.text = "nivel : "+inv.nivel[o];
             subiste.text = "";
@@ -1250,7 +1250,7 @@ public class findecombat : MonoBehaviour
             manat.text = "sta : "+inv.mana[o];
             manarect.text = "rec : "+inv.manarec[o].ToString("F2");
             danot.text = "fue : "+inv.fuerza[o].ToString("F2");
-            elementot.text = "elemento : "+inv.elemento[o];
+            elementot.text = "categoria : "+inv.elemento[o];
             bichoti.text = "raza : "+inv.bichosmios[o];
             nivelt.text = "nivel : "+inv.nivel[o];
             subiste.text = "";
@@ -1310,7 +1310,7 @@ public class findecombat : MonoBehaviour
             manat.text = "sta : "+inv.mana[o];
             manarect.text = "rec : "+inv.manarec[o].ToString("F2");
             danot.text = "fue : "+inv.fuerza[o].ToString("F2");
-            elementot.text = "elemento : "+inv.elemento[o];
+            elementot.text = "categoria : "+inv.elemento[o];
             bichoti.text = "raza : "+inv.bichosmios[o];
             nivelt.text = "nivel : "+inv.nivel[o];
             subiste.text = "";

@@ -514,7 +514,7 @@ public class combatemenu : MonoBehaviour
                 mat.text = "STAMINA :"+inv.mana[i].ToString("F2");
                 rect.text = "REC :"+inv.manarec[i].ToString("F2");
                 danot.text = "FUE :"+inv.fuerza[i].ToString("F2");
-                elementot.text = "ELEM : "+inv.elemento[i];
+                elementot.text = "CAT : "+inv.elemento[i];
                 nivelt.text = "NIVEL : "+inv.nivel[i];
                 who.text = "TUS HEROES";
                 if(borrar == true && temp > 0.3f)
@@ -581,7 +581,7 @@ public class combatemenu : MonoBehaviour
                 mat.text = "STAMINA :"+inv.mana[i].ToString("F2");
                 rect.text = "REC :"+inv.manarec[i].ToString("F2");
                 danot.text = "FUE :"+inv.fuerza[i].ToString("F2");
-                elementot.text = "ELEM : "+inv.elemento[i];
+                elementot.text = "CAT : "+inv.elemento[i];
                 nivelt.text = "NIVEL : "+inv.nivel[i];
                 who.text = "ELIGE TU HEROE";
                 if(bichoselec == true && temp > 0.3f)
@@ -627,7 +627,7 @@ public class combatemenu : MonoBehaviour
                 mat.text = "STAMINA :"+inv.mana[i].ToString("F2");
                 rect.text = "REC :"+inv.manarec[i].ToString("F2");
                 danot.text = "FUE :"+inv.fuerza[i].ToString("F2");
-                elementot.text = "ELEM : "+inv.elemento[i];
+                elementot.text = "CAT : "+inv.elemento[i];
                 nivelt.text = "NIVEL : "+inv.nivel[i];
                 who.text = "ELIGE TU HEROE";
                 if(bichoselec == true && temp > 0.3f)
@@ -674,7 +674,7 @@ public class combatemenu : MonoBehaviour
                 mat.text = "STAMINA :"+(float)manabarcelona[i];
                 rect.text = "REC :"+(float)manarecbarcelona[i];
                 danot.text = "FUE :"+(float)fuerzabarcelona[i];
-                elementot.text = "ELEM : "+elementobarcelona[i];
+                elementot.text = "CAT : "+elementobarcelona[i];
                 nivelt.text = "NIVEL : "+nivelbarcelona[i];
                 who.text = "QUIEN ES TU ENEMIGO ?";
                 if(bichoselec == true && temp > 0.3f)

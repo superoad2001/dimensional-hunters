@@ -573,7 +573,7 @@ public class combatemenumulti : MonoBehaviour
                 mat.text = "STAMINA :"+inv.mana[i].ToString("F2");
                 rect.text = "REC :"+inv.manarec[i].ToString("F2");
                 danot.text = "FUE :"+inv.fuerza[i].ToString("F2");
-                elementot.text = "ELEM : "+inv.elemento[i];
+                elementot.text = "CAT : "+inv.elemento[i];
                 nivelt.text = "NIVEL : "+inv.nivel[i];
                 who.text = "TUS HEROES";
                 if(borrar == true && temp > 0.3f)
@@ -640,7 +640,7 @@ public class combatemenumulti : MonoBehaviour
                 mat.text = "STAMINA :"+inv.mana[i].ToString("F2");
                 rect.text = "REC :"+inv.manarec[i].ToString("F2");
                 danot.text = "FUE :"+inv.fuerza[i].ToString("F2");
-                elementot.text = "ELEM : "+inv.elemento[i];
+                elementot.text = "CAT : "+inv.elemento[i];
                 nivelt.text = "NIVEL : "+inv.nivel[i];
                 who.text = "ELIGE TU HEROE";
                 if(bichoselec == true && temp > 0.3f)
@@ -687,7 +687,7 @@ public class combatemenumulti : MonoBehaviour
                 mat.text = "STAMINA :"+inv.mana[i].ToString("F2");
                 rect.text = "REC :"+inv.manarec[i].ToString("F2");
                 danot.text = "FUE :"+inv.fuerza[i].ToString("F2");
-                elementot.text = "ELEM : "+inv.elemento[i];
+                elementot.text = "CAT : "+inv.elemento[i];
                 nivelt.text = "NIVEL : "+inv.nivel[i];
                 who.text = "ELIGE TU HEROE";
                 if(bichoselec == true && temp > 0.3f)

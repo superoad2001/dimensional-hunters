@@ -62,6 +62,8 @@ public class inventariomenu : MonoBehaviour
     public Text text5;
     public Text text6;
 
+    public int rango;
+
     // Start is called before the first frame update
 
      public void _atras()
@@ -87,11 +89,7 @@ public class inventariomenu : MonoBehaviour
     void Start()
     {
 
-
-
-    
-        
-
+        rango = PlayerPrefs.GetInt("rango", 1);
 
     }
 
@@ -110,19 +108,19 @@ public class inventariomenu : MonoBehaviour
 
         if(tienda == 1)
         {       
-                puesto1.text = "pocion de salud (p)";
-                puesto2.text = "pocion de stamina (p)";
-                puesto3.text = "pocion de salud (m)";
-                puesto4.text = "pocion de stamina (m)";
-                puesto5.text = "pocion de salud (g)";
-                puesto6.text = "pocion de stamina (g)";
+                puesto1.text = "rango de caza";
+                puesto2.text = "almacenamiento";
+                puesto3.text = "heroes";
+                puesto4.text = "";
+                puesto5.text = "";
+                puesto6.text = "";
                 din.text = "dolares : "+inv.dinero.ToString("F0");
-                ptext1.text = ""+(float)inv.pocvp;
-                ptext2.text = ""+(float)inv.pocmm;
-                ptext3.text = ""+(float)inv.pocvp;
-                ptext4.text = ""+(float)inv.pocmm;
-                ptext5.text = ""+(float)inv.pocvg;
-                ptext6.text = ""+(float)inv.pocmg;
+                ptext1.text = ""+rango;
+                ptext2.text = ""+inv.limite;
+                ptext3.text = ""+inv.indexmax;
+                ptext4.text = "";
+                ptext5.text = "";
+                ptext6.text = "";
 
         }
         if(tienda == 2)

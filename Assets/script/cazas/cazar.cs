@@ -47,19 +47,23 @@ public class cazar : MonoBehaviour
         // si colisionas con objetos de este tipo eres teletransportado a su nivel
         if (col.gameObject.tag == "madcat")
         {
-            SceneManager.LoadScene("esccat");
+            PlayerPrefs.SetString("bichocaza", "madcat");
+            SceneManager.LoadScene("combatecaza");
         }
         if (col.gameObject.tag == "shitfloor")
         {
-            SceneManager.LoadScene("escshit");
+            PlayerPrefs.SetString("bichocaza", "shitfloor");
+            SceneManager.LoadScene("combatecaza");
         }
         if (col.gameObject.tag == "topo")
         {
-            SceneManager.LoadScene("esctopo");
+            PlayerPrefs.SetString("bichocaza", "topo");
+            SceneManager.LoadScene("combatecaza");
         }
         if (col.gameObject.tag == "skybird")
         {
-            SceneManager.LoadScene("escsky");
+            PlayerPrefs.SetString("bichocaza", "skybird");
+            SceneManager.LoadScene("combatecaza");
         }
     }
 }

@@ -49,7 +49,6 @@ public class disparoshitfloor : MonoBehaviour
         arSession.Reset ();
          new Vector3(0,0,0);
         cam.transform.position = new Vector3(0,0,0f);
-        hp = hpmax;
         rango = PlayerPrefs.GetInt("rango", 1);
         if(rango == 1)
         {rangoexp = 1;}
@@ -97,6 +96,55 @@ public class disparoshitfloor : MonoBehaviour
 
         if(rango == 21)
         {rangoexp = 2;}
+
+        if(rango == 1)
+        {hp = 30; }
+        if(rango == 2)
+        {hp = 50; }
+        if(rango == 3)
+        {hp = 70; }
+        if(rango == 4)
+        {hp = 90; }
+        if(rango == 5)
+        {hp = 100; }
+
+        if(rango == 6)
+        {hp = 150; }
+        if(rango == 7)
+        {hp = 200; }
+        if(rango == 8)
+        {hp = 250; }
+        if(rango == 9)
+        {hp = 300; }
+        if(rango == 10)
+        {hp = 350; }
+
+        if(rango == 11)
+        {hp = 400; }
+        if(rango == 12)
+        {hp = 500; }
+        if(rango == 13)
+        {hp = 600; }
+        if(rango == 14)
+        {hp = 650; }
+        if(rango == 15)
+        {hp = 700; }
+
+        if(rango == 16)
+        {hp = 750;}
+        if(rango == 17)
+        {hp = 780; }
+        if(rango == 18)
+        {hp = 800; }
+        if(rango == 19)
+        {hp = 875; }
+        if(rango == 20)
+        {hp = 950; }
+
+        if(rango == 21)
+        {hp = 1000;}
+
+        hp = hpmax;
         
     }
 

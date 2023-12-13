@@ -21,15 +21,194 @@ public class shitene : MonoBehaviour
     public GameObject skybird;
     public GameObject shitfloor;
     public GameObject topo;
+    public float defensa;
+    public int rango;
+    public float rangoexp;
+    public float fuerzajug;
+
+    public int hierba;
+    public float hierbaexp;
+    public float fuerza;
     // Start is called before the first frame update
     void Start()
     {
+        bicho = PlayerPrefs.GetString("bichocaza", "madcat");
+        rango = PlayerPrefs.GetInt("rango", 1);
+        if(rango == 1)
+        {fuerzajug = 5;}
+        if(rango == 2)
+        {fuerzajug = 10 ;}
+        if(rango == 3)
+        {fuerzajug = 20 ;}
+        if(rango == 4)
+        {fuerzajug = 30 ;}
+        if(rango == 5)
+        {fuerzajug = 40 ;}
+
+        if(rango == 6)
+        {fuerzajug = 50 ;}
+        if(rango == 7)
+        {fuerzajug = 58 ;}
+        if(rango == 8)
+        {fuerzajug = 65 ;}
+        if(rango == 9)
+        {fuerzajug = 70 ;}
+        if(rango == 10)
+        {fuerzajug = 80 ;}
+
+        if(rango == 11)
+        {fuerzajug = 90 ;}
+        if(rango == 12)
+        {fuerzajug = 98 ;}
+        if(rango == 13)
+        {fuerzajug = 105 ;}
+        if(rango == 14)
+        {fuerzajug = 110 ;}
+        if(rango == 15)
+        {fuerzajug = 120 ;}
+
+        if(rango == 16)
+        {fuerzajug = 125 ;}
+        if(rango == 17)
+        {fuerzajug = 135 ;}
+        if(rango == 18)
+        {fuerzajug = 145 ;}
+        if(rango == 19)
+        {fuerzajug = 150 ;}
+        if(rango == 20)
+        {fuerzajug = 155 ;}
+
+        if(rango == 21)
+        {fuerzajug = 160;}
+
+        if(rango == 1)
+        {rangoexp = 1;}
+        if(rango == 2)
+        {rangoexp = 1.50f;}
+        if(rango == 3)
+        {rangoexp = 2f;}
+        if(rango == 4)
+        {rangoexp = 2.50f;}
+        if(rango == 5)
+        {rangoexp = 3f;}
+
+        if(rango == 6)
+        {rangoexp = 3.25f;}
+        if(rango == 7)
+        {rangoexp = 3.75f;}
+        if(rango == 8)
+        {rangoexp = 4.25f;}
+        if(rango == 9)
+        {rangoexp = 4.75f;}
+        if(rango == 10)
+        {rangoexp = 5.25f;}
+
+        if(rango == 11)
+        {rangoexp = 5.5f;}
+        if(rango == 12)
+        {rangoexp = 6f;}
+        if(rango == 13)
+        {rangoexp = 6.50f;}
+        if(rango == 14)
+        {rangoexp = 7f;}
+        if(rango == 15)
+        {rangoexp = 7.50f;}
+
+        if(rango == 16)
+        {rangoexp = 7.75f;}
+        if(rango == 17)
+        {rangoexp = 8.25f;}
+        if(rango == 48)
+        {rangoexp = 8.75f;}
+        if(rango == 19)
+        {rangoexp = 9.25f;}
+        if(rango == 20)
+        {rangoexp = 9.75f;}
+
+        if(rango == 21)
+        {rangoexp = 10;}
+
+        
+        hierba = PlayerPrefs.GetInt("hierbatipo", 1);
+        if (hierba == 1)
+        {hierbaexp = 1;}
+        if (hierba == 2)
+        {hierbaexp = 1.1f;}
+        if (hierba == 3)
+        {hierbaexp = 1.2f;}
+
         if (bicho == "madcat")
         {
-            hpmax = 100;
-            hp = 100;
+            if(rango <= 2)
+            {
+            hpmax = 110 * hierbaexp;
             ataquetemp = 3;
+            defensa = 0;
+            fuerza = 10 * hierbaexp;
+            }
+            else if(rango > 2)
+            {
+            hpmax = 110 * rangoexp * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 * rangoexp;
+            fuerza = 10 * rangoexp * hierbaexp;
+            }
         }
+        if (bicho == "skybird")
+        {
+            if(rango <= 2)
+            {
+            hpmax = 100 * hierbaexp;
+            ataquetemp = 2;
+            defensa = 0 ;
+            fuerza = 10 * hierbaexp;
+            }
+            else if(rango > 2)
+            {
+            hpmax = 100 * rangoexp * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 * rangoexp;
+            fuerza = 10 * rangoexp * hierbaexp;
+            }
+
+        }
+        if (bicho == "shitfloor")
+        {
+            if(rango <= 2)
+            {
+            hpmax = 100  * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 ;
+            fuerza = 20  * hierbaexp;
+            }
+            else if(rango > 2)
+            {
+            hpmax = 100 * rangoexp * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 * rangoexp;
+            fuerza = 20 * rangoexp * hierbaexp;
+            }
+
+        }
+        if (bicho == "topo")
+        {
+            if(rango <= 2)
+            {
+            hpmax = 100 * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 ;
+            fuerza = 10  * hierbaexp;
+            }
+            else if(rango > 2)
+            {
+            hpmax = 100 * rangoexp * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 * rangoexp;
+            fuerza = 10 * rangoexp * hierbaexp;
+            }
+
+        }
+        hp = hpmax;
         mostrar();
     }
     // Update is called once per frame
@@ -66,7 +245,10 @@ public class shitene : MonoBehaviour
     {
         if (col.gameObject.tag == "bala")
 		{
-			hp -= 5;
+            if((fuerzajug-defensa) >= 5)
+			{hp = hp - (fuerzajug - defensa);}
+            else if((fuerzajug-defensa) < 5)
+            {hp = hp - 5;}
             UnityEngine.Object.Destroy(col.gameObject);
 		}
     }

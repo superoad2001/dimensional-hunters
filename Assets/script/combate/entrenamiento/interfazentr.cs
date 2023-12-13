@@ -17,7 +17,6 @@ public class interfazentr : MonoBehaviour
     public Image barraatb;
 
 
-    public Text uitext;
     public string com;
 
     public bool salir = false;
@@ -53,11 +52,7 @@ public class interfazentr : MonoBehaviour
 
         barrahpene.fillAmount = enemigo.hp/60;
 
-
-        if(uitext.text.Length > 28)
-        {uitext.text = com;}
         if(iniciotem < 15)
         {iniciotem += 1 * Time.deltaTime;}
-        com = uitext.text;
     }
 }

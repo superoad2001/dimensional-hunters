@@ -18,7 +18,6 @@ public class interfazcombate : MonoBehaviour
     public Image barraatb;
     public Image barraatbene;
 
-    public Text uitext;
 
     public string com;
 
@@ -58,10 +57,7 @@ public class interfazcombate : MonoBehaviour
         barratene.fillAmount = enemigo.turbobar/100;
         barraatbene.fillAmount = enemigo.atb/100;
 
-        if(uitext.text.Length > 27)
-        {uitext.text = com;}
         if(iniciotem < 15)
         {iniciotem += 1 * Time.deltaTime;}
-        com = uitext.text;
     }
 }

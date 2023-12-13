@@ -55,14 +55,11 @@ public class heromulti : NetworkBehaviour
 
     public bool botebool;
 
-    public Text atbbar;
     public Text mehp;
     public Text memana;
     public Text mename;
 
     public Collider prot;
-    public Collider prot2;
-    public Collider prot3;
 
     public GameObject escudo;
 
@@ -83,12 +80,8 @@ public class heromulti : NetworkBehaviour
     public int manamax;
 
     public Animator baseanim;
-    public Animator baseanim2;
-    public Animator baseanim3;
     
     public GameObject ev1;
-    public GameObject ev2;
-    public GameObject ev3;
 
     public RuntimeAnimatorController madcatanim1;
     public RuntimeAnimatorController shitanim1;
@@ -101,15 +94,6 @@ public class heromulti : NetworkBehaviour
     public GameObject topo;
     public GameObject skybird;
 
-    public GameObject madcat12;
-    public GameObject shitfloor2;
-    public GameObject topo2;
-    public GameObject skybird2;
-
-    public GameObject madcat13;
-    public GameObject shitfloor3;
-    public GameObject topo3;
-    public GameObject skybird3;
     public managermulti managermulti;
 
 
@@ -199,39 +183,23 @@ public class heromulti : NetworkBehaviour
                 baseanim.SetBool("atkfue", false);
                 baseanim.SetBool("atkturbo", false);
 
-                baseanim2.SetBool("atkrapfue", false);
-                baseanim2.SetBool("atkvel", false);
-                baseanim2.SetBool("atkfue", false);
-                baseanim2.SetBool("atkturbo", false);
-
-                baseanim3.SetBool("atkrapfue", false);
-                baseanim3.SetBool("atkvel", false);
-                baseanim3.SetBool("atkfue", false);
-                baseanim3.SetBool("atkturbo", false);
             }
             if(atkr.Value == 1)
             {
                 baseanim.SetBool("atkvel", true);
-                baseanim2.SetBool("atkvel", true);
-                baseanim3.SetBool("atkvel", true);
             }
             if(atkr.Value == 2)
             {
                 baseanim.SetBool("atkfue", true);
-                baseanim2.SetBool("atkfue", true);
-                baseanim3.SetBool("atkfue", true);
             }
             if(atkr.Value == 3)
             {
                 baseanim.SetBool("atkrapfue", true);
-                baseanim2.SetBool("atkrapfue", true);
-                baseanim3.SetBool("atkrapfue", true);
             }
             if(atkr.Value == 4)
             {
                 baseanim.SetBool("atkturbo", true);
-                baseanim2.SetBool("atkturbo", true);
-                baseanim3.SetBool("atkturbo", true);
+
             }
         }
     if(carga == false && managermulti.comenzar.Value == true)
@@ -309,15 +277,7 @@ public class heromulti : NetworkBehaviour
             baseanim.SetBool("atkfue", false);
             baseanim.SetBool("atkturbo", false);
 
-            baseanim2.SetBool("atkrapfue", false);
-            baseanim2.SetBool("atkvel", false);
-            baseanim2.SetBool("atkfue", false);
-            baseanim2.SetBool("atkturbo", false);
-
-            baseanim3.SetBool("atkrapfue", false);
-            baseanim3.SetBool("atkvel", false);
-            baseanim3.SetBool("atkfue", false);
-            baseanim3.SetBool("atkturbo", false);
+        
             if (rapido == true && atb == 100 && mana >= 20 && permiso == false && enemigo.permiso == false)
             {
                 activar = true;
@@ -329,8 +289,7 @@ public class heromulti : NetworkBehaviour
                 atb = 0;
                 rapsound.Play();
                 baseanim.SetBool("atkvel", true);
-                baseanim2.SetBool("atkvel", true);
-                baseanim3.SetBool("atkvel", true);
+            
                 dano = Random.Range(0,3);
                 botcl.Play();
                 
@@ -347,8 +306,7 @@ public class heromulti : NetworkBehaviour
                 ataque = Random.Range(16,20) * fuerza;
                 atb = 0;
                 baseanim.SetBool("atkfue", true);
-                baseanim2.SetBool("atkfue", true);
-                baseanim3.SetBool("atkfue", true);
+            
                 dano = Random.Range(0,3);
                 botcl.Play();
                 botno.Stop();
@@ -365,8 +323,7 @@ public class heromulti : NetworkBehaviour
                 ataque = Random.Range(18,25) * fuerza;
                 atb = 0;
                 baseanim.SetBool("atkrapfue", true);
-                baseanim2.SetBool("atkrapfue", true);
-                baseanim3.SetBool("atkrapfue", true);
+    
                 dano = Random.Range(0,3);
                 botcl.Play();
                 botno.Stop();
@@ -382,8 +339,7 @@ public class heromulti : NetworkBehaviour
                 ataque = Random.Range(40,50) * fuerza;
                 atb = 0;
                 baseanim.SetBool("atkturbo", true);
-                baseanim2.SetBool("atkturbo", true);
-                baseanim3.SetBool("atkturbo", true);
+                
                 dano = Random.Range(0,3);
                 botcl.Play();
                 botno.Stop();
@@ -401,15 +357,7 @@ public class heromulti : NetworkBehaviour
                 baseanim.SetBool("atkfue", false);
                 baseanim.SetBool("atkturbo", false);
 
-                baseanim2.SetBool("atkrapfue", false);
-                baseanim2.SetBool("atkvel", false);
-                baseanim2.SetBool("atkfue", false);
-                baseanim2.SetBool("atkturbo", false);
-
-                baseanim3.SetBool("atkrapfue", false);
-                baseanim3.SetBool("atkvel", false);
-                baseanim3.SetBool("atkfue", false);
-                baseanim3.SetBool("atkturbo", false);
+            
         
 
             }
@@ -423,8 +371,6 @@ public class heromulti : NetworkBehaviour
                 mana -= 3.5f * Time.deltaTime;
                 turbobar += 0.7f * Time.deltaTime;
                 prot.enabled = false;
-                prot2.enabled = false;
-                prot3.enabled = false;
                 escudo.gameObject.SetActive(true);
                 defr.Value = true;
                 defusar = true;
@@ -434,8 +380,6 @@ public class heromulti : NetworkBehaviour
                 mana -= 3.5f * Time.deltaTime;
                 turbobar += 0.7f * Time.deltaTime;
                 prot.enabled = false;
-                prot2.enabled = false;
-                prot3.enabled = false;
                 escudo.gameObject.SetActive(true);
                 defr.Value = true;
             }
@@ -447,8 +391,6 @@ public class heromulti : NetworkBehaviour
                 bote.Stop();
                 defusar = false;
                 prot.enabled = true;
-                prot2.enabled = true;
-                prot3.enabled = true;
                 if(mana > -1)
                 {
                     if (mana < manamax)
@@ -507,15 +449,11 @@ public class heromulti : NetworkBehaviour
         if(IsOwner == false && defr.Value == true)
         {
             prot.enabled = false;
-            prot2.enabled = false;
-            prot3.enabled = false;
             escudo.gameObject.SetActive(true);
         }
         if(IsOwner == false && defr.Value == false)
         {
             prot.enabled = true;
-            prot2.enabled = true;
-            prot3.enabled = true;
             escudo.gameObject.SetActive(false);
         }
         if(IsOwner)
@@ -569,7 +507,7 @@ public class heromulti : NetworkBehaviour
             
             madcat1.SetActive(true);
             ev1.SetActive(true);
-            madcat1.name = "madcat (1)";
+            madcat1.name = "madcatn";
             
             baseanim.runtimeAnimatorController = madcatanim1;
             rapsound = rapsoundcat;
@@ -613,7 +551,7 @@ public class heromulti : NetworkBehaviour
         {
             skybird.SetActive(true);
             ev1.SetActive(true);
-            skybird.name = "skybird";
+            skybird.name = "birdn";
             
             baseanim.runtimeAnimatorController = skybirdanim1;
             rapsound = rapsoundcat;
@@ -624,135 +562,6 @@ public class heromulti : NetworkBehaviour
             dano2 = dano2cat;
         }
 
-
-
-
-
-
-
-
-        if(bicho == "happycat")
-        {
-            
-            madcat12.SetActive(true);
-            ev2.SetActive(true);
-            madcat1.name = "madcat (1)";
-            
-            baseanim2.runtimeAnimatorController = madcatanim1;
-            rapsound = rapsoundcat;
-            fuesound = fuesoundcat;
-            rapfuesound = rapfuesoundcat;
-            turbosound = turbosoundcat;
-            dano1 = dano1cat;
-            dano2 = dano2cat;
-            
-        }
-        if(bicho == "shitplus")
-        {
-            shitfloor2.SetActive(true);
-            ev2.SetActive(true);
-            shitfloor.name = "shitfloor";
-            
-            baseanim2.runtimeAnimatorController = shitanim1;
-
-            rapsound = rapsoundcat;
-            fuesound = fuesoundcat;
-            rapfuesound = rapfuesoundcat;
-            turbosound = turbosoundcat;
-            dano1 = dano1cat;
-            dano2 = dano2cat;
-        }
-        if(bicho == "toto topo")
-        {
-            topo2.SetActive(true);
-            ev2.SetActive(true);
-            topo.name = "topo";
-            
-            baseanim2.runtimeAnimatorController = topoanim1;
-            rapsound = rapsoundcat;
-            fuesound = fuesoundcat;
-            rapfuesound = rapfuesoundcat;
-            turbosound = turbosoundcat;
-            dano1 = dano1cat;
-            dano2 = dano2cat;
-        }
-        if(bicho == "sunbird")
-        {
-            skybird2.SetActive(true);
-            ev2.SetActive(true);
-            skybird.name = "skybird";
-            
-            baseanim2.runtimeAnimatorController = skybirdanim1;
-            rapsound = rapsoundcat;
-            fuesound = fuesoundcat;
-            rapfuesound = rapfuesoundcat;
-            turbosound = turbosoundcat;
-            dano1 = dano1cat;
-            dano2 = dano2cat;
-        }
-
-
-
-
-        if(bicho == "crazycat")
-        {
-            
-            madcat13.SetActive(true);
-            ev3.SetActive(true);
-            madcat1.name = "madcat (1)";
-            
-            baseanim3.runtimeAnimatorController = madcatanim1;
-            rapsound = rapsoundcat;
-            fuesound = fuesoundcat;
-            rapfuesound = rapfuesoundcat;
-            turbosound = turbosoundcat;
-            dano1 = dano1cat;
-            dano2 = dano2cat;
-            
-        }
-        if(bicho == "shitplusplus")
-        {
-            shitfloor3.SetActive(true);
-            ev3.SetActive(true);
-            shitfloor.name = "shitfloor";
-            
-            baseanim3.runtimeAnimatorController = shitanim1;
-
-            rapsound = rapsoundcat;
-            fuesound = fuesoundcat;
-            rapfuesound = rapfuesoundcat;
-            turbosound = turbosoundcat;
-            dano1 = dano1cat;
-            dano2 = dano2cat;
-        }
-        if(bicho == "poro topo")
-        {
-            topo3.SetActive(true);
-            ev3.SetActive(true);
-            topo.name = "topo";
-            
-            baseanim3.runtimeAnimatorController = topoanim1;
-            rapsound = rapsoundcat;
-            fuesound = fuesoundcat;
-            rapfuesound = rapfuesoundcat;
-            turbosound = turbosoundcat;
-            dano1 = dano1cat;
-            dano2 = dano2cat;
-        }
-        if(bicho == "moonbird")
-        {
-            skybird3.SetActive(true);
-            ev3.SetActive(true);
-            skybird.name = "skybird";
-            
-            baseanim3.runtimeAnimatorController = skybirdanim1;
-            rapsound = rapsoundcat;
-            fuesound = fuesoundcat;
-            rapfuesound = rapfuesoundcat;
-            turbosound = turbosoundcat;
-            dano1 = dano1cat;
-            dano2 = dano2cat;
-        }
     }
     public void _permiso(bool permisoc)
     {

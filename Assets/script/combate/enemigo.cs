@@ -23,8 +23,6 @@ public class enemigo : MonoBehaviour
     public float nivel;
 
     public Collider ev1c;
-    public Collider ev2c;
-    public Collider ev3c;
 
     public int limite = 3;
 
@@ -45,8 +43,6 @@ public class enemigo : MonoBehaviour
     public RuntimeAnimatorController skybirdanim1;
 
     public Animator baseanim;
-    public Animator baseanim2;
-    public Animator baseanim3;
 
 
     public float temp;
@@ -58,7 +54,6 @@ public class enemigo : MonoBehaviour
     public float turbobar = 0;
 
 
-    public Text atbbar;
     public Text mehp;
     public Text memana;
     public Text mename;
@@ -66,8 +61,6 @@ public class enemigo : MonoBehaviour
     public AudioSource bote;
 
     public Collider prot;
-    public Collider prot2;
-    public Collider prot3;
 
     public GameObject escudo;
 
@@ -87,23 +80,11 @@ public class enemigo : MonoBehaviour
     public AudioSource dano2cat;
 
     public GameObject ev1;
-    public GameObject ev2;
-    public GameObject ev3;
 
     public GameObject madcat1;
     public GameObject shitfloor;
     public GameObject topo;
     public GameObject skybird;
-
-    public GameObject madcat12;
-    public GameObject shitfloor2;
-    public GameObject topo2;
-    public GameObject skybird2;
-
-    public GameObject madcat13;
-    public GameObject shitfloor3;
-    public GameObject topo3;
-    public GameObject skybird3;
 
     public AudioSource fueson;
     public AudioSource rapson;
@@ -152,7 +133,7 @@ public class enemigo : MonoBehaviour
             
             madcat1.SetActive(true);
             ev1.SetActive(true);
-            madcat1.name = "madcat (1)";
+            madcat1.name = "madcatn";
             baseanim.runtimeAnimatorController = madcatanim1;
             rapsound = rapsoundcat;
             fuesound = fuesoundcat;
@@ -195,7 +176,7 @@ public class enemigo : MonoBehaviour
         {
             skybird.SetActive(true);
             ev1.SetActive(true);
-            skybird.name = "skybird";
+            skybird.name = "birdn";
             
             baseanim.runtimeAnimatorController = skybirdanim1;
             rapsound = rapsoundcat;
@@ -206,135 +187,6 @@ public class enemigo : MonoBehaviour
             dano2 = dano2cat;
         }
 
-
-
-
-
-
-
-
-        if(bicho == "happycat")
-        {
-            
-            madcat12.SetActive(true);
-            ev2.SetActive(true);
-            madcat1.name = "madcat (1)";
-            
-            baseanim.runtimeAnimatorController = madcatanim1;
-            rapsound = rapsoundcat;
-            fuesound = fuesoundcat;
-            rapfuesound = rapfuesoundcat;
-            turbosound = turbosoundcat;
-            dano1 = dano1cat;
-            dano2 = dano2cat;
-            
-        }
-        if(bicho == "shitplus")
-        {
-            shitfloor2.SetActive(true);
-            ev2.SetActive(true);
-            shitfloor.name = "shitfloor";
-            
-            baseanim.runtimeAnimatorController = shitanim1;
-
-            rapsound = rapsoundcat;
-            fuesound = fuesoundcat;
-            rapfuesound = rapfuesoundcat;
-            turbosound = turbosoundcat;
-            dano1 = dano1cat;
-            dano2 = dano2cat;
-        }
-        if(bicho == "toto topo")
-        {
-            topo2.SetActive(true);
-            ev2.SetActive(true);
-            topo.name = "topo";
-            
-            baseanim.runtimeAnimatorController = topoanim1;
-            rapsound = rapsoundcat;
-            fuesound = fuesoundcat;
-            rapfuesound = rapfuesoundcat;
-            turbosound = turbosoundcat;
-            dano1 = dano1cat;
-            dano2 = dano2cat;
-        }
-        if(bicho == "sunbird")
-        {
-            skybird2.SetActive(true);
-            ev2.SetActive(true);
-            skybird.name = "skybird";
-            
-            baseanim.runtimeAnimatorController = skybirdanim1;
-            rapsound = rapsoundcat;
-            fuesound = fuesoundcat;
-            rapfuesound = rapfuesoundcat;
-            turbosound = turbosoundcat;
-            dano1 = dano1cat;
-            dano2 = dano2cat;
-        }
-
-
-
-
-        if(bicho == "crazycat")
-        {
-            
-            madcat13.SetActive(true);
-            ev3.SetActive(true);
-            madcat1.name = "madcat (1)";
-            
-            baseanim.runtimeAnimatorController = madcatanim1;
-            rapsound = rapsoundcat;
-            fuesound = fuesoundcat;
-            rapfuesound = rapfuesoundcat;
-            turbosound = turbosoundcat;
-            dano1 = dano1cat;
-            dano2 = dano2cat;
-            
-        }
-        if(bicho == "shitplusplus")
-        {
-            shitfloor3.SetActive(true);
-            ev3.SetActive(true);
-            shitfloor.name = "shitfloor";
-            
-            baseanim.runtimeAnimatorController = shitanim1;
-
-            rapsound = rapsoundcat;
-            fuesound = fuesoundcat;
-            rapfuesound = rapfuesoundcat;
-            turbosound = turbosoundcat;
-            dano1 = dano1cat;
-            dano2 = dano2cat;
-        }
-        if(bicho == "poro topo")
-        {
-            topo3.SetActive(true);
-            ev3.SetActive(true);
-            topo.name = "topo";
-            
-            baseanim.runtimeAnimatorController = topoanim1;
-            rapsound = rapsoundcat;
-            fuesound = fuesoundcat;
-            rapfuesound = rapfuesoundcat;
-            turbosound = turbosoundcat;
-            dano1 = dano1cat;
-            dano2 = dano2cat;
-        }
-        if(bicho == "moonbird")
-        {
-            skybird3.SetActive(true);
-            ev3.SetActive(true);
-            skybird.name = "skybird";
-            
-            baseanim.runtimeAnimatorController = skybirdanim1;
-            rapsound = rapsoundcat;
-            fuesound = fuesoundcat;
-            rapfuesound = rapfuesoundcat;
-            turbosound = turbosoundcat;
-            dano1 = dano1cat;
-            dano2 = dano2cat;
-        }
     }
 
     // Update is called once per frame
@@ -831,8 +683,7 @@ public class enemigo : MonoBehaviour
                 rapson.Play();
                 rapsound.Play();
                 baseanim.SetBool("atkvel", true);
-                baseanim2.SetBool("atkvel", true);
-                baseanim3.SetBool("atkvel", true);
+                
                 dano = Random.Range(0,3);
             }
             else if (fuerte == true && atb == 100 && mana >= 30 && permiso == false  && heroe.permiso == false)
@@ -846,8 +697,7 @@ public class enemigo : MonoBehaviour
                 fueson.Play();
                 fuesound.Play();
                 baseanim.SetBool("atkfue", true);
-                baseanim2.SetBool("atkfue", true);
-                baseanim3.SetBool("atkfue", true);
+                
                 dano = Random.Range(0,3);
             }
             else if (rapfue == true && atb == 100 && mana >= 40 && permiso == false  && heroe.permiso == false) 
@@ -861,8 +711,7 @@ public class enemigo : MonoBehaviour
                 fulson.Play();
                 rapfuesound.Play();
                 baseanim.SetBool("atkrapfue", true);
-                baseanim2.SetBool("atkrapfue", true);
-                baseanim3.SetBool("atkrapfue", true);
+                
                 dano = Random.Range(0,3);
             }
             else if (turbo == true && atb == 100 && turbobar == 100 && permiso == false && heroe.permiso == false)
@@ -875,8 +724,7 @@ public class enemigo : MonoBehaviour
                 ataque = Random.Range(40,50) * fuerza;
                 atb = 0;
                 baseanim.SetBool("atkturbo", true);
-                baseanim2.SetBool("atkturbo", true);
-                baseanim3.SetBool("atkturbo", true);
+                
                 dano = Random.Range(0,3);
                 
             }
@@ -887,15 +735,7 @@ public class enemigo : MonoBehaviour
                 baseanim.SetBool("atkfue", false);
                 baseanim.SetBool("atkturbo", false);
 
-                baseanim2.SetBool("atkrapfue", false);
-                baseanim2.SetBool("atkvel", false);
-                baseanim2.SetBool("atkfue", false);
-                baseanim2.SetBool("atkturbo", false);
-
-                baseanim3.SetBool("atkrapfue", false);
-                baseanim3.SetBool("atkvel", false);
-                baseanim3.SetBool("atkfue", false);
-                baseanim3.SetBool("atkturbo", false);
+            
         
 
             }
@@ -907,8 +747,7 @@ public class enemigo : MonoBehaviour
                 mana -= 3.5f * Time.deltaTime;
                 turbobar += 0.7f * Time.deltaTime;
                 prot.enabled = false;
-                prot2.enabled = false;
-                prot3.enabled = false;
+               
                 botebool = true;
                 escudo.gameObject.SetActive(true);
                 defusar = true;
@@ -919,8 +758,7 @@ public class enemigo : MonoBehaviour
                 mana -= 3.5f * Time.deltaTime;
                 turbobar += 0.7f * Time.deltaTime;
                 prot.enabled = false;
-                prot2.enabled = false;
-                prot3.enabled = false;
+                
                 escudo.gameObject.SetActive(true);
             }
             else 
@@ -929,8 +767,7 @@ public class enemigo : MonoBehaviour
                 botebool = false;
                 bote.Stop();
                 prot.enabled = true;
-                prot2.enabled = true;
-                prot3.enabled = true;
+                
                 if(mana > -1)
                 {
                     if (mana < manamax)

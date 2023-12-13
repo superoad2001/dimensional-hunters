@@ -40,6 +40,7 @@ public class collisionheroeentr : MonoBehaviour
         if (col.gameObject.tag == "pini")
         {
             heroe.ataque = 0;
+            heroe.permiso = false;
             
         }
 

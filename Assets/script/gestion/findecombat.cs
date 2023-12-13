@@ -10,6 +10,8 @@ public class findecombat : MonoBehaviour
     public int dobj;
     public bool p1;
     public int jefe1;
+    public int rango;
+    public float rangoexp;
     // Start is called before the first frame update
     void Start()
     {
@@ -74,6 +76,54 @@ public class findecombat : MonoBehaviour
         nivelt.text = "nivel : "+inv.nivel[o];
 
         modelos();
+
+        rango = PlayerPrefs.GetInt("rango", 1);
+        if(rango == 1)
+        {rangoexp = 1;}
+        if(rango == 2)
+        {rangoexp = 1.01f;}
+        if(rango == 3)
+        {rangoexp = 1.10f;}
+        if(rango == 4)
+        {rangoexp = 1.15f;}
+        if(rango == 5)
+        {rangoexp = 1.20f;}
+
+        if(rango == 6)
+        {rangoexp = 1.25f;}
+        if(rango == 7)
+        {rangoexp = 1.30f;}
+        if(rango == 8)
+        {rangoexp = 1.35f;}
+        if(rango == 9)
+        {rangoexp = 1.40f;}
+        if(rango == 10)
+        {rangoexp = 1.45f;}
+
+        if(rango == 11)
+        {rangoexp = 1.50f;}
+        if(rango == 12)
+        {rangoexp = 1.55f;}
+        if(rango == 13)
+        {rangoexp = 1.60f;}
+        if(rango == 14)
+        {rangoexp = 1.65f;}
+        if(rango == 15)
+        {rangoexp = 1.70f;}
+
+        if(rango == 16)
+        {rangoexp = 1.75f;}
+        if(rango == 17)
+        {rangoexp = 1.80f;}
+        if(rango == 18)
+        {rangoexp = 1.85f;}
+        if(rango == 19)
+        {rangoexp = 1.90f;}
+        if(rango == 20)
+        {rangoexp = 1.95f;}
+
+        if(rango == 21)
+        {rangoexp = 2;}
         
     }
     public int o;
@@ -232,10 +282,10 @@ public class findecombat : MonoBehaviour
             {
                 inv.manarec[o] +=0.05f;
             }
-            inv.hp[o] +=5;
-            inv.mana[o] +=5;
-            inv.manarec[o] +=0.05f;
-            inv.fuerza[o] +=0.05f;
+            inv.hp[o] +=5*rangoexp;
+            inv.mana[o] +=5*rangoexp;
+            inv.manarec[o] +=0.05f*rangoexp;
+            inv.fuerza[o] +=0.05f*rangoexp;
             hp.gameObject.SetActive(true);
             ma.gameObject.SetActive(true);
             rec.gameObject.SetActive(true);
@@ -306,10 +356,10 @@ public class findecombat : MonoBehaviour
             {
                 inv.manarec[o] +=0.05f;
             }
-            inv.hp[o] +=5;
-            inv.mana[o] +=5;
-            inv.manarec[o] +=0.05f;
-            inv.fuerza[o] +=0.05f;
+            inv.hp[o] +=5*rangoexp;
+            inv.mana[o] +=5*rangoexp;
+            inv.manarec[o] +=0.05f*rangoexp;
+            inv.fuerza[o] +=0.05f*rangoexp;
             hp.gameObject.SetActive(true);
             ma.gameObject.SetActive(true);
             rec.gameObject.SetActive(true);
@@ -377,10 +427,10 @@ public class findecombat : MonoBehaviour
             {
                 inv.manarec[o] +=0.05f;
             }
-            inv.hp[o] +=5;
-            inv.mana[o] +=5;
-            inv.manarec[o] +=0.05f;
-            inv.fuerza[o] +=0.05f;
+            inv.hp[o] +=5*rangoexp;
+            inv.mana[o] +=5*rangoexp;
+            inv.manarec[o] +=0.05f*rangoexp;
+            inv.fuerza[o] +=0.05f*rangoexp;
             hp.gameObject.SetActive(true);
             ma.gameObject.SetActive(true);
             rec.gameObject.SetActive(true);
@@ -448,10 +498,10 @@ public class findecombat : MonoBehaviour
             {
                 inv.manarec[o] +=0.05f;
             }
-            inv.hp[o] +=5;
-            inv.mana[o] +=5;
-            inv.manarec[o] +=0.05f;
-            inv.fuerza[o] +=0.05f;
+            inv.hp[o] +=5*rangoexp;
+            inv.mana[o] +=5*rangoexp;
+            inv.manarec[o] +=0.05f*rangoexp;
+            inv.fuerza[o] +=0.05f*rangoexp;
             hp.gameObject.SetActive(true);
             ma.gameObject.SetActive(true);
             rec.gameObject.SetActive(true);
@@ -520,10 +570,10 @@ public class findecombat : MonoBehaviour
             }
             modelos();
             bichoti.text = "raza : "+inv.bichosmios[o];
-            inv.hp[o] +=20;
-            inv.mana[o] +=20;
-            inv.manarec[o] +=0.1f;
-            inv.fuerza[o] +=0.1f;
+            inv.hp[o] +=20*rangoexp;
+            inv.mana[o] +=20*rangoexp;
+            inv.manarec[o] +=0.1f*rangoexp;
+            inv.fuerza[o] +=0.1f*rangoexp;
             hp.gameObject.SetActive(true);
             ma.gameObject.SetActive(true);
             rec.gameObject.SetActive(true);
@@ -604,10 +654,10 @@ public class findecombat : MonoBehaviour
                 inv.manarec[o] +=0.05f;
             }
 
-            inv.hp[o] +=5;
-            inv.mana[o] +=5;
-            inv.manarec[o] +=0.05f;
-            inv.fuerza[o] +=0.05f;
+            inv.hp[o] +=5*rangoexp;
+            inv.mana[o] +=5*rangoexp;
+            inv.manarec[o] +=0.05f*rangoexp;
+            inv.fuerza[o] +=0.05f*rangoexp;
             hp.gameObject.SetActive(true);
             ma.gameObject.SetActive(true);
             rec.gameObject.SetActive(true);
@@ -675,10 +725,10 @@ public class findecombat : MonoBehaviour
             {
                 inv.manarec[o] +=0.05f;
             }
-            inv.hp[o] +=5;
-            inv.mana[o] +=5;
-            inv.manarec[o] +=0.05f;
-            inv.fuerza[o] +=0.05f;
+            inv.hp[o] +=5*rangoexp;
+            inv.mana[o] +=5*rangoexp;
+            inv.manarec[o] +=0.05f*rangoexp;
+            inv.fuerza[o] +=0.05f*rangoexp;
             hp.gameObject.SetActive(true);
             ma.gameObject.SetActive(true);
             rec.gameObject.SetActive(true);
@@ -746,10 +796,10 @@ public class findecombat : MonoBehaviour
             {
                 inv.manarec[o] +=0.05f;
             }
-            inv.hp[o] +=5;
-            inv.mana[o] +=5;
-            inv.manarec[o] +=0.05f;
-            inv.fuerza[o] +=0.05f;
+            inv.hp[o] +=5*rangoexp;
+            inv.mana[o] +=5*rangoexp;
+            inv.manarec[o] +=0.05f*rangoexp;
+            inv.fuerza[o] +=0.05f*rangoexp;
             hp.gameObject.SetActive(true);
             ma.gameObject.SetActive(true);
             rec.gameObject.SetActive(true);
@@ -817,10 +867,10 @@ public class findecombat : MonoBehaviour
             {
                 inv.manarec[o] +=0.05f;
             }
-            inv.hp[o] +=5;
-            inv.mana[o] +=5;
-            inv.manarec[o] +=0.05f;
-            inv.fuerza[o] +=0.05f;
+            inv.hp[o] +=5*rangoexp;
+            inv.mana[o] +=5*rangoexp;
+            inv.manarec[o] +=0.05f*rangoexp;
+            inv.fuerza[o] +=0.05f*rangoexp;
             hp.gameObject.SetActive(true);
             ma.gameObject.SetActive(true);
             rec.gameObject.SetActive(true);
@@ -889,10 +939,10 @@ public class findecombat : MonoBehaviour
             }
             modelos();
             bichoti.text = "raza : "+inv.bichosmios[o];
-            inv.hp[o] +=20;
-            inv.mana[o] +=20;
-            inv.manarec[o] +=0.1f;
-            inv.fuerza[o] +=0.1f;
+            inv.hp[o] +=20*rangoexp;
+            inv.mana[o] +=20*rangoexp;
+            inv.manarec[o] +=0.1f*rangoexp;
+            inv.fuerza[o] +=0.1f*rangoexp;
             hp.gameObject.SetActive(true);
             ma.gameObject.SetActive(true);
             rec.gameObject.SetActive(true);
@@ -970,10 +1020,10 @@ public class findecombat : MonoBehaviour
             {
                 inv.manarec[o] +=0.05f;
             }
-            inv.hp[o] +=5;
-            inv.mana[o] +=5;
-            inv.manarec[o] +=0.05f;
-            inv.fuerza[o] +=0.05f;
+            inv.hp[o] +=5*rangoexp;
+            inv.mana[o] +=5*rangoexp;
+            inv.manarec[o] +=0.05f*rangoexp;
+            inv.fuerza[o] +=0.05f*rangoexp;
             hp.gameObject.SetActive(true);
             ma.gameObject.SetActive(true);
             rec.gameObject.SetActive(true);
@@ -1036,10 +1086,10 @@ public class findecombat : MonoBehaviour
             {
                 inv.manarec[o] +=0.05f;
             }
-            inv.hp[o] +=5;
-            inv.mana[o] +=5;
-            inv.manarec[o] +=0.05f;
-            inv.fuerza[o] +=0.05f;
+            inv.hp[o] +=5*rangoexp;
+            inv.mana[o] +=5*rangoexp;
+            inv.manarec[o] +=0.05f*rangoexp;
+            inv.fuerza[o] +=0.05f*rangoexp;
             hp.gameObject.SetActive(true);
             ma.gameObject.SetActive(true);
             rec.gameObject.SetActive(true);
@@ -1102,10 +1152,10 @@ public class findecombat : MonoBehaviour
             {
                 inv.manarec[o] +=0.05f;
             }
-            inv.hp[o] +=5;
-            inv.mana[o] +=5;
-            inv.manarec[o] +=0.05f;
-            inv.fuerza[o] +=0.05f;
+            inv.hp[o] +=5*rangoexp;
+            inv.mana[o] +=5*rangoexp;
+            inv.manarec[o] +=0.05f*rangoexp;
+            inv.fuerza[o] +=0.05f*rangoexp;
             hp.gameObject.SetActive(true);
             ma.gameObject.SetActive(true);
             rec.gameObject.SetActive(true);
@@ -1168,10 +1218,10 @@ public class findecombat : MonoBehaviour
             {
                 inv.manarec[o] +=0.05f;
             }
-            inv.hp[o] +=5;
-            inv.mana[o] +=5;
-            inv.manarec[o] +=0.05f;
-            inv.fuerza[o] +=0.05f;
+            inv.hp[o] +=5*rangoexp;
+            inv.mana[o] +=5*rangoexp;
+            inv.manarec[o] +=0.05f*rangoexp;
+            inv.fuerza[o] +=0.05f*rangoexp;
             hp.gameObject.SetActive(true);
             ma.gameObject.SetActive(true);
             rec.gameObject.SetActive(true);
@@ -1234,10 +1284,10 @@ public class findecombat : MonoBehaviour
             {
                 inv.manarec[o] +=0.05f;
             }
-            inv.hp[o] +=5;
-            inv.mana[o] +=5;
-            inv.manarec[o] +=0.05f;
-            inv.fuerza[o] +=0.05f;
+            inv.hp[o] +=5*rangoexp;
+            inv.mana[o] +=5*rangoexp;
+            inv.manarec[o] +=0.05f*rangoexp;
+            inv.fuerza[o] +=0.05f*rangoexp;
             hp.gameObject.SetActive(true);
             ma.gameObject.SetActive(true);
             rec.gameObject.SetActive(true);

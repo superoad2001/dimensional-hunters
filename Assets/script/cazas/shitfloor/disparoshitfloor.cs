@@ -29,6 +29,7 @@ public class disparoshitfloor : MonoBehaviour
     public float temp3 = 120;
     public float temp4 = 0;
     public bool disp;
+    public bool escudorec;
     public Quaternion rota;
     public AudioSource pip;
     public bool vez1;
@@ -40,13 +41,63 @@ public class disparoshitfloor : MonoBehaviour
     public Image barrahp;
     public Image barramana;
     public string bicho = "madcat";
-    // Start is called before the first frame update
+    public GameObject escudoonda;
+    public int rango;
+    public float rangoexp;
     void Start()
     {
         arSession.Reset ();
          new Vector3(0,0,0);
         cam.transform.position = new Vector3(0,0,0f);
         hp = hpmax;
+        rango = PlayerPrefs.GetInt("rango", 1);
+        if(rango == 1)
+        {rangoexp = 1;}
+        if(rango == 2)
+        {rangoexp = 1.05f;}
+        if(rango == 3)
+        {rangoexp = 1.10f;}
+        if(rango == 4)
+        {rangoexp = 1.15f;}
+        if(rango == 5)
+        {rangoexp = 1.20f;}
+
+        if(rango == 6)
+        {rangoexp = 1.25f;}
+        if(rango == 7)
+        {rangoexp = 1.30f;}
+        if(rango == 8)
+        {rangoexp = 1.35f;}
+        if(rango == 9)
+        {rangoexp = 1.40f;}
+        if(rango == 10)
+        {rangoexp = 1.45f;}
+
+        if(rango == 11)
+        {rangoexp = 1.50f;}
+        if(rango == 12)
+        {rangoexp = 1.55f;}
+        if(rango == 13)
+        {rangoexp = 1.60f;}
+        if(rango == 14)
+        {rangoexp = 1.65f;}
+        if(rango == 15)
+        {rangoexp = 1.70f;}
+
+        if(rango == 16)
+        {rangoexp = 1.75f;}
+        if(rango == 17)
+        {rangoexp = 1.80f;}
+        if(rango == 18)
+        {rangoexp = 1.85f;}
+        if(rango == 19)
+        {rangoexp = 1.90f;}
+        if(rango == 20)
+        {rangoexp = 1.95f;}
+
+        if(rango == 21)
+        {rangoexp = 2;}
+        
     }
 
     public bool salir = false;
@@ -152,18 +203,31 @@ public class disparoshitfloor : MonoBehaviour
 
             
             }
-            if(escudoact == true && mana > 1)
+            if(escudorec == true && mana >= 100)
+            {
+                escudorec = false;
+                barramana.color = new Color(0,221,255,255);
+            }
+            if(escudoact == true && mana > 1 && escudorec == false)
             {
                 escudo = true;
-                mana -= 5 * Time.deltaTime;
+                mana -= 100 * Time.deltaTime;
                 if(mana < 0){mana = 0;}
+                escudoonda.SetActive(true);
             }
             else
             {
                 escudo = false;
-                mana += 2 * Time.deltaTime;
+
+                mana += 10 * Time.deltaTime;
                 if(mana > 100)
                 {mana = 100;}
+                escudoonda.SetActive(false);
+            }
+            if (mana <= 1)
+            {
+                escudorec = true;
+                barramana.color = new Color(219,255,0,255);
             }
             if (temp3 > -1)
             {temp3 -= 1 * Time.deltaTime;}
@@ -178,25 +242,35 @@ public class disparoshitfloor : MonoBehaviour
             comienzo = false;
             vez1 = true;
             temp4 = 0;
-            if(bicho == "madcatn1")
+            if(bicho == "madcat")
             {
-            PlayerPrefs.SetFloat("hpr", (int)Random.Range(90f,130));
-            PlayerPrefs.SetFloat("manar", (int)Random.Range(80f,110));
-            PlayerPrefs.SetFloat("manarecr", Random.Range(0.7f,0.9f));
-            PlayerPrefs.SetFloat("fuerzar", Random.Range(0.7f,0.9f));
-            PlayerPrefs.SetString("tipor", "viscoso");
+            PlayerPrefs.SetFloat("hpr", (int)Random.Range(100f,140)*rangoexp);
+            PlayerPrefs.SetFloat("manar", (int)Random.Range(80f,90)*rangoexp);
+            PlayerPrefs.SetFloat("manarecr", Random.Range(0.7f,0.7f)*rangoexp);
+            PlayerPrefs.SetFloat("fuerzar", Random.Range(0.3f,0.5f)*rangoexp);
+            PlayerPrefs.SetString("tipor", "caos rango :"+rango);
             PlayerPrefs.SetFloat("nivelr", 1);
-            PlayerPrefs.SetString("razar", "shitfloor");
+            PlayerPrefs.SetString("razar", "madcat");
             }
-            if(bicho == "madcatn6")
+            if(bicho == "madcatp")
             {
-            PlayerPrefs.SetFloat("hpr", (int)Random.Range(90f,130));
-            PlayerPrefs.SetFloat("manar", (int)Random.Range(80f,110));
-            PlayerPrefs.SetFloat("manarecr", Random.Range(0.7f,0.9f));
-            PlayerPrefs.SetFloat("fuerzar", Random.Range(0.7f,0.9f));
-            PlayerPrefs.SetString("tipor", "viscoso");
-            PlayerPrefs.SetFloat("nivelr", 1);
-            PlayerPrefs.SetString("razar", "shitfloor");
+            PlayerPrefs.SetFloat("hpr", (int)Random.Range(100f,140)*rangoexp*1.25f);
+            PlayerPrefs.SetFloat("manar", (int)Random.Range(80f,90)*rangoexp*1.25f);
+            PlayerPrefs.SetFloat("manarecr", Random.Range(0.5f,0.7f)*rangoexp*1.25f);
+            PlayerPrefs.SetFloat("fuerzar", Random.Range(0.3f,0.5f)*rangoexp*1.25f);
+            PlayerPrefs.SetString("tipor", "caos plateado rango :"+rango);
+            PlayerPrefs.SetFloat("nivelr", Random.Range(1,3));
+            PlayerPrefs.SetString("razar", "madcat");
+            }
+            if(bicho == "madcatd")
+            {
+            PlayerPrefs.SetFloat("hpr", (int)Random.Range(100f,140)*rangoexp*1.5f);
+            PlayerPrefs.SetFloat("manar", (int)Random.Range(80f,90)*rangoexp*1.5f);
+            PlayerPrefs.SetFloat("manarecr", Random.Range(0.5f,0.7f)*rangoexp*1.5f);
+            PlayerPrefs.SetFloat("fuerzar", Random.Range(0.3f,0.5f)*rangoexp*1.5f);
+            PlayerPrefs.SetString("tipor", "caos dorado rango :"+rango);
+            PlayerPrefs.SetFloat("nivelr", Random.Range(1,4));
+            PlayerPrefs.SetString("razar", "madcat");
             }
         }
         if( hp <=  0 && vez1 == false)
@@ -226,6 +300,11 @@ public class disparoshitfloor : MonoBehaviour
         if (col.gameObject.tag == "balaene" && escudo == false)
 		{
             hp -= 1;
+            UnityEngine.Object.Destroy(col.gameObject);
+		}
+        if (col.gameObject.tag == "balaene" && escudo == true)
+		{
+            hp += 1;
             UnityEngine.Object.Destroy(col.gameObject);
 		}
     }

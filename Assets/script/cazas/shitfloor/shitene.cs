@@ -17,6 +17,10 @@ public class shitene : MonoBehaviour
 	public GameObject BalaPrefab;
     public GameObject player;
     public string bicho = "madcat";
+    public GameObject madcat;
+    public GameObject skybird;
+    public GameObject shitfloor;
+    public GameObject topo;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +30,7 @@ public class shitene : MonoBehaviour
             hp = 100;
             ataquetemp = 3;
         }
+        mostrar();
     }
     // Update is called once per frame
     void Update()
@@ -65,5 +70,24 @@ public class shitene : MonoBehaviour
             UnityEngine.Object.Destroy(col.gameObject);
 		}
     }
+    public void mostrar()
+    {
+        if(bicho == "madcat")
+        {
+            madcat.SetActive(true);
+        }
+        if(bicho == "skybird")
+        {
+            skybird.SetActive(true);
+        }
+        if(bicho == "shitfloor")
+        {
+            shitfloor.SetActive(true);
+        }
+        if(bicho == "topo")
+        {
+            topo.SetActive(true);
+        }
+    }   
     
 }

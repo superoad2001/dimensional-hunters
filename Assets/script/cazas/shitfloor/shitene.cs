@@ -26,6 +26,7 @@ public class shitene : MonoBehaviour
     public float rangoexp;
     public float fuerzajug;
     public Text nombre;
+    public Text hpt;
 
     public int hierba;
     public float hierbaexp;
@@ -224,6 +225,7 @@ public class shitene : MonoBehaviour
         {
             barrahp.fillAmount = hp/hpmax;
             barrahp2.fillAmount = hp/hpmax;
+            hpt.text = "hp: "+(int)hp+"/"+hpmax;
             if(hp <= 0)
             {UnityEngine.Object.Destroy(this.gameObject);}
             if(temp > ataquetemp)
@@ -250,6 +252,7 @@ public class shitene : MonoBehaviour
     {
         if (col.gameObject.tag == "bala")
 		{
+            Debug.Log("fun");
             if((fuerzajug-defensa) >= 5)
 			{hp = hp - (fuerzajug - defensa);}
             else if((fuerzajug-defensa) < 5)

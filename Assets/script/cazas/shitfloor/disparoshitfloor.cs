@@ -46,6 +46,9 @@ public class disparoshitfloor : MonoBehaviour
     public float rangoexp;
     public float hierbaexp;
     public int hierbatipo;
+    public Text hpt;
+    public Text manat;
+    public float fuerzaene;
     void Start()
     {
         arSession.Reset ();
@@ -100,51 +103,53 @@ public class disparoshitfloor : MonoBehaviour
         {rangoexp = 2;}
 
         if(rango == 1)
-        {hp = 30; }
+        {hpmax = 30; }
         if(rango == 2)
-        {hp = 50; }
+        {hpmax = 50; }
         if(rango == 3)
-        {hp = 70; }
+        {hpmax = 70; }
         if(rango == 4)
-        {hp = 90; }
+        {hpmax = 90; }
         if(rango == 5)
-        {hp = 100; }
+        {hpmax = 100; }
 
         if(rango == 6)
-        {hp = 150; }
+        {hpmax = 150; }
         if(rango == 7)
-        {hp = 200; }
+        {hpmax = 200; }
         if(rango == 8)
-        {hp = 250; }
+        {hpmax = 250; }
         if(rango == 9)
-        {hp = 300; }
+        {hpmax = 300; }
         if(rango == 10)
-        {hp = 350; }
+        {hpmax = 350; }
 
         if(rango == 11)
-        {hp = 400; }
+        {hpmax = 400; }
         if(rango == 12)
-        {hp = 500; }
+        {hpmax = 500; }
         if(rango == 13)
-        {hp = 600; }
+        {hpmax = 600; }
         if(rango == 14)
-        {hp = 650; }
+        {hpmax = 650; }
         if(rango == 15)
-        {hp = 700; }
+        {hpmax = 700; }
 
         if(rango == 16)
-        {hp = 750;}
+        {hpmax = 750;}
         if(rango == 17)
-        {hp = 780; }
+        {hpmax = 780; }
         if(rango == 18)
-        {hp = 800; }
+        {hpmax = 800; }
         if(rango == 19)
-        {hp = 875; }
+        {hpmax = 875; }
         if(rango == 20)
-        {hp = 950; }
+        {hpmax = 950; }
 
         if(rango == 21)
-        {hp = 1000;}
+        {hpmax = 1000;}
+
+        statsc();
 
         hp = hpmax;
 
@@ -192,6 +197,8 @@ public class disparoshitfloor : MonoBehaviour
 
             barrahp.fillAmount = hp/hpmax;
             barramana.fillAmount = mana/100;
+            hpt.text = "hp: "+(int)hp+"/"+hpmax;
+            manat.text = "mana: "+(int)mana+"/100";
 
         shitene enemigo = UnityEngine.Object.FindObjectOfType<shitene>();
         if (iniciotem > 2 && inicio == false)
@@ -250,7 +257,6 @@ public class disparoshitfloor : MonoBehaviour
                 
                     rota = BalaInicio.transform.rotation;
                     GameObject BalaTemporal = Instantiate(BalaPrefab, BalaInicio.transform.position,rota) as GameObject;
-                    Debug.Log(BalaTemporal.transform.eulerAngles);
 
                     Rigidbody rb = BalaTemporal.GetComponent<Rigidbody>();
 
@@ -387,14 +393,116 @@ public class disparoshitfloor : MonoBehaviour
     {
         if (col.gameObject.tag == "balaene" && escudo == false)
 		{
-            hp -= 1;
+            hp = hp -(fuerzaene* hierbaexp);
             UnityEngine.Object.Destroy(col.gameObject);
 		}
         if (col.gameObject.tag == "balaene" && escudo == true)
 		{
-            hp += 1;
+            if(hp<hpmax)
+            {hp += 5 * rangoexp;}
+            if(hp > hpmax)
+            {hp = hpmax;}
             UnityEngine.Object.Destroy(col.gameObject);
 		}
+    }
+    public void statsc()
+    {
+        if (bicho == "madcat")
+        {
+            if(rango <= 2)
+            {
+                fuerzaene = 5;
+            }
+            else if(rango > 2)
+            {
+                fuerzac();
+            }
+        }
+        if (bicho == "skybird")
+        {
+            if(rango <= 2)
+            {
+                fuerzaene = 5;
+            }
+            else if(rango > 2)
+            {
+                fuerzac();
+            }
+
+        }
+        if (bicho == "shitfloor")
+        {
+            if(rango <= 2)
+            {
+                fuerzaene = 5;
+            }
+            else if(rango > 2)
+            {
+                fuerzac();
+            }
+
+        }
+        if (bicho == "topo")
+        {
+            if(rango <= 2)
+            {
+                fuerzaene = 5;
+            }
+            else if(rango > 2)
+            {
+                fuerzac();
+            }
+
+        }
+    }
+    public void fuerzac()
+    {
+        if(rango == 1)
+        {fuerzaene = 5;}
+        if(rango == 2)
+        {fuerzaene = 10 ;}
+        if(rango == 3)
+        {fuerzaene = 20 ;}
+        if(rango == 4)
+        {fuerzaene = 30 ;}
+        if(rango == 5)
+        {fuerzaene = 40 ;}
+
+        if(rango == 6)
+        {fuerzaene = 50 ;}
+        if(rango == 7)
+        {fuerzaene = 58 ;}
+        if(rango == 8)
+        {fuerzaene = 65 ;}
+        if(rango == 9)
+        {fuerzaene = 70 ;}
+        if(rango == 10)
+        {fuerzaene = 80 ;}
+
+        if(rango == 11)
+        {fuerzaene = 100 ;}
+        if(rango == 12)
+        {fuerzaene = 130 ;}
+        if(rango == 13)
+        {fuerzaene = 150 ;}
+        if(rango == 14)
+        {fuerzaene = 170 ;}
+        if(rango == 15)
+        {fuerzaene = 200 ;}
+
+        if(rango == 16)
+        {fuerzaene = 220 ;}
+        if(rango == 17)
+        {fuerzaene = 240 ;}
+        if(rango == 18)
+        {fuerzaene = 260 ;}
+        if(rango == 19)
+        {fuerzaene = 280 ;}
+        if(rango == 20)
+        {fuerzaene = 300 ;}
+
+        if(rango == 21)
+        {fuerzaene = 320;}
     }
     
 }

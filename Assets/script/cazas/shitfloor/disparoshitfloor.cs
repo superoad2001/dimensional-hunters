@@ -313,6 +313,7 @@ public class disparoshitfloor : MonoBehaviour
             if(hierbatipo == 2){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,3));}
             if(hierbatipo == 3){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,4));}
             PlayerPrefs.SetString("razar", "madcat");
+            PlayerPrefs.SetFloat("rangor", rango);
             }
             if(bicho == "skybird")
             {
@@ -327,6 +328,7 @@ public class disparoshitfloor : MonoBehaviour
             if(hierbatipo == 2){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,3));}
             if(hierbatipo == 3){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,4));}
             PlayerPrefs.SetString("razar", "skybird");
+            PlayerPrefs.SetFloat("rangor", rango);
             }
             if(bicho == "shitfloor")
             {
@@ -341,6 +343,7 @@ public class disparoshitfloor : MonoBehaviour
             if(hierbatipo == 2){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,3));}
             if(hierbatipo == 3){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,4));}
             PlayerPrefs.SetString("razar", "shitfloor");
+            PlayerPrefs.SetFloat("rangor", rango);
             }
             if(bicho == "topo")
             {
@@ -355,6 +358,7 @@ public class disparoshitfloor : MonoBehaviour
             if(hierbatipo == 2){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,3));}
             if(hierbatipo == 3){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,4));}
             PlayerPrefs.SetString("razar", "topo topo");
+            PlayerPrefs.SetFloat("rangor", rango);
             }
         }
         if( hp <=  0 && vez1 == false)

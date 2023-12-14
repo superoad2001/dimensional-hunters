@@ -10,7 +10,7 @@ public class findecombat : MonoBehaviour
     public int dobj;
     public bool p1;
     public int jefe1;
-    public int rango;
+    public float rango;
     public float rangoexp;
     // Start is called before the first frame update
     void Start()
@@ -74,10 +74,10 @@ public class findecombat : MonoBehaviour
         elementot.text = "categoria : "+inv.elemento[o];
         bichoti.text = "raza : "+inv.bichosmios[o];
         nivelt.text = "nivel : "+inv.nivel[o];
+        rango = inv.rango[o];
 
         modelos();
 
-        rango = PlayerPrefs.GetInt("rango", 1);
         if(rango == 1)
         {rangoexp = 1;}
         if(rango == 2)

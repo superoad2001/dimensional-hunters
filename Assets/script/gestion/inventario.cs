@@ -15,6 +15,7 @@ public class inventario : MonoBehaviour
     public List<float> nivel = new List<float>();
     public List<string> bichosmios = new List<string>();
     public List<float> exp = new List<float>();
+    public List<float> rango = new List<float>();
     public float dinero;
     public float hierbaomega;
     public List<string> licencia = new List<string>();
@@ -94,6 +95,10 @@ public class inventario : MonoBehaviour
         {
             exp.Add(PlayerPrefs.GetFloat("expsave"+i,0));
         }
+        for(int i = 0;i< indexmax ; i++)
+        {
+            rango.Add(PlayerPrefs.GetFloat("rangob"+i,0));
+        }
         for(int i = 0;i< 30 ; i++)
         {
             tipohierba.Add(PlayerPrefs.GetFloat("hierba"+i,0));
@@ -139,6 +144,7 @@ public class inventario : MonoBehaviour
             nivel[i] = nivel[i+1];
             bichosmios[i] = bichosmios[i+1];
             exp[i] = exp[i+1];
+            rango[i] = rango[i+1];
             
         }
         name.RemoveAt(name.Count -1);
@@ -150,6 +156,7 @@ public class inventario : MonoBehaviour
         nivel.RemoveAt(nivel.Count - 1);
         bichosmios.RemoveAt(bichosmios.Count - 1);
         exp.RemoveAt(exp.Count - 1);
+        rango.RemoveAt(rango.Count - 1);
 
         for(int i = 0;i< name.Count ; i++)
         {
@@ -188,6 +195,10 @@ public class inventario : MonoBehaviour
         {
             PlayerPrefs.SetFloat("expsave"+i,exp[i]);
         }
+        for(int i = 0;i< rango.Count ; i++)
+        {
+            PlayerPrefs.SetFloat("rangob"+i,rango[i]);
+        }
         indexmax = name.Count;
         PlayerPrefs.SetFloat("index",indexmax);
         
@@ -204,6 +215,7 @@ public class inventario : MonoBehaviour
         elemento.Add("terreno");
         nivel.Add(1);
         exp.Add(0);
+        rango.Add(1);
         bichosmios.Add(catalogo[3]);
 
         for(int i = 0;i < name.Count ; i++)
@@ -243,6 +255,10 @@ public class inventario : MonoBehaviour
         for(int i = 0;i< exp.Count ; i++)
         {
             PlayerPrefs.SetFloat("expsave"+i,exp[i]);
+        }
+        for(int i = 0;i< rango.Count ; i++)
+        {
+            PlayerPrefs.SetFloat("rangob"+i,rango[i]);
         }
         indexmax = name.Count;
         PlayerPrefs.SetFloat("index",indexmax);
@@ -287,6 +303,10 @@ public class inventario : MonoBehaviour
         for(int i = 0;i< exp.Count ; i++)
         {
             PlayerPrefs.SetFloat("expsave"+i,(int)exp[i]);
+        }
+        for(int i = 0;i< rango.Count ; i++)
+        {
+            PlayerPrefs.SetFloat("rangob"+i,(int)rango[i]);
         }
         for(int i = 0;i< tipohierba.Count ; i++)
         {

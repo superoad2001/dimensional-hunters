@@ -396,6 +396,7 @@ GameObject:
   m_Component:
   - component: {fileID: 125311733}
   - component: {fileID: 125311732}
+  - component: {fileID: 125311734}
   m_Layer: 0
   m_Name: skybird
   m_TagString: skybird
@@ -440,6 +441,28 @@ Transform:
   - {fileID: 968972287}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &125311734
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125311731}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 04953ee73c99dd148a5b30d07ac42d42, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &234662347
 GameObject:
   m_ObjectHideFlags: 0
@@ -1380,7 +1403,7 @@ MonoBehaviour:
   ConnectionData:
     Address: 0.0.0.0
     Port: 7777
-    ServerListenAddress: 
+    ServerListenAddress: 127.0.0.1
   DebugSimulator:
     PacketDelayMS: 0
     PacketJitterMS: 0

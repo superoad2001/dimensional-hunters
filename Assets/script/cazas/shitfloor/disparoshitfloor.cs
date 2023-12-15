@@ -160,7 +160,8 @@ public class disparoshitfloor : MonoBehaviour
         if(hierbatipo == 2)
         {hierbaexp = 1.25f;}
         if(hierbatipo == 3)
-        {hierbaexp = 1.5f;}       
+        {hierbaexp = 1.5f;}   
+        bicho = PlayerPrefs.GetString("bichocaza", "madcat");    
     }
 
     public bool salir = false;

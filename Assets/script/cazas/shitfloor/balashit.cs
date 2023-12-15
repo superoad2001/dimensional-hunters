@@ -23,12 +23,9 @@ public class balashit : MonoBehaviour
     {
        
        transform.position = Vector3.MoveTowards(transform.position,dir,speed * Time.deltaTime);
-       if(transform.position == player.transform.position)
+       if(transform.position == dir)
        {
-        //la bala es destruida a en 0.5 segundos si toca al jugador
-        if (temp > 0.5f)
-        {UnityEngine.Object.Destroy(this.gameObject);}
-        temp += 1 * Time.deltaTime;
+        UnityEngine.Object.Destroy(this.gameObject);
        }
     }
 }

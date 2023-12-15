@@ -31,6 +31,7 @@ public class shitene : MonoBehaviour
     public int hierba;
     public float hierbaexp;
     public float fuerza;
+    public Animator anim;
     // Start is called before the first frame update
     void Start()
     {
@@ -238,7 +239,7 @@ public class shitene : MonoBehaviour
 
                 
 
-                Destroy(BalaTemporal, 5.0f);
+                Destroy(BalaTemporal, 10.0f);
                 temp = 0;
 
 
@@ -246,19 +247,8 @@ public class shitene : MonoBehaviour
             }
             if(temp < 15)
             {temp += 1 * Time.deltaTime;}
+            anim.SetInteger("atk", Random.Range(1,5));
         }
-    }
-    public void OnTriggerEnter(Collider col)
-    {
-        if (col.gameObject.tag == "bala")
-		{
-            Debug.Log("fun");
-            if((fuerzajug-defensa) >= 5)
-			{hp = hp - (fuerzajug - defensa);}
-            else if((fuerzajug-defensa) < 5)
-            {hp = hp - 5;}
-            UnityEngine.Object.Destroy(col.gameObject);
-		}
     }
     public void mostrar()
     {

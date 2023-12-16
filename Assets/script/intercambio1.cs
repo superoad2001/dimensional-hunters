@@ -21,6 +21,7 @@ public class intercambio1 : NetworkBehaviour
     public float mana;
     public float manarec;
     public float fuerza;
+    public float rango;
     public float nivel;
 
     public string elemento;
@@ -49,6 +50,9 @@ public class intercambio1 : NetworkBehaviour
     public NetworkVariable<float> fuerzar = new NetworkVariable<float>(0, 
     NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
 
+    public NetworkVariable<float> rangor = new NetworkVariable<float>(1, 
+    NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
+
     public NetworkVariable<float> nivelr = new NetworkVariable<float>(1, 
     NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
 
@@ -62,6 +66,7 @@ public managermulti2 managermulti;
         mana = PlayerPrefs.GetFloat("manas", 100);
         manarec = PlayerPrefs.GetFloat("manarecs", 1);
         fuerza = PlayerPrefs.GetFloat("fuerzas", 1);
+        rango = PlayerPrefs.GetFloat("rangos", 1);
         hname = (string)PlayerPrefs.GetString("names", "misigno");
         bicho = (string)PlayerPrefs.GetString("bichosh", "madcat");
         nivel = PlayerPrefs.GetFloat("nivelss", 1);
@@ -84,6 +89,7 @@ public managermulti2 managermulti;
         mana = PlayerPrefs.GetFloat("manas", 100);
         manarec = PlayerPrefs.GetFloat("manarecs", 1);
         fuerza = PlayerPrefs.GetFloat("fuerzas", 1);
+        rango = PlayerPrefs.GetFloat("rangos", 1);
         hname = (string)PlayerPrefs.GetString("names", "misigno");
         bicho = (string)PlayerPrefs.GetString("bichosh", "madcat");
         nivel = PlayerPrefs.GetFloat("nivelss", 1);
@@ -100,6 +106,7 @@ public managermulti2 managermulti;
         mana = manar.Value;
         manarec = manarecr.Value;
         fuerza = fuerzar.Value;
+        rango = rangor.Value;
         hname = hnamer.Value.ToString();
         bicho = bichor.Value.ToString();
         nivel = nivelr.Value;
@@ -114,6 +121,7 @@ public managermulti2 managermulti;
         manar.Value = mana;
         manarecr.Value = manarec;
         fuerzar.Value = fuerza;
+        rangor.Value = rango;
         hnamer.Value = hname;
         bichor.Value = bicho;
         nivelr.Value = nivel;

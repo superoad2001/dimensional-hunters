@@ -42,6 +42,7 @@ public class combatemenu : MonoBehaviour
     public float[] fuerzabarcelona;
     public string[] elementobarcelona;
     public float[] nivelbarcelona;
+    public float[] rangobarcelona;
     public List<string> bichosbarcelona = new List<string>();
 
     public string[] ciuda;
@@ -229,7 +230,8 @@ public class combatemenu : MonoBehaviour
         manarecbarcelona[0] = 0.5f;
         fuerzabarcelona[0] = 0.8f;
         nivelbarcelona[0] = 1;
-        elementobarcelona[0] = "terreno";
+        elementobarcelona[0] = "rango : 1";
+        rangobarcelona[0] = 1;
         bichosbarcelona.Add( "");
         bichosbarcelona[0] = catalogo[3];
 
@@ -239,7 +241,8 @@ public class combatemenu : MonoBehaviour
         manabarcelona[1] = 100;
         manarecbarcelona[1] = 0.3f;
         fuerzabarcelona[1] = 0.8f;
-        elementobarcelona[1] = "viscoso";
+        elementobarcelona[1] = "rango : 1";
+        rangobarcelona[1] = 1;
         nivelbarcelona[1] = 1;
         bichosbarcelona.Add( "");
         bichosbarcelona[1] = catalogo[2];
@@ -250,7 +253,8 @@ public class combatemenu : MonoBehaviour
         manabarcelona[2] = 70;
         manarecbarcelona[2] = 0.4f;
         fuerzabarcelona[2] = 1f;
-        elementobarcelona[2] = "fuerza";
+        elementobarcelona[2] = "rango : 1";
+        rangobarcelona[2] = 1;
         nivelbarcelona[2] = 2;
         bichosbarcelona.Add( "");
         bichosbarcelona[2] = catalogo[1];
@@ -261,7 +265,8 @@ public class combatemenu : MonoBehaviour
         manabarcelona[3] = 80;
         manarecbarcelona[3] = 0.7f;
         fuerzabarcelona[3] = 0.7f;
-        elementobarcelona[3] = "aereo";
+        elementobarcelona[3] = "rango : 1";
+        rangobarcelona[3] = 1;
         nivelbarcelona[3] = 3;
         bichosbarcelona.Add( "");
         bichosbarcelona[3] = catalogo[0];
@@ -271,7 +276,8 @@ public class combatemenu : MonoBehaviour
         manabarcelona[4] = 110;
         manarecbarcelona[4] = 0.4f;
         fuerzabarcelona[4] = 1.1f;
-        elementobarcelona[4] = "fuerza";
+        elementobarcelona[4] = "rango : 1";
+        rangobarcelona[4] = 1;
         nivelbarcelona[4] = 5;
         bichosbarcelona.Add( "");
         bichosbarcelona[4] = catalogo[1];
@@ -282,7 +288,8 @@ public class combatemenu : MonoBehaviour
         manabarcelona[5] = 100;
         manarecbarcelona[5] = 0.8f;
         fuerzabarcelona[5] = 1f;
-        elementobarcelona[5] = "terreno";
+        elementobarcelona[5] = "rango : 1";
+        rangobarcelona[5] = 1;
         nivelbarcelona[5] = 5;
         bichosbarcelona.Add( "");
         bichosbarcelona[5] = catalogo[3];
@@ -686,6 +693,7 @@ public class combatemenu : MonoBehaviour
                 PlayerPrefs.SetString("tipoene", bichosbarcelona[i]);
                 PlayerPrefs.SetString("nameene", namebarcelona[i]);
                 PlayerPrefs.SetFloat("nivelg", nivelbarcelona[i]);
+                PlayerPrefs.SetFloat("rangoene", rangobarcelona[i]);
                 PlayerPrefs.SetString("bichosene", bichos[i]);
                 if(i == 3)
                 {PlayerPrefs.SetInt("jefe1",1);}

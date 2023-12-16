@@ -75,6 +75,7 @@ public class heromulti : NetworkBehaviour
     public float manarec;
     public float fuerza;
     public float nivel;
+    public float rango;
 
     public int hpmax;
     public int manamax;
@@ -133,6 +134,9 @@ public class heromulti : NetworkBehaviour
     NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
 
     public NetworkVariable<float> nivelr = new NetworkVariable<float>(1, 
+    NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
+
+    public NetworkVariable<float> rangor = new NetworkVariable<float>(1, 
     NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
 
 
@@ -215,6 +219,7 @@ public class heromulti : NetworkBehaviour
         hname = (string)PlayerPrefs.GetString("names", "misigno");
         bicho = (string)PlayerPrefs.GetString("bichosh", "madcat");
         nivel = PlayerPrefs.GetFloat("nivelss", 1);
+        rango = PlayerPrefs.GetFloat("rangos", 1);
         hpmax = (int)hp;
         manamax = (int)mana;
 
@@ -463,6 +468,7 @@ public class heromulti : NetworkBehaviour
         if(IsOwner)
         {
             PlayerPrefs.SetFloat("nivelg",enemigo.nivel);
+            PlayerPrefs.SetFloat("rangoene",enemigo.rango);
         }
         }
         if (temp4 < 15)
@@ -483,6 +489,7 @@ public class heromulti : NetworkBehaviour
         hpmaxr.Value = hpmax;
         manamaxr.Value = manamax;
         nivelr.Value = nivel;
+        rangor.Value = rango;
     }
     private void cargadatos2()
     {

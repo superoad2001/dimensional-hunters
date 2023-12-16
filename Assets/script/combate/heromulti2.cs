@@ -43,6 +43,9 @@ public class heromulti2  : NetworkBehaviour
     public NetworkVariable<float> nivelr = new NetworkVariable<float>(1, 
     NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
 
+    public NetworkVariable<float> rangor = new NetworkVariable<float>(1, 
+    NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
+
     public string hname;
     public string bicho;
     public float hp;
@@ -51,6 +54,7 @@ public class heromulti2  : NetworkBehaviour
     public float fuerza;
 
     public float nivel;
+    public float rango;
 
     public NetworkVariable<bool> defr = new NetworkVariable<bool>(false, 
     NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
@@ -219,10 +223,11 @@ public class heromulti2  : NetworkBehaviour
         hname = (string)PlayerPrefs.GetString("names", "misigno");
         bicho = (string)PlayerPrefs.GetString("bichosh", "madcat");
         nivel = PlayerPrefs.GetFloat("nivelss", 1);
+        rango = PlayerPrefs.GetFloat("rangos", 1);
         hpmax = (int)hp;
         manamax = (int)mana;
 
-        cargadatosServerRpc(hp,mana,manarec,fuerza,hname,bicho,turbobar,atb,hpmax,manamax,nivel);
+        cargadatosServerRpc(hp,mana,manarec,fuerza,hname,bicho,turbobar,atb,hpmax,manamax,nivel,rango);
 
     
         }
@@ -473,6 +478,7 @@ public class heromulti2  : NetworkBehaviour
         if(!IsOwner)
         {
             PlayerPrefs.SetFloat("nivelg",enemigo.nivel);
+            PlayerPrefs.SetFloat("rangoene",enemigo.rango);
         }
         }
         if (temp4 < 15)
@@ -480,7 +486,7 @@ public class heromulti2  : NetworkBehaviour
         
     }
     [ServerRpc(RequireOwnership = false)]
-    private void cargadatosServerRpc(float hpc,float manac,float manarecc,float fuerzac,string hnamec,string bichoc,float turboc,float atbc,float hpmaxc,float manamaxc,float nvc)
+    private void cargadatosServerRpc(float hpc,float manac,float manarecc,float fuerzac,string hnamec,string bichoc,float turboc,float atbc,float hpmaxc,float manamaxc,float nvc,float rangoc)
     {
         hpr.Value = hpc;
         manar.Value = manac;
@@ -493,6 +499,7 @@ public class heromulti2  : NetworkBehaviour
         hpmaxr.Value = hpmaxc;
         manamaxr.Value = manamaxc;
         nivelr.Value = nvc;
+        rangor.Value = rangoc;
     }
 
     [ServerRpc(RequireOwnership = false)]

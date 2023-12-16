@@ -652,6 +652,7 @@ public class combatemenumulti : MonoBehaviour
                 PlayerPrefs.SetString("names", inv.name[i]);
                 PlayerPrefs.SetString("bichosh", bichos[i]);
                 PlayerPrefs.SetFloat("nivelss", inv.nivel[i]);
+                PlayerPrefs.SetFloat("rangos", inv.rango[i]);
                 PlayerPrefs.SetFloat("selec", i);
                 cajon = false;
                 temp = 0;
@@ -701,6 +702,7 @@ public class combatemenumulti : MonoBehaviour
                 PlayerPrefs.SetString("elementoh", inv.elemento[i]);
                 PlayerPrefs.SetFloat("exph", inv.exp[i]);
                 PlayerPrefs.SetFloat("nivelss", inv.nivel[i]);
+                PlayerPrefs.SetFloat("rangos", inv.rango[i]);
                 PlayerPrefs.SetFloat("selec", i);
                 cajon = false;
                 temp = 0;
@@ -791,62 +793,6 @@ public class combatemenumulti : MonoBehaviour
             bichom = skybird;
         }
 
-
-
-
-
-
-        if(bichos[i] == "happycat")
-        {
-            bichom.SetActive(false);
-            bichom = madcat2;
-        }
-    
-        if(bichos[i] == "shitplus")
-        {
-            bichom.SetActive(false);
-            bichom = shitfloor2;
-            
-        }
-        
-        if(bichos[i] == "toto topo")
-        {
-            bichom.SetActive(false);
-            bichom = topo2;
-        }
-        
-        if(bichos[i] == "sunbird")
-        {
-            bichom.SetActive(false);
-            bichom = skybird2;
-        }
-
-
-
-        if(bichos[i] == "crazycat")
-        {
-            bichom.SetActive(false);
-            bichom = madcat3;
-        }
-    
-        if(bichos[i] == "shitplusplus")
-        {
-            bichom.SetActive(false);
-            bichom = shitfloor3;
-            
-        }
-        
-        if(bichos[i] == "poro topo")
-        {
-            bichom.SetActive(false);
-            bichom = topo3;
-        }
-        
-        if(bichos[i] == "moonbird")
-        {
-            bichom.SetActive(false);
-            bichom = skybird3;
-        }
         bichom.SetActive(true);
     }
 }

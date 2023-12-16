@@ -22,6 +22,7 @@ public class intercambio2 : NetworkBehaviour
     public float mana;
     public float manarec;
     public float fuerza;
+    public float rango;
     public float nivel;
 
     public string elemento;
@@ -52,6 +53,9 @@ public class intercambio2 : NetworkBehaviour
     public NetworkVariable<float> fuerzar = new NetworkVariable<float>(0, 
     NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
 
+    public NetworkVariable<float> rangor = new NetworkVariable<float>(0, 
+    NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
+
     public NetworkVariable<float> nivelr = new NetworkVariable<float>(1, 
     NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
 
@@ -66,6 +70,7 @@ public class intercambio2 : NetworkBehaviour
         mana = PlayerPrefs.GetFloat("manas", 100);
         manarec = PlayerPrefs.GetFloat("manarecs", 1);
         fuerza = PlayerPrefs.GetFloat("fuerzas", 1);
+        rango = PlayerPrefs.GetFloat("rangos", 1);
         hname = (string)PlayerPrefs.GetString("names", "misigno");
         bicho = (string)PlayerPrefs.GetString("bichosh", "madcat");
         nivel = PlayerPrefs.GetFloat("nivelss", 1);
@@ -89,6 +94,7 @@ public class intercambio2 : NetworkBehaviour
         mana = PlayerPrefs.GetFloat("manas", 100);
         manarec = PlayerPrefs.GetFloat("manarecs", 1);
         fuerza = PlayerPrefs.GetFloat("fuerzas", 1);
+        rango = PlayerPrefs.GetFloat("rangos", 1);
         hname = (string)PlayerPrefs.GetString("names", "misigno");
         bicho = (string)PlayerPrefs.GetString("bichosh", "madcat");
         nivel = PlayerPrefs.GetFloat("nivelss", 1);
@@ -96,7 +102,7 @@ public class intercambio2 : NetworkBehaviour
         elemento = (string)PlayerPrefs.GetString("elementoh", "nulo");
         o = PlayerPrefs.GetFloat("selec", 0);
         
-        cargadatosServerRpc(hp,mana,manarec,fuerza,nivel,exp,hname,bicho,elemento);
+        cargadatosServerRpc(hp,mana,manarec,fuerza,rango,nivel,exp,hname,bicho,elemento);
         }
         
 
@@ -106,6 +112,7 @@ public class intercambio2 : NetworkBehaviour
         mana = manar.Value;
         manarec = manarecr.Value;
         fuerza = fuerzar.Value;
+        rango = rangor.Value;
         hname = hnamer.Value.ToString();
         bicho = bichor.Value.ToString();
         nivel = nivelr.Value;
@@ -115,12 +122,13 @@ public class intercambio2 : NetworkBehaviour
         
     }
     [ServerRpc(RequireOwnership = false)]
-    public void cargadatosServerRpc(float hpc,float manac,float manarecc,float fuerzac,float nivelc,float expc,string namec,string bichoc,string elementoc)
+    public void cargadatosServerRpc(float hpc,float manac,float manarecc,float fuerzac,float rangoc,float nivelc,float expc,string namec,string bichoc,string elementoc)
     {
         hpr.Value = hpc;
         manar.Value = manac;
         manarecr.Value = manarecc;
         fuerzar.Value = fuerzac;
+        rangor.Value = rangoc;
         hnamer.Value = namec;
         bichor.Value = bichoc;
         nivelr.Value = nivelc;

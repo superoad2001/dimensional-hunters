@@ -1959,6 +1959,7 @@ MonoBehaviour:
   bichosmios: []
   exp: []
   rango: []
+  clase: []
   dinero: 0
   hierbaomega: 0
   licencia: []
@@ -4333,7 +4334,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 89e85591b8e6209458857db6e23e9700, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 560847373}
   m_SourcePrefab: {fileID: 100100000, guid: 89e85591b8e6209458857db6e23e9700, type: 3}
 --- !u!4 &560847370 stripped
 Transform:
@@ -4345,6 +4349,26 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 89e85591b8e6209458857db6e23e9700, type: 3}
   m_PrefabInstance: {fileID: 560847369}
   m_PrefabAsset: {fileID: 0}
+--- !u!137 &560847372 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -28583339766523924, guid: 89e85591b8e6209458857db6e23e9700, type: 3}
+  m_PrefabInstance: {fileID: 560847369}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &560847373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560847371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa3f6f5638c6195458fb32882029e16f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 0}
+  mesh: {fileID: 560847372}
+  clase: 0
 --- !u!1 &566235026
 GameObject:
   m_ObjectHideFlags: 0
@@ -5196,7 +5220,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: deb05c2670aa8f44f9f9f1ff68401962, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 700330699}
   m_SourcePrefab: {fileID: 100100000, guid: deb05c2670aa8f44f9f9f1ff68401962, type: 3}
 --- !u!4 &700330696 stripped
 Transform:
@@ -5208,6 +5235,26 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: deb05c2670aa8f44f9f9f1ff68401962, type: 3}
   m_PrefabInstance: {fileID: 700330695}
   m_PrefabAsset: {fileID: 0}
+--- !u!137 &700330698 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7040707184094433311, guid: deb05c2670aa8f44f9f9f1ff68401962, type: 3}
+  m_PrefabInstance: {fileID: 700330695}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &700330699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 700330697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e77b6c3966bfdd74bad1ee4e3fa18a26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 0}
+  mesh: {fileID: 700330698}
+  clase: 0
 --- !u!1 &715954671
 GameObject:
   m_ObjectHideFlags: 0
@@ -5517,6 +5564,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 758205106}
+  - component: {fileID: 758205107}
   m_Layer: 0
   m_Name: topo
   m_TagString: Untagged
@@ -5541,6 +5589,21 @@ Transform:
   - {fileID: 1047216300}
   m_Father: {fileID: 1206870470}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &758205107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758205105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa3f6f5638c6195458fb32882029e16f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 0}
+  mesh: {fileID: 1047216301}
+  clase: 0
 --- !u!1 &771788099
 GameObject:
   m_ObjectHideFlags: 0
@@ -6772,6 +6835,8 @@ MonoBehaviour:
   manarec: 0
   fuerza: 0
   nivel: 0
+  rango: 0
+  clase: 0
   hpmax: 0
   manamax: 0
   baseanim: {fileID: 1206870475}
@@ -6946,6 +7011,10 @@ MonoBehaviour:
   permisor:
     m_InternalValue: 0
   nivelr:
+    m_InternalValue: 1
+  rangor:
+    m_InternalValue: 1
+  claser:
     m_InternalValue: 1
 --- !u!4 &910429520
 Transform:
@@ -8541,6 +8610,10 @@ MonoBehaviour:
     m_InternalValue: 0
   nivelr:
     m_InternalValue: 1
+  rangor:
+    m_InternalValue: 1
+  claser:
+    m_InternalValue: 1
   hname: 
   bicho: 
   hp: 0
@@ -8548,6 +8621,8 @@ MonoBehaviour:
   manarec: 0
   fuerza: 0
   nivel: 0
+  rango: 0
+  clase: 0
   defr:
     m_InternalValue: 0
   activar: 0
@@ -9798,7 +9873,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 89e85591b8e6209458857db6e23e9700, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1342252706}
   m_SourcePrefab: {fileID: 100100000, guid: 89e85591b8e6209458857db6e23e9700, type: 3}
 --- !u!4 &1342252703 stripped
 Transform:
@@ -9810,6 +9888,26 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 89e85591b8e6209458857db6e23e9700, type: 3}
   m_PrefabInstance: {fileID: 1342252702}
   m_PrefabAsset: {fileID: 0}
+--- !u!137 &1342252705 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -28583339766523924, guid: 89e85591b8e6209458857db6e23e9700, type: 3}
+  m_PrefabInstance: {fileID: 1342252702}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1342252706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1342252704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e77b6c3966bfdd74bad1ee4e3fa18a26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 0}
+  mesh: {fileID: 1342252705}
+  clase: 0
 --- !u!1 &1347570735
 GameObject:
   m_ObjectHideFlags: 0
@@ -10039,7 +10137,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: deb05c2670aa8f44f9f9f1ff68401962, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1380677256}
   m_SourcePrefab: {fileID: 100100000, guid: deb05c2670aa8f44f9f9f1ff68401962, type: 3}
 --- !u!4 &1380677253 stripped
 Transform:
@@ -10051,6 +10152,26 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: deb05c2670aa8f44f9f9f1ff68401962, type: 3}
   m_PrefabInstance: {fileID: 1380677252}
   m_PrefabAsset: {fileID: 0}
+--- !u!137 &1380677255 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7040707184094433311, guid: deb05c2670aa8f44f9f9f1ff68401962, type: 3}
+  m_PrefabInstance: {fileID: 1380677252}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1380677256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1380677254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa3f6f5638c6195458fb32882029e16f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 0}
+  mesh: {fileID: 1380677255}
+  clase: 0
 --- !u!1 &1382292216
 GameObject:
   m_ObjectHideFlags: 0
@@ -12679,6 +12800,7 @@ MonoBehaviour:
   bichosmios: []
   exp: []
   rango: []
+  clase: []
   dinero: 0
   hierbaomega: 0
   licencia: []
@@ -13139,6 +13261,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1850217324}
+  - component: {fileID: 1850217325}
   m_Layer: 0
   m_Name: shitfloor
   m_TagString: Untagged
@@ -13169,6 +13292,21 @@ Transform:
   - {fileID: 1427084370}
   m_Father: {fileID: 1206870470}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!114 &1850217325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850217323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa3f6f5638c6195458fb32882029e16f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 0}
+  mesh: {fileID: 920605462}
+  clase: 0
 --- !u!1 &1865766617
 GameObject:
   m_ObjectHideFlags: 0
@@ -15541,6 +15679,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 543450651916479410}
+  - component: {fileID: 919132147726414089}
   m_Layer: 0
   m_Name: shitfloor
   m_TagString: Untagged
@@ -15548,6 +15687,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!114 &919132147726414089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132147726414088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e77b6c3966bfdd74bad1ee4e3fa18a26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 0}
+  mesh: {fileID: 7696407346136672898}
+  clase: 0
 --- !u!1 &919132148009872046
 GameObject:
   m_ObjectHideFlags: 0
@@ -15557,6 +15711,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 543450651665199124}
+  - component: {fileID: 919132148009872047}
   m_Layer: 0
   m_Name: topo
   m_TagString: Untagged
@@ -15564,6 +15719,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!114 &919132148009872047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132148009872046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e77b6c3966bfdd74bad1ee4e3fa18a26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 0}
+  mesh: {fileID: 8417361359827898977}
+  clase: 0
 --- !u!1 &984288346673235605
 GameObject:
   m_ObjectHideFlags: 0

@@ -76,6 +76,7 @@ public class heromulti : NetworkBehaviour
     public float fuerza;
     public float nivel;
     public float rango;
+    public float clase;
 
     public int hpmax;
     public int manamax;
@@ -137,6 +138,9 @@ public class heromulti : NetworkBehaviour
     NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
 
     public NetworkVariable<float> rangor = new NetworkVariable<float>(1, 
+    NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
+
+    public NetworkVariable<float> claser = new NetworkVariable<float>(1, 
     NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
 
 
@@ -208,6 +212,7 @@ public class heromulti : NetworkBehaviour
         }
     if(carga == false && managermulti.comenzar.Value == true)
     {
+        colorbicho6 colorbicho = UnityEngine.Object.FindObjectOfType<colorbicho6>();
         carga = true;
         if(IsOwner)
         
@@ -220,6 +225,7 @@ public class heromulti : NetworkBehaviour
         bicho = (string)PlayerPrefs.GetString("bichosh", "madcat");
         nivel = PlayerPrefs.GetFloat("nivelss", 1);
         rango = PlayerPrefs.GetFloat("rangos", 1);
+        clase = PlayerPrefs.GetFloat("clases", 1);
         hpmax = (int)hp;
         manamax = (int)mana;
 
@@ -233,8 +239,12 @@ public class heromulti : NetworkBehaviour
         bicho = bichor.Value.ToString();
         hpmax = (int)hpmaxr.Value;
         manamax = (int)manamaxr.Value;
+        clase = claser.Value;
+        rango = rangor.Value;
+        nivel = nivelr.Value;
 
         modelos();
+        colorbicho.colorb();
         
     }
     managerdecombatemulti manager = UnityEngine.Object.FindObjectOfType<managerdecombatemulti>();
@@ -490,6 +500,7 @@ public class heromulti : NetworkBehaviour
         manamaxr.Value = manamax;
         nivelr.Value = nivel;
         rangor.Value = rango;
+        claser.Value = clase;
     }
     private void cargadatos2()
     {

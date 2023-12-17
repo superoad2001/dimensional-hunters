@@ -944,6 +944,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2a9ed9dd14d2b5a4389cd8b728ad522c, type: 3}
   m_PrefabInstance: {fileID: 258069008}
   m_PrefabAsset: {fileID: 0}
+--- !u!137 &258069010 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -1526964690268444965, guid: 2a9ed9dd14d2b5a4389cd8b728ad522c, type: 3}
+  m_PrefabInstance: {fileID: 258069008}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &286640153
 GameObject:
   m_ObjectHideFlags: 0
@@ -2196,6 +2201,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bade8b189cae5bd4bbeb285449615057, type: 3}
   m_PrefabInstance: {fileID: 526542028}
   m_PrefabAsset: {fileID: 0}
+--- !u!137 &526542030 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 8417361359673230750, guid: bade8b189cae5bd4bbeb285449615057, type: 3}
+  m_PrefabInstance: {fileID: 526542028}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &529609474
 GameObject:
   m_ObjectHideFlags: 0
@@ -2670,6 +2680,7 @@ GameObject:
   m_Component:
   - component: {fileID: 545380723}
   - component: {fileID: 545380724}
+  - component: {fileID: 545380725}
   m_Layer: 0
   m_Name: shitfloor
   m_TagString: Untagged
@@ -2715,6 +2726,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &545380725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545380722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c12bd5bc3cab99b4dbaddda2e8ec3c1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 0}
+  hierbatipo: 0
+  mesh: {fileID: 258069010}
 --- !u!1 &553815489
 GameObject:
   m_ObjectHideFlags: 0
@@ -3569,6 +3595,7 @@ GameObject:
   m_Component:
   - component: {fileID: 797867572}
   - component: {fileID: 797867573}
+  - component: {fileID: 797867574}
   m_Layer: 0
   m_Name: skybird
   m_TagString: Untagged
@@ -3614,6 +3641,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &797867574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 797867571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c12bd5bc3cab99b4dbaddda2e8ec3c1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 0}
+  hierbatipo: 0
+  mesh: {fileID: 1757477528}
 --- !u!1 &841180725
 GameObject:
   m_ObjectHideFlags: 0
@@ -4841,6 +4883,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1459789633}
   - component: {fileID: 1459789634}
+  - component: {fileID: 1459789635}
   m_Layer: 0
   m_Name: madcat
   m_TagString: Untagged
@@ -4886,6 +4929,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1459789635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459789632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c12bd5bc3cab99b4dbaddda2e8ec3c1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 0}
+  hierbatipo: 0
+  mesh: {fileID: 2076573963}
 --- !u!1 &1462284305
 GameObject:
   m_ObjectHideFlags: 0
@@ -5578,6 +5636,7 @@ MonoBehaviour:
   bichosmios: []
   exp: []
   rango: []
+  clase: []
   dinero: 0
   hierbaomega: 0
   licencia: []
@@ -5616,6 +5675,7 @@ MonoBehaviour:
   fuerza: 0
   elemento: 
   nivel: 0
+  clase: 0
   raza: 
   rangor: 0
   namebarcelona: []
@@ -5628,6 +5688,7 @@ MonoBehaviour:
   fuerzabarcelona: []
   elementobarcelona: []
   nivelbarcelona: []
+  clasebarcelona: []
   bichosbarcelona: []
   ciuda: []
   bichos: []
@@ -5776,6 +5837,11 @@ PrefabInstance:
 --- !u!4 &1757477527 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 89e85591b8e6209458857db6e23e9700, type: 3}
+  m_PrefabInstance: {fileID: 1757477526}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &1757477528 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -28583339766523924, guid: 89e85591b8e6209458857db6e23e9700, type: 3}
   m_PrefabInstance: {fileID: 1757477526}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1777969331
@@ -6578,6 +6644,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1911672508}
   - component: {fileID: 1911672509}
+  - component: {fileID: 1911672510}
   m_Layer: 0
   m_Name: topo
   m_TagString: Untagged
@@ -6623,6 +6690,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1911672510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1911672507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c12bd5bc3cab99b4dbaddda2e8ec3c1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 0}
+  hierbatipo: 0
+  mesh: {fileID: 526542030}
 --- !u!1 &1922448157
 GameObject:
   m_ObjectHideFlags: 0
@@ -7435,6 +7517,11 @@ PrefabInstance:
 --- !u!4 &2076573962 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: deb05c2670aa8f44f9f9f1ff68401962, type: 3}
+  m_PrefabInstance: {fileID: 2076573961}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &2076573963 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7040707184094433311, guid: deb05c2670aa8f44f9f9f1ff68401962, type: 3}
   m_PrefabInstance: {fileID: 2076573961}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2093043686

@@ -298,6 +298,7 @@ public class combatemenumulti : MonoBehaviour
     {
 
         inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
+        colorbicho5 colorbicho = UnityEngine.Object.FindObjectOfType<colorbicho5>();
         if(inventario1 == true && atras == true)
         {SceneManager.LoadScene("combatemenu");}
         if (actc == true)
@@ -562,7 +563,7 @@ public class combatemenumulti : MonoBehaviour
                 
                 bichos = inv.bichosmios;
                 if(vez1 == false)
-                {modelos();}
+                {modelos();colorbicho.colorb();}
                 vez1 = true;
                 indexmax = bichos.Count;
                 if(atras == true)
@@ -586,12 +587,14 @@ public class combatemenumulti : MonoBehaviour
                 i--;
                 temp = 0;
                 modelos();
+                colorbicho.colorb();
             }
             if (der == true && i < indexmax - 1 && temp > 0.3f)
             {
                 i++;
                 temp = 0;
                 modelos();
+                colorbicho.colorb();
             }
             if (inv.name.Count == 0)
             {actnobichos2 = true;}
@@ -627,7 +630,7 @@ public class combatemenumulti : MonoBehaviour
                 bichos = inv.bichosmios;
                 indexmax = bichos.Count;
                 if(vez1 == false)
-                {modelos();}
+                {modelos();colorbicho.colorb();}
                 vez1 = true;
                 if(atras == true)
                 {
@@ -653,6 +656,7 @@ public class combatemenumulti : MonoBehaviour
                 PlayerPrefs.SetString("bichosh", bichos[i]);
                 PlayerPrefs.SetFloat("nivelss", inv.nivel[i]);
                 PlayerPrefs.SetFloat("rangos", inv.rango[i]);
+                PlayerPrefs.SetFloat("clases", inv.clase[i]);
                 PlayerPrefs.SetFloat("selec", i);
                 cajon = false;
                 temp = 0;
@@ -664,12 +668,14 @@ public class combatemenumulti : MonoBehaviour
                 i--;
                 temp = 0;
                 modelos();
+                colorbicho.colorb();
             }
             if (der == true && i < indexmax - 1 && temp > 0.3f)
             {
                 i++;
                 temp = 0;
                 modelos();
+                colorbicho.colorb();
             }
         }
         if(cajonentr == true)
@@ -678,7 +684,7 @@ public class combatemenumulti : MonoBehaviour
                 indexmax = bichos.Count;
 
                 if(vez1 == false)
-                {modelos();}
+                {modelos();colorbicho.colorb();}
                 vez1 = true;
                 if(atras == true)
                 {acta = true;}
@@ -703,6 +709,7 @@ public class combatemenumulti : MonoBehaviour
                 PlayerPrefs.SetFloat("exph", inv.exp[i]);
                 PlayerPrefs.SetFloat("nivelss", inv.nivel[i]);
                 PlayerPrefs.SetFloat("rangos", inv.rango[i]);
+                PlayerPrefs.SetFloat("clases", inv.clase[i]);
                 PlayerPrefs.SetFloat("selec", i);
                 cajon = false;
                 temp = 0;
@@ -714,12 +721,14 @@ public class combatemenumulti : MonoBehaviour
                 i--;
                 temp = 0;
                 modelos();
+                colorbicho.colorb();
             }
             if (der == true && i < indexmax - 1 && temp > 0.3f)
             {
                 i++;
                 temp = 0;
                 modelos();
+                colorbicho.colorb();
             }
         }
         if(ciudades1 == true)

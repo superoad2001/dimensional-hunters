@@ -142,8 +142,8 @@ public class tiendamenu : MonoBehaviour
 
         if(tienda == 1)
         {       
-                puesto1.text = "pocion de salud (p)";
-                puesto2.text = "pocion de stamina (p)";
+                puesto1.text = "hierba comun plateada";
+                puesto2.text = "hierba comun dorada";
                 puesto3.text = "";
                 puesto4.text = "";
                 puesto5.text = "";
@@ -199,8 +199,8 @@ public class tiendamenu : MonoBehaviour
                 sel4.SetActive(false);
                 sel5.SetActive(false);
                 sel6.SetActive(true);}
-                ptext1.text = (int)inv.pocvp+"                 10";
-                ptext2.text = (int)inv.pocmp+"                 5";
+                ptext3.text = (int)inv.tipohierba[10]+"                 "+50;
+                ptext3.text = (int)inv.tipohierba[20]+"                 "+100;
                 ptext3.text = "";
                 ptext4.text = "";
                 ptext5.text = "";
@@ -208,41 +208,41 @@ public class tiendamenu : MonoBehaviour
 
                 if(bichoselec == true && temp > 0.3f)
                 {
-                    if (i == 0 && inv.dinero >= 10 && inv.pocvp < 9)
+                    if (i == 0 && inv.dinero >= 50 && inv.tipohierba[10] < 9)
                     {
-                        inv.pocvp++;
-                        inv.dinero -= 10;
+                        inv.tipohierba[10]++;
+                        inv.dinero -= 50;
                         mensaje.text = "buena compra";
                         PlayerPrefs.SetFloat("dinerosave",inv.dinero);
-                        PlayerPrefs.SetFloat("pocvp",inv.pocvp);
+                        inv._agregar2();
                         sibot.Play();
                     }
-                    else if(i == 0 && inv.dinero < 10 && inv.pocvp < 9)
+                    else if(i == 0 && inv.dinero < 50 && inv.tipohierba[10] < 9)
                     {
                         mensaje.text = "no tienes saldo sufieciente";
                         nobot.Play();
                     }
-                    else if(i == 0 && inv.dinero >= 10 && inv.pocvp >= 9)
+                    else if(i == 0 && inv.dinero >= 50 && inv.tipohierba[10] >= 9)
                     {
                         mensaje.text = "tienes el limite de este objeto";
                         nobot.Play();
                     }
 
-                    else if (i == 1 && inv.dinero >= 5 && inv.pocmp < 9)
+                    else if (i == 1 && inv.dinero >= 100 && inv.tipohierba[20] < 9)
                     {
-                        inv.pocmp++;
-                        inv.dinero -= 5;
+                        inv.tipohierba[20]++;
+                        inv.dinero -= 100;
                         mensaje.text = "buena compra";
                         PlayerPrefs.SetFloat("dinerosave",inv.dinero);
-                        PlayerPrefs.SetFloat("pocmp",inv.pocmp);
+                        inv._agregar2();
                         sibot.Play();
                     }
-                    else if(i == 1 && inv.dinero < 5 && inv.pocmp < 9)
+                    else if(i == 1 && inv.dinero < 100 && inv.tipohierba[20] < 9)
                     {
                         mensaje.text = "no tienes saldo sufieciente";
                         nobot.Play();
                     }
-                    else if(i == 1 && inv.dinero >= 5 && inv.pocmp >= 9)
+                    else if(i == 1 && inv.dinero >= 100 && inv.tipohierba[20] >= 9)
                     {
                         mensaje.text = "tienes el limite de este objeto";
                         nobot.Play();
@@ -262,9 +262,9 @@ public class tiendamenu : MonoBehaviour
         }
         if(tienda == 2)
         {       
-                puesto1.text = "pocion de salud (m)";
-                puesto2.text = "pocion de stamina (m)";
-                puesto3.text = "hierba comun plateada";
+                puesto1.text = "";
+                puesto2.text = "";
+                puesto3.text = "";
                 puesto4.text = "";
                 puesto5.text = "";
                 puesto6.text = "";
@@ -319,9 +319,9 @@ public class tiendamenu : MonoBehaviour
                 sel4.SetActive(false);
                 sel5.SetActive(false);
                 sel6.SetActive(true);}
-                ptext1.text = (int)inv.pocvm+"                 50";
-                ptext2.text = (int)inv.pocmm+"                 25";
-                ptext3.text = (int)inv.tipohierba[10]+"                 50";
+                ptext1.text = "";
+                ptext2.text = "";
+                ptext3.text = "";
                 ptext4.text = "";
                 ptext5.text = "";
                 ptext6.text = "";
@@ -329,70 +329,6 @@ public class tiendamenu : MonoBehaviour
                 if(bichoselec == true && temp > 0.3f)
                 {
 
-
-
-                    if (i == 0 && inv.dinero >= 50 && inv.pocvm < 9)
-                    {
-                        inv.pocvm++;
-                        inv.dinero -= 50;
-                        mensaje.text = "buena compra";
-                        PlayerPrefs.SetFloat("dinerosave",inv.dinero);
-                        PlayerPrefs.SetFloat("pocvm",inv.pocvm);
-                        sibot.Play();
-                    }
-                    else if(i == 0 && inv.dinero < 50 && inv.pocvm < 9)
-                    {
-                        mensaje.text = "no tienes saldo sufieciente";
-                        nobot.Play();
-                    }
-                    else if(i == 0 && inv.dinero >= 50 && inv.pocvm >= 9)
-                    {
-                        mensaje.text = "tienes el limite de este objeto";
-                        nobot.Play();
-                    }
-
-
-                    else if (i == 1 && inv.dinero >= 25 && inv.pocmm < 9)
-                    {
-                        inv.pocmm++;
-                        inv.dinero -= 25;
-                        mensaje.text = "buena compra";
-                        PlayerPrefs.SetFloat("dinerosave",inv.dinero);
-                        PlayerPrefs.SetFloat("pocmm",inv.pocmm);
-                        sibot.Play();
-                    }
-                    else if(i == 1 && inv.dinero < 25 && inv.pocmm < 9)
-                    {
-                        mensaje.text = "no tienes saldo sufieciente";
-                        nobot.Play();
-                    }
-                    else if(i == 1 && inv.dinero >= 25 && inv.pocmm >= 9)
-                    {
-                        mensaje.text = "tienes el limite de este objeto";
-                        nobot.Play();
-                    }
-
-
-
-                    else if (i == 2 && inv.dinero >= 50 && inv.tipohierba[10] < 9)
-                    {
-                        inv.tipohierba[10]++;
-                        inv.dinero -= 50;
-                        mensaje.text = "buena compra";
-                        PlayerPrefs.SetFloat("dinerosave",inv.dinero);
-                        inv._agregar2();
-                        sibot.Play();
-                    }
-                    else if(i == 2 && inv.dinero < 50 && inv.tipohierba[10] < 9)
-                    {
-                        mensaje.text = "no tienes saldo sufieciente";
-                        nobot.Play();
-                    }
-                    else if(i == 2 && inv.dinero >= 50 && inv.tipohierba[10] >= 9)
-                    {
-                        mensaje.text = "tienes el limite de este objeto";
-                        nobot.Play();
-                    }
                     
                 
                 }
@@ -407,9 +343,9 @@ public class tiendamenu : MonoBehaviour
         }
         if(tienda == 3)
         {       
-                puesto1.text = "pocion de salud (g)";
-                puesto2.text = "pocion de stamina (g)";
-                puesto3.text = "hierba comun dorada";
+                puesto1.text = "";
+                puesto2.text = "";
+                puesto3.text = "";
                 puesto4.text = "";
                 puesto5.text = "";
                 puesto6.text = "";
@@ -464,78 +400,16 @@ public class tiendamenu : MonoBehaviour
                 sel4.SetActive(false);
                 sel5.SetActive(false);
                 sel6.SetActive(true);}
-                ptext1.text = (int)inv.pocvg+"                 100";
-                ptext2.text = (int)inv.pocmg+"                 50";
-                ptext3.text = (int)inv.tipohierba[20]+"                 100";
+                ptext1.text = "";
+                ptext2.text = "";
+                ptext3.text = "";
                 ptext4.text = "";
                 ptext5.text = "";
                 ptext6.text = "";
 
                 if(bichoselec == true && temp > 0.3f)
                 {
-                    
 
-                    if (i == 0 && inv.dinero >= 100 && inv.pocvg < 9)
-                    {
-                        inv.pocvg++;
-                        inv.dinero -= 100;
-                        mensaje.text = "buena compra";
-                        PlayerPrefs.SetFloat("dinerosave",inv.dinero);
-                        PlayerPrefs.SetFloat("pocvg",inv.pocvg);
-                        sibot.Play();
-                    }
-                    else if(i == 0 && inv.dinero < 100 && inv.pocvg < 9)
-                    {
-                        mensaje.text = "no tienes saldo sufieciente";
-                        nobot.Play();
-                    }
-                    else if(i == 0 && inv.dinero >= 100 && inv.pocvg >= 9)
-                    {
-                        mensaje.text = "tienes el limite de este objeto";
-                        nobot.Play();
-                    }
-
-                    else if (i == 1 && inv.dinero >= 50 && inv.pocmg < 9)
-                    {
-                        inv.pocmg++;
-                        inv.dinero -= 50;
-                        mensaje.text = "buena compra";
-                        PlayerPrefs.SetFloat("dinerosave",inv.dinero);
-                        PlayerPrefs.SetFloat("pocmg",inv.pocmg);
-                        sibot.Play();
-                    }
-                    else if(i == 1 && inv.dinero < 50 && inv.pocmg < 9)
-                    {
-                        mensaje.text = "no tienes saldo sufieciente";
-                        nobot.Play();
-                    }
-                    else if(i == 1 && inv.dinero >= 50 && inv.pocmg >= 9)
-                    {
-                        mensaje.text = "tienes el limite de este objeto";
-                        nobot.Play();
-                    }
-                    else if (i == 2 && inv.dinero >= 100 && inv.tipohierba[20] < 9)
-                    {
-                        inv.tipohierba[20]++;
-                        inv.dinero -= 100;
-                        mensaje.text = "buena compra";
-                        PlayerPrefs.SetFloat("dinerosave",inv.dinero);
-                        inv._agregar2();
-                        sibot.Play();
-                    }
-                    else if(i == 2 && inv.dinero < 100 && inv.tipohierba[20] < 9)
-                    {
-                        mensaje.text = "no tienes saldo sufieciente";
-                        nobot.Play();
-                    }
-                    else if(i == 2 && inv.dinero >= 100 && inv.tipohierba[20] >= 9)
-                    {
-                        mensaje.text = "tienes el limite de este objeto";
-                        nobot.Play();
-                    }
-
-                    
-                    
                 
                 }
                 if(der == true && i < 2)

@@ -20,6 +20,7 @@ public class obtenermenu : MonoBehaviour
     public float fuerza ;
     public string elemento ;
     public float nivel ;
+    public float clase ;
     public string raza ;
     public float rangor ;
 
@@ -40,6 +41,7 @@ public class obtenermenu : MonoBehaviour
     public float[] fuerzabarcelona;
     public string[] elementobarcelona;
     public float[] nivelbarcelona;
+    public float[] clasebarcelona;
     public List<string> bichosbarcelona = new List<string>();
 
     public string[] ciuda;
@@ -201,6 +203,7 @@ public class obtenermenu : MonoBehaviour
         fuerza = PlayerPrefs.GetFloat("fuerzar",1);
         elemento =  PlayerPrefs.GetString("tipor", "plateado Rango : 1");
         nivel = PlayerPrefs.GetFloat("nivelr", 1);
+        clase = PlayerPrefs.GetFloat("claser", 1);
         raza = PlayerPrefs.GetString("razar", "madcat");
         rangor = PlayerPrefs.GetFloat("rangor", 1);
         name = raza;
@@ -440,6 +443,10 @@ public class obtenermenu : MonoBehaviour
                     for(int i = 0;i< inv.rango.Count ; i++)
                     {
                         PlayerPrefs.SetFloat("rangob"+i,inv.rango[i]);
+                    }
+                    for(int i = 0;i< inv.clase.Count ; i++)
+                    {
+                        PlayerPrefs.SetFloat("clasesave"+i,inv.clase[i]);
                     }
                     for(int i = 0;i< inv.bichosmios.Count ; i++)
                     {

@@ -16,6 +16,7 @@ public class inventario : MonoBehaviour
     public List<string> bichosmios = new List<string>();
     public List<float> exp = new List<float>();
     public List<float> rango = new List<float>();
+    public List<float> clase = new List<float>();
     public float dinero;
     public float hierbaomega;
     public List<string> licencia = new List<string>();
@@ -85,6 +86,10 @@ public class inventario : MonoBehaviour
         }
         for(int i = 0;i< indexmax ; i++)
         {
+            clase.Add(PlayerPrefs.GetFloat("clasesave"+i,0));
+        }
+        for(int i = 0;i< indexmax ; i++)
+        {
             elemento.Add(  PlayerPrefs.GetString("elementosave"+i,"no"));
         }
         for(int i = 0;i< indexmax ; i++)
@@ -142,6 +147,7 @@ public class inventario : MonoBehaviour
             fuerza[i] = fuerza[i+1];
             elemento[i] = elemento[i+1];
             nivel[i] = nivel[i+1];
+            clase[i] = clase[i+1];
             bichosmios[i] = bichosmios[i+1];
             exp[i] = exp[i+1];
             rango[i] = rango[i+1];
@@ -154,6 +160,7 @@ public class inventario : MonoBehaviour
         fuerza.RemoveAt(fuerza.Count - 1);
         elemento.RemoveAt(elemento.Count - 1);
         nivel.RemoveAt(nivel.Count - 1);
+        clase.RemoveAt(clase.Count - 1);
         bichosmios.RemoveAt(bichosmios.Count - 1);
         exp.RemoveAt(exp.Count - 1);
         rango.RemoveAt(rango.Count - 1);
@@ -182,6 +189,10 @@ public class inventario : MonoBehaviour
         for(int i = 0;i< nivel.Count ; i++)
         {
             PlayerPrefs.SetFloat("nivelsave"+i,nivel[i]);
+        }
+        for(int i = 0;i< clase.Count ; i++)
+        {
+            PlayerPrefs.SetFloat("clasesave"+i,clase[i]);
         }
         for(int i = 0;i< elemento.Count ; i++)
         {
@@ -212,8 +223,9 @@ public class inventario : MonoBehaviour
         mana.Add(60);
         manarec.Add(0.5f);
         fuerza.Add(1.1f);
-        elemento.Add("terreno");
+        elemento.Add("comun rango : 1");
         nivel.Add(1);
+        clase.Add(1);
         exp.Add(0);
         rango.Add(1);
         bichosmios.Add(catalogo[3]);
@@ -243,6 +255,10 @@ public class inventario : MonoBehaviour
         for(int i = 0;i< nivel.Count ; i++)
         {
             PlayerPrefs.SetFloat("nivelsave"+i,nivel[i]);
+        }
+        for(int i = 0;i< clase.Count ; i++)
+        {
+            PlayerPrefs.SetFloat("clasesave"+i,clase[i]);
         }
         for(int i = 0;i< elemento.Count ; i++)
         {
@@ -291,6 +307,10 @@ public class inventario : MonoBehaviour
         for(int i = 0;i< nivel.Count ; i++)
         {
             PlayerPrefs.SetFloat("nivelsave"+i,nivel[i]);
+        }
+        for(int i = 0;i< clase.Count ; i++)
+        {
+            PlayerPrefs.SetFloat("clasesave"+i,clase[i]);
         }
         for(int i = 0;i< elemento.Count ; i++)
         {

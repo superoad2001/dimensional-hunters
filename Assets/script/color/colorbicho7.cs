@@ -25,7 +25,7 @@ public class colorbicho7 : MonoBehaviour
         clase = hero.clase;
         if(clase == 1)
         {
-            material.color = Color.white;
+            
         }
         if(clase == 2)
         {

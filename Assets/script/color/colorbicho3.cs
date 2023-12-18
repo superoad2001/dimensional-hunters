@@ -13,7 +13,7 @@ public class colorbicho3 : MonoBehaviour
         clase = PlayerPrefs.GetFloat("clases", 1);
         if(clase == 1)
         {
-            material.color = Color.white;
+            
         }
         if(clase == 2)
         {

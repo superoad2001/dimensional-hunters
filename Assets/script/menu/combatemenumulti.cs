@@ -298,7 +298,6 @@ public class combatemenumulti : MonoBehaviour
     {
 
         inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
-        colorbicho5 colorbicho = UnityEngine.Object.FindObjectOfType<colorbicho5>();
         if(inventario1 == true && atras == true)
         {SceneManager.LoadScene("combatemenu");}
         if (actc == true)
@@ -563,7 +562,11 @@ public class combatemenumulti : MonoBehaviour
                 
                 bichos = inv.bichosmios;
                 if(vez1 == false)
-                {modelos();colorbicho.colorb();}
+                {
+                    modelos();
+                    colorbicho5 colorbicho = UnityEngine.Object.FindObjectOfType<colorbicho5>();
+                    colorbicho.colorb();
+                }
                 vez1 = true;
                 indexmax = bichos.Count;
                 if(atras == true)
@@ -587,6 +590,7 @@ public class combatemenumulti : MonoBehaviour
                 i--;
                 temp = 0;
                 modelos();
+                colorbicho5 colorbicho = UnityEngine.Object.FindObjectOfType<colorbicho5>();
                 colorbicho.colorb();
             }
             if (der == true && i < indexmax - 1 && temp > 0.3f)
@@ -594,6 +598,7 @@ public class combatemenumulti : MonoBehaviour
                 i++;
                 temp = 0;
                 modelos();
+                colorbicho5 colorbicho = UnityEngine.Object.FindObjectOfType<colorbicho5>();
                 colorbicho.colorb();
             }
             if (inv.name.Count == 0)
@@ -630,7 +635,11 @@ public class combatemenumulti : MonoBehaviour
                 bichos = inv.bichosmios;
                 indexmax = bichos.Count;
                 if(vez1 == false)
-                {modelos();colorbicho.colorb();}
+                {   
+                    modelos();
+                    colorbicho5 colorbicho = UnityEngine.Object.FindObjectOfType<colorbicho5>();
+                    colorbicho.colorb();
+                }
                 vez1 = true;
                 if(atras == true)
                 {
@@ -668,6 +677,7 @@ public class combatemenumulti : MonoBehaviour
                 i--;
                 temp = 0;
                 modelos();
+                colorbicho5 colorbicho = UnityEngine.Object.FindObjectOfType<colorbicho5>();
                 colorbicho.colorb();
             }
             if (der == true && i < indexmax - 1 && temp > 0.3f)
@@ -675,6 +685,7 @@ public class combatemenumulti : MonoBehaviour
                 i++;
                 temp = 0;
                 modelos();
+                colorbicho5 colorbicho = UnityEngine.Object.FindObjectOfType<colorbicho5>();
                 colorbicho.colorb();
             }
         }
@@ -684,7 +695,11 @@ public class combatemenumulti : MonoBehaviour
                 indexmax = bichos.Count;
 
                 if(vez1 == false)
-                {modelos();colorbicho.colorb();}
+                {
+                    modelos();
+                    colorbicho5 colorbicho = UnityEngine.Object.FindObjectOfType<colorbicho5>();
+                    colorbicho.colorb();
+                }
                 vez1 = true;
                 if(atras == true)
                 {acta = true;}
@@ -721,6 +736,7 @@ public class combatemenumulti : MonoBehaviour
                 i--;
                 temp = 0;
                 modelos();
+                colorbicho5 colorbicho = UnityEngine.Object.FindObjectOfType<colorbicho5>();
                 colorbicho.colorb();
             }
             if (der == true && i < indexmax - 1 && temp > 0.3f)
@@ -728,6 +744,7 @@ public class combatemenumulti : MonoBehaviour
                 i++;
                 temp = 0;
                 modelos();
+                colorbicho5 colorbicho = UnityEngine.Object.FindObjectOfType<colorbicho5>();
                 colorbicho.colorb();
             }
         }

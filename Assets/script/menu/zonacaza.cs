@@ -139,7 +139,10 @@ public class zonacaza : MonoBehaviour
     {
         inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
         if(i == 0)
-        {SceneManager.LoadScene("cazar");}
+        {
+            SceneManager.LoadScene("cazar");
+            PlayerPrefs.SetInt("hierbatipo", 1);
+        }
         else if(i == 1 && inv.tipohierba[i] > 0)
         {
             inv.tipohierba[i]--;
@@ -208,7 +211,7 @@ public class zonacaza : MonoBehaviour
             inv.tipohierba[i]--;
             inv._agregar2();
             PlayerPrefs.SetInt("hierbatipo", 2);
-            SceneManager.LoadScene("cazar1");
+            SceneManager.LoadScene("cazar");
         }
         else if(i == 11 && inv.tipohierba[i] > 0)
         {
@@ -278,7 +281,7 @@ public class zonacaza : MonoBehaviour
             inv.tipohierba[i]--;
             inv._agregar2();
             PlayerPrefs.SetInt("hierbatipo",3);
-            SceneManager.LoadScene("cazar1");
+            SceneManager.LoadScene("cazar");
         }
         else if(i == 21 && inv.tipohierba[i] > 0)
         {

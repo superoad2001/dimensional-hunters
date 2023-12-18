@@ -23,16 +23,17 @@ public class colorbicho5 : MonoBehaviour
     }
     public void colorb()
     {
+        inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
         combatemenumulti menu = UnityEngine.Object.FindObjectOfType<combatemenumulti>();
-        if(menu.i == 1)
+        if(inv.clase[menu.i] == 1)
         {
-            material.color = Color.white;
+            
         }
-        if(menu.i == 2)
+        if(inv.clase[menu.i] == 2)
         {
             material.color = new Color(0,1,0.2158589f,1);
         }
-        if(menu.i == 3)
+        if(inv.clase[menu.i] == 3)
         {
             material.color = new Color(1,0,0.220675f,1);
         }

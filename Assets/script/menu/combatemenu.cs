@@ -126,6 +126,7 @@ public class combatemenu : MonoBehaviour
     public Text tornetext;
     public int tutorial2;
 
+
     // Start is called before the first frame update
 
     public void _multi()
@@ -318,7 +319,6 @@ public class combatemenu : MonoBehaviour
     {
 
         inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
-        colorbicho2 colorbicho = UnityEngine.Object.FindObjectOfType<colorbicho2>();
         if(inventario1 == true && atras == true)
         {SceneManager.LoadScene("seleccion");}
         if (actc == true)
@@ -536,7 +536,11 @@ public class combatemenu : MonoBehaviour
                 
                 bichos = inv.bichosmios;
                 if(vez1 == false)
-                {modelos();colorbicho.colorb();}
+                {
+                    modelos();
+                    colorbicho2 colorbicho = UnityEngine.Object.FindObjectOfType<colorbicho2>();
+                    colorbicho.colorbcajon();
+                }
                 vez1 = true;
                 indexmax = bichos.Count;
                 if(atras == true)
@@ -570,16 +574,18 @@ public class combatemenu : MonoBehaviour
             if (izq == true && i > 0 && temp > 0.3f)
             {
                 i--;
-                colorbicho.colorb();
                 temp = 0;
                 modelos();
+                colorbicho2 colorbicho = UnityEngine.Object.FindObjectOfType<colorbicho2>();
+                colorbicho.colorbcajon();
             }
             if (der == true && i < indexmax - 1 && temp > 0.3f)
             {
                 i++;
-                colorbicho.colorb();
                 temp = 0;
                 modelos();
+                colorbicho2 colorbicho = UnityEngine.Object.FindObjectOfType<colorbicho2>();
+                colorbicho.colorbcajon();
             }
             if (inv.name.Count == 0)
             {actnobichos2 = true;}
@@ -615,7 +621,11 @@ public class combatemenu : MonoBehaviour
                 bichos = inv.bichosmios;
                 indexmax = bichos.Count;
                 if(vez1 == false)
-                {modelos();colorbicho.colorb();}
+                {
+                    modelos();
+                    colorbicho2 colorbicho = UnityEngine.Object.FindObjectOfType<colorbicho2>();
+                    colorbicho.colorbcajon();
+                }
                 vez1 = true;
                 if(atras == true)
                 {
@@ -652,14 +662,16 @@ public class combatemenu : MonoBehaviour
                 i--;
                 temp = 0;
                 modelos();
-                colorbicho.colorb();
+                colorbicho2 colorbicho = UnityEngine.Object.FindObjectOfType<colorbicho2>();
+                colorbicho.colorbcajon();
             }
             if (der == true && i < indexmax - 1 && temp > 0.3f)
             {
                 i++;
                 temp = 0;
                 modelos();
-                colorbicho.colorb();
+                colorbicho2 colorbicho = UnityEngine.Object.FindObjectOfType<colorbicho2>();
+                colorbicho.colorbcajon();
             }
         }
         if(cajonentr == true)
@@ -667,7 +679,11 @@ public class combatemenu : MonoBehaviour
                 bichos = inv.bichosmios;
                 indexmax = bichos.Count;
                 if(vez1 == false)
-                {modelos();colorbicho.colorb();}
+                {
+                    modelos();
+                    colorbicho2 colorbicho = UnityEngine.Object.FindObjectOfType<colorbicho2>();
+                    colorbicho.colorbcajon();
+                }
                 vez1 = true;
                 if(atras == true)
                 {acta = true;}
@@ -701,14 +717,16 @@ public class combatemenu : MonoBehaviour
                 i--;
                 temp = 0;
                 modelos();
-                colorbicho.colorb();
+                colorbicho2 colorbicho = UnityEngine.Object.FindObjectOfType<colorbicho2>();
+                colorbicho.colorbcajon();
             }
             if (der == true && i < indexmax - 1 && temp > 0.3f)
             {
                 i++;
                 temp = 0;
                 modelos();
-                colorbicho.colorb();
+                colorbicho2 colorbicho = UnityEngine.Object.FindObjectOfType<colorbicho2>();
+                colorbicho.colorbcajon();
             }
         }
         if(cajonbarcelona == true)
@@ -719,7 +737,11 @@ public class combatemenu : MonoBehaviour
                     acta = true;
                 }
                 if(vez1 == false)
-                {modelos();colorbicho.colorb();}
+                {
+                    modelos();
+                    colorbicho2 colorbicho = UnityEngine.Object.FindObjectOfType<colorbicho2>();
+                    colorbicho.colorbbarcelona();
+                }
                 vez1 = true;
                 bicho.text = namebarcelona[i];
                 bichoti.text ="RAZA "+ bichos[i];
@@ -752,14 +774,16 @@ public class combatemenu : MonoBehaviour
                 i--;
                 temp = 0;
                 modelos();
-                colorbicho.colorb();
+                colorbicho2 colorbicho = UnityEngine.Object.FindObjectOfType<colorbicho2>();
+                colorbicho.colorbbarcelona();
             }
             if (der == true && i < 5 && temp > 0.3f)
             {
                 i++;
                 temp = 0;
                 modelos();
-                colorbicho.colorb();
+                colorbicho2 colorbicho = UnityEngine.Object.FindObjectOfType<colorbicho2>();
+                colorbicho.colorbbarcelona();
             }
         }
         if(ciudades1 == true)
@@ -826,62 +850,6 @@ public class combatemenu : MonoBehaviour
             bichom = skybird;
         }
 
-
-
-
-
-
-        if(bichos[i] == "happycat")
-        {
-            bichom.SetActive(false);
-            bichom = madcat2;
-        }
-    
-        if(bichos[i] == "shitplus")
-        {
-            bichom.SetActive(false);
-            bichom = shitfloor2;
-            
-        }
-        
-        if(bichos[i] == "toto topo")
-        {
-            bichom.SetActive(false);
-            bichom = topo2;
-        }
-        
-        if(bichos[i] == "sunbird")
-        {
-            bichom.SetActive(false);
-            bichom = skybird2;
-        }
-
-
-
-        if(bichos[i] == "crazycat")
-        {
-            bichom.SetActive(false);
-            bichom = madcat3;
-        }
-    
-        if(bichos[i] == "shitplusplus")
-        {
-            bichom.SetActive(false);
-            bichom = shitfloor3;
-            
-        }
-        
-        if(bichos[i] == "poro topo")
-        {
-            bichom.SetActive(false);
-            bichom = topo3;
-        }
-        
-        if(bichos[i] == "moonbird")
-        {
-            bichom.SetActive(false);
-            bichom = skybird3;
-        }
         bichom.SetActive(true);
     }
 }

@@ -14,7 +14,7 @@ public class colorbicho : MonoBehaviour
         hierbatipo = PlayerPrefs.GetInt("hierbatipo", 3);
         if(hierbatipo == 1)
         {
-            material.color = Color.white;
+        
         }
         if(hierbatipo == 2)
         {

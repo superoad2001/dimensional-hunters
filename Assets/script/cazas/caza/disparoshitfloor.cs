@@ -58,49 +58,49 @@ public class disparoshitfloor : MonoBehaviour
         if(rango == 1)
         {rangoexp = 1;}
         if(rango == 2)
-        {rangoexp = 1.05f;}
+        {rangoexp = 1.50f;}
         if(rango == 3)
-        {rangoexp = 1.10f;}
+        {rangoexp = 2f;}
         if(rango == 4)
-        {rangoexp = 1.15f;}
+        {rangoexp = 2.50f;}
         if(rango == 5)
-        {rangoexp = 1.20f;}
+        {rangoexp = 3f;}
 
         if(rango == 6)
-        {rangoexp = 1.25f;}
+        {rangoexp = 3.25f;}
         if(rango == 7)
-        {rangoexp = 1.30f;}
+        {rangoexp = 3.75f;}
         if(rango == 8)
-        {rangoexp = 1.35f;}
+        {rangoexp = 4.25f;}
         if(rango == 9)
-        {rangoexp = 1.40f;}
+        {rangoexp = 4.75f;}
         if(rango == 10)
-        {rangoexp = 1.45f;}
+        {rangoexp = 5.25f;}
 
         if(rango == 11)
-        {rangoexp = 1.50f;}
+        {rangoexp = 5.5f;}
         if(rango == 12)
-        {rangoexp = 1.55f;}
+        {rangoexp = 6f;}
         if(rango == 13)
-        {rangoexp = 1.60f;}
+        {rangoexp = 6.50f;}
         if(rango == 14)
-        {rangoexp = 1.65f;}
+        {rangoexp = 7f;}
         if(rango == 15)
-        {rangoexp = 1.70f;}
+        {rangoexp = 7.50f;}
 
         if(rango == 16)
-        {rangoexp = 1.75f;}
+        {rangoexp = 7.75f;}
         if(rango == 17)
-        {rangoexp = 1.80f;}
-        if(rango == 18)
-        {rangoexp = 1.85f;}
+        {rangoexp = 8.25f;}
+        if(rango == 48)
+        {rangoexp = 8.75f;}
         if(rango == 19)
-        {rangoexp = 1.90f;}
+        {rangoexp = 9.25f;}
         if(rango == 20)
-        {rangoexp = 1.95f;}
+        {rangoexp = 9.75f;}
 
         if(rango == 21)
-        {rangoexp = 2;}
+        {rangoexp = 10;}
 
         if(rango == 1)
         {hpmax = 30; }

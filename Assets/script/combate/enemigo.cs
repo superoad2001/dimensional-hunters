@@ -51,6 +51,8 @@ public class enemigo : MonoBehaviour
     public float temp3;
     public float ventaja = 0;
     public float atb = 100;
+    public float rangoexp;
+    public float rango;
     public float turbobar = 0;
 
 
@@ -118,9 +120,57 @@ public class enemigo : MonoBehaviour
         mana = PlayerPrefs.GetFloat("manaene", 100);
         manarec = PlayerPrefs.GetFloat("manarecene", 1);
         fuerza = PlayerPrefs.GetFloat("fuerzaene", 1);
+        rango = PlayerPrefs.GetFloat("rangoene", 1);
         name = (string)PlayerPrefs.GetString("nameene", "misigno");
         bicho = (string)PlayerPrefs.GetString("bichosene", "madcat");
         nivel = PlayerPrefs.GetFloat("nivelg", 1);
+
+        if(rango == 1)
+        {rangoexp = 1;}
+        if(rango == 2)
+        {rangoexp = 1.50f;}
+        if(rango == 3)
+        {rangoexp = 2f;}
+        if(rango == 4)
+        {rangoexp = 2.50f;}
+        if(rango == 5)
+        {rangoexp = 3f;}
+
+        if(rango == 6)
+        {rangoexp = 3.25f;}
+        if(rango == 7)
+        {rangoexp = 3.75f;}
+        if(rango == 8)
+        {rangoexp = 4.25f;}
+        if(rango == 9)
+        {rangoexp = 4.75f;}
+        if(rango == 10)
+        {rangoexp = 5.25f;}
+
+        if(rango == 11)
+        {rangoexp = 5.5f;}
+        if(rango == 12)
+        {rangoexp = 6f;}
+        if(rango == 13)
+        {rangoexp = 6.50f;}
+        if(rango == 14)
+        {rangoexp = 7f;}
+        if(rango == 15)
+        {rangoexp = 7.50f;}
+
+        if(rango == 16)
+        {rangoexp = 7.75f;}
+        if(rango == 17)
+        {rangoexp = 8.25f;}
+        if(rango == 48)
+        {rangoexp = 8.75f;}
+        if(rango == 19)
+        {rangoexp = 9.25f;}
+        if(rango == 20)
+        {rangoexp = 9.75f;}
+
+        if(rango == 21)
+        {rangoexp = 10;}
         
         
 
@@ -672,9 +722,9 @@ public class enemigo : MonoBehaviour
 
 
 
-            if (rapido == true && atb == 100 && mana >= 20 && permiso == false && heroe.permiso == false)
+            if (rapido == true && atb == 100 && mana >= 20  * rangoexp&& permiso == false && heroe.permiso == false)
             {
-                mana -= 20;
+                mana -= 20 * rangoexp;
                 ataque = Random.Range(10,16) * fuerza;
                 activar = true;
                 permiso = true;
@@ -686,9 +736,9 @@ public class enemigo : MonoBehaviour
                 
                 dano = Random.Range(0,3);
             }
-            else if (fuerte == true && atb == 100 && mana >= 30 && permiso == false  && heroe.permiso == false)
+            else if (fuerte == true && atb == 100 && mana >= 30 * rangoexp && permiso == false  && heroe.permiso == false)
             {
-                mana -= 30;
+                mana -= 30 * rangoexp;
                 ataque = Random.Range(16,20) * fuerza;
                 activar = true;
                 permiso = true;
@@ -700,9 +750,9 @@ public class enemigo : MonoBehaviour
                 
                 dano = Random.Range(0,3);
             }
-            else if (rapfue == true && atb == 100 && mana >= 40 && permiso == false  && heroe.permiso == false) 
+            else if (rapfue == true && atb == 100 && mana >= 40 * rangoexp && permiso == false  && heroe.permiso == false) 
             {
-                mana -= 50;
+                mana -= 40 * rangoexp;
                 turbobar += 35;
                 ataque = Random.Range(18,25) * fuerza;
                 activar = true;
@@ -740,11 +790,11 @@ public class enemigo : MonoBehaviour
 
             }
 
-            if (def == true && mana >= 5 && activar == false && permiso == false)
+            if (def == true && mana >= 5 * rangoexp && activar == false && permiso == false)
             {
                 if(botebool == false)
                 {bote.Play();}
-                mana -= 3.5f * Time.deltaTime;
+                mana -= 3.5f * rangoexp * Time.deltaTime;
                 turbobar += 0.7f * Time.deltaTime;
                 prot.enabled = false;
                
@@ -753,9 +803,9 @@ public class enemigo : MonoBehaviour
                 defusar = true;
                 
             }
-            else if (def == true && mana > 0  && mana < 5 && permiso == false && defusar == true)
+            else if (def == true && mana > 0  && mana < 5 * rangoexp && permiso == false && defusar == true)
             {
-                mana -= 3.5f * Time.deltaTime;
+                mana -= 3.5f * rangoexp * Time.deltaTime;
                 turbobar += 0.7f * Time.deltaTime;
                 prot.enabled = false;
                 

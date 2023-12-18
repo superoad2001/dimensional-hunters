@@ -15,6 +15,7 @@ public class destroynm : MonoBehaviour
     void Update()
     {
         NetworkManager manager = UnityEngine.Object.FindObjectOfType<NetworkManager>();
-        Destroy(manager.gameObject);
+        if(manager != null)
+        {Destroy(manager.gameObject);}
     }
 }

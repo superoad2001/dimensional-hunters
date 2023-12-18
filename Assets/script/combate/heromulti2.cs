@@ -123,6 +123,7 @@ public class heromulti2  : NetworkBehaviour
     public Collider prot;
 
     public GameObject escudo;
+    public float rangoexp;
 
 
 
@@ -232,6 +233,53 @@ public class heromulti2  : NetworkBehaviour
         hpmax = (int)hp;
         manamax = (int)mana;
 
+        if(rango == 1)
+        {rangoexp = 1;}
+        if(rango == 2)
+        {rangoexp = 1.50f;}
+        if(rango == 3)
+        {rangoexp = 2f;}
+        if(rango == 4)
+        {rangoexp = 2.50f;}
+        if(rango == 5)
+        {rangoexp = 3f;}
+
+        if(rango == 6)
+        {rangoexp = 3.25f;}
+        if(rango == 7)
+        {rangoexp = 3.75f;}
+        if(rango == 8)
+        {rangoexp = 4.25f;}
+        if(rango == 9)
+        {rangoexp = 4.75f;}
+        if(rango == 10)
+        {rangoexp = 5.25f;}
+
+        if(rango == 11)
+        {rangoexp = 5.5f;}
+        if(rango == 12)
+        {rangoexp = 6f;}
+        if(rango == 13)
+        {rangoexp = 6.50f;}
+        if(rango == 14)
+        {rangoexp = 7f;}
+        if(rango == 15)
+        {rangoexp = 7.50f;}
+
+        if(rango == 16)
+        {rangoexp = 7.75f;}
+        if(rango == 17)
+        {rangoexp = 8.25f;}
+        if(rango == 48)
+        {rangoexp = 8.75f;}
+        if(rango == 19)
+        {rangoexp = 9.25f;}
+        if(rango == 20)
+        {rangoexp = 9.75f;}
+
+        if(rango == 21)
+        {rangoexp = 10;}
+
         cargadatosServerRpc(hp,mana,manarec,fuerza,hname,bicho,turbobar,atb,hpmax,manamax,nivel,rango,clase);
 
     
@@ -304,12 +352,12 @@ public class heromulti2  : NetworkBehaviour
             baseanim.SetBool("atkfue", false);
             baseanim.SetBool("atkturbo", false);
 
-            if (rapido == true && atb == 100 && mana >= 20 && permiso == false && enemigo.permiso == false)
+            if (rapido == true && atb == 100 && mana >= 20  * rangoexp && permiso == false && enemigo.permiso == false)
             {
                 activar = true;
                 permiso = true;
                 atkServerRpc(1);
-                mana -= 20;
+                mana -= 20 * rangoexp ;
                 turbobar += 10;
                 ataque = Random.Range(10,16) * fuerza;
                 atb = 0;
@@ -320,13 +368,13 @@ public class heromulti2  : NetworkBehaviour
                 botcl.Play();
                 
             }
-            else if (fuerte == true && atb == 100 && mana >= 30 && permiso == false && enemigo.permiso == false)
+            else if (fuerte == true && atb == 100 && mana >= 30 * rangoexp  && permiso == false && enemigo.permiso == false)
             {
             
                 activar = true;
                 permiso = true;
                 atkServerRpc(2);
-                mana -= 30;
+                mana -= 30 * rangoexp ;
                 fuesound.Play();
                 turbobar += 15;
                 ataque = Random.Range(16,20) * fuerza;
@@ -338,12 +386,12 @@ public class heromulti2  : NetworkBehaviour
                 botno.Stop();
                 
             }
-            else if (rapfue == true && atb == 100 && mana >= 40 && permiso == false && enemigo.permiso == false)
+            else if (rapfue == true && atb == 100 && mana >= 40 * rangoexp  && permiso == false && enemigo.permiso == false)
             {
                 activar = true;
                 permiso = true;
                 atkServerRpc(3);
-                mana -= 50;
+                mana -= 40 * rangoexp ;
                 rapfuesound.Play();
                 turbobar += 35;
                 ataque = Random.Range(18,25) * fuerza;
@@ -386,23 +434,23 @@ public class heromulti2  : NetworkBehaviour
         
 
             }
-            if (def == true && mana >= 5 && permiso == false && permiso == false)
+            if (def == true && mana >= 5  * rangoexp && permiso == false && permiso == false)
             {
 
                 if(botebool == false)
                 {bote.Play();}
                 botno.Stop();
                 botebool = true;
-                mana -= 3.5f * Time.deltaTime;
+                mana -= 3.5f  * rangoexp * Time.deltaTime;
                 turbobar += 0.7f * Time.deltaTime;
                 prot.enabled = false;
                 escudo.gameObject.SetActive(true);
                 defServerRpc(true);
                 defusar = true;
             }
-            else if (def == true && mana > 0  && mana < 5 && permiso == false && defusar == true)
+            else if (def == true && mana > 0  && mana < 5  * rangoexp && permiso == false && defusar == true)
             {
-                mana -= 3.5f * Time.deltaTime;
+                mana -= 3.5f  * rangoexp * Time.deltaTime;
                 turbobar += 0.7f * Time.deltaTime;
                 prot.enabled = false;
                 escudo.gameObject.SetActive(true);

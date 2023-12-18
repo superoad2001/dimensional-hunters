@@ -69,6 +69,9 @@ public class tiendamenu : MonoBehaviour
     public GameObject sel5;
     public GameObject sel6;
 
+    public int rango;
+    public float rangoexp;
+
     // Start is called before the first frame update
 
     public void _cajon()
@@ -121,9 +124,55 @@ public class tiendamenu : MonoBehaviour
 
     void Start()
     {
+        rango = PlayerPrefs.GetInt("rango", 1);
 
 
+        if(rango == 1)
+        {rangoexp = 1;}
+        if(rango == 2)
+        {rangoexp = 1.50f;}
+        if(rango == 3)
+        {rangoexp = 2f;}
+        if(rango == 4)
+        {rangoexp = 2.50f;}
+        if(rango == 5)
+        {rangoexp = 3f;}
 
+        if(rango == 6)
+        {rangoexp = 3.25f;}
+        if(rango == 7)
+        {rangoexp = 3.75f;}
+        if(rango == 8)
+        {rangoexp = 4.25f;}
+        if(rango == 9)
+        {rangoexp = 4.75f;}
+        if(rango == 10)
+        {rangoexp = 5.25f;}
+
+        if(rango == 11)
+        {rangoexp = 5.5f;}
+        if(rango == 12)
+        {rangoexp = 6f;}
+        if(rango == 13)
+        {rangoexp = 6.50f;}
+        if(rango == 14)
+        {rangoexp = 7f;}
+        if(rango == 15)
+        {rangoexp = 7.50f;}
+
+        if(rango == 16)
+        {rangoexp = 7.75f;}
+        if(rango == 17)
+        {rangoexp = 8.25f;}
+        if(rango == 48)
+        {rangoexp = 8.75f;}
+        if(rango == 19)
+        {rangoexp = 9.25f;}
+        if(rango == 20)
+        {rangoexp = 9.75f;}
+
+        if(rango == 21)
+        {rangoexp = 10;}
     
         
 
@@ -199,8 +248,8 @@ public class tiendamenu : MonoBehaviour
                 sel4.SetActive(false);
                 sel5.SetActive(false);
                 sel6.SetActive(true);}
-                ptext3.text = (int)inv.tipohierba[10]+"                 "+50;
-                ptext3.text = (int)inv.tipohierba[20]+"                 "+100;
+                ptext1.text = (int)inv.tipohierba[10]+"                 "+((int)50 * rangoexp);
+                ptext2.text = (int)inv.tipohierba[20]+"                 "+((int)100 * rangoexp);
                 ptext3.text = "";
                 ptext4.text = "";
                 ptext5.text = "";
@@ -208,41 +257,41 @@ public class tiendamenu : MonoBehaviour
 
                 if(bichoselec == true && temp > 0.3f)
                 {
-                    if (i == 0 && inv.dinero >= 50 && inv.tipohierba[10] < 9)
+                    if (i == 0 && inv.dinero >= ((int)50 * rangoexp) && inv.tipohierba[10] < 9)
                     {
                         inv.tipohierba[10]++;
-                        inv.dinero -= 50;
+                        inv.dinero -= ((int)50 * rangoexp);
                         mensaje.text = "buena compra";
                         PlayerPrefs.SetFloat("dinerosave",inv.dinero);
                         inv._agregar2();
                         sibot.Play();
                     }
-                    else if(i == 0 && inv.dinero < 50 && inv.tipohierba[10] < 9)
+                    else if(i == 0 && inv.dinero < ((int)50 * rangoexp) && inv.tipohierba[10] < 9)
                     {
                         mensaje.text = "no tienes saldo sufieciente";
                         nobot.Play();
                     }
-                    else if(i == 0 && inv.dinero >= 50 && inv.tipohierba[10] >= 9)
+                    else if(i == 0 && inv.dinero >= ((int)50 * rangoexp) && inv.tipohierba[10] >= 9)
                     {
                         mensaje.text = "tienes el limite de este objeto";
                         nobot.Play();
                     }
 
-                    else if (i == 1 && inv.dinero >= 100 && inv.tipohierba[20] < 9)
+                    else if (i == 1 && inv.dinero >= ((int)100 * rangoexp) && inv.tipohierba[20] < 9)
                     {
                         inv.tipohierba[20]++;
-                        inv.dinero -= 100;
+                        inv.dinero -= ((int)100 * rangoexp);
                         mensaje.text = "buena compra";
                         PlayerPrefs.SetFloat("dinerosave",inv.dinero);
                         inv._agregar2();
                         sibot.Play();
                     }
-                    else if(i == 1 && inv.dinero < 100 && inv.tipohierba[20] < 9)
+                    else if(i == 1 && inv.dinero < ((int)100 * rangoexp) && inv.tipohierba[20] < 9)
                     {
                         mensaje.text = "no tienes saldo sufieciente";
                         nobot.Play();
                     }
-                    else if(i == 1 && inv.dinero >= 100 && inv.tipohierba[20] >= 9)
+                    else if(i == 1 && inv.dinero >= ((int)100 * rangoexp) && inv.tipohierba[20] >= 9)
                     {
                         mensaje.text = "tienes el limite de este objeto";
                         nobot.Play();

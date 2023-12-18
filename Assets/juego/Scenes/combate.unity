@@ -3146,6 +3146,8 @@ MonoBehaviour:
   shitfloor: {fileID: 488921696}
   topo: {fileID: 449058746}
   skybird: {fileID: 1524554493}
+  rangoexp: 0
+  rango: 0
 --- !u!1 &542605412
 GameObject:
   m_ObjectHideFlags: 0
@@ -6248,13 +6250,13 @@ RectTransform:
   - {fileID: 594663853}
   - {fileID: 1148862396}
   - {fileID: 239509643}
-  - {fileID: 1413046914}
   - {fileID: 956767459}
   - {fileID: 1581898502}
   - {fileID: 145981216}
   - {fileID: 631380814}
   - {fileID: 245058550}
   - {fileID: 1364414747}
+  - {fileID: 1413046914}
   m_Father: {fileID: 818019942}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -8919,6 +8921,8 @@ MonoBehaviour:
   temp3: 0
   ventaja: 0
   atb: 100
+  rangoexp: 0
+  rango: 0
   turbobar: 0
   mehp: {fileID: 631380815}
   memana: {fileID: 1413046915}

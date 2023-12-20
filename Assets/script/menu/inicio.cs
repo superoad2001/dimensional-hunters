@@ -21,6 +21,15 @@ public class inicio : MonoBehaviour
     {
         SceneManager.LoadScene("borrar");
     }
+    public void _debug()
+    {
+        PlayerPrefs.SetFloat("limite",9999);
+        PlayerPrefs.SetFloat("dinerosave",999999999);
+        for(int i = 0;i< 30 ; i++)
+        {
+            PlayerPrefs.SetFloat("hierba"+i,999);
+        }
+    }
     // Update is called once per frame
     void Update()
     {

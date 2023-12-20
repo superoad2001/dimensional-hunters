@@ -17,10 +17,65 @@ public class shitene : MonoBehaviour
 	public GameObject BalaPrefab;
     public GameObject player;
     public string bicho = "madcat";
+
+
+
     public GameObject madcat;
     public GameObject skybird;
     public GameObject shitfloor;
     public GameObject topo;
+
+    public GameObject madcat;
+    public GameObject skybird;
+    public GameObject shitfloor;
+    public GameObject topo;
+
+    public GameObject madcat;
+    public GameObject skybird;
+    public GameObject shitfloor;
+    public GameObject topo;
+
+    public GameObject madcat;
+    public GameObject skybird;
+    public GameObject shitfloor;
+    public GameObject topo;
+
+    public GameObject madcat;
+    public GameObject skybird;
+    public GameObject shitfloor;
+    public GameObject topo;
+
+
+
+
+
+    public GameObject madcat;
+    public GameObject skybird;
+    public GameObject shitfloor;
+    public GameObject topo;
+
+    public GameObject madcat;
+    public GameObject skybird;
+    public GameObject shitfloor;
+    public GameObject topo;
+
+    public GameObject madcat;
+    public GameObject skybird;
+    public GameObject shitfloor;
+    public GameObject topo;
+
+    public GameObject madcat;
+    public GameObject skybird;
+    public GameObject shitfloor;
+    public GameObject topo;
+
+    public GameObject madcat;
+    public GameObject skybird;
+    public GameObject shitfloor;
+    public GameObject topo;
+
+
+
     public float defensa;
     public int rango;
     public float rangoexp;
@@ -252,6 +307,161 @@ public class shitene : MonoBehaviour
     }
     public void mostrar()
     {
+        //1
+        if(bicho == "madcat")
+        {
+            madcat.SetActive(true);
+        }
+        if(bicho == "skybird")
+        {
+            skybird.SetActive(true);
+        }
+        if(bicho == "shitfloor")
+        {
+            shitfloor.SetActive(true);
+        }
+        if(bicho == "topo")
+        {
+            topo.SetActive(true);
+        }
+         //2
+        if(bicho == "madcat")
+        {
+            madcat.SetActive(true);
+        }
+        if(bicho == "skybird")
+        {
+            skybird.SetActive(true);
+        }
+        if(bicho == "shitfloor")
+        {
+            shitfloor.SetActive(true);
+        }
+        if(bicho == "topo")
+        {
+            topo.SetActive(true);
+        }
+        //3
+        if(bicho == "madcat")
+        {
+            madcat.SetActive(true);
+        }
+        if(bicho == "skybird")
+        {
+            skybird.SetActive(true);
+        }
+        if(bicho == "shitfloor")
+        {
+            shitfloor.SetActive(true);
+        }
+        if(bicho == "topo")
+        {
+            topo.SetActive(true);
+        }
+        //4
+        if(bicho == "madcat")
+        {
+            madcat.SetActive(true);
+        }
+        if(bicho == "skybird")
+        {
+            skybird.SetActive(true);
+        }
+        if(bicho == "shitfloor")
+        {
+            shitfloor.SetActive(true);
+        }
+        if(bicho == "topo")
+        {
+            topo.SetActive(true);
+        }
+        //5
+        if(bicho == "madcat")
+        {
+            madcat.SetActive(true);
+        }
+        if(bicho == "skybird")
+        {
+            skybird.SetActive(true);
+        }
+        if(bicho == "shitfloor")
+        {
+            shitfloor.SetActive(true);
+        }
+        if(bicho == "topo")
+        {
+            topo.SetActive(true);
+        }
+
+        //1
+        if(bicho == "madcat")
+        {
+            madcat.SetActive(true);
+        }
+        if(bicho == "skybird")
+        {
+            skybird.SetActive(true);
+        }
+        if(bicho == "shitfloor")
+        {
+            shitfloor.SetActive(true);
+        }
+        if(bicho == "topo")
+        {
+            topo.SetActive(true);
+        }
+         //2
+        if(bicho == "madcat")
+        {
+            madcat.SetActive(true);
+        }
+        if(bicho == "skybird")
+        {
+            skybird.SetActive(true);
+        }
+        if(bicho == "shitfloor")
+        {
+            shitfloor.SetActive(true);
+        }
+        if(bicho == "topo")
+        {
+            topo.SetActive(true);
+        }
+        //3
+        if(bicho == "madcat")
+        {
+            madcat.SetActive(true);
+        }
+        if(bicho == "skybird")
+        {
+            skybird.SetActive(true);
+        }
+        if(bicho == "shitfloor")
+        {
+            shitfloor.SetActive(true);
+        }
+        if(bicho == "topo")
+        {
+            topo.SetActive(true);
+        }
+        //4
+        if(bicho == "madcat")
+        {
+            madcat.SetActive(true);
+        }
+        if(bicho == "skybird")
+        {
+            skybird.SetActive(true);
+        }
+        if(bicho == "shitfloor")
+        {
+            shitfloor.SetActive(true);
+        }
+        if(bicho == "topo")
+        {
+            topo.SetActive(true);
+        }
+        //5
         if(bicho == "madcat")
         {
             madcat.SetActive(true);

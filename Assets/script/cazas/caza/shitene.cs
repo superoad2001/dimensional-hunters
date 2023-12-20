@@ -25,54 +25,54 @@ public class shitene : MonoBehaviour
     public GameObject shitfloor;
     public GameObject topo;
 
-    public GameObject madcat;
-    public GameObject skybird;
-    public GameObject shitfloor;
-    public GameObject topo;
+    public GameObject ghost;
+    public GameObject algosaurio;
+    public GameObject bigfat;
+    public GameObject cazafantasmas;
 
-    public GameObject madcat;
-    public GameObject skybird;
-    public GameObject shitfloor;
-    public GameObject topo;
+    public GameObject darkknight;
+    public GameObject antidog;
+    public GameObject pinguino;
+    public GameObject craneovil;
 
-    public GameObject madcat;
-    public GameObject skybird;
-    public GameObject shitfloor;
-    public GameObject topo;
+    public GameObject dogtable;
+    public GameObject bee;
+    public GameObject elephant;
+    public GameObject flyera;
 
-    public GameObject madcat;
-    public GameObject skybird;
-    public GameObject shitfloor;
-    public GameObject topo;
-
-
+    public GameObject friend;
+    public GameObject gunman;
+    public GameObject flanerio;
+    public GameObject fenix;
 
 
 
-    public GameObject madcat;
-    public GameObject skybird;
-    public GameObject shitfloor;
-    public GameObject topo;
 
-    public GameObject madcat;
-    public GameObject skybird;
-    public GameObject shitfloor;
-    public GameObject topo;
 
-    public GameObject madcat;
-    public GameObject skybird;
-    public GameObject shitfloor;
-    public GameObject topo;
+    public GameObject kingdragon;
+    public GameObject heavydevil;
+    public GameObject kraken;
+    public GameObject lizardo;
 
-    public GameObject madcat;
-    public GameObject skybird;
-    public GameObject shitfloor;
-    public GameObject topo;
+    public GameObject livedish;
+    public GameObject pesadilla;
+    public GameObject mirror;
+    public GameObject rabmon;
 
-    public GameObject madcat;
-    public GameObject skybird;
-    public GameObject shitfloor;
-    public GameObject topo;
+    public GameObject ant;
+    public GameObject kingslug;
+    public GameObject rosedragon;
+    public GameObject sharkman;
+
+    public GameObject pollovion;
+    public GameObject trepillo;
+    public GameObject roboerto;
+    public GameObject tufo;
+
+    public GameObject trashrat;
+    public GameObject spider;
+    public GameObject vivodado;
+    public GameObject dragonron;
 
 
 
@@ -195,6 +195,7 @@ public class shitene : MonoBehaviour
         if (hierba == 3)
         {hierbaexp = 1.2f;}
 
+        //1
         if (bicho == "madcat")
         {
             if(rango <= 2)
@@ -270,6 +271,690 @@ public class shitene : MonoBehaviour
             nombre.text = "topo topo";
 
         }
+        //2
+        if (bicho == "dragonron")
+        {
+            if(rango <= 2)
+            {
+            hpmax = 110 * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0;
+            fuerza = 10 * hierbaexp;
+            }
+            else if(rango > 2)
+            {
+            hpmax = 110 * rangoexp * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 * rangoexp;
+            fuerza = 10 * rangoexp * hierbaexp;
+            }
+            nombre.text = "dragon ron";
+        }
+        if (bicho == "elephant")
+        {
+            if(rango <= 2)
+            {
+            hpmax = 100 * hierbaexp;
+            ataquetemp = 2;
+            defensa = 0 ;
+            fuerza = 10 * hierbaexp;
+            }
+            else if(rango > 2)
+            {
+            hpmax = 100 * rangoexp * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 * rangoexp;
+            fuerza = 10 * rangoexp * hierbaexp;
+            }
+            nombre.text = "elephant";
+
+        }
+        if (bicho == "roboerto")
+        {
+            if(rango <= 2)
+            {
+            hpmax = 100  * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 ;
+            fuerza = 20  * hierbaexp;
+            }
+            else if(rango > 2)
+            {
+            hpmax = 100 * rangoexp * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 * rangoexp;
+            fuerza = 20 * rangoexp * hierbaexp;
+            }
+            nombre.text = "roboerto";
+
+        }
+        if (bicho == "tufo")
+        {
+            if(rango <= 2)
+            {
+            hpmax = 100 * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 ;
+            fuerza = 10  * hierbaexp;
+            }
+            else if(rango > 2)
+            {
+            hpmax = 100 * rangoexp * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 * rangoexp;
+            fuerza = 10 * rangoexp * hierbaexp;
+            }
+            nombre.text = "tufo";
+
+        }
+        //3
+        if (bicho == "antidog")
+        {
+            if(rango <= 2)
+            {
+            hpmax = 110 * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0;
+            fuerza = 10 * hierbaexp;
+            }
+            else if(rango > 2)
+            {
+            hpmax = 110 * rangoexp * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 * rangoexp;
+            fuerza = 10 * rangoexp * hierbaexp;
+            }
+            nombre.text = "antidog";
+        }
+        if (bicho == "cazafantasmas")
+        {
+            if(rango <= 2)
+            {
+            hpmax = 100 * hierbaexp;
+            ataquetemp = 2;
+            defensa = 0 ;
+            fuerza = 10 * hierbaexp;
+            }
+            else if(rango > 2)
+            {
+            hpmax = 100 * rangoexp * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 * rangoexp;
+            fuerza = 10 * rangoexp * hierbaexp;
+            }
+            nombre.text = "cazafantasmas";
+
+        }
+        if (bicho == "rabmon")
+        {
+            if(rango <= 2)
+            {
+            hpmax = 100  * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 ;
+            fuerza = 20  * hierbaexp;
+            }
+            else if(rango > 2)
+            {
+            hpmax = 100 * rangoexp * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 * rangoexp;
+            fuerza = 20 * rangoexp * hierbaexp;
+            }
+            nombre.text = "rabmon";
+
+        }
+        if (bicho == "vivodado")
+        {
+            if(rango <= 2)
+            {
+            hpmax = 100 * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 ;
+            fuerza = 10  * hierbaexp;
+            }
+            else if(rango > 2)
+            {
+            hpmax = 100 * rangoexp * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 * rangoexp;
+            fuerza = 10 * rangoexp * hierbaexp;
+            }
+            nombre.text = "vivodado";
+
+        }
+        //4
+        if (bicho == "livedish")
+        {
+            if(rango <= 2)
+            {
+            hpmax = 110 * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0;
+            fuerza = 10 * hierbaexp;
+            }
+            else if(rango > 2)
+            {
+            hpmax = 110 * rangoexp * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 * rangoexp;
+            fuerza = 10 * rangoexp * hierbaexp;
+            }
+            nombre.text = "livedish";
+        }
+        if (bicho == "rosedragon")
+        {
+            if(rango <= 2)
+            {
+            hpmax = 100 * hierbaexp;
+            ataquetemp = 2;
+            defensa = 0 ;
+            fuerza = 10 * hierbaexp;
+            }
+            else if(rango > 2)
+            {
+            hpmax = 100 * rangoexp * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 * rangoexp;
+            fuerza = 10 * rangoexp * hierbaexp;
+            }
+            nombre.text = "rose dragon";
+
+        }
+        if (bicho == "sharkman")
+        {
+            if(rango <= 2)
+            {
+            hpmax = 100  * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 ;
+            fuerza = 20  * hierbaexp;
+            }
+            else if(rango > 2)
+            {
+            hpmax = 100 * rangoexp * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 * rangoexp;
+            fuerza = 20 * rangoexp * hierbaexp;
+            }
+            nombre.text = "sharkman";
+
+        }
+        if (bicho == "spider")
+        {
+            if(rango <= 2)
+            {
+            hpmax = 100 * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 ;
+            fuerza = 10  * hierbaexp;
+            }
+            else if(rango > 2)
+            {
+            hpmax = 100 * rangoexp * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 * rangoexp;
+            fuerza = 10 * rangoexp * hierbaexp;
+            }
+            nombre.text = "spider";
+
+        }
+        //5
+        if (bicho == "algosaurio")
+        {
+            if(rango <= 2)
+            {
+            hpmax = 110 * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0;
+            fuerza = 10 * hierbaexp;
+            }
+            else if(rango > 2)
+            {
+            hpmax = 110 * rangoexp * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 * rangoexp;
+            fuerza = 10 * rangoexp * hierbaexp;
+            }
+            nombre.text = "algosaurio";
+        }
+        if (bicho == "dogtable")
+        {
+            if(rango <= 2)
+            {
+            hpmax = 100 * hierbaexp;
+            ataquetemp = 2;
+            defensa = 0 ;
+            fuerza = 10 * hierbaexp;
+            }
+            else if(rango > 2)
+            {
+            hpmax = 100 * rangoexp * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 * rangoexp;
+            fuerza = 10 * rangoexp * hierbaexp;
+            }
+            nombre.text = "dogtable";
+
+        }
+        if (bicho == "friend")
+        {
+            if(rango <= 2)
+            {
+            hpmax = 100  * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 ;
+            fuerza = 20  * hierbaexp;
+            }
+            else if(rango > 2)
+            {
+            hpmax = 100 * rangoexp * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 * rangoexp;
+            fuerza = 20 * rangoexp * hierbaexp;
+            }
+            nombre.text = "friend";
+
+        }
+        if (bicho == "trashrat")
+        {
+            if(rango <= 2)
+            {
+            hpmax = 100 * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 ;
+            fuerza = 10  * hierbaexp;
+            }
+            else if(rango > 2)
+            {
+            hpmax = 100 * rangoexp * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 * rangoexp;
+            fuerza = 10 * rangoexp * hierbaexp;
+            }
+            nombre.text = "trashrat";
+
+        }
+        //1
+        if (bicho == "aghostin")
+        {
+            if(rango <= 2)
+            {
+            hpmax = 110 * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0;
+            fuerza = 10 * hierbaexp;
+            }
+            else if(rango > 2)
+            {
+            hpmax = 110 * rangoexp * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 * rangoexp;
+            fuerza = 10 * rangoexp * hierbaexp;
+            }
+            nombre.text = "aghostin";
+        }
+        if (bicho == "heavydevil")
+        {
+            if(rango <= 2)
+            {
+            hpmax = 100 * hierbaexp;
+            ataquetemp = 2;
+            defensa = 0 ;
+            fuerza = 10 * hierbaexp;
+            }
+            else if(rango > 2)
+            {
+            hpmax = 100 * rangoexp * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 * rangoexp;
+            fuerza = 10 * rangoexp * hierbaexp;
+            }
+            nombre.text = "heavy devil";
+
+        }
+        if (bicho == "kingslug")
+        {
+            if(rango <= 2)
+            {
+            hpmax = 100  * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 ;
+            fuerza = 20  * hierbaexp;
+            }
+            else if(rango > 2)
+            {
+            hpmax = 100 * rangoexp * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 * rangoexp;
+            fuerza = 20 * rangoexp * hierbaexp;
+            }
+            nombre.text = "king slug";
+
+        }
+        if (bicho == "pollovion")
+        {
+            if(rango <= 2)
+            {
+            hpmax = 100 * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 ;
+            fuerza = 10  * hierbaexp;
+            }
+            else if(rango > 2)
+            {
+            hpmax = 100 * rangoexp * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 * rangoexp;
+            fuerza = 10 * rangoexp * hierbaexp;
+            }
+            nombre.text = "pollovion";
+
+        }
+        //2
+        if (bicho == "ant")
+        {
+            if(rango <= 2)
+            {
+            hpmax = 110 * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0;
+            fuerza = 10 * hierbaexp;
+            }
+            else if(rango > 2)
+            {
+            hpmax = 110 * rangoexp * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 * rangoexp;
+            fuerza = 10 * rangoexp * hierbaexp;
+            }
+            nombre.text = "sadistic ant";
+        }
+        if (bicho == "flanerio")
+        {
+            if(rango <= 2)
+            {
+            hpmax = 100 * hierbaexp;
+            ataquetemp = 2;
+            defensa = 0 ;
+            fuerza = 10 * hierbaexp;
+            }
+            else if(rango > 2)
+            {
+            hpmax = 100 * rangoexp * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 * rangoexp;
+            fuerza = 10 * rangoexp * hierbaexp;
+            }
+            nombre.text = "flanerio";
+
+        }
+        if (bicho == "flyera")
+        {
+            if(rango <= 2)
+            {
+            hpmax = 100  * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 ;
+            fuerza = 20  * hierbaexp;
+            }
+            else if(rango > 2)
+            {
+            hpmax = 100 * rangoexp * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 * rangoexp;
+            fuerza = 20 * rangoexp * hierbaexp;
+            }
+            nombre.text = "flyera";
+
+        }
+        if (bicho == "gunman")
+        {
+            if(rango <= 2)
+            {
+            hpmax = 100 * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 ;
+            fuerza = 10  * hierbaexp;
+            }
+            else if(rango > 2)
+            {
+            hpmax = 100 * rangoexp * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 * rangoexp;
+            fuerza = 10 * rangoexp * hierbaexp;
+            }
+            nombre.text = "gunman";
+
+        }
+        //3
+        if (bicho == "craneovil")
+        {
+            if(rango <= 2)
+            {
+            hpmax = 110 * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0;
+            fuerza = 10 * hierbaexp;
+            }
+            else if(rango > 2)
+            {
+            hpmax = 110 * rangoexp * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 * rangoexp;
+            fuerza = 10 * rangoexp * hierbaexp;
+            }
+            nombre.text = "craneovil";
+        }
+        if (bicho == "darkknight")
+        {
+            if(rango <= 2)
+            {
+            hpmax = 100 * hierbaexp;
+            ataquetemp = 2;
+            defensa = 0 ;
+            fuerza = 10 * hierbaexp;
+            }
+            else if(rango > 2)
+            {
+            hpmax = 100 * rangoexp * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 * rangoexp;
+            fuerza = 10 * rangoexp * hierbaexp;
+            }
+            nombre.text = "dark knight";
+
+        }
+        if (bicho == "lizardo")
+        {
+            if(rango <= 2)
+            {
+            hpmax = 100  * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 ;
+            fuerza = 20  * hierbaexp;
+            }
+            else if(rango > 2)
+            {
+            hpmax = 100 * rangoexp * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 * rangoexp;
+            fuerza = 20 * rangoexp * hierbaexp;
+            }
+            nombre.text = "lizardo";
+
+        }
+        if (bicho == "trepillo")
+        {
+            if(rango <= 2)
+            {
+            hpmax = 100 * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 ;
+            fuerza = 10  * hierbaexp;
+            }
+            else if(rango > 2)
+            {
+            hpmax = 100 * rangoexp * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 * rangoexp;
+            fuerza = 10 * rangoexp * hierbaexp;
+            }
+            nombre.text = "trepillo";
+
+        }
+        //4
+        if (bicho == "beestosa")
+        {
+            if(rango <= 2)
+            {
+            hpmax = 110 * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0;
+            fuerza = 10 * hierbaexp;
+            }
+            else if(rango > 2)
+            {
+            hpmax = 110 * rangoexp * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 * rangoexp;
+            fuerza = 10 * rangoexp * hierbaexp;
+            }
+            nombre.text = "beestosa";
+        }
+        if (bicho == "fenix")
+        {
+            if(rango <= 2)
+            {
+            hpmax = 100 * hierbaexp;
+            ataquetemp = 2;
+            defensa = 0 ;
+            fuerza = 10 * hierbaexp;
+            }
+            else if(rango > 2)
+            {
+            hpmax = 100 * rangoexp * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 * rangoexp;
+            fuerza = 10 * rangoexp * hierbaexp;
+            }
+            nombre.text = "fenix bug";
+
+        }
+        if (bicho == "kraken")
+        {
+            if(rango <= 2)
+            {
+            hpmax = 100  * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 ;
+            fuerza = 20  * hierbaexp;
+            }
+            else if(rango > 2)
+            {
+            hpmax = 100 * rangoexp * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 * rangoexp;
+            fuerza = 20 * rangoexp * hierbaexp;
+            }
+            nombre.text = "kraken";
+
+        }
+        if (bicho == "pesadilla")
+        {
+            if(rango <= 2)
+            {
+            hpmax = 100 * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 ;
+            fuerza = 10  * hierbaexp;
+            }
+            else if(rango > 2)
+            {
+            hpmax = 100 * rangoexp * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 * rangoexp;
+            fuerza = 10 * rangoexp * hierbaexp;
+            }
+            nombre.text = "pesadilla";
+
+        }
+        //5
+        if (bicho == "bigfat")
+        {
+            if(rango <= 2)
+            {
+            hpmax = 110 * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0;
+            fuerza = 10 * hierbaexp;
+            }
+            else if(rango > 2)
+            {
+            hpmax = 110 * rangoexp * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 * rangoexp;
+            fuerza = 10 * rangoexp * hierbaexp;
+            }
+            nombre.text = "bigfat";
+        }
+        if (bicho == "kingdragon")
+        {
+            if(rango <= 2)
+            {
+            hpmax = 100 * hierbaexp;
+            ataquetemp = 2;
+            defensa = 0 ;
+            fuerza = 10 * hierbaexp;
+            }
+            else if(rango > 2)
+            {
+            hpmax = 100 * rangoexp * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 * rangoexp;
+            fuerza = 10 * rangoexp * hierbaexp;
+            }
+            nombre.text = "king dragon";
+
+        }
+        if (bicho == "mirror")
+        {
+            if(rango <= 2)
+            {
+            hpmax = 100  * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 ;
+            fuerza = 20  * hierbaexp;
+            }
+            else if(rango > 2)
+            {
+            hpmax = 100 * rangoexp * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 * rangoexp;
+            fuerza = 20 * rangoexp * hierbaexp;
+            }
+            nombre.text = "mirror-mirror";
+
+        }
+        if (bicho == "cyberpinguino")
+        {
+            if(rango <= 2)
+            {
+            hpmax = 100 * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 ;
+            fuerza = 10  * hierbaexp;
+            }
+            else if(rango > 2)
+            {
+            hpmax = 100 * rangoexp * hierbaexp;
+            ataquetemp = 3;
+            defensa = 0 * rangoexp;
+            fuerza = 10 * rangoexp * hierbaexp;
+            }
+            nombre.text = "cyberpinguino";
+
+        }
         hp = hpmax;
         mostrar();
     }
@@ -325,158 +1010,158 @@ public class shitene : MonoBehaviour
             topo.SetActive(true);
         }
          //2
-        if(bicho == "madcat")
+        if(bicho == "aghostin")
         {
-            madcat.SetActive(true);
+            ghost.SetActive(true);
         }
-        if(bicho == "skybird")
+        if(bicho == "algosaurio")
         {
-            skybird.SetActive(true);
+            algosaurio.SetActive(true);
         }
-        if(bicho == "shitfloor")
+        if(bicho == "bigfat")
         {
-            shitfloor.SetActive(true);
+            bigfat.SetActive(true);
         }
-        if(bicho == "topo")
+        if(bicho == "cazafantasmas")
         {
-            topo.SetActive(true);
+            cazafantasmas.SetActive(true);
         }
         //3
-        if(bicho == "madcat")
+        if(bicho == "darkknight")
         {
-            madcat.SetActive(true);
+            darkknight.SetActive(true);
         }
-        if(bicho == "skybird")
+        if(bicho == "antidog")
         {
-            skybird.SetActive(true);
+            antidog.SetActive(true);
         }
-        if(bicho == "shitfloor")
+        if(bicho == "cyberpinguino")
         {
-            shitfloor.SetActive(true);
+            pinguino.SetActive(true);
         }
-        if(bicho == "topo")
+        if(bicho == "craneovil")
         {
-            topo.SetActive(true);
+            craneovil.SetActive(true);
         }
         //4
-        if(bicho == "madcat")
+        if(bicho == "dogtable")
         {
-            madcat.SetActive(true);
+            dogtable.SetActive(true);
         }
-        if(bicho == "skybird")
+        if(bicho == "beestosa")
         {
-            skybird.SetActive(true);
+            bee.SetActive(true);
         }
-        if(bicho == "shitfloor")
+        if(bicho == "elephant")
         {
-            shitfloor.SetActive(true);
+            elephant.SetActive(true);
         }
-        if(bicho == "topo")
+        if(bicho == "flyera")
         {
-            topo.SetActive(true);
+            flyera.SetActive(true);
         }
         //5
-        if(bicho == "madcat")
+        if(bicho == "friend")
         {
-            madcat.SetActive(true);
+            friend.SetActive(true);
         }
-        if(bicho == "skybird")
+        if(bicho == "gunman")
         {
-            skybird.SetActive(true);
+            gunman.SetActive(true);
         }
-        if(bicho == "shitfloor")
+        if(bicho == "flanerio")
         {
-            shitfloor.SetActive(true);
+            flanerio.SetActive(true);
         }
-        if(bicho == "topo")
+        if(bicho == "fenix")
         {
-            topo.SetActive(true);
+            fenix.SetActive(true);
         }
 
         //1
-        if(bicho == "madcat")
+        if(bicho == "kingdragon")
         {
-            madcat.SetActive(true);
+            kingdragon.SetActive(true);
         }
-        if(bicho == "skybird")
+        if(bicho == "heavydevil")
         {
-            skybird.SetActive(true);
+            heavydevil.SetActive(true);
         }
-        if(bicho == "shitfloor")
+        if(bicho == "kraken")
         {
-            shitfloor.SetActive(true);
+            kraken.SetActive(true);
         }
-        if(bicho == "topo")
+        if(bicho == "lizardo")
         {
-            topo.SetActive(true);
+            lizardo.SetActive(true);
         }
          //2
-        if(bicho == "madcat")
+        if(bicho == "livedish")
         {
-            madcat.SetActive(true);
+            livedish.SetActive(true);
         }
-        if(bicho == "skybird")
+        if(bicho == "pesadilla")
         {
-            skybird.SetActive(true);
+            pesadilla.SetActive(true);
         }
-        if(bicho == "shitfloor")
+        if(bicho == "mirror")
         {
-            shitfloor.SetActive(true);
+            mirror.SetActive(true);
         }
-        if(bicho == "topo")
+        if(bicho == "rabmon")
         {
-            topo.SetActive(true);
+            rabmon.SetActive(true);
         }
         //3
-        if(bicho == "madcat")
+        if(bicho == "ant")
         {
-            madcat.SetActive(true);
+            ant.SetActive(true);
         }
-        if(bicho == "skybird")
+        if(bicho == "kingslug")
         {
-            skybird.SetActive(true);
+            kingslug.SetActive(true);
         }
-        if(bicho == "shitfloor")
+        if(bicho == "rosedragon")
         {
-            shitfloor.SetActive(true);
+            rosedragon.SetActive(true);
         }
-        if(bicho == "topo")
+        if(bicho == "sharkman")
         {
-            topo.SetActive(true);
+            sharkman.SetActive(true);
         }
         //4
-        if(bicho == "madcat")
+        if(bicho == "pollovion")
         {
-            madcat.SetActive(true);
+            pollovion.SetActive(true);
         }
-        if(bicho == "skybird")
+        if(bicho == "trepillo")
         {
-            skybird.SetActive(true);
+            trepillo.SetActive(true);
         }
-        if(bicho == "shitfloor")
+        if(bicho == "roboerto")
         {
-            shitfloor.SetActive(true);
+            roboerto.SetActive(true);
         }
-        if(bicho == "topo")
+        if(bicho == "tufo")
         {
-            topo.SetActive(true);
+            tufo.SetActive(true);
         }
         //5
-        if(bicho == "madcat")
+        if(bicho == "trashrat")
         {
-            madcat.SetActive(true);
+            trashrat.SetActive(true);
         }
-        if(bicho == "skybird")
+        if(bicho == "spider")
         {
-            skybird.SetActive(true);
+            spider.SetActive(true);
         }
-        if(bicho == "shitfloor")
+        if(bicho == "vivodado")
         {
-            shitfloor.SetActive(true);
+            vivodado.SetActive(true);
         }
-        if(bicho == "topo")
+        if(bicho == "dragonron")
         {
-            topo.SetActive(true);
+            dragonron.SetActive(true);
         }
     }   
     

@@ -246,15 +246,60 @@ public class findecombat : MonoBehaviour
     public GameObject topo;
     public GameObject skybird;
 
-    public GameObject madcat2;
-    public GameObject shitfloor2;
-    public GameObject topo2;
-    public GameObject skybird2;
+    public GameObject ghost;
+    public GameObject algosaurio;
+    public GameObject bigfat;
+    public GameObject cazafantasmas;
 
-    public GameObject madcat3;
-    public GameObject shitfloor3;
-    public GameObject topo3;
-    public GameObject skybird3;
+    public GameObject darkknight;
+    public GameObject antidog;
+    public GameObject pinguino;
+    public GameObject craneovil;
+
+    public GameObject dogtable;
+    public GameObject bee;
+    public GameObject elephant;
+    public GameObject flyera;
+
+    public GameObject friend;
+    public GameObject gunman;
+    public GameObject flanerio;
+    public GameObject fenix;
+
+
+
+
+
+    public GameObject kingdragon;
+    public GameObject heavydevil;
+    public GameObject kraken;
+    public GameObject lizardo;
+
+    public GameObject livedish;
+    public GameObject pesadilla;
+    public GameObject mirror;
+    public GameObject rabmon;
+
+    public GameObject ant;
+    public GameObject kingslug;
+    public GameObject rosedragon;
+    public GameObject sharkman;
+
+    public GameObject pollovion;
+    public GameObject trepillo;
+    public GameObject roboerto;
+    public GameObject tufo;
+
+    public GameObject trashrat;
+    public GameObject spider;
+    public GameObject vivodado;
+    public GameObject dragonron;
+
+    public AudioSource fueson;
+    public AudioSource rapson;
+    public AudioSource fulson;
+    public AudioSource defson;
+    public AudioSource turboson;
 
     public GameObject cont;
 
@@ -1293,61 +1338,194 @@ public class findecombat : MonoBehaviour
             bichom = skybird;
         }
 
-
-
-
-
-
-        if(inv.bichosmios[o] == "happycat")
+        if(inv.bichosmios[o] == "aghostin")
         {
             bichom.SetActive(false);
-            bichom = madcat2;
+            bichom = ghost;
         }
-    
-        if(inv.bichosmios[o] == "shitplus")
+        if(inv.bichosmios[o] == "algosaurio")
         {
             bichom.SetActive(false);
-            bichom = shitfloor2;
-            
+            bichom = algosaurio;
         }
-        
-        if(inv.bichosmios[o] == "toto topo")
+        if(inv.bichosmios[o] == "bigfat")
         {
             bichom.SetActive(false);
-            bichom = topo2;
+            bichom = bigfat;
         }
-        
-        if(inv.bichosmios[o] == "sunbird")
+        if(inv.bichosmios[o] == "cazafantasmas")
         {
             bichom.SetActive(false);
-            bichom = skybird2;
+            bichom = cazafantasmas;
+        }
+        //3
+        if(inv.bichosmios[o] == "darkknight")
+        {
+            bichom.SetActive(false);
+            bichom = darkknight;
+        }
+        if(inv.bichosmios[o] == "antidog")
+        {
+            bichom.SetActive(false);
+            bichom = skybird;
+        }
+        if(inv.bichosmios[o] == "cyberpinguino")
+        {
+            bichom.SetActive(false);
+            bichom = pinguino;
+        }
+        if(inv.bichosmios[o] == "craneovil")
+        {
+            bichom.SetActive(false);
+            bichom = craneovil;
+        }
+        //4
+        if(inv.bichosmios[o] == "dogtable")
+        {
+            bichom.SetActive(false);
+            bichom = dogtable;
+        }
+        if(inv.bichosmios[o] == "beestosa")
+        {
+            bichom.SetActive(false);
+            bichom = bee;
+        }
+        if(inv.bichosmios[o] == "elephant")
+        {
+            bichom.SetActive(false);
+            bichom = elephant;
+        }
+        if(inv.bichosmios[o] == "flyera")
+        {
+            bichom.SetActive(false);
+            bichom = flyera;
+        }
+        //5
+        if(inv.bichosmios[o] == "friend")
+        {
+            bichom.SetActive(false);
+            bichom = friend;
+        }
+        if(inv.bichosmios[o] == "gunman")
+        {
+            bichom.SetActive(false);
+            bichom = gunman;
+        }
+        if(inv.bichosmios[o] == "flanerio")
+        {
+            bichom.SetActive(false);
+            bichom = flanerio;
+        }
+        if(inv.bichosmios[o] == "fenix")
+        {
+            bichom.SetActive(false);
+            bichom = fenix;
         }
 
-
-
-        if(inv.bichosmios[o] == "crazycat")
+        //1
+        if(inv.bichosmios[o] == "kingdragon")
         {
             bichom.SetActive(false);
-            bichom = madcat3;
+            bichom = kingdragon;
         }
-    
-        if(inv.bichosmios[o] == "shitplusplus")
+        if(inv.bichosmios[o] == "heavydevil")
         {
             bichom.SetActive(false);
-            bichom = shitfloor3;
-            
+            bichom = heavydevil;
         }
-        
-        if(inv.bichosmios[o] == "poro topo")
+        if(inv.bichosmios[o] == "kraken")
         {
             bichom.SetActive(false);
-            bichom = topo3;
+            bichom = kraken;
         }
-        
-        if(inv.bichosmios[o] == "moonbird")
+        if(inv.bichosmios[o] == "lizardo")
         {
             bichom.SetActive(false);
-            bichom = skybird3;
+            bichom = lizardo;
+        }
+         //2
+        if(inv.bichosmios[o] == "livedish")
+        {
+            bichom.SetActive(false);
+            bichom = livedish;
+        }
+        if(inv.bichosmios[o] == "pesadilla")
+        {
+            bichom.SetActive(false);
+            bichom = pesadilla;
+        }
+        if(inv.bichosmios[o] == "mirror")
+        {
+            bichom.SetActive(false);
+            bichom = mirror;
+        }
+        if(inv.bichosmios[o] == "rabmon")
+        {
+            bichom.SetActive(false);
+            bichom = rabmon;
+        }
+        //3
+        if(inv.bichosmios[o] == "ant")
+        {
+            bichom.SetActive(false);
+            bichom = ant;
+        }
+        if(inv.bichosmios[o] == "kingslug")
+        {
+            bichom.SetActive(false);
+            bichom = kingdragon;
+        }
+        if(inv.bichosmios[o] == "rosedragon")
+        {
+            bichom.SetActive(false);
+            bichom = rosedragon;
+        }
+        if(inv.bichosmios[o] == "sharkman")
+        {
+            bichom.SetActive(false);
+            bichom = sharkman;
+        }
+        //4
+        if(inv.bichosmios[o] == "pollovion")
+        {
+            bichom.SetActive(false);
+            bichom = pollovion;
+        }
+        if(inv.bichosmios[o] == "trepillo")
+        {
+            bichom.SetActive(false);
+            bichom = trepillo;
+        }
+        if(inv.bichosmios[o] == "roboerto")
+        {
+            bichom.SetActive(false);
+            bichom = roboerto;
+        }
+        if(inv.bichosmios[o] == "tufo")
+        {
+            bichom.SetActive(false);
+            bichom = tufo;
+        }
+        //5
+        if(inv.bichosmios[o] == "trashrat")
+        {
+            bichom.SetActive(false);
+            bichom = trashrat;
+        }
+        if(inv.bichosmios[o] == "spider")
+        {
+            bichom.SetActive(false);
+            bichom = spider;
+        }
+        if(inv.bichosmios[o] == "vivodado")
+        {
+            bichom.SetActive(false);
+            bichom = vivodado;
+        }
+        if(inv.bichosmios[o] == "dragonron")
+        {
+            bichom.SetActive(false);
+            bichom = dragonron;
         }
         bichom.SetActive(true);
     }

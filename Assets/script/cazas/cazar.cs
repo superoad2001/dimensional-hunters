@@ -230,9 +230,9 @@ public class cazar : MonoBehaviour
             PlayerPrefs.SetString("bichocaza", "elephant");
             SceneManager.LoadScene("combatecaza");
         }
-        if (col.gameObject.tag == "rabman")
+        if (col.gameObject.tag == "rabmon")
         {
-            PlayerPrefs.SetString("bichocaza", "rabman");
+            PlayerPrefs.SetString("bichocaza", "rabmon");
             SceneManager.LoadScene("combatecaza");
         }
         if (col.gameObject.tag == "bigfat")

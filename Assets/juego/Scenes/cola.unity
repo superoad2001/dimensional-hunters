@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -9889,10 +9889,82 @@ MonoBehaviour:
   shitanim1: {fileID: 9100000, guid: 4ef9276fc02496f48abc36820f1a384e, type: 2}
   topoanim1: {fileID: 9100000, guid: 36ff1ad8c8a4a9d4b94dfe68a46b73b2, type: 2}
   skybirdanim1: {fileID: 9100000, guid: 382364478eb1afc4697448581e1288a4, type: 2}
+  ghostanim: {fileID: 0}
+  algosaurioanim: {fileID: 0}
+  bigfatanim: {fileID: 0}
+  cazafantasmasanim: {fileID: 0}
+  darkknightanim: {fileID: 0}
+  antidoganim: {fileID: 0}
+  pinguinoanim: {fileID: 0}
+  craneovilanim: {fileID: 0}
+  dogtableanim: {fileID: 0}
+  beeanim: {fileID: 0}
+  elephantanim: {fileID: 0}
+  flyeraanim: {fileID: 0}
+  friendanim: {fileID: 0}
+  gunmananim: {fileID: 0}
+  flanerioanim: {fileID: 0}
+  fenixanim: {fileID: 0}
+  kingdragonanim: {fileID: 0}
+  heavydevilanim: {fileID: 0}
+  krakenanim: {fileID: 0}
+  lizardoanim: {fileID: 0}
+  livedishanim: {fileID: 0}
+  pesadillaanim: {fileID: 0}
+  mirroranim: {fileID: 0}
+  rabmonanim: {fileID: 0}
+  antanim: {fileID: 0}
+  kingsluganim: {fileID: 0}
+  rosedragonanim: {fileID: 0}
+  sharkmananim: {fileID: 0}
+  pollovionanim: {fileID: 0}
+  trepilloanim: {fileID: 0}
+  roboertoanim: {fileID: 0}
+  tufoanim: {fileID: 0}
+  trashratanim: {fileID: 0}
+  spideranim: {fileID: 0}
+  vivodadoanim: {fileID: 0}
+  dragonronanim: {fileID: 0}
   madcat1: {fileID: 1380677254}
   shitfloor: {fileID: 1850217323}
   topo: {fileID: 758205105}
   skybird: {fileID: 560847371}
+  ghost: {fileID: 109965226}
+  algosaurio: {fileID: 490284597}
+  bigfat: {fileID: 940106976}
+  cazafantasmas: {fileID: 838648033}
+  darkknight: {fileID: 843398475}
+  antidog: {fileID: 1750710719}
+  pinguino: {fileID: 524474339}
+  craneovil: {fileID: 913750433}
+  dogtable: {fileID: 541019954}
+  bee: {fileID: 2049026487}
+  elephant: {fileID: 334974295}
+  flyera: {fileID: 787944727}
+  friend: {fileID: 11226606}
+  gunman: {fileID: 1655792073}
+  flanerio: {fileID: 1237221488}
+  fenix: {fileID: 170167000}
+  kingdragon: {fileID: 762961975}
+  heavydevil: {fileID: 1027792084}
+  kraken: {fileID: 113812016}
+  lizardo: {fileID: 26529227}
+  livedish: {fileID: 1542027345}
+  pesadilla: {fileID: 1808408428}
+  mirror: {fileID: 1723612387}
+  rabmon: {fileID: 1047300452}
+  ant: {fileID: 1117667767}
+  kingslug: {fileID: 1364952090}
+  rosedragon: {fileID: 551492342}
+  sharkman: {fileID: 1014505164}
+  pollovion: {fileID: 1692332305}
+  trepillo: {fileID: 403517210}
+  roboerto: {fileID: 1665130651}
+  tufo: {fileID: 1548780997}
+  trashrat: {fileID: 1043874550}
+  spider: {fileID: 144599790}
+  vivodado: {fileID: 86462192}
+  dragonron: {fileID: 987437628}
   managermulti: {fileID: 849706753}
   rangoexp: 0
   hnamer:
@@ -12847,10 +12919,82 @@ MonoBehaviour:
   shitanim1: {fileID: 9100000, guid: 4ef9276fc02496f48abc36820f1a384e, type: 2}
   topoanim1: {fileID: 9100000, guid: 36ff1ad8c8a4a9d4b94dfe68a46b73b2, type: 2}
   skybirdanim1: {fileID: 9100000, guid: 382364478eb1afc4697448581e1288a4, type: 2}
+  ghostanim: {fileID: 0}
+  algosaurioanim: {fileID: 0}
+  bigfatanim: {fileID: 0}
+  cazafantasmasanim: {fileID: 0}
+  darkknightanim: {fileID: 0}
+  antidoganim: {fileID: 0}
+  pinguinoanim: {fileID: 0}
+  craneovilanim: {fileID: 0}
+  dogtableanim: {fileID: 0}
+  beeanim: {fileID: 0}
+  elephantanim: {fileID: 0}
+  flyeraanim: {fileID: 0}
+  friendanim: {fileID: 0}
+  gunmananim: {fileID: 0}
+  flanerioanim: {fileID: 0}
+  fenixanim: {fileID: 0}
+  kingdragonanim: {fileID: 0}
+  heavydevilanim: {fileID: 0}
+  krakenanim: {fileID: 0}
+  lizardoanim: {fileID: 0}
+  livedishanim: {fileID: 0}
+  pesadillaanim: {fileID: 0}
+  mirroranim: {fileID: 0}
+  rabmonanim: {fileID: 0}
+  antanim: {fileID: 0}
+  kingsluganim: {fileID: 0}
+  rosedragonanim: {fileID: 0}
+  sharkmananim: {fileID: 0}
+  pollovionanim: {fileID: 0}
+  trepilloanim: {fileID: 0}
+  roboertoanim: {fileID: 0}
+  tufoanim: {fileID: 0}
+  trashratanim: {fileID: 0}
+  spideranim: {fileID: 0}
+  vivodadoanim: {fileID: 0}
+  dragonronanim: {fileID: 0}
   madcat1: {fileID: 700330697}
   shitfloor: {fileID: 919132147726414088}
   topo: {fileID: 919132148009872046}
   skybird: {fileID: 1342252704}
+  ghost: {fileID: 1608329652}
+  algosaurio: {fileID: 615850040}
+  bigfat: {fileID: 75987089}
+  cazafantasmas: {fileID: 825920314}
+  darkknight: {fileID: 1684270622}
+  antidog: {fileID: 771867253}
+  pinguino: {fileID: 161973759}
+  craneovil: {fileID: 1642499407}
+  dogtable: {fileID: 1638232496}
+  bee: {fileID: 1996107647}
+  elephant: {fileID: 1761621299}
+  flyera: {fileID: 1616647142}
+  friend: {fileID: 1921820806}
+  gunman: {fileID: 326210192}
+  flanerio: {fileID: 1852634915}
+  fenix: {fileID: 1895585752}
+  kingdragon: {fileID: 809120978}
+  heavydevil: {fileID: 1663289468}
+  kraken: {fileID: 2030886986}
+  lizardo: {fileID: 790487924}
+  livedish: {fileID: 1058904822}
+  pesadilla: {fileID: 316738195}
+  mirror: {fileID: 785318170}
+  rabmon: {fileID: 295712269}
+  ant: {fileID: 1498317804}
+  kingslug: {fileID: 997256286}
+  rosedragon: {fileID: 1216280004}
+  sharkman: {fileID: 1818527810}
+  pollovion: {fileID: 1014744318}
+  trepillo: {fileID: 1133907326}
+  roboerto: {fileID: 1716018898}
+  tufo: {fileID: 556674089}
+  trashrat: {fileID: 567008035}
+  spider: {fileID: 1754905683}
+  vivodado: {fileID: 140115719}
+  dragonron: {fileID: 34623163}
   managermulti: {fileID: 849706753}
   carga: 0
 --- !u!114 &1172881534

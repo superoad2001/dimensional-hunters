@@ -113,15 +113,54 @@ public class combatemenumulti : MonoBehaviour
     public GameObject topo;
     public GameObject skybird;
 
-    public GameObject madcat2;
-    public GameObject shitfloor2;
-    public GameObject topo2;
-    public GameObject skybird2;
+    public GameObject ghost;
+    public GameObject algosaurio;
+    public GameObject bigfat;
+    public GameObject cazafantasmas;
 
-    public GameObject madcat3;
-    public GameObject shitfloor3;
-    public GameObject topo3;
-    public GameObject skybird3;
+    public GameObject darkknight;
+    public GameObject antidog;
+    public GameObject pinguino;
+    public GameObject craneovil;
+
+    public GameObject dogtable;
+    public GameObject bee;
+    public GameObject elephant;
+    public GameObject flyera;
+
+    public GameObject friend;
+    public GameObject gunman;
+    public GameObject flanerio;
+    public GameObject fenix;
+
+
+
+
+
+    public GameObject kingdragon;
+    public GameObject heavydevil;
+    public GameObject kraken;
+    public GameObject lizardo;
+
+    public GameObject livedish;
+    public GameObject pesadilla;
+    public GameObject mirror;
+    public GameObject rabmon;
+
+    public GameObject ant;
+    public GameObject kingslug;
+    public GameObject rosedragon;
+    public GameObject sharkman;
+
+    public GameObject pollovion;
+    public GameObject trepillo;
+    public GameObject roboerto;
+    public GameObject tufo;
+
+    public GameObject trashrat;
+    public GameObject spider;
+    public GameObject vivodado;
+    public GameObject dragonron;
 
     public Text tornetext;
     public int tutorial2;
@@ -817,6 +856,195 @@ public class combatemenumulti : MonoBehaviour
         {
             bichom.SetActive(false);
             bichom = skybird;
+        }
+        if(bichos[i] == "aghostin")
+        {
+            bichom.SetActive(false);
+            bichom = ghost;
+        }
+        if(bichos[i] == "algosaurio")
+        {
+            bichom.SetActive(false);
+            bichom = algosaurio;
+        }
+        if(bichos[i] == "bigfat")
+        {
+            bichom.SetActive(false);
+            bichom = bigfat;
+        }
+        if(bichos[i] == "cazafantasmas")
+        {
+            bichom.SetActive(false);
+            bichom = cazafantasmas;
+        }
+        //3
+        if(bichos[i] == "darkknight")
+        {
+            bichom.SetActive(false);
+            bichom = darkknight;
+        }
+        if(bichos[i] == "antidog")
+        {
+            bichom.SetActive(false);
+            bichom = skybird;
+        }
+        if(bichos[i] == "cyberpinguino")
+        {
+            bichom.SetActive(false);
+            bichom = pinguino;
+        }
+        if(bichos[i] == "craneovil")
+        {
+            bichom.SetActive(false);
+            bichom = craneovil;
+        }
+        //4
+        if(bichos[i] == "dogtable")
+        {
+            bichom.SetActive(false);
+            bichom = dogtable;
+        }
+        if(bichos[i] == "beestosa")
+        {
+            bichom.SetActive(false);
+            bichom = bee;
+        }
+        if(bichos[i] == "elephant")
+        {
+            bichom.SetActive(false);
+            bichom = elephant;
+        }
+        if(bichos[i] == "flyera")
+        {
+            bichom.SetActive(false);
+            bichom = flyera;
+        }
+        //5
+        if(bichos[i] == "friend")
+        {
+            bichom.SetActive(false);
+            bichom = friend;
+        }
+        if(bichos[i] == "gunman")
+        {
+            bichom.SetActive(false);
+            bichom = gunman;
+        }
+        if(bichos[i] == "flanerio")
+        {
+            bichom.SetActive(false);
+            bichom = flanerio;
+        }
+        if(bichos[i] == "fenix")
+        {
+            bichom.SetActive(false);
+            bichom = fenix;
+        }
+
+        //1
+        if(bichos[i] == "kingdragon")
+        {
+            bichom.SetActive(false);
+            bichom = kingdragon;
+        }
+        if(bichos[i] == "heavydevil")
+        {
+            bichom.SetActive(false);
+            bichom = heavydevil;
+        }
+        if(bichos[i] == "kraken")
+        {
+            bichom.SetActive(false);
+            bichom = kraken;
+        }
+        if(bichos[i] == "lizardo")
+        {
+            bichom.SetActive(false);
+            bichom = lizardo;
+        }
+         //2
+        if(bichos[i] == "livedish")
+        {
+            bichom.SetActive(false);
+            bichom = livedish;
+        }
+        if(bichos[i] == "pesadilla")
+        {
+            bichom.SetActive(false);
+            bichom = pesadilla;
+        }
+        if(bichos[i] == "mirror")
+        {
+            bichom.SetActive(false);
+            bichom = mirror;
+        }
+        if(bichos[i] == "rabmon")
+        {
+            bichom.SetActive(false);
+            bichom = rabmon;
+        }
+        //3
+        if(bichos[i] == "ant")
+        {
+            bichom.SetActive(false);
+            bichom = ant;
+        }
+        if(bichos[i] == "kingslug")
+        {
+            bichom.SetActive(false);
+            bichom = kingdragon;
+        }
+        if(bichos[i] == "rosedragon")
+        {
+            bichom.SetActive(false);
+            bichom = rosedragon;
+        }
+        if(bichos[i] == "sharkman")
+        {
+            bichom.SetActive(false);
+            bichom = sharkman;
+        }
+        //4
+        if(bichos[i] == "pollovion")
+        {
+            bichom.SetActive(false);
+            bichom = pollovion;
+        }
+        if(bichos[i] == "trepillo")
+        {
+            bichom.SetActive(false);
+            bichom = trepillo;
+        }
+        if(bichos[i] == "roboerto")
+        {
+            bichom.SetActive(false);
+            bichom = roboerto;
+        }
+        if(bichos[i] == "tufo")
+        {
+            bichom.SetActive(false);
+            bichom = tufo;
+        }
+        //5
+        if(bichos[i] == "trashrat")
+        {
+            bichom.SetActive(false);
+            bichom = trashrat;
+        }
+        if(bichos[i] == "spider")
+        {
+            bichom.SetActive(false);
+            bichom = spider;
+        }
+        if(bichos[i] == "vivodado")
+        {
+            bichom.SetActive(false);
+            bichom = vivodado;
+        }
+        if(bichos[i] == "dragonron")
+        {
+            bichom.SetActive(false);
+            bichom = dragonron;
         }
 
         bichom.SetActive(true);

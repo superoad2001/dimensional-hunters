@@ -307,6 +307,7 @@ public class disparoshitfloor : MonoBehaviour
             comienzo = false;
             vez1 = true;
             temp4 = 0;
+            //1
             if(bicho == "madcat")
             {
             PlayerPrefs.SetFloat("hpr", (int)Random.Range(100f,140)*rangoexp * hierbaexp);
@@ -369,6 +370,592 @@ public class disparoshitfloor : MonoBehaviour
             if(hierbatipo == 3){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,4));}
             PlayerPrefs.SetFloat("claser",hierbatipo);
             PlayerPrefs.SetString("razar", "topo topo");
+            PlayerPrefs.SetFloat("rangor", rango);
+            }
+            //2
+            if(bicho == "dragonron")
+            {
+            PlayerPrefs.SetFloat("hpr", (int)Random.Range(100f,140)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manar", (int)Random.Range(80f,90)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manarecr", Random.Range(0.7f,0.7f)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("fuerzar", Random.Range(0.3f,0.5f)*rangoexp * hierbaexp);
+            if(hierbatipo == 1){PlayerPrefs.SetString("tipor", "comun rango :"+rango);}
+            if(hierbatipo == 2){PlayerPrefs.SetString("tipor", "plateado rango :"+rango);}
+            if(hierbatipo == 3){PlayerPrefs.SetString("tipor", "dorado rango :"+rango);}
+            if(hierbatipo == 1){PlayerPrefs.SetFloat("nivelr", 1);}
+            if(hierbatipo == 2){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,3));}
+            if(hierbatipo == 3){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,4));}
+            PlayerPrefs.SetFloat("claser",hierbatipo);
+            PlayerPrefs.SetString("razar", "dragonron");
+            PlayerPrefs.SetFloat("rangor", rango);
+            }
+            if(bicho == "elephant")
+            {
+            PlayerPrefs.SetFloat("hpr", (int)Random.Range(90f,95f)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manar", (int)Random.Range(110f,130f)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manarecr", Random.Range(0.9f,1f)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("fuerzar", Random.Range(0.3f,0.5f)*rangoexp * hierbaexp);
+            if(hierbatipo == 1){PlayerPrefs.SetString("tipor", "comun rango :"+rango);}
+            if(hierbatipo == 2){PlayerPrefs.SetString("tipor", "plateado rango :"+rango);}
+            if(hierbatipo == 3){PlayerPrefs.SetString("tipor", "dorado rango :"+rango);}
+            if(hierbatipo == 1){PlayerPrefs.SetFloat("nivelr", 1);}
+            if(hierbatipo == 2){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,3));}
+            if(hierbatipo == 3){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,4));}
+            PlayerPrefs.SetFloat("claser",hierbatipo);
+            PlayerPrefs.SetString("razar", "eleph-ant");
+            PlayerPrefs.SetFloat("rangor", rango);
+            }
+            if(bicho == "roboerto")
+            {
+            PlayerPrefs.SetFloat("hpr", (int)Random.Range(150f,160)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manar", (int)Random.Range(200f,210)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manarecr", Random.Range(0.2f,0.4f)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("fuerzar", Random.Range(0.2f,0.35f)*rangoexp * hierbaexp);
+            if(hierbatipo == 1){PlayerPrefs.SetString("tipor", "comun rango :"+rango);}
+            if(hierbatipo == 2){PlayerPrefs.SetString("tipor", "plateado rango :"+rango);}
+            if(hierbatipo == 3){PlayerPrefs.SetString("tipor", "dorado rango :"+rango);}
+            if(hierbatipo == 1){PlayerPrefs.SetFloat("nivelr", 1);}
+            if(hierbatipo == 2){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,3));}
+            if(hierbatipo == 3){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,4));}
+            PlayerPrefs.SetFloat("claser",hierbatipo);
+            PlayerPrefs.SetString("razar", "roboerto");
+            PlayerPrefs.SetFloat("rangor", rango);
+            }
+            if(bicho == "tufo")
+            {
+            PlayerPrefs.SetFloat("hpr", (int)Random.Range(70f,80)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manar", (int)Random.Range(50f,60)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manarecr", Random.Range(0.1f,0.3f)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("fuerzar", Random.Range(1f,1.1f)*rangoexp * hierbaexp);
+            if(hierbatipo == 1){PlayerPrefs.SetString("tipor", "comun rango :"+rango);}
+            if(hierbatipo == 2){PlayerPrefs.SetString("tipor", "plateado rango :"+rango);}
+            if(hierbatipo == 3){PlayerPrefs.SetString("tipor", "dorado rango :"+rango);}
+            if(hierbatipo == 1){PlayerPrefs.SetFloat("nivelr", 1);}
+            if(hierbatipo == 2){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,3));}
+            if(hierbatipo == 3){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,4));}
+            PlayerPrefs.SetFloat("claser",hierbatipo);
+            PlayerPrefs.SetString("razar", "tufo");
+            PlayerPrefs.SetFloat("rangor", rango);
+            }
+            //3
+            if(bicho == "antidog")
+            {
+            PlayerPrefs.SetFloat("hpr", (int)Random.Range(100f,140)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manar", (int)Random.Range(80f,90)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manarecr", Random.Range(0.7f,0.7f)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("fuerzar", Random.Range(0.3f,0.5f)*rangoexp * hierbaexp);
+            if(hierbatipo == 1){PlayerPrefs.SetString("tipor", "comun rango :"+rango);}
+            if(hierbatipo == 2){PlayerPrefs.SetString("tipor", "plateado rango :"+rango);}
+            if(hierbatipo == 3){PlayerPrefs.SetString("tipor", "dorado rango :"+rango);}
+            if(hierbatipo == 1){PlayerPrefs.SetFloat("nivelr", 1);}
+            if(hierbatipo == 2){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,3));}
+            if(hierbatipo == 3){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,4));}
+            PlayerPrefs.SetFloat("claser",hierbatipo);
+            PlayerPrefs.SetString("razar", "antidog");
+            PlayerPrefs.SetFloat("rangor", rango);
+            }
+            if(bicho == "cazafantasmas")
+            {
+            PlayerPrefs.SetFloat("hpr", (int)Random.Range(90f,95f)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manar", (int)Random.Range(110f,130f)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manarecr", Random.Range(0.9f,1f)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("fuerzar", Random.Range(0.3f,0.5f)*rangoexp * hierbaexp);
+            if(hierbatipo == 1){PlayerPrefs.SetString("tipor", "comun rango :"+rango);}
+            if(hierbatipo == 2){PlayerPrefs.SetString("tipor", "plateado rango :"+rango);}
+            if(hierbatipo == 3){PlayerPrefs.SetString("tipor", "dorado rango :"+rango);}
+            if(hierbatipo == 1){PlayerPrefs.SetFloat("nivelr", 1);}
+            if(hierbatipo == 2){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,3));}
+            if(hierbatipo == 3){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,4));}
+            PlayerPrefs.SetFloat("claser",hierbatipo);
+            PlayerPrefs.SetString("razar", "cazafantasmas");
+            PlayerPrefs.SetFloat("rangor", rango);
+            }
+            if(bicho == "rabmon")
+            {
+            PlayerPrefs.SetFloat("hpr", (int)Random.Range(150f,160)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manar", (int)Random.Range(200f,210)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manarecr", Random.Range(0.2f,0.4f)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("fuerzar", Random.Range(0.2f,0.35f)*rangoexp * hierbaexp);
+            if(hierbatipo == 1){PlayerPrefs.SetString("tipor", "comun rango :"+rango);}
+            if(hierbatipo == 2){PlayerPrefs.SetString("tipor", "plateado rango :"+rango);}
+            if(hierbatipo == 3){PlayerPrefs.SetString("tipor", "dorado rango :"+rango);}
+            if(hierbatipo == 1){PlayerPrefs.SetFloat("nivelr", 1);}
+            if(hierbatipo == 2){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,3));}
+            if(hierbatipo == 3){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,4));}
+            PlayerPrefs.SetFloat("claser",hierbatipo);
+            PlayerPrefs.SetString("razar", "rabmon");
+            PlayerPrefs.SetFloat("rangor", rango);
+            }
+            if(bicho == "vivodado")
+            {
+            PlayerPrefs.SetFloat("hpr", (int)Random.Range(70f,80)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manar", (int)Random.Range(50f,60)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manarecr", Random.Range(0.1f,0.3f)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("fuerzar", Random.Range(1f,1.1f)*rangoexp * hierbaexp);
+            if(hierbatipo == 1){PlayerPrefs.SetString("tipor", "comun rango :"+rango);}
+            if(hierbatipo == 2){PlayerPrefs.SetString("tipor", "plateado rango :"+rango);}
+            if(hierbatipo == 3){PlayerPrefs.SetString("tipor", "dorado rango :"+rango);}
+            if(hierbatipo == 1){PlayerPrefs.SetFloat("nivelr", 1);}
+            if(hierbatipo == 2){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,3));}
+            if(hierbatipo == 3){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,4));}
+            PlayerPrefs.SetFloat("claser",hierbatipo);
+            PlayerPrefs.SetString("razar", "vivodado");
+            PlayerPrefs.SetFloat("rangor", rango);
+            }
+            //4
+            if(bicho == "livedish")
+            {
+            PlayerPrefs.SetFloat("hpr", (int)Random.Range(100f,140)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manar", (int)Random.Range(80f,90)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manarecr", Random.Range(0.7f,0.7f)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("fuerzar", Random.Range(0.3f,0.5f)*rangoexp * hierbaexp);
+            if(hierbatipo == 1){PlayerPrefs.SetString("tipor", "comun rango :"+rango);}
+            if(hierbatipo == 2){PlayerPrefs.SetString("tipor", "plateado rango :"+rango);}
+            if(hierbatipo == 3){PlayerPrefs.SetString("tipor", "dorado rango :"+rango);}
+            if(hierbatipo == 1){PlayerPrefs.SetFloat("nivelr", 1);}
+            if(hierbatipo == 2){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,3));}
+            if(hierbatipo == 3){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,4));}
+            PlayerPrefs.SetFloat("claser",hierbatipo);
+            PlayerPrefs.SetString("razar", "livedish");
+            PlayerPrefs.SetFloat("rangor", rango);
+            }
+            if(bicho == "rosedragon")
+            {
+            PlayerPrefs.SetFloat("hpr", (int)Random.Range(90f,95f)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manar", (int)Random.Range(110f,130f)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manarecr", Random.Range(0.9f,1f)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("fuerzar", Random.Range(0.3f,0.5f)*rangoexp * hierbaexp);
+            if(hierbatipo == 1){PlayerPrefs.SetString("tipor", "comun rango :"+rango);}
+            if(hierbatipo == 2){PlayerPrefs.SetString("tipor", "plateado rango :"+rango);}
+            if(hierbatipo == 3){PlayerPrefs.SetString("tipor", "dorado rango :"+rango);}
+            if(hierbatipo == 1){PlayerPrefs.SetFloat("nivelr", 1);}
+            if(hierbatipo == 2){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,3));}
+            if(hierbatipo == 3){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,4));}
+            PlayerPrefs.SetFloat("claser",hierbatipo);
+            PlayerPrefs.SetString("razar", "rose dragon");
+            PlayerPrefs.SetFloat("rangor", rango);
+            }
+            if(bicho == "sharkman")
+            {
+            PlayerPrefs.SetFloat("hpr", (int)Random.Range(150f,160)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manar", (int)Random.Range(200f,210)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manarecr", Random.Range(0.2f,0.4f)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("fuerzar", Random.Range(0.2f,0.35f)*rangoexp * hierbaexp);
+            if(hierbatipo == 1){PlayerPrefs.SetString("tipor", "comun rango :"+rango);}
+            if(hierbatipo == 2){PlayerPrefs.SetString("tipor", "plateado rango :"+rango);}
+            if(hierbatipo == 3){PlayerPrefs.SetString("tipor", "dorado rango :"+rango);}
+            if(hierbatipo == 1){PlayerPrefs.SetFloat("nivelr", 1);}
+            if(hierbatipo == 2){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,3));}
+            if(hierbatipo == 3){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,4));}
+            PlayerPrefs.SetFloat("claser",hierbatipo);
+            PlayerPrefs.SetString("razar", "sharkman");
+            PlayerPrefs.SetFloat("rangor", rango);
+            }
+            if(bicho == "spider")
+            {
+            PlayerPrefs.SetFloat("hpr", (int)Random.Range(70f,80)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manar", (int)Random.Range(50f,60)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manarecr", Random.Range(0.1f,0.3f)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("fuerzar", Random.Range(1f,1.1f)*rangoexp * hierbaexp);
+            if(hierbatipo == 1){PlayerPrefs.SetString("tipor", "comun rango :"+rango);}
+            if(hierbatipo == 2){PlayerPrefs.SetString("tipor", "plateado rango :"+rango);}
+            if(hierbatipo == 3){PlayerPrefs.SetString("tipor", "dorado rango :"+rango);}
+            if(hierbatipo == 1){PlayerPrefs.SetFloat("nivelr", 1);}
+            if(hierbatipo == 2){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,3));}
+            if(hierbatipo == 3){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,4));}
+            PlayerPrefs.SetFloat("claser",hierbatipo);
+            PlayerPrefs.SetString("razar", "spider");
+            PlayerPrefs.SetFloat("rangor", rango);
+            }
+            //5
+            if(bicho == "algosaurio")
+            {
+            PlayerPrefs.SetFloat("hpr", (int)Random.Range(100f,140)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manar", (int)Random.Range(80f,90)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manarecr", Random.Range(0.7f,0.7f)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("fuerzar", Random.Range(0.3f,0.5f)*rangoexp * hierbaexp);
+            if(hierbatipo == 1){PlayerPrefs.SetString("tipor", "comun rango :"+rango);}
+            if(hierbatipo == 2){PlayerPrefs.SetString("tipor", "plateado rango :"+rango);}
+            if(hierbatipo == 3){PlayerPrefs.SetString("tipor", "dorado rango :"+rango);}
+            if(hierbatipo == 1){PlayerPrefs.SetFloat("nivelr", 1);}
+            if(hierbatipo == 2){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,3));}
+            if(hierbatipo == 3){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,4));}
+            PlayerPrefs.SetFloat("claser",hierbatipo);
+            PlayerPrefs.SetString("razar", "algosaurio");
+            PlayerPrefs.SetFloat("rangor", rango);
+            }
+            if(bicho == "dogtable")
+            {
+            PlayerPrefs.SetFloat("hpr", (int)Random.Range(90f,95f)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manar", (int)Random.Range(110f,130f)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manarecr", Random.Range(0.9f,1f)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("fuerzar", Random.Range(0.3f,0.5f)*rangoexp * hierbaexp);
+            if(hierbatipo == 1){PlayerPrefs.SetString("tipor", "comun rango :"+rango);}
+            if(hierbatipo == 2){PlayerPrefs.SetString("tipor", "plateado rango :"+rango);}
+            if(hierbatipo == 3){PlayerPrefs.SetString("tipor", "dorado rango :"+rango);}
+            if(hierbatipo == 1){PlayerPrefs.SetFloat("nivelr", 1);}
+            if(hierbatipo == 2){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,3));}
+            if(hierbatipo == 3){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,4));}
+            PlayerPrefs.SetFloat("claser",hierbatipo);
+            PlayerPrefs.SetString("razar", "dogtable");
+            PlayerPrefs.SetFloat("rangor", rango);
+            }
+            if(bicho == "friend")
+            {
+            PlayerPrefs.SetFloat("hpr", (int)Random.Range(150f,160)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manar", (int)Random.Range(200f,210)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manarecr", Random.Range(0.2f,0.4f)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("fuerzar", Random.Range(0.2f,0.35f)*rangoexp * hierbaexp);
+            if(hierbatipo == 1){PlayerPrefs.SetString("tipor", "comun rango :"+rango);}
+            if(hierbatipo == 2){PlayerPrefs.SetString("tipor", "plateado rango :"+rango);}
+            if(hierbatipo == 3){PlayerPrefs.SetString("tipor", "dorado rango :"+rango);}
+            if(hierbatipo == 1){PlayerPrefs.SetFloat("nivelr", 1);}
+            if(hierbatipo == 2){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,3));}
+            if(hierbatipo == 3){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,4));}
+            PlayerPrefs.SetFloat("claser",hierbatipo);
+            PlayerPrefs.SetString("razar", "friend");
+            PlayerPrefs.SetFloat("rangor", rango);
+            }
+            if(bicho == "trashrat")
+            {
+            PlayerPrefs.SetFloat("hpr", (int)Random.Range(70f,80)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manar", (int)Random.Range(50f,60)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manarecr", Random.Range(0.1f,0.3f)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("fuerzar", Random.Range(1f,1.1f)*rangoexp * hierbaexp);
+            if(hierbatipo == 1){PlayerPrefs.SetString("tipor", "comun rango :"+rango);}
+            if(hierbatipo == 2){PlayerPrefs.SetString("tipor", "plateado rango :"+rango);}
+            if(hierbatipo == 3){PlayerPrefs.SetString("tipor", "dorado rango :"+rango);}
+            if(hierbatipo == 1){PlayerPrefs.SetFloat("nivelr", 1);}
+            if(hierbatipo == 2){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,3));}
+            if(hierbatipo == 3){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,4));}
+            PlayerPrefs.SetFloat("claser",hierbatipo);
+            PlayerPrefs.SetString("razar", "trashrat");
+            PlayerPrefs.SetFloat("rangor", rango);
+            }
+
+            //1
+            if(bicho == "aghostin")
+            {
+            PlayerPrefs.SetFloat("hpr", (int)Random.Range(100f,140)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manar", (int)Random.Range(80f,90)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manarecr", Random.Range(0.7f,0.7f)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("fuerzar", Random.Range(0.3f,0.5f)*rangoexp * hierbaexp);
+            if(hierbatipo == 1){PlayerPrefs.SetString("tipor", "comun rango :"+rango);}
+            if(hierbatipo == 2){PlayerPrefs.SetString("tipor", "plateado rango :"+rango);}
+            if(hierbatipo == 3){PlayerPrefs.SetString("tipor", "dorado rango :"+rango);}
+            if(hierbatipo == 1){PlayerPrefs.SetFloat("nivelr", 1);}
+            if(hierbatipo == 2){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,3));}
+            if(hierbatipo == 3){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,4));}
+            PlayerPrefs.SetFloat("claser",hierbatipo);
+            PlayerPrefs.SetString("razar", "aghostin");
+            PlayerPrefs.SetFloat("rangor", rango);
+            }
+            if(bicho == "heavydevil")
+            {
+            PlayerPrefs.SetFloat("hpr", (int)Random.Range(90f,95f)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manar", (int)Random.Range(110f,130f)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manarecr", Random.Range(0.9f,1f)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("fuerzar", Random.Range(0.3f,0.5f)*rangoexp * hierbaexp);
+            if(hierbatipo == 1){PlayerPrefs.SetString("tipor", "comun rango :"+rango);}
+            if(hierbatipo == 2){PlayerPrefs.SetString("tipor", "plateado rango :"+rango);}
+            if(hierbatipo == 3){PlayerPrefs.SetString("tipor", "dorado rango :"+rango);}
+            if(hierbatipo == 1){PlayerPrefs.SetFloat("nivelr", 1);}
+            if(hierbatipo == 2){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,3));}
+            if(hierbatipo == 3){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,4));}
+            PlayerPrefs.SetFloat("claser",hierbatipo);
+            PlayerPrefs.SetString("razar", "heavy devil");
+            PlayerPrefs.SetFloat("rangor", rango);
+            }
+            if(bicho == "kingslug")
+            {
+            PlayerPrefs.SetFloat("hpr", (int)Random.Range(150f,160)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manar", (int)Random.Range(200f,210)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manarecr", Random.Range(0.2f,0.4f)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("fuerzar", Random.Range(0.2f,0.35f)*rangoexp * hierbaexp);
+            if(hierbatipo == 1){PlayerPrefs.SetString("tipor", "comun rango :"+rango);}
+            if(hierbatipo == 2){PlayerPrefs.SetString("tipor", "plateado rango :"+rango);}
+            if(hierbatipo == 3){PlayerPrefs.SetString("tipor", "dorado rango :"+rango);}
+            if(hierbatipo == 1){PlayerPrefs.SetFloat("nivelr", 1);}
+            if(hierbatipo == 2){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,3));}
+            if(hierbatipo == 3){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,4));}
+            PlayerPrefs.SetFloat("claser",hierbatipo);
+            PlayerPrefs.SetString("razar", "king slug");
+            PlayerPrefs.SetFloat("rangor", rango);
+            }
+            if(bicho == "pollovion")
+            {
+            PlayerPrefs.SetFloat("hpr", (int)Random.Range(70f,80)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manar", (int)Random.Range(50f,60)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manarecr", Random.Range(0.1f,0.3f)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("fuerzar", Random.Range(1f,1.1f)*rangoexp * hierbaexp);
+            if(hierbatipo == 1){PlayerPrefs.SetString("tipor", "comun rango :"+rango);}
+            if(hierbatipo == 2){PlayerPrefs.SetString("tipor", "plateado rango :"+rango);}
+            if(hierbatipo == 3){PlayerPrefs.SetString("tipor", "dorado rango :"+rango);}
+            if(hierbatipo == 1){PlayerPrefs.SetFloat("nivelr", 1);}
+            if(hierbatipo == 2){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,3));}
+            if(hierbatipo == 3){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,4));}
+            PlayerPrefs.SetFloat("claser",hierbatipo);
+            PlayerPrefs.SetString("razar", "pollovion");
+            PlayerPrefs.SetFloat("rangor", rango);
+            }
+            //2
+            if(bicho == "ant")
+            {
+            PlayerPrefs.SetFloat("hpr", (int)Random.Range(100f,140)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manar", (int)Random.Range(80f,90)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manarecr", Random.Range(0.7f,0.7f)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("fuerzar", Random.Range(0.3f,0.5f)*rangoexp * hierbaexp);
+            if(hierbatipo == 1){PlayerPrefs.SetString("tipor", "comun rango :"+rango);}
+            if(hierbatipo == 2){PlayerPrefs.SetString("tipor", "plateado rango :"+rango);}
+            if(hierbatipo == 3){PlayerPrefs.SetString("tipor", "dorado rango :"+rango);}
+            if(hierbatipo == 1){PlayerPrefs.SetFloat("nivelr", 1);}
+            if(hierbatipo == 2){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,3));}
+            if(hierbatipo == 3){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,4));}
+            PlayerPrefs.SetFloat("claser",hierbatipo);
+            PlayerPrefs.SetString("razar", "sadistic ant");
+            PlayerPrefs.SetFloat("rangor", rango);
+            }
+            if(bicho == "flanerio")
+            {
+            PlayerPrefs.SetFloat("hpr", (int)Random.Range(90f,95f)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manar", (int)Random.Range(110f,130f)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manarecr", Random.Range(0.9f,1f)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("fuerzar", Random.Range(0.3f,0.5f)*rangoexp * hierbaexp);
+            if(hierbatipo == 1){PlayerPrefs.SetString("tipor", "comun rango :"+rango);}
+            if(hierbatipo == 2){PlayerPrefs.SetString("tipor", "plateado rango :"+rango);}
+            if(hierbatipo == 3){PlayerPrefs.SetString("tipor", "dorado rango :"+rango);}
+            if(hierbatipo == 1){PlayerPrefs.SetFloat("nivelr", 1);}
+            if(hierbatipo == 2){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,3));}
+            if(hierbatipo == 3){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,4));}
+            PlayerPrefs.SetFloat("claser",hierbatipo);
+            PlayerPrefs.SetString("razar", "flanerio");
+            PlayerPrefs.SetFloat("rangor", rango);
+            }
+            if(bicho == "flyera")
+            {
+            PlayerPrefs.SetFloat("hpr", (int)Random.Range(150f,160)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manar", (int)Random.Range(200f,210)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manarecr", Random.Range(0.2f,0.4f)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("fuerzar", Random.Range(0.2f,0.35f)*rangoexp * hierbaexp);
+            if(hierbatipo == 1){PlayerPrefs.SetString("tipor", "comun rango :"+rango);}
+            if(hierbatipo == 2){PlayerPrefs.SetString("tipor", "plateado rango :"+rango);}
+            if(hierbatipo == 3){PlayerPrefs.SetString("tipor", "dorado rango :"+rango);}
+            if(hierbatipo == 1){PlayerPrefs.SetFloat("nivelr", 1);}
+            if(hierbatipo == 2){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,3));}
+            if(hierbatipo == 3){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,4));}
+            PlayerPrefs.SetFloat("claser",hierbatipo);
+            PlayerPrefs.SetString("razar", "flyera");
+            PlayerPrefs.SetFloat("rangor", rango);
+            }
+            if(bicho == "gunman")
+            {
+            PlayerPrefs.SetFloat("hpr", (int)Random.Range(70f,80)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manar", (int)Random.Range(50f,60)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manarecr", Random.Range(0.1f,0.3f)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("fuerzar", Random.Range(1f,1.1f)*rangoexp * hierbaexp);
+            if(hierbatipo == 1){PlayerPrefs.SetString("tipor", "comun rango :"+rango);}
+            if(hierbatipo == 2){PlayerPrefs.SetString("tipor", "plateado rango :"+rango);}
+            if(hierbatipo == 3){PlayerPrefs.SetString("tipor", "dorado rango :"+rango);}
+            if(hierbatipo == 1){PlayerPrefs.SetFloat("nivelr", 1);}
+            if(hierbatipo == 2){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,3));}
+            if(hierbatipo == 3){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,4));}
+            PlayerPrefs.SetFloat("claser",hierbatipo);
+            PlayerPrefs.SetString("razar", "gunman");
+            PlayerPrefs.SetFloat("rangor", rango);
+            }
+            //3
+            if(bicho == "craneovil")
+            {
+            PlayerPrefs.SetFloat("hpr", (int)Random.Range(100f,140)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manar", (int)Random.Range(80f,90)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manarecr", Random.Range(0.7f,0.7f)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("fuerzar", Random.Range(0.3f,0.5f)*rangoexp * hierbaexp);
+            if(hierbatipo == 1){PlayerPrefs.SetString("tipor", "comun rango :"+rango);}
+            if(hierbatipo == 2){PlayerPrefs.SetString("tipor", "plateado rango :"+rango);}
+            if(hierbatipo == 3){PlayerPrefs.SetString("tipor", "dorado rango :"+rango);}
+            if(hierbatipo == 1){PlayerPrefs.SetFloat("nivelr", 1);}
+            if(hierbatipo == 2){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,3));}
+            if(hierbatipo == 3){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,4));}
+            PlayerPrefs.SetFloat("claser",hierbatipo);
+            PlayerPrefs.SetString("razar", "craneovil");
+            PlayerPrefs.SetFloat("rangor", rango);
+            }
+            if(bicho == "darkknight")
+            {
+            PlayerPrefs.SetFloat("hpr", (int)Random.Range(90f,95f)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manar", (int)Random.Range(110f,130f)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manarecr", Random.Range(0.9f,1f)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("fuerzar", Random.Range(0.3f,0.5f)*rangoexp * hierbaexp);
+            if(hierbatipo == 1){PlayerPrefs.SetString("tipor", "comun rango :"+rango);}
+            if(hierbatipo == 2){PlayerPrefs.SetString("tipor", "plateado rango :"+rango);}
+            if(hierbatipo == 3){PlayerPrefs.SetString("tipor", "dorado rango :"+rango);}
+            if(hierbatipo == 1){PlayerPrefs.SetFloat("nivelr", 1);}
+            if(hierbatipo == 2){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,3));}
+            if(hierbatipo == 3){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,4));}
+            PlayerPrefs.SetFloat("claser",hierbatipo);
+            PlayerPrefs.SetString("razar", "dark knight");
+            PlayerPrefs.SetFloat("rangor", rango);
+            }
+            if(bicho == "lizardo")
+            {
+            PlayerPrefs.SetFloat("hpr", (int)Random.Range(150f,160)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manar", (int)Random.Range(200f,210)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manarecr", Random.Range(0.2f,0.4f)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("fuerzar", Random.Range(0.2f,0.35f)*rangoexp * hierbaexp);
+            if(hierbatipo == 1){PlayerPrefs.SetString("tipor", "comun rango :"+rango);}
+            if(hierbatipo == 2){PlayerPrefs.SetString("tipor", "plateado rango :"+rango);}
+            if(hierbatipo == 3){PlayerPrefs.SetString("tipor", "dorado rango :"+rango);}
+            if(hierbatipo == 1){PlayerPrefs.SetFloat("nivelr", 1);}
+            if(hierbatipo == 2){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,3));}
+            if(hierbatipo == 3){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,4));}
+            PlayerPrefs.SetFloat("claser",hierbatipo);
+            PlayerPrefs.SetString("razar", "lizardo");
+            PlayerPrefs.SetFloat("rangor", rango);
+            }
+            if(bicho == "trepillo")
+            {
+            PlayerPrefs.SetFloat("hpr", (int)Random.Range(70f,80)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manar", (int)Random.Range(50f,60)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manarecr", Random.Range(0.1f,0.3f)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("fuerzar", Random.Range(1f,1.1f)*rangoexp * hierbaexp);
+            if(hierbatipo == 1){PlayerPrefs.SetString("tipor", "comun rango :"+rango);}
+            if(hierbatipo == 2){PlayerPrefs.SetString("tipor", "plateado rango :"+rango);}
+            if(hierbatipo == 3){PlayerPrefs.SetString("tipor", "dorado rango :"+rango);}
+            if(hierbatipo == 1){PlayerPrefs.SetFloat("nivelr", 1);}
+            if(hierbatipo == 2){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,3));}
+            if(hierbatipo == 3){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,4));}
+            PlayerPrefs.SetFloat("claser",hierbatipo);
+            PlayerPrefs.SetString("razar", "trepillo");
+            PlayerPrefs.SetFloat("rangor", rango);
+            }
+            //4
+            if(bicho == "beestosa")
+            {
+            PlayerPrefs.SetFloat("hpr", (int)Random.Range(100f,140)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manar", (int)Random.Range(80f,90)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manarecr", Random.Range(0.7f,0.7f)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("fuerzar", Random.Range(0.3f,0.5f)*rangoexp * hierbaexp);
+            if(hierbatipo == 1){PlayerPrefs.SetString("tipor", "comun rango :"+rango);}
+            if(hierbatipo == 2){PlayerPrefs.SetString("tipor", "plateado rango :"+rango);}
+            if(hierbatipo == 3){PlayerPrefs.SetString("tipor", "dorado rango :"+rango);}
+            if(hierbatipo == 1){PlayerPrefs.SetFloat("nivelr", 1);}
+            if(hierbatipo == 2){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,3));}
+            if(hierbatipo == 3){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,4));}
+            PlayerPrefs.SetFloat("claser",hierbatipo);
+            PlayerPrefs.SetString("razar", "beestosa");
+            PlayerPrefs.SetFloat("rangor", rango);
+            }
+            if(bicho == "fenix")
+            {
+            PlayerPrefs.SetFloat("hpr", (int)Random.Range(90f,95f)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manar", (int)Random.Range(110f,130f)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manarecr", Random.Range(0.9f,1f)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("fuerzar", Random.Range(0.3f,0.5f)*rangoexp * hierbaexp);
+            if(hierbatipo == 1){PlayerPrefs.SetString("tipor", "comun rango :"+rango);}
+            if(hierbatipo == 2){PlayerPrefs.SetString("tipor", "plateado rango :"+rango);}
+            if(hierbatipo == 3){PlayerPrefs.SetString("tipor", "dorado rango :"+rango);}
+            if(hierbatipo == 1){PlayerPrefs.SetFloat("nivelr", 1);}
+            if(hierbatipo == 2){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,3));}
+            if(hierbatipo == 3){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,4));}
+            PlayerPrefs.SetFloat("claser",hierbatipo);
+            PlayerPrefs.SetString("razar", "fenix bug");
+            PlayerPrefs.SetFloat("rangor", rango);
+            }
+            if(bicho == "kraken")
+            {
+            PlayerPrefs.SetFloat("hpr", (int)Random.Range(150f,160)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manar", (int)Random.Range(200f,210)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manarecr", Random.Range(0.2f,0.4f)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("fuerzar", Random.Range(0.2f,0.35f)*rangoexp * hierbaexp);
+            if(hierbatipo == 1){PlayerPrefs.SetString("tipor", "comun rango :"+rango);}
+            if(hierbatipo == 2){PlayerPrefs.SetString("tipor", "plateado rango :"+rango);}
+            if(hierbatipo == 3){PlayerPrefs.SetString("tipor", "dorado rango :"+rango);}
+            if(hierbatipo == 1){PlayerPrefs.SetFloat("nivelr", 1);}
+            if(hierbatipo == 2){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,3));}
+            if(hierbatipo == 3){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,4));}
+            PlayerPrefs.SetFloat("claser",hierbatipo);
+            PlayerPrefs.SetString("razar", "kraken");
+            PlayerPrefs.SetFloat("rangor", rango);
+            }
+            if(bicho == "pesadilla")
+            {
+            PlayerPrefs.SetFloat("hpr", (int)Random.Range(70f,80)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manar", (int)Random.Range(50f,60)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manarecr", Random.Range(0.1f,0.3f)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("fuerzar", Random.Range(1f,1.1f)*rangoexp * hierbaexp);
+            if(hierbatipo == 1){PlayerPrefs.SetString("tipor", "comun rango :"+rango);}
+            if(hierbatipo == 2){PlayerPrefs.SetString("tipor", "plateado rango :"+rango);}
+            if(hierbatipo == 3){PlayerPrefs.SetString("tipor", "dorado rango :"+rango);}
+            if(hierbatipo == 1){PlayerPrefs.SetFloat("nivelr", 1);}
+            if(hierbatipo == 2){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,3));}
+            if(hierbatipo == 3){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,4));}
+            PlayerPrefs.SetFloat("claser",hierbatipo);
+            PlayerPrefs.SetString("razar", "pesadilla");
+            PlayerPrefs.SetFloat("rangor", rango);
+            }
+            //5
+            if(bicho == "bigfat")
+            {
+            PlayerPrefs.SetFloat("hpr", (int)Random.Range(100f,140)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manar", (int)Random.Range(80f,90)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manarecr", Random.Range(0.7f,0.7f)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("fuerzar", Random.Range(0.3f,0.5f)*rangoexp * hierbaexp);
+            if(hierbatipo == 1){PlayerPrefs.SetString("tipor", "comun rango :"+rango);}
+            if(hierbatipo == 2){PlayerPrefs.SetString("tipor", "plateado rango :"+rango);}
+            if(hierbatipo == 3){PlayerPrefs.SetString("tipor", "dorado rango :"+rango);}
+            if(hierbatipo == 1){PlayerPrefs.SetFloat("nivelr", 1);}
+            if(hierbatipo == 2){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,3));}
+            if(hierbatipo == 3){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,4));}
+            PlayerPrefs.SetFloat("claser",hierbatipo);
+            PlayerPrefs.SetString("razar", "bigfat");
+            PlayerPrefs.SetFloat("rangor", rango);
+            }
+            if(bicho == "kingdragon")
+            {
+            PlayerPrefs.SetFloat("hpr", (int)Random.Range(90f,95f)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manar", (int)Random.Range(110f,130f)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manarecr", Random.Range(0.9f,1f)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("fuerzar", Random.Range(0.3f,0.5f)*rangoexp * hierbaexp);
+            if(hierbatipo == 1){PlayerPrefs.SetString("tipor", "comun rango :"+rango);}
+            if(hierbatipo == 2){PlayerPrefs.SetString("tipor", "plateado rango :"+rango);}
+            if(hierbatipo == 3){PlayerPrefs.SetString("tipor", "dorado rango :"+rango);}
+            if(hierbatipo == 1){PlayerPrefs.SetFloat("nivelr", 1);}
+            if(hierbatipo == 2){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,3));}
+            if(hierbatipo == 3){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,4));}
+            PlayerPrefs.SetFloat("claser",hierbatipo);
+            PlayerPrefs.SetString("razar", "king dragon");
+            PlayerPrefs.SetFloat("rangor", rango);
+            }
+            if(bicho == "mirror")
+            {
+            PlayerPrefs.SetFloat("hpr", (int)Random.Range(150f,160)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manar", (int)Random.Range(200f,210)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manarecr", Random.Range(0.2f,0.4f)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("fuerzar", Random.Range(0.2f,0.35f)*rangoexp * hierbaexp);
+            if(hierbatipo == 1){PlayerPrefs.SetString("tipor", "comun rango :"+rango);}
+            if(hierbatipo == 2){PlayerPrefs.SetString("tipor", "plateado rango :"+rango);}
+            if(hierbatipo == 3){PlayerPrefs.SetString("tipor", "dorado rango :"+rango);}
+            if(hierbatipo == 1){PlayerPrefs.SetFloat("nivelr", 1);}
+            if(hierbatipo == 2){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,3));}
+            if(hierbatipo == 3){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,4));}
+            PlayerPrefs.SetFloat("claser",hierbatipo);
+            PlayerPrefs.SetString("razar", "mirror-mirror");
+            PlayerPrefs.SetFloat("rangor", rango);
+            }
+            if(bicho == "pinguino")
+            {
+            PlayerPrefs.SetFloat("hpr", (int)Random.Range(70f,80)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manar", (int)Random.Range(50f,60)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("manarecr", Random.Range(0.1f,0.3f)*rangoexp * hierbaexp);
+            PlayerPrefs.SetFloat("fuerzar", Random.Range(1f,1.1f)*rangoexp * hierbaexp);
+            if(hierbatipo == 1){PlayerPrefs.SetString("tipor", "comun rango :"+rango);}
+            if(hierbatipo == 2){PlayerPrefs.SetString("tipor", "plateado rango :"+rango);}
+            if(hierbatipo == 3){PlayerPrefs.SetString("tipor", "dorado rango :"+rango);}
+            if(hierbatipo == 1){PlayerPrefs.SetFloat("nivelr", 1);}
+            if(hierbatipo == 2){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,3));}
+            if(hierbatipo == 3){PlayerPrefs.SetFloat("nivelr", (int)Random.Range(1,4));}
+            PlayerPrefs.SetFloat("claser",hierbatipo);
+            PlayerPrefs.SetString("razar", "cyberpinguino");
             PlayerPrefs.SetFloat("rangor", rango);
             }
         }
@@ -458,6 +1045,412 @@ public class disparoshitfloor : MonoBehaviour
                 fuerzac();
             }
 
+        }
+         //2
+        if(bicho == "aghostin")
+        {
+            if(rango <= 2)
+            {
+                fuerzaene = 5;
+            }
+            else if(rango > 2)
+            {
+                fuerzac();
+            }
+        }
+        if(bicho == "algosaurio")
+        {
+            if(rango <= 2)
+            {
+                fuerzaene = 5;
+            }
+            else if(rango > 2)
+            {
+                fuerzac();
+            }
+        }
+        if(bicho == "bigfat")
+        {
+            if(rango <= 2)
+            {
+                fuerzaene = 5;
+            }
+            else if(rango > 2)
+            {
+                fuerzac();
+            }
+        }
+        if(bicho == "cazafantasmas")
+        {
+            if(rango <= 2)
+            {
+                fuerzaene = 5;
+            }
+            else if(rango > 2)
+            {
+                fuerzac();
+            }
+        }
+        //3
+        if(bicho == "darkknight")
+        {
+            if(rango <= 2)
+            {
+                fuerzaene = 5;
+            }
+            else if(rango > 2)
+            {
+                fuerzac();
+            }
+        }
+        if(bicho == "antidog")
+        {
+            if(rango <= 2)
+            {
+                fuerzaene = 5;
+            }
+            else if(rango > 2)
+            {
+                fuerzac();
+            }
+        }
+        if(bicho == "cyberpinguino")
+        {
+            if(rango <= 2)
+            {
+                fuerzaene = 5;
+            }
+            else if(rango > 2)
+            {
+                fuerzac();
+            }
+        }
+        if(bicho == "craneovil")
+        {
+            if(rango <= 2)
+            {
+                fuerzaene = 5;
+            }
+            else if(rango > 2)
+            {
+                fuerzac();
+            }
+        }
+        //4
+        if(bicho == "dogtable")
+        {
+            if(rango <= 2)
+            {
+                fuerzaene = 5;
+            }
+            else if(rango > 2)
+            {
+                fuerzac();
+            }
+        }
+        if(bicho == "beestosa")
+        {
+            if(rango <= 2)
+            {
+                fuerzaene = 5;
+            }
+            else if(rango > 2)
+            {
+                fuerzac();
+            }
+        }
+        if(bicho == "elephant")
+        {
+            if(rango <= 2)
+            {
+                fuerzaene = 5;
+            }
+            else if(rango > 2)
+            {
+                fuerzac();
+            }
+        }
+        if(bicho == "flyera")
+        {
+            if(rango <= 2)
+            {
+                fuerzaene = 5;
+            }
+            else if(rango > 2)
+            {
+                fuerzac();
+            }
+        }
+        //5
+        if(bicho == "friend")
+        {
+            if(rango <= 2)
+            {
+                fuerzaene = 5;
+            }
+            else if(rango > 2)
+            {
+                fuerzac();
+            }
+        }
+        if(bicho == "gunman")
+        {
+            if(rango <= 2)
+            {
+                fuerzaene = 5;
+            }
+            else if(rango > 2)
+            {
+                fuerzac();
+            }
+        }
+        if(bicho == "flanerio")
+        {
+            if(rango <= 2)
+            {
+                fuerzaene = 5;
+            }
+            else if(rango > 2)
+            {
+                fuerzac();
+            }
+        }
+        if(bicho == "fenix")
+        {
+            if(rango <= 2)
+            {
+                fuerzaene = 5;
+            }
+            else if(rango > 2)
+            {
+                fuerzac();
+            }
+        }
+
+        //1
+        if(bicho == "kingdragon")
+        {
+            if(rango <= 2)
+            {
+                fuerzaene = 5;
+            }
+            else if(rango > 2)
+            {
+                fuerzac();
+            }
+        }
+        if(bicho == "heavydevil")
+        {
+            if(rango <= 2)
+            {
+                fuerzaene = 5;
+            }
+            else if(rango > 2)
+            {
+                fuerzac();
+            }
+        }
+        if(bicho == "kraken")
+        {
+            if(rango <= 2)
+            {
+                fuerzaene = 5;
+            }
+            else if(rango > 2)
+            {
+                fuerzac();
+            }
+        }
+        if(bicho == "lizardo")
+        {
+            if(rango <= 2)
+            {
+                fuerzaene = 5;
+            }
+            else if(rango > 2)
+            {
+                fuerzac();
+            }
+        }
+         //2
+        if(bicho == "livedish")
+        {
+            if(rango <= 2)
+            {
+                fuerzaene = 5;
+            }
+            else if(rango > 2)
+            {
+                fuerzac();
+            }
+        }
+        if(bicho == "pesadilla")
+        {
+            if(rango <= 2)
+            {
+                fuerzaene = 5;
+            }
+            else if(rango > 2)
+            {
+                fuerzac();
+            }
+        }
+        if(bicho == "mirror")
+        {
+            if(rango <= 2)
+            {
+                fuerzaene = 5;
+            }
+            else if(rango > 2)
+            {
+                fuerzac();
+            }
+        }
+        if(bicho == "rabmon")
+        {
+            if(rango <= 2)
+            {
+                fuerzaene = 5;
+            }
+            else if(rango > 2)
+            {
+                fuerzac();
+            }
+        }
+        //3
+        if(bicho == "ant")
+        {
+            if(rango <= 2)
+            {
+                fuerzaene = 5;
+            }
+            else if(rango > 2)
+            {
+                fuerzac();
+            }
+        }
+        if(bicho == "kingslug")
+        {
+            if(rango <= 2)
+            {
+                fuerzaene = 5;
+            }
+            else if(rango > 2)
+            {
+                fuerzac();
+            }
+        }
+        if(bicho == "rosedragon")
+        {
+            if(rango <= 2)
+            {
+                fuerzaene = 5;
+            }
+            else if(rango > 2)
+            {
+                fuerzac();
+            }
+        }
+        if(bicho == "sharkman")
+        {
+            if(rango <= 2)
+            {
+                fuerzaene = 5;
+            }
+            else if(rango > 2)
+            {
+                fuerzac();
+            }
+        }
+        //4
+        if(bicho == "pollovion")
+        {
+            if(rango <= 2)
+            {
+                fuerzaene = 5;
+            }
+            else if(rango > 2)
+            {
+                fuerzac();
+            }
+        }
+        if(bicho == "trepillo")
+        {
+            if(rango <= 2)
+            {
+                fuerzaene = 5;
+            }
+            else if(rango > 2)
+            {
+                fuerzac();
+            }
+        }
+        if(bicho == "roboerto")
+        {
+            if(rango <= 2)
+            {
+                fuerzaene = 5;
+            }
+            else if(rango > 2)
+            {
+                fuerzac();
+            }
+        }
+        if(bicho == "tufo")
+        {
+            if(rango <= 2)
+            {
+                fuerzaene = 5;
+            }
+            else if(rango > 2)
+            {
+                fuerzac();
+            }
+        }
+        //5
+        if(bicho == "trashrat")
+        {
+            if(rango <= 2)
+            {
+                fuerzaene = 5;
+            }
+            else if(rango > 2)
+            {
+                fuerzac();
+            }
+        }
+        if(bicho == "spider")
+        {
+            if(rango <= 2)
+            {
+                fuerzaene = 5;
+            }
+            else if(rango > 2)
+            {
+                fuerzac();
+            }
+        }
+        if(bicho == "vivodado")
+        {
+            if(rango <= 2)
+            {
+                fuerzaene = 5;
+            }
+            else if(rango > 2)
+            {
+                fuerzac();
+            }
+        }
+        if(bicho == "dragonron")
+        {
+            if(rango <= 2)
+            {
+                fuerzaene = 5;
+            }
+            else if(rango > 2)
+            {
+                fuerzac();
+            }
         }
     }
     public void fuerzac()

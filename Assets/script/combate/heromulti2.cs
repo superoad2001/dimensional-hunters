@@ -139,11 +139,109 @@ public class heromulti2  : NetworkBehaviour
     public RuntimeAnimatorController topoanim1;
     public RuntimeAnimatorController skybirdanim1;
 
+    public RuntimeAnimatorController ghostanim;
+    public RuntimeAnimatorController algosaurioanim;
+    public RuntimeAnimatorController bigfatanim;
+    public RuntimeAnimatorController cazafantasmasanim;
+
+    public RuntimeAnimatorController darkknightanim;
+    public RuntimeAnimatorController antidoganim;
+    public RuntimeAnimatorController pinguinoanim;
+    public RuntimeAnimatorController craneovilanim;
+
+    public RuntimeAnimatorController dogtableanim;
+    public RuntimeAnimatorController beeanim;
+    public RuntimeAnimatorController elephantanim;
+    public RuntimeAnimatorController flyeraanim;
+
+    public RuntimeAnimatorController friendanim;
+    public RuntimeAnimatorController gunmananim;
+    public RuntimeAnimatorController flanerioanim;
+    public RuntimeAnimatorController fenixanim;
+
+
+
+
+
+    public RuntimeAnimatorController kingdragonanim;
+    public RuntimeAnimatorController heavydevilanim;
+    public RuntimeAnimatorController krakenanim;
+    public RuntimeAnimatorController lizardoanim;
+
+    public RuntimeAnimatorController livedishanim;
+    public RuntimeAnimatorController pesadillaanim;
+    public RuntimeAnimatorController mirroranim;
+    public RuntimeAnimatorController rabmonanim;
+
+    public RuntimeAnimatorController antanim;
+    public RuntimeAnimatorController kingsluganim;
+    public RuntimeAnimatorController rosedragonanim;
+    public RuntimeAnimatorController sharkmananim;
+
+    public RuntimeAnimatorController pollovionanim;
+    public RuntimeAnimatorController trepilloanim;
+    public RuntimeAnimatorController roboertoanim;
+    public RuntimeAnimatorController tufoanim;
+
+    public RuntimeAnimatorController trashratanim;
+    public RuntimeAnimatorController spideranim;
+    public RuntimeAnimatorController vivodadoanim;
+    public RuntimeAnimatorController dragonronanim;
+
 
     public GameObject madcat1;
     public GameObject shitfloor;
     public GameObject topo;
     public GameObject skybird;
+
+    public GameObject ghost;
+    public GameObject algosaurio;
+    public GameObject bigfat;
+    public GameObject cazafantasmas;
+
+    public GameObject darkknight;
+    public GameObject antidog;
+    public GameObject pinguino;
+    public GameObject craneovil;
+
+    public GameObject dogtable;
+    public GameObject bee;
+    public GameObject elephant;
+    public GameObject flyera;
+
+    public GameObject friend;
+    public GameObject gunman;
+    public GameObject flanerio;
+    public GameObject fenix;
+
+
+
+
+
+    public GameObject kingdragon;
+    public GameObject heavydevil;
+    public GameObject kraken;
+    public GameObject lizardo;
+
+    public GameObject livedish;
+    public GameObject pesadilla;
+    public GameObject mirror;
+    public GameObject rabmon;
+
+    public GameObject ant;
+    public GameObject kingslug;
+    public GameObject rosedragon;
+    public GameObject sharkman;
+
+    public GameObject pollovion;
+    public GameObject trepillo;
+    public GameObject roboerto;
+    public GameObject tufo;
+
+    public GameObject trashrat;
+    public GameObject spider;
+    public GameObject vivodado;
+    public GameObject dragonron;
 
     public managermulti managermulti;
 
@@ -641,6 +739,550 @@ public class heromulti2  : NetworkBehaviour
             skybird.name = "birdn";
             
             baseanim.runtimeAnimatorController = skybirdanim1;
+            rapsound = rapsoundcat;
+            fuesound = fuesoundcat;
+            rapfuesound = rapfuesoundcat;
+            turbosound = turbosoundcat;
+            dano1 = dano1cat;
+            dano2 = dano2cat;
+        }
+        //2
+        if(bicho == "dragonron")
+        {
+            
+            madcat1.SetActive(true);
+            ev1.SetActive(true);
+            madcat1.name = "dragonron";
+            
+            baseanim.runtimeAnimatorController = dragonronanim;
+            rapsound = rapsoundcat;
+            fuesound = fuesoundcat;
+            rapfuesound = rapfuesoundcat;
+            turbosound = turbosoundcat;
+            dano1 = dano1cat;
+            dano2 = dano2cat;
+            
+        }
+        if(bicho == "eleph-ant")
+        {
+            shitfloor.SetActive(true);
+            ev1.SetActive(true);
+            shitfloor.name = "eleph-ant";
+            
+            baseanim.runtimeAnimatorController = elephantanim;
+
+            rapsound = rapsoundcat;
+            fuesound = fuesoundcat;
+            rapfuesound = rapfuesoundcat;
+            turbosound = turbosoundcat;
+            dano1 = dano1cat;
+            dano2 = dano2cat;
+        }
+        if(bicho == "roboerto")
+        {
+            topo.SetActive(true);
+            ev1.SetActive(true);
+            topo.name = "roboerto";
+            
+            baseanim.runtimeAnimatorController = roboertoanim;
+            rapsound = rapsoundcat;
+            fuesound = fuesoundcat;
+            rapfuesound = rapfuesoundcat;
+            turbosound = turbosoundcat;
+            dano1 = dano1cat;
+            dano2 = dano2cat;
+        }
+        if(bicho == "tufo")
+        {
+            skybird.SetActive(true);
+            ev1.SetActive(true);
+            skybird.name = "tufo";
+            
+            baseanim.runtimeAnimatorController = tufoanim;
+            rapsound = rapsoundcat;
+            fuesound = fuesoundcat;
+            rapfuesound = rapfuesoundcat;
+            turbosound = turbosoundcat;
+            dano1 = dano1cat;
+            dano2 = dano2cat;
+        }
+        //3
+        if(bicho == "antidog")
+        {
+            
+            madcat1.SetActive(true);
+            ev1.SetActive(true);
+            madcat1.name = "antidog";
+            
+            baseanim.runtimeAnimatorController = antidoganim;
+            rapsound = rapsoundcat;
+            fuesound = fuesoundcat;
+            rapfuesound = rapfuesoundcat;
+            turbosound = turbosoundcat;
+            dano1 = dano1cat;
+            dano2 = dano2cat;
+            
+        }
+        if(bicho == "cazafantasmas")
+        {
+            shitfloor.SetActive(true);
+            ev1.SetActive(true);
+            shitfloor.name = "cazafantasmas";
+            
+            baseanim.runtimeAnimatorController = cazafantasmasanim;
+
+            rapsound = rapsoundcat;
+            fuesound = fuesoundcat;
+            rapfuesound = rapfuesoundcat;
+            turbosound = turbosoundcat;
+            dano1 = dano1cat;
+            dano2 = dano2cat;
+        }
+        if(bicho == "rabmon")
+        {
+            topo.SetActive(true);
+            ev1.SetActive(true);
+            topo.name = "rabmon";
+            
+            baseanim.runtimeAnimatorController = rabmonanim;
+            rapsound = rapsoundcat;
+            fuesound = fuesoundcat;
+            rapfuesound = rapfuesoundcat;
+            turbosound = turbosoundcat;
+            dano1 = dano1cat;
+            dano2 = dano2cat;
+        }
+        if(bicho == "vivodado")
+        {
+            skybird.SetActive(true);
+            ev1.SetActive(true);
+            skybird.name = "vivodado";
+            
+            baseanim.runtimeAnimatorController = vivodadoanim;
+            rapsound = rapsoundcat;
+            fuesound = fuesoundcat;
+            rapfuesound = rapfuesoundcat;
+            turbosound = turbosoundcat;
+            dano1 = dano1cat;
+            dano2 = dano2cat;
+        }
+        //4
+        if(bicho == "livedish")
+        {
+            
+            madcat1.SetActive(true);
+            ev1.SetActive(true);
+            madcat1.name = "livedish";
+            
+            baseanim.runtimeAnimatorController = livedishanim;
+            rapsound = rapsoundcat;
+            fuesound = fuesoundcat;
+            rapfuesound = rapfuesoundcat;
+            turbosound = turbosoundcat;
+            dano1 = dano1cat;
+            dano2 = dano2cat;
+            
+        }
+        if(bicho == "rose dragon")
+        {
+            shitfloor.SetActive(true);
+            ev1.SetActive(true);
+            shitfloor.name = "rosedragon";
+            
+            baseanim.runtimeAnimatorController = rosedragonanim;
+
+            rapsound = rapsoundcat;
+            fuesound = fuesoundcat;
+            rapfuesound = rapfuesoundcat;
+            turbosound = turbosoundcat;
+            dano1 = dano1cat;
+            dano2 = dano2cat;
+        }
+        if(bicho == "sharkman")
+        {
+            topo.SetActive(true);
+            ev1.SetActive(true);
+            topo.name = "sharkman";
+            
+            baseanim.runtimeAnimatorController = sharkmananim;
+            rapsound = rapsoundcat;
+            fuesound = fuesoundcat;
+            rapfuesound = rapfuesoundcat;
+            turbosound = turbosoundcat;
+            dano1 = dano1cat;
+            dano2 = dano2cat;
+        }
+        if(bicho == "spider")
+        {
+            skybird.SetActive(true);
+            ev1.SetActive(true);
+            skybird.name = "spider";
+            
+            baseanim.runtimeAnimatorController = spideranim;
+            rapsound = rapsoundcat;
+            fuesound = fuesoundcat;
+            rapfuesound = rapfuesoundcat;
+            turbosound = turbosoundcat;
+            dano1 = dano1cat;
+            dano2 = dano2cat;
+        }
+        //5
+        if(bicho == "algosaurio")
+        {
+            
+            madcat1.SetActive(true);
+            ev1.SetActive(true);
+            madcat1.name = "algosaurio";
+            
+            baseanim.runtimeAnimatorController = algosaurioanim;
+            rapsound = rapsoundcat;
+            fuesound = fuesoundcat;
+            rapfuesound = rapfuesoundcat;
+            turbosound = turbosoundcat;
+            dano1 = dano1cat;
+            dano2 = dano2cat;
+            
+        }
+        if(bicho == "dogtable")
+        {
+            shitfloor.SetActive(true);
+            ev1.SetActive(true);
+            shitfloor.name = "dogtable";
+            
+            baseanim.runtimeAnimatorController = dogtableanim;
+
+            rapsound = rapsoundcat;
+            fuesound = fuesoundcat;
+            rapfuesound = rapfuesoundcat;
+            turbosound = turbosoundcat;
+            dano1 = dano1cat;
+            dano2 = dano2cat;
+        }
+        if(bicho == "friend")
+        {
+            topo.SetActive(true);
+            ev1.SetActive(true);
+            topo.name = "friend";
+            
+            baseanim.runtimeAnimatorController = friendanim;
+            rapsound = rapsoundcat;
+            fuesound = fuesoundcat;
+            rapfuesound = rapfuesoundcat;
+            turbosound = turbosoundcat;
+            dano1 = dano1cat;
+            dano2 = dano2cat;
+        }
+        if(bicho == "trashrat")
+        {
+            skybird.SetActive(true);
+            ev1.SetActive(true);
+            skybird.name = "trashrat";
+            
+            baseanim.runtimeAnimatorController = trashratanim;
+            rapsound = rapsoundcat;
+            fuesound = fuesoundcat;
+            rapfuesound = rapfuesoundcat;
+            turbosound = turbosoundcat;
+            dano1 = dano1cat;
+            dano2 = dano2cat;
+        }
+
+
+
+
+        //1
+        if(bicho == "aghostin")
+        {
+            
+            madcat1.SetActive(true);
+            ev1.SetActive(true);
+            madcat1.name = "aghostin";
+            
+            baseanim.runtimeAnimatorController = ghostanim;
+            rapsound = rapsoundcat;
+            fuesound = fuesoundcat;
+            rapfuesound = rapfuesoundcat;
+            turbosound = turbosoundcat;
+            dano1 = dano1cat;
+            dano2 = dano2cat;
+            
+        }
+        if(bicho == "heavy devil")
+        {
+            shitfloor.SetActive(true);
+            ev1.SetActive(true);
+            shitfloor.name = "heavydevil";
+            
+            baseanim.runtimeAnimatorController = heavydevilanim;
+
+            rapsound = rapsoundcat;
+            fuesound = fuesoundcat;
+            rapfuesound = rapfuesoundcat;
+            turbosound = turbosoundcat;
+            dano1 = dano1cat;
+            dano2 = dano2cat;
+        }
+        if(bicho == "king slug")
+        {
+            topo.SetActive(true);
+            ev1.SetActive(true);
+            topo.name = "kingslug";
+            
+            baseanim.runtimeAnimatorController = kingsluganim;
+            rapsound = rapsoundcat;
+            fuesound = fuesoundcat;
+            rapfuesound = rapfuesoundcat;
+            turbosound = turbosoundcat;
+            dano1 = dano1cat;
+            dano2 = dano2cat;
+        }
+        if(bicho == "pollovion")
+        {
+            skybird.SetActive(true);
+            ev1.SetActive(true);
+            skybird.name = "pollovion";
+            
+            baseanim.runtimeAnimatorController = pollovionanim;
+            rapsound = rapsoundcat;
+            fuesound = fuesoundcat;
+            rapfuesound = rapfuesoundcat;
+            turbosound = turbosoundcat;
+            dano1 = dano1cat;
+            dano2 = dano2cat;
+        }
+        //2
+        if(bicho == "sadistic ant")
+        {
+            
+            madcat1.SetActive(true);
+            ev1.SetActive(true);
+            madcat1.name = "sadisticant";
+            
+            baseanim.runtimeAnimatorController = antanim;
+            rapsound = rapsoundcat;
+            fuesound = fuesoundcat;
+            rapfuesound = rapfuesoundcat;
+            turbosound = turbosoundcat;
+            dano1 = dano1cat;
+            dano2 = dano2cat;
+            
+        }
+        if(bicho == "flanerio")
+        {
+            shitfloor.SetActive(true);
+            ev1.SetActive(true);
+            shitfloor.name = "flanerio";
+            
+            baseanim.runtimeAnimatorController = flanerioanim;
+
+            rapsound = rapsoundcat;
+            fuesound = fuesoundcat;
+            rapfuesound = rapfuesoundcat;
+            turbosound = turbosoundcat;
+            dano1 = dano1cat;
+            dano2 = dano2cat;
+        }
+        if(bicho == "flyera")
+        {
+            topo.SetActive(true);
+            ev1.SetActive(true);
+            topo.name = "flyera";
+            
+            baseanim.runtimeAnimatorController = flyeraanim;
+            rapsound = rapsoundcat;
+            fuesound = fuesoundcat;
+            rapfuesound = rapfuesoundcat;
+            turbosound = turbosoundcat;
+            dano1 = dano1cat;
+            dano2 = dano2cat;
+        }
+        if(bicho == "gunman")
+        {
+            skybird.SetActive(true);
+            ev1.SetActive(true);
+            skybird.name = "gunman";
+            
+            baseanim.runtimeAnimatorController = gunmananim;
+            rapsound = rapsoundcat;
+            fuesound = fuesoundcat;
+            rapfuesound = rapfuesoundcat;
+            turbosound = turbosoundcat;
+            dano1 = dano1cat;
+            dano2 = dano2cat;
+        }
+        //3
+        if(bicho == "craneovil")
+        {
+            
+            madcat1.SetActive(true);
+            ev1.SetActive(true);
+            madcat1.name = "craneovil";
+            
+            baseanim.runtimeAnimatorController = craneovilanim;
+            rapsound = rapsoundcat;
+            fuesound = fuesoundcat;
+            rapfuesound = rapfuesoundcat;
+            turbosound = turbosoundcat;
+            dano1 = dano1cat;
+            dano2 = dano2cat;
+            
+        }
+        if(bicho == "dark knight")
+        {
+            shitfloor.SetActive(true);
+            ev1.SetActive(true);
+            shitfloor.name = "darkknight";
+            
+            baseanim.runtimeAnimatorController = darkknightanim;
+
+            rapsound = rapsoundcat;
+            fuesound = fuesoundcat;
+            rapfuesound = rapfuesoundcat;
+            turbosound = turbosoundcat;
+            dano1 = dano1cat;
+            dano2 = dano2cat;
+        }
+        if(bicho == "lizardo")
+        {
+            topo.SetActive(true);
+            ev1.SetActive(true);
+            topo.name = "lizardo";
+            
+            baseanim.runtimeAnimatorController = lizardoanim;
+            rapsound = rapsoundcat;
+            fuesound = fuesoundcat;
+            rapfuesound = rapfuesoundcat;
+            turbosound = turbosoundcat;
+            dano1 = dano1cat;
+            dano2 = dano2cat;
+        }
+        if(bicho == "trepillo")
+        {
+            skybird.SetActive(true);
+            ev1.SetActive(true);
+            skybird.name = "trepillo";
+            
+            baseanim.runtimeAnimatorController = trepilloanim;
+            rapsound = rapsoundcat;
+            fuesound = fuesoundcat;
+            rapfuesound = rapfuesoundcat;
+            turbosound = turbosoundcat;
+            dano1 = dano1cat;
+            dano2 = dano2cat;
+        }
+        //4
+        if(bicho == "beestosa")
+        {
+            
+            madcat1.SetActive(true);
+            ev1.SetActive(true);
+            madcat1.name = "beestosa";
+            
+            baseanim.runtimeAnimatorController = beeanim;
+            rapsound = rapsoundcat;
+            fuesound = fuesoundcat;
+            rapfuesound = rapfuesoundcat;
+            turbosound = turbosoundcat;
+            dano1 = dano1cat;
+            dano2 = dano2cat;
+            
+        }
+        if(bicho == "fenix")
+        {
+            shitfloor.SetActive(true);
+            ev1.SetActive(true);
+            shitfloor.name = "fenixbug";
+            
+            baseanim.runtimeAnimatorController = fenixanim;
+
+            rapsound = rapsoundcat;
+            fuesound = fuesoundcat;
+            rapfuesound = rapfuesoundcat;
+            turbosound = turbosoundcat;
+            dano1 = dano1cat;
+            dano2 = dano2cat;
+        }
+        if(bicho == "kraken")
+        {
+            topo.SetActive(true);
+            ev1.SetActive(true);
+            topo.name = "kraken";
+            
+            baseanim.runtimeAnimatorController = krakenanim;
+            rapsound = rapsoundcat;
+            fuesound = fuesoundcat;
+            rapfuesound = rapfuesoundcat;
+            turbosound = turbosoundcat;
+            dano1 = dano1cat;
+            dano2 = dano2cat;
+        }
+        if(bicho == "pesadilla")
+        {
+            skybird.SetActive(true);
+            ev1.SetActive(true);
+            skybird.name = "pesadilla";
+            
+            baseanim.runtimeAnimatorController = pesadillaanim;
+            rapsound = rapsoundcat;
+            fuesound = fuesoundcat;
+            rapfuesound = rapfuesoundcat;
+            turbosound = turbosoundcat;
+            dano1 = dano1cat;
+            dano2 = dano2cat;
+        }
+        //5
+        if(bicho == "bigfat")
+        {
+            
+            madcat1.SetActive(true);
+            ev1.SetActive(true);
+            madcat1.name = "bigfat";
+            
+            baseanim.runtimeAnimatorController = bigfatanim;
+            rapsound = rapsoundcat;
+            fuesound = fuesoundcat;
+            rapfuesound = rapfuesoundcat;
+            turbosound = turbosoundcat;
+            dano1 = dano1cat;
+            dano2 = dano2cat;
+            
+        }
+        if(bicho == "king dragon")
+        {
+            shitfloor.SetActive(true);
+            ev1.SetActive(true);
+            shitfloor.name = "king dragon";
+            
+            baseanim.runtimeAnimatorController = kingdragonanim;
+
+            rapsound = rapsoundcat;
+            fuesound = fuesoundcat;
+            rapfuesound = rapfuesoundcat;
+            turbosound = turbosoundcat;
+            dano1 = dano1cat;
+            dano2 = dano2cat;
+        }
+        if(bicho == "mirror-mirror")
+        {
+            topo.SetActive(true);
+            ev1.SetActive(true);
+            topo.name = "mirror-mirror";
+            
+            baseanim.runtimeAnimatorController = mirroranim;
+            rapsound = rapsoundcat;
+            fuesound = fuesoundcat;
+            rapfuesound = rapfuesoundcat;
+            turbosound = turbosoundcat;
+            dano1 = dano1cat;
+            dano2 = dano2cat;
+        }
+        if(bicho == "cyberpinguino")
+        {
+            skybird.SetActive(true);
+            ev1.SetActive(true);
+            skybird.name = "cyberpinguino";
+            
+            baseanim.runtimeAnimatorController = pinguinoanim;
             rapsound = rapsoundcat;
             fuesound = fuesoundcat;
             rapfuesound = rapfuesoundcat;

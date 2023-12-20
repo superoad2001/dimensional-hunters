@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7798,6 +7798,7 @@ Transform:
   - {fileID: 545380723}
   - {fileID: 1911672508}
   - {fileID: 797867572}
+  - {fileID: 578370495}
   - {fileID: 868538523}
   - {fileID: 1302396741}
   - {fileID: 893500303}
@@ -7826,7 +7827,6 @@ Transform:
   - {fileID: 263589378}
   - {fileID: 1198992519}
   - {fileID: 1158365669}
-  - {fileID: 578370495}
   - {fileID: 1460921179}
   - {fileID: 539253593}
   - {fileID: 332307327}
@@ -9764,14 +9764,42 @@ MonoBehaviour:
   shitfloor: {fileID: 545380722}
   topo: {fileID: 1911672507}
   skybird: {fileID: 797867571}
-  madcat2: {fileID: 0}
-  shitfloor2: {fileID: 0}
-  topo2: {fileID: 0}
-  skybird2: {fileID: 0}
-  madcat3: {fileID: 0}
-  shitfloor3: {fileID: 0}
-  topo3: {fileID: 0}
-  skybird3: {fileID: 0}
+  ghost: {fileID: 578370494}
+  algosaurio: {fileID: 332307326}
+  bigfat: {fileID: 1694064770}
+  cazafantasmas: {fileID: 868538522}
+  darkknight: {fileID: 263589377}
+  antidog: {fileID: 539253592}
+  pinguino: {fileID: 1198992518}
+  craneovil: {fileID: 1158365668}
+  dogtable: {fileID: 1198898183}
+  bee: {fileID: 1460921178}
+  elephant: {fileID: 893500302}
+  flyera: {fileID: 1039130522}
+  friend: {fileID: 1302396740}
+  gunman: {fileID: 406639822}
+  flanerio: {fileID: 1628255612}
+  fenix: {fileID: 499586605}
+  kingdragon: {fileID: 1271043129}
+  heavydevil: {fileID: 876484695}
+  kraken: {fileID: 1847802986}
+  lizardo: {fileID: 243776452}
+  livedish: {fileID: 1552188329}
+  pesadilla: {fileID: 2112700653}
+  mirror: {fileID: 954529802}
+  rabmon: {fileID: 591650554}
+  ant: {fileID: 2009169647}
+  kingslug: {fileID: 1649852421}
+  rosedragon: {fileID: 584146997}
+  sharkman: {fileID: 217790415}
+  pollovion: {fileID: 258745840}
+  trepillo: {fileID: 354702180}
+  roboerto: {fileID: 989256136}
+  tufo: {fileID: 64521434}
+  trashrat: {fileID: 93260158}
+  spider: {fileID: 2078415256}
+  vivodado: {fileID: 2128717441}
+  dragonron: {fileID: 2041681355}
   i: 1
 --- !u!114 &1742424955
 MonoBehaviour:
@@ -12720,9 +12748,9 @@ SceneRoots:
   - {fileID: 445506887}
   - {fileID: 1567961584}
   - {fileID: 105979176}
-  - {fileID: 1742424952}
   - {fileID: 1098450817}
   - {fileID: 734898474}
   - {fileID: 633811641}
   - {fileID: 83346177}
+  - {fileID: 1742424952}
   - {fileID: 1231962175}

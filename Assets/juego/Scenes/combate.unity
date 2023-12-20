@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4596,7 +4596,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2a9ed9dd14d2b5a4389cd8b728ad522c, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2854563699051640978, guid: 2a9ed9dd14d2b5a4389cd8b728ad522c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5022,10 +5022,82 @@ MonoBehaviour:
   shitanim1: {fileID: 9100000, guid: 4ef9276fc02496f48abc36820f1a384e, type: 2}
   topoanim1: {fileID: 9100000, guid: 36ff1ad8c8a4a9d4b94dfe68a46b73b2, type: 2}
   skybirdanim1: {fileID: 9100000, guid: 382364478eb1afc4697448581e1288a4, type: 2}
+  ghostanim: {fileID: 0}
+  algosaurioanim: {fileID: 0}
+  bigfatanim: {fileID: 0}
+  cazafantasmasanim: {fileID: 0}
+  darkknightanim: {fileID: 0}
+  antidoganim: {fileID: 0}
+  pinguinoanim: {fileID: 0}
+  craneovilanim: {fileID: 0}
+  dogtableanim: {fileID: 0}
+  beeanim: {fileID: 0}
+  elephantanim: {fileID: 0}
+  flyeraanim: {fileID: 0}
+  friendanim: {fileID: 0}
+  gunmananim: {fileID: 0}
+  flanerioanim: {fileID: 0}
+  fenixanim: {fileID: 0}
+  kingdragonanim: {fileID: 0}
+  heavydevilanim: {fileID: 0}
+  krakenanim: {fileID: 0}
+  lizardoanim: {fileID: 0}
+  livedishanim: {fileID: 0}
+  pesadillaanim: {fileID: 0}
+  mirroranim: {fileID: 0}
+  rabmonanim: {fileID: 0}
+  antanim: {fileID: 0}
+  kingsluganim: {fileID: 0}
+  rosedragonanim: {fileID: 0}
+  sharkmananim: {fileID: 0}
+  pollovionanim: {fileID: 0}
+  trepilloanim: {fileID: 0}
+  roboertoanim: {fileID: 0}
+  tufoanim: {fileID: 0}
+  trashratanim: {fileID: 0}
+  spideranim: {fileID: 0}
+  vivodadoanim: {fileID: 0}
+  dragonronanim: {fileID: 0}
   madcat1: {fileID: 1801466468}
   shitfloor: {fileID: 488921696}
   topo: {fileID: 449058746}
   skybird: {fileID: 1524554493}
+  ghost: {fileID: 624388318}
+  algosaurio: {fileID: 1094922237}
+  bigfat: {fileID: 60182670}
+  cazafantasmas: {fileID: 2144643834}
+  darkknight: {fileID: 938114889}
+  antidog: {fileID: 1133519102}
+  pinguino: {fileID: 1571042144}
+  craneovil: {fileID: 597519724}
+  dogtable: {fileID: 1128724745}
+  bee: {fileID: 1665118883}
+  elephant: {fileID: 271437149}
+  flyera: {fileID: 1367750579}
+  friend: {fileID: 2079024738}
+  gunman: {fileID: 1128662246}
+  flanerio: {fileID: 20449875}
+  fenix: {fileID: 1959514526}
+  kingdragon: {fileID: 2032674734}
+  heavydevil: {fileID: 170459817}
+  kraken: {fileID: 123624196}
+  lizardo: {fileID: 500307861}
+  livedish: {fileID: 1120282273}
+  pesadilla: {fileID: 665144322}
+  mirror: {fileID: 1960696179}
+  rabmon: {fileID: 761156281}
+  ant: {fileID: 746139629}
+  kingslug: {fileID: 1121070886}
+  rosedragon: {fileID: 87792700}
+  sharkman: {fileID: 815146528}
+  pollovion: {fileID: 866893281}
+  trepillo: {fileID: 2135362867}
+  roboerto: {fileID: 1421620373}
+  tufo: {fileID: 325196680}
+  trashrat: {fileID: 244860684}
+  spider: {fileID: 2110444377}
+  vivodado: {fileID: 435936354}
+  dragonron: {fileID: 502268664}
   rangoexp: 0
   rango: 0
 --- !u!1 &542605412
@@ -14532,6 +14604,42 @@ MonoBehaviour:
   shitanim1: {fileID: 9100000, guid: 4ef9276fc02496f48abc36820f1a384e, type: 2}
   topoanim1: {fileID: 9100000, guid: 36ff1ad8c8a4a9d4b94dfe68a46b73b2, type: 2}
   skybirdanim1: {fileID: 9100000, guid: 382364478eb1afc4697448581e1288a4, type: 2}
+  ghostanim: {fileID: 0}
+  algosaurioanim: {fileID: 0}
+  bigfatanim: {fileID: 0}
+  cazafantasmasanim: {fileID: 0}
+  darkknightanim: {fileID: 0}
+  antidoganim: {fileID: 0}
+  pinguinoanim: {fileID: 0}
+  craneovilanim: {fileID: 0}
+  dogtableanim: {fileID: 0}
+  beeanim: {fileID: 0}
+  elephantanim: {fileID: 0}
+  flyeraanim: {fileID: 0}
+  friendanim: {fileID: 0}
+  gunmananim: {fileID: 0}
+  flanerioanim: {fileID: 0}
+  fenixanim: {fileID: 0}
+  kingdragonanim: {fileID: 0}
+  heavydevilanim: {fileID: 0}
+  krakenanim: {fileID: 0}
+  lizardoanim: {fileID: 0}
+  livedishanim: {fileID: 0}
+  pesadillaanim: {fileID: 0}
+  mirroranim: {fileID: 0}
+  rabmonanim: {fileID: 0}
+  antanim: {fileID: 0}
+  kingsluganim: {fileID: 0}
+  rosedragonanim: {fileID: 0}
+  sharkmananim: {fileID: 0}
+  pollovionanim: {fileID: 0}
+  trepilloanim: {fileID: 0}
+  roboertoanim: {fileID: 0}
+  tufoanim: {fileID: 0}
+  trashratanim: {fileID: 0}
+  spideranim: {fileID: 0}
+  vivodadoanim: {fileID: 0}
+  dragonronanim: {fileID: 0}
   baseanim: {fileID: 1189097771}
   temp: 0
   temp1: 0
@@ -14562,6 +14670,42 @@ MonoBehaviour:
   shitfloor: {fileID: 458979526}
   topo: {fileID: 24818942}
   skybird: {fileID: 199239257}
+  ghost: {fileID: 220183214}
+  algosaurio: {fileID: 1988869436}
+  bigfat: {fileID: 1996008768}
+  cazafantasmas: {fileID: 896572781}
+  darkknight: {fileID: 211746355}
+  antidog: {fileID: 1377459512}
+  pinguino: {fileID: 2108153240}
+  craneovil: {fileID: 2147014142}
+  dogtable: {fileID: 1082379065}
+  bee: {fileID: 1564362139}
+  elephant: {fileID: 2144313937}
+  flyera: {fileID: 1066408587}
+  friend: {fileID: 1468613934}
+  gunman: {fileID: 1578077062}
+  flanerio: {fileID: 479957126}
+  fenix: {fileID: 1507206386}
+  kingdragon: {fileID: 1528447669}
+  heavydevil: {fileID: 1734653519}
+  kraken: {fileID: 1517551483}
+  lizardo: {fileID: 387103621}
+  livedish: {fileID: 60291754}
+  pesadilla: {fileID: 1793783828}
+  mirror: {fileID: 318499556}
+  rabmon: {fileID: 1020594331}
+  ant: {fileID: 307198846}
+  kingslug: {fileID: 1177012696}
+  rosedragon: {fileID: 1210897814}
+  sharkman: {fileID: 1449074043}
+  pollovion: {fileID: 781141610}
+  trepillo: {fileID: 323205321}
+  roboerto: {fileID: 366049179}
+  tufo: {fileID: 907662888}
+  trashrat: {fileID: 1134546396}
+  spider: {fileID: 1335435695}
+  vivodado: {fileID: 1896504354}
+  dragonron: {fileID: 1974470785}
   fueson: {fileID: 884612905}
   rapson: {fileID: 475618457}
   fulson: {fileID: 311343743}

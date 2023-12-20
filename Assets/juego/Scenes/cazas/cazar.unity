@@ -441,11 +441,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2a9ed9dd14d2b5a4389cd8b728ad522c, type: 3}
   m_PrefabInstance: {fileID: 182194607}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &182194609 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -516098083770646512, guid: 2a9ed9dd14d2b5a4389cd8b728ad522c, type: 3}
-  m_PrefabInstance: {fileID: 182194607}
-  m_PrefabAsset: {fileID: 0}
 --- !u!137 &182194610 stripped
 SkinnedMeshRenderer:
   m_CorrespondingSourceObject: {fileID: -1526964690268444965, guid: 2a9ed9dd14d2b5a4389cd8b728ad522c, type: 3}
@@ -1299,11 +1294,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bade8b189cae5bd4bbeb285449615057, type: 3}
   m_PrefabInstance: {fileID: 875195839}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &875195841 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -8391222552659086748, guid: bade8b189cae5bd4bbeb285449615057, type: 3}
-  m_PrefabInstance: {fileID: 875195839}
-  m_PrefabAsset: {fileID: 0}
 --- !u!137 &875195842 stripped
 SkinnedMeshRenderer:
   m_CorrespondingSourceObject: {fileID: 8417361359673230750, guid: bade8b189cae5bd4bbeb285449615057, type: 3}
@@ -1436,11 +1426,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 3.3, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &911529966 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -4924781446923194089, guid: 89e85591b8e6209458857db6e23e9700, type: 3}
-  m_PrefabInstance: {fileID: 911529962}
-  m_PrefabAsset: {fileID: 0}
 --- !u!137 &911529967 stripped
 SkinnedMeshRenderer:
   m_CorrespondingSourceObject: {fileID: -28583339766523924, guid: 89e85591b8e6209458857db6e23e9700, type: 3}
@@ -1868,7 +1853,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c12bd5bc3cab99b4dbaddda2e8ec3c1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bicho: {fileID: 182194609}
   material: {fileID: 0}
   hierbatipo: 0
   mesh: {fileID: 182194610}
@@ -2093,11 +2077,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: deb05c2670aa8f44f9f9f1ff68401962, type: 3}
   m_PrefabInstance: {fileID: 1512344426}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1512344428 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7264123868244890452, guid: deb05c2670aa8f44f9f9f1ff68401962, type: 3}
-  m_PrefabInstance: {fileID: 1512344426}
-  m_PrefabAsset: {fileID: 0}
 --- !u!137 &1512344430 stripped
 SkinnedMeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7040707184094433311, guid: deb05c2670aa8f44f9f9f1ff68401962, type: 3}
@@ -2301,7 +2280,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c12bd5bc3cab99b4dbaddda2e8ec3c1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bicho: {fileID: 875195841}
   material: {fileID: 0}
   hierbatipo: 0
   mesh: {fileID: 875195842}
@@ -2395,7 +2373,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c12bd5bc3cab99b4dbaddda2e8ec3c1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bicho: {fileID: 1512344428}
   material: {fileID: 0}
   hierbatipo: 0
   mesh: {fileID: 1512344430}
@@ -2467,7 +2444,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c12bd5bc3cab99b4dbaddda2e8ec3c1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bicho: {fileID: 911529966}
   material: {fileID: 0}
   hierbatipo: 0
   mesh: {fileID: 911529967}

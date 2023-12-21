@@ -375,7 +375,6 @@ GameObject:
   m_Component:
   - component: {fileID: 311495301}
   - component: {fileID: 311495300}
-  - component: {fileID: 311495299}
   m_Layer: 0
   m_Name: eleph
   m_TagString: elephant
@@ -383,21 +382,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &311495299
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 311495298}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c12bd5bc3cab99b4dbaddda2e8ec3c1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  material: {fileID: 0}
-  hierbatipo: 0
-  mesh: {fileID: 437480724}
 --- !u!95 &311495300
 Animator:
   serializedVersion: 7
@@ -553,15 +537,13 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3f706c623c615d84099d6efacc26d34b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 437480726}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3f706c623c615d84099d6efacc26d34b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 437480727}
   m_SourcePrefab: {fileID: 100100000, guid: 3f706c623c615d84099d6efacc26d34b, type: 3}
 --- !u!4 &437480723 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3f706c623c615d84099d6efacc26d34b, type: 3}
-  m_PrefabInstance: {fileID: 437480722}
-  m_PrefabAsset: {fileID: 0}
---- !u!137 &437480724 stripped
-SkinnedMeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 3321571651769407031, guid: 3f706c623c615d84099d6efacc26d34b, type: 3}
   m_PrefabInstance: {fileID: 437480722}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &437480725 stripped
@@ -590,6 +572,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 3.3, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &437480727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 437480725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c12bd5bc3cab99b4dbaddda2e8ec3c1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 0}
+  hierbatipo: 0
+  mesh: {fileID: 642743858}
+  base_: {fileID: 0}
 --- !u!1001 &627221279
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -657,15 +655,13 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0cf687c60c126db4f805adb6fba2087f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 627221283}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0cf687c60c126db4f805adb6fba2087f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 627221284}
   m_SourcePrefab: {fileID: 100100000, guid: 0cf687c60c126db4f805adb6fba2087f, type: 3}
 --- !u!4 &627221280 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0cf687c60c126db4f805adb6fba2087f, type: 3}
-  m_PrefabInstance: {fileID: 627221279}
-  m_PrefabAsset: {fileID: 0}
---- !u!137 &627221281 stripped
-SkinnedMeshRenderer:
-  m_CorrespondingSourceObject: {fileID: -2438065010584713179, guid: 0cf687c60c126db4f805adb6fba2087f, type: 3}
   m_PrefabInstance: {fileID: 627221279}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &627221282 stripped
@@ -694,6 +690,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 3.3, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &627221284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 627221282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c12bd5bc3cab99b4dbaddda2e8ec3c1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 0}
+  hierbatipo: 0
+  mesh: {fileID: 642743858}
+  base_: {fileID: 0}
 --- !u!1001 &642743857
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -761,6 +773,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5961d7789af729c43ae2a5429e2c7f66, type: 3}
       insertIndex: -1
       addedObject: {fileID: 642743861}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5961d7789af729c43ae2a5429e2c7f66, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 642743862}
   m_SourcePrefab: {fileID: 100100000, guid: 5961d7789af729c43ae2a5429e2c7f66, type: 3}
 --- !u!137 &642743858 stripped
 SkinnedMeshRenderer:
@@ -798,6 +813,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 3.3, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &642743862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642743860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c12bd5bc3cab99b4dbaddda2e8ec3c1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 0}
+  hierbatipo: 0
+  mesh: {fileID: 642743858}
+  base_: {fileID: 0}
 --- !u!1 &667550898
 GameObject:
   m_ObjectHideFlags: 0
@@ -1052,7 +1083,6 @@ GameObject:
   m_Component:
   - component: {fileID: 732589094}
   - component: {fileID: 732589093}
-  - component: {fileID: 732589092}
   m_Layer: 0
   m_Name: roboerto
   m_TagString: roboerto
@@ -1060,21 +1090,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &732589092
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 732589091}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c12bd5bc3cab99b4dbaddda2e8ec3c1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  material: {fileID: 0}
-  hierbatipo: 0
-  mesh: {fileID: 1160185167}
 --- !u!95 &732589093
 Animator:
   serializedVersion: 7
@@ -1468,7 +1483,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1143949483}
   - component: {fileID: 1143949482}
-  - component: {fileID: 1143949481}
   m_Layer: 0
   m_Name: tufo
   m_TagString: tufo
@@ -1476,21 +1490,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1143949481
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1143949480}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c12bd5bc3cab99b4dbaddda2e8ec3c1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  material: {fileID: 0}
-  hierbatipo: 0
-  mesh: {fileID: 642743858}
 --- !u!95 &1143949482
 Animator:
   serializedVersion: 7
@@ -1763,12 +1762,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1354a078bbf502b4b80759a16fc25ad0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1160185170}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1354a078bbf502b4b80759a16fc25ad0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1160185171}
   m_SourcePrefab: {fileID: 100100000, guid: 1354a078bbf502b4b80759a16fc25ad0, type: 3}
---- !u!137 &1160185167 stripped
-SkinnedMeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 9037299914149181105, guid: 1354a078bbf502b4b80759a16fc25ad0, type: 3}
-  m_PrefabInstance: {fileID: 1160185166}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1160185168 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1354a078bbf502b4b80759a16fc25ad0, type: 3}
@@ -1800,6 +1797,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 3.3, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1160185171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160185169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c12bd5bc3cab99b4dbaddda2e8ec3c1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 0}
+  hierbatipo: 0
+  mesh: {fileID: 642743858}
+  base_: {fileID: 0}
 --- !u!1 &1218265651
 GameObject:
   m_ObjectHideFlags: 0
@@ -2058,7 +2071,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1455837049}
   - component: {fileID: 1455837048}
-  - component: {fileID: 1455837047}
   m_Layer: 0
   m_Name: dragonron
   m_TagString: dragonron
@@ -2066,21 +2078,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1455837047
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1455837046}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c12bd5bc3cab99b4dbaddda2e8ec3c1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  material: {fileID: 0}
-  hierbatipo: 0
-  mesh: {fileID: 627221281}
 --- !u!95 &1455837048
 Animator:
   serializedVersion: 7

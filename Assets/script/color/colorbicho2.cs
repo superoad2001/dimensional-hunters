@@ -7,10 +7,11 @@ public class colorbicho2 : MonoBehaviour
     public Material material;
     public int hierbatipo;
     public SkinnedMeshRenderer mesh;
+    
     // Start is called before the first frame update
     void Start()
     {
-
+        
         material = mesh.material;
         hierbatipo = PlayerPrefs.GetInt("hierbatipo", 3);
         

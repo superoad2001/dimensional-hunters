@@ -10,6 +10,7 @@ public class colorbicho3 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         clase = PlayerPrefs.GetFloat("clases", 1);
         if(clase == 1)
         {

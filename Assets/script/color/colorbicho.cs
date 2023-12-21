@@ -35,6 +35,7 @@ public class colorbicho : MonoBehaviour
                 if(child.gameObject.GetComponent<SkinnedMeshRenderer>() != null){child.gameObject.GetComponent<SkinnedMeshRenderer>().material.color = new Color(1,0,0.220675f,1);}
             }
         }
+
     }
 
     // Update is called once per frame

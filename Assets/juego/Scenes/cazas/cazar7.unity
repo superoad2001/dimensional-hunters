@@ -292,6 +292,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8257d6f327dd167428982ff8639dc2d4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 58209482}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8257d6f327dd167428982ff8639dc2d4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 58209483}
   m_SourcePrefab: {fileID: 100100000, guid: 8257d6f327dd167428982ff8639dc2d4, type: 3}
 --- !u!137 &58209479 stripped
 SkinnedMeshRenderer:
@@ -329,6 +332,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 3.3, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &58209483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 58209481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c12bd5bc3cab99b4dbaddda2e8ec3c1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 0}
+  hierbatipo: 0
+  mesh: {fileID: 0}
+  base_: {fileID: 0}
 --- !u!1 &279160545
 GameObject:
   m_ObjectHideFlags: 0
@@ -1066,6 +1085,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8632ce4d0cd5a3847bd84630e9292988, type: 3}
       insertIndex: -1
       addedObject: {fileID: 834170710}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8632ce4d0cd5a3847bd84630e9292988, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 834170711}
   m_SourcePrefab: {fileID: 100100000, guid: 8632ce4d0cd5a3847bd84630e9292988, type: 3}
 --- !u!137 &834170707 stripped
 SkinnedMeshRenderer:
@@ -1103,6 +1125,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 3.3, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &834170711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834170709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c12bd5bc3cab99b4dbaddda2e8ec3c1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 0}
+  hierbatipo: 0
+  mesh: {fileID: 0}
+  base_: {fileID: 0}
 --- !u!1 &942125649
 GameObject:
   m_ObjectHideFlags: 0
@@ -1136,6 +1174,7 @@ MonoBehaviour:
   material: {fileID: 0}
   hierbatipo: 0
   mesh: {fileID: 58209479}
+  base_: {fileID: 0}
 --- !u!95 &942125651
 Animator:
   serializedVersion: 7
@@ -1761,6 +1800,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0084a684f014cae41b9b5d11984a8c66, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1547577364}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0084a684f014cae41b9b5d11984a8c66, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1547577365}
   m_SourcePrefab: {fileID: 100100000, guid: 0084a684f014cae41b9b5d11984a8c66, type: 3}
 --- !u!137 &1547577361 stripped
 SkinnedMeshRenderer:
@@ -1798,6 +1840,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 3.3, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1547577365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1547577363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c12bd5bc3cab99b4dbaddda2e8ec3c1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 0}
+  hierbatipo: 0
+  mesh: {fileID: 0}
+  base_: {fileID: 0}
 --- !u!1 &1553715589
 GameObject:
   m_ObjectHideFlags: 0
@@ -1831,6 +1889,7 @@ MonoBehaviour:
   material: {fileID: 0}
   hierbatipo: 0
   mesh: {fileID: 1547577361}
+  base_: {fileID: 0}
 --- !u!95 &1553715591
 Animator:
   serializedVersion: 7
@@ -1996,6 +2055,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2a21d4859f1e0394daac0a0212ab3b18, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1771693053}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2a21d4859f1e0394daac0a0212ab3b18, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1771693054}
   m_SourcePrefab: {fileID: 100100000, guid: 2a21d4859f1e0394daac0a0212ab3b18, type: 3}
 --- !u!137 &1771693050 stripped
 SkinnedMeshRenderer:
@@ -2033,6 +2095,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 3.3, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1771693054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1771693052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c12bd5bc3cab99b4dbaddda2e8ec3c1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 0}
+  hierbatipo: 0
+  mesh: {fileID: 0}
+  base_: {fileID: 0}
 --- !u!1 &1879040793
 GameObject:
   m_ObjectHideFlags: 0
@@ -2171,6 +2249,7 @@ MonoBehaviour:
   material: {fileID: 0}
   hierbatipo: 0
   mesh: {fileID: 834170707}
+  base_: {fileID: 0}
 --- !u!95 &1908939014
 Animator:
   serializedVersion: 7
@@ -2347,6 +2426,7 @@ MonoBehaviour:
   material: {fileID: 0}
   hierbatipo: 0
   mesh: {fileID: 1771693050}
+  base_: {fileID: 0}
 --- !u!95 &2059102150
 Animator:
   serializedVersion: 7

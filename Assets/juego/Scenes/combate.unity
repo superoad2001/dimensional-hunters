@@ -6943,7 +6943,7 @@ Animator:
   m_GameObject: {fileID: 843030509}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 382364478eb1afc4697448581e1288a4, type: 2}
+  m_Controller: {fileID: 9100000, guid: c50949db27da07f49afee0e24afe77f4, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -13756,13 +13756,85 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 90cf8a9ea9f584d45a2d711634626600, type: 2}
+    - target: {fileID: 90083360888537998, guid: deb05c2670aa8f44f9f9f1ff68401962, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -3.549
+      objectReference: {fileID: 0}
+    - target: {fileID: 90083360888537998, guid: deb05c2670aa8f44f9f9f1ff68401962, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 2.407
+      objectReference: {fileID: 0}
+    - target: {fileID: 90083360888537998, guid: deb05c2670aa8f44f9f9f1ff68401962, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -27.197
+      objectReference: {fileID: 0}
+    - target: {fileID: 175204769124266525, guid: deb05c2670aa8f44f9f9f1ff68401962, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -26.673
+      objectReference: {fileID: 0}
+    - target: {fileID: 175204769124266525, guid: deb05c2670aa8f44f9f9f1ff68401962, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 2.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 175204769124266525, guid: deb05c2670aa8f44f9f9f1ff68401962, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 5.408
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: deb05c2670aa8f44f9f9f1ff68401962, type: 3}
       propertyPath: m_Name
       value: madcatn
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: deb05c2670aa8f44f9f9f1ff68401962, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1928860198920738527, guid: deb05c2670aa8f44f9f9f1ff68401962, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 37.356
+      objectReference: {fileID: 0}
+    - target: {fileID: 1928860198920738527, guid: deb05c2670aa8f44f9f9f1ff68401962, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 4.243
+      objectReference: {fileID: 0}
+    - target: {fileID: 1928860198920738527, guid: deb05c2670aa8f44f9f9f1ff68401962, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 50.054
+      objectReference: {fileID: 0}
+    - target: {fileID: 2573656419338279426, guid: deb05c2670aa8f44f9f9f1ff68401962, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -12.939
+      objectReference: {fileID: 0}
+    - target: {fileID: 2573656419338279426, guid: deb05c2670aa8f44f9f9f1ff68401962, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0.709
+      objectReference: {fileID: 0}
+    - target: {fileID: 2573656419338279426, guid: deb05c2670aa8f44f9f9f1ff68401962, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -6.245
+      objectReference: {fileID: 0}
+    - target: {fileID: 4839368730643375135, guid: deb05c2670aa8f44f9f9f1ff68401962, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -17.609
+      objectReference: {fileID: 0}
+    - target: {fileID: 4839368730643375135, guid: deb05c2670aa8f44f9f9f1ff68401962, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -3.632
+      objectReference: {fileID: 0}
+    - target: {fileID: 4839368730643375135, guid: deb05c2670aa8f44f9f9f1ff68401962, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 28.814
+      objectReference: {fileID: 0}
+    - target: {fileID: 5109513903870344086, guid: deb05c2670aa8f44f9f9f1ff68401962, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -8.219
+      objectReference: {fileID: 0}
+    - target: {fileID: 5109513903870344086, guid: deb05c2670aa8f44f9f9f1ff68401962, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -6.705
+      objectReference: {fileID: 0}
+    - target: {fileID: 5109513903870344086, guid: deb05c2670aa8f44f9f9f1ff68401962, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -29.326
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

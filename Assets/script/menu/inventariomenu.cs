@@ -99,7 +99,7 @@ public class inventariomenu : MonoBehaviour
 
         inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
         if(atras == true)
-        {SceneManager.LoadScene("seleccion");}
+        {SceneManager.LoadScene("seleccion2");}
 
 
 

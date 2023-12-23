@@ -11,7 +11,7 @@ public class mision : MonoBehaviour
     public Text misiont;
     public void _atras()
     {
-       SceneManager.LoadScene("seleccion"); 
+       SceneManager.LoadScene("seleccion2"); 
     }
     // Start is called before the first frame update
     void Start()

@@ -12,6 +12,7 @@ public class enemigo : MonoBehaviour
     public bool rapfue = false;
     public bool def = false;
     public bool defusar;
+    public Text turboui;
     public bool botebool = false;
 
     public string name;
@@ -884,6 +885,7 @@ public class enemigo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        turboui.text = (int)turbobar+"%";
         managerdecombate manager = UnityEngine.Object.FindObjectOfType<managerdecombate>();
         if (manager.comienzo == true)
         {
@@ -1370,7 +1372,7 @@ public class enemigo : MonoBehaviour
                 ataque = Random.Range(10,16) * fuerza;
                 activar = true;
                 permiso = true;
-                turbobar += 10;
+                turbobar += 25;
                 atb = 0;
                 rapson.Play();
                 rapsound.Play();
@@ -1381,10 +1383,10 @@ public class enemigo : MonoBehaviour
             else if (fuerte == true && atb == 100 && mana >= 30 * rangoexp && permiso == false  && heroe.permiso == false)
             {
                 mana -= 30 * rangoexp;
-                ataque = Random.Range(16,20) * fuerza;
+                ataque = Random.Range(18,20) * fuerza;
                 activar = true;
                 permiso = true;
-                turbobar += 15;
+                turbobar += 25;
                 atb = 0;
                 fueson.Play();
                 fuesound.Play();
@@ -1395,8 +1397,8 @@ public class enemigo : MonoBehaviour
             else if (rapfue == true && atb == 100 && mana >= 40 * rangoexp && permiso == false  && heroe.permiso == false) 
             {
                 mana -= 40 * rangoexp;
-                turbobar += 35;
-                ataque = Random.Range(18,25) * fuerza;
+                turbobar += 40;
+                ataque = Random.Range(20,23) * fuerza;
                 activar = true;
                 permiso = true;
                 atb = 0;
@@ -1413,7 +1415,7 @@ public class enemigo : MonoBehaviour
                 turbobar = 0;
                 turbosound.Play();
                 turboson.Play();
-                ataque = Random.Range(40,50) * fuerza;
+                ataque = Random.Range(30,40) * fuerza;
                 atb = 0;
                 baseanim.SetBool("atkturbo", true);
                 

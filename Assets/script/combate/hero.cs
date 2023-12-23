@@ -20,6 +20,7 @@ public class hero : MonoBehaviour
     public float temp4;
     public float atb = 100;
     public bool atkreal;
+    public Text turboui;
     public float turbobar = 0;
 
     public int dano;
@@ -892,6 +893,7 @@ public class hero : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {   
+        turboui.text = (int)turbobar+"%";
         
         if (dano == 0)
         {
@@ -920,7 +922,7 @@ public class hero : MonoBehaviour
                 activar = true;
                 permiso = true;
                 mana -= 20 * rangoexp;
-                turbobar += 10;
+                turbobar += 25;
                 ataque = Random.Range(10,16) * fuerza;
                 atb = 0;
                 rapsound.Play();
@@ -937,8 +939,8 @@ public class hero : MonoBehaviour
                 permiso = true;
                 mana -= 30 * rangoexp;
                 fuesound.Play();
-                turbobar += 15;
-                ataque = Random.Range(16,20) * fuerza;
+                turbobar += 25;
+                ataque = Random.Range(18,20) * fuerza;
                 atb = 0;
                 baseanim.SetBool("atkfue", true);
                 
@@ -953,8 +955,8 @@ public class hero : MonoBehaviour
                 permiso = true;
                 mana -= 40* rangoexp;
                 rapfuesound.Play();
-                turbobar += 35;
-                ataque = Random.Range(18,25) * fuerza;
+                turbobar += 40;
+                ataque = Random.Range(20,23) * fuerza;
                 atb = 0;
                 baseanim.SetBool("atkrapfue", true);
                 
@@ -969,7 +971,7 @@ public class hero : MonoBehaviour
                 permiso = true;
                 turbobar = 0;
                 turbosound.Play();
-                ataque = Random.Range(40,50) * fuerza;
+                ataque = Random.Range(30,40) * fuerza;
                 atb = 0;
                 baseanim.SetBool("atkturbo", true);
                

@@ -185,7 +185,7 @@ public class tiendamenu : MonoBehaviour
 
         inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
         if(atras == true)
-        {SceneManager.LoadScene("seleccion");}
+        {SceneManager.LoadScene("seleccion2");}
 
     
 
@@ -193,9 +193,9 @@ public class tiendamenu : MonoBehaviour
         {       
                 puesto1.text = "hierba comun plateada";
                 puesto2.text = "hierba comun dorada";
-                puesto3.text = "";
-                puesto4.text = "";
-                puesto5.text = "";
+                puesto3.text = "hierba gris";
+                puesto4.text = "hierba gris plateada";
+                puesto5.text = "hierba gris dorada";
                 puesto6.text = "";
                 din.text = "dolares : "+(int)inv.dinero;
                 if (i == 0)
@@ -250,9 +250,9 @@ public class tiendamenu : MonoBehaviour
                 sel6.SetActive(true);}
                 ptext1.text = (int)inv.tipohierba[10]+"                 "+((int)50 * rangoexp);
                 ptext2.text = (int)inv.tipohierba[20]+"                 "+((int)100 * rangoexp);
-                ptext3.text = "";
-                ptext4.text = "";
-                ptext5.text = "";
+                ptext3.text = (int)inv.tipohierba[1]+"                 "+((int)100 * rangoexp);
+                ptext4.text = (int)inv.tipohierba[11]+"                 "+((int)100 * rangoexp);
+                ptext5.text = (int)inv.tipohierba[21]+"                 "+((int)100 * rangoexp);
                 ptext6.text = "";
 
                 if(bichoselec == true && temp > 0.3f)
@@ -297,10 +297,71 @@ public class tiendamenu : MonoBehaviour
                         nobot.Play();
                     }
 
+                    else if (i == 1 && inv.dinero >= ((int)100 * rangoexp) && inv.tipohierba[1] < 9)
+                    {
+                        inv.tipohierba[1]++;
+                        inv.dinero -= ((int)100 * rangoexp);
+                        mensaje.text = "buena compra";
+                        PlayerPrefs.SetFloat("dinerosave",inv.dinero);
+                        inv._agregar2();
+                        sibot.Play();
+                    }
+                    else if(i == 1 && inv.dinero < ((int)100 * rangoexp) && inv.tipohierba[1] < 9)
+                    {
+                        mensaje.text = "no tienes saldo sufieciente";
+                        nobot.Play();
+                    }
+                    else if(i == 1 && inv.dinero >= ((int)100 * rangoexp) && inv.tipohierba[1] >= 9)
+                    {
+                        mensaje.text = "tienes el limite de este objeto";
+                        nobot.Play();
+                    }
+
+                    else if (i == 1 && inv.dinero >= ((int)100 * rangoexp) && inv.tipohierba[11] < 9)
+                    {
+                        inv.tipohierba[11]++;
+                        inv.dinero -= ((int)100 * rangoexp);
+                        mensaje.text = "buena compra";
+                        PlayerPrefs.SetFloat("dinerosave",inv.dinero);
+                        inv._agregar2();
+                        sibot.Play();
+                    }
+                    else if(i == 1 && inv.dinero < ((int)100 * rangoexp) && inv.tipohierba[11] < 9)
+                    {
+                        mensaje.text = "no tienes saldo sufieciente";
+                        nobot.Play();
+                    }
+                    else if(i == 1 && inv.dinero >= ((int)100 * rangoexp) && inv.tipohierba[11] >= 9)
+                    {
+                        mensaje.text = "tienes el limite de este objeto";
+                        nobot.Play();
+                    }
+
+                    else if (i == 1 && inv.dinero >= ((int)100 * rangoexp) && inv.tipohierba[21] < 9)
+                    {
+                        inv.tipohierba[21]++;
+                        inv.dinero -= ((int)100 * rangoexp);
+                        mensaje.text = "buena compra";
+                        PlayerPrefs.SetFloat("dinerosave",inv.dinero);
+                        inv._agregar2();
+                        sibot.Play();
+                    }
+                    else if(i == 1 && inv.dinero < ((int)100 * rangoexp) && inv.tipohierba[21] < 9)
+                    {
+                        mensaje.text = "no tienes saldo sufieciente";
+                        nobot.Play();
+                    }
+                    else if(i == 1 && inv.dinero >= ((int)100 * rangoexp) && inv.tipohierba[21] >= 9)
+                    {
+                        mensaje.text = "tienes el limite de este objeto";
+                        nobot.Play();
+                    }
+
+
                     
                 
                 }
-                if(der == true && i < 1)
+                if(der == true && i < 5)
                 {
                     i++;
                 }
@@ -311,12 +372,12 @@ public class tiendamenu : MonoBehaviour
         }
         if(tienda == 2)
         {       
-                puesto1.text = "";
-                puesto2.text = "";
-                puesto3.text = "";
-                puesto4.text = "";
-                puesto5.text = "";
-                puesto6.text = "";
+                puesto1.text = "hierba verde";
+                puesto2.text = "hierba verde plateada";
+                puesto3.text = "hierba verde dorada";
+                puesto4.text = "hierba amarilla";
+                puesto5.text = "hierba amarilla  plateada";
+                puesto6.text = "hierba amarilla dorada";
                 din.text = "dolares : "+(int)inv.dinero;
                 if (i == 0)
                 {uitext.text = text1.text;
@@ -368,20 +429,137 @@ public class tiendamenu : MonoBehaviour
                 sel4.SetActive(false);
                 sel5.SetActive(false);
                 sel6.SetActive(true);}
-                ptext1.text = "";
-                ptext2.text = "";
-                ptext3.text = "";
-                ptext4.text = "";
-                ptext5.text = "";
-                ptext6.text = "";
+                ptext1.text = (int)inv.tipohierba[2]+"                 "+((int)100 * rangoexp);
+                ptext2.text = (int)inv.tipohierba[12]+"                 "+((int)100 * rangoexp);
+                ptext3.text = (int)inv.tipohierba[22]+"                 "+((int)100 * rangoexp);
+                ptext4.text = (int)inv.tipohierba[3]+"                 "+((int)100 * rangoexp);
+                ptext5.text = (int)inv.tipohierba[13]+"                 "+((int)100 * rangoexp);
+                ptext6.text = (int)inv.tipohierba[23]+"                 "+((int)100 * rangoexp);
 
                 if(bichoselec == true && temp > 0.3f)
                 {
 
-                    
+                    if (i == 0 && inv.dinero >= ((int)100 * rangoexp) && inv.tipohierba[2] < 9)
+                    {
+                        inv.tipohierba[2]++;
+                        inv.dinero -= ((int)100 * rangoexp);
+                        mensaje.text = "buena compra";
+                        PlayerPrefs.SetFloat("dinerosave",inv.dinero);
+                        inv._agregar2();
+                        sibot.Play();
+                    }
+                    else if(i == 0 && inv.dinero < ((int)100 * rangoexp) && inv.tipohierba[2] < 9)
+                    {
+                        mensaje.text = "no tienes saldo sufieciente";
+                        nobot.Play();
+                    }
+                    else if(i == 0 && inv.dinero >= ((int)100 * rangoexp) && inv.tipohierba[2] >= 9)
+                    {
+                        mensaje.text = "tienes el limite de este objeto";
+                        nobot.Play();
+                    }
+
+                    else if (i == 1 && inv.dinero >= ((int)100 * rangoexp) && inv.tipohierba[12] < 9)
+                    {
+                        inv.tipohierba[12]++;
+                        inv.dinero -= ((int)100 * rangoexp);
+                        mensaje.text = "buena compra";
+                        PlayerPrefs.SetFloat("dinerosave",inv.dinero);
+                        inv._agregar2();
+                        sibot.Play();
+                    }
+                    else if(i == 1 && inv.dinero < ((int)100 * rangoexp) && inv.tipohierba[12] < 9)
+                    {
+                        mensaje.text = "no tienes saldo sufieciente";
+                        nobot.Play();
+                    }
+                    else if(i == 1 && inv.dinero >= ((int)100 * rangoexp) && inv.tipohierba[12] >= 9)
+                    {
+                        mensaje.text = "tienes el limite de este objeto";
+                        nobot.Play();
+                    }
+
+                    else if (i == 1 && inv.dinero >= ((int)100 * rangoexp) && inv.tipohierba[22] < 9)
+                    {
+                        inv.tipohierba[22]++;
+                        inv.dinero -= ((int)100 * rangoexp);
+                        mensaje.text = "buena compra";
+                        PlayerPrefs.SetFloat("dinerosave",inv.dinero);
+                        inv._agregar2();
+                        sibot.Play();
+                    }
+                    else if(i == 1 && inv.dinero < ((int)100 * rangoexp) && inv.tipohierba[22] < 9)
+                    {
+                        mensaje.text = "no tienes saldo sufieciente";
+                        nobot.Play();
+                    }
+                    else if(i == 1 && inv.dinero >= ((int)100 * rangoexp) && inv.tipohierba[22] >= 9)
+                    {
+                        mensaje.text = "tienes el limite de este objeto";
+                        nobot.Play();
+                    }
+
+                    else if (i == 1 && inv.dinero >= ((int)100 * rangoexp) && inv.tipohierba[3] < 9)
+                    {
+                        inv.tipohierba[3]++;
+                        inv.dinero -= ((int)100 * rangoexp);
+                        mensaje.text = "buena compra";
+                        PlayerPrefs.SetFloat("dinerosave",inv.dinero);
+                        inv._agregar2();
+                        sibot.Play();
+                    }
+                    else if(i == 1 && inv.dinero < ((int)100 * rangoexp) && inv.tipohierba[3] < 9)
+                    {
+                        mensaje.text = "no tienes saldo sufieciente";
+                        nobot.Play();
+                    }
+                    else if(i == 1 && inv.dinero >= ((int)100 * rangoexp) && inv.tipohierba[3] >= 9)
+                    {
+                        mensaje.text = "tienes el limite de este objeto";
+                        nobot.Play();
+                    }
+
+                    else if (i == 1 && inv.dinero >= ((int)100 * rangoexp) && inv.tipohierba[13] < 9)
+                    {
+                        inv.tipohierba[13]++;
+                        inv.dinero -= ((int)100 * rangoexp);
+                        mensaje.text = "buena compra";
+                        PlayerPrefs.SetFloat("dinerosave",inv.dinero);
+                        inv._agregar2();
+                        sibot.Play();
+                    }
+                    else if(i == 1 && inv.dinero < ((int)100 * rangoexp) && inv.tipohierba[13] < 9)
+                    {
+                        mensaje.text = "no tienes saldo sufieciente";
+                        nobot.Play();
+                    }
+                    else if(i == 1 && inv.dinero >= ((int)100 * rangoexp) && inv.tipohierba[13] >= 9)
+                    {
+                        mensaje.text = "tienes el limite de este objeto";
+                        nobot.Play();
+                    }
+                    else if (i == 1 && inv.dinero >= ((int)100 * rangoexp) && inv.tipohierba[23] < 9)
+                    {
+                        inv.tipohierba[23]++;
+                        inv.dinero -= ((int)100 * rangoexp);
+                        mensaje.text = "buena compra";
+                        PlayerPrefs.SetFloat("dinerosave",inv.dinero);
+                        inv._agregar2();
+                        sibot.Play();
+                    }
+                    else if(i == 1 && inv.dinero < ((int)100 * rangoexp) && inv.tipohierba[23] < 9)
+                    {
+                        mensaje.text = "no tienes saldo sufieciente";
+                        nobot.Play();
+                    }
+                    else if(i == 1 && inv.dinero >= ((int)100 * rangoexp) && inv.tipohierba[23] >= 9)
+                    {
+                        mensaje.text = "tienes el limite de este objeto";
+                        nobot.Play();
+                    }
                 
                 }
-                if(der == true && i < 2)
+                if(der == true && i < 6)
                 {
                     i++;
                 }
@@ -392,12 +570,12 @@ public class tiendamenu : MonoBehaviour
         }
         if(tienda == 3)
         {       
-                puesto1.text = "";
-                puesto2.text = "";
-                puesto3.text = "";
-                puesto4.text = "";
-                puesto5.text = "";
-                puesto6.text = "";
+                puesto1.text = "hierba azul";
+                puesto2.text = "hierba azul plateada";
+                puesto3.text = "hierba azul dorada";
+                puesto4.text = "hierba roja";
+                puesto5.text = "hierba roja plateada";
+                puesto6.text = "hierba roja dorada";
                 din.text = "dolares : "+(int)inv.dinero;
                 if (i == 0)
                 {uitext.text = text1.text;
@@ -449,19 +627,530 @@ public class tiendamenu : MonoBehaviour
                 sel4.SetActive(false);
                 sel5.SetActive(false);
                 sel6.SetActive(true);}
-                ptext1.text = "";
-                ptext2.text = "";
-                ptext3.text = "";
-                ptext4.text = "";
-                ptext5.text = "";
-                ptext6.text = "";
+                ptext1.text = (int)inv.tipohierba[4]+"                 "+((int)100 * rangoexp);
+                ptext2.text = (int)inv.tipohierba[14]+"                 "+((int)100 * rangoexp);
+                ptext3.text = (int)inv.tipohierba[24]+"                 "+((int)100 * rangoexp);
+                ptext4.text = (int)inv.tipohierba[5]+"                 "+((int)100 * rangoexp);
+                ptext5.text = (int)inv.tipohierba[15]+"                 "+((int)100 * rangoexp);
+                ptext6.text = (int)inv.tipohierba[25]+"                 "+((int)100 * rangoexp);
 
                 if(bichoselec == true && temp > 0.3f)
                 {
+                    if (i == 0 && inv.dinero >= ((int)100 * rangoexp) && inv.tipohierba[4] < 9)
+                    {
+                        inv.tipohierba[4]++;
+                        inv.dinero -= ((int)100 * rangoexp);
+                        mensaje.text = "buena compra";
+                        PlayerPrefs.SetFloat("dinerosave",inv.dinero);
+                        inv._agregar2();
+                        sibot.Play();
+                    }
+                    else if(i == 0 && inv.dinero < ((int)100 * rangoexp) && inv.tipohierba[4] < 9)
+                    {
+                        mensaje.text = "no tienes saldo sufieciente";
+                        nobot.Play();
+                    }
+                    else if(i == 0 && inv.dinero >= ((int)100 * rangoexp) && inv.tipohierba[4] >= 9)
+                    {
+                        mensaje.text = "tienes el limite de este objeto";
+                        nobot.Play();
+                    }
 
+                    else if (i == 1 && inv.dinero >= ((int)100 * rangoexp) && inv.tipohierba[14] < 9)
+                    {
+                        inv.tipohierba[14]++;
+                        inv.dinero -= ((int)100 * rangoexp);
+                        mensaje.text = "buena compra";
+                        PlayerPrefs.SetFloat("dinerosave",inv.dinero);
+                        inv._agregar2();
+                        sibot.Play();
+                    }
+                    else if(i == 1 && inv.dinero < ((int)100 * rangoexp) && inv.tipohierba[14] < 9)
+                    {
+                        mensaje.text = "no tienes saldo sufieciente";
+                        nobot.Play();
+                    }
+                    else if(i == 1 && inv.dinero >= ((int)100 * rangoexp) && inv.tipohierba[14] >= 9)
+                    {
+                        mensaje.text = "tienes el limite de este objeto";
+                        nobot.Play();
+                    }
+
+                    else if (i == 1 && inv.dinero >= ((int)100 * rangoexp) && inv.tipohierba[24] < 9)
+                    {
+                        inv.tipohierba[24]++;
+                        inv.dinero -= ((int)100 * rangoexp);
+                        mensaje.text = "buena compra";
+                        PlayerPrefs.SetFloat("dinerosave",inv.dinero);
+                        inv._agregar2();
+                        sibot.Play();
+                    }
+                    else if(i == 1 && inv.dinero < ((int)100 * rangoexp) && inv.tipohierba[24] < 9)
+                    {
+                        mensaje.text = "no tienes saldo sufieciente";
+                        nobot.Play();
+                    }
+                    else if(i == 1 && inv.dinero >= ((int)100 * rangoexp) && inv.tipohierba[24] >= 9)
+                    {
+                        mensaje.text = "tienes el limite de este objeto";
+                        nobot.Play();
+                    }
+
+                    else if (i == 1 && inv.dinero >= ((int)100 * rangoexp) && inv.tipohierba[5] < 9)
+                    {
+                        inv.tipohierba[5]++;
+                        inv.dinero -= ((int)100 * rangoexp);
+                        mensaje.text = "buena compra";
+                        PlayerPrefs.SetFloat("dinerosave",inv.dinero);
+                        inv._agregar2();
+                        sibot.Play();
+                    }
+                    else if(i == 1 && inv.dinero < ((int)100 * rangoexp) && inv.tipohierba[5] < 9)
+                    {
+                        mensaje.text = "no tienes saldo sufieciente";
+                        nobot.Play();
+                    }
+                    else if(i == 1 && inv.dinero >= ((int)100 * rangoexp) && inv.tipohierba[5] >= 9)
+                    {
+                        mensaje.text = "tienes el limite de este objeto";
+                        nobot.Play();
+                    }
+
+                    else if (i == 1 && inv.dinero >= ((int)100 * rangoexp) && inv.tipohierba[15] < 9)
+                    {
+                        inv.tipohierba[15]++;
+                        inv.dinero -= ((int)100 * rangoexp);
+                        mensaje.text = "buena compra";
+                        PlayerPrefs.SetFloat("dinerosave",inv.dinero);
+                        inv._agregar2();
+                        sibot.Play();
+                    }
+                    else if(i == 1 && inv.dinero < ((int)100 * rangoexp) && inv.tipohierba[15] < 9)
+                    {
+                        mensaje.text = "no tienes saldo sufieciente";
+                        nobot.Play();
+                    }
+                    else if(i == 1 && inv.dinero >= ((int)100 * rangoexp) && inv.tipohierba[15] >= 9)
+                    {
+                        mensaje.text = "tienes el limite de este objeto";
+                        nobot.Play();
+                    }
+                    else if (i == 1 && inv.dinero >= ((int)100 * rangoexp) && inv.tipohierba[25] < 9)
+                    {
+                        inv.tipohierba[25]++;
+                        inv.dinero -= ((int)100 * rangoexp);
+                        mensaje.text = "buena compra";
+                        PlayerPrefs.SetFloat("dinerosave",inv.dinero);
+                        inv._agregar2();
+                        sibot.Play();
+                    }
+                    else if(i == 1 && inv.dinero < ((int)100 * rangoexp) && inv.tipohierba[25] < 9)
+                    {
+                        mensaje.text = "no tienes saldo sufieciente";
+                        nobot.Play();
+                    }
+                    else if(i == 1 && inv.dinero >= ((int)100 * rangoexp) && inv.tipohierba[25] >= 9)
+                    {
+                        mensaje.text = "tienes el limite de este objeto";
+                        nobot.Play();
+                    }
                 
                 }
-                if(der == true && i < 2)
+                if(der == true && i < 6)
+                {
+                    i++;
+                }
+                if(izq == true && i > -1)
+                {
+                    i--;
+                }
+        }
+        if(tienda == 4)
+        {       
+                puesto1.text = "hierba morada";
+                puesto2.text = "hierba morada plateada";
+                puesto3.text = "hierba morada dorada";
+                puesto4.text = "hierba naranja";
+                puesto5.text = "hierba naranja plateada";
+                puesto6.text = "hierba naranja dorada";
+                din.text = "dolares : "+(int)inv.dinero;
+                if (i == 0)
+                {uitext.text = text1.text;
+                sel1.SetActive(true);
+                sel2.SetActive(false);
+                sel3.SetActive(false);
+                sel4.SetActive(false);
+                sel5.SetActive(false);
+                sel6.SetActive(false);
+                
+                }
+                if (i == 1)
+                {uitext.text = text2.text;
+                sel1.SetActive(false);
+                sel2.SetActive(true);
+                sel3.SetActive(false);
+                sel4.SetActive(false);
+                sel5.SetActive(false);
+                sel6.SetActive(false);}
+                if (i == 2)
+                {uitext.text = text3.text;
+                sel1.SetActive(false);
+                sel2.SetActive(false);
+                sel3.SetActive(true);
+                sel4.SetActive(false);
+                sel5.SetActive(false);
+                sel6.SetActive(false);}
+                if (i == 3)
+                {uitext.text = text4.text;
+                sel1.SetActive(false);
+                sel2.SetActive(false);
+                sel3.SetActive(false);
+                sel4.SetActive(true);
+                sel5.SetActive(false);
+                sel6.SetActive(false);}
+                if (i == 4)
+                {uitext.text = text5.text;
+                sel1.SetActive(false);
+                sel2.SetActive(false);
+                sel3.SetActive(false);
+                sel4.SetActive(false);
+                sel5.SetActive(true);
+                sel6.SetActive(false);}
+                if (i == 5)
+                {uitext.text = text6.text;
+                sel1.SetActive(false);
+                sel2.SetActive(false);
+                sel3.SetActive(false);
+                sel4.SetActive(false);
+                sel5.SetActive(false);
+                sel6.SetActive(true);}
+                ptext1.text = (int)inv.tipohierba[6]+"                 "+((int)100 * rangoexp);
+                ptext2.text = (int)inv.tipohierba[16]+"                 "+((int)100 * rangoexp);
+                ptext3.text = (int)inv.tipohierba[26]+"                 "+((int)100 * rangoexp);
+                ptext4.text = (int)inv.tipohierba[7]+"                 "+((int)100 * rangoexp);
+                ptext5.text = (int)inv.tipohierba[17]+"                 "+((int)100 * rangoexp);
+                ptext6.text = (int)inv.tipohierba[27]+"                 "+((int)100 * rangoexp);
+
+                if(bichoselec == true && temp > 0.3f)
+                {
+                    if (i == 0 && inv.dinero >= ((int)100 * rangoexp) && inv.tipohierba[6] < 9)
+                    {
+                        inv.tipohierba[6]++;
+                        inv.dinero -= ((int)100 * rangoexp);
+                        mensaje.text = "buena compra";
+                        PlayerPrefs.SetFloat("dinerosave",inv.dinero);
+                        inv._agregar2();
+                        sibot.Play();
+                    }
+                    else if(i == 0 && inv.dinero < ((int)100 * rangoexp) && inv.tipohierba[6] < 9)
+                    {
+                        mensaje.text = "no tienes saldo sufieciente";
+                        nobot.Play();
+                    }
+                    else if(i == 0 && inv.dinero >= ((int)100 * rangoexp) && inv.tipohierba[6] >= 9)
+                    {
+                        mensaje.text = "tienes el limite de este objeto";
+                        nobot.Play();
+                    }
+
+                    else if (i == 1 && inv.dinero >= ((int)100 * rangoexp) && inv.tipohierba[16] < 9)
+                    {
+                        inv.tipohierba[16]++;
+                        inv.dinero -= ((int)100 * rangoexp);
+                        mensaje.text = "buena compra";
+                        PlayerPrefs.SetFloat("dinerosave",inv.dinero);
+                        inv._agregar2();
+                        sibot.Play();
+                    }
+                    else if(i == 1 && inv.dinero < ((int)100 * rangoexp) && inv.tipohierba[16] < 9)
+                    {
+                        mensaje.text = "no tienes saldo sufieciente";
+                        nobot.Play();
+                    }
+                    else if(i == 1 && inv.dinero >= ((int)100 * rangoexp) && inv.tipohierba[16] >= 9)
+                    {
+                        mensaje.text = "tienes el limite de este objeto";
+                        nobot.Play();
+                    }
+
+                    else if (i == 1 && inv.dinero >= ((int)100 * rangoexp) && inv.tipohierba[26] < 9)
+                    {
+                        inv.tipohierba[26]++;
+                        inv.dinero -= ((int)100 * rangoexp);
+                        mensaje.text = "buena compra";
+                        PlayerPrefs.SetFloat("dinerosave",inv.dinero);
+                        inv._agregar2();
+                        sibot.Play();
+                    }
+                    else if(i == 1 && inv.dinero < ((int)100 * rangoexp) && inv.tipohierba[26] < 9)
+                    {
+                        mensaje.text = "no tienes saldo sufieciente";
+                        nobot.Play();
+                    }
+                    else if(i == 1 && inv.dinero >= ((int)100 * rangoexp) && inv.tipohierba[26] >= 9)
+                    {
+                        mensaje.text = "tienes el limite de este objeto";
+                        nobot.Play();
+                    }
+
+                    else if (i == 1 && inv.dinero >= ((int)100 * rangoexp) && inv.tipohierba[7] < 9)
+                    {
+                        inv.tipohierba[7]++;
+                        inv.dinero -= ((int)100 * rangoexp);
+                        mensaje.text = "buena compra";
+                        PlayerPrefs.SetFloat("dinerosave",inv.dinero);
+                        inv._agregar2();
+                        sibot.Play();
+                    }
+                    else if(i == 1 && inv.dinero < ((int)100 * rangoexp) && inv.tipohierba[7] < 9)
+                    {
+                        mensaje.text = "no tienes saldo sufieciente";
+                        nobot.Play();
+                    }
+                    else if(i == 1 && inv.dinero >= ((int)100 * rangoexp) && inv.tipohierba[7] >= 9)
+                    {
+                        mensaje.text = "tienes el limite de este objeto";
+                        nobot.Play();
+                    }
+
+                    else if (i == 1 && inv.dinero >= ((int)100 * rangoexp) && inv.tipohierba[17] < 9)
+                    {
+                        inv.tipohierba[17]++;
+                        inv.dinero -= ((int)100 * rangoexp);
+                        mensaje.text = "buena compra";
+                        PlayerPrefs.SetFloat("dinerosave",inv.dinero);
+                        inv._agregar2();
+                        sibot.Play();
+                    }
+                    else if(i == 1 && inv.dinero < ((int)100 * rangoexp) && inv.tipohierba[17] < 9)
+                    {
+                        mensaje.text = "no tienes saldo sufieciente";
+                        nobot.Play();
+                    }
+                    else if(i == 1 && inv.dinero >= ((int)100 * rangoexp) && inv.tipohierba[17] >= 9)
+                    {
+                        mensaje.text = "tienes el limite de este objeto";
+                        nobot.Play();
+                    }
+                    else if (i == 1 && inv.dinero >= ((int)100 * rangoexp) && inv.tipohierba[27] < 9)
+                    {
+                        inv.tipohierba[27]++;
+                        inv.dinero -= ((int)100 * rangoexp);
+                        mensaje.text = "buena compra";
+                        PlayerPrefs.SetFloat("dinerosave",inv.dinero);
+                        inv._agregar2();
+                        sibot.Play();
+                    }
+                    else if(i == 1 && inv.dinero < ((int)100 * rangoexp) && inv.tipohierba[27] < 9)
+                    {
+                        mensaje.text = "no tienes saldo sufieciente";
+                        nobot.Play();
+                    }
+                    else if(i == 1 && inv.dinero >= ((int)100 * rangoexp) && inv.tipohierba[27] >= 9)
+                    {
+                        mensaje.text = "tienes el limite de este objeto";
+                        nobot.Play();
+                    }
+                
+                }
+                if(der == true && i < 6)
+                {
+                    i++;
+                }
+                if(izq == true && i > -1)
+                {
+                    i--;
+                }
+        }
+        if(tienda == 5)
+        {       
+                puesto1.text = "hierba negra";
+                puesto2.text = "hierba negra plateada";
+                puesto3.text = "hierba negra dorada";
+                puesto4.text = "hierba blanca";
+                puesto5.text = "hierba blanca plateada";
+                puesto6.text = "hierba blanca dorada";
+                din.text = "dolares : "+(int)inv.dinero;
+                if (i == 0)
+                {uitext.text = text1.text;
+                sel1.SetActive(true);
+                sel2.SetActive(false);
+                sel3.SetActive(false);
+                sel4.SetActive(false);
+                sel5.SetActive(false);
+                sel6.SetActive(false);
+                
+                }
+                if (i == 1)
+                {uitext.text = text2.text;
+                sel1.SetActive(false);
+                sel2.SetActive(true);
+                sel3.SetActive(false);
+                sel4.SetActive(false);
+                sel5.SetActive(false);
+                sel6.SetActive(false);}
+                if (i == 2)
+                {uitext.text = text3.text;
+                sel1.SetActive(false);
+                sel2.SetActive(false);
+                sel3.SetActive(true);
+                sel4.SetActive(false);
+                sel5.SetActive(false);
+                sel6.SetActive(false);}
+                if (i == 3)
+                {uitext.text = text4.text;
+                sel1.SetActive(false);
+                sel2.SetActive(false);
+                sel3.SetActive(false);
+                sel4.SetActive(true);
+                sel5.SetActive(false);
+                sel6.SetActive(false);}
+                if (i == 4)
+                {uitext.text = text5.text;
+                sel1.SetActive(false);
+                sel2.SetActive(false);
+                sel3.SetActive(false);
+                sel4.SetActive(false);
+                sel5.SetActive(true);
+                sel6.SetActive(false);}
+                if (i == 5)
+                {uitext.text = text6.text;
+                sel1.SetActive(false);
+                sel2.SetActive(false);
+                sel3.SetActive(false);
+                sel4.SetActive(false);
+                sel5.SetActive(false);
+                sel6.SetActive(true);}
+                ptext1.text = (int)inv.tipohierba[8]+"                 "+((int)100 * rangoexp);
+                ptext2.text = (int)inv.tipohierba[18]+"                 "+((int)100 * rangoexp);
+                ptext3.text = (int)inv.tipohierba[28]+"                 "+((int)100 * rangoexp);
+                ptext4.text = (int)inv.tipohierba[9]+"                 "+((int)100 * rangoexp);
+                ptext5.text = (int)inv.tipohierba[19]+"                 "+((int)100 * rangoexp);
+                ptext6.text = (int)inv.tipohierba[29]+"                 "+((int)100 * rangoexp);
+
+                if(bichoselec == true && temp > 0.3f)
+                {
+                    if (i == 0 && inv.dinero >= ((int)100 * rangoexp) && inv.tipohierba[8] < 9)
+                    {
+                        inv.tipohierba[8]++;
+                        inv.dinero -= ((int)100 * rangoexp);
+                        mensaje.text = "buena compra";
+                        PlayerPrefs.SetFloat("dinerosave",inv.dinero);
+                        inv._agregar2();
+                        sibot.Play();
+                    }
+                    else if(i == 0 && inv.dinero < ((int)100 * rangoexp) && inv.tipohierba[8] < 9)
+                    {
+                        mensaje.text = "no tienes saldo sufieciente";
+                        nobot.Play();
+                    }
+                    else if(i == 0 && inv.dinero >= ((int)100 * rangoexp) && inv.tipohierba[8] >= 9)
+                    {
+                        mensaje.text = "tienes el limite de este objeto";
+                        nobot.Play();
+                    }
+
+                    else if (i == 1 && inv.dinero >= ((int)100 * rangoexp) && inv.tipohierba[18] < 9)
+                    {
+                        inv.tipohierba[18]++;
+                        inv.dinero -= ((int)100 * rangoexp);
+                        mensaje.text = "buena compra";
+                        PlayerPrefs.SetFloat("dinerosave",inv.dinero);
+                        inv._agregar2();
+                        sibot.Play();
+                    }
+                    else if(i == 1 && inv.dinero < ((int)100 * rangoexp) && inv.tipohierba[18] < 9)
+                    {
+                        mensaje.text = "no tienes saldo sufieciente";
+                        nobot.Play();
+                    }
+                    else if(i == 1 && inv.dinero >= ((int)100 * rangoexp) && inv.tipohierba[18] >= 9)
+                    {
+                        mensaje.text = "tienes el limite de este objeto";
+                        nobot.Play();
+                    }
+
+                    else if (i == 1 && inv.dinero >= ((int)100 * rangoexp) && inv.tipohierba[28] < 9)
+                    {
+                        inv.tipohierba[28]++;
+                        inv.dinero -= ((int)100 * rangoexp);
+                        mensaje.text = "buena compra";
+                        PlayerPrefs.SetFloat("dinerosave",inv.dinero);
+                        inv._agregar2();
+                        sibot.Play();
+                    }
+                    else if(i == 1 && inv.dinero < ((int)100 * rangoexp) && inv.tipohierba[28] < 9)
+                    {
+                        mensaje.text = "no tienes saldo sufieciente";
+                        nobot.Play();
+                    }
+                    else if(i == 1 && inv.dinero >= ((int)100 * rangoexp) && inv.tipohierba[28] >= 9)
+                    {
+                        mensaje.text = "tienes el limite de este objeto";
+                        nobot.Play();
+                    }
+
+                    else if (i == 1 && inv.dinero >= ((int)100 * rangoexp) && inv.tipohierba[9] < 9)
+                    {
+                        inv.tipohierba[9]++;
+                        inv.dinero -= ((int)100 * rangoexp);
+                        mensaje.text = "buena compra";
+                        PlayerPrefs.SetFloat("dinerosave",inv.dinero);
+                        inv._agregar2();
+                        sibot.Play();
+                    }
+                    else if(i == 1 && inv.dinero < ((int)100 * rangoexp) && inv.tipohierba[9] < 9)
+                    {
+                        mensaje.text = "no tienes saldo sufieciente";
+                        nobot.Play();
+                    }
+                    else if(i == 1 && inv.dinero >= ((int)100 * rangoexp) && inv.tipohierba[9] >= 9)
+                    {
+                        mensaje.text = "tienes el limite de este objeto";
+                        nobot.Play();
+                    }
+
+                    else if (i == 1 && inv.dinero >= ((int)100 * rangoexp) && inv.tipohierba[13] < 9)
+                    {
+                        inv.tipohierba[13]++;
+                        inv.dinero -= ((int)100 * rangoexp);
+                        mensaje.text = "buena compra";
+                        PlayerPrefs.SetFloat("dinerosave",inv.dinero);
+                        inv._agregar2();
+                        sibot.Play();
+                    }
+                    else if(i == 1 && inv.dinero < ((int)100 * rangoexp) && inv.tipohierba[13] < 9)
+                    {
+                        mensaje.text = "no tienes saldo sufieciente";
+                        nobot.Play();
+                    }
+                    else if(i == 1 && inv.dinero >= ((int)100 * rangoexp) && inv.tipohierba[13] >= 9)
+                    {
+                        mensaje.text = "tienes el limite de este objeto";
+                        nobot.Play();
+                    }
+                    else if (i == 1 && inv.dinero >= ((int)100 * rangoexp) && inv.tipohierba[23] < 9)
+                    {
+                        inv.tipohierba[23]++;
+                        inv.dinero -= ((int)100 * rangoexp);
+                        mensaje.text = "buena compra";
+                        PlayerPrefs.SetFloat("dinerosave",inv.dinero);
+                        inv._agregar2();
+                        sibot.Play();
+                    }
+                    else if(i == 1 && inv.dinero < ((int)100 * rangoexp) && inv.tipohierba[23] < 9)
+                    {
+                        mensaje.text = "no tienes saldo sufieciente";
+                        nobot.Play();
+                    }
+                    else if(i == 1 && inv.dinero >= ((int)100 * rangoexp) && inv.tipohierba[23] >= 9)
+                    {
+                        mensaje.text = "tienes el limite de este objeto";
+                        nobot.Play();
+                    }
+                
+                }
+                if(der == true && i < 6)
                 {
                     i++;
                 }
@@ -472,7 +1161,7 @@ public class tiendamenu : MonoBehaviour
         }
         if(dermod == true)
         {
-            if(tienda < 3)
+            if(tienda < 5)
             {
                 tienda++;
                 i = 0;

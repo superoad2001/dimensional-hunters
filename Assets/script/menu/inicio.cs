@@ -40,7 +40,7 @@ public class inicio : MonoBehaviour
             PlayerPrefs.SetInt("nuevapartida",1);
         }
         else if(iniciar == true && vez1 == 1)
-        {SceneManager.LoadScene("seleccion");}
+        {SceneManager.LoadScene("seleccion2");}
         iniciar = false;
     }
 }

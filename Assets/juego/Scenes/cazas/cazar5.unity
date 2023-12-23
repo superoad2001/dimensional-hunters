@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -258,7 +258,6 @@ MonoBehaviour:
   material: {fileID: 0}
   hierbatipo: 0
   mesh: {fileID: 221982978}
-  base_: {fileID: 0}
 --- !u!95 &217150541
 Animator:
   serializedVersion: 7
@@ -419,7 +418,6 @@ MonoBehaviour:
   material: {fileID: 0}
   hierbatipo: 0
   mesh: {fileID: 0}
-  base_: {fileID: 0}
 --- !u!1 &279160545
 GameObject:
   m_ObjectHideFlags: 0
@@ -1500,7 +1498,6 @@ MonoBehaviour:
   material: {fileID: 0}
   hierbatipo: 0
   mesh: {fileID: 1682228778}
-  base_: {fileID: 0}
 --- !u!95 &1334627075
 Animator:
   serializedVersion: 7
@@ -1715,7 +1712,6 @@ MonoBehaviour:
   material: {fileID: 0}
   hierbatipo: 0
   mesh: {fileID: 1711845884}
-  base_: {fileID: 0}
 --- !u!95 &1486284131
 Animator:
   serializedVersion: 7
@@ -1746,14 +1742,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1486284129}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 10.7, y: -0.4500122, z: 3.13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1711845885}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &1611145725
 GameObject:
   m_ObjectHideFlags: 0
@@ -1936,7 +1932,6 @@ MonoBehaviour:
   material: {fileID: 0}
   hierbatipo: 0
   mesh: {fileID: 0}
-  base_: {fileID: 0}
 --- !u!1001 &1711845883
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2059,7 +2054,6 @@ MonoBehaviour:
   material: {fileID: 0}
   hierbatipo: 0
   mesh: {fileID: 0}
-  base_: {fileID: 0}
 --- !u!1001 &1823147049
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2182,7 +2176,6 @@ MonoBehaviour:
   material: {fileID: 0}
   hierbatipo: 0
   mesh: {fileID: 0}
-  base_: {fileID: 0}
 --- !u!1 &1879040793
 GameObject:
   m_ObjectHideFlags: 0
@@ -2426,7 +2419,6 @@ MonoBehaviour:
   material: {fileID: 0}
   hierbatipo: 0
   mesh: {fileID: 1823147050}
-  base_: {fileID: 0}
 --- !u!95 &2066879639
 Animator:
   serializedVersion: 7

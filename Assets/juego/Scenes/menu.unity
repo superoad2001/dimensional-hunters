@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -201,7 +201,7 @@ Transform:
   m_GameObject: {fileID: 77574082}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1225, y: -623.6054, z: 124.42}
+  m_LocalPosition: {x: -1223.7, y: -623.6054, z: 129.78}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1647,7 +1647,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 478ff615027f88844bef84b0bde2e209, type: 3}
+    m_Font: {fileID: 12800000, guid: 766b6368dea4dfa4899d6048c8f39144, type: 3}
     m_FontSize: 300
     m_FontStyle: 0
     m_BestFit: 0
@@ -1659,7 +1659,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: dimensional hunetrs
+  m_Text: dimensional hunters
 --- !u!95 &403530918
 Animator:
   serializedVersion: 7
@@ -1854,15 +1854,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: d8b66bf88ff44db42996a78fc9aad9b3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -4.02
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d8b66bf88ff44db42996a78fc9aad9b3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.66
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d8b66bf88ff44db42996a78fc9aad9b3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 3.25
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d8b66bf88ff44db42996a78fc9aad9b3, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2065,7 +2065,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 478ff615027f88844bef84b0bde2e209, type: 3}
+    m_Font: {fileID: 12800000, guid: 766b6368dea4dfa4899d6048c8f39144, type: 3}
     m_FontSize: 296
     m_FontStyle: 0
     m_BestFit: 0
@@ -2077,7 +2077,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: dimensional hunetrs
+  m_Text: dimensional hunters
 --- !u!1 &535117605
 GameObject:
   m_ObjectHideFlags: 0
@@ -4275,7 +4275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.377314, g: 0.5754717, b: 0.43308946, a: 1}
+  m_Color: {r: 0.8753581, g: 1, b: 0.514151, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4283,7 +4283,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 478ff615027f88844bef84b0bde2e209, type: 3}
+    m_Font: {fileID: 12800000, guid: 766b6368dea4dfa4899d6048c8f39144, type: 3}
     m_FontSize: 293
     m_FontStyle: 0
     m_BestFit: 0
@@ -4295,7 +4295,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: dimensional hunetrs
+  m_Text: dimensional hunters
 --- !u!95 &1189136011
 Animator:
   serializedVersion: 7
@@ -5128,7 +5128,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 1354a078bbf502b4b80759a16fc25ad0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -1.28
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1354a078bbf502b4b80759a16fc25ad0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5136,7 +5136,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1354a078bbf502b4b80759a16fc25ad0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1.75
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1354a078bbf502b4b80759a16fc25ad0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6215,7 +6215,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: d0054372fc6cbcf46b8aa11c87b34e79, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_AnimatePhysics: 0
@@ -6779,7 +6779,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: fd667f5ec6e9df649a725ea4e60c9c90, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_AnimatePhysics: 0

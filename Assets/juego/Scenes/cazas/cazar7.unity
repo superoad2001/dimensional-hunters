@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -347,7 +347,6 @@ MonoBehaviour:
   material: {fileID: 0}
   hierbatipo: 0
   mesh: {fileID: 0}
-  base_: {fileID: 0}
 --- !u!1 &279160545
 GameObject:
   m_ObjectHideFlags: 0
@@ -1140,7 +1139,6 @@ MonoBehaviour:
   material: {fileID: 0}
   hierbatipo: 0
   mesh: {fileID: 0}
-  base_: {fileID: 0}
 --- !u!1 &942125649
 GameObject:
   m_ObjectHideFlags: 0
@@ -1174,7 +1172,6 @@ MonoBehaviour:
   material: {fileID: 0}
   hierbatipo: 0
   mesh: {fileID: 58209479}
-  base_: {fileID: 0}
 --- !u!95 &942125651
 Animator:
   serializedVersion: 7
@@ -1781,6 +1778,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2639638324218457063, guid: 0084a684f014cae41b9b5d11984a8c66, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 172796736788694006, guid: 0084a684f014cae41b9b5d11984a8c66, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0084a684f014cae41b9b5d11984a8c66, type: 3}
       propertyPath: m_Name
       value: flanerio
@@ -1792,6 +1797,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0084a684f014cae41b9b5d11984a8c66, type: 3}
       propertyPath: m_TagString
       value: flanerio
+      objectReference: {fileID: 0}
+    - target: {fileID: 2096221262486713844, guid: 0084a684f014cae41b9b5d11984a8c66, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1855,7 +1864,6 @@ MonoBehaviour:
   material: {fileID: 0}
   hierbatipo: 0
   mesh: {fileID: 0}
-  base_: {fileID: 0}
 --- !u!1 &1553715589
 GameObject:
   m_ObjectHideFlags: 0
@@ -1889,7 +1897,6 @@ MonoBehaviour:
   material: {fileID: 0}
   hierbatipo: 0
   mesh: {fileID: 1547577361}
-  base_: {fileID: 0}
 --- !u!95 &1553715591
 Animator:
   serializedVersion: 7
@@ -2036,6 +2043,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 172796736788694006, guid: 2a21d4859f1e0394daac0a0212ab3b18, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0005848
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2a21d4859f1e0394daac0a0212ab3b18, type: 3}
       propertyPath: m_Name
       value: flyera
@@ -2047,6 +2058,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2a21d4859f1e0394daac0a0212ab3b18, type: 3}
       propertyPath: m_TagString
       value: flyera
+      objectReference: {fileID: 0}
+    - target: {fileID: 2096221262486713844, guid: 2a21d4859f1e0394daac0a0212ab3b18, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0005848
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2110,7 +2125,6 @@ MonoBehaviour:
   material: {fileID: 0}
   hierbatipo: 0
   mesh: {fileID: 0}
-  base_: {fileID: 0}
 --- !u!1 &1879040793
 GameObject:
   m_ObjectHideFlags: 0
@@ -2249,7 +2263,6 @@ MonoBehaviour:
   material: {fileID: 0}
   hierbatipo: 0
   mesh: {fileID: 834170707}
-  base_: {fileID: 0}
 --- !u!95 &1908939014
 Animator:
   serializedVersion: 7
@@ -2426,7 +2439,6 @@ MonoBehaviour:
   material: {fileID: 0}
   hierbatipo: 0
   mesh: {fileID: 1771693050}
-  base_: {fileID: 0}
 --- !u!95 &2059102150
 Animator:
   serializedVersion: 7

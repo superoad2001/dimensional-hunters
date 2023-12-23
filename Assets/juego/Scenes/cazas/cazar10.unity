@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -347,7 +347,6 @@ MonoBehaviour:
   material: {fileID: 0}
   hierbatipo: 0
   mesh: {fileID: 0}
-  base_: {fileID: 0}
 --- !u!1 &279160545
 GameObject:
   m_ObjectHideFlags: 0
@@ -800,7 +799,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &818019939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1140,7 +1139,6 @@ MonoBehaviour:
   material: {fileID: 0}
   hierbatipo: 0
   mesh: {fileID: 0}
-  base_: {fileID: 0}
 --- !u!1 &1021568341
 GameObject:
   m_ObjectHideFlags: 0
@@ -1174,7 +1172,6 @@ MonoBehaviour:
   material: {fileID: 0}
   hierbatipo: 0
   mesh: {fileID: 866012540}
-  base_: {fileID: 0}
 --- !u!95 &1021568343
 Animator:
   serializedVersion: 7
@@ -1206,7 +1203,7 @@ Transform:
   m_GameObject: {fileID: 1021568341}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.7, y: -0.26000005, z: 0.5}
+  m_LocalPosition: {x: -10.97, y: -0.26000005, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1518,7 +1515,6 @@ MonoBehaviour:
   material: {fileID: 0}
   hierbatipo: 0
   mesh: {fileID: 1565340639}
-  base_: {fileID: 0}
 --- !u!95 &1177454485
 Animator:
   serializedVersion: 7
@@ -1550,7 +1546,7 @@ Transform:
   m_GameObject: {fileID: 1177454483}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.2, y: -0.4500122, z: -0}
+  m_LocalPosition: {x: 5.51, y: -0.4500122, z: 6.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1927,7 +1923,6 @@ MonoBehaviour:
   material: {fileID: 0}
   hierbatipo: 0
   mesh: {fileID: 0}
-  base_: {fileID: 0}
 --- !u!1 &1611145725
 GameObject:
   m_ObjectHideFlags: 0
@@ -2006,7 +2001,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 42ce924a82e92f7449b88443925b80ce, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 4.47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 42ce924a82e92f7449b88443925b80ce, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2110,7 +2105,6 @@ MonoBehaviour:
   material: {fileID: 0}
   hierbatipo: 0
   mesh: {fileID: 0}
-  base_: {fileID: 0}
 --- !u!1 &1879040793
 GameObject:
   m_ObjectHideFlags: 0
@@ -2249,7 +2243,6 @@ MonoBehaviour:
   material: {fileID: 0}
   hierbatipo: 0
   mesh: {fileID: 240654226}
-  base_: {fileID: 0}
 --- !u!95 &1917426121
 Animator:
   serializedVersion: 7
@@ -2426,7 +2419,6 @@ MonoBehaviour:
   material: {fileID: 0}
   hierbatipo: 0
   mesh: {fileID: 1870264447}
-  base_: {fileID: 0}
 --- !u!95 &2111281667
 Animator:
   serializedVersion: 7
@@ -2457,14 +2449,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2111281665}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.2, y: -0.4500122, z: -12.1}
+  m_LocalRotation: {x: -0, y: -0.70413584, z: -0, w: 0.71006536}
+  m_LocalPosition: {x: 4.280195, y: -0.4500122, z: -7.5558996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1870264448}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -89.52, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

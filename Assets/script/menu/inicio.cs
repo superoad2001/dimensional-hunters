@@ -36,7 +36,7 @@ public class inicio : MonoBehaviour
 
         if(iniciar == true && vez1 == 0)
         {
-            SceneManager.LoadScene("intro");
+            SceneManager.LoadScene("seleccion2");
             PlayerPrefs.SetInt("nuevapartida",1);
         }
         else if(iniciar == true && vez1 == 1)

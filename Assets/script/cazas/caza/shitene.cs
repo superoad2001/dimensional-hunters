@@ -74,6 +74,60 @@ public class shitene : MonoBehaviour
     public GameObject vivodado;
     public GameObject dragonron;
 
+    public RuntimeAnimatorController madcatanim1;
+    public RuntimeAnimatorController shitanim1;
+    public RuntimeAnimatorController topoanim1;
+    public RuntimeAnimatorController skybirdanim1;
+
+    public RuntimeAnimatorController ghostanim;
+    public RuntimeAnimatorController algosaurioanim;
+    public RuntimeAnimatorController bigfatanim;
+    public RuntimeAnimatorController cazafantasmasanim;
+
+    public RuntimeAnimatorController darkknightanim;
+    public RuntimeAnimatorController antidoganim;
+    public RuntimeAnimatorController pinguinoanim;
+    public RuntimeAnimatorController craneovilanim;
+
+    public RuntimeAnimatorController dogtableanim;
+    public RuntimeAnimatorController beeanim;
+    public RuntimeAnimatorController elephantanim;
+    public RuntimeAnimatorController flyeraanim;
+
+    public RuntimeAnimatorController friendanim;
+    public RuntimeAnimatorController gunmananim;
+    public RuntimeAnimatorController flanerioanim;
+    public RuntimeAnimatorController fenixanim;
+
+
+
+
+
+    public RuntimeAnimatorController kingdragonanim;
+    public RuntimeAnimatorController heavydevilanim;
+    public RuntimeAnimatorController krakenanim;
+    public RuntimeAnimatorController lizardoanim;
+
+    public RuntimeAnimatorController livedishanim;
+    public RuntimeAnimatorController pesadillaanim;
+    public RuntimeAnimatorController mirroranim;
+    public RuntimeAnimatorController rabmonanim;
+
+    public RuntimeAnimatorController antanim;
+    public RuntimeAnimatorController kingsluganim;
+    public RuntimeAnimatorController rosedragonanim;
+    public RuntimeAnimatorController sharkmananim;
+
+    public RuntimeAnimatorController pollovionanim;
+    public RuntimeAnimatorController trepilloanim;
+    public RuntimeAnimatorController roboertoanim;
+    public RuntimeAnimatorController tufoanim;
+
+    public RuntimeAnimatorController trashratanim;
+    public RuntimeAnimatorController spideranim;
+    public RuntimeAnimatorController vivodadoanim;
+    public RuntimeAnimatorController dragonronanim;
+
 
 
     public float defensa;
@@ -194,7 +248,7 @@ public class shitene : MonoBehaviour
         {hierbaexp = 1.1f;}
         if (hierba == 3)
         {hierbaexp = 1.2f;}
-
+        
         //1
         if (bicho == "madcat")
         {
@@ -212,6 +266,7 @@ public class shitene : MonoBehaviour
             defensa = 0 * rangoexp;
             fuerza = 10 * rangoexp * hierbaexp;
             }
+            anim.runtimeAnimatorController = madcatanim1;
             nombre.text = "madcat";
         }
         if (bicho == "skybird")
@@ -230,6 +285,7 @@ public class shitene : MonoBehaviour
             defensa = 0 * rangoexp;
             fuerza = 10 * rangoexp * hierbaexp;
             }
+            anim.runtimeAnimatorController = skybirdanim1;
             nombre.text = "skybird";
 
         }
@@ -249,6 +305,7 @@ public class shitene : MonoBehaviour
             defensa = 0 * rangoexp;
             fuerza = 20 * rangoexp * hierbaexp;
             }
+            anim.runtimeAnimatorController = shitanim1;
             nombre.text = "shitfloor";
 
         }
@@ -268,6 +325,7 @@ public class shitene : MonoBehaviour
             defensa = 0 * rangoexp;
             fuerza = 10 * rangoexp * hierbaexp;
             }
+            anim.runtimeAnimatorController = topoanim1;
             nombre.text = "topo topo";
 
         }
@@ -288,6 +346,7 @@ public class shitene : MonoBehaviour
             defensa = 0 * rangoexp;
             fuerza = 10 * rangoexp * hierbaexp;
             }
+            anim.runtimeAnimatorController = dragonronanim;
             nombre.text = "dragon ron";
         }
         if (bicho == "elephant")
@@ -306,6 +365,7 @@ public class shitene : MonoBehaviour
             defensa = 0 * rangoexp;
             fuerza = 10 * rangoexp * hierbaexp;
             }
+            anim.runtimeAnimatorController = elephantanim;
             nombre.text = "elephant";
 
         }
@@ -325,6 +385,7 @@ public class shitene : MonoBehaviour
             defensa = 0 * rangoexp;
             fuerza = 20 * rangoexp * hierbaexp;
             }
+            anim.runtimeAnimatorController = roboertoanim;
             nombre.text = "roboerto";
 
         }
@@ -344,6 +405,7 @@ public class shitene : MonoBehaviour
             defensa = 0 * rangoexp;
             fuerza = 10 * rangoexp * hierbaexp;
             }
+            anim.runtimeAnimatorController = tufoanim;
             nombre.text = "tufo";
 
         }
@@ -364,6 +426,7 @@ public class shitene : MonoBehaviour
             defensa = 0 * rangoexp;
             fuerza = 10 * rangoexp * hierbaexp;
             }
+            anim.runtimeAnimatorController = antidoganim;
             nombre.text = "antidog";
         }
         if (bicho == "cazafantasmas")
@@ -382,6 +445,7 @@ public class shitene : MonoBehaviour
             defensa = 0 * rangoexp;
             fuerza = 10 * rangoexp * hierbaexp;
             }
+            anim.runtimeAnimatorController = cazafantasmasanim;
             nombre.text = "cazafantasmas";
 
         }
@@ -401,6 +465,7 @@ public class shitene : MonoBehaviour
             defensa = 0 * rangoexp;
             fuerza = 20 * rangoexp * hierbaexp;
             }
+            anim.runtimeAnimatorController = rabmonanim;
             nombre.text = "rabmon";
 
         }
@@ -420,6 +485,7 @@ public class shitene : MonoBehaviour
             defensa = 0 * rangoexp;
             fuerza = 10 * rangoexp * hierbaexp;
             }
+            anim.runtimeAnimatorController = vivodadoanim;
             nombre.text = "vivodado";
 
         }
@@ -440,6 +506,7 @@ public class shitene : MonoBehaviour
             defensa = 0 * rangoexp;
             fuerza = 10 * rangoexp * hierbaexp;
             }
+            anim.runtimeAnimatorController = livedishanim;
             nombre.text = "livedish";
         }
         if (bicho == "rosedragon")
@@ -458,6 +525,7 @@ public class shitene : MonoBehaviour
             defensa = 0 * rangoexp;
             fuerza = 10 * rangoexp * hierbaexp;
             }
+            anim.runtimeAnimatorController = rosedragonanim;
             nombre.text = "rose dragon";
 
         }
@@ -477,6 +545,7 @@ public class shitene : MonoBehaviour
             defensa = 0 * rangoexp;
             fuerza = 20 * rangoexp * hierbaexp;
             }
+            anim.runtimeAnimatorController = sharkmananim;
             nombre.text = "sharkman";
 
         }
@@ -496,6 +565,7 @@ public class shitene : MonoBehaviour
             defensa = 0 * rangoexp;
             fuerza = 10 * rangoexp * hierbaexp;
             }
+            anim.runtimeAnimatorController = spideranim;
             nombre.text = "spider";
 
         }
@@ -516,6 +586,7 @@ public class shitene : MonoBehaviour
             defensa = 0 * rangoexp;
             fuerza = 10 * rangoexp * hierbaexp;
             }
+            anim.runtimeAnimatorController = algosaurioanim;
             nombre.text = "algosaurio";
         }
         if (bicho == "dogtable")
@@ -534,6 +605,7 @@ public class shitene : MonoBehaviour
             defensa = 0 * rangoexp;
             fuerza = 10 * rangoexp * hierbaexp;
             }
+            anim.runtimeAnimatorController = dogtableanim;
             nombre.text = "dogtable";
 
         }
@@ -553,6 +625,7 @@ public class shitene : MonoBehaviour
             defensa = 0 * rangoexp;
             fuerza = 20 * rangoexp * hierbaexp;
             }
+            anim.runtimeAnimatorController = friendanim;
             nombre.text = "friend";
 
         }
@@ -572,6 +645,7 @@ public class shitene : MonoBehaviour
             defensa = 0 * rangoexp;
             fuerza = 10 * rangoexp * hierbaexp;
             }
+            anim.runtimeAnimatorController = trashratanim;
             nombre.text = "trashrat";
 
         }
@@ -592,6 +666,7 @@ public class shitene : MonoBehaviour
             defensa = 0 * rangoexp;
             fuerza = 10 * rangoexp * hierbaexp;
             }
+            anim.runtimeAnimatorController = ghostanim;
             nombre.text = "aghostin";
         }
         if (bicho == "heavydevil")
@@ -610,6 +685,7 @@ public class shitene : MonoBehaviour
             defensa = 0 * rangoexp;
             fuerza = 10 * rangoexp * hierbaexp;
             }
+            anim.runtimeAnimatorController = heavydevilanim;
             nombre.text = "heavy devil";
 
         }
@@ -629,6 +705,7 @@ public class shitene : MonoBehaviour
             defensa = 0 * rangoexp;
             fuerza = 20 * rangoexp * hierbaexp;
             }
+            anim.runtimeAnimatorController = kingsluganim;
             nombre.text = "king slug";
 
         }
@@ -648,6 +725,7 @@ public class shitene : MonoBehaviour
             defensa = 0 * rangoexp;
             fuerza = 10 * rangoexp * hierbaexp;
             }
+            anim.runtimeAnimatorController = pollovionanim;
             nombre.text = "pollovion";
 
         }
@@ -668,6 +746,7 @@ public class shitene : MonoBehaviour
             defensa = 0 * rangoexp;
             fuerza = 10 * rangoexp * hierbaexp;
             }
+            anim.runtimeAnimatorController = antanim;
             nombre.text = "sadistic ant";
         }
         if (bicho == "flanerio")
@@ -686,6 +765,7 @@ public class shitene : MonoBehaviour
             defensa = 0 * rangoexp;
             fuerza = 10 * rangoexp * hierbaexp;
             }
+            anim.runtimeAnimatorController = flanerioanim;
             nombre.text = "flanerio";
 
         }
@@ -705,6 +785,7 @@ public class shitene : MonoBehaviour
             defensa = 0 * rangoexp;
             fuerza = 20 * rangoexp * hierbaexp;
             }
+            anim.runtimeAnimatorController = flyeraanim;
             nombre.text = "flyera";
 
         }
@@ -724,6 +805,7 @@ public class shitene : MonoBehaviour
             defensa = 0 * rangoexp;
             fuerza = 10 * rangoexp * hierbaexp;
             }
+            anim.runtimeAnimatorController = gunmananim;
             nombre.text = "gunman";
 
         }
@@ -744,6 +826,7 @@ public class shitene : MonoBehaviour
             defensa = 0 * rangoexp;
             fuerza = 10 * rangoexp * hierbaexp;
             }
+            anim.runtimeAnimatorController = craneovilanim;
             nombre.text = "craneovil";
         }
         if (bicho == "darkknight")
@@ -762,6 +845,7 @@ public class shitene : MonoBehaviour
             defensa = 0 * rangoexp;
             fuerza = 10 * rangoexp * hierbaexp;
             }
+            anim.runtimeAnimatorController = darkknightanim;
             nombre.text = "dark knight";
 
         }
@@ -781,6 +865,7 @@ public class shitene : MonoBehaviour
             defensa = 0 * rangoexp;
             fuerza = 20 * rangoexp * hierbaexp;
             }
+            anim.runtimeAnimatorController = lizardoanim;
             nombre.text = "lizardo";
 
         }
@@ -800,6 +885,7 @@ public class shitene : MonoBehaviour
             defensa = 0 * rangoexp;
             fuerza = 10 * rangoexp * hierbaexp;
             }
+            anim.runtimeAnimatorController = trepilloanim;
             nombre.text = "trepillo";
 
         }
@@ -820,6 +906,7 @@ public class shitene : MonoBehaviour
             defensa = 0 * rangoexp;
             fuerza = 10 * rangoexp * hierbaexp;
             }
+            anim.runtimeAnimatorController = beeanim;
             nombre.text = "beestosa";
         }
         if (bicho == "fenix")
@@ -838,6 +925,7 @@ public class shitene : MonoBehaviour
             defensa = 0 * rangoexp;
             fuerza = 10 * rangoexp * hierbaexp;
             }
+            anim.runtimeAnimatorController = fenixanim;
             nombre.text = "fenix bug";
 
         }
@@ -857,6 +945,7 @@ public class shitene : MonoBehaviour
             defensa = 0 * rangoexp;
             fuerza = 20 * rangoexp * hierbaexp;
             }
+            anim.runtimeAnimatorController = krakenanim;
             nombre.text = "kraken";
 
         }
@@ -876,6 +965,7 @@ public class shitene : MonoBehaviour
             defensa = 0 * rangoexp;
             fuerza = 10 * rangoexp * hierbaexp;
             }
+            anim.runtimeAnimatorController = pesadillaanim;
             nombre.text = "pesadilla";
 
         }
@@ -896,6 +986,7 @@ public class shitene : MonoBehaviour
             defensa = 0 * rangoexp;
             fuerza = 10 * rangoexp * hierbaexp;
             }
+            anim.runtimeAnimatorController = bigfatanim;
             nombre.text = "bigfat";
         }
         if (bicho == "kingdragon")
@@ -914,6 +1005,7 @@ public class shitene : MonoBehaviour
             defensa = 0 * rangoexp;
             fuerza = 10 * rangoexp * hierbaexp;
             }
+            anim.runtimeAnimatorController = kingdragonanim;
             nombre.text = "king dragon";
 
         }
@@ -933,6 +1025,7 @@ public class shitene : MonoBehaviour
             defensa = 0 * rangoexp;
             fuerza = 20 * rangoexp * hierbaexp;
             }
+            anim.runtimeAnimatorController = mirroranim;
             nombre.text = "mirror-mirror";
 
         }
@@ -952,6 +1045,7 @@ public class shitene : MonoBehaviour
             defensa = 0 * rangoexp;
             fuerza = 10 * rangoexp * hierbaexp;
             }
+            anim.runtimeAnimatorController = pinguinoanim;
             nombre.text = "cyberpinguino";
 
         }

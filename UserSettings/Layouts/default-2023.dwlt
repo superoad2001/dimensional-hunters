@@ -152,7 +152,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 63
+  controlID: 59
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -177,7 +177,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 116
+  controlID: 112
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -214,7 +214,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: SimulatorWindow
+  m_Name: AnimationWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -223,15 +223,15 @@ MonoBehaviour:
     y: 0
     width: 815
     height: 360
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 21}
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 20}
   - {fileID: 21}
   - {fileID: 16}
-  m_Selected: 1
-  m_LastSelected: 2
+  m_Selected: 2
+  m_LastSelected: 1
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -817,9 +817,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 2.127953, y: 1.3895102, z: 0.1289028}
+    m_Target: {x: 4.593418, y: -0.27727497, z: 5.0671697}
     speed: 2
-    m_Value: {x: 2.127953, y: 1.3895102, z: 0.1289028}
+    m_Value: {x: 4.593418, y: -0.27727497, z: 5.0671697}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -865,13 +865,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.007872256, y: -0.6622325, z: -0.006948078, w: -0.74924195}
+    m_Target: {x: -0.09881667, y: 0.0215617, z: -0.0021332079, w: -0.99488264}
     speed: 2
-    m_Value: {x: 0.007872156, y: -0.66222405, z: -0.0069479896, w: -0.7492324}
+    m_Value: {x: -0.10031074, y: 0.020066097, z: -0.0020150582, w: -0.9947518}
   m_Size:
-    m_Target: 2.2175362
+    m_Target: 3.247161
     speed: 2
-    m_Value: 2.2175362
+    m_Value: 3.247161
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -3114,7 +3114,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 29674
+  m_LastSelectedObjectID: 46478
 --- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -3162,7 +3162,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/juego/Scenes
+    - Assets/juego/animaciones/combate/combate/3/antidog
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -3172,16 +3172,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/juego/Scenes
+  - Assets/juego/animaciones/combate/combate/3/antidog
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\repo\dimensional-hunters
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 6ca00000
-    m_LastClickedID: 41068
-    m_ExpandedIDs: 000000005ea0000060a0000062a0000000ca9a3b
+    m_SelectedIDs: 50b90000
+    m_LastClickedID: 47440
+    m_ExpandedIDs: 0000000006800000088000000a800000108000001480000034b900003ab9000040b9000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -3209,7 +3209,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000005ea0000060a0000062a00000
+    m_ExpandedIDs: 0000000006800000088000000a800000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -3240,18 +3240,18 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: c62300003c5e0000d80c02005c5e000096ef010000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: enemigo
-      m_OriginalName: enemigo
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 26252
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 5}
     m_CreateAssetUtility:
@@ -3264,7 +3264,7 @@ MonoBehaviour:
     m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 16
   m_SkipHiddenPackages: 0
-  m_DirectoriesAreaWidth: 160
+  m_DirectoriesAreaWidth: 164
 --- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -3353,9 +3353,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 665f0000
-      m_LastClickedID: 0
-      m_ExpandedIDs: 0accffff6cccffff1cfbffff
+      m_SelectedIDs: 8eb50000
+      m_LastClickedID: 46478
+      m_ExpandedIDs: 9861ffff0467ffff0867ffff1467ffff1867ffff1c67ffff2067ffff2c67ffff3067ffff3467ffff3867ffff0888ffff2888ffff468affff0ca1ffff2eceffff9ef9ffff1cfbffffd4a50000f2b400008eb50000d0b600005cb80000aab80000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -3477,8 +3477,8 @@ MonoBehaviour:
     pluginStates:
     - '{}'
     - '{}'
-    scale: 26
-    fitToScreenEnabled: 1
+    scale: 38
+    fitToScreenEnabled: 0
     rotationDegree: 270
     highlightSafeAreaEnabled: 0
     friendlyName: Google Pixel 5

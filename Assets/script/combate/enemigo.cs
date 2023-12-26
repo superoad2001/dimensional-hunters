@@ -1462,21 +1462,10 @@ public class enemigo : MonoBehaviour
                 bote.Stop();
                 prot.enabled = true;
                 
-                if(mana > -1)
-                {
+                
                     if (mana < manamax)
-                    {mana+= 3f * manarec * Time.deltaTime;}
-                }
-                if(mana > 50)
-                {
-                    if (mana < manamax)
-                    {mana+= 3.5f * manarec * Time.deltaTime;}
-                }
-                if(mana > 65)
-                {
-                    if (mana < manamax)
-                    {mana+= 4f * manarec * Time.deltaTime;}
-                }
+                    {mana+= manamax/100 * 1 * manarec * Time.deltaTime;}
+            
             
                 escudo.gameObject.SetActive(false);
             

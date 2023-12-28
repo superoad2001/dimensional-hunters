@@ -10,11 +10,12 @@ public class cazar : MonoBehaviour
     public float iniciotem = 0;
     //cuando comienzas hay un solido negro que tapa la carga del nivel
     public GameObject negro;
+    public string plat;
 
     public GameObject cam;
     void Start()
     {
-        
+        plat = PlayerPrefs.GetString("plat","game3d");
         cam.transform.position = new Vector3(0,0,0);
         //resetea el espacio de juego entre sesiones asi no se guarada la posicion cuando cambias de nivel
     }
@@ -25,11 +26,13 @@ public class cazar : MonoBehaviour
     }
     void Update()
     {
-        
-        if (iniciotem > 1 && iniciotem < 2)
+        if(plat == "arcore")
         {
-            arSession.Reset ();
+            if (iniciotem > 1 && iniciotem < 2)
+            {
+                arSession.Reset ();
 
+            }
         }
         // a los 2 segundo el solido negro desaparece
         if (iniciotem > 2)

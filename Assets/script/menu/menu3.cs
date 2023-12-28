@@ -33,10 +33,17 @@ public class menu3 : MonoBehaviour
     }
     public void _arcore()
     {
+        PlayerPrefs.SetString("plat","arcore");
         SceneManager.LoadScene("seleccion2");
     }
     public void _game3d()
     {
+        PlayerPrefs.SetString("plat","game3d");
+        SceneManager.LoadScene("seleccion2");
+    }
+    public void _game3dt()
+    {
+        PlayerPrefs.SetString("plat","game3dt");
         SceneManager.LoadScene("seleccion2");
     }
 

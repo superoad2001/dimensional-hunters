@@ -24,6 +24,8 @@ public class obtenermenu : MonoBehaviour
     public string raza ;
     public float rangor ;
 
+    public Text nameenviar ;
+
     //el hp para los terrenales
     //la mana para los viscosos
     //la fuerza para los de tipo fuerza
@@ -582,6 +584,10 @@ public class obtenermenu : MonoBehaviour
         no = false;
         borrar2 = false;
 
+    }
+    public void enviar()
+    {
+        uitext.text = nameenviar.text;
     }
     public void modelos0()
     {

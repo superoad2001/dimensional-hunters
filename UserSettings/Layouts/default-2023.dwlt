@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1366
     height: 677
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Project
   m_RootView: {fileID: 10}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -817,9 +817,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0, y: 0, z: 0}
+    m_Target: {x: -5.1389565, y: 2.7900898, z: 3.910317}
     speed: 2
-    m_Value: {x: 0.00021692357, y: 0.00011150219, z: -0.000023107074}
+    m_Value: {x: -5.1389565, y: 2.7900898, z: 3.910317}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -865,13 +865,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.18768458, y: -0.13004707, z: 0.025078751, w: -0.9732738}
+    m_Target: {x: -0.02381937, y: -0.65404195, z: 0.020605724, w: -0.7558217}
     speed: 2
-    m_Value: {x: -0.18768457, y: -0.13004707, z: 0.02507875, w: -0.9732738}
+    m_Value: {x: -0.02381902, y: -0.65403235, z: 0.020605423, w: -0.7558106}
   m_Size:
-    m_Target: 10
+    m_Target: 3.6622365
     speed: 2
-    m_Value: 10
+    m_Value: 3.6622365
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -3240,15 +3240,15 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: c62300003c5e0000d80c02005c5e000096ef010000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: combatecaza
-      m_OriginalName: combatecaza
+      m_Name: cazar10
+      m_OriginalName: cazar10
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 41306
+      m_UserData: 41304
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
@@ -3308,7 +3308,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 540
+  m_LastVerticalScrollValue: 930
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
@@ -3352,24 +3352,24 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 8}
-      m_SelectedIDs: 52baffff
-      m_LastClickedID: -17838
-      m_ExpandedIDs: 52ccffff18e3ffff1cfbffff8ea50000
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 5aa10000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 78effcffc0f1fcffaaf4fcff1612fdff6814fdff662bfdfff645fdff7c71fdffde71fdfff09efdff62cafdff3ae2fdff1010feff1227feff043efeffae54feffa26bfeff9482feff06aefeff68aefefff2dbfeffdef4feff4cf7feffec28ffff9633ffff9a33ffff2a5fffff8c5fffffee5fffff6895ffff7eacffffeeb0ffff5cb3ffffc0b5ffff90ccffff56e3ffff1cfbffff60ac00000cad00002ead0000c6af00005cb0000068de000018df00004edf000084df0000aee200008e120100de140100b4260100602701004a280100342901003e310100a2320100f2550100147c0100ee810100608201008c820100048401001c84010010c301003ac3010080c30100bcc30100dec3010040c401002ad00100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: jugador
+        m_OriginalName: jugador
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: 118920
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 2}
       m_SearchString: 

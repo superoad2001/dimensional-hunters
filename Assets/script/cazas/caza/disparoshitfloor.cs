@@ -4,9 +4,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
+using Rewired;
 
 public class disparoshitfloor : MonoBehaviour
 {
+    [SerializeField]private int playerID = 0;
+	[SerializeField]private Player player;
     public ARSession arSession;
     public GameObject BalaInicio;
 	public GameObject BalaPrefab;
@@ -49,12 +52,18 @@ public class disparoshitfloor : MonoBehaviour
     public Text hpt;
     public Text manat;
     public float fuerzaene;
+    public string plat;
     void Start()
     {
+        plat = PlayerPrefs.GetString("plat","game3d");
+        if(plat == "arcore")
+        {
         arSession.Reset ();
+        }
          new Vector3(0,0,0);
         cam.transform.position = new Vector3(0,0,0f);
         rango = PlayerPrefs.GetInt("rango", 1);
+        player = ReInput.players.GetPlayer(playerID);
         if(rango == 1)
         {rangoexp = 1;}
         if(rango == 2)
@@ -253,7 +262,7 @@ public class disparoshitfloor : MonoBehaviour
             if(salir == true)
             {SceneManager.LoadScene("seleccion");}
             salir = false;
-            if (disp == true && temp >= 0.7f)
+            if (disp == true && temp >= 0.7f || player.GetAxis("rb") > 0 && temp >= 0.7f)
             {
                 
                     rota = BalaInicio.transform.rotation;
@@ -273,7 +282,7 @@ public class disparoshitfloor : MonoBehaviour
                 escudorec = false;
                 barramana.color = new Color(0,221,255,255);
             }
-            if(escudoact == true && mana > 1 && escudorec == false)
+            if(escudoact == true && mana > 1 && escudorec == false || player.GetAxis("lb") > 0 && mana > 1 && escudorec == false)
             {
                 escudo = true;
                 mana -= 100 * Time.deltaTime;

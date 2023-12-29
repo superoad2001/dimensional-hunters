@@ -11,7 +11,7 @@ public class managerargame : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        plat = PlayerPrefs.GetString("plat","game3d");
+        plat = PlayerPrefs.GetString("plat","game3dt");
         if(plat == "arcore")
         {
             arcore.SetActive(true);
@@ -23,6 +23,8 @@ public class managerargame : MonoBehaviour
             arcore.SetActive(false);
             game3d.SetActive(true);
             game3dtact.SetActive(false);
+            Cursor.visible = false;
+        	Cursor.lockState = CursorLockMode.Locked;
         }
         if(plat == "game3dt")
         {

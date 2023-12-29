@@ -16,7 +16,10 @@ public class cazar : MonoBehaviour
     void Start()
     {
         plat = PlayerPrefs.GetString("plat","game3d");
+        if(plat == "arcore")
+        {
         cam.transform.position = new Vector3(0,0,0);
+        }
         //resetea el espacio de juego entre sesiones asi no se guarada la posicion cuando cambias de nivel
     }
     

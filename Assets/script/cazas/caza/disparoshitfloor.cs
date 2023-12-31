@@ -59,11 +59,13 @@ public class disparoshitfloor : MonoBehaviour
         if(plat == "arcore")
         {
         arSession.Reset ();
-        }
-         new Vector3(0,0,0);
         cam.transform.position = new Vector3(0,0,0f);
+        }
+        if(plat == "game3d" || plat == "game3dt")
+        {
+         player = ReInput.players.GetPlayer(playerID);
+        }
         rango = PlayerPrefs.GetInt("rango", 1);
-        player = ReInput.players.GetPlayer(playerID);
         if(rango == 1)
         {rangoexp = 1;}
         if(rango == 2)
@@ -262,41 +264,83 @@ public class disparoshitfloor : MonoBehaviour
             if(salir == true)
             {SceneManager.LoadScene("seleccion");}
             salir = false;
-            if (disp == true && temp >= 0.7f || player.GetAxis("rb") > 0 && temp >= 0.7f)
+            if(plat == "arcore")
             {
-                
-                    rota = BalaInicio.transform.rotation;
-                    GameObject BalaTemporal = Instantiate(BalaPrefab, BalaInicio.transform.position,rota) as GameObject;
-
-                    Rigidbody rb = BalaTemporal.GetComponent<Rigidbody>();
-
+                if (disp == true && temp >= 0.7f)
+                {
                     
+                        rota = BalaInicio.transform.rotation;
+                        GameObject BalaTemporal = Instantiate(BalaPrefab, BalaInicio.transform.position,rota) as GameObject;
 
-                    Destroy(BalaTemporal, 5.0f);
-                    temp = 0;
+                        Rigidbody rb = BalaTemporal.GetComponent<Rigidbody>();
 
-            
-            }
-            if(escudorec == true && mana >= 100)
-            {
-                escudorec = false;
-                barramana.color = new Color(0,221,255,255);
-            }
-            if(escudoact == true && mana > 1 && escudorec == false || player.GetAxis("lb") > 0 && mana > 1 && escudorec == false)
-            {
-                escudo = true;
-                mana -= 100 * Time.deltaTime;
-                if(mana < 0){mana = 0;}
-                escudoonda.SetActive(true);
-            }
-            else
-            {
-                escudo = false;
+                        
 
-                mana += 10 * Time.deltaTime;
-                if(mana > 100)
-                {mana = 100;}
-                escudoonda.SetActive(false);
+                        Destroy(BalaTemporal, 5.0f);
+                        temp = 0;
+
+                
+                }
+                if(escudorec == true && mana >= 100)
+                {
+                    escudorec = false;
+                    barramana.color = new Color(0,221,255,255);
+                }
+                if(escudoact == true && mana > 1 && escudorec == false)
+                {
+                    escudo = true;
+                    mana -= 100 * Time.deltaTime;
+                    if(mana < 0){mana = 0;}
+                    escudoonda.SetActive(true);
+                }
+                else
+                {
+                    escudo = false;
+
+                    mana += 10 * Time.deltaTime;
+                    if(mana > 100)
+                    {mana = 100;}
+                    escudoonda.SetActive(false);
+                }
+            }
+            if(plat == "game3d" || plat == "game3dt")
+            {
+                if (disp == true && temp >= 0.7f || player.GetAxis("rb") > 0 && temp >= 0.7f)
+                {
+                    
+                        rota = BalaInicio.transform.rotation;
+                        GameObject BalaTemporal = Instantiate(BalaPrefab, BalaInicio.transform.position,rota) as GameObject;
+
+                        Rigidbody rb = BalaTemporal.GetComponent<Rigidbody>();
+
+                        
+
+                        Destroy(BalaTemporal, 5.0f);
+                        temp = 0;
+
+                
+                }
+                if(escudorec == true && mana >= 100)
+                {
+                    escudorec = false;
+                    barramana.color = new Color(0,221,255,255);
+                }
+                if(escudoact == true && mana > 1 && escudorec == false || player.GetAxis("lb") > 0 && mana > 1 && escudorec == false)
+                {
+                    escudo = true;
+                    mana -= 100 * Time.deltaTime;
+                    if(mana < 0){mana = 0;}
+                    escudoonda.SetActive(true);
+                }
+                else
+                {
+                    escudo = false;
+
+                    mana += 10 * Time.deltaTime;
+                    if(mana > 100)
+                    {mana = 100;}
+                    escudoonda.SetActive(false);
+                }
             }
             if (mana <= 1)
             {

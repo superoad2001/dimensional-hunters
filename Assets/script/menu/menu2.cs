@@ -21,11 +21,13 @@ public class menu2 : MonoBehaviour
     public Text tie;
     public Text inve;
     public Text red;
+    public bool rangomost;
     // Start is called before the first frame update
     void Start()
     {
         rango = PlayerPrefs.GetInt("rango", 1);
-        rangot.text = ""+rango;
+        if(rangomost == true)
+        {rangot.text = ""+rango;}
     }
     public void _cazar()
     {

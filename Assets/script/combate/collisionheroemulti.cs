@@ -12,18 +12,21 @@ public class collisionheroemulti : NetworkBehaviour
     }
     public heromulti heroe;
     public heromulti2 heroe2;
+    public int client;
+
     // Update is called once per frame
     void Update()
     {
-        if (transform.position == new Vector3(-3.83999991f,0.583000004f,5.58799982f)  && heroe.temp4 > 0.4f && NetworkManager.IsHost == true)
+        client = PlayerPrefs.GetInt("clientid",0);
+        
+        if (transform.position == new Vector3(-3.83999991f,0.583000004f,5.58799982f)  && heroe.temp4 > 0.4f && client == 1)
             {
                 Debug.Log("jugador1: 3");
                 heroe.activar = false;
                 heroe.permiso = false;
                 heroe.temp4 = 0;
-                int atk = 0;
-                heroe._permiso(false);
-                heroe._atk(atk);
+                heroe.ataque = 0;
+                heroe.parar();
             }
 
 
@@ -31,31 +34,29 @@ public class collisionheroemulti : NetworkBehaviour
     public void OnTriggerEnter(Collider col)
     {
         
-        if (col.gameObject.tag == "enemigo" && NetworkManager.IsHost == true)
+        if (col.gameObject.tag == "enemigo")
         {
 
             Debug.Log("jugador1: 1");
-            if (heroe.activar == true)
+            if (heroe.activar == true && client == 1)
             {
 
                 Debug.Log("jugador1: 2");
-                float atke = heroe.ataque;
-                int atk = 0;
-                heroe._atk(atk);
-                heroe2._golpe(atke);
+                heroe2.golpe(heroe.ataque);
                 heroe2.hp = heroe2.hpr.Value;
                 heroe.activar = false;
                 heroe2.danos.Play();
+                heroe.ataque = 0;
+                heroe.parar2();
                 
 
             }
 
         }
-        if (col.gameObject.tag == "pini" && NetworkManager.IsHost == true)
+        if (col.gameObject.tag == "pini" && client == 1)
         {
-            heroe._permiso(false);
-            heroe._atk(0);
             heroe.ataque = 0;
+            heroe.parar();
             
         }
 

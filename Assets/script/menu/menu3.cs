@@ -25,7 +25,6 @@ public class menu3 : MonoBehaviour
     void Start()
     {
         rango = PlayerPrefs.GetInt("rango", 1);
-        rangot.text = ""+rango;
     }
     public void _atras()
     {

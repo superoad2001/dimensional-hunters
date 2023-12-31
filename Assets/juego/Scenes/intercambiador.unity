@@ -179,6 +179,8 @@ MonoBehaviour:
   mana: 0
   manarec: 0
   fuerza: 0
+  rango: 0
+  clase: 0
   nivel: 0
   elemento: 
   exp: 0
@@ -399,6 +401,10 @@ MonoBehaviour:
     m_InternalValue: 0
   fuerzar:
     m_InternalValue: 0
+  rangor:
+    m_InternalValue: 1
+  claser:
+    m_InternalValue: 1
   nivelr:
     m_InternalValue: 1
   managermulti: {fileID: 849706757}
@@ -436,6 +442,8 @@ MonoBehaviour:
   mana: 0
   manarec: 0
   fuerza: 0
+  rango: 0
+  clase: 0
   nivel: 0
   elemento: 
   exp: 0
@@ -657,6 +665,10 @@ MonoBehaviour:
   manarecr:
     m_InternalValue: 0
   fuerzar:
+    m_InternalValue: 0
+  rangor:
+    m_InternalValue: 0
+  claser:
     m_InternalValue: 0
   nivelr:
     m_InternalValue: 1
@@ -1863,6 +1875,8 @@ MonoBehaviour:
   nivel: []
   bichosmios: []
   exp: []
+  rango: []
+  clase: []
   dinero: 0
   hierbaomega: 0
   licencia: []
@@ -3620,6 +3634,8 @@ MonoBehaviour:
   nivel: []
   bichosmios: []
   exp: []
+  rango: []
+  clase: []
   dinero: 0
   hierbaomega: 0
   licencia: []
@@ -4723,8 +4739,8 @@ MonoBehaviour:
   m_DisconnectTimeoutMS: 30000
   ConnectionData:
     Address: 0.0.0.0
-    Port: 7777
-    ServerListenAddress: 127.0.0.1
+    Port: 1111
+    ServerListenAddress: 0.0.0.0
   DebugSimulator:
     PacketDelayMS: 0
     PacketJitterMS: 0

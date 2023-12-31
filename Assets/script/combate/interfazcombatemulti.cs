@@ -7,7 +7,7 @@ using UnityEngine.XR.ARFoundation;
 
 public class interfazcombatemulti : MonoBehaviour
 {
-   public ARSession arSession;
+    public ARSession arSession;
     public Image barrahp;
     public Image barrama;
     public Image barrat;
@@ -26,9 +26,14 @@ public class interfazcombatemulti : MonoBehaviour
     public GameObject cam;
 
     public bool salir = false;
+    public string plat;
     void Start()
     {
-        cam.transform.position = new Vector3(0,0,0f);
+        plat = PlayerPrefs.GetString("plat","game3d");
+        if(plat == "arcore")
+        {
+            cam.transform.position = new Vector3(0,0,0f);
+        }
     }
     public void _salir()
     {
@@ -37,10 +42,15 @@ public class interfazcombatemulti : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (iniciotem > 0 && iniciotem < 1)
-        {
-            arSession.Reset ();
 
+
+        if(plat == "arcore")
+        {
+            if (iniciotem > 0 && iniciotem < 1)
+            {
+                arSession.Reset ();
+
+            }
         }
 
         if(salir == true)

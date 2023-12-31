@@ -22,9 +22,14 @@ public class interfazentr : MonoBehaviour
     public bool salir = false;
     public GameObject cam;
     public float iniciotem = 0;
+    public string plat;
     void Start()
     {
-        cam.transform.position = new Vector3(0,0,0f);
+        plat = PlayerPrefs.GetString("plat","game3d");
+        if(plat == "arcore")
+        {
+            cam.transform.position = new Vector3(0,0,0f);
+        }
     }
     public void _salir()
     {
@@ -33,10 +38,13 @@ public class interfazentr : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (iniciotem > 1 && iniciotem < 2)
+        if(plat == "arcore")
         {
-            arSession.Reset ();
+            if (iniciotem > 0 && iniciotem < 1)
+            {
+                arSession.Reset ();
 
+            }
         }
 
         if(salir == true)

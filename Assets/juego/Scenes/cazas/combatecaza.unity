@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 9a819b815e161b64e8c78164c1902994, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
+  m_IndirectSpecularColor: {r: 0.06528868, g: 0.12123128, b: 0.22167347, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1243,11 +1243,12 @@ Transform:
   m_GameObject: {fileID: 279160545}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -3.6363637}
-  m_LocalScale: {x: 0.7246377, y: 1.3698629, z: 4.5454545}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 667550899}
+  m_Children:
+  - {fileID: 667550899}
+  m_Father: {fileID: 327107337}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &327107335
 GameObject:
@@ -1296,7 +1297,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 667550899}
+  - {fileID: 279160551}
   m_Father: {fileID: 596369899}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &332511551
@@ -3431,13 +3432,12 @@ Transform:
   m_GameObject: {fileID: 667550898}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.8}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.38, y: 0.73, z: 0.22}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 279160551}
   - {fileID: 109424705}
-  m_Father: {fileID: 327107337}
+  m_Father: {fileID: 279160551}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &667550901
 MeshRenderer:
@@ -3592,7 +3592,7 @@ CapsuleCollider:
   m_Radius: 0.3532429
   m_Height: 2.4161222
   m_Direction: 1
-  m_Center: {x: 0.14675678, y: -0.54693747, z: -3.24}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &696710998
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4018,6 +4018,8 @@ MonoBehaviour:
   BalaInicio: {fileID: 68503713}
   BalaPrefab: {fileID: 8074607301907974608, guid: 39ef306dccf37d844a215b1b7e2ff0a6, type: 3}
   player: {fileID: 667550898}
+  playerar: {fileID: 667550898}
+  player3d: {fileID: 953976123}
   bicho: madcat
   madcat: {fileID: 1886124241}
   skybird: {fileID: 440423814}
@@ -4109,6 +4111,7 @@ MonoBehaviour:
   hierbaexp: 0
   fuerza: 0
   anim: {fileID: 68503718}
+  plat: 
 --- !u!1001 &848260888
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4135,7 +4138,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8144037599045065202, guid: 1245b8d2997d5b34fb1637be70a7eb05, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.65
+      value: -0.255
       objectReference: {fileID: 0}
     - target: {fileID: 8144037599045065202, guid: 1245b8d2997d5b34fb1637be70a7eb05, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4442,11 +4445,35 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 953976126}
+          m_TargetAssemblyTypeName: disparoshitfloor, Assembly-CSharp
+          m_MethodName: disparo
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 3
     callback:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 667550904}
+          m_TargetAssemblyTypeName: disparoshitfloor, Assembly-CSharp
+          m_MethodName: notdisparo
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 953976126}
           m_TargetAssemblyTypeName: disparoshitfloor, Assembly-CSharp
           m_MethodName: notdisparo
           m_Mode: 1
@@ -5748,7 +5775,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &1220134215
 RectTransform:
@@ -5907,6 +5934,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 499561306}
     m_Modifications:
+    - target: {fileID: 410340562614381, guid: 69d3fd53d4243fc42b1eb560e1c96771, type: 3}
+      propertyPath: _dontDestroyOnLoad
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 575680743370123057, guid: 69d3fd53d4243fc42b1eb560e1c96771, type: 3}
       propertyPath: m_Name
       value: Rewired Input Manager
@@ -6901,7 +6932,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_TargetDisplay: 0
 --- !u!1 &1693270248
 GameObject:
@@ -6913,6 +6944,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1693270249}
   - component: {fileID: 1693270250}
+  - component: {fileID: 1693270251}
   m_Layer: 0
   m_Name: cam
   m_TagString: Untagged
@@ -6986,6 +7018,14 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!81 &1693270251
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1693270248}
+  m_Enabled: 1
 --- !u!1 &1696242450
 GameObject:
   m_ObjectHideFlags: 0
@@ -7054,11 +7094,35 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 953976126}
+          m_TargetAssemblyTypeName: disparoshitfloor, Assembly-CSharp
+          m_MethodName: _escudo
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 3
     callback:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 667550904}
+          m_TargetAssemblyTypeName: disparoshitfloor, Assembly-CSharp
+          m_MethodName: _noescudo
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 953976126}
           m_TargetAssemblyTypeName: disparoshitfloor, Assembly-CSharp
           m_MethodName: _noescudo
           m_Mode: 1
@@ -7545,7 +7609,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interactable: 1
-  _visible: 1
+  _visible: 0
   _hideWhenIdle: 0
   _allowedMouseButtons: 1
   _transitionType: 0
@@ -8485,7 +8549,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8144037599045065202, guid: 1245b8d2997d5b34fb1637be70a7eb05, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.65
+      value: -0.416
       objectReference: {fileID: 0}
     - target: {fileID: 8144037599045065202, guid: 1245b8d2997d5b34fb1637be70a7eb05, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8900,7 +8964,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plat: 
-  arcore: {fileID: 0}
+  arcore: {fileID: 596369898}
   game3d: {fileID: 499561305}
   game3dtact: {fileID: 1199006150}
 --- !u!4 &2092717901

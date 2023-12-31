@@ -20,6 +20,7 @@ public class networkui : NetworkBehaviour
     public Text input3;
     public Text codigo;
     public managermulti manamulti;
+    public int client;
 
     public Unity.Netcode.Transports.UTP.UnityTransport.ConnectionAddressData UnityTransport;
 
@@ -47,7 +48,7 @@ public class networkui : NetworkBehaviour
         {
         if(NetworkManager.Singleton.ConnectedClients.Count == 2)
         {
-            manamulti.check2.Value = true;
+            manamulti.checkServerRpc(manamulti.check1.Value,true);
         }
         }
         if(IsOwner){
@@ -60,9 +61,10 @@ public class networkui : NetworkBehaviour
         NetworkManager.Singleton.StartHost();
         GetLocalIPAddress();
         activar = true;
-        heroe.carga = false;
-        manamulti.check1.Value = true;
+        manamulti.checkServerRpc(true,manamulti.check1.Value);
+        PlayerPrefs.SetInt("clientid",1);
         }
+        
     }
     public void startclient()
     {
@@ -72,8 +74,7 @@ public class networkui : NetworkBehaviour
 		SetIpAddress();
         NetworkManager.Singleton.StartClient();
         activar = true;
-        heroe2.carga = false;
-        manamulti.check2c = true;
+        PlayerPrefs.SetInt("clientid",2);
         }
     }
 
@@ -84,12 +85,9 @@ public class networkui : NetworkBehaviour
         heroe.carga = false;
         heroe2.carga = false;
         codigo.text = "";
-        if(IsOwner == true)
-        {manamulti.check1.Value = false;
-        manamulti.check2.Value = false;}
+        manamulti.checkServerRpc(false,false);
         NetworkManager.Singleton.Shutdown();
-        manamulti.check1c = false;
-        manamulti.check2c = false;
+        PlayerPrefs.SetInt("clientid",0);
 
         
     }

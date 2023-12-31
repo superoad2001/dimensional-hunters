@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 777ab6f8a28814b4f8743f807c086e4d, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
+  m_IndirectSpecularColor: {r: 0.06535981, g: 0.060318086, b: 0.22162691, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -498,11 +498,12 @@ Transform:
   m_GameObject: {fileID: 279160545}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1.25}
-  m_LocalScale: {x: 0.8196721, y: 0.5952381, z: 1.1627907}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 667550899}
+  m_Children:
+  - {fileID: 667550899}
+  m_Father: {fileID: 327107337}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &282810538
 PrefabInstance:
@@ -746,7 +747,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 667550899}
+  - {fileID: 279160551}
   m_Father: {fileID: 2010713345}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &344113311
@@ -1488,9 +1489,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 1.075}
   m_LocalScale: {x: 1.22, y: 1.68, z: 0.86}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 279160551}
-  m_Father: {fileID: 327107337}
+  m_Children: []
+  m_Father: {fileID: 279160551}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &667550900
 BoxCollider:
@@ -2059,7 +2059,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interactable: 1
-  _visible: 1
+  _visible: 0
   _hideWhenIdle: 0
   _allowedMouseButtons: 1
   _transitionType: 0
@@ -2525,7 +2525,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arSession: {fileID: 0}
   iniciotem: 0
-  negro: {fileID: 0}
+  negro: {fileID: 1429070327}
   plat: 
   cam: {fileID: 0}
 --- !u!23 &1085208505

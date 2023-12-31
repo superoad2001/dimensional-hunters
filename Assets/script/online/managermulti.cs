@@ -10,7 +10,7 @@ public class managermulti : NetworkBehaviour
 {
     public GameObject menu;
     public GameObject combate;
-    public GameObject botones;
+
 
     public heromulti heroe;
     public heromulti2 heroe2;
@@ -34,8 +34,7 @@ public class managermulti : NetworkBehaviour
     {
         if(IsOwner && check2c == true && check1c == true)
         {
-            cambio.Value = true;
-            comenzar.Value = true;
+            cambiarServerRpc(true,true);
         }
         
     }
@@ -75,5 +74,17 @@ public class managermulti : NetworkBehaviour
             menu.SetActive(false);
             combate.SetActive(true);
         }
+    }
+    [ServerRpc(RequireOwnership = false)]
+    public void cambiarServerRpc(bool cambioc, bool comenzarc)
+    {
+        cambio.Value = cambioc;
+        comenzar.Value = comenzarc;
+    }
+    [ServerRpc(RequireOwnership = false)]
+    public void checkServerRpc(bool check1c, bool check2c)
+    {
+        check1.Value = check1c;
+        check2.Value = check2c;
     }
 }

@@ -31,8 +31,8 @@ public class playermov : MonoBehaviour
         }
 
 
-        rotationinput.x = player.GetAxis("rhorizontal") * 110 * Time.deltaTime;
-        rotationinput.y = player.GetAxis("rvertical") * 110 * Time.deltaTime;
+        rotationinput.x = player.GetAxis("rhorizontal") * 80 * Time.deltaTime;
+        rotationinput.y = player.GetAxis("rvertical") * 80 * Time.deltaTime;
 
         cameraverticalangle +=  rotationinput.y;
         cameraverticalangle = Mathf.Clamp(cameraverticalangle, -50 , 20);

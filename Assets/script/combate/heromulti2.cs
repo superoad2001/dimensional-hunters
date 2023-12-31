@@ -66,7 +66,7 @@ public class heromulti2  : NetworkBehaviour
 
     public Text turboui;
 
-
+    public colorbicho7 colorbicho;
 
 
 
@@ -121,6 +121,8 @@ public class heromulti2  : NetworkBehaviour
     public Text mename;
 
     public Collider prot;
+
+    public float tempc;
 
     public GameObject escudo;
     public float rangoexp;
@@ -247,6 +249,9 @@ public class heromulti2  : NetworkBehaviour
 
     public bool carga;
 
+    public int client;
+
+
     
     // Start is called before the first frame update
     public void Start()
@@ -284,9 +289,10 @@ public class heromulti2  : NetworkBehaviour
     // Update is called once per frame
     public void Update()
     {  
+        client = PlayerPrefs.GetInt("clientid",0);
 
         turboui.text = (int)turbobar+"%";
-        if(IsOwner)
+        if(client == 1)
         {
             if(atkr.Value == 0)
             {
@@ -315,11 +321,9 @@ public class heromulti2  : NetworkBehaviour
                 baseanim.SetBool("atkturbo", true);
             }
         }
-        if(carga == false && managermulti.comenzar.Value == true)
+        if(managermulti.comenzar.Value == true && tempc < 3f)
         {
-        carga = true;
-        colorbicho7 colorbicho = UnityEngine.Object.FindObjectOfType<colorbicho7>();
-        if(!IsOwner)
+        if(client == 2)
         {
         hp = PlayerPrefs.GetFloat("hps", 100);
         mana = PlayerPrefs.GetFloat("manas", 100);
@@ -381,10 +385,12 @@ public class heromulti2  : NetworkBehaviour
         {rangoexp = 10;}
 
         cargadatosServerRpc(hp,mana,manarec,fuerza,hname,bicho,turbobar,atb,hpmax,manamax,nivel,rango,clase);
-
-    
+        modelos();
+        colorbicho = UnityEngine.Object.FindObjectOfType<colorbicho7>();
+        colorbicho.colorb();
+        tempc += 1 * Time.deltaTime;
         }
-        if(IsOwner)
+        if(client == 1)
         {
         hp = hpr.Value;
         mana = manar.Value;
@@ -397,29 +403,33 @@ public class heromulti2  : NetworkBehaviour
         clase = claser.Value;
         rango = rangor.Value;
         nivel = nivelr.Value;
+        tempc += 1 * Time.deltaTime;
+        Debug.Log("proceso");
+        Debug.Log("hp1: "+hpr.Value);
         }
-        modelos();
-        colorbicho.colorb();
+        
 
-        carga = true;
         }
 
 
 
 
         managerdecombatemulti manager = UnityEngine.Object.FindObjectOfType<managerdecombatemulti>();
-        if(managermulti.comenzar.Value == true)
+        if(managermulti.comenzar.Value == true && tempc >= 3f)
         {
-        if(IsOwner && manager.comienzo == false)
+            Debug.Log("hp2: "+hpr.Value);
+        if(client == 1 && manager.comienzo == false)
         {
             modelos();
+            colorbicho = UnityEngine.Object.FindObjectOfType<colorbicho7>();
+            colorbicho.colorb();
         }
-        if(!IsOwner)
+        if(client == 2)
         {
             permiso = permisor.Value;
         }
         hp = hpr.Value;
-        if(IsOwner)
+        if(client == 1)
         {
         mana = manar.Value;
         manarec = manarecr.Value;
@@ -445,7 +455,7 @@ public class heromulti2  : NetworkBehaviour
         }
         if (manager.comienzo == true)
         {
-            if(!IsOwner)
+            if(client == 2)
             {
             baseanim.SetBool("atkrapfue", false);
             baseanim.SetBool("atkvel", false);
@@ -558,15 +568,15 @@ public class heromulti2  : NetworkBehaviour
             }
             else if(def == true)
             {botno.Play();}
-            else if(!IsOwner)
+            else if(client == 2)
             {   
                 botebool = false;
                 bote.Stop();
                 defusar = false;
                 prot.enabled = true;
                 
-                    if (mana < manamax)
-                    {mana+= manamax/100 * 1 * manarec * Time.deltaTime;}
+                if (mana < manamax)
+                {mana+= 3 * manarec * Time.deltaTime;}
                 
                 escudo.gameObject.SetActive(false);
                 defServerRpc(false);
@@ -607,21 +617,21 @@ public class heromulti2  : NetworkBehaviour
         mename.text = hname;
     
 
-        if(IsOwner && defr.Value == true)
+        if(client == 1 && defr.Value == true)
         {
             prot.enabled = false;
             escudo.gameObject.SetActive(true);
         }
-        if(IsOwner && defr.Value == false)
+        if(client == 1 && defr.Value == false)
         {
             prot.enabled = true;
             escudo.gameObject.SetActive(false);
         }
-        if(!IsOwner)
+        if(client == 2)
         {
             cargadatos2ServerRpc(mana,turbobar,atb,permiso);
         }
-        if(!IsOwner)
+        if(client == 2)
         {
             PlayerPrefs.SetFloat("nivelg",enemigo.nivel);
             PlayerPrefs.SetFloat("rangoene",enemigo.rango);
@@ -665,7 +675,7 @@ public class heromulti2  : NetworkBehaviour
     {
         defr.Value = defrc;
     }
-    public void _golpe(float atk)
+    public void golpe(float atk)
     {
         hpr.Value -= atk;
     }
@@ -673,6 +683,11 @@ public class heromulti2  : NetworkBehaviour
     public void atkServerRpc(int tipo)
     {
        atkr.Value = tipo;
+    }
+    [ServerRpc(RequireOwnership = false)]
+    public void golpeServerRpc(int atk)
+    {
+       hpr.Value -= atk;
     }
 
 

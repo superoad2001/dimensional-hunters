@@ -16,6 +16,8 @@ public class shitene : MonoBehaviour
     public GameObject BalaInicio;
 	public GameObject BalaPrefab;
     public GameObject player;
+    public GameObject playerar;
+    public GameObject player3d;
     public string bicho = "madcat";
 
 
@@ -141,11 +143,22 @@ public class shitene : MonoBehaviour
     public float hierbaexp;
     public float fuerza;
     public Animator anim;
+    public string plat;
     // Start is called before the first frame update
     void Start()
     {
+        plat = PlayerPrefs.GetString("plat","game3d");
         bicho = PlayerPrefs.GetString("bichocaza", "madcat");
         rango = PlayerPrefs.GetInt("rango", 1);
+
+        if(plat == "arcore")
+        {
+            player = playerar;
+        }
+        if(plat == "game3d" || plat == "game3dt")
+        {
+            player = player3d;
+        }
         if(rango == 1)
         {fuerzajug = 5;}
         if(rango == 2)
@@ -1061,9 +1074,7 @@ public class shitene : MonoBehaviour
             barrahp.fillAmount = hp/hpmax;
             barrahp2.fillAmount = hp/hpmax;
             hpt.text = "hp: "+(int)hp+"/"+hpmax;
-            if(hp <= 0)
-            {UnityEngine.Object.Destroy(this.gameObject);}
-            if(temp > ataquetemp)
+            if(temp > ataquetemp && hp > 0)
             {
                 rota = BalaInicio.transform.rotation;
                 GameObject BalaTemporal = Instantiate(BalaPrefab, BalaInicio.transform.position,rota) as GameObject;

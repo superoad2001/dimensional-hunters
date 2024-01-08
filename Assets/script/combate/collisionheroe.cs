@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class collisionheroe : MonoBehaviour
 {
@@ -37,6 +38,13 @@ public class collisionheroe : MonoBehaviour
                 enemigo.hp -= heroe.ataque;
                 heroe.activar = false;
                 enemigo.danos.Play();
+                int ataqued = (int)heroe.ataque;
+                enemigo.ps.Stop();
+                enemigo.ps.Clear();
+                enemigo.danot.text = "-"+ataqued.ToString();
+                enemigo.danot.color = new Color32(255,70,43,255);
+                enemigo.ps.Play();
+                heroe.ataque = 0;
                 
 
             }

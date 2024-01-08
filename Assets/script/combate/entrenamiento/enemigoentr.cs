@@ -1,9 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class enemigoentr : MonoBehaviour
 {
+
+    public Text danot;
+    public Text danote;
+    public ParticleSystem ps;
     public float hp;
     public float temp;
 
@@ -27,6 +32,14 @@ public class enemigoentr : MonoBehaviour
         
         if (col.gameObject.tag == "Player" && temp > 5)
         {
+
+            int ataqued = (int)heroe.ataque;
+
+            ps.Stop();
+            ps.Clear();
+            danot.text = "-"+ataqued.ToString();
+            danot.color = new Color32(255,70,43,255);
+            ps.Play();
                 
             hp -= heroe.ataque;
             temp = 0;

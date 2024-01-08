@@ -9,6 +9,11 @@ using Unity.Collections;
 public class heromulti : NetworkBehaviour 
 {
 
+    public heromulti2 heroe2;
+
+    public Text danot;
+    public Text danote;
+    public ParticleSystem ps;
 
     public bool carga;
     public bool activar;
@@ -245,6 +250,15 @@ public class heromulti : NetworkBehaviour
     public NetworkVariable<float> claser = new NetworkVariable<float>(1, 
     NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
 
+    public NetworkVariable<float> ataquem = new NetworkVariable<float>(0, 
+    NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
+
+    public NetworkVariable<float> manarest = new NetworkVariable<float>(0, 
+    NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
+
+    public NetworkVariable<int> mostrarr = new NetworkVariable<int>(0, 
+    NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
+
     public int client;
 
     
@@ -471,14 +485,22 @@ public class heromulti : NetworkBehaviour
                 permiso = true;
                 atkr.Value = 1;
                 mana -= 20  * rangoexp ;
+                manarest.Value = 20  * rangoexp ;
                 turbobar += 25;
                 ataque = Random.Range(10,16) * fuerza;
+                ataquem.Value = ataque;
                 atb = 0;
                 rapsound.Play();
                 baseanim.SetBool("atkvel", true);
             
                 dano = Random.Range(0,3);
                 botcl.Play();
+
+                ps.Stop(); 
+                ps.Clear();
+                danot.text = "-"+20 * rangoexp;
+                danot.color = new Color32(0,0,255,255);
+                ps.Play();
                 
             }
             else if (fuerte == true && atb == 100 && mana >= 30  * rangoexp && permiso == false && enemigo.permiso == false)
@@ -488,32 +510,48 @@ public class heromulti : NetworkBehaviour
                 permiso = true;
                 atkr.Value = 2;
                 mana -= 30  * rangoexp ;
+                manarest.Value = 30  * rangoexp ;
                 fuesound.Play();
                 turbobar += 25;
                 ataque = Random.Range(18,20) * fuerza;
+                ataquem.Value = ataque;
                 atb = 0;
                 baseanim.SetBool("atkfue", true);
             
                 dano = Random.Range(0,3);
                 botcl.Play();
                 botno.Stop();
+
+                ps.Stop(); 
+                ps.Clear();
+                danot.text = "-"+30 * rangoexp;
+                danot.color = new Color32(0,0,255,255);
+                ps.Play();
                 
             }
-            else if (rapfue == true && atb == 100 && mana >= 40  * rangoexp && permiso == false && enemigo.permiso == false)
+            else if (rapfue == true && atb == 100 && mana >= 50  * rangoexp && permiso == false && enemigo.permiso == false)
             {
                 activar = true;
                 permiso = true;
                 atkr.Value = 3;
-                mana -= 40  * rangoexp ;
+                mana -= 50  * rangoexp ;
+                manarest.Value = 50  * rangoexp ;
                 rapfuesound.Play();
-                turbobar += 40;
-                ataque = Random.Range(20,23) * fuerza;
+                turbobar += 50;
+                ataque = Random.Range(30,40) * fuerza;
+                ataquem.Value = ataque;
                 atb = 0;
                 baseanim.SetBool("atkrapfue", true);
     
                 dano = Random.Range(0,3);
                 botcl.Play();
                 botno.Stop();
+
+                ps.Stop(); 
+                ps.Clear();
+                danot.text = "-"+50 * rangoexp;
+                danot.color = new Color32(0,0,255,255);
+                ps.Play();
                 
             }
             else if (turbo == true && atb == 100 && turbobar == 100 && permiso == false && enemigo.permiso == false)
@@ -611,6 +649,21 @@ public class heromulti : NetworkBehaviour
             {hp = 0;}
             if (mana < 0)
             {mana = 0;}
+
+            if(mostrarr.Value == 1 && client == 1)
+            {
+                mostrarnum();
+                mostrarr.Value = 0;
+            }
+            if(mostrarr.Value == 2 && client == 2)
+            {
+                
+                ps.Stop(); 
+                ps.Clear();
+                danot.text = "-"+manarest.Value;
+                danot.color = new Color32(0,0,255,255);
+                ps.Play();
+            }
             }
 
             mehp.text = "vit "+(int)hp+" / " + hpmax;
@@ -1277,6 +1330,20 @@ public class heromulti : NetworkBehaviour
             dano2 = dano2cat;
         }
 
+    }
+    [ServerRpc(RequireOwnership = false)]
+    public void mostrarServerRpc(int mostrar)
+    {
+        mostrarr.Value = mostrar;
+    }
+    public void mostrarnum()
+    {
+        int ataqued = (int)heroe2.ataquem.Value;
+        ps.Stop();
+        ps.Clear();
+        danot.text = "-"+ataqued.ToString();
+        danot.color = new Color32(255,70,43,255);
+        ps.Play();
     }
     
 

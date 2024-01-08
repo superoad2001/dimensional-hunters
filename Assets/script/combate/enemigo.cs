@@ -5,6 +5,10 @@ using UnityEngine.UI;
 
 public class enemigo : MonoBehaviour
 {
+    public ParticleSystem ps;
+
+    public Text danot;
+    public Text danote;
 
     public bool turbo = false;
     public bool rapido = false;
@@ -1379,6 +1383,12 @@ public class enemigo : MonoBehaviour
                 baseanim.SetBool("atkvel", true);
                 
                 dano = Random.Range(0,3);
+
+                ps.Stop();
+                ps.Clear();
+                danot.text = "-"+20 * rangoexp;
+                danot.color = new Color32(0,0,255,255);
+                ps.Play();
             }
             else if (fuerte == true && atb == 100 && mana >= 30 * rangoexp && permiso == false  && heroe.permiso == false)
             {
@@ -1391,14 +1401,20 @@ public class enemigo : MonoBehaviour
                 fueson.Play();
                 fuesound.Play();
                 baseanim.SetBool("atkfue", true);
+
+                ps.Stop();
+                ps.Clear();
+                danot.text = "-"+30 * rangoexp;
+                danot.color = new Color32(0,0,255,255);
+                ps.Play();
                 
                 dano = Random.Range(0,3);
             }
-            else if (rapfue == true && atb == 100 && mana >= 40 * rangoexp && permiso == false  && heroe.permiso == false) 
+            else if (rapfue == true && atb == 100 && mana >= 50 * rangoexp && permiso == false  && heroe.permiso == false) 
             {
-                mana -= 40 * rangoexp;
-                turbobar += 40;
-                ataque = Random.Range(20,23) * fuerza;
+                mana -= 50 * rangoexp;
+                turbobar += 50;
+                ataque = Random.Range(30,40) * fuerza;
                 activar = true;
                 permiso = true;
                 atb = 0;
@@ -1407,6 +1423,12 @@ public class enemigo : MonoBehaviour
                 baseanim.SetBool("atkrapfue", true);
                 
                 dano = Random.Range(0,3);
+
+                ps.Stop();
+                ps.Clear();
+                danot.text = "-"+50 * rangoexp;
+                danot.color = new Color32(0,0,255,255);
+                ps.Play();
             }
             else if (turbo == true && atb == 100 && turbobar == 100 && permiso == false && heroe.permiso == false)
             {

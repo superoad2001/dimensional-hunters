@@ -6,6 +6,10 @@ using UnityEngine.UI;
 
 public class heroentr : MonoBehaviour
 {
+
+    public Text danot;
+    public Text danote;
+    public ParticleSystem ps;
     public bool activar;
     public bool defusar;
     public bool permiso;
@@ -931,6 +935,12 @@ public class heroentr : MonoBehaviour
                 baseanim.SetBool("atkvel", true);
                 dano = Random.Range(0,3);
                 botcl.Play();
+
+                ps.Stop();
+                ps.Clear();
+                danot.text = "-"+20 * rangoexp;
+                danot.color = new Color32(0,0,255,255);
+                ps.Play();
                 
             }
             else if (fuerte == true && atb == 100 && mana >= 30  * rangoexp && permiso == false )
@@ -947,21 +957,33 @@ public class heroentr : MonoBehaviour
                 dano = Random.Range(0,3);
                 botcl.Play();
                 botno.Stop();
+
+                ps.Stop();
+                ps.Clear();
+                danot.text = "-"+30 * rangoexp;
+                danot.color = new Color32(0,0,255,255);
+                ps.Play();
                 
             }
-            else if (rapfue == true && atb == 100 && mana >= 40 * rangoexp  && permiso == false )
+            else if (rapfue == true && atb == 100 && mana >= 50 * rangoexp  && permiso == false )
             {
                 activar = true;
                 permiso = true;
-                mana -= 40 * rangoexp ;
+                mana -= 50 * rangoexp ;
                 rapfuesound.Play();
-                turbobar += 40;
-                ataque = Random.Range(20,23) * fuerza;
+                turbobar += 50;
+                ataque = Random.Range(30,40) * fuerza;
                 atb = 0;
                 baseanim.SetBool("atkrapfue", true);
                 dano = Random.Range(0,3);
                 botcl.Play();
                 botno.Stop();
+
+                ps.Stop();
+                ps.Clear();
+                danot.text = "-"+50 * rangoexp;
+                danot.color = new Color32(0,0,255,255);
+                ps.Play();
                 
             }
             else if (turbo == true && atb == 100 && turbobar == 100 && permiso == false)
@@ -976,6 +998,7 @@ public class heroentr : MonoBehaviour
                 dano = Random.Range(0,3);
                 botcl.Play();
                 botno.Stop();
+                
                 
             }
             else if (turbo == true || rapfue == true || fuerte == true || rapido == true)

@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class collisionenemigo : MonoBehaviour
 {
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +37,13 @@ public class collisionenemigo : MonoBehaviour
                 heroe.hp -= enemigo.ataque;
                 enemigo.activar = false;
                 heroe.danos.Play();
+                int ataqued = (int)enemigo.ataque;
+                heroe.danot.text = "-"+ataqued.ToString();
+                heroe.ps.Stop();
+                heroe.ps.Clear();
+                heroe.danot.color = new Color32(255,70,43,255);
+                heroe.ps.Play();
+                enemigo.ataque = 0;
                 
 
             }

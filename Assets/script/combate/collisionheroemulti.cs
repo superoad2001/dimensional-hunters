@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Unity.Netcode;
 
 public class collisionheroemulti : NetworkBehaviour
@@ -46,6 +47,14 @@ public class collisionheroemulti : NetworkBehaviour
                 heroe2.hp = heroe2.hpr.Value;
                 heroe.activar = false;
                 heroe2.danos.Play();
+
+                int ataqued = (int)heroe.ataque;
+                heroe2.ps.Stop();
+                heroe2.ps.Clear();
+                heroe2.danot.text = "-"+ataqued.ToString();
+                heroe2.danot.color = new Color32(255,70,43,255);
+                heroe2.ps.Play();
+                heroe2.mostrarr.Value = 1;
                 heroe.ataque = 0;
                 heroe.parar2();
                 

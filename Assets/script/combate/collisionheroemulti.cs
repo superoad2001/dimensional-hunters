@@ -43,17 +43,16 @@ public class collisionheroemulti : NetworkBehaviour
             {
 
                 Debug.Log("jugador1: 2");
-                heroe2.golpe(heroe.ataque);
+                heroe2.hpr.Value -= heroe.ataque;
                 heroe2.hp = heroe2.hpr.Value;
                 heroe.activar = false;
                 heroe2.danos.Play();
 
                 int ataqued = (int)heroe.ataque;
-                heroe2.ps.Stop();
-                heroe2.ps.Clear();
-                heroe2.danot.text = "-"+ataqued.ToString();
-                heroe2.danot.color = new Color32(255,70,43,255);
-                heroe2.ps.Play();
+                
+                DynamicTextManager dtext = UnityEngine.Object.FindObjectOfType<DynamicTextManager>(); 
+                dtext.CreateText(heroe2.ev1.transform.position, "-"+ataqued.ToString(),heroe2.textDatadano);  
+
                 heroe2.mostrarr.Value = 1;
                 heroe.ataque = 0;
                 heroe.parar2();

@@ -2,15 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 
 public class hero : MonoBehaviour
 {
 
 
-    public Text danot;
-    public Text danote;
-    public ParticleSystem ps;
+    public DynamicTextData textDatadano;
+
+    public DynamicTextData textDatamana;
+
+    public DynamicTextData textDatamanamas;
+
+    public DynamicTextData textDataturbomas;
+    public DynamicTextData textDataturbomenos;
+
+
+    public float tempdtext;
+
+
     public bool activar;
     public bool defusar;
     public bool permiso;
@@ -202,6 +213,7 @@ public class hero : MonoBehaviour
     // Start is called before the first frame update
     public void Start()
     {
+
 
 
         
@@ -936,11 +948,10 @@ public class hero : MonoBehaviour
                 dano = Random.Range(0,3);
                 botcl.Play();
 
-                ps.Stop();
-                ps.Clear();
-                danot.text = "-"+20 * rangoexp;
-                danot.color = new Color32(0,0,255,255);
-                ps.Play();
+                DynamicTextManager dtext = UnityEngine.Object.FindObjectOfType<DynamicTextManager>(); 
+                dtext.CreateText(ev1.transform.position,"-"+(int)(20 * rangoexp),textDatamana);  
+
+                dtext.CreateText(ev1.transform.position,"+"+(int)(25),textDataturbomas);
                 
             }
             else if (fuerte == true && atb == 100 && mana >= 30 * rangoexp&& permiso == false && enemigo.permiso == false)
@@ -960,11 +971,11 @@ public class hero : MonoBehaviour
                 botcl.Play();
                 botno.Stop();
 
-                ps.Stop(); 
-                ps.Clear();
-                danot.text = "-"+30 * rangoexp;
-                danot.color = new Color32(0,0,255,255);
-                ps.Play();
+
+                DynamicTextManager dtext = UnityEngine.Object.FindObjectOfType<DynamicTextManager>(); 
+                dtext.CreateText(ev1.transform.position,"-"+(int)(30 * rangoexp),textDatamana); 
+
+                dtext.CreateText(ev1.transform.position,"+"+(int)(25),textDataturbomas);   
                 
             }
             else if (rapfue == true && atb == 100 && mana >= 50 * rangoexp && permiso == false && enemigo.permiso == false)
@@ -982,11 +993,11 @@ public class hero : MonoBehaviour
                 botcl.Play();
                 botno.Stop();
 
-                ps.Stop();
-                ps.Clear();
-                danot.text = "-"+50 * rangoexp;
-                danot.color = new Color32(0,0,255,255);
-                ps.Play();
+
+                DynamicTextManager dtext = UnityEngine.Object.FindObjectOfType<DynamicTextManager>(); 
+                dtext.CreateText(ev1.transform.position,"-"+(int)(50 * rangoexp),textDatamana);  
+
+                dtext.CreateText(ev1.transform.position,"+"+(int)(50),textDataturbomas);  
                 
             }
             else if (turbo == true && atb == 100 && turbobar == 100 && permiso == false && enemigo.permiso == false)
@@ -995,13 +1006,16 @@ public class hero : MonoBehaviour
                 permiso = true;
                 turbobar = 0;
                 turbosound.Play();
-                ataque = Random.Range(30,40) * fuerza;
+                ataque = Random.Range(40,50) * fuerza;
                 atb = 0;
                 baseanim.SetBool("atkturbo", true);
                
                 dano = Random.Range(0,3);
                 botcl.Play();
                 botno.Stop();
+
+                DynamicTextManager dtext = UnityEngine.Object.FindObjectOfType<DynamicTextManager>(); 
+                dtext.CreateText(ev1.transform.position,"-"+(int)(100),textDataturbomenos);
                 
             }
             else if (turbo == true || rapfue == true || fuerte == true || rapido == true)
@@ -1032,6 +1046,14 @@ public class hero : MonoBehaviour
 
                 escudo.gameObject.SetActive(true);
                 defusar = true;
+
+                if(tempdtext > 1f)
+                {
+                    DynamicTextManager dtext = UnityEngine.Object.FindObjectOfType<DynamicTextManager>(); 
+                    dtext.CreateText(ev1.transform.position,("-"+(3.5 * rangoexp)),textDatamana);
+                    tempdtext = 0;
+                }
+                tempdtext += 1 * Time.deltaTime;
             }
             else if (def == true && mana > 0  && mana < 5 * rangoexp && permiso == false && defusar == true)
             {
@@ -1040,6 +1062,13 @@ public class hero : MonoBehaviour
                 prot.enabled = false;
                 
                 escudo.gameObject.SetActive(true);
+                if(tempdtext > 1f)
+                {
+                    DynamicTextManager dtext = UnityEngine.Object.FindObjectOfType<DynamicTextManager>(); 
+                    dtext.CreateText(ev1.transform.position,("-"+(3.5 * rangoexp)),textDatamana);
+                    tempdtext = 0;
+                }
+                tempdtext += 1 * Time.deltaTime;
             }
             else if(def == true)
             {botno.Play();}
@@ -1050,10 +1079,19 @@ public class hero : MonoBehaviour
                 defusar = false;
                 prot.enabled = true;
                 
-                    if (mana < manamax)
-                    {mana+= manamax/100 * 1 * manarec * Time.deltaTime;}
+                if (mana < manamax)
+                {
+                    mana+= 3 * manarec * Time.deltaTime;
+                    if(tempdtext > 1f)
+                    {
+                        DynamicTextManager dtext = UnityEngine.Object.FindObjectOfType<DynamicTextManager>(); 
+                        dtext.CreateText(ev1.transform.position,("+"+(3 * manarec)),textDatamanamas);
+                        tempdtext = 0;
+                    }
+                }
                 
                 escudo.gameObject.SetActive(false);
+                tempdtext += 1 * Time.deltaTime;
             
             }
             

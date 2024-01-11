@@ -10,7 +10,7 @@ public class disparoshitfloor : MonoBehaviour
 {
     [SerializeField]private int playerID = 0;
 	[SerializeField]private Player player;
-    public ARSession arSession;
+    public GameObject arSession;
     public GameObject BalaInicio;
 	public GameObject BalaPrefab;
     //numeros de la cuenta atras
@@ -53,18 +53,22 @@ public class disparoshitfloor : MonoBehaviour
     public Text manat;
     public float fuerzaene;
     public string plat;
-    void Start()
+
+    void Awake()
     {
         plat = PlayerPrefs.GetString("plat","game3d");
         if(plat == "arcore")
         {
-        arSession.Reset ();
-        cam.transform.position = new Vector3(0,0,0f);
+        
         }
         if(plat == "game3d" || plat == "game3dt")
         {
          player = ReInput.players.GetPlayer(playerID);
         }
+    }
+    void Start()
+    {
+
         rango = PlayerPrefs.GetInt("rango", 1);
         if(rango == 1)
         {rangoexp = 1;}

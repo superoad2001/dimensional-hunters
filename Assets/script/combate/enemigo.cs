@@ -2,13 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class enemigo : MonoBehaviour
 {
-    public ParticleSystem ps;
+    public DynamicTextData textDatadano;
 
-    public Text danot;
-    public Text danote;
+    public DynamicTextData textDatamana;
+
+    public DynamicTextData textDatamanamas;
+
+    public DynamicTextData textDataturbomas;
+    public DynamicTextData textDataturbomenos;
+
+    public float tempdtext;
+
 
     public bool turbo = false;
     public bool rapido = false;
@@ -30,6 +38,8 @@ public class enemigo : MonoBehaviour
     public Collider ev1c;
 
     public int limite = 3;
+
+    public GameObject ev1;
 
     public AudioSource rapsound;
     public AudioSource fuesound;
@@ -135,7 +145,6 @@ public class enemigo : MonoBehaviour
     public AudioSource dano1cat;
     public AudioSource dano2cat;
 
-    public GameObject ev1;
 
     public GameObject madcat1;
     public GameObject shitfloor;
@@ -1384,11 +1393,10 @@ public class enemigo : MonoBehaviour
                 
                 dano = Random.Range(0,3);
 
-                ps.Stop();
-                ps.Clear();
-                danot.text = "-"+20 * rangoexp;
-                danot.color = new Color32(0,0,255,255);
-                ps.Play();
+                DynamicTextManager dtext = UnityEngine.Object.FindObjectOfType<DynamicTextManager>(); 
+                dtext.CreateText(ev1.transform.position,"-"+(int)(20 * rangoexp),textDatamana);  
+ 
+                dtext.CreateText(ev1.transform.position,"+"+(int)(25),textDataturbomas);
             }
             else if (fuerte == true && atb == 100 && mana >= 30 * rangoexp && permiso == false  && heroe.permiso == false)
             {
@@ -1402,11 +1410,10 @@ public class enemigo : MonoBehaviour
                 fuesound.Play();
                 baseanim.SetBool("atkfue", true);
 
-                ps.Stop();
-                ps.Clear();
-                danot.text = "-"+30 * rangoexp;
-                danot.color = new Color32(0,0,255,255);
-                ps.Play();
+                DynamicTextManager dtext = UnityEngine.Object.FindObjectOfType<DynamicTextManager>(); 
+                dtext.CreateText(ev1.transform.position,"-"+(int)(30 * rangoexp),textDatamana);  
+            
+                dtext.CreateText(ev1.transform.position,"+"+(int)(25),textDataturbomas);
                 
                 dano = Random.Range(0,3);
             }
@@ -1424,11 +1431,10 @@ public class enemigo : MonoBehaviour
                 
                 dano = Random.Range(0,3);
 
-                ps.Stop();
-                ps.Clear();
-                danot.text = "-"+50 * rangoexp;
-                danot.color = new Color32(0,0,255,255);
-                ps.Play();
+                DynamicTextManager dtext = UnityEngine.Object.FindObjectOfType<DynamicTextManager>(); 
+                dtext.CreateText(ev1.transform.position,"-"+(int)(50 * rangoexp),textDatamana);  
+
+                dtext.CreateText(ev1.transform.position,"+"+(int)(50),textDataturbomas);
             }
             else if (turbo == true && atb == 100 && turbobar == 100 && permiso == false && heroe.permiso == false)
             {
@@ -1437,11 +1443,14 @@ public class enemigo : MonoBehaviour
                 turbobar = 0;
                 turbosound.Play();
                 turboson.Play();
-                ataque = Random.Range(30,40) * fuerza;
+                ataque = Random.Range(40,50) * fuerza;
                 atb = 0;
                 baseanim.SetBool("atkturbo", true);
                 
                 dano = Random.Range(0,3);
+
+                DynamicTextManager dtext = UnityEngine.Object.FindObjectOfType<DynamicTextManager>(); 
+                dtext.CreateText(ev1.transform.position,"-"+(int)(100),textDataturbomenos);
                 
             }
             else
@@ -1460,13 +1469,21 @@ public class enemigo : MonoBehaviour
             {
                 if(botebool == false)
                 {bote.Play();}
-                mana -= 3.5f * rangoexp * Time.deltaTime;
+                mana -= 1.5f * rangoexp * Time.deltaTime;
                 turbobar += 0.7f * Time.deltaTime;
                 prot.enabled = false;
                
                 botebool = true;
                 escudo.gameObject.SetActive(true);
                 defusar = true;
+
+                if(tempdtext > 1f)
+                {
+                    DynamicTextManager dtext = UnityEngine.Object.FindObjectOfType<DynamicTextManager>(); 
+                    dtext.CreateText(ev1.transform.position,("-"+(3.5 * rangoexp)).Substring(0, 6),textDatamana);
+                    tempdtext = 0;
+                }
+                tempdtext += 1 * Time.deltaTime; 
                 
             }
             else if (def == true && mana > 0  && mana < 5 * rangoexp && permiso == false && defusar == true)
@@ -1476,6 +1493,13 @@ public class enemigo : MonoBehaviour
                 prot.enabled = false;
                 
                 escudo.gameObject.SetActive(true);
+                if(tempdtext > 1f)
+                {
+                    DynamicTextManager dtext = UnityEngine.Object.FindObjectOfType<DynamicTextManager>(); 
+                    dtext.CreateText(ev1.transform.position,("-"+(3.5 * rangoexp)).Substring(0, 6),textDatamana);
+                    tempdtext = 0;
+                }
+                tempdtext += 1 * Time.deltaTime;
             }
             else 
             {   
@@ -1486,7 +1510,16 @@ public class enemigo : MonoBehaviour
                 
                 
                     if (mana < manamax)
-                    {mana+= manamax/100 * 1 * manarec * Time.deltaTime;}
+                    {
+                        mana+= 3 * manarec * Time.deltaTime;
+                        if(tempdtext > 1f)
+                        {
+                            DynamicTextManager dtext = UnityEngine.Object.FindObjectOfType<DynamicTextManager>(); 
+                            dtext.CreateText(ev1.transform.position,("+"+(3 * manarec)),textDatamanamas);
+                            tempdtext = 0;
+                        }
+                    }
+                    tempdtext += 1 * Time.deltaTime;
             
             
                 escudo.gameObject.SetActive(false);

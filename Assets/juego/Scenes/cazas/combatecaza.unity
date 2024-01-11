@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.06545995, g: 0.12141547, b: 0.22174154, a: 1}
+  m_IndirectSpecularColor: {r: 0.06529033, g: 0.12122986, b: 0.22167423, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3073,7 +3073,7 @@ Transform:
   m_GameObject: {fileID: 561078147}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.21, y: -1.22, z: 0.13000059}
+  m_LocalPosition: {x: -1.21, y: -1.22, z: 1.03}
   m_LocalScale: {x: 29.206974, y: 1, z: 27.2805}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3530,7 +3530,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerID: 0
-  arSession: {fileID: 1611145727}
+  arSession: {fileID: 1611145725}
   BalaInicio: {fileID: 667550898}
   BalaPrefab: {fileID: 8074607301907974608, guid: b0d4831349e24984c801853a1e98fc51, type: 3}
   cuenta: {fileID: 902354600}
@@ -4737,7 +4737,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerID: 0
-  arSession: {fileID: 1611145727}
+  arSession: {fileID: 0}
   BalaInicio: {fileID: 953976123}
   BalaPrefab: {fileID: 8074607301907974608, guid: b0d4831349e24984c801853a1e98fc51, type: 3}
   cuenta: {fileID: 902354600}

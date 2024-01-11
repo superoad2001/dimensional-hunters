@@ -7,7 +7,7 @@ using UnityEngine.XR.ARFoundation;
 
 public class interfazentr : MonoBehaviour
 {
-   public ARSession arSession;
+   public GameObject arSession;
     public Image barrahp;
     public Image barrahpene;
     public Image barrama;
@@ -23,32 +23,23 @@ public class interfazentr : MonoBehaviour
     public GameObject cam;
     public float iniciotem = 0;
     public string plat;
-    void Start()
+    void Awake()
     {
         plat = PlayerPrefs.GetString("plat","game3d");
         if(plat == "arcore")
         {
-            cam.transform.position = new Vector3(0,0,0f);
+            
         }
     }
+    
     public void _salir()
     {
-        salir = true;
+        SceneManager.LoadScene("seleccion");
     }
     // Update is called once per frame
     void Update()
     {
-        if(plat == "arcore")
-        {
-            if (iniciotem > 0 && iniciotem < 1)
-            {
-                arSession.Reset ();
 
-            }
-        }
-
-        if(salir == true)
-        {SceneManager.LoadScene("seleccion");}
         salir = false;
         heroentr heroe = UnityEngine.Object.FindObjectOfType<heroentr>();
         enemigoentr enemigo = UnityEngine.Object.FindObjectOfType<enemigoentr>();

@@ -11,9 +11,17 @@ public class heromulti2  : NetworkBehaviour
 
     public heromulti heroe2;
 
-    public Text danot;
-    public Text danote;
-    public ParticleSystem ps;
+    public DynamicTextData textDatadano;
+
+    public DynamicTextData textDatamana;
+
+    public DynamicTextData textDatamanamas;
+
+    public DynamicTextData textDataturbomas;
+    public DynamicTextData textDataturbomenos;
+
+
+    public float tempdtext;
     
     public NetworkVariable<float> ataquem = new NetworkVariable<float>(1, 
     NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
@@ -57,6 +65,9 @@ public class heromulti2  : NetworkBehaviour
     public NetworkVariable<float> claser = new NetworkVariable<float>(1, 
     NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
 
+    public NetworkVariable<float> turborest = new NetworkVariable<float>(0, 
+    NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
+
     public string hname;
     public string bicho;
     public float hp;
@@ -72,6 +83,9 @@ public class heromulti2  : NetworkBehaviour
     NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
 
     public NetworkVariable<int> mostrarr = new NetworkVariable<int>(0, 
+    NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
+
+    public NetworkVariable<int> mostrarr2 = new NetworkVariable<int>(0, 
     NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
 
     public NetworkVariable<float> manarest = new NetworkVariable<float>(0, 
@@ -484,6 +498,7 @@ public class heromulti2  : NetworkBehaviour
                 mana -= 20 * rangoexp ;
                 manarestServerRpc(20 * rangoexp);
                 turbobar += 25;
+                turborestServerRpc(25);
                 ataque = Random.Range(10,16) * fuerza;
                 ataquemServerRpc(ataque);
                 atb = 0;
@@ -493,11 +508,11 @@ public class heromulti2  : NetworkBehaviour
                 dano = Random.Range(0,3);
                 botcl.Play();
 
-                ps.Stop(); 
-                ps.Clear();
-                danot.text = "-"+20 * rangoexp;
-                danot.color = new Color32(0,0,255,255);
-                ps.Play();
+                DynamicTextManager dtext = UnityEngine.Object.FindObjectOfType<DynamicTextManager>(); 
+                dtext.CreateText(ev1.transform.position,"-"+(int)(20 * rangoexp),textDatamana);  
+
+                dtext.CreateText(ev1.transform.position,"+"+(int)(25),textDataturbomas);
+                mostrarServerRpc(2);
                 
             }
             else if (fuerte == true && atb == 100 && mana >= 30 * rangoexp  && permiso == false && enemigo.permiso == false)
@@ -510,6 +525,7 @@ public class heromulti2  : NetworkBehaviour
                 manarestServerRpc(30 * rangoexp);
                 fuesound.Play();
                 turbobar += 25;
+                turborestServerRpc(25);
                 ataque = Random.Range(18,20) * fuerza;
                 ataquemServerRpc(ataque);
                 atb = 0;
@@ -519,11 +535,11 @@ public class heromulti2  : NetworkBehaviour
                 botcl.Play();
                 botno.Stop();
 
-                ps.Stop(); 
-                ps.Clear();
-                danot.text = "-"+30 * rangoexp;
-                danot.color = new Color32(0,0,255,255);
-                ps.Play();
+                DynamicTextManager dtext = UnityEngine.Object.FindObjectOfType<DynamicTextManager>(); 
+                dtext.CreateText(ev1.transform.position,"-"+(int)(30 * rangoexp),textDatamana);  
+
+                dtext.CreateText(ev1.transform.position,"+"+(int)(25),textDataturbomas);
+                mostrarServerRpc(2);
                 
             }
             else if (rapfue == true && atb == 100 && mana >= 50 * rangoexp  && permiso == false && enemigo.permiso == false)
@@ -535,6 +551,7 @@ public class heromulti2  : NetworkBehaviour
                 manarestServerRpc(50 * rangoexp);
                 rapfuesound.Play();
                 turbobar += 50;
+                turborestServerRpc(50);
                 ataque = Random.Range(30,40) * fuerza;
                 ataquemServerRpc(ataque);
                 atb = 0;
@@ -544,11 +561,11 @@ public class heromulti2  : NetworkBehaviour
                 botcl.Play();
                 botno.Stop();
 
-                ps.Stop(); 
-                ps.Clear();
-                danot.text = "-"+50 * rangoexp;
-                danot.color = new Color32(0,0,255,255);
-                ps.Play();
+                DynamicTextManager dtext = UnityEngine.Object.FindObjectOfType<DynamicTextManager>(); 
+                dtext.CreateText(ev1.transform.position,"-"+(int)(50 * rangoexp),textDatamana);  
+
+                dtext.CreateText(ev1.transform.position,"+"+(int)(50),textDataturbomas);
+                mostrarServerRpc(2);
                 
             }
             else if (turbo == true && atb == 100 && turbobar == 100 && permiso == false && enemigo.permiso == false)
@@ -557,14 +574,19 @@ public class heromulti2  : NetworkBehaviour
                 permiso = true;
                 atkServerRpc(4);
                 turbobar = 0;
+                turborestServerRpc(100);
                 turbosound.Play();
-                ataque = Random.Range(30,40) * fuerza;
+                ataque = Random.Range(40,50) * fuerza;
                 atb = 0;
                 baseanim.SetBool("atkturbo", true);
                 
                 dano = Random.Range(0,3);
                 botcl.Play();
                 botno.Stop();
+
+                DynamicTextManager dtext = UnityEngine.Object.FindObjectOfType<DynamicTextManager>(); 
+                dtext.CreateText(ev1.transform.position,"-"+(int)(100),textDataturbomenos);
+                mostrarServerRpc(3);
                 
             }
             else if (turbo == true || rapfue == true || fuerte == true || rapido == true)
@@ -593,6 +615,14 @@ public class heromulti2  : NetworkBehaviour
                 turbobar += 0.7f * Time.deltaTime;
                 prot.enabled = false;
                 escudo.gameObject.SetActive(true);
+                if(tempdtext > 1f)
+                {
+                    DynamicTextManager dtext = UnityEngine.Object.FindObjectOfType<DynamicTextManager>(); 
+                    dtext.CreateText(ev1.transform.position,("-"+(3.5 * rangoexp)),textDatamana);
+                    tempdtext = 0;
+                    mostrar2ServerRpc(4);
+                }
+                tempdtext += 1 * Time.deltaTime;
                 defServerRpc(true);
                 defusar = true;
             }
@@ -602,6 +632,14 @@ public class heromulti2  : NetworkBehaviour
                 turbobar += 0.7f * Time.deltaTime;
                 prot.enabled = false;
                 escudo.gameObject.SetActive(true);
+                if(tempdtext > 1f)
+                {
+                    DynamicTextManager dtext = UnityEngine.Object.FindObjectOfType<DynamicTextManager>(); 
+                    dtext.CreateText(ev1.transform.position,("-"+(3.5 * rangoexp)),textDatamana);
+                    tempdtext = 0;
+                    mostrar2ServerRpc(4);
+                }
+                tempdtext += 1 * Time.deltaTime;
                 defServerRpc(true);
             }
             else if(def == true)
@@ -614,8 +652,17 @@ public class heromulti2  : NetworkBehaviour
                 prot.enabled = true;
                 
                 if (mana < manamax)
-                {mana+= 3 * manarec * Time.deltaTime;}
-                
+                {
+                    mana+= 3 * manarec * Time.deltaTime;
+                    if(tempdtext > 1f)
+                    {
+                        DynamicTextManager dtext = UnityEngine.Object.FindObjectOfType<DynamicTextManager>(); 
+                        dtext.CreateText(ev1.transform.position,("+"+(3 * manarec)),textDatamanamas);
+                        tempdtext = 0;
+                        mostrar2ServerRpc(5);
+                    }
+                }
+                tempdtext += 1 * Time.deltaTime;
                 escudo.gameObject.SetActive(false);
                 defServerRpc(false);
             
@@ -644,20 +691,44 @@ public class heromulti2  : NetworkBehaviour
             if (mana < 0)
             {mana = 0;}
 
+            }
+
             if(mostrarr.Value == 1 && client == 2)
             {
-                mostrarnum();
+                int ataqued = (int)heroe2.ataquem.Value;
+                DynamicTextManager dtext = UnityEngine.Object.FindObjectOfType<DynamicTextManager>(); 
+                dtext.CreateText(ev1.transform.position, "-"+ataqued.ToString(),textDatadano);  
                 mostrarServerRpc(0);
             }
             if(mostrarr.Value == 2 && client == 1)
             {
-                ps.Stop(); 
-                ps.Clear();
-                danot.text = "-"+manarest.Value;
-                danot.color = new Color32(0,0,255,255);
-                ps.Play();
+                DynamicTextManager dtext = UnityEngine.Object.FindObjectOfType<DynamicTextManager>(); 
+                dtext.CreateText(ev1.transform.position,"-"+(int)(manarest.Value),textDatamana);
+
+                dtext.CreateText(ev1.transform.position,"+"+(int)(turborest.Value),textDataturbomas);
                 mostrarr.Value = 0;
             }
+            if(mostrarr.Value == 3 && client == 1)
+            {
+                DynamicTextManager dtext = UnityEngine.Object.FindObjectOfType<DynamicTextManager>(); 
+                dtext.CreateText(ev1.transform.position,"-"+(int)(turborest.Value),textDataturbomenos);
+                mostrarr.Value = 0;
+            }
+            if(mostrarr2.Value == 4 && client == 1)
+            {
+
+                DynamicTextManager dtext = UnityEngine.Object.FindObjectOfType<DynamicTextManager>(); 
+                dtext.CreateText(ev1.transform.position,("-"+(3.5 * rangoexp)),textDatamana);
+                mostrarr2.Value = 0;
+            }
+            if(mostrarr2.Value == 5 && client == 1)
+            {
+                
+                
+                DynamicTextManager dtext = UnityEngine.Object.FindObjectOfType<DynamicTextManager>(); 
+                dtext.CreateText(ev1.transform.position,("+"+(3 * manarec)),textDatamanamas);
+                mostrarr2.Value = 0;
+
             }
             mehp.text = "vit "+(int)hp+" / " + hpmax;
             memana.text = "Stamina "+(int)mana+" / " + manamax;
@@ -727,10 +798,6 @@ public class heromulti2  : NetworkBehaviour
     public void defServerRpc(bool defrc)
     {
         defr.Value = defrc;
-    }
-    public void golpe(float atk)
-    {
-        hpr.Value -= atk;
     }
     [ServerRpc(RequireOwnership = false)]
     public void atkServerRpc(int tipo)
@@ -1365,20 +1432,22 @@ public class heromulti2  : NetworkBehaviour
     {
         mostrarr.Value = mostrar;
     }
+    [ServerRpc(RequireOwnership = false)]
+    public void mostrar2ServerRpc(int mostrar)
+    {
+        mostrarr2.Value = mostrar;
+    }
 
     [ServerRpc(RequireOwnership = false)]
     public void manarestServerRpc(float manarestc)
     {
         manarest.Value = manarestc;
     }
-    public void mostrarnum()
+
+    [ServerRpc(RequireOwnership = false)]
+    public void turborestServerRpc(float turborestc)
     {
-        int ataqued = (int)heroe2.ataquem.Value;
-        ps.Stop();
-        ps.Clear();
-        danot.text = "-"+ataqued.ToString();
-        danot.color = new Color32(255,70,43,255);
-        ps.Play();
+        turborest.Value = turborestc;
     }
 
     

@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class collisionheroe : MonoBehaviour
 {
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,11 +41,10 @@ public class collisionheroe : MonoBehaviour
                 heroe.activar = false;
                 enemigo.danos.Play();
                 int ataqued = (int)heroe.ataque;
-                enemigo.ps.Stop();
-                enemigo.ps.Clear();
-                enemigo.danot.text = "-"+ataqued.ToString();
-                enemigo.danot.color = new Color32(255,70,43,255);
-                enemigo.ps.Play();
+
+                DynamicTextManager dtext = UnityEngine.Object.FindObjectOfType<DynamicTextManager>(); 
+                dtext.CreateText(enemigo.ev1.transform.position, "-"+ataqued.ToString(),enemigo.textDatadano);  
+
                 heroe.ataque = 0;
                 
 

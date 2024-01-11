@@ -6,9 +6,10 @@ using UnityEngine.UI;
 public class enemigoentr : MonoBehaviour
 {
 
-    public Text danot;
-    public Text danote;
-    public ParticleSystem ps;
+
+    public DynamicTextData textDatadano;
+
+    public GameObject ev1;
     public float hp;
     public float temp;
 
@@ -35,11 +36,8 @@ public class enemigoentr : MonoBehaviour
 
             int ataqued = (int)heroe.ataque;
 
-            ps.Stop();
-            ps.Clear();
-            danot.text = "-"+ataqued.ToString();
-            danot.color = new Color32(255,70,43,255);
-            ps.Play();
+            DynamicTextManager dtext = UnityEngine.Object.FindObjectOfType<DynamicTextManager>(); 
+            dtext.CreateText(ev1.transform.position,"-"+(int)(ataqued),textDatadano);
                 
             hp -= heroe.ataque;
             temp = 0;

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class collisionenemigo : MonoBehaviour
 {
 
@@ -38,11 +39,10 @@ public class collisionenemigo : MonoBehaviour
                 enemigo.activar = false;
                 heroe.danos.Play();
                 int ataqued = (int)enemigo.ataque;
-                heroe.danot.text = "-"+ataqued.ToString();
-                heroe.ps.Stop();
-                heroe.ps.Clear();
-                heroe.danot.color = new Color32(255,70,43,255);
-                heroe.ps.Play();
+
+                DynamicTextManager dtext = UnityEngine.Object.FindObjectOfType<DynamicTextManager>(); 
+                dtext.CreateText(enemigo.ev1.transform.position, "-"+ataqued.ToString(),heroe.textDatadano);
+
                 enemigo.ataque = 0;
                 
 

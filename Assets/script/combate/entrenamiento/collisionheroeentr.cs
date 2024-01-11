@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class collisionheroeentr : MonoBehaviour
 {
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,7 @@ public class collisionheroeentr : MonoBehaviour
     public void OnTriggerEnter(Collider col)
     {
         heroentr heroe = UnityEngine.Object.FindObjectOfType<heroentr>();
+
         
         if (col.gameObject.tag == "enemigo")
         {

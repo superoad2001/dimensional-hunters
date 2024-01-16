@@ -44,15 +44,28 @@ public class networkui : NetworkBehaviour
     
     void Update()
     {
-        if(IsOwner)
+        client = PlayerPrefs.GetInt("clientid",0);
+        if(client  == 1 && manamulti.comenzar.Value == false)
         {
-        if(NetworkManager.Singleton.ConnectedClients.Count == 2)
+            if(NetworkManager.Singleton.ConnectedClients.Count == 1)
+            {
+                manamulti.checkServerRpc(manamulti.check1.Value,false);
+            }
+            manamulti.check1c = manamulti.check1.Value;
+            manamulti.checkServerRpc(true,manamulti.check2.Value);
+        }
+        if(client  == 2 && manamulti.comenzar.Value == false && NetworkManager.Singleton.IsConnectedClient)
         {
+            
+            manamulti.check2c = manamulti.check2.Value;
             manamulti.checkServerRpc(manamulti.check1.Value,true);
+            
         }
+        if(client == 0)
+        {
+            manamulti.check1c = false;
+            manamulti.check2c = false;
         }
-        if(IsOwner){
-        Debug.Log("clientes: "+NetworkManager.Singleton.ConnectedClients.Count);}
     }
     public void starthost()
     {
@@ -61,7 +74,8 @@ public class networkui : NetworkBehaviour
         NetworkManager.Singleton.StartHost();
         GetLocalIPAddress();
         activar = true;
-        manamulti.checkServerRpc(true,manamulti.check1.Value);
+        manamulti.check1c = true;
+        manamulti.checkServerRpc(true,manamulti.check2.Value);
         PlayerPrefs.SetInt("clientid",1);
         }
         
@@ -74,6 +88,7 @@ public class networkui : NetworkBehaviour
 		SetIpAddress();
         NetworkManager.Singleton.StartClient();
         activar = true;
+        manamulti.check2c = true;
         PlayerPrefs.SetInt("clientid",2);
         }
     }
@@ -85,9 +100,19 @@ public class networkui : NetworkBehaviour
         heroe.carga = false;
         heroe2.carga = false;
         codigo.text = "";
-        manamulti.checkServerRpc(false,false);
-        NetworkManager.Singleton.Shutdown();
         PlayerPrefs.SetInt("clientid",0);
+        if(client == 1)
+        {
+            manamulti.check1c = false;
+            manamulti.check2c = false;
+        }
+        if(client == 2)
+        {
+            manamulti.check1c = false;
+            manamulti.check2c = false;
+        }
+        NetworkManager.Singleton.Shutdown();
+
 
         
     }

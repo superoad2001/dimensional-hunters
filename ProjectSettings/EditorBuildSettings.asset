@@ -12,6 +12,39 @@ EditorBuildSettings:
     path: Assets/juego/Scenes/cola.unity
     guid: d9794672edf3c664699c6ea55f32d9db
   - enabled: 1
+    path: Assets/juego/Scenes/cazas/cazar.unity
+    guid: 4a1623c169c7bf549bc423116f718c29
+  - enabled: 1
+    path: Assets/juego/Scenes/cazas/cazar2.unity
+    guid: a7453d5c4bdacdb4c892b27ce186d63d
+  - enabled: 1
+    path: Assets/juego/Scenes/cazas/cazar3.unity
+    guid: a78fc197da9a2ae408a2d24b3ca6573c
+  - enabled: 1
+    path: Assets/juego/Scenes/cazas/cazar4.unity
+    guid: 2bf45a8a0b43ccf4698e57e72bfbe506
+  - enabled: 1
+    path: Assets/juego/Scenes/cazas/cazar5.unity
+    guid: 57c0484f456f2064ab52ae40c17e59e9
+  - enabled: 1
+    path: Assets/juego/Scenes/cazas/cazar6.unity
+    guid: d2c46121ef03ecd45a5376f85736f316
+  - enabled: 1
+    path: Assets/juego/Scenes/cazas/cazar7.unity
+    guid: 9560fe97eaabc9a449e19ad6db066772
+  - enabled: 1
+    path: Assets/juego/Scenes/cazas/cazar8.unity
+    guid: 5dfd897fb01f5344d9bc047d364831ef
+  - enabled: 1
+    path: Assets/juego/Scenes/cazas/cazar9.unity
+    guid: 82c5fe979ffe27946b2c2029130af9d7
+  - enabled: 1
+    path: Assets/juego/Scenes/cazas/cazar10.unity
+    guid: e434816ff72c03d4a9dcbfc5dc839f5d
+  - enabled: 1
+    path: Assets/juego/Scenes/cazas/combatecaza.unity
+    guid: dd10b1e8e1730694c82e157dc572f1ab
+  - enabled: 1
     path: Assets/juego/Scenes/borrar.unity
     guid: b409579f33529ad44bb1b55ec4de3983
   - enabled: 1
@@ -63,39 +96,6 @@ EditorBuildSettings:
     path: Assets/juego/Scenes/subirrango.unity
     guid: 2d484cef53f762f41a94117bbb482291
   - enabled: 1
-    path: Assets/juego/Scenes/cazas/cazar.unity
-    guid: 4a1623c169c7bf549bc423116f718c29
-  - enabled: 1
-    path: Assets/juego/Scenes/cazas/cazar2.unity
-    guid: a7453d5c4bdacdb4c892b27ce186d63d
-  - enabled: 1
-    path: Assets/juego/Scenes/cazas/cazar3.unity
-    guid: a78fc197da9a2ae408a2d24b3ca6573c
-  - enabled: 1
-    path: Assets/juego/Scenes/cazas/cazar4.unity
-    guid: 2bf45a8a0b43ccf4698e57e72bfbe506
-  - enabled: 1
-    path: Assets/juego/Scenes/cazas/cazar5.unity
-    guid: 57c0484f456f2064ab52ae40c17e59e9
-  - enabled: 1
-    path: Assets/juego/Scenes/cazas/cazar6.unity
-    guid: d2c46121ef03ecd45a5376f85736f316
-  - enabled: 1
-    path: Assets/juego/Scenes/cazas/cazar7.unity
-    guid: 9560fe97eaabc9a449e19ad6db066772
-  - enabled: 1
-    path: Assets/juego/Scenes/cazas/cazar8.unity
-    guid: 5dfd897fb01f5344d9bc047d364831ef
-  - enabled: 1
-    path: Assets/juego/Scenes/cazas/cazar9.unity
-    guid: 82c5fe979ffe27946b2c2029130af9d7
-  - enabled: 1
-    path: Assets/juego/Scenes/cazas/cazar10.unity
-    guid: e434816ff72c03d4a9dcbfc5dc839f5d
-  - enabled: 1
-    path: Assets/juego/Scenes/cazas/combatecaza.unity
-    guid: dd10b1e8e1730694c82e157dc572f1ab
-  - enabled: 1
     path: Assets/juego/Scenes/tienda.unity
     guid: b7f28845ecf2a584e83b66abe476f491
   - enabled: 1
@@ -108,4 +108,3 @@ EditorBuildSettings:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 74f890c192c9f4942a5f728f85af6a36, type: 2}
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: dc0b4c90dae6d854988fe42d016c1ec3, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 82ae8224c94921542875c388a443a215, type: 2}
-  m_UseUCBPForAssetBundles: 0

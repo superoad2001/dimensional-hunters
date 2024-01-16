@@ -16,6 +16,7 @@ public class managermulti : NetworkBehaviour
     public heromulti2 heroe2;
 
     public Text listo;
+    public int client;
  
         public NetworkVariable<bool> comenzar = new NetworkVariable<bool>(false);
         public NetworkVariable<bool> cambio = new NetworkVariable<bool>(false);
@@ -27,12 +28,14 @@ public class managermulti : NetworkBehaviour
     // Start is called before the first frame update
     public void Start()
     {
-        
+        listo.text = "Se Host o Cliente";
     }
     
     public void iniciar()
     {
-        if(IsOwner && check2c == true && check1c == true)
+        
+        client = PlayerPrefs.GetInt("clientid",0);
+        if(client == 1 && check2c == true && check1c == true)
         {
             cambiarServerRpc(true,true);
         }
@@ -47,25 +50,29 @@ public class managermulti : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
-        check1c = check1.Value;
-        check2c = check2.Value;
-        if(NetworkManager.IsHost && check2c == true && check1c == true)
+        if(NetworkManager.Singleton.IsConnectedClient)
+        {
+            check1c = check1.Value;
+            check2c = check2.Value;
+        }
+        client = PlayerPrefs.GetInt("clientid",0);
+        if(client == 1 && check2c == true && check1c == true)
         {
             listo.text = "Comenzar";
         }
-        if(NetworkManager.IsHost == false && check2c == true && check1c == true)
+        if(client == 2 && check2c == true && check1c == true)
         {
             listo.text = "Esperando que el host comienze la partida";
         }
-        if(NetworkManager.IsHost && check2c == false && check1c == true)
+        if(client == 1 && check2c == false && check1c == true)
         {
             listo.text = "Esperando al Rival";
         }
-        if(check2c == true && check1c == false)
+        if(client == 2 && check2c == true && check1c == false)
         {
             listo.text = "Esperando al Host";
         }
-        if(check2c == false && check1c == false)
+        if(client == 0 && check2c == false && check1c == false)
         {
             listo.text = "Se Host o Cliente";
         }

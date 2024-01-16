@@ -11,6 +11,7 @@ public class managermulti2 : NetworkBehaviour
     public GameObject menu;
     public GameObject combate;
     public GameObject botones;
+    public int client;
 
 
     public Text listo;
@@ -35,7 +36,7 @@ public class managermulti2 : NetworkBehaviour
     // Start is called before the first frame update
     public void Start()
     {
-        
+        listo.text = "Se Host o Cliente";
     }
     public void atras()
     {
@@ -44,11 +45,10 @@ public class managermulti2 : NetworkBehaviour
     }
     public void iniciar()
     {
-        if(IsOwner && check2i == true && check1i == true)
+        client = PlayerPrefs.GetInt("clientid",0);
+        if(client == 1 && check2i == true && check1i == true)
         {
-            cambio.Value = true;
-            comenzar.Value = true;
-            temp = 0;
+            cambiarServerRpc(true,true);
         }
         
     }
@@ -57,25 +57,29 @@ public class managermulti2 : NetworkBehaviour
     void Update()
     {
         inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
+        if(NetworkManager.Singleton.IsConnectedClient)
+        {
         check1i = check1.Value;
         check2i = check2.Value;
-        if(NetworkManager.IsHost && check2i == true && check1i == true)
+        }
+        client = PlayerPrefs.GetInt("clientid",0);
+        if(client == 1 && check2i == true && check1i == true)
         {
             listo.text = "efectuar intercambio";
         }
-        if(NetworkManager.IsHost == false &&  check2i == true && check1i == true)
+        if(client == 2 &&  check2i == true && check1i == true)
         {
             listo.text = "Esperando que el host comienze la partida";
         }
-        if(NetworkManager.IsHost && check2i == false && check1i == true)
+        if(client == 1 && check2i == false && check1i == true)
         {
             listo.text = "Esperando al Rival";
         }
-        if(check2i == true && check1i == false)
+        if(client == 2 && check2i == true && check1i == false)
         {
             listo.text = "Esperando al Host";
         }
-        if(check2i == false && check1i == false)
+        if(client == 0 && check2i == false && check1i == false)
         {
             listo.text = "Se Host o Cliente";
         }
@@ -85,8 +89,8 @@ public class managermulti2 : NetworkBehaviour
             carga = true;
         }
         if(temp > 1 && comenzar.Value == true)
-        {   
-            if(IsOwner)
+        {   client = PlayerPrefs.GetInt("clientid",0);
+            if(client == 1)
             {
             PlayerPrefs.SetString("namesave"+intercambio1.o ,intercambio2.hname);
             PlayerPrefs.SetFloat("hpsave"+intercambio1.o,intercambio2.hp);
@@ -98,7 +102,7 @@ public class managermulti2 : NetworkBehaviour
             PlayerPrefs.SetString("bichosmiossave"+intercambio1.o,intercambio2.bicho);
             PlayerPrefs.SetFloat("expsave"+intercambio1.o,intercambio2.exp);
             }
-            if(!IsOwner)
+            if(client == 2)
             {
 
             PlayerPrefs.SetString("namesave"+intercambio2.o ,intercambio1.hname);
@@ -115,5 +119,17 @@ public class managermulti2 : NetworkBehaviour
 
 
         }else{temp += 1 * Time.deltaTime;}
+    }
+    [ServerRpc(RequireOwnership = false)]
+    public void cambiarServerRpc(bool cambioc, bool comenzarc)
+    {
+        cambio.Value = cambioc;
+        comenzar.Value = comenzarc;
+    }
+    [ServerRpc(RequireOwnership = false)]
+    public void checkServerRpc(bool check1c, bool check2c)
+    {
+        check1.Value = check1c;
+        check2.Value = check2c;
     }
 }

@@ -24,6 +24,8 @@ public class networkui2 : NetworkBehaviour
 
     private bool pcAssigned;
 
+    public int client;
+
     [SerializeField] string ipAddress;
 
     [SerializeField] UnityTransport transport;
@@ -36,21 +38,32 @@ public class networkui2 : NetworkBehaviour
         ipAddress = "0.0.0.0";
 		SetIpAddress(); // Set the Ip to the above address
 		pcAssigned = false;
-		InvokeRepeating("assignPlayerController", 0.1f, 0.1f);
     }
     // Update is called once per frame
     
     void Update()
     {
-        if(IsOwner)
+        client = PlayerPrefs.GetInt("clientid",0);
+        if(client  == 1 && manamulti.comenzar.Value == false)
         {
-        if(NetworkManager.Singleton.ConnectedClients.Count == 2)
+            if(NetworkManager.Singleton.ConnectedClients.Count == 1)
+            {
+                manamulti.checkServerRpc(manamulti.check1.Value,false);
+            }
+            manamulti.check1i = manamulti.check1.Value;
+            manamulti.checkServerRpc(true,manamulti.check2.Value);
+        }
+        if(client  == 2 && manamulti.comenzar.Value == false)
         {
-            manamulti.check2.Value = true;
+
+            manamulti.check2i = manamulti.check2.Value;
+            manamulti.checkServerRpc(manamulti.check1.Value,true);
         }
+        if(client == 0)
+        {
+            manamulti.check1i = false;
+            manamulti.check2i = false;
         }
-        if(IsOwner){
-        Debug.Log("clientes: "+NetworkManager.Singleton.ConnectedClients.Count);}
     }
     public void starthost()
     {
@@ -61,6 +74,9 @@ public class networkui2 : NetworkBehaviour
         GetLocalIPAddress();
         activar = true;
         manamulti.check1.Value = true;
+        manamulti.checkServerRpc(true,manamulti.check2.Value);
+        PlayerPrefs.SetInt("clientid",1);
+
         }
     }
     public void startclient()
@@ -72,6 +88,7 @@ public class networkui2 : NetworkBehaviour
         NetworkManager.Singleton.StartClient();
         activar = true;
         manamulti.check2i = true;
+        PlayerPrefs.SetInt("clientid",2);
         }
     }
 
@@ -80,12 +97,18 @@ public class networkui2 : NetworkBehaviour
     {
         activar = false;
         codigo.text = "";
-        if(IsOwner == true)
-        {manamulti.check1.Value = false;
-        manamulti.check2.Value = false;}
+        if(client == 1)
+        {
+            manamulti.check1i = false;
+            manamulti.check2i = false;
+        }
+        if(client == 2)
+        {
+            manamulti.check1i = false;
+            manamulti.check2i = false;
+        }
         NetworkManager.Singleton.Shutdown();
-        manamulti.check1i = false;
-        manamulti.check2i = false;
+        PlayerPrefs.SetInt("clientid",0);
 
         
     }

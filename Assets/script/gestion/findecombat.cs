@@ -420,10 +420,10 @@ public class findecombat : MonoBehaviour
             ma.gameObject.SetActive(true);
             rec.gameObject.SetActive(true);
             fue.gameObject.SetActive(true);
-            hpt.text = "vit "+inv.hp[o] +" + 5";
+            hpt.text = "vit "+inv.hp[o] +" + 20";
             mat.text = "sta "+inv.mana[o] +" + 5";
             rect.text = "rec "+inv.manarec[o].ToString("F2") +" + 0,05";
-            fuet.text = "fue "+inv.fuerza[o].ToString("F2") +" + 0,05";
+            fuet.text = "fue "+inv.fuerza[o].ToString("F2") +" + 0,10";
             
             
             
@@ -479,10 +479,10 @@ public class findecombat : MonoBehaviour
             ma.gameObject.SetActive(true);
             rec.gameObject.SetActive(true);
             fue.gameObject.SetActive(true);
-            hpt.text = "vit "+inv.hp[o] +" + 5";
+            hpt.text = "vit "+inv.hp[o] +" + 20";
             mat.text = "sta "+inv.mana[o] +" + 5";
             rect.text = "rec "+inv.manarec[o].ToString("F2") +" + 0,05";
-            fuet.text = "fue "+inv.fuerza[o].ToString("F2") +" + 0,05";
+            fuet.text = "fue "+inv.fuerza[o].ToString("F2") +" + 0,10";
             
             
         }
@@ -535,10 +535,10 @@ public class findecombat : MonoBehaviour
             ma.gameObject.SetActive(true);
             rec.gameObject.SetActive(true);
             fue.gameObject.SetActive(true);
-            hpt.text = "vit "+inv.hp[o] +" + 5";
+            hpt.text = "vit "+inv.hp[o] +" + 20";
             mat.text = "sta "+inv.mana[o] +" + 5";
             rect.text = "rec "+inv.manarec[o].ToString("F2") +" + 0,05";
-            fuet.text = "fue "+inv.fuerza[o].ToString("F2") +" + 0,05";
+            fuet.text = "fue "+inv.fuerza[o].ToString("F2") +" + 0,10";
             
             
         }
@@ -591,10 +591,10 @@ public class findecombat : MonoBehaviour
             ma.gameObject.SetActive(true);
             rec.gameObject.SetActive(true);
             fue.gameObject.SetActive(true);
-            hpt.text = "vit "+inv.hp[o] +" + 5";
+            hpt.text = "vit "+inv.hp[o] +" + 20";
             mat.text = "sta "+inv.mana[o] +" + 5";
             rect.text = "rec "+inv.manarec[o].ToString("F2") +" + 0,05";
-            fuet.text = "fue "+inv.fuerza[o].ToString("F2") +" + 0,05";
+            fuet.text = "fue "+inv.fuerza[o].ToString("F2") +" + 0,10";
             
             
         }
@@ -647,10 +647,10 @@ public class findecombat : MonoBehaviour
             ma.gameObject.SetActive(true);
             rec.gameObject.SetActive(true);
             fue.gameObject.SetActive(true);
-            hpt.text = "vit "+inv.hp[o].ToString("F2") +" + 5";
-            mat.text = "sta "+inv.mana[o].ToString("F2") +" + 5";
+            hpt.text = "vit "+inv.hp[o] +" + 20";
+            mat.text = "sta "+inv.mana[o] +" + 5";
             rect.text = "rec "+inv.manarec[o].ToString("F2") +" + 0,05";
-            fuet.text = "fue "+inv.fuerza[o].ToString("F2") +" + 0,05";
+            fuet.text = "fue "+inv.fuerza[o].ToString("F2") +" + 0,10";
             
             
         }
@@ -716,10 +716,10 @@ public class findecombat : MonoBehaviour
             ma.gameObject.SetActive(true);
             rec.gameObject.SetActive(true);
             fue.gameObject.SetActive(true);
-            hpt.text = "vit "+inv.hp[o].ToString("F2") +" + 5";
-            mat.text = "sta "+inv.mana[o].ToString("F2") +" + 5";
+            hpt.text = "vit "+inv.hp[o] +" + 20";
+            mat.text = "sta "+inv.mana[o] +" + 5";
             rect.text = "rec "+inv.manarec[o].ToString("F2") +" + 0,05";
-            fuet.text = "fue "+inv.fuerza[o].ToString("F2") +" + 0,05";
+            fuet.text = "fue "+inv.fuerza[o].ToString("F2") +" + 0,10";
             
             
         }
@@ -772,10 +772,10 @@ public class findecombat : MonoBehaviour
             ma.gameObject.SetActive(true);
             rec.gameObject.SetActive(true);
             fue.gameObject.SetActive(true);
-            hpt.text = "vit "+inv.hp[o].ToString("F2") +" + 5";
-            mat.text = "sta "+inv.mana[o].ToString("F2") +" + 5";
+            hpt.text = "vit "+inv.hp[o] +" + 20";
+            mat.text = "sta "+inv.mana[o] +" + 5";
             rect.text = "rec "+inv.manarec[o].ToString("F2") +" + 0,05";
-            fuet.text = "fue "+inv.fuerza[o].ToString("F2") +" + 0,05";
+            fuet.text = "fue "+inv.fuerza[o].ToString("F2") +" + 0,10";
             
             
         }
@@ -828,10 +828,10 @@ public class findecombat : MonoBehaviour
             ma.gameObject.SetActive(true);
             rec.gameObject.SetActive(true);
             fue.gameObject.SetActive(true);
-            hpt.text = "vit "+inv.hp[o].ToString("F2") +" + 5";
-            mat.text = "sta "+inv.mana[o].ToString("F2") +" + 5";
+            hpt.text = "vit "+inv.hp[o] +" + 20";
+            mat.text = "sta "+inv.mana[o] +" + 5";
             rect.text = "rec "+inv.manarec[o].ToString("F2") +" + 0,05";
-            fuet.text = "fue "+inv.fuerza[o].ToString("F2") +" + 0,05";
+            fuet.text = "fue "+inv.fuerza[o].ToString("F2") +" + 0,10";
             
             
         }
@@ -884,10 +884,10 @@ public class findecombat : MonoBehaviour
             ma.gameObject.SetActive(true);
             rec.gameObject.SetActive(true);
             fue.gameObject.SetActive(true);
-            hpt.text = "vit "+inv.hp[o].ToString("F2") +" + 5";
-            mat.text = "sta "+inv.mana[o].ToString("F2") +" + 5";
+            hpt.text = "vit "+inv.hp[o] +" + 20";
+            mat.text = "sta "+inv.mana[o] +" + 5";
             rect.text = "rec "+inv.manarec[o].ToString("F2") +" + 0,05";
-            fuet.text = "fue "+inv.fuerza[o].ToString("F2") +" + 0,05";
+            fuet.text = "fue "+inv.fuerza[o].ToString("F2") +" + 0,10";
             
             
         }
@@ -940,10 +940,10 @@ public class findecombat : MonoBehaviour
             ma.gameObject.SetActive(true);
             rec.gameObject.SetActive(true);
             fue.gameObject.SetActive(true);
-            hpt.text = "vit "+inv.hp[o].ToString("F2") +" + 5";
-            mat.text = "sta "+inv.mana[o].ToString("F2") +" + 5";
+            hpt.text = "vit "+inv.hp[o] +" + 20";
+            mat.text = "sta "+inv.mana[o] +" + 5";
             rect.text = "rec "+inv.manarec[o].ToString("F2") +" + 0,05";
-            fuet.text = "fue "+inv.fuerza[o].ToString("F2") +" + 0,05";
+            fuet.text = "fue "+inv.fuerza[o].ToString("F2") +" + 0,10";
             
             
         }
@@ -1006,10 +1006,10 @@ public class findecombat : MonoBehaviour
             ma.gameObject.SetActive(true);
             rec.gameObject.SetActive(true);
             fue.gameObject.SetActive(true);
-            hpt.text = "vit "+inv.hp[o].ToString("F2") +" + 5";
-            mat.text = "sta "+inv.mana[o].ToString("F2") +" + 5";
+            hpt.text = "vit "+inv.hp[o] +" + 20";
+            mat.text = "sta "+inv.mana[o] +" + 5";
             rect.text = "rec "+inv.manarec[o].ToString("F2") +" + 0,05";
-            fuet.text = "fue "+inv.fuerza[o].ToString("F2") +" + 0,05";
+            fuet.text = "fue "+inv.fuerza[o].ToString("F2") +" + 0,10";
             
             
         }
@@ -1057,10 +1057,10 @@ public class findecombat : MonoBehaviour
             ma.gameObject.SetActive(true);
             rec.gameObject.SetActive(true);
             fue.gameObject.SetActive(true);
-            hpt.text = "vit "+inv.hp[o].ToString("F2") +" + 5";
-            mat.text = "sta "+inv.mana[o].ToString("F2") +" + 5";
+            hpt.text = "vit "+inv.hp[o] +" + 20";
+            mat.text = "sta "+inv.mana[o] +" + 5";
             rect.text = "rec "+inv.manarec[o].ToString("F2") +" + 0,05";
-            fuet.text = "fue "+inv.fuerza[o].ToString("F2") +" + 0,05";
+            fuet.text = "fue "+inv.fuerza[o].ToString("F2") +" + 0,10";
             
             
         }
@@ -1108,10 +1108,10 @@ public class findecombat : MonoBehaviour
             ma.gameObject.SetActive(true);
             rec.gameObject.SetActive(true);
             fue.gameObject.SetActive(true);
-            hpt.text = "vit "+inv.hp[o].ToString("F2") +" + 5";
-            mat.text = "sta "+inv.mana[o].ToString("F2") +" + 5";
+            hpt.text = "vit "+inv.hp[o] +" + 20";
+            mat.text = "sta "+inv.mana[o] +" + 5";
             rect.text = "rec "+inv.manarec[o].ToString("F2") +" + 0,05";
-            fuet.text = "fue "+inv.fuerza[o].ToString("F2") +" + 0,05";
+            fuet.text = "fue "+inv.fuerza[o].ToString("F2") +" + 0,10";
             
             
         }
@@ -1159,10 +1159,10 @@ public class findecombat : MonoBehaviour
             ma.gameObject.SetActive(true);
             rec.gameObject.SetActive(true);
             fue.gameObject.SetActive(true);
-            hpt.text = "vit "+inv.hp[o].ToString("F2") +" + 5";
-            mat.text = "sta "+inv.mana[o].ToString("F2") +" + 5";
+            hpt.text = "vit "+inv.hp[o] +" + 20";
+            mat.text = "sta "+inv.mana[o] +" + 5";
             rect.text = "rec "+inv.manarec[o].ToString("F2") +" + 0,05";
-            fuet.text = "fue "+inv.fuerza[o].ToString("F2") +" + 0,05";
+            fuet.text = "fue "+inv.fuerza[o].ToString("F2") +" + 0,10";
             
             
         }
@@ -1210,10 +1210,10 @@ public class findecombat : MonoBehaviour
             ma.gameObject.SetActive(true);
             rec.gameObject.SetActive(true);
             fue.gameObject.SetActive(true);
-            hpt.text = "vit "+inv.hp[o].ToString("F2") +" + 5";
+            hpt.text = "vit "+inv.hp[o].ToString("F2") +" + 20";
             mat.text = "sta "+inv.mana[o].ToString("F2") +" + 5";
             rect.text = "rec "+inv.manarec[o].ToString("F2") +" + 0,05";
-            fuet.text = "fue "+inv.fuerza[o].ToString("F2") +" + 0,05";
+            fuet.text = "fue "+inv.fuerza[o].ToString("F2") +" + 0,10";
             
             
         }

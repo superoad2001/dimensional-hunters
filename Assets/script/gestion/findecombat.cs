@@ -1254,7 +1254,7 @@ public class findecombat : MonoBehaviour
         {
             
             o = (int)PlayerPrefs.GetFloat("selec", 0);
-            inv.hp[o] +=5 * rangoexp3;
+            inv.hp[o] +=20 * rangoexp3;
             hp.gameObject.SetActive(false);
             ma.gameObject.SetActive(false);
             rec.gameObject.SetActive(false);
@@ -1290,7 +1290,7 @@ public class findecombat : MonoBehaviour
         {
     
             o = (int)PlayerPrefs.GetFloat("selec", 0);
-            inv.fuerza[o] +=0.05f * rangoexp3;
+            inv.fuerza[o] +=0.10f * rangoexp3;
             hp.gameObject.SetActive(false);
             ma.gameObject.SetActive(false);
             rec.gameObject.SetActive(false);

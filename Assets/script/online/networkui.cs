@@ -39,6 +39,7 @@ public class networkui : NetworkBehaviour
         ipAddress = "0.0.0.0";
 		SetIpAddress(); // Set the Ip to the above address
 		pcAssigned = false;
+        PlayerPrefs.SetInt("clientid",0);
     }
     // Update is called once per frame
     
@@ -71,8 +72,8 @@ public class networkui : NetworkBehaviour
     {
         if(activar == false)
         {
-        NetworkManager.Singleton.StartHost();
         GetLocalIPAddress();
+        NetworkManager.Singleton.StartHost();
         activar = true;
         manamulti.check1c = true;
         manamulti.checkServerRpc(true,manamulti.check2.Value);
@@ -122,6 +123,7 @@ public class networkui : NetworkBehaviour
 			if (ip.AddressFamily == AddressFamily.InterNetwork) {
 				codigo.text = "IP: "+ ip.ToString();
 				ipAddress = ip.ToString();
+                SetIpAddress();
 				return ip.ToString();
 			}
 		}

@@ -452,10 +452,7 @@ public class heromulti2  : NetworkBehaviour
             colorbicho = UnityEngine.Object.FindObjectOfType<colorbicho7>();
             colorbicho.colorb();
         }
-        if(client == 2)
-        {
-            permiso = permisor.Value;
-        }
+        permiso = permisor.Value;
         hp = hpr.Value;
         if(client == 1)
         {
@@ -613,7 +610,7 @@ public class heromulti2  : NetworkBehaviour
         
 
             }
-            if (def == true && mana >= 5  * rangoexp && permiso == false && permiso == false)
+            if (def == true && mana >= 5  * rangoexp && permiso == false)
             {
 
                 if(botebool == false)

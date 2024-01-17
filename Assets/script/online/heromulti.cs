@@ -454,10 +454,7 @@ public class heromulti : NetworkBehaviour
             colorbicho = UnityEngine.Object.FindObjectOfType<colorbicho6>();
             colorbicho.colorb();
         }
-        if(client == 1)
-        {
-            permiso = permisor.Value;
-        }
+        permiso = permisor.Value;
         hp = hpr.Value;
         if(client == 2)
         {

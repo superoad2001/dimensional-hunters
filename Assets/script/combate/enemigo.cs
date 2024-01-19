@@ -936,32 +936,32 @@ public class enemigo : MonoBehaviour
                     if(decision == 10){}
 
                 }
-                if(hp > 0 && hp <= 25 && mana > 0 && mana <= 30)
+                if(hp > (hpmax/100)* 0 && hp <= (hpmax/100)* 10 && mana > 0 * rangoexp && mana <= 30 * rangoexp)
                 {   
                     if (temp > 1)
                     {decision = 0;temp = 0;def = false;}
                     if (decision == 0)
                     {
-                        decision = Random.Range(2,7);
+                        decision = Random.Range(2,8);
                     }
                     if(decision == 1){}
                     if(decision == 2){}
                     if(decision == 3){def = true;defson.Play();}
-                    if(decision == 4){fuerte = true;}
+                    if(decision == 4){rapido = true;}
                     if(decision == 5){rapido = true;}
-                    if(decision == 6){fuerte = true;}
+                    if(decision == 6){rapido = true;}
                     if(decision == 7){rapido = true;}
                     
                     
                     
                 }
-                if(hp > 0 && hp <= 25 && mana > 30 && mana <= 50)
+                if(hp > (hpmax/100)* 0 && hp <= (hpmax/100)* 10 && mana > 30 * rangoexp && mana <= 50 * rangoexp)
                 {   
                     if (temp > 2)
                     {decision = 0;temp = 0;def = false;}
                     if (decision == 0)
                     {
-                        decision = Random.Range(2,4);
+                        decision = Random.Range(2,5);
                     }
                     if(decision == 1){def = true;defson.Play();}
                     if(decision == 2){def = true;defson.Play();}
@@ -970,13 +970,13 @@ public class enemigo : MonoBehaviour
                     
                     
                 }
-                if(hp > 0 && hp <= 25 && mana > 50 && mana <= 60)
+                if(hp > (hpmax/100)* 0 && hp <= (hpmax/100)* 10 && mana > 50 * rangoexp && mana <= 60 * rangoexp)
                 {   
                     if (temp > 2)
                     {decision = 0;temp = 0;def = false;}
                     if (decision == 0)
                     {
-                        decision = Random.Range(2,4);
+                        decision = Random.Range(2,5);
                     }
                     if(decision == 1){def = true;defson.Play();}
                     if(decision == 2){}
@@ -985,13 +985,13 @@ public class enemigo : MonoBehaviour
                     
                     
                 }
-                if(hp > 0 && hp <= 25 && mana > 60)
+                if(hp > (hpmax/100)* 0 && hp <= (hpmax/100)* 10 && mana > 60 * rangoexp)
                 {   
                     if (temp > 2)
                     {decision = 0;temp = 0;def = false;}
                     if (decision == 0)
                     {
-                        decision = Random.Range(2,4);
+                        decision = Random.Range(2,5);
                     }
                     if(decision == 1){def = true;defson.Play();}
                     if(decision == 2){}
@@ -1000,32 +1000,32 @@ public class enemigo : MonoBehaviour
                     
                     
                 }
-                if(hp > 0 && hp <= 50 && mana > 0 && mana <= 30)
+                if(hp > (hpmax/100)* 0 && hp <= (hpmax/100)* 10 && mana > 0 * rangoexp && mana <= 30 * rangoexp)
                 {   
                     if (temp > 2)
                     {decision = 0;temp = 0;def = false;}
                     if (decision == 0)
                     {
-                        decision = Random.Range(2,7);
+                        decision = Random.Range(2,8);
                     }
                     if(decision == 1){}
                     if(decision == 2){}
                     if(decision == 3){rapido = true;}
-                    if(decision == 4){fuerte = true;}
+                    if(decision == 4){rapido = true;}
                     if(decision == 5){rapido = true;}
-                    if(decision == 6){fuerte = true;}
+                    if(decision == 6){rapido = true;}
                     if(decision == 7){rapido = true;}
                     
                     
                     
                 }
-                if(hp > 25 && hp <= 50 && mana > 30 && mana <= 50)
+                if(hp > (hpmax/100)* 10 && hp <= (hpmax/100)* 25 && mana > 30 * rangoexp && mana <= 50 * rangoexp)
                 {   
                     if (temp > 2)
                     {decision = 0;temp = 0;def = false;}
                     if (decision == 0)
                     {
-                        decision = Random.Range(2,7);
+                        decision = Random.Range(2,8);
                     }
                     if(decision == 1){def = true;defson.Play();}
                     if(decision == 2){fuerte = true;}
@@ -1037,13 +1037,13 @@ public class enemigo : MonoBehaviour
                     
                     
                 }
-                if(hp > 25 && hp <= 50 && mana > 50 && mana <= 60)
+                if(hp > (hpmax/100)* 10 && hp <= (hpmax/100)* 25 && mana > 50 * rangoexp && mana <= 60 * rangoexp)
                 {   
                     if (temp > 2)
                     {decision = 0;temp = 0;def = false;}
                     if (decision == 0)
                     {
-                        decision = Random.Range(2,7);
+                        decision = Random.Range(2,8);
                     }
                     if(decision == 1){def = true;defson.Play();}
                     if(decision == 2){}
@@ -1055,13 +1055,13 @@ public class enemigo : MonoBehaviour
                     
                     
                 }
-                if(hp > 25 && hp <= 50 && mana > 60)
+                if(hp > (hpmax/100)* 10 && hp <= (hpmax/100)* 25 && mana > 60 * rangoexp )
                 {   
                     if (temp > 2)
                     {decision = 0;temp = 0;def = false;}
                     if (decision == 0)
                     {
-                        decision = Random.Range(2,4);
+                        decision = Random.Range(2,5);
                     }
                     if(decision == 1){def = true;defson.Play();}
                     if(decision == 2){rapfue = true;}
@@ -1071,36 +1071,36 @@ public class enemigo : MonoBehaviour
                     
                 }
 
-                if(hp > 50 && hp <= 100 && mana > 0 && mana <= 30)
+                if(hp > (hpmax/100)* 25 && hp <= (hpmax/100)* 50 && mana > 0 * rangoexp && mana <= 30 * rangoexp)
                 {   
                     if (temp > 2)
                     {decision = 0;temp = 0;def = false;}
                     if (decision == 0)
                     {
-                        decision = Random.Range(2,7);
+                        decision = Random.Range(2,8);
                     }
                     if(decision == 1){}
                     if(decision == 2){}
                     if(decision == 3){}
-                    if(decision == 4){fuerte = true;}
+                    if(decision == 4){rapido = true;}
                     if(decision == 5){rapido = true;}
-                    if(decision == 6){fuerte = true;}
+                    if(decision == 6){rapido = true;}
                     if(decision == 7){rapido = true;}
                     
                     
                     
                 }
-                if(hp > 50 && hp <= 100 && mana > 30 && mana <= 50)
+                if(hp > (hpmax/100)* 25 && hp <= (hpmax/100)* 50 && mana > 30 * rangoexp && mana <= 50 * rangoexp)
                 {   
                     if (temp > 2)
                     {decision = 0;temp = 0;def = false;}
                     if (decision == 0)
                     {
-                        decision = Random.Range(2,7);
+                        decision = Random.Range(2,8);
                     }
                     if(decision == 1){def = true;defson.Play();}
                     if(decision == 2){}
-                    if(decision == 3){rapfue = true;}
+                    if(decision == 3){rapido = true;}
                     if(decision == 4){fuerte = true;}
                     if(decision == 5){rapido = true;}
                     if(decision == 6){fuerte = true;}
@@ -1108,13 +1108,13 @@ public class enemigo : MonoBehaviour
                     
                     
                 }
-                if(hp > 50 && hp <= 100 && mana > 50 && mana <= 60)
+                if(hp > (hpmax/100)* 25 && hp <= (hpmax/100)* 50 && mana > 50 * rangoexp && mana <= 60 * rangoexp)
                 {   
                     if (temp > 2)
                     {decision = 0;temp = 0;def = false;}
                     if (decision == 0)
                     {
-                        decision = Random.Range(2,4);
+                        decision = Random.Range(2,5);
                     }
                     if(decision == 1){def = true;defson.Play();}
                     if(decision == 2){fuerte = true;}
@@ -1123,13 +1123,13 @@ public class enemigo : MonoBehaviour
                     
                     
                 }
-                if(hp > 50 && hp <= 100 && mana > 60)
+                if(hp > (hpmax/100)* 25 && hp <= (hpmax/100)* 50 && mana > 60 * rangoexp)
                 {   
                     if (temp > 2)
                     {decision = 0;temp = 0;def = false;}
                     if (decision == 0)
                     {
-                        decision = Random.Range(2,7);
+                        decision = Random.Range(2,8);
                     }
                     if(decision == 1){def = true;defson.Play();}
                     if(decision == 2){fuerte = true;}
@@ -1141,9 +1141,24 @@ public class enemigo : MonoBehaviour
                     
                     
                 }
-                if(hp > 100 && hp <= 200 && mana > 0 && mana <= 30)
+                if(hp > (hpmax/100)* 50 && hp <= (hpmax/100)* 80 && mana > 0 * rangoexp && mana <= 30 * rangoexp)
                 {   
                     if (temp > 10)
+                    {decision = 0;temp = 0;def = false;}
+                    if (decision == 0)
+                    {
+                        decision = Random.Range(2,4);
+                    }
+                    if(decision == 1){}
+                    if(decision == 2){rapido = true;}
+                    if(decision == 3){rapido = true;}
+                    
+                    
+                    
+                }
+                if(hp > (hpmax/100)* 50 && hp <= (hpmax/100)* 80 && mana > 30 * rangoexp && mana <= 50 * rangoexp)
+                {   
+                    if (temp > 2)
                     {decision = 0;temp = 0;def = false;}
                     if (decision == 0)
                     {
@@ -1151,25 +1166,6 @@ public class enemigo : MonoBehaviour
                     }
                     if(decision == 1){}
                     if(decision == 2){fuerte = true;}
-                    if(decision == 3){rapido = true;}
-                    if(decision == 4){fuerte = true;}
-                    if(decision == 5){rapido = true;}
-                    if(decision == 6){fuerte = true;}
-                    if(decision == 7){rapido = true;}
-                    
-                    
-                    
-                }
-                if(hp > 100 && hp <= 200 && mana > 30 && mana <= 50)
-                {   
-                    if (temp > 2)
-                    {decision = 0;temp = 0;def = false;}
-                    if (decision == 0)
-                    {
-                        decision = Random.Range(2,6);
-                    }
-                    if(decision == 1){}
-                    if(decision == 2){rapfue = true;}
                     if(decision == 3){fuerte = true;}
                     if(decision == 4){rapido = true;}
                     if(decision == 5){fuerte = true;}
@@ -1177,7 +1173,7 @@ public class enemigo : MonoBehaviour
                     
                     
                 }
-                if(hp > 100 && hp <= 200 && mana > 50 && mana <= 60)
+                if(hp > (hpmax/100)* 50 && hp <= (hpmax/100)* 80 && mana > 50 * rangoexp && mana <= 60 * rangoexp)
                 {   
                     if (temp > 2)
                     {decision = 0;temp = 0;def = false;}
@@ -1190,13 +1186,13 @@ public class enemigo : MonoBehaviour
                     
                     
                 }
-                if(hp > 100 && hp <= 200 && mana > 60)
+                if(hp > (hpmax/100)* 50 && hp <= (hpmax/100)* 80 && mana > 60 * rangoexp)
                 {   
                     if (temp > 2)
                     {decision = 0;temp = 0;def = false;}
                     if (decision == 0)
                     {
-                        decision = Random.Range(1,4);
+                        decision = Random.Range(1,5);
                     }
                     
                     if(decision == 1){fuerte = true;}
@@ -1207,51 +1203,45 @@ public class enemigo : MonoBehaviour
                     
                     
                 }
-                if(hp > 200 && mana > 0 && mana <= 30)
+                if(hp > (hpmax/100)* 80 && mana > 0 * rangoexp && mana <= 30 * rangoexp)
                 {   
                     if (temp > 10)
                     {decision = 0;temp = 0;def = false;}
                     if (decision == 0)
                     {
-                        decision = Random.Range(2,7);
+                        decision = Random.Range(1,6);
                     }
                     if(decision == 1){}
                     if(decision == 2){}
-                    if(decision == 3){}
-                    if(decision == 4){}
+                    if(decision == 3){rapido = true;}
+                    if(decision == 4){rapido = true;}
                     if(decision == 5){rapido = true;}
-                    if(decision == 6){fuerte = true;}
-                    if(decision == 7){rapido = true;}
                     
                     
                     
                 }
-                if(hp > 200 &&  mana > 30 && mana <= 50)
+                if(hp > (hpmax/100)* 80 &&  mana > 30 * rangoexp && mana <= 50 * rangoexp)
                 {   
                     if (temp > 2)
                     {decision = 0;temp = 0;def = false;}
                     if (decision == 0)
                     {
-                        decision = Random.Range(2,6);
+                        decision = Random.Range(1,5);
                     }
                     if(decision == 1){}
-                    if(decision == 2){rapfue = true;}
-                    if(decision == 3){}
-                    if(decision == 4){rapfue = true;}
-                    if(decision == 5){fuerte = true;}
-                    if(decision == 6){rapido = true;}
-                    if(decision == 3){rapfue = true;}
-                    if(decision == 3){rapfue = true;}
+                    if(decision == 2){fuerte = true;}
+                    if(decision == 3){fuerte = true;}
+                    if(decision == 4){rapido = true;}
                     
                     
                 }
-                if(hp > 200 &&  mana > 50 && mana <= 60)
+                if(hp > (hpmax/100)* 80 &&  mana > 50 * rangoexp && mana <= 60 * rangoexp)
                 {   
                     if (temp > 2)
                     {decision = 0;temp = 0;def = false;}
                     if (decision == 0)
                     {
-                        Random.Range(1,2);
+                        Random.Range(1,4);
                     }
                     if(decision == 1){fuerte = true;}
                     if(decision == 2){rapfue = true;}
@@ -1259,13 +1249,13 @@ public class enemigo : MonoBehaviour
                     
                     
                 }
-                if(hp > 200 && mana > 60)
+                if(hp > (hpmax/100)* 80 && mana > 60 * rangoexp)
                 {   
                     if (temp > 2)
                     {decision = 0;temp = 0;def = false;}
                     if (decision == 0)
                     {
-                        decision = Random.Range(2,2);
+                        decision = Random.Range(1,7);
                     }
                     if(decision == 1){fuerte = true;}
                     if(decision == 2){rapfue = true;}
@@ -1283,84 +1273,6 @@ public class enemigo : MonoBehaviour
                 }
                 
 
-            }
-            if(nivel == 2 || nivel == 3)
-            {
-                if(limite  > 0)
-                {
-                    decision2 = Random.Range(1,3);
-                    if (temp3 > decision3)
-                    {   
-                        if(decision2 == 1)
-                        {
-                            temp3 = 0;
-                            hp += 40;
-                            limite--;
-                            decision2 = 0;
-                            decision3 = Random.Range(25,30);
-                        }
-                        if(decision2 == 2)
-                        {
-                            temp3 = 0;
-                            heroe.mana += 90;
-                            limite--;
-                            decision2 = 0;
-                            decision3 = Random.Range(25,30);
-                        }
-                    }
-                }
-            }
-            if(nivel == 4 || nivel == 5)
-            {
-                if(limite  > 0)
-                {
-                    decision2 = Random.Range(1,5);
-                    if (temp3 > decision3)
-                    {   
-                        if(decision2 == 1)
-                        {
-                            temp3 = 0;
-                            hp += 100;
-                            limite--;
-                            decision2 = 0;
-                            decision3 = Random.Range(25,30);
-                        }
-                        if(decision2 == 2)
-                        {
-                            temp3 = 0;
-                            heroe.mana += 130;
-                            limite--;
-                            decision2 = 0;
-                            decision3 = Random.Range(25,30);
-                        }
-                    }
-                }
-            }
-            if(nivel == 6 || nivel == 7)
-            {
-                if(limite  > 0)
-                {
-                    decision2 = Random.Range(1,5);
-                    if (temp3 > decision3)
-                    {   
-                        if(decision2 == 1)
-                        {
-                            temp3 = 0;
-                            hp += 200;
-                            limite--;
-                            decision2 = 0;
-                            decision3 = Random.Range(25,30);
-                        }
-                        if(decision2 == 2)
-                        {
-                            temp3 = 0;
-                            heroe.mana += 200;
-                            limite--;
-                            decision2 = 0;
-                            decision3 = Random.Range(25,30);
-                        }
-                    }
-                }
             }
             
 

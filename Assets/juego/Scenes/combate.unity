@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.07194343, g: 0.03355332, b: 0.030250829, a: 1}
+  m_IndirectSpecularColor: {r: 0.07214673, g: 0.033691708, b: 0.030305054, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -439,7 +439,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bade8b189cae5bd4bbeb285449615057, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1186461467525122131, guid: bade8b189cae5bd4bbeb285449615057, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5638,6 +5638,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa317c2a6527a124e8e303b982a5d49b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plat: 
   textDatadano: {fileID: 11400000, guid: a5445a47a1f772043ba96c0acbf4ce17, type: 2}
   textDatamana: {fileID: 11400000, guid: f9ddd94cce1665c45bd440b4b10d399e, type: 2}
   textDatamanamas: {fileID: 11400000, guid: 3ffd1565e15402144a8bb059f43fe030, type: 2}
@@ -5776,6 +5777,7 @@ MonoBehaviour:
   dragonron: {fileID: 502268664}
   rangoexp: 0
   rango: 0
+  playerID: 0
 --- !u!1 &542605412
 GameObject:
   m_ObjectHideFlags: 0
@@ -10397,7 +10399,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 3d9a8afbb2277b74291e30ae96f28ffe, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

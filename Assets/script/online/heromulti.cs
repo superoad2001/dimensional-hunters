@@ -4,10 +4,16 @@ using UnityEngine;
 using UnityEngine.UI;
 using Unity.Netcode;
 using Unity.Collections;
+using Rewired;
 
 
 public class heromulti : NetworkBehaviour 
 {
+
+    [SerializeField]private int playerID = 0;
+	[SerializeField]private Player player;
+    public string plat;
+
 
     public heromulti2 heroe2;
 
@@ -280,7 +286,10 @@ public class heromulti : NetworkBehaviour
     public void Start()
     {   
         
-        
+        inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
+        plat = inv.datosserial.plat;
+        if(plat == "game3d")
+        {player = ReInput.players.GetPlayer(playerID);}
         
 
         
@@ -347,6 +356,7 @@ public class heromulti : NetworkBehaviour
         }
     if(managermulti.comenzar.Value == true && tempc < 3f)
     {
+        
         if(client == 1)
         
         {
@@ -449,6 +459,7 @@ public class heromulti : NetworkBehaviour
     managerdecombatemulti manager = UnityEngine.Object.FindObjectOfType<managerdecombatemulti>();
     if(managermulti.comenzar.Value == true && tempc >= 3f)
     {
+        
         if(client == 2 && manager.comienzo == false)
         {
             modelos();
@@ -483,6 +494,34 @@ public class heromulti : NetworkBehaviour
         }
         if (manager.comienzo == true)
         {
+
+            if(client == 1)
+            {
+                if(player.GetAxis("a") > 0f)
+                {
+                    rapido = true;
+                }
+                else if(player.GetAxis("x") > 0f)
+                {
+                    fuerte = true;
+                }
+                else if(player.GetAxis("y") > 0f)
+                {
+                    rapfue = true;
+                }
+                else if(player.GetAxis("rb") > 0f)
+                {
+                    turbo = true;
+                }
+                if(player.GetAxis("lb") > 0f)
+                {
+                    def = true;
+                }
+                else
+                {
+                    def = false;
+                }
+            }
             if(client == 1)
             {
             baseanim.SetBool("atkrapfue", false);
@@ -685,10 +724,6 @@ public class heromulti : NetworkBehaviour
 
                 if (temp < 15)
                 {temp += 1 * Time.deltaTime;}
-                rapfue = false;
-                fuerte = false;
-                rapido = false;
-                turbo = false;
 
                 if (mana < 0)
                 {mana = 0;}
@@ -786,6 +821,11 @@ public class heromulti : NetworkBehaviour
             inv.datosserial.rangoene = enemigo.rango;
         }
         }
+        if(client == 1)
+        {rapfue = false;
+        fuerte = false;
+        rapido = false;
+        turbo = false;}
         if (temp4 < 15)
         {temp4 += 1 * Time.deltaTime;}
 

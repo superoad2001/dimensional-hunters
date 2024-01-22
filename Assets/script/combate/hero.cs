@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Rewired;
 
 
 public class hero : MonoBehaviour
 {
 
-
+    public string plat;
     public DynamicTextData textDatadano;
 
     public DynamicTextData textDatamana;
@@ -209,15 +210,19 @@ public class hero : MonoBehaviour
     public float rangoexp;
     public float rango;
 
+    [SerializeField]private int playerID = 0;
+	[SerializeField]private Player player;
+
     
     // Start is called before the first frame update
     public void Start()
     {
-
-
+        inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
+        plat = inv.datosserial.plat;
+        if(plat == "game3d")
+        {player = ReInput.players.GetPlayer(playerID);}
 
         
-        inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
 
         hp = inv.datosserial.hps;
         mana = inv.datosserial.manas;
@@ -912,6 +917,30 @@ public class hero : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {   
+        if(player.GetAxis("a") > 0f)
+        {
+            rapido = true;
+        }
+        else if(player.GetAxis("x") > 0f)
+        {
+            fuerte = true;
+        }
+        else if(player.GetAxis("y") > 0f)
+        {
+            rapfue = true;
+        }
+        else if(player.GetAxis("rb") > 0f)
+        {
+            turbo = true;
+        }
+        if(player.GetAxis("lb") > 0f)
+        {
+            def = true;
+        }
+        else
+        {
+            def = false;
+        }
         turboui.text = (int)turbobar+"%";
         
         if (dano == 0)
@@ -1103,10 +1132,6 @@ public class hero : MonoBehaviour
             {temp += 1 * Time.deltaTime;}
             if (temp4 < 15)
             {temp4 += 1 * Time.deltaTime;}
-            rapfue = false;
-            fuerte = false;
-            rapido = false;
-            turbo = false;
 
             if (mana < 0)
             {mana = 0;}
@@ -1130,6 +1155,10 @@ public class hero : MonoBehaviour
             {atb += 15 * Time.deltaTime;}
             if (atb > 99) {atb = 100;}
         }
+        rapfue = false;
+        fuerte = false;
+        rapido = false;
+        turbo = false;
         mename.text = name;
         
     }

@@ -89,7 +89,8 @@ public class inventariomenu : MonoBehaviour
     void Start()
     {
 
-        rango = PlayerPrefs.GetInt("rango", 1);
+        inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
+        rango = inv.datosserial.rangoplay;
 
     }
 
@@ -103,7 +104,7 @@ public class inventariomenu : MonoBehaviour
 
 
 
-        uitext.text = "heroes "+inv.indexmax+"/"+inv.limite;
+        uitext.text = "heroes "+inv.datosserial.indexmax+"/"+inv.datosserial.limite;
     
 
         if(tienda == 1)
@@ -114,10 +115,10 @@ public class inventariomenu : MonoBehaviour
                 puesto4.text = "";
                 puesto5.text = "";
                 puesto6.text = "";
-                din.text = "dolares : "+inv.dinero.ToString("F0");
+                din.text = "dolares : "+inv.datosserial.dinero.ToString("F0");
                 ptext1.text = ""+rango;
-                ptext2.text = ""+inv.limite;
-                ptext3.text = ""+inv.indexmax;
+                ptext2.text = ""+inv.datosserial.limite;
+                ptext3.text = ""+inv.datosserial.indexmax;
                 ptext4.text = "";
                 ptext5.text = "";
                 ptext6.text = "";
@@ -131,14 +132,14 @@ public class inventariomenu : MonoBehaviour
                 puesto4.text = "hierba gris";
                 puesto5.text = "hierba gris plateada";
                 puesto6.text = "hierba gris dorada";
-                din.text = "dolares : "+""+inv.dinero.ToString("F0");
+                din.text = "dolares : "+""+inv.datosserial.dinero.ToString("F0");
                
-                ptext1.text = ""+(float)inv.tipohierba[0];
-                ptext2.text = ""+(float)inv.tipohierba[10];
-                ptext3.text = ""+(float)inv.tipohierba[20];
-                ptext4.text = ""+(float)inv.tipohierba[1];
-                ptext5.text = ""+(float)inv.tipohierba[11];
-                ptext6.text = ""+(float)inv.tipohierba[21];
+                ptext1.text = ""+(float)inv.datosserial.tipohierba[0];
+                ptext2.text = ""+(float)inv.datosserial.tipohierba[10];
+                ptext3.text = ""+(float)inv.datosserial.tipohierba[20];
+                ptext4.text = ""+(float)inv.datosserial.tipohierba[1];
+                ptext5.text = ""+(float)inv.datosserial.tipohierba[11];
+                ptext6.text = ""+(float)inv.datosserial.tipohierba[21];
 
                 
         }
@@ -150,14 +151,14 @@ public class inventariomenu : MonoBehaviour
                 puesto4.text = "hierba amarilla";
                 puesto5.text = "hierba amarilla plateada";
                 puesto6.text = "hierba amarilla dorada";
-                din.text = "dolares : "+""+inv.dinero.ToString("F0");
+                din.text = "dolares : "+""+inv.datosserial.dinero.ToString("F0");
                
-                ptext1.text = ""+(float)inv.tipohierba[2];
-                ptext2.text = ""+(float)inv.tipohierba[12];
-                ptext3.text = ""+(float)inv.tipohierba[22];
-                ptext4.text = ""+(float)inv.tipohierba[3];
-                ptext5.text = ""+(float)inv.tipohierba[13];
-                ptext6.text = ""+(float)inv.tipohierba[23];
+                ptext1.text = ""+(float)inv.datosserial.tipohierba[2];
+                ptext2.text = ""+(float)inv.datosserial.tipohierba[12];
+                ptext3.text = ""+(float)inv.datosserial.tipohierba[22];
+                ptext4.text = ""+(float)inv.datosserial.tipohierba[3];
+                ptext5.text = ""+(float)inv.datosserial.tipohierba[13];
+                ptext6.text = ""+(float)inv.datosserial.tipohierba[23];
 
                 
         }
@@ -169,14 +170,14 @@ public class inventariomenu : MonoBehaviour
                 puesto4.text = "hierba roja";
                 puesto5.text = "hierba roja plateada";
                 puesto6.text = "hierba roja dorada";
-                din.text = "dolares : "+""+inv.dinero.ToString("F0");
+                din.text = "dolares : "+""+inv.datosserial.dinero.ToString("F0");
                
-                ptext1.text = ""+(float)inv.tipohierba[4];
-                ptext2.text = ""+(float)inv.tipohierba[14];
-                ptext3.text = ""+(float)inv.tipohierba[24];
-                ptext4.text = ""+(float)inv.tipohierba[5];
-                ptext5.text = ""+(float)inv.tipohierba[15];
-                ptext6.text = ""+(float)inv.tipohierba[25];
+                ptext1.text = ""+(float)inv.datosserial.tipohierba[4];
+                ptext2.text = ""+(float)inv.datosserial.tipohierba[14];
+                ptext3.text = ""+(float)inv.datosserial.tipohierba[24];
+                ptext4.text = ""+(float)inv.datosserial.tipohierba[5];
+                ptext5.text = ""+(float)inv.datosserial.tipohierba[15];
+                ptext6.text = ""+(float)inv.datosserial.tipohierba[25];
 
                 
         }
@@ -188,14 +189,14 @@ public class inventariomenu : MonoBehaviour
                 puesto4.text = "hierba naranja";
                 puesto5.text = "hierba naranja plateada";
                 puesto6.text = "hierba naranja dorada";
-                din.text = "dolares : "+""+inv.dinero.ToString("F0");
+                din.text = "dolares : "+""+inv.datosserial.dinero.ToString("F0");
                
-                ptext1.text = ""+(float)inv.tipohierba[6];
-                ptext2.text = ""+(float)inv.tipohierba[16];
-                ptext3.text = ""+(float)inv.tipohierba[26];
-                ptext4.text = ""+(float)inv.tipohierba[7];
-                ptext5.text = ""+(float)inv.tipohierba[17];
-                ptext6.text = ""+(float)inv.tipohierba[27];
+                ptext1.text = ""+(float)inv.datosserial.tipohierba[6];
+                ptext2.text = ""+(float)inv.datosserial.tipohierba[16];
+                ptext3.text = ""+(float)inv.datosserial.tipohierba[26];
+                ptext4.text = ""+(float)inv.datosserial.tipohierba[7];
+                ptext5.text = ""+(float)inv.datosserial.tipohierba[17];
+                ptext6.text = ""+(float)inv.datosserial.tipohierba[27];
 
                 
         }
@@ -207,14 +208,14 @@ public class inventariomenu : MonoBehaviour
                 puesto4.text = "hierba blanca";
                 puesto5.text = "hierba blanca plateada";
                 puesto6.text = "hierba blanca dorada";
-                din.text = "dolares : "+""+inv.dinero.ToString("F0");
+                din.text = "dolares : "+""+inv.datosserial.dinero.ToString("F0");
                
-                ptext1.text = ""+(float)inv.tipohierba[8];
-                ptext2.text = ""+(float)inv.tipohierba[18];
-                ptext3.text = ""+(float)inv.tipohierba[28];
-                ptext4.text = ""+(float)inv.tipohierba[9];
-                ptext5.text = ""+(float)inv.tipohierba[19];
-                ptext6.text = ""+(float)inv.tipohierba[29];
+                ptext1.text = ""+(float)inv.datosserial.tipohierba[8];
+                ptext2.text = ""+(float)inv.datosserial.tipohierba[18];
+                ptext3.text = ""+(float)inv.datosserial.tipohierba[28];
+                ptext4.text = ""+(float)inv.datosserial.tipohierba[9];
+                ptext5.text = ""+(float)inv.datosserial.tipohierba[19];
+                ptext6.text = ""+(float)inv.datosserial.tipohierba[29];
 
                 
         }
@@ -226,14 +227,14 @@ public class inventariomenu : MonoBehaviour
                 puesto4.text = "licencia bicho3";
                 puesto5.text = "licencia bicho4";
                 puesto6.text = "licencia bicho5";
-                din.text = "dolares : "+""+inv.dinero.ToString("F0");
+                din.text = "dolares : "+""+inv.datosserial.dinero.ToString("F0");
                
-                ptext1.text = ""+inv.hierbaomega;
-                ptext2.text = ""+inv.licencia[0];
-                ptext3.text = ""+inv.licencia[1];
-                ptext4.text = ""+inv.licencia[2];
-                ptext5.text = ""+inv.licencia[3];
-                ptext6.text = ""+inv.licencia[4];
+                ptext1.text = ""+inv.datosserial.hierbaomega;
+                ptext2.text = ""+inv.datosserial.licencia[0];
+                ptext3.text = ""+inv.datosserial.licencia[1];
+                ptext4.text = ""+inv.datosserial.licencia[2];
+                ptext5.text = ""+inv.datosserial.licencia[3];
+                ptext6.text = ""+inv.datosserial.licencia[4];
 
                 
         }
@@ -245,14 +246,14 @@ public class inventariomenu : MonoBehaviour
                 puesto4.text = "licencia bicho9";
                 puesto5.text = "licencia bicho10";
                 puesto6.text = "licencia bicho11";
-                din.text = "dolares : "+""+inv.dinero.ToString("F0");
+                din.text = "dolares : "+""+inv.datosserial.dinero.ToString("F0");
                
-                ptext1.text = ""+inv.licencia[5];
-                ptext2.text = ""+inv.licencia[6];
-                ptext3.text = ""+inv.licencia[7];
-                ptext4.text = ""+inv.licencia[8];
-                ptext5.text = ""+inv.licencia[9];
-                ptext6.text = ""+inv.licencia[10];
+                ptext1.text = ""+inv.datosserial.licencia[5];
+                ptext2.text = ""+inv.datosserial.licencia[6];
+                ptext3.text = ""+inv.datosserial.licencia[7];
+                ptext4.text = ""+inv.datosserial.licencia[8];
+                ptext5.text = ""+inv.datosserial.licencia[9];
+                ptext6.text = ""+inv.datosserial.licencia[10];
 
                 
         }

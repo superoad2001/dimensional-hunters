@@ -61,47 +61,50 @@ public class intercambio1 : NetworkBehaviour
     NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
 
 public managermulti2 managermulti;
+public int client;
     
     // Start is called before the first frame update
     public void Start()
     {   
-        
-        hp = PlayerPrefs.GetFloat("hps", 100);
-        mana = PlayerPrefs.GetFloat("manas", 100);
-        manarec = PlayerPrefs.GetFloat("manarecs", 1);
-        fuerza = PlayerPrefs.GetFloat("fuerzas", 1);
-        rango = PlayerPrefs.GetFloat("rangos", 1);
-        clase = PlayerPrefs.GetFloat("clases", 1);
-        hname = (string)PlayerPrefs.GetString("names", "misigno");
-        bicho = (string)PlayerPrefs.GetString("bichosh", "madcat");
-        nivel = PlayerPrefs.GetFloat("nivelss", 1);
-        exp = PlayerPrefs.GetFloat("exph", 0);
-        elemento = (string)PlayerPrefs.GetString("elementoh", "nulo");
-        o = PlayerPrefs.GetFloat("selec", 0);
+        inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
+        hp = inv.datosserial.hps;
+        mana = inv.datosserial.manas;
+        manarec = inv.datosserial.manarecs;
+        fuerza = inv.datosserial.fuerzas;
+        rango = inv.datosserial.rangors;
+        clase = inv.datosserial.clases;
+        hname = inv.datosserial.names;
+        bicho = inv.datosserial.razas;
+        nivel = inv.datosserial.nivels;
+        exp = inv.datosserial.varsel1;
+        elemento = inv.datosserial.elementos;
+        o = inv.datosserial.varsel1;
         
 
         
     }
     public void Update()
     {   
+        inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
+        client = inv.datosserial.client;
     if(carga == false && managermulti.comenzar.Value == true)
     {
         carga = true;
-        if(IsOwner)
+        if(client == 1)
         
         {
-        hp = PlayerPrefs.GetFloat("hps", 100);
-        mana = PlayerPrefs.GetFloat("manas", 100);
-        manarec = PlayerPrefs.GetFloat("manarecs", 1);
-        fuerza = PlayerPrefs.GetFloat("fuerzas", 1);
-        rango = PlayerPrefs.GetFloat("rangos", 1);
-        clase = PlayerPrefs.GetFloat("clases", 1);
-        hname = (string)PlayerPrefs.GetString("names", "misigno");
-        bicho = (string)PlayerPrefs.GetString("bichosh", "madcat");
-        nivel = PlayerPrefs.GetFloat("nivelss", 1);
-        exp = PlayerPrefs.GetFloat("exph", 0);
-        elemento = (string)PlayerPrefs.GetString("elementoh", "nulo");
-        o = PlayerPrefs.GetFloat("selec", 0);
+        hp = inv.datosserial.hps;
+        mana = inv.datosserial.manas;
+        manarec = inv.datosserial.manarecs;
+        fuerza = inv.datosserial.fuerzas;
+        rango = inv.datosserial.rangors;
+        clase = inv.datosserial.clases;
+        hname = inv.datosserial.names;
+        bicho = inv.datosserial.razas;
+        nivel = inv.datosserial.nivels;
+        exp = inv.datosserial.varsel1;
+        elemento = inv.datosserial.elementos;
+        o = inv.datosserial.varsel1;
         cargadatos();
         }
 

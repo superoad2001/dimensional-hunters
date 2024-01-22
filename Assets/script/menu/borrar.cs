@@ -13,7 +13,8 @@ public class borrar : MonoBehaviour
     }
     public void _si()
     {
-        PlayerPrefs.DeleteAll();
+        inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
+        inv.borrar_data();
         SceneManager.LoadScene("menu");
     }
     public void _no()

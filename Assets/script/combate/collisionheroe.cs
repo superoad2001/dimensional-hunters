@@ -50,7 +50,7 @@ public class collisionheroe : MonoBehaviour
 
             }
         }
-        if (col.gameObject.tag == "pini")
+        if (col.gameObject.tag == "pini" && heroe.temp4 > 1)
         {
             heroe.ataque = 0;
             heroe.permiso = false;

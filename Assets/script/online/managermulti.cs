@@ -34,7 +34,8 @@ public class managermulti : NetworkBehaviour
     public void iniciar()
     {
         
-        client = PlayerPrefs.GetInt("clientid",0);
+        inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
+        client = inv.datosserial.client;
         if(client == 1 && check2c == true && check1c == true)
         {
             cambiarServerRpc(true,true);
@@ -55,7 +56,8 @@ public class managermulti : NetworkBehaviour
             check1c = check1.Value;
             check2c = check2.Value;
         }
-        client = PlayerPrefs.GetInt("clientid",0);
+        inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
+        client = inv.datosserial.client;
         if(client == 1 && check2c == true && check1c == true)
         {
             listo.text = "Comenzar";

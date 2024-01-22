@@ -25,7 +25,8 @@ public class interfazentr : MonoBehaviour
     public string plat;
     void Awake()
     {
-        plat = PlayerPrefs.GetString("plat","game3d");
+        inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
+        plat = inv.datosserial.plat;
         if(plat == "arcore")
         {
             

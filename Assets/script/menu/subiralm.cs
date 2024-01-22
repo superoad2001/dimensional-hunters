@@ -28,21 +28,21 @@ public class subiralm : MonoBehaviour
     void Start()
     {
         inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
-        rango = PlayerPrefs.GetInt("rango", 1);
+        rango = inv.datosserial.rangoplay;
 
-        if(inv.limite == 5)
+        if(inv.datosserial.limite == 5)
         {requisito = 500;}
-        if(inv.limite == 10)
+        if(inv.datosserial.limite == 10)
         {requisito = 500;}
-        if(inv.limite == 15)
+        if(inv.datosserial.limite == 15)
         {requisito = 500;}
-        if(inv.limite == 20)
+        if(inv.datosserial.limite == 20)
         {requisito = 500;}
-        if(inv.limite == 25)
+        if(inv.datosserial.limite == 25)
         {requisito = 500;}
-        if(inv.limite == 30)
+        if(inv.datosserial.limite == 30)
         {requisito = 500;}
-        if(inv.limite == 35)
+        if(inv.datosserial.limite == 35)
         {noventa = true;}
 
     }
@@ -54,13 +54,13 @@ public class subiralm : MonoBehaviour
     public void _subir()
     {
         inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
-        if(inv.dinero >= requisito && noventa == false)
+        if(inv.datosserial.dinero >= requisito && noventa == false)
         {
             sibot.Play();
-            inv.limite += 5;
-            inv.dinero -= requisito;
-            PlayerPrefs.SetFloat("dinerosave",inv.dinero);
-            PlayerPrefs.SetFloat("limite",inv.limite);
+            inv.datosserial.limite += 5;
+            inv.datosserial.dinero -= requisito;
+            inv.datosserial.rangoplay++;
+            inv.guardar();
         }
         else
         {
@@ -73,9 +73,9 @@ public class subiralm : MonoBehaviour
     {
         inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
         requsitot.text = "necesitas "+requisito+" dolares";
-        dinerot.text = "tus dolares: "+inv.dinero;
-        rangot.text = ""+inv.limite;
-        rangop.text = ""+(inv.limite+5);
+        dinerot.text = "tus dolares: "+inv.datosserial.dinero;
+        rangot.text = ""+inv.datosserial.limite;
+        rangop.text = ""+(inv.datosserial.limite+5);
 
     }
 }

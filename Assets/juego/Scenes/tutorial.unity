@@ -2096,6 +2096,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1742424952}
   - component: {fileID: 1742424953}
+  - component: {fileID: 1742424954}
   m_Layer: 0
   m_Name: manager
   m_TagString: Untagged
@@ -2130,6 +2131,163 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8611e3da7b6ca034cb72d0edc5cc4932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1742424954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1742424950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa2a1e8d3bf75a34ca61fe8fb6e55a47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  borrar: 0
+  indexmax: 0
+  o: 0
+  datosserial:
+    rangoplay: 1
+    name:
+    - madcat
+    - prueba
+    hp:
+    - 102
+    - 9999
+    mana:
+    - 82
+    - 9999
+    manarec:
+    - 0.7
+    - 1
+    fuerza:
+    - 0.36864024
+    - 1
+    elemento:
+    - comun rango :1
+    - ninguno
+    nivel:
+    - 1
+    - 1
+    bichosmios:
+    - madcat
+    - madcat
+    exp:
+    - 0
+    - 0
+    rango:
+    - 1
+    - 1
+    clase:
+    - 0
+    - 0
+    dinero: 1.0001108e+9
+    hierbaomega: 0
+    licencia:
+    - denegada
+    - denegada
+    - denegada
+    - denegada
+    - denegada
+    - denegada
+    - denegada
+    - denegada
+    - denegada
+    - denegada
+    - denegada
+    tipohierba:
+    - 999
+    - 999
+    - 999
+    - 999
+    - 999
+    - 999
+    - 999
+    - 999
+    - 999
+    - 999
+    - 999
+    - 999
+    - 999
+    - 999
+    - 999
+    - 999
+    - 999
+    - 999
+    - 999
+    - 999
+    - 999
+    - 999
+    - 999
+    - 999
+    - 999
+    - 999
+    - 999
+    - 999
+    - 999
+    - 999
+    limite: 9999
+    indexmax: 0
+    catalogo: []
+    names: 
+    hps: 0
+    manas: 0
+    manarecs: 0
+    fuerzas: 0
+    elementos: 
+    nivels: 0
+    clases: 0
+    razas: 
+    rangors: 0
+    exps: 0
+    rangoene: 0
+    nivelene: 0
+    hpene: 0
+    manaene: 0
+    manarecene: 0
+    fuerzaene: 0
+    elementoene: 
+    claseene: 0
+    razaene: 
+    nameene: 
+    varsel1: 0
+    client: 0
+    nameinter: 
+    hpinter: 0
+    manainter: 0
+    manarecinter: 0
+    fuerzainter: 0
+    elementointer: 
+    nivelinter: 0
+    claseinter: 0
+    razainter: 
+    rangorinter: 0
+    expinter: 0
+    nameinter2: 
+    hpinter2: 0
+    manainter2: 0
+    manarecinter2: 0
+    fuerzainter2: 0
+    elementointer2: 
+    nivelinter2: 0
+    claseinter2: 0
+    razainter2: 
+    rangorinter2: 0
+    expinter2: 0
+    plat: 
+    hierbau: 1
+    bichocaza: 
+    namer: 
+    hpr: 0
+    manar: 0
+    manarecr: 0
+    fuerzar: 0
+    elementor: 
+    nivelr: 0
+    claser: 0
+    razar: 
+    rangorr: 0
+  repath: C:/Users/super/AppData/LocalLow/superoad2001/dimensional hunters\DHdata\DHdatainventario.data
 --- !u!1 &1795622809
 GameObject:
   m_ObjectHideFlags: 0

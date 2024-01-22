@@ -937,7 +937,7 @@ public class heroentr : MonoBehaviour
                 permiso = true;
                 mana -= 20 * rangoexp ;
                 turbobar += 25;
-                ataque = Random.Range(10,16) * fuerza;
+                ataque = Random.Range(5,10) * fuerza;
                 atb = 0;
                 rapsound.Play();
                 baseanim.SetBool("atkvel", true);
@@ -958,7 +958,7 @@ public class heroentr : MonoBehaviour
                 mana -= 30 * rangoexp ;
                 fuesound.Play();
                 turbobar += 25;
-                ataque = Random.Range(18,20) * fuerza;
+                ataque = Random.Range(15,20) * fuerza;
                 atb = 0;
                 baseanim.SetBool("atkfue", true);
                 dano = Random.Range(0,3);
@@ -978,7 +978,7 @@ public class heroentr : MonoBehaviour
                 mana -= 50 * rangoexp ;
                 rapfuesound.Play();
                 turbobar += 50;
-                ataque = Random.Range(30,40) * fuerza;
+                ataque = Random.Range(37,40) * fuerza;
                 atb = 0;
                 baseanim.SetBool("atkrapfue", true);
                 dano = Random.Range(0,3);
@@ -1030,36 +1030,36 @@ public class heroentr : MonoBehaviour
                 {bote.Play();}
                 botno.Stop();
                 botebool = true;
-                mana -= 3.5f  * rangoexp * Time.deltaTime;
-                turbobar += 0.7f * Time.deltaTime;
+                mana -= 8.5f  * rangoexp * Time.deltaTime;
+                turbobar += 5f * Time.deltaTime;
                 prot.enabled = false;
                 escudo.gameObject.SetActive(true);
                 defusar = true;
                 if(tempdtext > 1f)
                 {
                     DynamicTextManager dtext = UnityEngine.Object.FindObjectOfType<DynamicTextManager>(); 
-                    dtext.CreateText(ev1.transform.position,("-"+(3.5 * rangoexp)).Substring(0, 4),textDatamana);
+                    dtext.CreateText(ev1.transform.position,("-"+(8.5 * rangoexp)).Substring(0, 4),textDatamana);
                     tempdtext = 0;
                 }
                 tempdtext += 1 * Time.deltaTime;
             }
             else if (def == true && mana > 0  && mana < 5 * rangoexp  && permiso == false && defusar == true)
             {
-                mana -= 3.5f  * rangoexp * Time.deltaTime;
-                turbobar += 0.7f * Time.deltaTime;
+                mana -= 8.5f  * rangoexp * Time.deltaTime;
+                turbobar += 5f * Time.deltaTime;
                 prot.enabled = false;
                 escudo.gameObject.SetActive(true);
                 if(tempdtext > 1f)
                 {
                     DynamicTextManager dtext = UnityEngine.Object.FindObjectOfType<DynamicTextManager>(); 
-                    dtext.CreateText(ev1.transform.position,("-"+(3.5 * rangoexp)).Substring(0, 4),textDatamana);
+                    dtext.CreateText(ev1.transform.position,("-"+(8.5 * rangoexp)).Substring(0, 4),textDatamana);
                     tempdtext = 0;
                 }
                 tempdtext += 1 * Time.deltaTime;
             }
-            else if(def == true)
+            else if(def == true && mana < 5 * rangoexp && defusar == false)
             {botno.Play();}
-            else 
+            else
             {   
                 botebool = false;
                 bote.Stop();
@@ -1068,11 +1068,11 @@ public class heroentr : MonoBehaviour
                 
                 if (mana < manamax)
                 {
-                    mana+= 3 * manarec * Time.deltaTime;
+                    mana+= 1.5f * manarec * Time.deltaTime;
                     if(tempdtext > 1f)
                     {
                         DynamicTextManager dtext = UnityEngine.Object.FindObjectOfType<DynamicTextManager>(); 
-                        dtext.CreateText(ev1.transform.position,("+"+(3 * manarec)),textDatamanamas);
+                        dtext.CreateText(ev1.transform.position,("+"+(1.5f * manarec)),textDatamanamas);
                         tempdtext = 0;
                     }
                 }

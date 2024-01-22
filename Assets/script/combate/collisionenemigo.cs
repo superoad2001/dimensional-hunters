@@ -48,7 +48,7 @@ public class collisionenemigo : MonoBehaviour
 
             }
         }
-        if (col.gameObject.tag == "pini")
+        if (col.gameObject.tag == "pinie"  && enemigo.temp4 > 1)
         {
             enemigo.ataque = 0;
             

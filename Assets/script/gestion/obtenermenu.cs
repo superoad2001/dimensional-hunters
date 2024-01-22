@@ -226,27 +226,22 @@ public class obtenermenu : MonoBehaviour
     void Start()
     {
 
+        inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
+
+        
+        
 
 
         
-        
-
-
-        catalogo.Add( "skybird");
-        catalogo.Add("topo topo");
-        catalogo.Add("shitfloor");
-        catalogo.Add("madcat");
-
-        
-        hp = PlayerPrefs.GetFloat("hpr", 10000);
-        mana = PlayerPrefs.GetFloat("manar", 10000);
-        manarec = PlayerPrefs.GetFloat("manarecr",1);
-        fuerza = PlayerPrefs.GetFloat("fuerzar",1);
-        elemento =  PlayerPrefs.GetString("tipor", "plateado Rango : 1");
-        nivel = PlayerPrefs.GetFloat("nivelr", 1);
-        clase = PlayerPrefs.GetFloat("claser", 1);
-        raza = PlayerPrefs.GetString("razar", "madcat");
-        rangor = PlayerPrefs.GetFloat("rangor", 1);
+        hp = inv.datosserial.hps;
+        mana = inv.datosserial.manas;
+        manarec = inv.datosserial.manarecs;
+        fuerza = inv.datosserial.fuerzas;
+        elemento =  inv.datosserial.elementos;
+        nivel = inv.datosserial.nivels;
+        clase = inv.datosserial.clases;
+        raza = inv.datosserial.razas;
+        rangor = inv.datosserial.rangors;
         name = raza;
 
         modelos0();
@@ -418,7 +413,7 @@ public class obtenermenu : MonoBehaviour
                 
                 if(bichoselec == true && temp > 0.3f)
                 {
-                   if(inv.name.Count >= inv.limite)
+                   if(inv.datosserial.name.Count >= inv.datosserial.limite)
                    {
                         borrarpre1 = true;
                    }
@@ -443,58 +438,17 @@ public class obtenermenu : MonoBehaviour
                 if(bichoselec == true && temp > 0.3f && uitext.text != "" )
                 {
                     name = uitext.text;
-                    inv.name.Add(name);
-                    inv.hp.Add(hp);
-                    inv.mana.Add(mana);
-                    inv.manarec.Add(manarec);
-                    inv.fuerza.Add(fuerza);
-                    inv.elemento.Add(elemento);
-                    inv.nivel.Add(nivel);
-                    inv.rango.Add(rangor);
-                    inv.bichosmios.Add(raza);
-                   for(int i = 0;i < inv.name.Count ; i++)
-                    {
-                        PlayerPrefs.SetString("namesave"+i ,inv.name[i]);
-                        
-                    }
-                    for(int i = 0;i< inv.hp.Count ; i++)
-                    {
-                        PlayerPrefs.SetFloat("hpsave"+i,(int)inv.hp[i]);
-                    }
-                    for(int i = 0;i< inv.mana.Count ; i++)
-                    {
-                        PlayerPrefs.SetFloat("manasave"+i,(int)inv.mana[i]);
-                    }
-                    for(int i = 0;i< inv.manarec.Count ; i++)
-                    {
-                        PlayerPrefs.SetFloat("manarecsave"+i,inv.manarec[i]);
-                    }
-                    for(int i = 0;i< inv.fuerza.Count ; i++)
-                    {
-                        PlayerPrefs.SetFloat("fuerzasave"+i,inv.fuerza[i]);
-                    }
-                    for(int i = 0;i< inv.nivel.Count ; i++)
-                    {
-                        PlayerPrefs.SetFloat("nivelsave"+i,inv.nivel[i]);
-                    }
-                    for(int i = 0;i< inv.elemento.Count ; i++)
-                    {
-                        PlayerPrefs.SetString("elementosave"+i,inv.elemento[i]);
-                    }
-                    for(int i = 0;i< inv.rango.Count ; i++)
-                    {
-                        PlayerPrefs.SetFloat("rangob"+i,inv.rango[i]);
-                    }
-                    for(int i = 0;i< inv.clase.Count ; i++)
-                    {
-                        PlayerPrefs.SetFloat("clasesave"+i,inv.clase[i]);
-                    }
-                    for(int i = 0;i< inv.bichosmios.Count ; i++)
-                    {
-                        PlayerPrefs.SetString("bichosmiossave"+i,inv.bichosmios[i]);
-                    }
-                    inv.indexmax = inv.name.Count;
-                    PlayerPrefs.SetFloat("index",inv.indexmax);
+                    inv.datosserial.name.Add(name);
+                    inv.datosserial.hp.Add(hp);
+                    inv.datosserial.mana.Add(mana);
+                    inv.datosserial.manarec.Add(manarec);
+                    inv.datosserial.fuerza.Add(fuerza);
+                    inv.datosserial.elemento.Add(elemento);
+                    inv.datosserial.nivel.Add(nivel);
+                    inv.datosserial.rango.Add(rangor);
+                    inv.datosserial.bichosmios.Add(raza);
+                    inv.datosserial.indexmax = inv.datosserial.name.Count;
+                    inv.guardar();
                     SceneManager.LoadScene("seleccion");
                 }
         }
@@ -518,17 +472,17 @@ public class obtenermenu : MonoBehaviour
         {
                 
                 
-                bichos = inv.bichosmios;
+                bichos = inv.datosserial.bichosmios;
                 indexmax = bichos.Count;
                 
-                bichot2.text = inv.name[i];
+                bichot2.text = inv.datosserial.name[i];
                 bichoti2.text ="RAZA "+ bichos[i];
-                hpt2.text = "VIT :"+ inv.hp[i].ToString("F2");
-                mat2.text = "STAMINA :"+inv.mana[i].ToString("F2");
-                rect2.text = "REC :"+inv.manarec[i].ToString("F2");
-                danot2.text = "FUE :"+inv.fuerza[i].ToString("F2");
-                elementot2.text = "CAT : "+inv.elemento[i];
-                nivelt2.text = "NIVEL : "+inv.nivel[i];
+                hpt2.text = "VIT :"+ inv.datosserial.hp[i].ToString("F2");
+                mat2.text = "STAMINA :"+inv.datosserial.mana[i].ToString("F2");
+                rect2.text = "REC :"+inv.datosserial.manarec[i].ToString("F2");
+                danot2.text = "FUE :"+inv.datosserial.fuerza[i].ToString("F2");
+                elementot2.text = "CAT : "+inv.datosserial.elemento[i];
+                nivelt2.text = "NIVEL : "+inv.datosserial.nivel[i];
                 who.text = "TUS HEROES";
                 modelos();
                 if(borrar2 == true && temp > 0.3f)
@@ -553,7 +507,7 @@ public class obtenermenu : MonoBehaviour
         if(nobich == true)
         {
 
-            lib.text = "DESEAS LIBERAR A "+inv.name[i];
+            lib.text = "DESEAS LIBERAR A "+inv.datosserial.name[i];
             if(si == true)
             {
                 inv.o = i;

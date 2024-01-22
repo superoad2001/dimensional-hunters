@@ -39,13 +39,16 @@ public class networkui : NetworkBehaviour
         ipAddress = "0.0.0.0";
 		SetIpAddress(); // Set the Ip to the above address
 		pcAssigned = false;
-        PlayerPrefs.SetInt("clientid",0);
+        inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
+        inv.datosserial.client = 0;
+        inv.guardar();
     }
     // Update is called once per frame
     
     void Update()
     {
-        client = PlayerPrefs.GetInt("clientid",0);
+        inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
+        client = inv.datosserial.client;
         if(client  == 1 && manamulti.comenzar.Value == false)
         {
             if(NetworkManager.Singleton.ConnectedClients.Count == 1)
@@ -77,7 +80,9 @@ public class networkui : NetworkBehaviour
         activar = true;
         manamulti.check1c = true;
         manamulti.checkServerRpc(true,manamulti.check2.Value);
-        PlayerPrefs.SetInt("clientid",1);
+        inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
+        inv.datosserial.client = 1;
+        inv.guardar();
         }
         
     }
@@ -90,7 +95,9 @@ public class networkui : NetworkBehaviour
         NetworkManager.Singleton.StartClient();
         activar = true;
         manamulti.check2c = true;
-        PlayerPrefs.SetInt("clientid",2);
+        inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
+        inv.datosserial.client = 2;
+        inv.guardar();
         }
     }
 
@@ -101,7 +108,9 @@ public class networkui : NetworkBehaviour
         heroe.carga = false;
         heroe2.carga = false;
         codigo.text = "";
-        PlayerPrefs.SetInt("clientid",0);
+        inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
+        inv.datosserial.client = 0;
+        inv.guardar();
         if(client == 1)
         {
             manamulti.check1c = false;

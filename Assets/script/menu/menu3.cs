@@ -24,7 +24,8 @@ public class menu3 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rango = PlayerPrefs.GetInt("rango", 1);
+        inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
+        rango = inv.datosserial.rangoplay;
     }
     public void _atras()
     {
@@ -32,17 +33,23 @@ public class menu3 : MonoBehaviour
     }
     public void _arcore()
     {
-        PlayerPrefs.SetString("plat","arcore");
+        inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
+        inv.datosserial.plat = "arcore";
+        inv.guardar();
         SceneManager.LoadScene("seleccion2");
     }
     public void _game3d()
     {
-        PlayerPrefs.SetString("plat","game3d");
+        inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
+        inv.datosserial.plat = "game3d";
+        inv.guardar();
         SceneManager.LoadScene("seleccion2");
     }
     public void _game3dt()
     {
-        PlayerPrefs.SetString("plat","game3dt");
+        inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
+        inv.datosserial.plat = "game3dt";
+        inv.guardar();
         SceneManager.LoadScene("seleccion2");
     }
 

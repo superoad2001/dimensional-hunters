@@ -19,18 +19,18 @@ public class findecombat : MonoBehaviour
     void Start()
     {
         inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
-        nivelg = (int)PlayerPrefs.GetFloat("nivelg", 1);
-        o = (int)PlayerPrefs.GetFloat("selec", 0);
-        rango2 = (int)PlayerPrefs.GetFloat("rangoene", 1);
+        nivelg = (int)inv.datosserial.nivelene;
+        o = (int)inv.datosserial.varsel1;
+        rango2 = (int)inv.datosserial.rangoene;
 
-        hptt.text = "vit : "+inv.hp[o];
-        manat.text = "sta : "+inv.mana[o];
-        manarect.text = "rec : "+inv.manarec[o].ToString("F2");
-        danot.text = "fue : "+inv.fuerza[o].ToString("F2");
-        elementot.text = "categoria : "+inv.elemento[o];
-        bichoti.text = "raza : "+inv.bichosmios[o];
-        nivelt.text = "nivel : "+inv.nivel[o];
-        rango = inv.rango[o];
+        hptt.text = "vit : "+inv.datosserial.hp[o];
+        manat.text = "sta : "+inv.datosserial.mana[o];
+        manarect.text = "rec : "+inv.datosserial.manarec[o].ToString("F2");
+        danot.text = "fue : "+inv.datosserial.fuerza[o].ToString("F2");
+        elementot.text = "categoria : "+inv.datosserial.elemento[o];
+        bichoti.text = "raza : "+inv.datosserial.bichosmios[o];
+        nivelt.text = "nivel : "+inv.datosserial.nivel[o];
+        rango = inv.datosserial.rango[o];
 
 
         if(rango == 1)
@@ -176,49 +176,49 @@ public class findecombat : MonoBehaviour
 
         
         if(nivelg == 1)
-        {obj = (int)inv.exp[o] + Random.Range(20,27) * (int)rangoexp2;
-        dobj = (int)inv.dinero + Random.Range(10,20) * (int)rangoexp2;}
+        {obj = (int)inv.datosserial.exp[o] + Random.Range(20,27) * (int)rangoexp2;
+        dobj = (int)inv.datosserial.dinero + Random.Range(10,20) * (int)rangoexp2;}
         if(nivelg == 2)
-        {obj = (int)inv.exp[o] + Random.Range(40,65) * (int)rangoexp2;
-        dobj = (int)inv.dinero +Random.Range(25,40) * (int)rangoexp2;}
+        {obj = (int)inv.datosserial.exp[o] + Random.Range(40,65) * (int)rangoexp2;
+        dobj = (int)inv.datosserial.dinero +Random.Range(25,40) * (int)rangoexp2;}
         if(nivelg == 3)
-        {obj = (int)inv.exp[o] + Random.Range(80,120) * (int)rangoexp2;
-        dobj = (int)inv.dinero +Random.Range(50,75) * (int)rangoexp2;}
+        {obj = (int)inv.datosserial.exp[o] + Random.Range(80,120) * (int)rangoexp2;
+        dobj = (int)inv.datosserial.dinero +Random.Range(50,75) * (int)rangoexp2;}
         if(nivelg == 4)
-        {obj = (int)inv.exp[o] + Random.Range(150,200) * (int)rangoexp2;
-        dobj = (int)inv.dinero +Random.Range(100,130) * (int)rangoexp2;}
+        {obj = (int)inv.datosserial.exp[o] + Random.Range(150,200) * (int)rangoexp2;
+        dobj = (int)inv.datosserial.dinero +Random.Range(100,130) * (int)rangoexp2;}
         if(nivelg == 5)
-        {obj = (int)inv.exp[o] + Random.Range(200,230) * (int)rangoexp2;
-        dobj = (int)inv.dinero + Random.Range(150,190) * (int)rangoexp2;}
+        {obj = (int)inv.datosserial.exp[o] + Random.Range(200,230) * (int)rangoexp2;
+        dobj = (int)inv.datosserial.dinero + Random.Range(150,190) * (int)rangoexp2;}
         if(nivelg == 6)
-        {obj = (int)inv.exp[o] + Random.Range(230,250) * (int)rangoexp2;
-        dobj = (int)inv.dinero + Random.Range(200,220) * (int)rangoexp2;}
+        {obj = (int)inv.datosserial.exp[o] + Random.Range(230,250) * (int)rangoexp2;
+        dobj = (int)inv.datosserial.dinero + Random.Range(200,220) * (int)rangoexp2;}
         if(nivelg == 7)
-        {obj = (int)inv.exp[o] + Random.Range(250,270) * (int)rangoexp2;
-        dobj = (int)inv.dinero + Random.Range(230,250) * (int)rangoexp2;}
+        {obj = (int)inv.datosserial.exp[o] + Random.Range(250,270) * (int)rangoexp2;
+        dobj = (int)inv.datosserial.dinero + Random.Range(230,250) * (int)rangoexp2;}
         if(nivelg == 8)
-        {obj = (int)inv.exp[o] + Random.Range(270,290) * (int)rangoexp2;
-        dobj = (int)inv.dinero + Random.Range(270,300) * (int)rangoexp2;}
+        {obj = (int)inv.datosserial.exp[o] + Random.Range(270,290) * (int)rangoexp2;
+        dobj = (int)inv.datosserial.dinero + Random.Range(270,300) * (int)rangoexp2;}
         if(nivelg == 9)
-        {obj = (int)inv.exp[o] + Random.Range(290,320) * (int)rangoexp2;
-        dobj = (int)inv.dinero + Random.Range(300,350) * (int)rangoexp2;}
+        {obj = (int)inv.datosserial.exp[o] + Random.Range(290,320) * (int)rangoexp2;
+        dobj = (int)inv.datosserial.dinero + Random.Range(300,350) * (int)rangoexp2;}
         if(nivelg == 10)
-        {obj = (int)inv.exp[o] + Random.Range(330,390) * (int)rangoexp2;
-        dobj = (int)inv.dinero + Random.Range(360,390) * (int)rangoexp2;}
+        {obj = (int)inv.datosserial.exp[o] + Random.Range(330,390) * (int)rangoexp2;
+        dobj = (int)inv.datosserial.dinero + Random.Range(360,390) * (int)rangoexp2;}
         if(nivelg == 11)
-        {obj = (int)inv.exp[o] + Random.Range(400,450) * (int)rangoexp2;
-        dobj = (int)inv.dinero + Random.Range(400,490) * (int)rangoexp2;}
+        {obj = (int)inv.datosserial.exp[o] + Random.Range(400,450) * (int)rangoexp2;
+        dobj = (int)inv.datosserial.dinero + Random.Range(400,490) * (int)rangoexp2;}
         if(nivelg == 12)
-        {obj = (int)inv.exp[o] + Random.Range(470,530) * (int)rangoexp2;
-        dobj = (int)inv.dinero + Random.Range(500,570) * (int)rangoexp2;}
+        {obj = (int)inv.datosserial.exp[o] + Random.Range(470,530) * (int)rangoexp2;
+        dobj = (int)inv.datosserial.dinero + Random.Range(500,570) * (int)rangoexp2;}
         if(nivelg == 13)
-        {obj = (int)inv.exp[o] + Random.Range(600,650) * (int)rangoexp2;
-        dobj = (int)inv.dinero + Random.Range(580,680) * (int)rangoexp2;}
+        {obj = (int)inv.datosserial.exp[o] + Random.Range(600,650) * (int)rangoexp2;
+        dobj = (int)inv.datosserial.dinero + Random.Range(580,680) * (int)rangoexp2;}
         if(nivelg == 14)
-        {obj = (int)inv.exp[o] + Random.Range(680,740) * (int)rangoexp2;
-        dobj = (int)inv.dinero + Random.Range(700,800) * (int)rangoexp2;}
+        {obj = (int)inv.datosserial.exp[o] + Random.Range(680,740) * (int)rangoexp2;
+        dobj = (int)inv.datosserial.dinero + Random.Range(700,800) * (int)rangoexp2;}
         if(nivelg == 15)
-        {dobj = (int)inv.dinero + Random.Range(800,999) * (int)rangoexp2;}
+        {dobj = (int)inv.datosserial.dinero + Random.Range(800,999) * (int)rangoexp2;}
 
         
 
@@ -358,299 +358,299 @@ public class findecombat : MonoBehaviour
     {
         inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
         
-        if (inv.nivel[o] == 1 )
+        if (inv.datosserial.nivel[o] == 1 )
         {
-            expv.fillAmount = inv.exp[o]/27;
+            expv.fillAmount = inv.datosserial.exp[o]/27;
             if(p1 == false)
-            {if(inv.dinero < dobj)
-            {inv.dinero += dobj/2 * Time.deltaTime;}
-            monedat.text = "dolares : "+inv.dinero.ToString("F2");}
+            {if(inv.datosserial.dinero < dobj)
+            {inv.datosserial.dinero += dobj/2 * Time.deltaTime;}
+            monedat.text = "dolares : "+inv.datosserial.dinero.ToString("F2");}
             if(p1 == true)
             {
                 
-                if(inv.exp[o] < obj)
+                if(inv.datosserial.exp[o] < obj)
                 {
                     if(vez1 == false)
                     {dinsound.Play();
                     vez1 = true;}
                     dinsound.loop = true;
-                    inv.exp[o] += obj/4 * Time.deltaTime;
+                    inv.datosserial.exp[o] += obj/4 * Time.deltaTime;
                     
                 }
-                inv.exp[o] = inv.exp[o];
-                expv.fillAmount = inv.exp[o]/27;
+                inv.datosserial.exp[o] = inv.datosserial.exp[o];
+                expv.fillAmount = inv.datosserial.exp[o]/27;
             }
-            hptt.text = "vit : "+inv.hp[o];
-            manat.text = "sta : "+inv.mana[o];
-            manarect.text = "rec : "+inv.manarec[o].ToString("F2");
-            danot.text = "fue : "+inv.fuerza[o].ToString("F2");
-            elementot.text = "categoria : "+inv.elemento[o];
-            bichoti.text = "raza : "+inv.bichosmios[o];
-            nivelt.text = "nivel : "+inv.nivel[o];
+            hptt.text = "vit : "+inv.datosserial.hp[o];
+            manat.text = "sta : "+inv.datosserial.mana[o];
+            manarect.text = "rec : "+inv.datosserial.manarec[o].ToString("F2");
+            danot.text = "fue : "+inv.datosserial.fuerza[o].ToString("F2");
+            elementot.text = "categoria : "+inv.datosserial.elemento[o];
+            bichoti.text = "raza : "+inv.datosserial.bichosmios[o];
+            nivelt.text = "nivel : "+inv.datosserial.nivel[o];
             subiste.text = "";
             
         }
-        if(inv.dinero >= dobj)
+        if(inv.datosserial.dinero >= dobj)
         {
             p1 = true;
         }
 
-        if(inv.exp[o] >= obj && inv.nivel[o] == 1)
+        if(inv.datosserial.exp[o] >= obj && inv.datosserial.nivel[o] == 1)
         {
             sub = false;
        
             
         }
-        if(inv.exp[o] >= 27 * rangoexp3 && inv.nivel[o] == 1)
+        if(inv.datosserial.exp[o] >= 27 * rangoexp3 && inv.datosserial.nivel[o] == 1)
         {
             
             permiso = false;
-            inv.exp[o] = 0;
-            inv.nivel[o]++;
-            nivelt.text = "nivel : "+inv.nivel[o];
+            inv.datosserial.exp[o] = 0;
+            inv.datosserial.nivel[o]++;
+            nivelt.text = "nivel : "+inv.datosserial.nivel[o];
 
             obj -= 27 * rangoexp3;
             subiste.text = "has subido de nivel";
             
-            inv.hp[o] +=50*rangoexp;
-            inv.mana[o] +=5*rangoexp;
-            inv.manarec[o] +=0.05f*rangoexp;
-            inv.fuerza[o] +=0.25f*rangoexp;
+            inv.datosserial.hp[o] +=50*rangoexp;
+            inv.datosserial.mana[o] +=5*rangoexp;
+            inv.datosserial.manarec[o] +=0.05f*rangoexp;
+            inv.datosserial.fuerza[o] +=0.25f*rangoexp;
             hp.gameObject.SetActive(true);
             ma.gameObject.SetActive(true);
             rec.gameObject.SetActive(true);
             fue.gameObject.SetActive(true);
-            hpt.text = "vit "+inv.hp[o] +" + 20";
-            mat.text = "sta "+inv.mana[o] +" + 5";
-            rect.text = "rec "+inv.manarec[o].ToString("F2") +" + 0,05";
-            fuet.text = "fue "+inv.fuerza[o].ToString("F2") +" + 0,10";
+            hpt.text = "vit "+inv.datosserial.hp[o] +" + 20";
+            mat.text = "sta "+inv.datosserial.mana[o] +" + 5";
+            rect.text = "rec "+inv.datosserial.manarec[o].ToString("F2") +" + 0,05";
+            fuet.text = "fue "+inv.datosserial.fuerza[o].ToString("F2") +" + 0,10";
             
             
             
         }
-        if(inv.exp[o] >= obj && inv.nivel[o]== 2)
+        if(inv.datosserial.exp[o] >= obj && inv.datosserial.nivel[o]== 2)
         {
             sub = false;
             
             
         }
-        if(inv.exp[o] < 65 * rangoexp3 && inv.nivel[o]== 2 && permiso == true)
+        if(inv.datosserial.exp[o] < 65 * rangoexp3 && inv.datosserial.nivel[o]== 2 && permiso == true)
         {
-            expv.fillAmount = inv.exp[o]/65;
+            expv.fillAmount = inv.datosserial.exp[o]/65;
             if(p1 == false)
-            {if(inv.dinero < dobj)
-            {inv.dinero += dobj/2 * Time.deltaTime;}
-            monedat.text = "dolares : "+inv.dinero.ToString("F2");}
+            {if(inv.datosserial.dinero < dobj)
+            {inv.datosserial.dinero += dobj/2 * Time.deltaTime;}
+            monedat.text = "dolares : "+inv.datosserial.dinero.ToString("F2");}
             if(p1 == true)
-            {if(inv.exp[o] < obj)
-            {inv.exp[o] += obj/4 * Time.deltaTime; if(vez1 == false)
+            {if(inv.datosserial.exp[o] < obj)
+            {inv.datosserial.exp[o] += obj/4 * Time.deltaTime; if(vez1 == false)
                     {dinsound.Play();
                     vez1 = true;}}
-            expv.fillAmount = inv.exp[o]/65;}
-            hptt.text = "vit : "+inv.hp[o];
-            manat.text = "sta : "+inv.mana[o];
-            manarect.text = "rec : "+inv.manarec[o].ToString("F2");
-            danot.text = "fue : "+inv.fuerza[o].ToString("F2");
-            elementot.text = "categoria : "+inv.elemento[o];
-            bichoti.text = "raza : "+inv.bichosmios[o];
-            nivelt.text = "nivel : "+inv.nivel[o];
+            expv.fillAmount = inv.datosserial.exp[o]/65;}
+            hptt.text = "vit : "+inv.datosserial.hp[o];
+            manat.text = "sta : "+inv.datosserial.mana[o];
+            manarect.text = "rec : "+inv.datosserial.manarec[o].ToString("F2");
+            danot.text = "fue : "+inv.datosserial.fuerza[o].ToString("F2");
+            elementot.text = "categoria : "+inv.datosserial.elemento[o];
+            bichoti.text = "raza : "+inv.datosserial.bichosmios[o];
+            nivelt.text = "nivel : "+inv.datosserial.nivel[o];
             subiste.text = "";
         }
-        if(inv.dinero >= dobj)
+        if(inv.datosserial.dinero >= dobj)
         {
             p1 = true;
         }
-        if(inv.exp[o] >= 65 * rangoexp3 && inv.nivel[o]== 2 && permiso == true)
+        if(inv.datosserial.exp[o] >= 65 * rangoexp3 && inv.datosserial.nivel[o]== 2 && permiso == true)
         {
-            inv.exp[o] = 0;
+            inv.datosserial.exp[o] = 0;
             
             permiso = false;
-            inv.nivel[o]++;
-            nivelt.text = "nivel : "+inv.nivel[o];
+            inv.datosserial.nivel[o]++;
+            nivelt.text = "nivel : "+inv.datosserial.nivel[o];
 
             obj -= 65 * rangoexp3;
             subiste.text = "has subido de nivel";
             
-            inv.hp[o] +=50*rangoexp;
-            inv.mana[o] +=5*rangoexp;
-            inv.manarec[o] +=0.05f*rangoexp;
-            inv.fuerza[o] +=0.25f*rangoexp;
+            inv.datosserial.hp[o] +=50*rangoexp;
+            inv.datosserial.mana[o] +=5*rangoexp;
+            inv.datosserial.manarec[o] +=0.05f*rangoexp;
+            inv.datosserial.fuerza[o] +=0.25f*rangoexp;
             hp.gameObject.SetActive(true);
             ma.gameObject.SetActive(true);
             rec.gameObject.SetActive(true);
             fue.gameObject.SetActive(true);
-            hpt.text = "vit "+inv.hp[o] +" + 20";
-            mat.text = "sta "+inv.mana[o] +" + 5";
-            rect.text = "rec "+inv.manarec[o].ToString("F2") +" + 0,05";
-            fuet.text = "fue "+inv.fuerza[o].ToString("F2") +" + 0,10";
+            hpt.text = "vit "+inv.datosserial.hp[o] +" + 20";
+            mat.text = "sta "+inv.datosserial.mana[o] +" + 5";
+            rect.text = "rec "+inv.datosserial.manarec[o].ToString("F2") +" + 0,05";
+            fuet.text = "fue "+inv.datosserial.fuerza[o].ToString("F2") +" + 0,10";
             
             
         }
-        if(inv.exp[o] >= obj && inv.nivel[o]== 3 && permiso == true)
+        if(inv.datosserial.exp[o] >= obj && inv.datosserial.nivel[o]== 3 && permiso == true)
         {
             sub = false;
             
         }
-        if(inv.exp[o] < 120 * rangoexp3 && inv.nivel[o]== 3 && permiso == true)
+        if(inv.datosserial.exp[o] < 120 * rangoexp3 && inv.datosserial.nivel[o]== 3 && permiso == true)
         {
-            expv.fillAmount = inv.exp[o]/120;
+            expv.fillAmount = inv.datosserial.exp[o]/120;
             if(p1 == false)
-            {if(inv.dinero < dobj)
-            {inv.dinero += dobj/2 * Time.deltaTime;}
-            monedat.text = "dolares : "+inv.dinero.ToString("F2");}
+            {if(inv.datosserial.dinero < dobj)
+            {inv.datosserial.dinero += dobj/2 * Time.deltaTime;}
+            monedat.text = "dolares : "+inv.datosserial.dinero.ToString("F2");}
             if(p1 == true)
-            {if(inv.exp[o] < obj)
-            {inv.exp[o] += obj/4 * Time.deltaTime; if(vez1 == false)
+            {if(inv.datosserial.exp[o] < obj)
+            {inv.datosserial.exp[o] += obj/4 * Time.deltaTime; if(vez1 == false)
                     {dinsound.Play();
                     vez1 = true;}}
-            expv.fillAmount = inv.exp[o]/120;}
-            hptt.text = "vit : "+inv.hp[o];
-            manat.text = "sta : "+inv.mana[o];
-            manarect.text = "rec : "+inv.manarec[o].ToString("F2");
-            danot.text = "fue : "+inv.fuerza[o].ToString("F2");
-            elementot.text = "categoria : "+inv.elemento[o];
-            bichoti.text = "raza : "+inv.bichosmios[o];
-            nivelt.text = "nivel : "+inv.nivel[o];
+            expv.fillAmount = inv.datosserial.exp[o]/120;}
+            hptt.text = "vit : "+inv.datosserial.hp[o];
+            manat.text = "sta : "+inv.datosserial.mana[o];
+            manarect.text = "rec : "+inv.datosserial.manarec[o].ToString("F2");
+            danot.text = "fue : "+inv.datosserial.fuerza[o].ToString("F2");
+            elementot.text = "categoria : "+inv.datosserial.elemento[o];
+            bichoti.text = "raza : "+inv.datosserial.bichosmios[o];
+            nivelt.text = "nivel : "+inv.datosserial.nivel[o];
             subiste.text = "";
         }
-        if(inv.dinero >= dobj)
+        if(inv.datosserial.dinero >= dobj)
         {
             p1 = true;
         }
-        if(inv.exp[o] >= 120 * rangoexp3 && inv.nivel[o]== 3 && permiso == true)
+        if(inv.datosserial.exp[o] >= 120 * rangoexp3 && inv.datosserial.nivel[o]== 3 && permiso == true)
         {
             
             permiso = false;
-            inv.exp[o] = 0;
-            inv.nivel[o]++;
-            nivelt.text = "nivel : "+inv.nivel[o];
+            inv.datosserial.exp[o] = 0;
+            inv.datosserial.nivel[o]++;
+            nivelt.text = "nivel : "+inv.datosserial.nivel[o];
             obj -= 120 * rangoexp3;
             subiste.text = "has subido de nivel";
             
-            inv.hp[o] +=50*rangoexp;
-            inv.mana[o] +=5*rangoexp;
-            inv.manarec[o] +=0.05f*rangoexp;
-            inv.fuerza[o] +=0.25f*rangoexp;
+            inv.datosserial.hp[o] +=50*rangoexp;
+            inv.datosserial.mana[o] +=5*rangoexp;
+            inv.datosserial.manarec[o] +=0.05f*rangoexp;
+            inv.datosserial.fuerza[o] +=0.25f*rangoexp;
             hp.gameObject.SetActive(true);
             ma.gameObject.SetActive(true);
             rec.gameObject.SetActive(true);
             fue.gameObject.SetActive(true);
-            hpt.text = "vit "+inv.hp[o] +" + 20";
-            mat.text = "sta "+inv.mana[o] +" + 5";
-            rect.text = "rec "+inv.manarec[o].ToString("F2") +" + 0,05";
-            fuet.text = "fue "+inv.fuerza[o].ToString("F2") +" + 0,10";
+            hpt.text = "vit "+inv.datosserial.hp[o] +" + 20";
+            mat.text = "sta "+inv.datosserial.mana[o] +" + 5";
+            rect.text = "rec "+inv.datosserial.manarec[o].ToString("F2") +" + 0,05";
+            fuet.text = "fue "+inv.datosserial.fuerza[o].ToString("F2") +" + 0,10";
             
             
         }
-        if(inv.exp[o] >= obj && inv.nivel[o]== 4)
+        if(inv.datosserial.exp[o] >= obj && inv.datosserial.nivel[o]== 4)
         {
             sub = false;
             
         }
-        if(inv.exp[o] < 200 * rangoexp3 && inv.nivel[o]== 4  && permiso == true)
+        if(inv.datosserial.exp[o] < 200 * rangoexp3 && inv.datosserial.nivel[o]== 4  && permiso == true)
         {
-            expv.fillAmount = inv.exp[o]/200;
+            expv.fillAmount = inv.datosserial.exp[o]/200;
             if(p1 == false)
-            {if(inv.dinero < dobj)
-            {inv.dinero += dobj/2 * Time.deltaTime;}
-            monedat.text = "dolares : "+inv.dinero.ToString("F2");}
+            {if(inv.datosserial.dinero < dobj)
+            {inv.datosserial.dinero += dobj/2 * Time.deltaTime;}
+            monedat.text = "dolares : "+inv.datosserial.dinero.ToString("F2");}
             if(p1 == true)
-            {if(inv.exp[o] < obj)
-            {inv.exp[o] += obj/4 * Time.deltaTime; if(vez1 == false)
+            {if(inv.datosserial.exp[o] < obj)
+            {inv.datosserial.exp[o] += obj/4 * Time.deltaTime; if(vez1 == false)
                     {dinsound.Play();
                     vez1 = true;}}
-            expv.fillAmount = inv.exp[o]/200;}
-            hptt.text = "vit : "+inv.hp[o];
-            manat.text = "sta : "+inv.mana[o];
-            manarect.text = "rec : "+inv.manarec[o].ToString("F2");
-            danot.text = "fue : "+inv.fuerza[o].ToString("F2");
-            elementot.text = "categoria : "+inv.elemento[o];
-            bichoti.text = "raza : "+inv.bichosmios[o];
-            nivelt.text = "nivel : "+inv.nivel[o];
+            expv.fillAmount = inv.datosserial.exp[o]/200;}
+            hptt.text = "vit : "+inv.datosserial.hp[o];
+            manat.text = "sta : "+inv.datosserial.mana[o];
+            manarect.text = "rec : "+inv.datosserial.manarec[o].ToString("F2");
+            danot.text = "fue : "+inv.datosserial.fuerza[o].ToString("F2");
+            elementot.text = "categoria : "+inv.datosserial.elemento[o];
+            bichoti.text = "raza : "+inv.datosserial.bichosmios[o];
+            nivelt.text = "nivel : "+inv.datosserial.nivel[o];
             subiste.text = "";
         }
-        if(inv.dinero >= dobj)
+        if(inv.datosserial.dinero >= dobj)
         {
             p1 = true;
         }
-        if(inv.exp[o] >= 200 * rangoexp3 && inv.nivel[o]== 4 && permiso == true)
+        if(inv.datosserial.exp[o] >= 200 * rangoexp3 && inv.datosserial.nivel[o]== 4 && permiso == true)
         {
             
             permiso = false;
-            inv.exp[o] = 0;
-            inv.nivel[o]++;
-            nivelt.text = "nivel : "+inv.nivel[o];
+            inv.datosserial.exp[o] = 0;
+            inv.datosserial.nivel[o]++;
+            nivelt.text = "nivel : "+inv.datosserial.nivel[o];
             obj -= 200 * rangoexp3;
             subiste.text = "has subido de nivel";
             
-            inv.hp[o] +=50*rangoexp;
-            inv.mana[o] +=5*rangoexp;
-            inv.manarec[o] +=0.05f*rangoexp;
-            inv.fuerza[o] +=0.25f*rangoexp;
+            inv.datosserial.hp[o] +=50*rangoexp;
+            inv.datosserial.mana[o] +=5*rangoexp;
+            inv.datosserial.manarec[o] +=0.05f*rangoexp;
+            inv.datosserial.fuerza[o] +=0.25f*rangoexp;
             hp.gameObject.SetActive(true);
             ma.gameObject.SetActive(true);
             rec.gameObject.SetActive(true);
             fue.gameObject.SetActive(true);
-            hpt.text = "vit "+inv.hp[o] +" + 20";
-            mat.text = "sta "+inv.mana[o] +" + 5";
-            rect.text = "rec "+inv.manarec[o].ToString("F2") +" + 0,05";
-            fuet.text = "fue "+inv.fuerza[o].ToString("F2") +" + 0,10";
+            hpt.text = "vit "+inv.datosserial.hp[o] +" + 20";
+            mat.text = "sta "+inv.datosserial.mana[o] +" + 5";
+            rect.text = "rec "+inv.datosserial.manarec[o].ToString("F2") +" + 0,05";
+            fuet.text = "fue "+inv.datosserial.fuerza[o].ToString("F2") +" + 0,10";
             
             
         }
-        if(inv.exp[o] >= obj && inv.nivel[o]== 5)
+        if(inv.datosserial.exp[o] >= obj && inv.datosserial.nivel[o]== 5)
         {
             sub = false;
             
         }
-        if(inv.exp[o] < 250 * rangoexp3 && inv.nivel[o]== 5 && permiso == true)
+        if(inv.datosserial.exp[o] < 250 * rangoexp3 && inv.datosserial.nivel[o]== 5 && permiso == true)
         {
-            expv.fillAmount = inv.exp[o]/250;
+            expv.fillAmount = inv.datosserial.exp[o]/250;
             if(p1 == false)
-            {if(inv.dinero < dobj)
-            {inv.dinero += dobj/2 * Time.deltaTime;}
-            monedat.text = "dolares : "+inv.dinero.ToString("F2");}
+            {if(inv.datosserial.dinero < dobj)
+            {inv.datosserial.dinero += dobj/2 * Time.deltaTime;}
+            monedat.text = "dolares : "+inv.datosserial.dinero.ToString("F2");}
             if(p1 == true)
-            {if(inv.exp[o] < obj)
-            {inv.exp[o] += obj/4 * Time.deltaTime; if(vez1 == false)
+            {if(inv.datosserial.exp[o] < obj)
+            {inv.datosserial.exp[o] += obj/4 * Time.deltaTime; if(vez1 == false)
                     {dinsound.Play();
                     vez1 = true;}}
-            expv.fillAmount = inv.exp[o]/250;}
-            hptt.text = "vit : "+inv.hp[o];
-            manat.text = "sta : "+inv.mana[o];
-            manarect.text = "rec : "+inv.manarec[o].ToString("F2");
-            danot.text = "fue : "+inv.fuerza[o].ToString("F2");
-            elementot.text = "categoria : "+inv.elemento[o];
-            bichoti.text = "raza : "+inv.bichosmios[o];
-            nivelt.text = "nivel : "+inv.nivel[o];
+            expv.fillAmount = inv.datosserial.exp[o]/250;}
+            hptt.text = "vit : "+inv.datosserial.hp[o];
+            manat.text = "sta : "+inv.datosserial.mana[o];
+            manarect.text = "rec : "+inv.datosserial.manarec[o].ToString("F2");
+            danot.text = "fue : "+inv.datosserial.fuerza[o].ToString("F2");
+            elementot.text = "categoria : "+inv.datosserial.elemento[o];
+            bichoti.text = "raza : "+inv.datosserial.bichosmios[o];
+            nivelt.text = "nivel : "+inv.datosserial.nivel[o];
             subiste.text = "";
         }
-        if(inv.dinero >= dobj)
+        if(inv.datosserial.dinero >= dobj)
         {
             p1 = true;
         }
-        if(inv.exp[o] >= 250 * rangoexp3 && inv.nivel[o]== 5 && permiso == true)
+        if(inv.datosserial.exp[o] >= 250 * rangoexp3 && inv.datosserial.nivel[o]== 5 && permiso == true)
         {
             
             permiso = false;
-            inv.exp[o] = 0;
-            inv.nivel[o]++;
-            nivelt.text = "nivel : "+inv.nivel[o];
+            inv.datosserial.exp[o] = 0;
+            inv.datosserial.nivel[o]++;
+            nivelt.text = "nivel : "+inv.datosserial.nivel[o];
             obj -= 250 * rangoexp3;
             modelos();
-            bichoti.text = "raza : "+inv.bichosmios[o];
-            inv.hp[o] +=50*rangoexp;
-            inv.mana[o] +=5*rangoexp;
-            inv.manarec[o] +=0.05f*rangoexp;
-            inv.fuerza[o] +=0.25f*rangoexp;
+            bichoti.text = "raza : "+inv.datosserial.bichosmios[o];
+            inv.datosserial.hp[o] +=50*rangoexp;
+            inv.datosserial.mana[o] +=5*rangoexp;
+            inv.datosserial.manarec[o] +=0.05f*rangoexp;
+            inv.datosserial.fuerza[o] +=0.25f*rangoexp;
             hp.gameObject.SetActive(true);
             ma.gameObject.SetActive(true);
             rec.gameObject.SetActive(true);
             fue.gameObject.SetActive(true);
-            hpt.text = "vit "+inv.hp[o] +" + 20";
-            mat.text = "sta "+inv.mana[o] +" + 5";
-            rect.text = "rec "+inv.manarec[o].ToString("F2") +" + 0,05";
-            fuet.text = "fue "+inv.fuerza[o].ToString("F2") +" + 0,10";
+            hpt.text = "vit "+inv.datosserial.hp[o] +" + 20";
+            mat.text = "sta "+inv.datosserial.mana[o] +" + 5";
+            rect.text = "rec "+inv.datosserial.manarec[o].ToString("F2") +" + 0,05";
+            fuet.text = "fue "+inv.datosserial.fuerza[o].ToString("F2") +" + 0,10";
             
             
         }
@@ -666,284 +666,284 @@ public class findecombat : MonoBehaviour
 
 
 
-        if(inv.exp[o] >= obj && inv.nivel[o]== 6 && permiso == true)
+        if(inv.datosserial.exp[o] >= obj && inv.datosserial.nivel[o]== 6 && permiso == true)
         {
             sub = false;
             
         }
-        if(inv.exp[o] < 340 * rangoexp3 && inv.nivel[o]== 6 )
+        if(inv.datosserial.exp[o] < 340 * rangoexp3 && inv.datosserial.nivel[o]== 6 )
         {
-            expv.fillAmount = inv.exp[o]/340;
+            expv.fillAmount = inv.datosserial.exp[o]/340;
             if(p1 == false)
-            {if(inv.dinero < dobj)
-            {inv.dinero += dobj/2 * Time.deltaTime;}
-            monedat.text = "dolares : "+inv.dinero.ToString("F2");}
+            {if(inv.datosserial.dinero < dobj)
+            {inv.datosserial.dinero += dobj/2 * Time.deltaTime;}
+            monedat.text = "dolares : "+inv.datosserial.dinero.ToString("F2");}
             if(p1 == true)
-            {if(inv.exp[o] < obj)
-            {inv.exp[o] += obj/4 * Time.deltaTime; if(vez1 == false)
+            {if(inv.datosserial.exp[o] < obj)
+            {inv.datosserial.exp[o] += obj/4 * Time.deltaTime; if(vez1 == false)
                     {dinsound.Play();
                     vez1 = true;}}
-            expv.fillAmount = inv.exp[o]/340;}
-            hptt.text = "vit : "+inv.hp[o];
-            manat.text = "sta : "+inv.mana[o];
-            manarect.text = "rec : "+inv.manarec[o].ToString("F2");
-            danot.text = "fue : "+inv.fuerza[o].ToString("F2");
-            elementot.text = "categoria : "+inv.elemento[o];
-            bichoti.text = "raza : "+inv.bichosmios[o];
-            nivelt.text = "nivel : "+inv.nivel[o];
+            expv.fillAmount = inv.datosserial.exp[o]/340;}
+            hptt.text = "vit : "+inv.datosserial.hp[o];
+            manat.text = "sta : "+inv.datosserial.mana[o];
+            manarect.text = "rec : "+inv.datosserial.manarec[o].ToString("F2");
+            danot.text = "fue : "+inv.datosserial.fuerza[o].ToString("F2");
+            elementot.text = "categoria : "+inv.datosserial.elemento[o];
+            bichoti.text = "raza : "+inv.datosserial.bichosmios[o];
+            nivelt.text = "nivel : "+inv.datosserial.nivel[o];
             subiste.text = "";
         }
-        if(inv.dinero >= dobj)
+        if(inv.datosserial.dinero >= dobj)
         {
             p1 = true;
         }
-        if(inv.exp[o] >= 340 * rangoexp3 && inv.nivel[o]== 6 && permiso == true)
+        if(inv.datosserial.exp[o] >= 340 * rangoexp3 && inv.datosserial.nivel[o]== 6 && permiso == true)
         {
             
             permiso = false;
-            inv.exp[o] = 0;
-            inv.nivel[o]++;
-            nivelt.text = "nivel : "+inv.nivel[o];
+            inv.datosserial.exp[o] = 0;
+            inv.datosserial.nivel[o]++;
+            nivelt.text = "nivel : "+inv.datosserial.nivel[o];
             obj -= 340 * rangoexp3;
             subiste.text = "has subido de nivel";
             
 
-            inv.hp[o] +=50*rangoexp;
-            inv.mana[o] +=5*rangoexp;
-            inv.manarec[o] +=0.05f*rangoexp;
-            inv.fuerza[o] +=0.25f*rangoexp;
+            inv.datosserial.hp[o] +=50*rangoexp;
+            inv.datosserial.mana[o] +=5*rangoexp;
+            inv.datosserial.manarec[o] +=0.05f*rangoexp;
+            inv.datosserial.fuerza[o] +=0.25f*rangoexp;
             hp.gameObject.SetActive(true);
             ma.gameObject.SetActive(true);
             rec.gameObject.SetActive(true);
             fue.gameObject.SetActive(true);
-            hpt.text = "vit "+inv.hp[o] +" + 20";
-            mat.text = "sta "+inv.mana[o] +" + 5";
-            rect.text = "rec "+inv.manarec[o].ToString("F2") +" + 0,05";
-            fuet.text = "fue "+inv.fuerza[o].ToString("F2") +" + 0,10";
+            hpt.text = "vit "+inv.datosserial.hp[o] +" + 20";
+            mat.text = "sta "+inv.datosserial.mana[o] +" + 5";
+            rect.text = "rec "+inv.datosserial.manarec[o].ToString("F2") +" + 0,05";
+            fuet.text = "fue "+inv.datosserial.fuerza[o].ToString("F2") +" + 0,10";
             
             
         }
-        if(inv.exp[o] >= obj && inv.nivel[o]== 7)
+        if(inv.datosserial.exp[o] >= obj && inv.datosserial.nivel[o]== 7)
         {
             sub = false;
             
         }
-        if(inv.exp[o] < 400 && inv.nivel[o]== 7 && permiso == true)
+        if(inv.datosserial.exp[o] < 400 && inv.datosserial.nivel[o]== 7 && permiso == true)
         {
-            expv.fillAmount = inv.exp[o]/400;
+            expv.fillAmount = inv.datosserial.exp[o]/400;
             if(p1 == false)
-            {if(inv.dinero < dobj)
-            {inv.dinero += dobj/2 * Time.deltaTime;}
-            monedat.text = "dolares : "+inv.dinero.ToString("F2");}
+            {if(inv.datosserial.dinero < dobj)
+            {inv.datosserial.dinero += dobj/2 * Time.deltaTime;}
+            monedat.text = "dolares : "+inv.datosserial.dinero.ToString("F2");}
             if(p1 == true)
-            {if(inv.exp[o] < obj)
-            {inv.exp[o] += obj/4 * Time.deltaTime; if(vez1 == false)
+            {if(inv.datosserial.exp[o] < obj)
+            {inv.datosserial.exp[o] += obj/4 * Time.deltaTime; if(vez1 == false)
                     {dinsound.Play();
                     vez1 = true;}}
-            expv.fillAmount = inv.exp[o]/400;}
-            hptt.text = "vit : "+inv.hp[o];
-            manat.text = "sta : "+inv.mana[o];
-            manarect.text = "rec : "+inv.manarec[o].ToString("F2");
-            danot.text = "fue : "+inv.fuerza[o].ToString("F2");
-            elementot.text = "categoria : "+inv.elemento[o];
-            bichoti.text = "raza : "+inv.bichosmios[o];
-            nivelt.text = "nivel : "+inv.nivel[o];
+            expv.fillAmount = inv.datosserial.exp[o]/400;}
+            hptt.text = "vit : "+inv.datosserial.hp[o];
+            manat.text = "sta : "+inv.datosserial.mana[o];
+            manarect.text = "rec : "+inv.datosserial.manarec[o].ToString("F2");
+            danot.text = "fue : "+inv.datosserial.fuerza[o].ToString("F2");
+            elementot.text = "categoria : "+inv.datosserial.elemento[o];
+            bichoti.text = "raza : "+inv.datosserial.bichosmios[o];
+            nivelt.text = "nivel : "+inv.datosserial.nivel[o];
             subiste.text = "";
         }
-        if(inv.dinero >= dobj)
+        if(inv.datosserial.dinero >= dobj)
         {
             p1 = true;
         }
-        if(inv.exp[o] >= 400 * rangoexp3 && inv.nivel[o]== 7 && permiso == true)
+        if(inv.datosserial.exp[o] >= 400 * rangoexp3 && inv.datosserial.nivel[o]== 7 && permiso == true)
         {
             
             permiso = false;
-            inv.exp[o] = 0;
-            inv.nivel[o]++;
-            nivelt.text = "nivel : "+inv.nivel[o];
+            inv.datosserial.exp[o] = 0;
+            inv.datosserial.nivel[o]++;
+            nivelt.text = "nivel : "+inv.datosserial.nivel[o];
             obj -= 400 * rangoexp3;
             subiste.text = "has subido de nivel";
             
-            inv.hp[o] +=50*rangoexp;
-            inv.mana[o] +=5*rangoexp;
-            inv.manarec[o] +=0.05f*rangoexp;
-            inv.fuerza[o] +=0.25f*rangoexp;
+            inv.datosserial.hp[o] +=50*rangoexp;
+            inv.datosserial.mana[o] +=5*rangoexp;
+            inv.datosserial.manarec[o] +=0.05f*rangoexp;
+            inv.datosserial.fuerza[o] +=0.25f*rangoexp;
             hp.gameObject.SetActive(true);
             ma.gameObject.SetActive(true);
             rec.gameObject.SetActive(true);
             fue.gameObject.SetActive(true);
-            hpt.text = "vit "+inv.hp[o] +" + 20";
-            mat.text = "sta "+inv.mana[o] +" + 5";
-            rect.text = "rec "+inv.manarec[o].ToString("F2") +" + 0,05";
-            fuet.text = "fue "+inv.fuerza[o].ToString("F2") +" + 0,10";
+            hpt.text = "vit "+inv.datosserial.hp[o] +" + 20";
+            mat.text = "sta "+inv.datosserial.mana[o] +" + 5";
+            rect.text = "rec "+inv.datosserial.manarec[o].ToString("F2") +" + 0,05";
+            fuet.text = "fue "+inv.datosserial.fuerza[o].ToString("F2") +" + 0,10";
             
             
         }
-        if(inv.exp[o] >= obj && inv.nivel[o]== 8)
+        if(inv.datosserial.exp[o] >= obj && inv.datosserial.nivel[o]== 8)
         {
             sub = false;
             
         }
-        if(inv.exp[o] <520 * rangoexp3 && inv.nivel[o]== 8 && permiso == true)
+        if(inv.datosserial.exp[o] <520 * rangoexp3 && inv.datosserial.nivel[o]== 8 && permiso == true)
         {
-            expv.fillAmount = inv.exp[o]/520;
+            expv.fillAmount = inv.datosserial.exp[o]/520;
             if(p1 == false)
-            {if(inv.dinero < dobj)
-            {inv.dinero += dobj/2 * Time.deltaTime;}
-            monedat.text = "dolares : "+inv.dinero.ToString("F2");}
+            {if(inv.datosserial.dinero < dobj)
+            {inv.datosserial.dinero += dobj/2 * Time.deltaTime;}
+            monedat.text = "dolares : "+inv.datosserial.dinero.ToString("F2");}
             if(p1 == true)
-            {if(inv.exp[o] < obj)
-            {inv.exp[o] += obj/4 * Time.deltaTime; if(vez1 == false)
+            {if(inv.datosserial.exp[o] < obj)
+            {inv.datosserial.exp[o] += obj/4 * Time.deltaTime; if(vez1 == false)
                     {dinsound.Play();
                     vez1 = true;}}
-            expv.fillAmount = inv.exp[o]/520;}
-            hptt.text = "vit : "+inv.hp[o];
-            manat.text = "sta : "+inv.mana[o];
-            manarect.text = "rec : "+inv.manarec[o].ToString("F2");
-            danot.text = "fue : "+inv.fuerza[o].ToString("F2");
-            elementot.text = "categoria : "+inv.elemento[o];
-            bichoti.text = "raza : "+inv.bichosmios[o];
-            nivelt.text = "nivel : "+inv.nivel[o];
+            expv.fillAmount = inv.datosserial.exp[o]/520;}
+            hptt.text = "vit : "+inv.datosserial.hp[o];
+            manat.text = "sta : "+inv.datosserial.mana[o];
+            manarect.text = "rec : "+inv.datosserial.manarec[o].ToString("F2");
+            danot.text = "fue : "+inv.datosserial.fuerza[o].ToString("F2");
+            elementot.text = "categoria : "+inv.datosserial.elemento[o];
+            bichoti.text = "raza : "+inv.datosserial.bichosmios[o];
+            nivelt.text = "nivel : "+inv.datosserial.nivel[o];
             subiste.text = "";
         }
-        if(inv.dinero >= dobj)
+        if(inv.datosserial.dinero >= dobj)
         {
             p1 = true;
         }
-        if(inv.exp[o] >= 520 * rangoexp3 && inv.nivel[o]== 8 && permiso == true)
+        if(inv.datosserial.exp[o] >= 520 * rangoexp3 && inv.datosserial.nivel[o]== 8 && permiso == true)
         {
             
             permiso = false;
-            inv.exp[o] = 0;
-            inv.nivel[o]++;
-            nivelt.text = "nivel : "+inv.nivel[o];
+            inv.datosserial.exp[o] = 0;
+            inv.datosserial.nivel[o]++;
+            nivelt.text = "nivel : "+inv.datosserial.nivel[o];
             obj -= 520 * rangoexp3;
             subiste.text = "has subido de nivel";
             
-            inv.hp[o] +=50*rangoexp;
-            inv.mana[o] +=5*rangoexp;
-            inv.manarec[o] +=0.05f*rangoexp;
-            inv.fuerza[o] +=0.25f*rangoexp;
+            inv.datosserial.hp[o] +=50*rangoexp;
+            inv.datosserial.mana[o] +=5*rangoexp;
+            inv.datosserial.manarec[o] +=0.05f*rangoexp;
+            inv.datosserial.fuerza[o] +=0.25f*rangoexp;
             hp.gameObject.SetActive(true);
             ma.gameObject.SetActive(true);
             rec.gameObject.SetActive(true);
             fue.gameObject.SetActive(true);
-            hpt.text = "vit "+inv.hp[o] +" + 20";
-            mat.text = "sta "+inv.mana[o] +" + 5";
-            rect.text = "rec "+inv.manarec[o].ToString("F2") +" + 0,05";
-            fuet.text = "fue "+inv.fuerza[o].ToString("F2") +" + 0,10";
+            hpt.text = "vit "+inv.datosserial.hp[o] +" + 20";
+            mat.text = "sta "+inv.datosserial.mana[o] +" + 5";
+            rect.text = "rec "+inv.datosserial.manarec[o].ToString("F2") +" + 0,05";
+            fuet.text = "fue "+inv.datosserial.fuerza[o].ToString("F2") +" + 0,10";
             
             
         }
-        if(inv.exp[o] >= obj && inv.nivel[o]== 9)
+        if(inv.datosserial.exp[o] >= obj && inv.datosserial.nivel[o]== 9)
         {
             sub = false;
             
         }
-        if(inv.exp[o] < 600 * rangoexp3 && inv.nivel[o]== 9 && permiso == true)
+        if(inv.datosserial.exp[o] < 600 * rangoexp3 && inv.datosserial.nivel[o]== 9 && permiso == true)
         {
-            expv.fillAmount = inv.exp[o]/600;
+            expv.fillAmount = inv.datosserial.exp[o]/600;
             if(p1 == false)
-            {if(inv.dinero < dobj)
-            {inv.dinero += dobj/2 * Time.deltaTime;}
-            monedat.text = "dolares : "+inv.dinero.ToString("F2");}
+            {if(inv.datosserial.dinero < dobj)
+            {inv.datosserial.dinero += dobj/2 * Time.deltaTime;}
+            monedat.text = "dolares : "+inv.datosserial.dinero.ToString("F2");}
             if(p1 == true)
-            {if(inv.exp[o] < obj)
-            {inv.exp[o] += obj/4 * Time.deltaTime; if(vez1 == false)
+            {if(inv.datosserial.exp[o] < obj)
+            {inv.datosserial.exp[o] += obj/4 * Time.deltaTime; if(vez1 == false)
                     {dinsound.Play();
                     vez1 = true;}}
-            expv.fillAmount = inv.exp[o]/600;}
-            hptt.text = "vit : "+inv.hp[o];
-            manat.text = "sta : "+inv.mana[o];
-            manarect.text = "rec : "+inv.manarec[o].ToString("F2");
-            danot.text = "fue : "+inv.fuerza[o].ToString("F2");
-            elementot.text = "categoria : "+inv.elemento[o];
-            bichoti.text = "raza : "+inv.bichosmios[o];
-            nivelt.text = "nivel : "+inv.nivel[o];
+            expv.fillAmount = inv.datosserial.exp[o]/600;}
+            hptt.text = "vit : "+inv.datosserial.hp[o];
+            manat.text = "sta : "+inv.datosserial.mana[o];
+            manarect.text = "rec : "+inv.datosserial.manarec[o].ToString("F2");
+            danot.text = "fue : "+inv.datosserial.fuerza[o].ToString("F2");
+            elementot.text = "categoria : "+inv.datosserial.elemento[o];
+            bichoti.text = "raza : "+inv.datosserial.bichosmios[o];
+            nivelt.text = "nivel : "+inv.datosserial.nivel[o];
             subiste.text = "";
         }
-        if(inv.dinero >= dobj)
+        if(inv.datosserial.dinero >= dobj)
         {
             p1 = true;
         }
-        if(inv.exp[o] >= 600 * rangoexp3 && inv.nivel[o]== 9 && permiso == true)
+        if(inv.datosserial.exp[o] >= 600 * rangoexp3 && inv.datosserial.nivel[o]== 9 && permiso == true)
         {
             
             permiso = false;
-            inv.exp[o] = 0;
-            inv.nivel[o]++;
-            nivelt.text = "nivel : "+inv.nivel[o];
+            inv.datosserial.exp[o] = 0;
+            inv.datosserial.nivel[o]++;
+            nivelt.text = "nivel : "+inv.datosserial.nivel[o];
             obj -= 600 * rangoexp3;
             subiste.text = "has subido de nivel";
             
-            inv.hp[o] +=50*rangoexp;
-            inv.mana[o] +=5*rangoexp;
-            inv.manarec[o] +=0.05f*rangoexp;
-            inv.fuerza[o] +=0.25f*rangoexp;
+            inv.datosserial.hp[o] +=50*rangoexp;
+            inv.datosserial.mana[o] +=5*rangoexp;
+            inv.datosserial.manarec[o] +=0.05f*rangoexp;
+            inv.datosserial.fuerza[o] +=0.25f*rangoexp;
             hp.gameObject.SetActive(true);
             ma.gameObject.SetActive(true);
             rec.gameObject.SetActive(true);
             fue.gameObject.SetActive(true);
-            hpt.text = "vit "+inv.hp[o] +" + 20";
-            mat.text = "sta "+inv.mana[o] +" + 5";
-            rect.text = "rec "+inv.manarec[o].ToString("F2") +" + 0,05";
-            fuet.text = "fue "+inv.fuerza[o].ToString("F2") +" + 0,10";
+            hpt.text = "vit "+inv.datosserial.hp[o] +" + 20";
+            mat.text = "sta "+inv.datosserial.mana[o] +" + 5";
+            rect.text = "rec "+inv.datosserial.manarec[o].ToString("F2") +" + 0,05";
+            fuet.text = "fue "+inv.datosserial.fuerza[o].ToString("F2") +" + 0,10";
             
             
         }
-        if(inv.exp[o] >= obj && inv.nivel[o]== 10)
+        if(inv.datosserial.exp[o] >= obj && inv.datosserial.nivel[o]== 10)
         {
             sub = false;
             
         }
-        if(inv.exp[o] < 780 * rangoexp3 && inv.nivel[o]== 10 && permiso == true)
+        if(inv.datosserial.exp[o] < 780 * rangoexp3 && inv.datosserial.nivel[o]== 10 && permiso == true)
         {
-            expv.fillAmount = inv.exp[o]/780;
+            expv.fillAmount = inv.datosserial.exp[o]/780;
             if(p1 == false)
-            {if(inv.dinero < dobj)
-            {inv.dinero += dobj/2 * Time.deltaTime;}
-            monedat.text = "dolares : "+inv.dinero.ToString("F2");}
+            {if(inv.datosserial.dinero < dobj)
+            {inv.datosserial.dinero += dobj/2 * Time.deltaTime;}
+            monedat.text = "dolares : "+inv.datosserial.dinero.ToString("F2");}
             if(p1 == true)
-            {if(inv.exp[o] < obj)
-            {inv.exp[o] += obj/4 * Time.deltaTime; if(vez1 == false)
+            {if(inv.datosserial.exp[o] < obj)
+            {inv.datosserial.exp[o] += obj/4 * Time.deltaTime; if(vez1 == false)
                     {dinsound.Play();
                     vez1 = true;}}
-            expv.fillAmount = inv.exp[o]/780;}
-            hptt.text = "vit : "+inv.hp[o];
-            manat.text = "sta : "+inv.mana[o];
-            manarect.text = "rec : "+inv.manarec[o].ToString("F2");
-            danot.text = "fue : "+inv.fuerza[o].ToString("F2");
-            elementot.text = "categoria : "+inv.elemento[o];
-            bichoti.text = "raza : "+inv.bichosmios[o];
-            nivelt.text = "nivel : "+inv.nivel[o];
+            expv.fillAmount = inv.datosserial.exp[o]/780;}
+            hptt.text = "vit : "+inv.datosserial.hp[o];
+            manat.text = "sta : "+inv.datosserial.mana[o];
+            manarect.text = "rec : "+inv.datosserial.manarec[o].ToString("F2");
+            danot.text = "fue : "+inv.datosserial.fuerza[o].ToString("F2");
+            elementot.text = "categoria : "+inv.datosserial.elemento[o];
+            bichoti.text = "raza : "+inv.datosserial.bichosmios[o];
+            nivelt.text = "nivel : "+inv.datosserial.nivel[o];
             subiste.text = "";
         }
-        if(inv.dinero >= dobj)
+        if(inv.datosserial.dinero >= dobj)
         {
             p1 = true;
         }
-        if(inv.exp[o] >= 780 * rangoexp3 && inv.nivel[o]== 10 && permiso == true)
+        if(inv.datosserial.exp[o] >= 780 * rangoexp3 && inv.datosserial.nivel[o]== 10 && permiso == true)
         {
             
             permiso = false;
-            inv.exp[o] = 0;
-            inv.nivel[o]++;
-            nivelt.text = "nivel : "+inv.nivel[o];
+            inv.datosserial.exp[o] = 0;
+            inv.datosserial.nivel[o]++;
+            nivelt.text = "nivel : "+inv.datosserial.nivel[o];
             obj -= 780 * rangoexp3;
             modelos();
-            bichoti.text = "raza : "+inv.bichosmios[o];
-            inv.hp[o] +=50*rangoexp;
-            inv.mana[o] +=5*rangoexp;
-            inv.manarec[o] +=0.05f*rangoexp;
-            inv.fuerza[o] +=0.25f*rangoexp;
+            bichoti.text = "raza : "+inv.datosserial.bichosmios[o];
+            inv.datosserial.hp[o] +=50*rangoexp;
+            inv.datosserial.mana[o] +=5*rangoexp;
+            inv.datosserial.manarec[o] +=0.05f*rangoexp;
+            inv.datosserial.fuerza[o] +=0.25f*rangoexp;
             hp.gameObject.SetActive(true);
             ma.gameObject.SetActive(true);
             rec.gameObject.SetActive(true);
             fue.gameObject.SetActive(true);
-            hpt.text = "vit "+inv.hp[o] +" + 20";
-            mat.text = "sta "+inv.mana[o] +" + 5";
-            rect.text = "rec "+inv.manarec[o].ToString("F2") +" + 0,05";
-            fuet.text = "fue "+inv.fuerza[o].ToString("F2") +" + 0,10";
+            hpt.text = "vit "+inv.datosserial.hp[o] +" + 20";
+            mat.text = "sta "+inv.datosserial.mana[o] +" + 5";
+            rect.text = "rec "+inv.datosserial.manarec[o].ToString("F2") +" + 0,05";
+            fuet.text = "fue "+inv.datosserial.fuerza[o].ToString("F2") +" + 0,10";
             
             
         }
@@ -962,299 +962,299 @@ public class findecombat : MonoBehaviour
 
 
 
-        if(inv.exp[o] < 900 * rangoexp3 && inv.nivel[o]== 11&& permiso == true)
+        if(inv.datosserial.exp[o] < 900 * rangoexp3 && inv.datosserial.nivel[o]== 11&& permiso == true)
         {
-            expv.fillAmount = inv.exp[o]/900;
+            expv.fillAmount = inv.datosserial.exp[o]/900;
             if(p1 == false)
-            {if(inv.dinero < dobj)
-            {inv.dinero += dobj/2 * Time.deltaTime;}
-            monedat.text = "dolares : "+inv.dinero.ToString("F2");}
+            {if(inv.datosserial.dinero < dobj)
+            {inv.datosserial.dinero += dobj/2 * Time.deltaTime;}
+            monedat.text = "dolares : "+inv.datosserial.dinero.ToString("F2");}
             if(p1 == true)
-            {if(inv.exp[o] < obj)
-            {inv.exp[o] += obj/4 * Time.deltaTime; if(vez1 == false)
+            {if(inv.datosserial.exp[o] < obj)
+            {inv.datosserial.exp[o] += obj/4 * Time.deltaTime; if(vez1 == false)
                     {dinsound.Play();
                     vez1 = true;}}
-            expv.fillAmount = inv.exp[o]/900;}
-            hptt.text = "vit : "+inv.hp[o];
-            manat.text = "sta : "+inv.mana[o];
-            manarect.text = "rec : "+inv.manarec[o].ToString("F2");
-            danot.text = "fue : "+inv.fuerza[o].ToString("F2");
-            elementot.text = "categoria : "+inv.elemento[o];
-            bichoti.text = "raza : "+inv.bichosmios[o];
-            nivelt.text = "nivel : "+inv.nivel[o];
+            expv.fillAmount = inv.datosserial.exp[o]/900;}
+            hptt.text = "vit : "+inv.datosserial.hp[o];
+            manat.text = "sta : "+inv.datosserial.mana[o];
+            manarect.text = "rec : "+inv.datosserial.manarec[o].ToString("F2");
+            danot.text = "fue : "+inv.datosserial.fuerza[o].ToString("F2");
+            elementot.text = "categoria : "+inv.datosserial.elemento[o];
+            bichoti.text = "raza : "+inv.datosserial.bichosmios[o];
+            nivelt.text = "nivel : "+inv.datosserial.nivel[o];
             subiste.text = "";
         }
-        if(inv.dinero >= dobj)
+        if(inv.datosserial.dinero >= dobj)
         {
             p1 = true;
         }
-        if(inv.exp[o] >= 900 * rangoexp3 && inv.nivel[o]== 11 && permiso == true)
+        if(inv.datosserial.exp[o] >= 900 * rangoexp3 && inv.datosserial.nivel[o]== 11 && permiso == true)
         {
             
             permiso = false;
-            inv.exp[o] = 0;
-            inv.nivel[o]++;
-            nivelt.text = "nivel : "+inv.nivel[o];
+            inv.datosserial.exp[o] = 0;
+            inv.datosserial.nivel[o]++;
+            nivelt.text = "nivel : "+inv.datosserial.nivel[o];
             obj -= 900 * rangoexp3;
             subiste.text = "has subido de nivel";
             
-            inv.hp[o] +=50*rangoexp;
-            inv.mana[o] +=5*rangoexp;
-            inv.manarec[o] +=0.05f*rangoexp;
-            inv.fuerza[o] +=0.25f*rangoexp;
+            inv.datosserial.hp[o] +=50*rangoexp;
+            inv.datosserial.mana[o] +=5*rangoexp;
+            inv.datosserial.manarec[o] +=0.05f*rangoexp;
+            inv.datosserial.fuerza[o] +=0.25f*rangoexp;
             hp.gameObject.SetActive(true);
             ma.gameObject.SetActive(true);
             rec.gameObject.SetActive(true);
             fue.gameObject.SetActive(true);
-            hpt.text = "vit "+inv.hp[o] +" + 20";
-            mat.text = "sta "+inv.mana[o] +" + 5";
-            rect.text = "rec "+inv.manarec[o].ToString("F2") +" + 0,05";
-            fuet.text = "fue "+inv.fuerza[o].ToString("F2") +" + 0,10";
+            hpt.text = "vit "+inv.datosserial.hp[o] +" + 20";
+            mat.text = "sta "+inv.datosserial.mana[o] +" + 5";
+            rect.text = "rec "+inv.datosserial.manarec[o].ToString("F2") +" + 0,05";
+            fuet.text = "fue "+inv.datosserial.fuerza[o].ToString("F2") +" + 0,10";
             
             
         }
-        if(inv.exp[o] < 1000 * rangoexp3 && inv.nivel[o]== 12 && permiso == true)
+        if(inv.datosserial.exp[o] < 1000 * rangoexp3 && inv.datosserial.nivel[o]== 12 && permiso == true)
         {
-            expv.fillAmount = inv.exp[o]/1000;
+            expv.fillAmount = inv.datosserial.exp[o]/1000;
             if(p1 == false)
-            {if(inv.dinero < dobj)
-            {inv.dinero += dobj/2 * Time.deltaTime;}
-            monedat.text = "dolares : "+inv.dinero.ToString("F2");}
+            {if(inv.datosserial.dinero < dobj)
+            {inv.datosserial.dinero += dobj/2 * Time.deltaTime;}
+            monedat.text = "dolares : "+inv.datosserial.dinero.ToString("F2");}
             if(p1 == true)
-            {if(inv.exp[o] < obj)
-            {inv.exp[o] += obj/4 * Time.deltaTime; if(vez1 == false)
+            {if(inv.datosserial.exp[o] < obj)
+            {inv.datosserial.exp[o] += obj/4 * Time.deltaTime; if(vez1 == false)
                     {dinsound.Play();
                     vez1 = true;}}
-            expv.fillAmount = inv.exp[o]/1000;}
-            hptt.text = "vit : "+inv.hp[o];
-            manat.text = "sta : "+inv.mana[o];
-            manarect.text = "rec : "+inv.manarec[o].ToString("F2");
-            danot.text = "fue : "+inv.fuerza[o].ToString("F2");
-            elementot.text = "categoria : "+inv.elemento[o];
-            bichoti.text = "raza : "+inv.bichosmios[o];
-            nivelt.text = "nivel : "+inv.nivel[o];
+            expv.fillAmount = inv.datosserial.exp[o]/1000;}
+            hptt.text = "vit : "+inv.datosserial.hp[o];
+            manat.text = "sta : "+inv.datosserial.mana[o];
+            manarect.text = "rec : "+inv.datosserial.manarec[o].ToString("F2");
+            danot.text = "fue : "+inv.datosserial.fuerza[o].ToString("F2");
+            elementot.text = "categoria : "+inv.datosserial.elemento[o];
+            bichoti.text = "raza : "+inv.datosserial.bichosmios[o];
+            nivelt.text = "nivel : "+inv.datosserial.nivel[o];
             subiste.text = "";
         }
-        if(inv.dinero >= dobj)
+        if(inv.datosserial.dinero >= dobj)
         {
             p1 = true;
         }
-        if(inv.exp[o] >= 1000 * rangoexp3 && inv.nivel[o]== 12 && permiso == true)
+        if(inv.datosserial.exp[o] >= 1000 * rangoexp3 && inv.datosserial.nivel[o]== 12 && permiso == true)
         {
             
             permiso = false;
-            inv.exp[o] = 0;
-            inv.nivel[o]++;
-            nivelt.text = "nivel : "+inv.nivel[o];
+            inv.datosserial.exp[o] = 0;
+            inv.datosserial.nivel[o]++;
+            nivelt.text = "nivel : "+inv.datosserial.nivel[o];
             obj -= 1000 * rangoexp3;
             subiste.text = "has subido de nivel";
             
-            inv.hp[o] +=50*rangoexp;
-            inv.mana[o] +=5*rangoexp;
-            inv.manarec[o] +=0.05f*rangoexp;
-            inv.fuerza[o] +=0.25f*rangoexp;
+            inv.datosserial.hp[o] +=50*rangoexp;
+            inv.datosserial.mana[o] +=5*rangoexp;
+            inv.datosserial.manarec[o] +=0.05f*rangoexp;
+            inv.datosserial.fuerza[o] +=0.25f*rangoexp;
             hp.gameObject.SetActive(true);
             ma.gameObject.SetActive(true);
             rec.gameObject.SetActive(true);
             fue.gameObject.SetActive(true);
-            hpt.text = "vit "+inv.hp[o] +" + 20";
-            mat.text = "sta "+inv.mana[o] +" + 5";
-            rect.text = "rec "+inv.manarec[o].ToString("F2") +" + 0,05";
-            fuet.text = "fue "+inv.fuerza[o].ToString("F2") +" + 0,10";
+            hpt.text = "vit "+inv.datosserial.hp[o] +" + 20";
+            mat.text = "sta "+inv.datosserial.mana[o] +" + 5";
+            rect.text = "rec "+inv.datosserial.manarec[o].ToString("F2") +" + 0,05";
+            fuet.text = "fue "+inv.datosserial.fuerza[o].ToString("F2") +" + 0,10";
             
             
         }
-        if(inv.exp[o] < 1260 * rangoexp3 && inv.nivel[o]== 13 && permiso == true)
+        if(inv.datosserial.exp[o] < 1260 * rangoexp3 && inv.datosserial.nivel[o]== 13 && permiso == true)
         {
-            expv.fillAmount = inv.exp[o]/1260;
+            expv.fillAmount = inv.datosserial.exp[o]/1260;
             if(p1 == false)
-            {if(inv.dinero < dobj)
-            {inv.dinero += dobj/2 * Time.deltaTime;}
-            monedat.text = "dolares : "+inv.dinero.ToString("F2");}
+            {if(inv.datosserial.dinero < dobj)
+            {inv.datosserial.dinero += dobj/2 * Time.deltaTime;}
+            monedat.text = "dolares : "+inv.datosserial.dinero.ToString("F2");}
             if(p1 == true)
-            {if(inv.exp[o] < obj)
-            {inv.exp[o] += obj/4 * Time.deltaTime; if(vez1 == false)
+            {if(inv.datosserial.exp[o] < obj)
+            {inv.datosserial.exp[o] += obj/4 * Time.deltaTime; if(vez1 == false)
                     {dinsound.Play();
                     vez1 = true;}}
-            expv.fillAmount = inv.exp[o]/1260;}
-            hptt.text = "vit : "+inv.hp[o];
-            manat.text = "sta : "+inv.mana[o];
-            manarect.text = "rec : "+inv.manarec[o].ToString("F2");
-            danot.text = "fue : "+inv.fuerza[o].ToString("F2");
-            elementot.text = "categoria : "+inv.elemento[o];
-            bichoti.text = "raza : "+inv.bichosmios[o];
-            nivelt.text = "nivel : "+inv.nivel[o];
+            expv.fillAmount = inv.datosserial.exp[o]/1260;}
+            hptt.text = "vit : "+inv.datosserial.hp[o];
+            manat.text = "sta : "+inv.datosserial.mana[o];
+            manarect.text = "rec : "+inv.datosserial.manarec[o].ToString("F2");
+            danot.text = "fue : "+inv.datosserial.fuerza[o].ToString("F2");
+            elementot.text = "categoria : "+inv.datosserial.elemento[o];
+            bichoti.text = "raza : "+inv.datosserial.bichosmios[o];
+            nivelt.text = "nivel : "+inv.datosserial.nivel[o];
             subiste.text = "";
         }
-        if(inv.dinero >= dobj)
+        if(inv.datosserial.dinero >= dobj)
         {
             p1 = true;
         }
-        if(inv.exp[o] >= 1260 * rangoexp3 && inv.nivel[o]== 13 && permiso == true)
+        if(inv.datosserial.exp[o] >= 1260 * rangoexp3 && inv.datosserial.nivel[o]== 13 && permiso == true)
         {
             
             permiso = false;
-            inv.exp[o] = 0;
-            inv.nivel[o]++;
-            nivelt.text = "nivel : "+inv.nivel[o];
+            inv.datosserial.exp[o] = 0;
+            inv.datosserial.nivel[o]++;
+            nivelt.text = "nivel : "+inv.datosserial.nivel[o];
             obj -= 1260 * rangoexp3;
             subiste.text = "has subido de nivel";
             
-            inv.hp[o] +=50*rangoexp;
-            inv.mana[o] +=5*rangoexp;
-            inv.manarec[o] +=0.05f*rangoexp;
-            inv.fuerza[o] +=0.25f*rangoexp;
+            inv.datosserial.hp[o] +=50*rangoexp;
+            inv.datosserial.mana[o] +=5*rangoexp;
+            inv.datosserial.manarec[o] +=0.05f*rangoexp;
+            inv.datosserial.fuerza[o] +=0.25f*rangoexp;
             hp.gameObject.SetActive(true);
             ma.gameObject.SetActive(true);
             rec.gameObject.SetActive(true);
             fue.gameObject.SetActive(true);
-            hpt.text = "vit "+inv.hp[o] +" + 20";
-            mat.text = "sta "+inv.mana[o] +" + 5";
-            rect.text = "rec "+inv.manarec[o].ToString("F2") +" + 0,05";
-            fuet.text = "fue "+inv.fuerza[o].ToString("F2") +" + 0,10";
+            hpt.text = "vit "+inv.datosserial.hp[o] +" + 20";
+            mat.text = "sta "+inv.datosserial.mana[o] +" + 5";
+            rect.text = "rec "+inv.datosserial.manarec[o].ToString("F2") +" + 0,05";
+            fuet.text = "fue "+inv.datosserial.fuerza[o].ToString("F2") +" + 0,10";
             
             
         }
-        if(inv.exp[o] < 1440 * rangoexp3 && inv.nivel[o]== 14 && permiso == true)
+        if(inv.datosserial.exp[o] < 1440 * rangoexp3 && inv.datosserial.nivel[o]== 14 && permiso == true)
         {
-            expv.fillAmount = inv.exp[o]/1440;
+            expv.fillAmount = inv.datosserial.exp[o]/1440;
             if(p1 == false)
-            {if(inv.dinero < dobj)
-            {inv.dinero += dobj/2 * Time.deltaTime;}
-            monedat.text = "dolares : "+inv.dinero.ToString("F2");}
+            {if(inv.datosserial.dinero < dobj)
+            {inv.datosserial.dinero += dobj/2 * Time.deltaTime;}
+            monedat.text = "dolares : "+inv.datosserial.dinero.ToString("F2");}
             if(p1 == true)
-            {if(inv.exp[o] < obj)
-            {inv.exp[o] += obj/4 * Time.deltaTime; if(vez1 == false)
+            {if(inv.datosserial.exp[o] < obj)
+            {inv.datosserial.exp[o] += obj/4 * Time.deltaTime; if(vez1 == false)
                     {dinsound.Play();
                     vez1 = true;}}
-            expv.fillAmount = inv.exp[o]/1440;}
-            hptt.text = "vit : "+inv.hp[o];
-            manat.text = "sta : "+inv.mana[o];
-            manarect.text = "rec : "+inv.manarec[o].ToString("F2");
-            danot.text = "fue : "+inv.fuerza[o].ToString("F2");
-            elementot.text = "categoria : "+inv.elemento[o];
-            bichoti.text = "raza : "+inv.bichosmios[o];
-            nivelt.text = "nivel : "+inv.nivel[o];
+            expv.fillAmount = inv.datosserial.exp[o]/1440;}
+            hptt.text = "vit : "+inv.datosserial.hp[o];
+            manat.text = "sta : "+inv.datosserial.mana[o];
+            manarect.text = "rec : "+inv.datosserial.manarec[o].ToString("F2");
+            danot.text = "fue : "+inv.datosserial.fuerza[o].ToString("F2");
+            elementot.text = "categoria : "+inv.datosserial.elemento[o];
+            bichoti.text = "raza : "+inv.datosserial.bichosmios[o];
+            nivelt.text = "nivel : "+inv.datosserial.nivel[o];
             subiste.text = "";
         }
-        if(inv.dinero >= dobj)
+        if(inv.datosserial.dinero >= dobj)
         {
             p1 = true;
         }
-        if(inv.exp[o] >= 1440 * rangoexp3 && inv.nivel[o]== 14 && permiso == true)
+        if(inv.datosserial.exp[o] >= 1440 * rangoexp3 && inv.datosserial.nivel[o]== 14 && permiso == true)
         {
             
             permiso = false;
-            inv.exp[o] = 0;
-            inv.nivel[o]++;
-            nivelt.text = "nivel : "+inv.nivel[o];
+            inv.datosserial.exp[o] = 0;
+            inv.datosserial.nivel[o]++;
+            nivelt.text = "nivel : "+inv.datosserial.nivel[o];
             obj -= 1440 * rangoexp3;
             subiste.text = "has subido de nivel";
             
-            inv.hp[o] +=50*rangoexp;
-            inv.mana[o] +=5*rangoexp;
-            inv.manarec[o] +=0.05f*rangoexp;
-            inv.fuerza[o] +=0.25f*rangoexp;
+            inv.datosserial.hp[o] +=50*rangoexp;
+            inv.datosserial.mana[o] +=5*rangoexp;
+            inv.datosserial.manarec[o] +=0.05f*rangoexp;
+            inv.datosserial.fuerza[o] +=0.25f*rangoexp;
             hp.gameObject.SetActive(true);
             ma.gameObject.SetActive(true);
             rec.gameObject.SetActive(true);
             fue.gameObject.SetActive(true);
-            hpt.text = "vit "+inv.hp[o] +" + 20";
-            mat.text = "sta "+inv.mana[o] +" + 5";
-            rect.text = "rec "+inv.manarec[o].ToString("F2") +" + 0,05";
-            fuet.text = "fue "+inv.fuerza[o].ToString("F2") +" + 0,10";
+            hpt.text = "vit "+inv.datosserial.hp[o] +" + 20";
+            mat.text = "sta "+inv.datosserial.mana[o] +" + 5";
+            rect.text = "rec "+inv.datosserial.manarec[o].ToString("F2") +" + 0,05";
+            fuet.text = "fue "+inv.datosserial.fuerza[o].ToString("F2") +" + 0,10";
             
             
         }
-        if(inv.exp[o] < 1800 * rangoexp3 && inv.nivel[o]== 15 && permiso == true)
+        if(inv.datosserial.exp[o] < 1800 * rangoexp3 && inv.datosserial.nivel[o]== 15 && permiso == true)
         {
-            expv.fillAmount = inv.exp[o]/1800;
+            expv.fillAmount = inv.datosserial.exp[o]/1800;
             if(p1 == false)
-            {if(inv.dinero < dobj)
-            {inv.dinero += dobj/2 * Time.deltaTime;}
-            monedat.text = "dolares : "+inv.dinero.ToString("F2");}
+            {if(inv.datosserial.dinero < dobj)
+            {inv.datosserial.dinero += dobj/2 * Time.deltaTime;}
+            monedat.text = "dolares : "+inv.datosserial.dinero.ToString("F2");}
             if(p1 == true)
-            {if(inv.exp[o] < obj)
-            {inv.exp[o] += obj/4 * Time.deltaTime; if(vez1 == false)
+            {if(inv.datosserial.exp[o] < obj)
+            {inv.datosserial.exp[o] += obj/4 * Time.deltaTime; if(vez1 == false)
                     {dinsound.Play();
                     vez1 = true;}}
-            expv.fillAmount = inv.exp[o]/1800;}
-            hptt.text = "vit : "+inv.hp[o];
-            manat.text = "sta : "+inv.mana[o];
-            manarect.text = "rec : "+inv.manarec[o].ToString("F2");
-            danot.text = "fue : "+inv.fuerza[o].ToString("F2");
-            elementot.text = "categoria : "+inv.elemento[o];
-            bichoti.text = "raza : "+inv.bichosmios[o];
-            nivelt.text = "nivel : "+inv.nivel[o];
+            expv.fillAmount = inv.datosserial.exp[o]/1800;}
+            hptt.text = "vit : "+inv.datosserial.hp[o];
+            manat.text = "sta : "+inv.datosserial.mana[o];
+            manarect.text = "rec : "+inv.datosserial.manarec[o].ToString("F2");
+            danot.text = "fue : "+inv.datosserial.fuerza[o].ToString("F2");
+            elementot.text = "categoria : "+inv.datosserial.elemento[o];
+            bichoti.text = "raza : "+inv.datosserial.bichosmios[o];
+            nivelt.text = "nivel : "+inv.datosserial.nivel[o];
             subiste.text = "";
         }
-        if(inv.dinero >= dobj)
+        if(inv.datosserial.dinero >= dobj)
         {
             p1 = true;
         }
-        if(inv.exp[o] >= 1800 * rangoexp3 && inv.nivel[o]== 15 && permiso == true)
+        if(inv.datosserial.exp[o] >= 1800 * rangoexp3 && inv.datosserial.nivel[o]== 15 && permiso == true)
         {
             
             permiso = false;
-            inv.exp[o] = 0;
-            inv.nivel[o]++;
-            nivelt.text = "nivel : "+inv.nivel[o];
+            inv.datosserial.exp[o] = 0;
+            inv.datosserial.nivel[o]++;
+            nivelt.text = "nivel : "+inv.datosserial.nivel[o];
             obj -= 1800 * rangoexp3;
             subiste.text = "has subido de nivel";
             
-            inv.hp[o] +=50*rangoexp;
-            inv.mana[o] +=5*rangoexp;
-            inv.manarec[o] +=0.05f*rangoexp;
-            inv.fuerza[o] +=0.25f*rangoexp;
+            inv.datosserial.hp[o] +=50*rangoexp;
+            inv.datosserial.mana[o] +=5*rangoexp;
+            inv.datosserial.manarec[o] +=0.05f*rangoexp;
+            inv.datosserial.fuerza[o] +=0.25f*rangoexp;
             hp.gameObject.SetActive(true);
             ma.gameObject.SetActive(true);
             rec.gameObject.SetActive(true);
             fue.gameObject.SetActive(true);
-            hpt.text = "vit "+inv.hp[o].ToString("F2") +" + 20";
-            mat.text = "sta "+inv.mana[o].ToString("F2") +" + 5";
-            rect.text = "rec "+inv.manarec[o].ToString("F2") +" + 0,05";
-            fuet.text = "fue "+inv.fuerza[o].ToString("F2") +" + 0,10";
+            hpt.text = "vit "+inv.datosserial.hp[o].ToString("F2") +" + 20";
+            mat.text = "sta "+inv.datosserial.mana[o].ToString("F2") +" + 5";
+            rect.text = "rec "+inv.datosserial.manarec[o].ToString("F2") +" + 0,05";
+            fuet.text = "fue "+inv.datosserial.fuerza[o].ToString("F2") +" + 0,10";
             
             
         }
-        if(inv.nivel[o]== 16 && permiso == true)
+        if(inv.datosserial.nivel[o]== 16 && permiso == true)
         {
             expv.fillAmount = 1/1;
             if(p1 == false)
-            {if(inv.dinero < dobj)
-            {inv.dinero += dobj/2 * Time.deltaTime;}
-            monedat.text = "dolares : "+inv.dinero.ToString("F2");}
-            hptt.text = "vit : "+inv.hp[o];
-            manat.text = "sta : "+inv.mana[o];
-            manarect.text = "rec : "+inv.manarec[o].ToString("F2");
-            danot.text = "fue : "+inv.fuerza[o].ToString("F2");
-            elementot.text = "categoria : "+inv.elemento[o];
-            bichoti.text = "raza : "+inv.bichosmios[o];
-            nivelt.text = "nivel : "+inv.nivel[o];
+            {if(inv.datosserial.dinero < dobj)
+            {inv.datosserial.dinero += dobj/2 * Time.deltaTime;}
+            monedat.text = "dolares : "+inv.datosserial.dinero.ToString("F2");}
+            hptt.text = "vit : "+inv.datosserial.hp[o];
+            manat.text = "sta : "+inv.datosserial.mana[o];
+            manarect.text = "rec : "+inv.datosserial.manarec[o].ToString("F2");
+            danot.text = "fue : "+inv.datosserial.fuerza[o].ToString("F2");
+            elementot.text = "categoria : "+inv.datosserial.elemento[o];
+            bichoti.text = "raza : "+inv.datosserial.bichosmios[o];
+            nivelt.text = "nivel : "+inv.datosserial.nivel[o];
             subiste.text = "";
         }
-        if(inv.dinero >= dobj)
+        if(inv.datosserial.dinero >= dobj)
         {
             p1 = true;
         }
-        if(inv.exp[o] < obj )
+        if(inv.datosserial.exp[o] < obj )
         {
             sub = true;
             
             cont.gameObject.SetActive(false);
             
         }
-        if(inv.nivel[o]== 16 && p1 == true)
+        if(inv.datosserial.nivel[o]== 16 && p1 == true)
         {
             dinsound.Stop();
             cont.gameObject.SetActive(true);
         }
-        nivelt.text = "nivel "+ inv.nivel[o];
+        nivelt.text = "nivel "+ inv.datosserial.nivel[o];
         if(hpp == true)
         {
             
-            o = (int)PlayerPrefs.GetFloat("selec", 0);
-            inv.hp[o] +=20 * rangoexp3;
+            o = (int)inv.datosserial.varsel1;
+            inv.datosserial.hp[o] +=20 * rangoexp3;
             hp.gameObject.SetActive(false);
             ma.gameObject.SetActive(false);
             rec.gameObject.SetActive(false);
@@ -1265,8 +1265,8 @@ public class findecombat : MonoBehaviour
         if(map == true)
         {
         
-            o = (int)PlayerPrefs.GetFloat("selec", 0);
-            inv.mana[o] +=5 * rangoexp3;
+            o = (int)inv.datosserial.varsel1;
+            inv.datosserial.mana[o] +=5 * rangoexp3;
             hp.gameObject.SetActive(false);
             ma.gameObject.SetActive(false);
             rec.gameObject.SetActive(false);
@@ -1277,8 +1277,8 @@ public class findecombat : MonoBehaviour
         if(recp == true)
         {
    
-            o = (int)PlayerPrefs.GetFloat("selec", 0);
-            inv.manarec[o] +=0.05f * rangoexp3;
+            o = (int)inv.datosserial.varsel1;
+            inv.datosserial.manarec[o] +=0.05f * rangoexp3;
             hp.gameObject.SetActive(false);
             ma.gameObject.SetActive(false);
             rec.gameObject.SetActive(false);
@@ -1289,8 +1289,8 @@ public class findecombat : MonoBehaviour
         if(fuep == true)
         {
     
-            o = (int)PlayerPrefs.GetFloat("selec", 0);
-            inv.fuerza[o] +=0.10f * rangoexp3;
+            o = (int)inv.datosserial.varsel1;
+            inv.datosserial.fuerza[o] +=0.10f * rangoexp3;
             hp.gameObject.SetActive(false);
             ma.gameObject.SetActive(false);
             rec.gameObject.SetActive(false);
@@ -1313,216 +1313,216 @@ public class findecombat : MonoBehaviour
     {
         inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
         
-        if(inv.bichosmios[o] == "madcat")
+        if(inv.datosserial.bichosmios[o] == "madcat")
         {
             bichom.SetActive(false);
             bichom = madcat;
         }
     
-        if(inv.bichosmios[o] == "shitfloor")
+        if(inv.datosserial.bichosmios[o] == "shitfloor")
         {
             bichom.SetActive(false);
             bichom = shitfloor;
             
         }
         
-        if(inv.bichosmios[o] == "topo topo")
+        if(inv.datosserial.bichosmios[o] == "topo topo")
         {
             bichom.SetActive(false);
             bichom = topo;
         }
         
-        if(inv.bichosmios[o] == "skybird")
+        if(inv.datosserial.bichosmios[o] == "skybird")
         {
             bichom.SetActive(false);
             bichom = skybird;
         }
 
-        if(inv.bichosmios[o] == "aghostin")
+        if(inv.datosserial.bichosmios[o] == "aghostin")
         {
             bichom.SetActive(false);
             bichom = ghost;
         }
-        if(inv.bichosmios[o] == "algosaurio")
+        if(inv.datosserial.bichosmios[o] == "algosaurio")
         {
             bichom.SetActive(false);
             bichom = algosaurio;
         }
-        if(inv.bichosmios[o] == "bigfat")
+        if(inv.datosserial.bichosmios[o] == "bigfat")
         {
             bichom.SetActive(false);
             bichom = bigfat;
         }
-        if(inv.bichosmios[o] == "cazafantasmas")
+        if(inv.datosserial.bichosmios[o] == "cazafantasmas")
         {
             bichom.SetActive(false);
             bichom = cazafantasmas;
         }
         //3
-        if(inv.bichosmios[o] == "darkknight")
+        if(inv.datosserial.bichosmios[o] == "darkknight")
         {
             bichom.SetActive(false);
             bichom = darkknight;
         }
-        if(inv.bichosmios[o] == "antidog")
+        if(inv.datosserial.bichosmios[o] == "antidog")
         {
             bichom.SetActive(false);
             bichom = skybird;
         }
-        if(inv.bichosmios[o] == "cyberpinguino")
+        if(inv.datosserial.bichosmios[o] == "cyberpinguino")
         {
             bichom.SetActive(false);
             bichom = pinguino;
         }
-        if(inv.bichosmios[o] == "craneovil")
+        if(inv.datosserial.bichosmios[o] == "craneovil")
         {
             bichom.SetActive(false);
             bichom = craneovil;
         }
         //4
-        if(inv.bichosmios[o] == "dogtable")
+        if(inv.datosserial.bichosmios[o] == "dogtable")
         {
             bichom.SetActive(false);
             bichom = dogtable;
         }
-        if(inv.bichosmios[o] == "beestosa")
+        if(inv.datosserial.bichosmios[o] == "beestosa")
         {
             bichom.SetActive(false);
             bichom = bee;
         }
-        if(inv.bichosmios[o] == "elephant")
+        if(inv.datosserial.bichosmios[o] == "elephant")
         {
             bichom.SetActive(false);
             bichom = elephant;
         }
-        if(inv.bichosmios[o] == "flyera")
+        if(inv.datosserial.bichosmios[o] == "flyera")
         {
             bichom.SetActive(false);
             bichom = flyera;
         }
         //5
-        if(inv.bichosmios[o] == "friend")
+        if(inv.datosserial.bichosmios[o] == "friend")
         {
             bichom.SetActive(false);
             bichom = friend;
         }
-        if(inv.bichosmios[o] == "gunman")
+        if(inv.datosserial.bichosmios[o] == "gunman")
         {
             bichom.SetActive(false);
             bichom = gunman;
         }
-        if(inv.bichosmios[o] == "flanerio")
+        if(inv.datosserial.bichosmios[o] == "flanerio")
         {
             bichom.SetActive(false);
             bichom = flanerio;
         }
-        if(inv.bichosmios[o] == "fenix")
+        if(inv.datosserial.bichosmios[o] == "fenix")
         {
             bichom.SetActive(false);
             bichom = fenix;
         }
 
         //1
-        if(inv.bichosmios[o] == "kingdragon")
+        if(inv.datosserial.bichosmios[o] == "kingdragon")
         {
             bichom.SetActive(false);
             bichom = kingdragon;
         }
-        if(inv.bichosmios[o] == "heavydevil")
+        if(inv.datosserial.bichosmios[o] == "heavydevil")
         {
             bichom.SetActive(false);
             bichom = heavydevil;
         }
-        if(inv.bichosmios[o] == "kraken")
+        if(inv.datosserial.bichosmios[o] == "kraken")
         {
             bichom.SetActive(false);
             bichom = kraken;
         }
-        if(inv.bichosmios[o] == "lizardo")
+        if(inv.datosserial.bichosmios[o] == "lizardo")
         {
             bichom.SetActive(false);
             bichom = lizardo;
         }
          //2
-        if(inv.bichosmios[o] == "livedish")
+        if(inv.datosserial.bichosmios[o] == "livedish")
         {
             bichom.SetActive(false);
             bichom = livedish;
         }
-        if(inv.bichosmios[o] == "pesadilla")
+        if(inv.datosserial.bichosmios[o] == "pesadilla")
         {
             bichom.SetActive(false);
             bichom = pesadilla;
         }
-        if(inv.bichosmios[o] == "mirror")
+        if(inv.datosserial.bichosmios[o] == "mirror")
         {
             bichom.SetActive(false);
             bichom = mirror;
         }
-        if(inv.bichosmios[o] == "rabmon")
+        if(inv.datosserial.bichosmios[o] == "rabmon")
         {
             bichom.SetActive(false);
             bichom = rabmon;
         }
         //3
-        if(inv.bichosmios[o] == "ant")
+        if(inv.datosserial.bichosmios[o] == "ant")
         {
             bichom.SetActive(false);
             bichom = ant;
         }
-        if(inv.bichosmios[o] == "kingslug")
+        if(inv.datosserial.bichosmios[o] == "kingslug")
         {
             bichom.SetActive(false);
             bichom = kingdragon;
         }
-        if(inv.bichosmios[o] == "rosedragon")
+        if(inv.datosserial.bichosmios[o] == "rosedragon")
         {
             bichom.SetActive(false);
             bichom = rosedragon;
         }
-        if(inv.bichosmios[o] == "sharkman")
+        if(inv.datosserial.bichosmios[o] == "sharkman")
         {
             bichom.SetActive(false);
             bichom = sharkman;
         }
         //4
-        if(inv.bichosmios[o] == "pollovion")
+        if(inv.datosserial.bichosmios[o] == "pollovion")
         {
             bichom.SetActive(false);
             bichom = pollovion;
         }
-        if(inv.bichosmios[o] == "trepillo")
+        if(inv.datosserial.bichosmios[o] == "trepillo")
         {
             bichom.SetActive(false);
             bichom = trepillo;
         }
-        if(inv.bichosmios[o] == "roboerto")
+        if(inv.datosserial.bichosmios[o] == "roboerto")
         {
             bichom.SetActive(false);
             bichom = roboerto;
         }
-        if(inv.bichosmios[o] == "tufo")
+        if(inv.datosserial.bichosmios[o] == "tufo")
         {
             bichom.SetActive(false);
             bichom = tufo;
         }
         //5
-        if(inv.bichosmios[o] == "trashrat")
+        if(inv.datosserial.bichosmios[o] == "trashrat")
         {
             bichom.SetActive(false);
             bichom = trashrat;
         }
-        if(inv.bichosmios[o] == "spider")
+        if(inv.datosserial.bichosmios[o] == "spider")
         {
             bichom.SetActive(false);
             bichom = spider;
         }
-        if(inv.bichosmios[o] == "vivodado")
+        if(inv.datosserial.bichosmios[o] == "vivodado")
         {
             bichom.SetActive(false);
             bichom = vivodado;
         }
-        if(inv.bichosmios[o] == "dragonron")
+        if(inv.datosserial.bichosmios[o] == "dragonron")
         {
             bichom.SetActive(false);
             bichom = dragonron;

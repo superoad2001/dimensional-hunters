@@ -147,9 +147,10 @@ public class shitene : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        plat = PlayerPrefs.GetString("plat","game3d");
-        bicho = PlayerPrefs.GetString("bichocaza", "madcat");
-        rango = PlayerPrefs.GetInt("rango", 1);
+        inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
+        plat = inv.datosserial.plat;
+        bicho = inv.datosserial.bichocaza;
+        rango = inv.datosserial.rangoplay;
 
         if(plat == "arcore")
         {

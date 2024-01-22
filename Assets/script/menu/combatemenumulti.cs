@@ -236,7 +236,6 @@ public class combatemenumulti : MonoBehaviour
     void Start()
     {
 
-        tutorial2 = PlayerPrefs.GetInt("tutorial2",0);
 
         ciuda = new string[6];
 
@@ -341,7 +340,7 @@ public class combatemenumulti : MonoBehaviour
         {SceneManager.LoadScene("combatemenu");}
         if (actc == true)
         {
-            if (inv.name.Count == 0)
+            if (inv.datosserial.name.Count == 0)
             {actnobichos2 = true;}
             inventario1 = false;
             elemento_.gameObject.SetActive(false);
@@ -372,7 +371,7 @@ public class combatemenumulti : MonoBehaviour
         }
         if (intercambioc == true)
         {
-            if (inv.name.Count == 0)
+            if (inv.datosserial.name.Count == 0)
             {actnobichos2 = true;}
             inventario1 = false;
             elemento_.gameObject.SetActive(false);
@@ -508,7 +507,7 @@ public class combatemenumulti : MonoBehaviour
         }
         if (actentre == true)
         {
-            if (inv.name.Count == 0)
+            if (inv.datosserial.name.Count == 0)
             {actnobichos2 = true;}
             elemento_.gameObject.SetActive(false);
             elemt.gameObject.SetActive(true);
@@ -539,7 +538,7 @@ public class combatemenumulti : MonoBehaviour
         }
         if (ciudades == true)
         {
-            if (inv.name.Count == 0)
+            if (inv.datosserial.name.Count == 0)
             {actnobichos2 = true;}
             elemento_.gameObject.SetActive(false);
             elemt.gameObject.SetActive(false);
@@ -599,7 +598,7 @@ public class combatemenumulti : MonoBehaviour
         {
                 botlib.gameObject.SetActive(true);
                 
-                bichos = inv.bichosmios;
+                bichos = inv.datosserial.bichosmios;
                 if(vez1 == false)
                 {
                     modelos();
@@ -610,14 +609,14 @@ public class combatemenumulti : MonoBehaviour
                 indexmax = bichos.Count;
                 if(atras == true)
                 {acta = true;}
-                bicho.text = inv.name[i];
+                bicho.text = inv.datosserial.name[i];
                 bichoti.text ="RAZA "+ bichos[i];
-                hpt.text = "VIT :"+inv.hp[i].ToString("F2");
-                mat.text = "STAMINA :"+inv.mana[i].ToString("F2");
-                rect.text = "REC :"+inv.manarec[i].ToString("F2");
-                danot.text = "FUE :"+inv.fuerza[i].ToString("F2");
-                elementot.text = "CAT : "+inv.elemento[i];
-                nivelt.text = "NIVEL : "+inv.nivel[i];
+                hpt.text = "VIT :"+inv.datosserial.hp[i].ToString("F2");
+                mat.text = "STAMINA :"+inv.datosserial.mana[i].ToString("F2");
+                rect.text = "REC :"+inv.datosserial.manarec[i].ToString("F2");
+                danot.text = "FUE :"+inv.datosserial.fuerza[i].ToString("F2");
+                elementot.text = "CAT : "+inv.datosserial.elemento[i];
+                nivelt.text = "NIVEL : "+inv.datosserial.nivel[i];
                 who.text = "TUS HEROES";
                 if(borrar == true && temp > 0.3f)
                 {
@@ -640,13 +639,13 @@ public class combatemenumulti : MonoBehaviour
                 colorbicho5 colorbicho = UnityEngine.Object.FindObjectOfType<colorbicho5>();
                 colorbicho.colorb();
             }
-            if (inv.name.Count == 0)
+            if (inv.datosserial.name.Count == 0)
             {actnobichos2 = true;}
         }
         if(nobich == true)
         {
 
-            lib.text = "DESEAS LIBERAR A "+inv.name[i];
+            lib.text = "DESEAS LIBERAR A "+inv.datosserial.name[i];
             if(si == true)
             {
                 inv.o = i;
@@ -658,7 +657,7 @@ public class combatemenumulti : MonoBehaviour
             {
                 actc = true;
             }
-            if (inv.name.Count == 0)
+            if (inv.datosserial.name.Count == 0)
             {actnobichos2 = true;}
         }
         if(nobich2 == true)
@@ -671,7 +670,7 @@ public class combatemenumulti : MonoBehaviour
         }
         if(cajoncomb == true)
         {
-                bichos = inv.bichosmios;
+                bichos = inv.datosserial.bichosmios;
                 indexmax = bichos.Count;
                 if(vez1 == false)
                 {   
@@ -683,29 +682,29 @@ public class combatemenumulti : MonoBehaviour
                 if(atras == true)
                 {
                     acta = true;
-                    PlayerPrefs.SetInt("jefe1",0);
                 }
-                bicho.text = inv.name[i];
+                bicho.text = inv.datosserial.name[i];
                 bichoti.text ="RAZA "+ bichos[i];
-                hpt.text = "VIT :"+inv.hp[i].ToString("F2");
-                mat.text = "STAMINA :"+inv.mana[i].ToString("F2");
-                rect.text = "REC :"+inv.manarec[i].ToString("F2");
-                danot.text = "FUE :"+inv.fuerza[i].ToString("F2");
-                elementot.text = "CAT : "+inv.elemento[i];
-                nivelt.text = "NIVEL : "+inv.nivel[i];
+                hpt.text = "VIT :"+inv.datosserial.hp[i].ToString("F2");
+                mat.text = "STAMINA :"+inv.datosserial.mana[i].ToString("F2");
+                rect.text = "REC :"+inv.datosserial.manarec[i].ToString("F2");
+                danot.text = "FUE :"+inv.datosserial.fuerza[i].ToString("F2");
+                elementot.text = "CAT : "+inv.datosserial.elemento[i];
+                nivelt.text = "NIVEL : "+inv.datosserial.nivel[i];
                 who.text = "ELIGE TU HEROE";
                 if(bichoselec == true && temp > 0.3f)
                 {
-                PlayerPrefs.SetFloat("hps", inv.hp[i]);
-                PlayerPrefs.SetFloat("manas", inv.mana[i]);
-                PlayerPrefs.SetFloat("manarecs",inv.manarec[i]);
-                PlayerPrefs.SetFloat("fuerzas",inv.fuerza[i]);
-                PlayerPrefs.SetString("names", inv.name[i]);
-                PlayerPrefs.SetString("bichosh", bichos[i]);
-                PlayerPrefs.SetFloat("nivelss", inv.nivel[i]);
-                PlayerPrefs.SetFloat("rangos", inv.rango[i]);
-                PlayerPrefs.SetFloat("clases", inv.clase[i]);
-                PlayerPrefs.SetFloat("selec", i);
+                inv.datosserial.hps = inv.datosserial.hp[i];
+                inv.datosserial.manas = inv.datosserial.mana[i];
+                inv.datosserial.manarecs = inv.datosserial.manarec[i];
+                inv.datosserial.fuerzas = inv.datosserial.fuerza[i];
+                inv.datosserial.names = inv.datosserial.name[i];
+                inv.datosserial.razas = bichos[i];
+                inv.datosserial.nivels = inv.datosserial.nivel[i];
+                inv.datosserial.clases = inv.datosserial.clase[i];
+                inv.datosserial.rangors = inv.datosserial.rango[i];
+                inv.datosserial.varsel1 = i;
+                inv.guardar();
                 cajon = false;
                 temp = 0;
                 SceneManager.LoadScene("cola");
@@ -730,7 +729,7 @@ public class combatemenumulti : MonoBehaviour
         }
         if(cajonentr == true)
         {
-                bichos = inv.bichosmios;
+                bichos = inv.datosserial.bichosmios;
                 indexmax = bichos.Count;
 
                 if(vez1 == false)
@@ -742,29 +741,30 @@ public class combatemenumulti : MonoBehaviour
                 vez1 = true;
                 if(atras == true)
                 {acta = true;}
-                bicho.text = inv.name[i];
+                bicho.text = inv.datosserial.name[i];
                 bichoti.text ="RAZA "+ bichos[i];
-                hpt.text = "VIT :"+inv.hp[i].ToString("F2");
-                mat.text = "STAMINA :"+inv.mana[i].ToString("F2");
-                rect.text = "REC :"+inv.manarec[i].ToString("F2");
-                danot.text = "FUE :"+inv.fuerza[i].ToString("F2");
-                elementot.text = "CAT : "+inv.elemento[i];
-                nivelt.text = "NIVEL : "+inv.nivel[i];
+                hpt.text = "VIT :"+inv.datosserial.hp[i].ToString("F2");
+                mat.text = "STAMINA :"+inv.datosserial.mana[i].ToString("F2");
+                rect.text = "REC :"+inv.datosserial.manarec[i].ToString("F2");
+                danot.text = "FUE :"+inv.datosserial.fuerza[i].ToString("F2");
+                elementot.text = "CAT : "+inv.datosserial.elemento[i];
+                nivelt.text = "NIVEL : "+inv.datosserial.nivel[i];
                 who.text = "ELIGE TU HEROE";
                 if(bichoselec == true && temp > 0.3f)
                 {
-                PlayerPrefs.SetFloat("hps", inv.hp[i]);
-                PlayerPrefs.SetFloat("manas", inv.mana[i]);
-                PlayerPrefs.SetFloat("manarecs",inv.manarec[i]);
-                PlayerPrefs.SetFloat("fuerzas",inv.fuerza[i]);
-                PlayerPrefs.SetString("names", inv.name[i]);
-                PlayerPrefs.SetString("bichosh", bichos[i]);
-                PlayerPrefs.SetString("elementoh", inv.elemento[i]);
-                PlayerPrefs.SetFloat("exph", inv.exp[i]);
-                PlayerPrefs.SetFloat("nivelss", inv.nivel[i]);
-                PlayerPrefs.SetFloat("rangos", inv.rango[i]);
-                PlayerPrefs.SetFloat("clases", inv.clase[i]);
-                PlayerPrefs.SetFloat("selec", i);
+                inv.datosserial.hps = inv.datosserial.hp[i];
+                inv.datosserial.manas = inv.datosserial.mana[i];
+                inv.datosserial.manarecs = inv.datosserial.manarec[i];
+                inv.datosserial.fuerzas = inv.datosserial.fuerza[i];
+                inv.datosserial.names = inv.datosserial.name[i];
+                inv.datosserial.razas = bichos[i];
+                inv.datosserial.elementos = inv.datosserial.elemento[i];
+                inv.datosserial.exps = inv.datosserial.exp[i];
+                inv.datosserial.nivels = inv.datosserial.nivel[i];
+                inv.datosserial.clases = inv.datosserial.clase[i];
+                inv.datosserial.rangors = inv.datosserial.rango[i];
+                inv.datosserial.varsel1 = i;
+                inv.guardar();
                 cajon = false;
                 temp = 0;
                 SceneManager.LoadScene("intercambiador");
@@ -793,10 +793,10 @@ public class combatemenumulti : MonoBehaviour
                 if(atras == true)
                 {acta = true;}
                 ciudatext.text = "1vs1";
-                if(bichoselec == true && temp > 0.3f && inv.dinero >= 200)
+                if(bichoselec == true && temp > 0.3f && inv.datosserial.dinero >= 200)
                 {
-                    inv.dinero -= 200;
-                    PlayerPrefs.SetFloat("dinerosave",inv.dinero);
+                    inv.datosserial.dinero -= 200;
+                    inv.guardar();
                     actheroe = true;
                 }
         
@@ -807,13 +807,13 @@ public class combatemenumulti : MonoBehaviour
                 if(atras == true)
                 {acta = true;}
                 ciudatext.text = "Intercambiador";
-                if(bichoselec == true && temp > 0.3f && inv.dinero >= 50 && inv.indexmax != inv.limite)
+                if(bichoselec == true && temp > 0.3f && inv.datosserial.dinero >= 50 && inv.datosserial.indexmax != inv.datosserial.limite)
                 {
-                        inv.dinero -= 50;
-                        PlayerPrefs.SetFloat("dinerosave",inv.dinero);
+                        inv.datosserial.dinero -= 50;
+                        inv.guardar();
                         actentre = true;
                 }
-                else if(inv.indexmax == inv.limite)
+                else if(inv.datosserial.indexmax == inv.datosserial.limite)
                 {
                     libera.text = "libera a un heroe para intercambiar";
                 }

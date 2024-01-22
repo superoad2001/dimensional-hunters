@@ -12,7 +12,8 @@ public class colorbicho5 : MonoBehaviour
     {
 
         material = mesh.material;
-        hierbatipo = PlayerPrefs.GetInt("hierbatipo", 3);
+        inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
+        hierbatipo = inv.datosserial.hierbau;
         
     }
 
@@ -25,11 +26,11 @@ public class colorbicho5 : MonoBehaviour
     {
         inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
         combatemenumulti menu = UnityEngine.Object.FindObjectOfType<combatemenumulti>();
-        if(inv.clase[menu.i] == 1)
+        if(inv.datosserial.clase[menu.i] == 1)
         {
             
         }
-        if(inv.clase[menu.i] == 2)
+        if(inv.datosserial.clase[menu.i] == 2)
         {
             for ( int childIndex = 0; childIndex < gameObject.transform.childCount; childIndex++)
             {
@@ -38,7 +39,7 @@ public class colorbicho5 : MonoBehaviour
                 if(child.gameObject.GetComponent<SkinnedMeshRenderer>() != null){child.gameObject.GetComponent<SkinnedMeshRenderer>().material.color = new Color(0,1,0.2158589f,1);}
             }
         }
-        if(inv.clase[menu.i] == 3)
+        if(inv.datosserial.clase[menu.i] == 3)
         {
             for ( int childIndex = 0; childIndex < gameObject.transform.childCount; childIndex++)
             {

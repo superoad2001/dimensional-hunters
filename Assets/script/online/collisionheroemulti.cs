@@ -18,7 +18,8 @@ public class collisionheroemulti : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
-        client = PlayerPrefs.GetInt("clientid",0);
+        inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
+        client = inv.datosserial.client;
         
         if (transform.position == new Vector3(-3.83999991f,0.583000004f,5.58799982f)  && heroe.temp4 > 0.4f && client == 1 && heroe.managermulti.comenzar.Value == true)
             {

@@ -1,0 +1,29 @@
+{
+    "enemigo2": {
+        "checkpoints": [
+            {
+                "steps": 1536,
+                "file_path": "results\\test\\enemigo2\\enemigo2-1536.onnx",
+                "reward": null,
+                "creation_time": 1705849326.1804652,
+                "auxillary_file_paths": [
+                    "results\\test\\enemigo2\\enemigo2-1536.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1536,
+            "file_path": "results\\test\\enemigo2.onnx",
+            "reward": null,
+            "creation_time": 1705849326.1804652,
+            "auxillary_file_paths": [
+                "results\\test\\enemigo2\\enemigo2-1536.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "2.1.0+cpu"
+    }
+}

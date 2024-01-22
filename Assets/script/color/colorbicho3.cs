@@ -11,7 +11,8 @@ public class colorbicho3 : MonoBehaviour
     void Start()
     {
 
-        clase = PlayerPrefs.GetFloat("clases", 1);
+        inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
+        clase = inv.datosserial.clases;
         if(clase == 1)
         {
             

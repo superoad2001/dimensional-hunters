@@ -15,7 +15,8 @@ public class cazar : MonoBehaviour
     public GameObject cam;
     void Awake()
     {
-        plat = PlayerPrefs.GetString("plat","game3d");
+        inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
+        plat = inv.datosserial.plat;
         if(plat == "arcore")
         {
     
@@ -43,25 +44,30 @@ public class cazar : MonoBehaviour
     }
     public void OnTriggerEnter(Collider col)
     {
+        inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
         //1
         if (col.gameObject.tag == "madcat")
         {
-            PlayerPrefs.SetString("bichocaza", "madcat");
+            inv.datosserial.bichocaza ="madcat";
+            inv.guardar();
             SceneManager.LoadScene("combatecaza");
         }
         if (col.gameObject.tag == "shitfloor")
         {
-            PlayerPrefs.SetString("bichocaza", "shitfloor");
+            inv.datosserial.bichocaza ="shitfloor";
+            inv.guardar();
             SceneManager.LoadScene("combatecaza");
         }
         if (col.gameObject.tag == "topo")
         {
-            PlayerPrefs.SetString("bichocaza", "topo");
+            inv.datosserial.bichocaza ="topo";
+            inv.guardar();
             SceneManager.LoadScene("combatecaza");
         }
         if (col.gameObject.tag == "skybird")
         {
-            PlayerPrefs.SetString("bichocaza", "skybird");
+            inv.datosserial.bichocaza ="skybird";
+            inv.guardar();
             SceneManager.LoadScene("combatecaza");
         }
 
@@ -69,108 +75,128 @@ public class cazar : MonoBehaviour
         //2
         if (col.gameObject.tag == "tufo")
         {
-            PlayerPrefs.SetString("bichocaza", "tufo");
+            inv.datosserial.bichocaza ="tufo";
+            inv.guardar();
             SceneManager.LoadScene("combatecaza");
         }
         if (col.gameObject.tag == "roboerto")
         {
-            PlayerPrefs.SetString("bichocaza", "roboerto");
+            inv.datosserial.bichocaza ="roboerto";
+            inv.guardar();
             SceneManager.LoadScene("combatecaza");
         }
         if (col.gameObject.tag == "darkknight")
         {
-            PlayerPrefs.SetString("bichocaza", "darkknight");
+            inv.datosserial.bichocaza ="darkknight";
+            inv.guardar();
             SceneManager.LoadScene("combatecaza");
         }
         if (col.gameObject.tag == "bee")
         {
-            PlayerPrefs.SetString("bichocaza", "bee");
+            inv.datosserial.bichocaza ="bee";
+            inv.guardar();
             SceneManager.LoadScene("combatecaza");
         }
 
         //3
         if (col.gameObject.tag == "fenix")
         {
-            PlayerPrefs.SetString("bichocaza", "fenix");
+            inv.datosserial.bichocaza ="fenix";
+            inv.guardar();
             SceneManager.LoadScene("combatecaza");
         }
         if (col.gameObject.tag == "dogtable")
         {
-            PlayerPrefs.SetString("bichocaza", "dogtable");
+            inv.datosserial.bichocaza ="dogtable";
+            inv.guardar();
             SceneManager.LoadScene("combatecaza");
         }
         if (col.gameObject.tag == "gunman")
         {
-            PlayerPrefs.SetString("bichocaza", "gunman");
+            inv.datosserial.bichocaza ="gunman";
+            inv.guardar();
             SceneManager.LoadScene("combatecaza");
         }
         if (col.gameObject.tag == "antidog")
         {
-            PlayerPrefs.SetString("bichocaza", "antidog");
+            inv.datosserial.bichocaza ="antidog";
+            inv.guardar();
             SceneManager.LoadScene("combatecaza");
         }
         //4
         if (col.gameObject.tag == "ant")
         {
-            PlayerPrefs.SetString("bichocaza", "ant");
+            inv.datosserial.bichocaza ="ant";
+            inv.guardar();
             SceneManager.LoadScene("combatecaza");
         }
         if (col.gameObject.tag == "trashrat")
         {
-            PlayerPrefs.SetString("bichocaza", "trashrat");
+            inv.datosserial.bichocaza ="trashrat";
+            inv.guardar();
             SceneManager.LoadScene("combatecaza");
         }
         if (col.gameObject.tag == "heavydevil")
         {
-            PlayerPrefs.SetString("bichocaza", "heavydevil");
+            inv.datosserial.bichocaza ="heavydevil";
+            inv.guardar();
             SceneManager.LoadScene("combatecaza");
         }
         if (col.gameObject.tag == "cazafantasmas")
         {
-            PlayerPrefs.SetString("bichocaza", "cazafantasmas");
+            inv.datosserial.bichocaza ="cazafantasmas";
+            inv.guardar();
             SceneManager.LoadScene("combatecaza");
         }
         //5
         if (col.gameObject.tag == "polloavion")
         {
-            PlayerPrefs.SetString("bichocaza", "polloavion");
+            inv.datosserial.bichocaza ="polloavion";
+            inv.guardar();
             SceneManager.LoadScene("combatecaza");
         }
         if (col.gameObject.tag == "kingslug")
         {
-            PlayerPrefs.SetString("bichocaza", "kingslug");
+            inv.datosserial.bichocaza ="kingslug";
+            inv.guardar();
             SceneManager.LoadScene("combatecaza");
         }
         if (col.gameObject.tag == "sharkman")
         {
-            PlayerPrefs.SetString("bichocaza", "sharkman");
+            inv.datosserial.bichocaza ="sharkman";
+            inv.guardar();
             SceneManager.LoadScene("combatecaza");
         }
         if (col.gameObject.tag == "craneovil")
         {
-            PlayerPrefs.SetString("bichocaza", "craneovil");
+            inv.datosserial.bichocaza ="craneovil";
+            inv.guardar();
             SceneManager.LoadScene("combatecaza");
         }
 
         //1
         if (col.gameObject.tag == "spider")
         {
-            PlayerPrefs.SetString("bichocaza", "spider");
+            inv.datosserial.bichocaza ="spider";
+            inv.guardar();
             SceneManager.LoadScene("combatecaza");
         }
         if (col.gameObject.tag == "vivodado")
         {
-            PlayerPrefs.SetString("bichocaza", "vivodado");
+            inv.datosserial.bichocaza ="vivodado";
+            inv.guardar();
             SceneManager.LoadScene("combatecaza");
         }
         if (col.gameObject.tag == "algosaurio")
         {
-            PlayerPrefs.SetString("bichocaza", "algosaurio");
+            inv.datosserial.bichocaza ="algosaurio";
+            inv.guardar();
             SceneManager.LoadScene("combatecaza");
         }
         if (col.gameObject.tag == "flyera")
         {
-            PlayerPrefs.SetString("bichocaza", "flyera");
+            inv.datosserial.bichocaza ="flyera";
+            inv.guardar();
             SceneManager.LoadScene("combatecaza");
         }
 
@@ -178,86 +204,102 @@ public class cazar : MonoBehaviour
         //2
         if (col.gameObject.tag == "pinguino")
         {
-            PlayerPrefs.SetString("bichocaza", "pinguino");
+            inv.datosserial.bichocaza ="pinguino";
+            inv.guardar();
             SceneManager.LoadScene("combatecaza");
         }
         if (col.gameObject.tag == "dragonron")
         {
-            PlayerPrefs.SetString("bichocaza", "dragonronr");
+            inv.datosserial.bichocaza ="dragonronr";
+            inv.guardar();
             SceneManager.LoadScene("combatecaza");
         }
         if (col.gameObject.tag == "kraken")
         {
-            PlayerPrefs.SetString("bichocaza", "kraken");
+            inv.datosserial.bichocaza ="kraken";
+            inv.guardar();
             SceneManager.LoadScene("combatecaza");
         }
         if (col.gameObject.tag == "lizardo")
         {
-            PlayerPrefs.SetString("bichocaza", "lizardo");
+            inv.datosserial.bichocaza ="lizardo";
+            inv.guardar();
             SceneManager.LoadScene("combatecaza");
         }
 
         //3
         if (col.gameObject.tag == "flanerio")
         {
-            PlayerPrefs.SetString("bichocaza", "flanerio");
+            inv.datosserial.bichocaza ="flanerio";
+            inv.guardar();
             SceneManager.LoadScene("combatecaza");
         }
         if (col.gameObject.tag == "ghost")
         {
-            PlayerPrefs.SetString("bichocaza", "ghost");
+            inv.datosserial.bichocaza ="ghost";
+            inv.guardar();
             SceneManager.LoadScene("combatecaza");
         }
         if (col.gameObject.tag == "friend")
         {
-            PlayerPrefs.SetString("bichocaza", "friend");
+            inv.datosserial.bichocaza ="friend";
+            inv.guardar();
             SceneManager.LoadScene("combatecaza");
         }
         if (col.gameObject.tag == "rosedragon")
         {
-            PlayerPrefs.SetString("bichocaza", "rosedragon");
+            inv.datosserial.bichocaza ="rosedragon";
+            inv.guardar();
             SceneManager.LoadScene("combatecaza");
         }
         //4
         if (col.gameObject.tag == "trepillo")
         {
-            PlayerPrefs.SetString("bichocaza", "trepillo");
+            inv.datosserial.bichocaza ="trepillo";
+            inv.guardar();
             SceneManager.LoadScene("combatecaza");
         }
         if (col.gameObject.tag == "elephant")
         {
-            PlayerPrefs.SetString("bichocaza", "elephant");
+            inv.datosserial.bichocaza ="elephant";
+            inv.guardar();
             SceneManager.LoadScene("combatecaza");
         }
         if (col.gameObject.tag == "rabmon")
         {
-            PlayerPrefs.SetString("bichocaza", "rabmon");
+            inv.datosserial.bichocaza ="rabmon";
+            inv.guardar();
             SceneManager.LoadScene("combatecaza");
         }
         if (col.gameObject.tag == "bigfat")
         {
-            PlayerPrefs.SetString("bichocaza", "bigfat");
+            inv.datosserial.bichocaza ="bigfat";
+            inv.guardar();
             SceneManager.LoadScene("combatecaza");
         }
         //5
         if (col.gameObject.tag == "mirror")
         {
-            PlayerPrefs.SetString("bichocaza", "mirror");
+            inv.datosserial.bichocaza ="mirror";
+            inv.guardar();
             SceneManager.LoadScene("combatecaza");
         }
         if (col.gameObject.tag == "livedish")
         {
-            PlayerPrefs.SetString("bichocaza", "livedish");
+            inv.datosserial.bichocaza ="livedish";
+            inv.guardar();
             SceneManager.LoadScene("combatecaza");
         }
         if (col.gameObject.tag == "pesadilla")
         {
-            PlayerPrefs.SetString("bichocaza", "pesadilla");
+            inv.datosserial.bichocaza ="pesadilla";
+            inv.guardar();
             SceneManager.LoadScene("combatecaza");
         }
         if (col.gameObject.tag == "kingdragon")
         {
-            PlayerPrefs.SetString("bichocaza", "kingdragon");
+            inv.datosserial.bichocaza ="kingdragon";
+            inv.guardar();
             SceneManager.LoadScene("combatecaza");
         }
     }

@@ -42,36 +42,6 @@ public class combatecompentr : MonoBehaviour
             heroe._def();
             heroe.botno.Stop();
         }
-        if(uitext.text == "poción vital pequeña" && lim > 0 || uitext.text == "poción de vida pequeña" && lim > 0 )
-        {
-            uitext.text = "objetos limite "+ lim + " PocionVit(p) " +inv.pocvp ;
-            heroe.hp += 40;
-        }
-        if(uitext.text == "poción vital mediana" && lim > 0  ||uitext.text == "poción de vida mediana" && lim > 0 )
-        {
-            uitext.text = "objetos limite "+ lim + " PocionVit(m) " +inv.pocvm ;
-            heroe.hp += 100;
-        }
-        if(uitext.text == "poción vital grande" && lim > 0  ||uitext.text == "poción de vida grande" && lim > 0 )
-        {
-            uitext.text = "objetos limite "+ lim + " PocionVit(g) " +inv.pocvg ;
-            heroe.hp += 200;
-        }
-        if(uitext.text == "poción de estamina pequeña" && lim > 0 ||uitext.text == "poción de esta mina pequeña"  )
-        {
-            uitext.text = "objetos limite "+ lim + " PocionSta(p) " +inv.pocmp ;
-            heroe.mana += 90;
-        }
-        if(uitext.text == "poción de estamina mediana" && lim > 0  || uitext.text == "poción de esta mina mediana"  )
-        {
-            uitext.text = "objetos limite "+ lim + " PocionSta(m) " +inv.pocmm ;
-            heroe.mana += 130;
-        }
-        if(uitext.text == "poción de estamina grande" && lim > 0  || uitext.text == "poción de esta mina grande" )
-        {
-            uitext.text = "objetos limite "+ lim + " PocionSta(g) " +inv.pocmg ;
-            heroe.mana += 200;
-        }
         if(uitext.text == "")
         {
             heroe._notdef();

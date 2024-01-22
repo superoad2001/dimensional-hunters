@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Unity.MLAgents;
+using Unity.MLAgents.Actuators;
 
-public class enemigo : MonoBehaviour
+public class enemigo : Agent
 {
     public DynamicTextData textDatadano;
 
@@ -16,6 +18,7 @@ public class enemigo : MonoBehaviour
     public DynamicTextData textDataturbomenos;
 
     public float tempdtext;
+    public float tempesc;
 
 
     public bool turbo = false;
@@ -222,20 +225,25 @@ public class enemigo : MonoBehaviour
     public int decision = 0;
     public int decision2 = 0;
     public int decision3 = 0;
+    public override void OnActionReceived(ActionBuffers actions)
+    {
+        decision = actions.DiscreteActions[0];
+    }
     // Start is called before the first frame update
     void Start()
     {
+        inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
 
         decision3 = Random.Range(25,35);
 
-        hp = PlayerPrefs.GetFloat("hpene", 100);
-        mana = PlayerPrefs.GetFloat("manaene", 100);
-        manarec = PlayerPrefs.GetFloat("manarecene", 1);
-        fuerza = PlayerPrefs.GetFloat("fuerzaene", 1);
-        rango = PlayerPrefs.GetFloat("rangoene", 1);
-        name = (string)PlayerPrefs.GetString("nameene", "misigno");
-        bicho = (string)PlayerPrefs.GetString("bichosene", "madcat");
-        nivel = PlayerPrefs.GetFloat("nivelg", 1);
+        hp = inv.datosserial.hpene;
+        mana = inv.datosserial.manaene;
+        manarec = inv.datosserial.manarecene;
+        fuerza = inv.datosserial.fuerzaene;
+        rango = inv.datosserial.rangoene;
+        name = inv.datosserial.nameene;
+        bicho = inv.datosserial.razaene;
+        nivel = inv.datosserial.nivelene;
 
         if(rango == 1)
         {rangoexp = 1;}
@@ -922,9 +930,16 @@ public class enemigo : MonoBehaviour
             {
 
 
+                if(decision == 1){def = true;defson.Play();tempesc = 0;}
+                if(decision == 2){def = false;turbo = true;tempesc = 0;}
+                if(decision == 3){def = false;rapido = true;tempesc = 0;}
+                if(decision == 4){def = false;fuerte = true;tempesc = 0;}
+                if(decision == 5){def = false;rapfue = true;tempesc = 0;}
+                if(tempesc > 5 && def == true){def = false;tempesc = 0;}
 
 
-                if(mana < 1)
+
+                /*if(mana < 1)
                 {   
                     if (temp > 0)
                     {decision = 0;}
@@ -1270,7 +1285,7 @@ public class enemigo : MonoBehaviour
                 {
                     decision = 0;
                     turbo = true;
-                }
+                }*/
                 
 
             }
@@ -1294,7 +1309,7 @@ public class enemigo : MonoBehaviour
             if (rapido == true && atb == 100 && mana >= 20  * rangoexp&& permiso == false && heroe.permiso == false)
             {
                 mana -= 20 * rangoexp;
-                ataque = Random.Range(10,16) * fuerza;
+                ataque = Random.Range(5,10) * fuerza;
                 activar = true;
                 permiso = true;
                 turbobar += 25;
@@ -1313,7 +1328,7 @@ public class enemigo : MonoBehaviour
             else if (fuerte == true && atb == 100 && mana >= 30 * rangoexp && permiso == false  && heroe.permiso == false)
             {
                 mana -= 30 * rangoexp;
-                ataque = Random.Range(18,20) * fuerza;
+                ataque = Random.Range(15,20) * fuerza;
                 activar = true;
                 permiso = true;
                 turbobar += 25;
@@ -1333,7 +1348,7 @@ public class enemigo : MonoBehaviour
             {
                 mana -= 50 * rangoexp;
                 turbobar += 50;
-                ataque = Random.Range(30,40) * fuerza;
+                ataque = Random.Range(37,40) * fuerza;
                 activar = true;
                 permiso = true;
                 atb = 0;
@@ -1381,8 +1396,8 @@ public class enemigo : MonoBehaviour
             {
                 if(botebool == false)
                 {bote.Play();}
-                mana -= 1.5f * rangoexp * Time.deltaTime;
-                turbobar += 0.7f * Time.deltaTime;
+                mana -= 8.5f * rangoexp * Time.deltaTime;
+                turbobar += 5f * Time.deltaTime;
                 prot.enabled = false;
                
                 botebool = true;
@@ -1392,7 +1407,7 @@ public class enemigo : MonoBehaviour
                 if(tempdtext > 1f)
                 {
                     DynamicTextManager dtext = UnityEngine.Object.FindObjectOfType<DynamicTextManager>(); 
-                    dtext.CreateText(ev1.transform.position,("-"+(3.5 * rangoexp)).Substring(0, 6),textDatamana);
+                    dtext.CreateText(ev1.transform.position,("-"+(8.5 * rangoexp)).Substring(0, 6),textDatamana);
                     tempdtext = 0;
                 }
                 tempdtext += 1 * Time.deltaTime; 
@@ -1400,15 +1415,15 @@ public class enemigo : MonoBehaviour
             }
             else if (def == true && mana > 0  && mana < 5 * rangoexp && permiso == false && defusar == true)
             {
-                mana -= 3.5f * rangoexp * Time.deltaTime;
-                turbobar += 0.7f * Time.deltaTime;
+                mana -= 8.5f * rangoexp * Time.deltaTime;
+                turbobar += 5f * Time.deltaTime;
                 prot.enabled = false;
                 
                 escudo.gameObject.SetActive(true);
                 if(tempdtext > 1f)
                 {
                     DynamicTextManager dtext = UnityEngine.Object.FindObjectOfType<DynamicTextManager>(); 
-                    dtext.CreateText(ev1.transform.position,("-"+(3.5 * rangoexp)).Substring(0, 6),textDatamana);
+                    dtext.CreateText(ev1.transform.position,("-"+(8.5 * rangoexp)).Substring(0, 6),textDatamana);
                     tempdtext = 0;
                 }
                 tempdtext += 1 * Time.deltaTime;
@@ -1423,11 +1438,11 @@ public class enemigo : MonoBehaviour
                 
                     if (mana < manamax)
                     {
-                        mana+= 3 * manarec * Time.deltaTime;
+                        mana+= 1.5f * manarec * Time.deltaTime;
                         if(tempdtext > 1f)
                         {
                             DynamicTextManager dtext = UnityEngine.Object.FindObjectOfType<DynamicTextManager>(); 
-                            dtext.CreateText(ev1.transform.position,("+"+(3 * manarec)),textDatamanamas);
+                            dtext.CreateText(ev1.transform.position,("+"+(1.5f * manarec)),textDatamanamas);
                             tempdtext = 0;
                         }
                     }
@@ -1473,6 +1488,8 @@ public class enemigo : MonoBehaviour
             {temp1 += 1 * Time.deltaTime;}
             if (temp4 < 15)
             {temp4 += 1 * Time.deltaTime;}
+            if (tempesc < 15)
+            {tempesc += 1 * Time.deltaTime;}
             
 
             

@@ -26,7 +26,8 @@ public class subirrangos : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rango = PlayerPrefs.GetInt("rango", 1);
+        inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
+        rango = inv.datosserial.rangoplay;
 
         if(rango == 1)
         {requisito = 500;}
@@ -83,13 +84,12 @@ public class subirrangos : MonoBehaviour
     public void _subir()
     {
         inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
-        if(inv.dinero >= requisito && noventa == false)
+        if(inv.datosserial.dinero >= requisito && noventa == false)
         {
             sibot.Play();
-            rango++;
-            inv.dinero -= requisito;
-            PlayerPrefs.SetFloat("dinerosave",inv.dinero);
-            PlayerPrefs.SetInt("rango",rango);
+            inv.datosserial.rangoplay++;
+            inv.datosserial.dinero -= requisito;
+            inv.guardar();
         }
         else
         {
@@ -102,7 +102,7 @@ public class subirrangos : MonoBehaviour
     {
         inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
         requsitot.text = "necesitas "+requisito+" dolares";
-        dinerot.text = "tus dolares: "+inv.dinero;
+        dinerot.text = "tus dolares: "+inv.datosserial.dinero;
         rangot.text = ""+rango;
 
     }

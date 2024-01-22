@@ -85,7 +85,6 @@ public class zonacaza : MonoBehaviour
         hierb.Add( "hierba blanca dorada");
 
 
-        tutorial5 = PlayerPrefs.GetInt("tutorial5",0);
 
         
     }
@@ -131,7 +130,7 @@ public class zonacaza : MonoBehaviour
         if (i == 0)
         {hiert.text = hierb[i];}
         else
-        {hiert.text = hierb[i] +" X "+ inv.tipohierba[i] ;}
+        {hiert.text = hierb[i] +" X "+ inv.datosserial.tipohierba[i] ;}
         izqb = false;
         derb = false;
     }
@@ -141,209 +140,239 @@ public class zonacaza : MonoBehaviour
         if(i == 0)
         {
             SceneManager.LoadScene("cazar");
-            PlayerPrefs.SetInt("hierbatipo", 1);
+            inv.datosserial.hierbau = 1 ;
+            inv.guardar();
         }
-        else if(i == 1 && inv.tipohierba[i] > 0)
+        else if(i == 1 && inv.datosserial.tipohierba[i] > 0)
         {
-            inv.tipohierba[i]--;
+            inv.datosserial.tipohierba[i]--;
             inv._agregar2();
-            PlayerPrefs.SetInt("hierbatipo", 1);
+            inv.datosserial.hierbau = 1 ;
+            inv.guardar();
             SceneManager.LoadScene("cazar2");
         }
-        else if(i == 2 && inv.tipohierba[i] > 0)
+        else if(i == 2 && inv.datosserial.tipohierba[i] > 0)
         {
-            inv.tipohierba[i]--;
+            inv.datosserial.tipohierba[i]--;
             inv._agregar2();
-            PlayerPrefs.SetInt("hierbatipo", 1);
+            inv.datosserial.hierbau = 1 ;
+            inv.guardar();
             SceneManager.LoadScene("cazar3");
         }
-        else if(i == 3 && inv.tipohierba[i] > 0)
+        else if(i == 3 && inv.datosserial.tipohierba[i] > 0)
         {
-            inv.tipohierba[i]--;
+            inv.datosserial.tipohierba[i]--;
             inv._agregar2();
-            PlayerPrefs.SetInt("hierbatipo", 1);
+            inv.datosserial.hierbau = 1 ;
+            inv.guardar();
             SceneManager.LoadScene("cazar4");
         }
-        else if(i == 4 && inv.tipohierba[i] > 0)
+        else if(i == 4 && inv.datosserial.tipohierba[i] > 0)
         {
-            inv.tipohierba[i]--;
+            inv.datosserial.tipohierba[i]--;
             inv._agregar2();
-            PlayerPrefs.SetInt("hierbatipo", 1);
+            inv.datosserial.hierbau = 1 ;
+            inv.guardar();
             SceneManager.LoadScene("cazar5");
         }
-        else if(i == 5 && inv.tipohierba[i] > 0)
+        else if(i == 5 && inv.datosserial.tipohierba[i] > 0)
         {
-            inv.tipohierba[i]--;
+            inv.datosserial.tipohierba[i]--;
             inv._agregar2();
-            PlayerPrefs.SetInt("hierbatipo", 1);
+            inv.datosserial.hierbau = 1 ;
+            inv.guardar();
             SceneManager.LoadScene("cazar6");
         }
-        else if(i == 6 && inv.tipohierba[i] > 0)
+        else if(i == 6 && inv.datosserial.tipohierba[i] > 0)
         {
-            inv.tipohierba[i]--;
+            inv.datosserial.tipohierba[i]--;
             inv._agregar2();
-            PlayerPrefs.SetInt("hierbatipo", 1);
+            inv.datosserial.hierbau = 1 ;
+            inv.guardar();
             SceneManager.LoadScene("cazar7");
         }
-        else if(i == 7 && inv.tipohierba[i] > 0)
+        else if(i == 7 && inv.datosserial.tipohierba[i] > 0)
         {
-            inv.tipohierba[i]--;
+            inv.datosserial.tipohierba[i]--;
             inv._agregar2();
-            PlayerPrefs.SetInt("hierbatipo", 1);
+            inv.datosserial.hierbau = 1 ;
+            inv.guardar();
             SceneManager.LoadScene("cazar8");
         }
-        else if(i == 8 && inv.tipohierba[i] > 0)
+        else if(i == 8 && inv.datosserial.tipohierba[i] > 0)
         {
-            inv.tipohierba[i]--;
+            inv.datosserial.tipohierba[i]--;
             inv._agregar2();
-            PlayerPrefs.SetInt("hierbatipo", 1);
+            inv.datosserial.hierbau = 1 ;
+            inv.guardar();
             SceneManager.LoadScene("cazar9");
         }
-        else if(i == 9 && inv.tipohierba[i] > 0)
+        else if(i == 9 && inv.datosserial.tipohierba[i] > 0)
         {
-            inv.tipohierba[i]--;
+            inv.datosserial.tipohierba[i]--;
             inv._agregar2();
-            PlayerPrefs.SetInt("hierbatipo", 1);
+            inv.datosserial.hierbau = 1 ;
+            inv.guardar();
             SceneManager.LoadScene("cazar10");
         }
-        else if(i == 10 && inv.tipohierba[i] > 0)
+        else if(i == 10 && inv.datosserial.tipohierba[i] > 0)
         {
-            inv.tipohierba[i]--;
+            inv.datosserial.tipohierba[i]--;
             inv._agregar2();
-            PlayerPrefs.SetInt("hierbatipo", 2);
+            inv.datosserial.hierbau = 2;
+            inv.guardar();
             SceneManager.LoadScene("cazar");
         }
-        else if(i == 11 && inv.tipohierba[i] > 0)
+        else if(i == 11 && inv.datosserial.tipohierba[i] > 0)
         {
-            inv.tipohierba[i]--;
+            inv.datosserial.tipohierba[i]--;
             inv._agregar2();
-            PlayerPrefs.SetInt("hierbatipo", 2);
+            inv.datosserial.hierbau = 2;
+            inv.guardar();
             SceneManager.LoadScene("cazar2");
         }
-        else if(i == 12 && inv.tipohierba[i] > 0)
+        else if(i == 12 && inv.datosserial.tipohierba[i] > 0)
         {
-            inv.tipohierba[i]--;
+            inv.datosserial.tipohierba[i]--;
             inv._agregar2();
-            PlayerPrefs.SetInt("hierbatipo", 2);
+            inv.datosserial.hierbau = 2;
+            inv.guardar();
             SceneManager.LoadScene("cazar3");
         }
-        else if(i == 13 && inv.tipohierba[i] > 0)
+        else if(i == 13 && inv.datosserial.tipohierba[i] > 0)
         {
-            inv.tipohierba[i]--;
+            inv.datosserial.tipohierba[i]--;
             inv._agregar2();
-            PlayerPrefs.SetInt("hierbatipo", 2);
+            inv.datosserial.hierbau = 2;
+            inv.guardar();
             SceneManager.LoadScene("cazar4");
         }
-        else if(i == 14 && inv.tipohierba[i] > 0)
+        else if(i == 14 && inv.datosserial.tipohierba[i] > 0)
         {
-            inv.tipohierba[i]--;
+            inv.datosserial.tipohierba[i]--;
             inv._agregar2();
-            PlayerPrefs.SetInt("hierbatipo", 2);
+            inv.datosserial.hierbau = 2;
+            inv.guardar();
             SceneManager.LoadScene("cazar5");
         }
-        else if(i == 15 && inv.tipohierba[i] > 0)
+        else if(i == 15 && inv.datosserial.tipohierba[i] > 0)
         {
-            inv.tipohierba[i]--;
+            inv.datosserial.tipohierba[i]--;
             inv._agregar2();
-            PlayerPrefs.SetInt("hierbatipo", 2);
+            inv.datosserial.hierbau = 2;
+            inv.guardar();
             SceneManager.LoadScene("cazar6");
         }
-        else if(i == 16 && inv.tipohierba[i] > 0)
+        else if(i == 16 && inv.datosserial.tipohierba[i] > 0)
         {
-            inv.tipohierba[i]--;
+            inv.datosserial.tipohierba[i]--;
             inv._agregar2();
-            PlayerPrefs.SetInt("hierbatipo", 2);
+            inv.datosserial.hierbau = 2;
+            inv.guardar();
             SceneManager.LoadScene("cazar7");
         }
-        else if(i == 17 && inv.tipohierba[i] > 0)
+        else if(i == 17 && inv.datosserial.tipohierba[i] > 0)
         {
-            inv.tipohierba[i]--;
+            inv.datosserial.tipohierba[i]--;
             inv._agregar2();
-            PlayerPrefs.SetInt("hierbatipo", 2);
+            inv.datosserial.hierbau = 2;
+            inv.guardar();
             SceneManager.LoadScene("cazar8");
         }
-        else if(i == 18 && inv.tipohierba[i] > 0)
+        else if(i == 18 && inv.datosserial.tipohierba[i] > 0)
         {
-            inv.tipohierba[i]--;
+            inv.datosserial.tipohierba[i]--;
             inv._agregar2();
-            PlayerPrefs.SetInt("hierbatipo", 2);
+            inv.datosserial.hierbau = 2;
+            inv.guardar();
             SceneManager.LoadScene("cazar9");
         }
-        else if(i == 19 && inv.tipohierba[i] > 0)
+        else if(i == 19 && inv.datosserial.tipohierba[i] > 0)
         {
-            inv.tipohierba[i]--;
+            inv.datosserial.tipohierba[i]--;
             inv._agregar2();
-            PlayerPrefs.SetInt("hierbatipo", 2);
+            inv.datosserial.hierbau = 2;
+            inv.guardar();
             SceneManager.LoadScene("cazar10");
         }
-        else if(i == 20 && inv.tipohierba[i] > 0)
+        else if(i == 20 && inv.datosserial.tipohierba[i] > 0)
         {
-            inv.tipohierba[i]--;
+            inv.datosserial.tipohierba[i]--;
             inv._agregar2();
-            PlayerPrefs.SetInt("hierbatipo",3);
+            inv.datosserial.hierbau = 3;
+            inv.guardar();
             SceneManager.LoadScene("cazar");
         }
-        else if(i == 21 && inv.tipohierba[i] > 0)
+        else if(i == 21 && inv.datosserial.tipohierba[i] > 0)
         {
-            inv.tipohierba[i]--;
+            inv.datosserial.tipohierba[i]--;
             inv._agregar2();
-            PlayerPrefs.SetInt("hierbatipo",3);
+            inv.datosserial.hierbau = 3;
+            inv.guardar();
             SceneManager.LoadScene("cazar2");
         }
-        else if(i == 22 && inv.tipohierba[i] > 0)
+        else if(i == 22 && inv.datosserial.tipohierba[i] > 0)
         {
-            inv.tipohierba[i]--;
+            inv.datosserial.tipohierba[i]--;
             inv._agregar2();
-            PlayerPrefs.SetInt("hierbatipo",3);
+            inv.datosserial.hierbau = 3;
+            inv.guardar();
             SceneManager.LoadScene("cazar3");
         }
-        else if(i == 23 && inv.tipohierba[i] > 0)
+        else if(i == 23 && inv.datosserial.tipohierba[i] > 0)
         {
-            inv.tipohierba[i]--;
+            inv.datosserial.tipohierba[i]--;
             inv._agregar2();
-            PlayerPrefs.SetInt("hierbatipo",3);
+            inv.datosserial.hierbau = 3;
+            inv.guardar();
             SceneManager.LoadScene("cazar4");
         }
-        else if(i == 24 && inv.tipohierba[i] > 0)
+        else if(i == 24 && inv.datosserial.tipohierba[i] > 0)
         {
-            inv.tipohierba[i]--;
+            inv.datosserial.tipohierba[i]--;
             inv._agregar2();
-            PlayerPrefs.SetInt("hierbatipo",3);
+            inv.datosserial.hierbau = 3;
+            inv.guardar();
             SceneManager.LoadScene("cazar5");
         }
-        else if(i == 25 && inv.tipohierba[i] > 0)
+        else if(i == 25 && inv.datosserial.tipohierba[i] > 0)
         {
-            inv.tipohierba[i]--;
+            inv.datosserial.tipohierba[i]--;
             inv._agregar2();
-            PlayerPrefs.SetInt("hierbatipo",3);
+            inv.datosserial.hierbau = 3;
+            inv.guardar();
             SceneManager.LoadScene("cazar6");
         }
-        else if(i == 26 && inv.tipohierba[i] > 0)
+        else if(i == 26 && inv.datosserial.tipohierba[i] > 0)
         {
-            inv.tipohierba[i]--;
+            inv.datosserial.tipohierba[i]--;
             inv._agregar2();
-            PlayerPrefs.SetInt("hierbatipo",3);
+            inv.datosserial.hierbau = 3;
+            inv.guardar();
             SceneManager.LoadScene("cazar7");
         }
-        else if(i == 27 && inv.tipohierba[i] > 0)
+        else if(i == 27 && inv.datosserial.tipohierba[i] > 0)
         {
-            inv.tipohierba[i]--;
+            inv.datosserial.tipohierba[i]--;
             inv._agregar2();
-            PlayerPrefs.SetInt("hierbatipo",3);
+            inv.datosserial.hierbau = 3;
+            inv.guardar();
             SceneManager.LoadScene("cazar8");
         }
-        else if(i == 28 && inv.tipohierba[i] > 0)
+        else if(i == 28 && inv.datosserial.tipohierba[i] > 0)
         {
-            inv.tipohierba[i]--;
+            inv.datosserial.tipohierba[i]--;
             inv._agregar2();
-            PlayerPrefs.SetInt("hierbatipo",3);
+            inv.datosserial.hierbau = 3;
+            inv.guardar();
             SceneManager.LoadScene("cazar9");
         }
-        else if(i == 29 && inv.tipohierba[i] > 0)
+        else if(i == 29 && inv.datosserial.tipohierba[i] > 0)
         {
-            inv.tipohierba[i]--;
+            inv.datosserial.tipohierba[i]--;
             inv._agregar2();
-            PlayerPrefs.SetInt("hierbatipo",3);
+            inv.datosserial.hierbau = 3;
+            inv.guardar();
             SceneManager.LoadScene("cazar10");
         }
         else{no.Play();}

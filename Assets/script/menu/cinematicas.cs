@@ -117,7 +117,8 @@ public class cinematicas : MonoBehaviour
 
     void Start()
     {
-        rango = PlayerPrefs.GetInt("rango", 1);
+        inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
+        rango = inv.datosserial.rangoplay;
 
 
         if(rango == 1)

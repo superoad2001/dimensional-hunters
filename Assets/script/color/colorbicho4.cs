@@ -10,7 +10,8 @@ public class colorbicho4 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        clase = PlayerPrefs.GetFloat("claseene", 1);
+        inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
+        clase = inv.datosserial.claseene;
         if(clase == 1)
         {
             

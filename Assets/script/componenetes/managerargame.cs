@@ -11,7 +11,8 @@ public class managerargame : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        plat = PlayerPrefs.GetString("plat","game3dt");
+        inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
+        plat = inv.datosserial.plat;
         if(plat == "arcore")
         {
             arcore.SetActive(true);

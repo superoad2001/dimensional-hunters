@@ -18,7 +18,8 @@ public class collisionheroemulti2 : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
-        client = PlayerPrefs.GetInt("clientid",0);
+        inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
+        client = inv.datosserial.client;
         if (transform.localPosition == new Vector3(-3.8599999F,0.583000004F,5.58799982F)  && heroe.temp4 > 0.4f && client == 2 && heroe.managermulti.comenzar.Value == true)
             {
                 Debug.Log("conexion");
@@ -58,7 +59,7 @@ public class collisionheroemulti2 : NetworkBehaviour
 
             }
         }
-        if (col.gameObject.tag == "pine" && client == 2 && heroe.temp4 > 1f)
+        if (col.gameObject.tag == "pinie" && client == 2 && heroe.temp4 > 1f)
         {
             heroe.permisoServerRpc(false);
             heroe.atkServerRpc(0);

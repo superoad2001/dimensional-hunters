@@ -12,7 +12,8 @@ public class colorbicho : MonoBehaviour
     void Start()
     {
         material = mesh.material;
-        hierbatipo = PlayerPrefs.GetInt("hierbatipo", 3);
+        inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
+        hierbatipo = inv.datosserial.hierbau;
         if(hierbatipo == 1)
         {
         

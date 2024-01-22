@@ -1850,31 +1850,91 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   borrar: 0
-  name: []
-  hp: []
-  mana: []
-  manarec: []
-  fuerza: []
-  elemento: []
-  nivel: []
-  bichosmios: []
-  exp: []
-  rango: []
-  clase: []
-  dinero: 0
-  hierbaomega: 0
-  licencia: []
-  tipohierba: []
-  pocvp: 0
-  pocvm: 0
-  pocvg: 0
-  pocmp: 0
-  pocmm: 0
-  pocmg: 0
-  limite: 5
   indexmax: 0
-  catalogo: []
   o: 0
+  datosserial:
+    name:
+    - madcat
+    - prueba
+    hp:
+    - 102
+    - 9999
+    mana:
+    - 82
+    - 9999
+    manarec:
+    - 0.7
+    - 1
+    fuerza:
+    - 0.36864024
+    - 1
+    elemento:
+    - comun rango :1
+    - ninguno
+    nivel:
+    - 1
+    - 1
+    bichosmios:
+    - madcat
+    - madcat
+    exp:
+    - 0
+    - 0
+    rango:
+    - 1
+    - 1
+    clase:
+    - 0
+    - 0
+    dinero: 1.0001108e+9
+    hierbaomega: 0
+    licencia:
+    - denegada
+    - denegada
+    - denegada
+    - denegada
+    - denegada
+    - denegada
+    - denegada
+    - denegada
+    - denegada
+    - denegada
+    - denegada
+    tipohierba:
+    - 999
+    - 999
+    - 999
+    - 999
+    - 999
+    - 999
+    - 999
+    - 999
+    - 999
+    - 999
+    - 999
+    - 999
+    - 999
+    - 999
+    - 999
+    - 999
+    - 999
+    - 999
+    - 999
+    - 999
+    - 999
+    - 999
+    - 999
+    - 999
+    - 999
+    - 999
+    - 999
+    - 999
+    - 999
+    - 999
+    limite: 9999
+    indexmax: 0
+    catalogo: []
+  repath: C:/Users/super/AppData/LocalLow/superoad2001/dimensional hunters\DHdata\DHdatainventario.data
 --- !u!1001 &463369175
 PrefabInstance:
   m_ObjectHideFlags: 0

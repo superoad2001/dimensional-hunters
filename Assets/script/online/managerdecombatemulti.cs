@@ -88,9 +88,9 @@ public class managerdecombatemulti : NetworkBehaviour
             cuenta_.gameObject.SetActive(true);
             combate_.gameObject.SetActive(false);
             cuenta.text = "ganaste";
-            inv.dinero += 200;
-            PlayerPrefs.SetFloat("dinerosave",inv.dinero);
-            PlayerPrefs.SetFloat("nivelg",heroe2.nivel);
+            inv.datosserial.dinero += 200;
+            inv.datosserial.nivelene = (int)heroe2.nivel;
+            inv.guardar();
             if (temp6 < 15)
             {temp6 += 1 * Time.deltaTime;}
             if(temp > 5)
@@ -111,9 +111,9 @@ public class managerdecombatemulti : NetworkBehaviour
             cuenta_.gameObject.SetActive(true);
             combate_.gameObject.SetActive(false);
             cuenta.text = "ganaste";
-            inv.dinero += 200;
-            PlayerPrefs.SetFloat("dinerosave",inv.dinero);
-            PlayerPrefs.SetFloat("nivelg",heroe.nivel);
+            inv.datosserial.dinero += 200;
+            inv.datosserial.nivelene = (int)heroe2.nivel;
+            inv.guardar();
             if (temp6 < 15)
             {temp6 += 1 * Time.deltaTime;}
             if(temp > 5)

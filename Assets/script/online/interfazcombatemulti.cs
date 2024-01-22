@@ -29,7 +29,8 @@ public class interfazcombatemulti : MonoBehaviour
     public string plat;
     void Start()
     {
-        plat = PlayerPrefs.GetString("plat","game3d");
+        inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
+        plat = inv.datosserial.plat;
         if(plat == "arcore")
         {
             

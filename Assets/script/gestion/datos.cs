@@ -24,7 +24,7 @@ public class datos
     public List<float> clase = new List<float>();
     public float dinero = 0;
     public float hierbaomega = 0;
-    public List<string> licencia = new List<string>();
+    public string[] licencia = new string[10];
 
     public float[] tipohierba = new float[30];
     

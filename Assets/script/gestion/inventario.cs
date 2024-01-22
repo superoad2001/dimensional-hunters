@@ -65,6 +65,7 @@ public class inventario : MonoBehaviour
             string datosinventario = JsonUtility.ToJson(datosserial);
             File.WriteAllText(path,datosinventario);
             Debug.Log(datosinventario);
+            datosbase();
         }
         
     }
@@ -91,6 +92,20 @@ public class inventario : MonoBehaviour
             string datosinventario = JsonUtility.ToJson("");
             File.WriteAllText(path,datosinventario);
         }
+        datosbase();
+        
+    }
+    public void datosbase()
+    {
+        for(int i = 0;i< 30 ; i++)
+        {
+            datosserial.tipohierba[i] = 0;
+        }
+        for(int i = 0;i< 10 ; i++)
+        {
+            datosserial.licencia[i] = "no obtenida";
+        }
+        guardar();
         
     }
     // Start is called before the first frame update

@@ -226,7 +226,7 @@ public class inventariomenu : MonoBehaviour
                 puesto3.text = "licencia bicho2";
                 puesto4.text = "licencia bicho3";
                 puesto5.text = "licencia bicho4";
-                puesto6.text = "licencia bicho5";
+                puesto6.text = "";
                 din.text = "dolares : "+""+inv.datosserial.dinero.ToString("F0");
                
                 ptext1.text = ""+inv.datosserial.hierbaomega;
@@ -234,7 +234,7 @@ public class inventariomenu : MonoBehaviour
                 ptext3.text = ""+inv.datosserial.licencia[1];
                 ptext4.text = ""+inv.datosserial.licencia[2];
                 ptext5.text = ""+inv.datosserial.licencia[3];
-                ptext6.text = ""+inv.datosserial.licencia[4];
+                ptext6.text = "";
 
                 
         }
@@ -259,7 +259,7 @@ public class inventariomenu : MonoBehaviour
         }
         if(dermod == true)
         {
-            if(tienda < 8)
+            if(tienda < 7)
             {
                 tienda++;
             }

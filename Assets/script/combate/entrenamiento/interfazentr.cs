@@ -4,9 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.XR.ARFoundation;
+using Rewired;
 
 public class interfazentr : MonoBehaviour
 {
+
+    [SerializeField]private int playerID = 0;
+	[SerializeField]private Player player;
    public GameObject arSession;
     public Image barrahp;
     public Image barrahpene;
@@ -31,6 +35,14 @@ public class interfazentr : MonoBehaviour
         {
             
         }
+        
+    }
+    void Start()
+    {
+        if(plat == "game3d")
+        {
+         player = ReInput.players.GetPlayer(playerID);
+        }
     }
     
     public void _salir()
@@ -39,7 +51,9 @@ public class interfazentr : MonoBehaviour
     }
     // Update is called once per frame
     void Update()
-    {
+    {   
+        if(player.GetAxis("pause") > 0 )
+        {SceneManager.LoadScene("seleccion");}
 
         salir = false;
         heroentr heroe = UnityEngine.Object.FindObjectOfType<heroentr>();

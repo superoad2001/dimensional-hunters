@@ -8,6 +8,18 @@ public class managerargame : MonoBehaviour
     public GameObject arcore;
     public GameObject game3d;
     public GameObject game3dtact;
+
+    public GameObject boton1;
+    public GameObject boton2;
+    public GameObject boton3;
+    public GameObject boton4;
+    public GameObject boton5;
+    public GameObject boton6;
+
+    public GameObject boton7;
+    public GameObject boton8;
+    public GameObject boton9;
+    public GameObject boton10;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +36,26 @@ public class managerargame : MonoBehaviour
             arcore.SetActive(false);
             game3d.SetActive(true);
             game3dtact.SetActive(false);
+            if(boton1 != null)
+            {boton1.SetActive(false);}
+            if(boton2 != null)
+            {boton2.SetActive(false);}
+            if(boton3 != null)
+            {boton3.SetActive(false);}
+            if(boton4 != null)
+            {boton4.SetActive(false);}
+            if(boton5 != null)
+            {boton5.SetActive(false);}
+            if(boton6 != null)
+            {boton6.SetActive(false);}
+            if(boton7 != null)
+            {boton7.SetActive(false);}
+            if(boton8 != null)
+            {boton8.SetActive(false);}
+            if(boton9 != null)
+            {boton9.SetActive(false);}
+            if(boton10 != null)
+            {boton10.SetActive(false);}
             Cursor.visible = false;
         	Cursor.lockState = CursorLockMode.Locked;
         }

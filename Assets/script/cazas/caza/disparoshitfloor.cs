@@ -56,7 +56,12 @@ public class disparoshitfloor : MonoBehaviour
 
     void Awake()
     {
+
+    }
+    void Start()
+    {
         inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
+
         plat = inv.datosserial.plat;
         if(plat == "arcore")
         {
@@ -66,10 +71,6 @@ public class disparoshitfloor : MonoBehaviour
         {
          player = ReInput.players.GetPlayer(playerID);
         }
-    }
-    void Start()
-    {
-        inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
         rango = inv.datosserial.rangoplay;
         if(rango == 1)
         {rangoexp = 1;}
@@ -192,21 +193,32 @@ public class disparoshitfloor : MonoBehaviour
     }
     public void _escudo()
     {
-
+        if(plat == "game3dt" || plat == "arcore")
+        {
             escudoact = true;
+        }
             
     }
     public void _noescudo()
     {
-        escudoact = false;
+        if(plat == "game3dt" || plat == "arcore")
+        {
+            escudoact = false;
+        }
     }
     public void disparo()
     {
-        disp = true;
+        if(plat == "game3dt" || plat == "arcore")
+        {
+            disp = true;
+        }
     }
     public void notdisparo()
     {
-        disp = false;
+        if(plat == "game3dt" || plat == "arcore")
+        {
+            disp = false;
+        }
     }
     // Update is called once per frame
     void Update()
@@ -266,6 +278,7 @@ public class disparoshitfloor : MonoBehaviour
 
         if(comienzo == true)
             {
+
             
             if(salir == true)
             {SceneManager.LoadScene("seleccion");}
@@ -347,7 +360,7 @@ public class disparoshitfloor : MonoBehaviour
                     {mana = 100;}
                     escudoonda.SetActive(false);
                 }
-            }
+            
             if (mana <= 1)
             {
                 escudorec = true;
@@ -357,6 +370,7 @@ public class disparoshitfloor : MonoBehaviour
             {temp3 -= 1 * Time.deltaTime;}
             if (temp < 15)
             {temp += 1 * Time.deltaTime;}
+            }
         }
         if(enemigo.hp <=  0 && vez1 == false)
         {

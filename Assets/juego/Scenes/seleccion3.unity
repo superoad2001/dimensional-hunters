@@ -1442,31 +1442,127 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   borrar: 0
-  name: []
-  hp: []
-  mana: []
-  manarec: []
-  fuerza: []
-  elemento: []
-  nivel: []
-  bichosmios: []
-  exp: []
-  rango: []
-  clase: []
-  dinero: 0
-  hierbaomega: 0
-  licencia: []
-  tipohierba: []
-  pocvp: 0
-  pocvm: 0
-  pocvg: 0
-  pocmp: 0
-  pocmm: 0
-  pocmg: 0
-  limite: 10
   indexmax: 0
-  catalogo: []
   o: 0
+  datosserial:
+    rangoplay: 1
+    name: []
+    hp: []
+    mana: []
+    manarec: []
+    fuerza: []
+    elemento: []
+    nivel: []
+    bichosmios: []
+    exp: []
+    rango: []
+    clase: []
+    dinero: 0
+    hierbaomega: 0
+    licencia:
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    tipohierba:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    limite: 5
+    indexmax: 0
+    catalogo: []
+    names: 
+    hps: 0
+    manas: 0
+    manarecs: 0
+    fuerzas: 0
+    elementos: 
+    nivels: 0
+    clases: 0
+    razas: 
+    rangors: 0
+    exps: 0
+    rangoene: 0
+    nivelene: 0
+    hpene: 0
+    manaene: 0
+    manarecene: 0
+    fuerzaene: 0
+    elementoene: 
+    claseene: 0
+    razaene: 
+    nameene: 
+    varsel1: 0
+    client: 0
+    nameinter: 
+    hpinter: 0
+    manainter: 0
+    manarecinter: 0
+    fuerzainter: 0
+    elementointer: 
+    nivelinter: 0
+    claseinter: 0
+    razainter: 
+    rangorinter: 0
+    expinter: 0
+    nameinter2: 
+    hpinter2: 0
+    manainter2: 0
+    manarecinter2: 0
+    fuerzainter2: 0
+    elementointer2: 
+    nivelinter2: 0
+    claseinter2: 0
+    razainter2: 
+    rangorinter2: 0
+    expinter2: 0
+    plat: game3d
+    hierbau: 1
+    bichocaza: 
+    namer: 
+    hpr: 0
+    manar: 0
+    manarecr: 0
+    fuerzar: 0
+    elementor: 
+    nivelr: 0
+    claser: 0
+    razar: 
+    rangorr: 0
+  repath: 
 --- !u!114 &902821285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2030,7 +2126,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 478ff615027f88844bef84b0bde2e209, type: 3}
-    m_FontSize: 60
+    m_FontSize: 49
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -2041,9 +2137,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'TIPO GAME 3D
-
-    mando'
+  m_Text: "TIPO GAME 3D\nmando \no teclado y raton"
 --- !u!222 &1878063960
 CanvasRenderer:
   m_ObjectHideFlags: 0

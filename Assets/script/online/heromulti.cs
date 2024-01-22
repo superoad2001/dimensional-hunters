@@ -296,27 +296,45 @@ public class heromulti : NetworkBehaviour
     }
     public void _turbo()
     {
+        if(plat == "game3dt" || plat == "arcore")
+        {
         turbo = true;
+        }
     }
     public void _rapido()
     {
+        if(plat == "game3dt" || plat == "arcore")
+        {
         rapido = true;
+        }
     }
     public void _fuerte()
     {
+        if(plat == "game3dt" || plat == "arcore")
+        {
         fuerte = true;
+        }
     }
     public void _rapfue()
     {
+        if(plat == "game3dt" || plat == "arcore")
+        {
         rapfue = true;
+        }
     }
     public void _def()
     {
+        if(plat == "game3dt" || plat == "arcore")
+        {
         def = true;
+        }
     }
     public void _notdef()
     {
-        def = false;
+        if(plat == "game3dt" || plat == "arcore")
+        {
+            def = false;
+        }
     }
     // Update is called once per frame
 
@@ -497,29 +515,32 @@ public class heromulti : NetworkBehaviour
 
             if(client == 1)
             {
-                if(player.GetAxis("a") > 0f)
+                if(plat == "game3d")
                 {
-                    rapido = true;
-                }
-                else if(player.GetAxis("x") > 0f)
-                {
-                    fuerte = true;
-                }
-                else if(player.GetAxis("y") > 0f)
-                {
-                    rapfue = true;
-                }
-                else if(player.GetAxis("rb") > 0f)
-                {
-                    turbo = true;
-                }
-                if(player.GetAxis("lb") > 0f)
-                {
-                    def = true;
-                }
-                else
-                {
-                    def = false;
+                    if(player.GetAxis("a") > 0f)
+                    {
+                        rapido = true;
+                    }
+                    else if(player.GetAxis("x") > 0f)
+                    {
+                        fuerte = true;
+                    }
+                    else if(player.GetAxis("y") > 0f)
+                    {
+                        rapfue = true;
+                    }
+                    else if(player.GetAxis("rb") > 0f)
+                    {
+                        turbo = true;
+                    }
+                    if(player.GetAxis("lb") > 0f)
+                    {
+                        def = true;
+                    }
+                    else
+                    {
+                        def = false;
+                    }
                 }
             }
             if(client == 1)

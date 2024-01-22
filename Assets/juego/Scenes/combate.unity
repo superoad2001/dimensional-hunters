@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.07214673, g: 0.033691708, b: 0.030305054, a: 1}
+  m_IndirectSpecularColor: {r: 0.07194343, g: 0.03355332, b: 0.030250829, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2827,6 +2827,12 @@ MonoBehaviour:
   arcore: {fileID: 166994657}
   game3d: {fileID: 363119438}
   game3dtact: {fileID: 1382229951}
+  boton1: {fileID: 1079434085}
+  boton2: {fileID: 1265443281}
+  boton3: {fileID: 1283469430}
+  boton4: {fileID: 1857406488}
+  boton5: {fileID: 2070618800}
+  boton6: {fileID: 0}
 --- !u!4 &303653307
 Transform:
   m_ObjectHideFlags: 0

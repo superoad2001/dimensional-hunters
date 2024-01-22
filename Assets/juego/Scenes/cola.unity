@@ -11003,6 +11003,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d6e114bed2c8704f9ee89a5eaa9ce61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerID: 0
+  plat: 
   heroe2: {fileID: 1172881533}
   textDatadano: {fileID: 11400000, guid: a5445a47a1f772043ba96c0acbf4ce17, type: 2}
   textDatamana: {fileID: 11400000, guid: f9ddd94cce1665c45bd440b4b10d399e, type: 2}
@@ -14209,6 +14211,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31d7ad8c6a733464e8707b0359cf62bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerID: 0
+  plat: 
   heroe2: {fileID: 910429519}
   textDatadano: {fileID: 11400000, guid: a5445a47a1f772043ba96c0acbf4ce17, type: 2}
   textDatamana: {fileID: 11400000, guid: f9ddd94cce1665c45bd440b4b10d399e, type: 2}
@@ -23959,6 +23963,16 @@ MonoBehaviour:
   arcore: {fileID: 3716368140267561636}
   game3d: {fileID: 214188660}
   game3dtact: {fileID: 904268053}
+  boton1: {fileID: 1079749702}
+  boton2: {fileID: 1841639371}
+  boton3: {fileID: 960566647}
+  boton4: {fileID: 441886363}
+  boton5: {fileID: 469158078}
+  boton6: {fileID: 780526727}
+  boton7: {fileID: 798065842}
+  boton8: {fileID: 1635619178}
+  boton9: {fileID: 1688973789}
+  boton10: {fileID: 265410709}
 --- !u!1 &2093075029
 GameObject:
   m_ObjectHideFlags: 0

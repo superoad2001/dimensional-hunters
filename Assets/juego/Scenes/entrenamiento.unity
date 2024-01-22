@@ -3822,6 +3822,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0b98ca23b50fbc4ebc782ff65ad37a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plat: 
+  playerID: 0
   textDatadano: {fileID: 11400000, guid: a5445a47a1f772043ba96c0acbf4ce17, type: 2}
   textDatamana: {fileID: 11400000, guid: f9ddd94cce1665c45bd440b4b10d399e, type: 2}
   textDatamanamas: {fileID: 11400000, guid: 3ffd1565e15402144a8bb059f43fe030, type: 2}
@@ -6142,6 +6144,12 @@ MonoBehaviour:
   arcore: {fileID: 242988360}
   game3d: {fileID: 990780419}
   game3dtact: {fileID: 1326386204}
+  boton1: {fileID: 2070618800}
+  boton2: {fileID: 1079434085}
+  boton3: {fileID: 1265443281}
+  boton4: {fileID: 1283469430}
+  boton5: {fileID: 1857406488}
+  boton6: {fileID: 585316460}
 --- !u!4 &772878380
 Transform:
   m_ObjectHideFlags: 0
@@ -7462,6 +7470,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7caf2715dda78d4da439540fc73b30c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerID: 0
   arSession: {fileID: 1611145725}
   barrahp: {fileID: 1418773870}
   barrahpene: {fileID: 145981217}
@@ -12860,31 +12869,127 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   borrar: 0
-  name: []
-  hp: []
-  mana: []
-  manarec: []
-  fuerza: []
-  elemento: []
-  nivel: []
-  bichosmios: []
-  exp: []
-  rango: []
-  clase: []
-  dinero: 0
-  hierbaomega: 0
-  licencia: []
-  tipohierba: []
-  pocvp: 0
-  pocvm: 0
-  pocvg: 0
-  pocmp: 0
-  pocmm: 0
-  pocmg: 0
-  limite: 10
   indexmax: 0
-  catalogo: []
   o: 0
+  datosserial:
+    rangoplay: 1
+    name: []
+    hp: []
+    mana: []
+    manarec: []
+    fuerza: []
+    elemento: []
+    nivel: []
+    bichosmios: []
+    exp: []
+    rango: []
+    clase: []
+    dinero: 0
+    hierbaomega: 0
+    licencia:
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    tipohierba:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    limite: 5
+    indexmax: 0
+    catalogo: []
+    names: 
+    hps: 0
+    manas: 0
+    manarecs: 0
+    fuerzas: 0
+    elementos: 
+    nivels: 0
+    clases: 0
+    razas: 
+    rangors: 0
+    exps: 0
+    rangoene: 0
+    nivelene: 0
+    hpene: 0
+    manaene: 0
+    manarecene: 0
+    fuerzaene: 0
+    elementoene: 
+    claseene: 0
+    razaene: 
+    nameene: 
+    varsel1: 0
+    client: 0
+    nameinter: 
+    hpinter: 0
+    manainter: 0
+    manarecinter: 0
+    fuerzainter: 0
+    elementointer: 
+    nivelinter: 0
+    claseinter: 0
+    razainter: 
+    rangorinter: 0
+    expinter: 0
+    nameinter2: 
+    hpinter2: 0
+    manainter2: 0
+    manarecinter2: 0
+    fuerzainter2: 0
+    elementointer2: 
+    nivelinter2: 0
+    claseinter2: 0
+    razainter2: 
+    rangorinter2: 0
+    expinter2: 0
+    plat: game3d
+    hierbau: 1
+    bichocaza: 
+    namer: 
+    hpr: 0
+    manar: 0
+    manarecr: 0
+    fuerzar: 0
+    elementor: 
+    nivelr: 0
+    claser: 0
+    razar: 
+    rangorr: 0
+  repath: 
 --- !u!114 &2052948604
 MonoBehaviour:
   m_ObjectHideFlags: 0

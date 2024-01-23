@@ -372,7 +372,7 @@ public class disparoshitfloor : MonoBehaviour
             {temp += 1 * Time.deltaTime;}
             }
         }
-        if(enemigo.hp <=  0 && vez1 == false)
+        if(enemigo.hp <  1 && vez1 == false)
         {
             cuenta_.gameObject.SetActive(true);
             caza_.gameObject.SetActive(false);
@@ -411,7 +411,7 @@ public class disparoshitfloor : MonoBehaviour
             if(hierbatipo == 2){inv.datosserial.nivelr = (int)Random.Range(1,3);}
             if(hierbatipo == 3){inv.datosserial.nivelr = (int)Random.Range(1,4);}
             inv.datosserial.claser = hierbatipo;
-            PlayerPrefs.SetString("razar", "skybird");
+            inv.datosserial.razar = "skybird";
             inv.datosserial.rangorr = rango;
             inv.guardar();
             }
@@ -428,7 +428,7 @@ public class disparoshitfloor : MonoBehaviour
             if(hierbatipo == 2){inv.datosserial.nivelr = (int)Random.Range(1,3);}
             if(hierbatipo == 3){inv.datosserial.nivelr = (int)Random.Range(1,4);}
             inv.datosserial.claser = hierbatipo;
-            PlayerPrefs.SetString("razar", "shitfloor");
+            inv.datosserial.razar = "shitfloor";
             inv.datosserial.rangorr = rango;
             inv.guardar();
             }
@@ -445,7 +445,7 @@ public class disparoshitfloor : MonoBehaviour
             if(hierbatipo == 2){inv.datosserial.nivelr = (int)Random.Range(1,3);}
             if(hierbatipo == 3){inv.datosserial.nivelr = (int)Random.Range(1,4);}
             inv.datosserial.claser = hierbatipo;
-            PlayerPrefs.SetString("razar", "topo topo");
+            inv.datosserial.razar = "topo topo";
             inv.datosserial.rangorr = rango;
             inv.guardar();
             }
@@ -463,7 +463,7 @@ public class disparoshitfloor : MonoBehaviour
             if(hierbatipo == 2){inv.datosserial.nivelr = (int)Random.Range(1,3);}
             if(hierbatipo == 3){inv.datosserial.nivelr = (int)Random.Range(1,4);}
             inv.datosserial.claser = hierbatipo;
-            PlayerPrefs.SetString("razar", "dragonron");
+            inv.datosserial.razar = "dragonron";
             inv.datosserial.rangorr = rango;
             inv.guardar();
             }
@@ -480,7 +480,7 @@ public class disparoshitfloor : MonoBehaviour
             if(hierbatipo == 2){inv.datosserial.nivelr = (int)Random.Range(1,3);}
             if(hierbatipo == 3){inv.datosserial.nivelr = (int)Random.Range(1,4);}
             inv.datosserial.claser = hierbatipo;
-            PlayerPrefs.SetString("razar", "eleph-ant");
+            inv.datosserial.razar = "eleph-ant";
             inv.datosserial.rangorr = rango;
             inv.guardar();
             }
@@ -497,7 +497,7 @@ public class disparoshitfloor : MonoBehaviour
             if(hierbatipo == 2){inv.datosserial.nivelr = (int)Random.Range(1,3);}
             if(hierbatipo == 3){inv.datosserial.nivelr = (int)Random.Range(1,4);}
             inv.datosserial.claser = hierbatipo;
-            PlayerPrefs.SetString("razar", "roboerto");
+            inv.datosserial.razar = "roboerto";
             inv.datosserial.rangorr = rango;
             inv.guardar();
             }
@@ -514,7 +514,7 @@ public class disparoshitfloor : MonoBehaviour
             if(hierbatipo == 2){inv.datosserial.nivelr = (int)Random.Range(1,3);}
             if(hierbatipo == 3){inv.datosserial.nivelr = (int)Random.Range(1,4);}
             inv.datosserial.claser = hierbatipo;
-            PlayerPrefs.SetString("razar", "tufo");
+            inv.datosserial.razar = "tufo";
             inv.datosserial.rangorr = rango;
             inv.guardar();
             }
@@ -532,7 +532,7 @@ public class disparoshitfloor : MonoBehaviour
             if(hierbatipo == 2){inv.datosserial.nivelr = (int)Random.Range(1,3);}
             if(hierbatipo == 3){inv.datosserial.nivelr = (int)Random.Range(1,4);}
             inv.datosserial.claser = hierbatipo;
-            PlayerPrefs.SetString("razar", "antidog");
+            inv.datosserial.razar = "antidog";
             inv.datosserial.rangorr = rango;
             inv.guardar();
             }
@@ -549,7 +549,7 @@ public class disparoshitfloor : MonoBehaviour
             if(hierbatipo == 2){inv.datosserial.nivelr = (int)Random.Range(1,3);}
             if(hierbatipo == 3){inv.datosserial.nivelr = (int)Random.Range(1,4);}
             inv.datosserial.claser = hierbatipo;
-            PlayerPrefs.SetString("razar", "cazafantasmas");
+            inv.datosserial.razar = "cazafantasmas";
             inv.datosserial.rangorr = rango;
             inv.guardar();
             }
@@ -566,7 +566,7 @@ public class disparoshitfloor : MonoBehaviour
             if(hierbatipo == 2){inv.datosserial.nivelr = (int)Random.Range(1,3);}
             if(hierbatipo == 3){inv.datosserial.nivelr = (int)Random.Range(1,4);}
             inv.datosserial.claser = hierbatipo;
-            PlayerPrefs.SetString("razar", "rabmon");
+            inv.datosserial.razar = "rabmon";
             inv.datosserial.rangorr = rango;
             inv.guardar();
             }
@@ -583,7 +583,7 @@ public class disparoshitfloor : MonoBehaviour
             if(hierbatipo == 2){inv.datosserial.nivelr = (int)Random.Range(1,3);}
             if(hierbatipo == 3){inv.datosserial.nivelr = (int)Random.Range(1,4);}
             inv.datosserial.claser = hierbatipo;
-            PlayerPrefs.SetString("razar", "vivodado");
+            inv.datosserial.razar = "vivodado";
             inv.datosserial.rangorr = rango;
             inv.guardar();
             }
@@ -601,7 +601,7 @@ public class disparoshitfloor : MonoBehaviour
             if(hierbatipo == 2){inv.datosserial.nivelr = (int)Random.Range(1,3);}
             if(hierbatipo == 3){inv.datosserial.nivelr = (int)Random.Range(1,4);}
             inv.datosserial.claser = hierbatipo;
-            PlayerPrefs.SetString("razar", "livedish");
+            inv.datosserial.razar = "livedish";
             inv.datosserial.rangorr = rango;
             inv.guardar();
             }
@@ -618,7 +618,7 @@ public class disparoshitfloor : MonoBehaviour
             if(hierbatipo == 2){inv.datosserial.nivelr = (int)Random.Range(1,3);}
             if(hierbatipo == 3){inv.datosserial.nivelr = (int)Random.Range(1,4);}
             inv.datosserial.claser = hierbatipo;
-            PlayerPrefs.SetString("razar", "rose dragon");
+            inv.datosserial.razar = "rose dragon";
             inv.datosserial.rangorr = rango;
             inv.guardar();
             }
@@ -635,7 +635,7 @@ public class disparoshitfloor : MonoBehaviour
             if(hierbatipo == 2){inv.datosserial.nivelr = (int)Random.Range(1,3);}
             if(hierbatipo == 3){inv.datosserial.nivelr = (int)Random.Range(1,4);}
             inv.datosserial.claser = hierbatipo;
-            PlayerPrefs.SetString("razar", "sharkman");
+            inv.datosserial.razar = "sharkman";
             inv.datosserial.rangorr = rango;
             inv.guardar();
             }
@@ -652,7 +652,7 @@ public class disparoshitfloor : MonoBehaviour
             if(hierbatipo == 2){inv.datosserial.nivelr = (int)Random.Range(1,3);}
             if(hierbatipo == 3){inv.datosserial.nivelr = (int)Random.Range(1,4);}
             inv.datosserial.claser = hierbatipo;
-            PlayerPrefs.SetString("razar", "spider");
+            inv.datosserial.razar = "spider";
             inv.datosserial.rangorr = rango;
             inv.guardar();
             }
@@ -670,7 +670,7 @@ public class disparoshitfloor : MonoBehaviour
             if(hierbatipo == 2){inv.datosserial.nivelr = (int)Random.Range(1,3);}
             if(hierbatipo == 3){inv.datosserial.nivelr = (int)Random.Range(1,4);}
             inv.datosserial.claser = hierbatipo;
-            PlayerPrefs.SetString("razar", "algosaurio");
+            inv.datosserial.razar = "algosaurio";
             inv.datosserial.rangorr = rango;
             inv.guardar();
             }
@@ -687,7 +687,7 @@ public class disparoshitfloor : MonoBehaviour
             if(hierbatipo == 2){inv.datosserial.nivelr = (int)Random.Range(1,3);}
             if(hierbatipo == 3){inv.datosserial.nivelr = (int)Random.Range(1,4);}
             inv.datosserial.claser = hierbatipo;
-            PlayerPrefs.SetString("razar", "dogtable");
+            inv.datosserial.razar = "dogtable";
             inv.datosserial.rangorr = rango;
             inv.guardar();
             }
@@ -704,7 +704,7 @@ public class disparoshitfloor : MonoBehaviour
             if(hierbatipo == 2){inv.datosserial.nivelr = (int)Random.Range(1,3);}
             if(hierbatipo == 3){inv.datosserial.nivelr = (int)Random.Range(1,4);}
             inv.datosserial.claser = hierbatipo;
-            PlayerPrefs.SetString("razar", "friend");
+            inv.datosserial.razar = "friend";
             inv.datosserial.rangorr = rango;
             inv.guardar();
             }
@@ -721,7 +721,7 @@ public class disparoshitfloor : MonoBehaviour
             if(hierbatipo == 2){inv.datosserial.nivelr = (int)Random.Range(1,3);}
             if(hierbatipo == 3){inv.datosserial.nivelr = (int)Random.Range(1,4);}
             inv.datosserial.claser = hierbatipo;
-            PlayerPrefs.SetString("razar", "trashrat");
+            inv.datosserial.razar = "trashrat";
             inv.datosserial.rangorr = rango;
             inv.guardar();
             }
@@ -740,7 +740,7 @@ public class disparoshitfloor : MonoBehaviour
             if(hierbatipo == 2){inv.datosserial.nivelr = (int)Random.Range(1,3);}
             if(hierbatipo == 3){inv.datosserial.nivelr = (int)Random.Range(1,4);}
             inv.datosserial.claser = hierbatipo;
-            PlayerPrefs.SetString("razar", "aghostin");
+            inv.datosserial.razar = "aghostin";
             inv.datosserial.rangorr = rango;
             inv.guardar();
             }
@@ -757,7 +757,7 @@ public class disparoshitfloor : MonoBehaviour
             if(hierbatipo == 2){inv.datosserial.nivelr = (int)Random.Range(1,3);}
             if(hierbatipo == 3){inv.datosserial.nivelr = (int)Random.Range(1,4);}
             inv.datosserial.claser = hierbatipo;
-            PlayerPrefs.SetString("razar", "heavy devil");
+            inv.datosserial.razar = "heavy devil";
             inv.datosserial.rangorr = rango;
             inv.guardar();
             }
@@ -774,7 +774,7 @@ public class disparoshitfloor : MonoBehaviour
             if(hierbatipo == 2){inv.datosserial.nivelr = (int)Random.Range(1,3);}
             if(hierbatipo == 3){inv.datosserial.nivelr = (int)Random.Range(1,4);}
             inv.datosserial.claser = hierbatipo;
-            PlayerPrefs.SetString("razar", "king slug");
+            inv.datosserial.razar = "king slug";
             inv.datosserial.rangorr = rango;
             inv.guardar();
             }
@@ -791,7 +791,7 @@ public class disparoshitfloor : MonoBehaviour
             if(hierbatipo == 2){inv.datosserial.nivelr = (int)Random.Range(1,3);}
             if(hierbatipo == 3){inv.datosserial.nivelr = (int)Random.Range(1,4);}
             inv.datosserial.claser = hierbatipo;
-            PlayerPrefs.SetString("razar", "pollovion");
+            inv.datosserial.razar = "pollovion";
             inv.datosserial.rangorr = rango;
             inv.guardar();
             }
@@ -809,7 +809,7 @@ public class disparoshitfloor : MonoBehaviour
             if(hierbatipo == 2){inv.datosserial.nivelr = (int)Random.Range(1,3);}
             if(hierbatipo == 3){inv.datosserial.nivelr = (int)Random.Range(1,4);}
             inv.datosserial.claser = hierbatipo;
-            PlayerPrefs.SetString("razar", "sadistic ant");
+            inv.datosserial.razar = "sadistic ant";
             inv.datosserial.rangorr = rango;
             inv.guardar();
             }
@@ -826,7 +826,7 @@ public class disparoshitfloor : MonoBehaviour
             if(hierbatipo == 2){inv.datosserial.nivelr = (int)Random.Range(1,3);}
             if(hierbatipo == 3){inv.datosserial.nivelr = (int)Random.Range(1,4);}
             inv.datosserial.claser = hierbatipo;
-            PlayerPrefs.SetString("razar", "flanerio");
+            inv.datosserial.razar = "flanerio";
             inv.datosserial.rangorr = rango;
             inv.guardar();
             }
@@ -843,7 +843,7 @@ public class disparoshitfloor : MonoBehaviour
             if(hierbatipo == 2){inv.datosserial.nivelr = (int)Random.Range(1,3);}
             if(hierbatipo == 3){inv.datosserial.nivelr = (int)Random.Range(1,4);}
             inv.datosserial.claser = hierbatipo;
-            PlayerPrefs.SetString("razar", "flyera");
+            inv.datosserial.razar = "flyera";
             inv.datosserial.rangorr = rango;
             inv.guardar();
             }
@@ -860,7 +860,7 @@ public class disparoshitfloor : MonoBehaviour
             if(hierbatipo == 2){inv.datosserial.nivelr = (int)Random.Range(1,3);}
             if(hierbatipo == 3){inv.datosserial.nivelr = (int)Random.Range(1,4);}
             inv.datosserial.claser = hierbatipo;
-            PlayerPrefs.SetString("razar", "gunman");
+            inv.datosserial.razar = "gunman";
             inv.datosserial.rangorr = rango;
             inv.guardar();
             }
@@ -878,7 +878,7 @@ public class disparoshitfloor : MonoBehaviour
             if(hierbatipo == 2){inv.datosserial.nivelr = (int)Random.Range(1,3);}
             if(hierbatipo == 3){inv.datosserial.nivelr = (int)Random.Range(1,4);}
             inv.datosserial.claser = hierbatipo;
-            PlayerPrefs.SetString("razar", "craneovil");
+            inv.datosserial.razar = "craneovil";
             inv.datosserial.rangorr = rango;
             inv.guardar();
             }
@@ -895,7 +895,7 @@ public class disparoshitfloor : MonoBehaviour
             if(hierbatipo == 2){inv.datosserial.nivelr = (int)Random.Range(1,3);}
             if(hierbatipo == 3){inv.datosserial.nivelr = (int)Random.Range(1,4);}
             inv.datosserial.claser = hierbatipo;
-            PlayerPrefs.SetString("razar", "dark knight");
+            inv.datosserial.razar = "dark knight";
             inv.datosserial.rangorr = rango;
             inv.guardar();
             }
@@ -912,7 +912,7 @@ public class disparoshitfloor : MonoBehaviour
             if(hierbatipo == 2){inv.datosserial.nivelr = (int)Random.Range(1,3);}
             if(hierbatipo == 3){inv.datosserial.nivelr = (int)Random.Range(1,4);}
             inv.datosserial.claser = hierbatipo;
-            PlayerPrefs.SetString("razar", "lizardo");
+            inv.datosserial.razar = "lizardo";
             inv.datosserial.rangorr = rango;
             inv.guardar();
             }
@@ -929,7 +929,7 @@ public class disparoshitfloor : MonoBehaviour
             if(hierbatipo == 2){inv.datosserial.nivelr = (int)Random.Range(1,3);}
             if(hierbatipo == 3){inv.datosserial.nivelr = (int)Random.Range(1,4);}
             inv.datosserial.claser = hierbatipo;
-            PlayerPrefs.SetString("razar", "trepillo");
+            inv.datosserial.razar = "trepillo";
             inv.datosserial.rangorr = rango;
             inv.guardar();
             }
@@ -947,7 +947,7 @@ public class disparoshitfloor : MonoBehaviour
             if(hierbatipo == 2){inv.datosserial.nivelr = (int)Random.Range(1,3);}
             if(hierbatipo == 3){inv.datosserial.nivelr = (int)Random.Range(1,4);}
             inv.datosserial.claser = hierbatipo;
-            PlayerPrefs.SetString("razar", "beestosa");
+            inv.datosserial.razar = "beestosa";
             inv.datosserial.rangorr = rango;
             inv.guardar();
             }
@@ -964,7 +964,7 @@ public class disparoshitfloor : MonoBehaviour
             if(hierbatipo == 2){inv.datosserial.nivelr = (int)Random.Range(1,3);}
             if(hierbatipo == 3){inv.datosserial.nivelr = (int)Random.Range(1,4);}
             inv.datosserial.claser = hierbatipo;
-            PlayerPrefs.SetString("razar", "fenix bug");
+            inv.datosserial.razar = "fenix bug";
             inv.datosserial.rangorr = rango;
             inv.guardar();
             }
@@ -981,7 +981,7 @@ public class disparoshitfloor : MonoBehaviour
             if(hierbatipo == 2){inv.datosserial.nivelr = (int)Random.Range(1,3);}
             if(hierbatipo == 3){inv.datosserial.nivelr = (int)Random.Range(1,4);}
             inv.datosserial.claser = hierbatipo;
-            PlayerPrefs.SetString("razar", "kraken");
+            inv.datosserial.razar = "kraken";
             inv.datosserial.rangorr = rango;
             inv.guardar();
             }
@@ -998,7 +998,7 @@ public class disparoshitfloor : MonoBehaviour
             if(hierbatipo == 2){inv.datosserial.nivelr = (int)Random.Range(1,3);}
             if(hierbatipo == 3){inv.datosserial.nivelr = (int)Random.Range(1,4);}
             inv.datosserial.claser = hierbatipo;
-            PlayerPrefs.SetString("razar", "pesadilla");
+            inv.datosserial.razar = "pesadilla";
             inv.datosserial.rangorr = rango;
             inv.guardar();
             }
@@ -1016,7 +1016,7 @@ public class disparoshitfloor : MonoBehaviour
             if(hierbatipo == 2){inv.datosserial.nivelr = (int)Random.Range(1,3);}
             if(hierbatipo == 3){inv.datosserial.nivelr = (int)Random.Range(1,4);}
             inv.datosserial.claser = hierbatipo;
-            PlayerPrefs.SetString("razar", "bigfat");
+            inv.datosserial.razar = "bigfat";
             inv.datosserial.rangorr = rango;
             inv.guardar();
             }
@@ -1033,7 +1033,7 @@ public class disparoshitfloor : MonoBehaviour
             if(hierbatipo == 2){inv.datosserial.nivelr = (int)Random.Range(1,3);}
             if(hierbatipo == 3){inv.datosserial.nivelr = (int)Random.Range(1,4);}
             inv.datosserial.claser = hierbatipo;
-            PlayerPrefs.SetString("razar", "king dragon");
+            inv.datosserial.razar = "king dragon";
             inv.datosserial.rangorr = rango;
             inv.guardar();
             }
@@ -1050,7 +1050,7 @@ public class disparoshitfloor : MonoBehaviour
             if(hierbatipo == 2){inv.datosserial.nivelr = (int)Random.Range(1,3);}
             if(hierbatipo == 3){inv.datosserial.nivelr = (int)Random.Range(1,4);}
             inv.datosserial.claser = hierbatipo;
-            PlayerPrefs.SetString("razar", "mirror-mirror");
+            inv.datosserial.razar = "mirror-mirror";
             inv.datosserial.rangorr = rango;
             inv.guardar();
             }
@@ -1067,12 +1067,12 @@ public class disparoshitfloor : MonoBehaviour
             if(hierbatipo == 2){inv.datosserial.nivelr = (int)Random.Range(1,3);}
             if(hierbatipo == 3){inv.datosserial.nivelr = (int)Random.Range(1,4);}
             inv.datosserial.claser = hierbatipo;
-            PlayerPrefs.SetString("razar", "cyberpinguino");
+            inv.datosserial.razar = "cyberpinguino";
             inv.datosserial.rangorr = rango;
             inv.guardar();
             }
         }
-        if( hp <=  0 && vez1 == false)
+        if( hp <  1 && vez1 == false)
         {
             cuenta_.gameObject.SetActive(true);
             caza_.gameObject.SetActive(false);
@@ -1085,7 +1085,7 @@ public class disparoshitfloor : MonoBehaviour
         {
             SceneManager.LoadScene("menu");
         }
-        if (comienzo == false && enemigo.hp <=  0&& temp4 > 3 )
+        if (comienzo == false && enemigo.hp <  1 && temp4 > 3 )
         {
             SceneManager.LoadScene("obtener");
         }

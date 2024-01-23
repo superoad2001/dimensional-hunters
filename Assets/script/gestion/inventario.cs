@@ -116,6 +116,13 @@ public class inventario : MonoBehaviour
 
 
     }
+    void Start()
+    {
+        cargar();
+
+
+
+    }
 
     // Update is called once per frame
     void Update()

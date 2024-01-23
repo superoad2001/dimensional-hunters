@@ -233,15 +233,15 @@ public class obtenermenu : MonoBehaviour
 
 
         
-        hp = inv.datosserial.hps;
-        mana = inv.datosserial.manas;
-        manarec = inv.datosserial.manarecs;
-        fuerza = inv.datosserial.fuerzas;
-        elemento =  inv.datosserial.elementos;
-        nivel = inv.datosserial.nivels;
-        clase = inv.datosserial.clases;
-        raza = inv.datosserial.razas;
-        rangor = inv.datosserial.rangors;
+        hp = inv.datosserial.hpr;
+        mana = inv.datosserial.manar;
+        manarec = inv.datosserial.manarecr;
+        fuerza = inv.datosserial.fuerzar;
+        elemento =  inv.datosserial.elementor;
+        nivel = inv.datosserial.nivelr;
+        clase = inv.datosserial.claser;
+        raza = inv.datosserial.razar;
+        rangor = inv.datosserial.rangorr;
         name = raza;
 
         modelos0();

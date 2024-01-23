@@ -7136,7 +7136,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1140, y: -500}
+  m_AnchoredPosition: {x: 936, y: -500}
   m_SizeDelta: {x: 879.0052, y: 189.70007}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1468814461
@@ -7927,31 +7927,127 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   borrar: 0
-  name: []
-  hp: []
-  mana: []
-  manarec: []
-  fuerza: []
-  elemento: []
-  nivel: []
-  bichosmios: []
-  exp: []
-  rango: []
-  clase: []
-  dinero: 0
-  hierbaomega: 0
-  licencia: []
-  tipohierba: []
-  pocvp: 0
-  pocvm: 0
-  pocvg: 0
-  pocmp: 0
-  pocmm: 0
-  pocmg: 0
-  limite: 10
   indexmax: 0
-  catalogo: []
   o: 0
+  datosserial:
+    rangoplay: 1
+    name: []
+    hp: []
+    mana: []
+    manarec: []
+    fuerza: []
+    elemento: []
+    nivel: []
+    bichosmios: []
+    exp: []
+    rango: []
+    clase: []
+    dinero: 0
+    hierbaomega: 0
+    licencia:
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    tipohierba:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    limite: 5
+    indexmax: 0
+    catalogo: []
+    names: 
+    hps: 0
+    manas: 0
+    manarecs: 0
+    fuerzas: 0
+    elementos: 
+    nivels: 0
+    clases: 0
+    razas: 
+    rangors: 0
+    exps: 0
+    rangoene: 0
+    nivelene: 0
+    hpene: 0
+    manaene: 0
+    manarecene: 0
+    fuerzaene: 0
+    elementoene: 
+    claseene: 0
+    razaene: 
+    nameene: 
+    varsel1: 0
+    client: 0
+    nameinter: 
+    hpinter: 0
+    manainter: 0
+    manarecinter: 0
+    fuerzainter: 0
+    elementointer: 
+    nivelinter: 0
+    claseinter: 0
+    razainter: 
+    rangorinter: 0
+    expinter: 0
+    nameinter2: 
+    hpinter2: 0
+    manainter2: 0
+    manarecinter2: 0
+    fuerzainter2: 0
+    elementointer2: 
+    nivelinter2: 0
+    claseinter2: 0
+    razainter2: 
+    rangorinter2: 0
+    expinter2: 0
+    plat: game3d
+    hierbau: 1
+    bichocaza: 
+    namer: 
+    hpr: 0
+    manar: 0
+    manarecr: 0
+    fuerzar: 0
+    elementor: 
+    nivelr: 0
+    claser: 0
+    razar: 
+    rangorr: 0
+  repath: 
 --- !u!114 &1742424956
 MonoBehaviour:
   m_ObjectHideFlags: 0

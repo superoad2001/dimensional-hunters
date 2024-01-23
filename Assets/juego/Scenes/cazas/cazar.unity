@@ -486,6 +486,16 @@ MonoBehaviour:
   arcore: {fileID: 573580429}
   game3d: {fileID: 2031881678}
   game3dtact: {fileID: 1490069907}
+  boton1: {fileID: 0}
+  boton2: {fileID: 0}
+  boton3: {fileID: 0}
+  boton4: {fileID: 0}
+  boton5: {fileID: 0}
+  boton6: {fileID: 0}
+  boton7: {fileID: 0}
+  boton8: {fileID: 0}
+  boton9: {fileID: 0}
+  boton10: {fileID: 0}
 --- !u!4 &297601676
 Transform:
   m_ObjectHideFlags: 0
@@ -2601,7 +2611,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1456351307
 RectTransform:
   m_ObjectHideFlags: 0

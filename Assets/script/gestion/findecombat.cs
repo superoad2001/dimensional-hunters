@@ -23,6 +23,9 @@ public class findecombat : MonoBehaviour
         o = (int)inv.datosserial.varsel1;
         rango2 = (int)inv.datosserial.rangoene;
 
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+
         hptt.text = "vit : "+inv.datosserial.hp[o];
         manat.text = "sta : "+inv.datosserial.mana[o];
         manarect.text = "rec : "+inv.datosserial.manarec[o].ToString("F2");

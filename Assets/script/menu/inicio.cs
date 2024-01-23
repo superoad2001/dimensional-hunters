@@ -39,10 +39,11 @@ public class inicio : MonoBehaviour
                 inv.datosserial.mana.Add(9999);
                 inv.datosserial.manarec.Add(1);
                 inv.datosserial.fuerza.Add(1);
-                inv.datosserial.elemento.Add("ninguno");
+                inv.datosserial.elemento.Add("comun rango: 1");
                 inv.datosserial.nivel.Add(1);
                 inv.datosserial.rango.Add(1);
                 inv.datosserial.clase.Add(1);
+                inv.datosserial.exp.Add(0);
                 inv.datosserial.bichosmios.Add("madcat");
                 inv.datosserial.indexmax = inv.datosserial.name.Count;
                 inv.guardar();

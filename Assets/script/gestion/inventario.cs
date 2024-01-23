@@ -92,6 +92,7 @@ public class inventario : MonoBehaviour
             string datosinventario = JsonUtility.ToJson("");
             File.WriteAllText(path,datosinventario);
         }
+        cargar();
         datosbase();
         
     }
@@ -132,7 +133,7 @@ public class inventario : MonoBehaviour
     public void _borrar()
     {   
         
-        for(var i = o; i < datosserial.name.Count - 1; i++)
+        for(var i = o; i < datosserial.name.Count -1; i++)
         {
             Debug.Log(i);
             datosserial.name[i] = datosserial.name[i+1];

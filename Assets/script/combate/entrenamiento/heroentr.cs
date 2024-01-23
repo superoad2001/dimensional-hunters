@@ -335,14 +335,13 @@ public class heroentr : MonoBehaviour
             dano1 = dano1cat;
             dano2 = dano2cat;
         }
-
         //2
         if(bicho == "dragonron")
         {
             
-            madcat1.SetActive(true);
+            dragonron.SetActive(true);
             ev1.SetActive(true);
-            madcat1.name = "dragonron";
+            dragonron.name = "dragonron";
             
             baseanim.runtimeAnimatorController = dragonronanim;
             rapsound = rapsoundcat;
@@ -355,9 +354,9 @@ public class heroentr : MonoBehaviour
         }
         if(bicho == "eleph-ant")
         {
-            shitfloor.SetActive(true);
+            elephant.SetActive(true);
             ev1.SetActive(true);
-            shitfloor.name = "eleph-ant";
+            elephant.name = "eleph-ant";
             
             baseanim.runtimeAnimatorController = elephantanim;
 
@@ -370,9 +369,9 @@ public class heroentr : MonoBehaviour
         }
         if(bicho == "roboerto")
         {
-            topo.SetActive(true);
+            roboerto.SetActive(true);
             ev1.SetActive(true);
-            topo.name = "roboerto";
+            roboerto.name = "roboerto";
             
             baseanim.runtimeAnimatorController = roboertoanim;
             rapsound = rapsoundcat;
@@ -384,9 +383,9 @@ public class heroentr : MonoBehaviour
         }
         if(bicho == "tufo")
         {
-            skybird.SetActive(true);
+            tufo.SetActive(true);
             ev1.SetActive(true);
-            skybird.name = "tufo";
+            tufo.name = "tufo";
             
             baseanim.runtimeAnimatorController = tufoanim;
             rapsound = rapsoundcat;
@@ -400,9 +399,9 @@ public class heroentr : MonoBehaviour
         if(bicho == "antidog")
         {
             
-            madcat1.SetActive(true);
+            antidog.SetActive(true);
             ev1.SetActive(true);
-            madcat1.name = "antidog";
+            antidog.name = "antidog";
             
             baseanim.runtimeAnimatorController = antidoganim;
             rapsound = rapsoundcat;
@@ -415,9 +414,9 @@ public class heroentr : MonoBehaviour
         }
         if(bicho == "cazafantasmas")
         {
-            shitfloor.SetActive(true);
+            cazafantasmas.SetActive(true);
             ev1.SetActive(true);
-            shitfloor.name = "cazafantasmas";
+            cazafantasmas.name = "cazafantasmas";
             
             baseanim.runtimeAnimatorController = cazafantasmasanim;
 
@@ -430,9 +429,9 @@ public class heroentr : MonoBehaviour
         }
         if(bicho == "rabmon")
         {
-            topo.SetActive(true);
+            rabmon.SetActive(true);
             ev1.SetActive(true);
-            topo.name = "rabmon";
+            rabmon.name = "rabmon";
             
             baseanim.runtimeAnimatorController = rabmonanim;
             rapsound = rapsoundcat;
@@ -444,9 +443,9 @@ public class heroentr : MonoBehaviour
         }
         if(bicho == "vivodado")
         {
-            skybird.SetActive(true);
+            vivodado.SetActive(true);
             ev1.SetActive(true);
-            skybird.name = "vivodado";
+            vivodado.name = "vivodado";
             
             baseanim.runtimeAnimatorController = vivodadoanim;
             rapsound = rapsoundcat;
@@ -460,9 +459,9 @@ public class heroentr : MonoBehaviour
         if(bicho == "livedish")
         {
             
-            madcat1.SetActive(true);
+            livedish.SetActive(true);
             ev1.SetActive(true);
-            madcat1.name = "livedish";
+            livedish.name = "livedish";
             
             baseanim.runtimeAnimatorController = livedishanim;
             rapsound = rapsoundcat;
@@ -475,9 +474,9 @@ public class heroentr : MonoBehaviour
         }
         if(bicho == "rose dragon")
         {
-            shitfloor.SetActive(true);
+            rosedragon.SetActive(true);
             ev1.SetActive(true);
-            shitfloor.name = "rosedragon";
+            rosedragon.name = "rosedragon";
             
             baseanim.runtimeAnimatorController = rosedragonanim;
 
@@ -490,9 +489,9 @@ public class heroentr : MonoBehaviour
         }
         if(bicho == "sharkman")
         {
-            topo.SetActive(true);
+            sharkman.SetActive(true);
             ev1.SetActive(true);
-            topo.name = "sharkman";
+            sharkman.name = "sharkman";
             
             baseanim.runtimeAnimatorController = sharkmananim;
             rapsound = rapsoundcat;
@@ -504,9 +503,9 @@ public class heroentr : MonoBehaviour
         }
         if(bicho == "spider")
         {
-            skybird.SetActive(true);
+            spider.SetActive(true);
             ev1.SetActive(true);
-            skybird.name = "spider";
+            spider.name = "spider";
             
             baseanim.runtimeAnimatorController = spideranim;
             rapsound = rapsoundcat;
@@ -520,9 +519,9 @@ public class heroentr : MonoBehaviour
         if(bicho == "algosaurio")
         {
             
-            madcat1.SetActive(true);
+            algosaurio.SetActive(true);
             ev1.SetActive(true);
-            madcat1.name = "algosaurio";
+            algosaurio.name = "algosaurio";
             
             baseanim.runtimeAnimatorController = algosaurioanim;
             rapsound = rapsoundcat;
@@ -535,9 +534,9 @@ public class heroentr : MonoBehaviour
         }
         if(bicho == "dogtable")
         {
-            shitfloor.SetActive(true);
+            dogtable.SetActive(true);
             ev1.SetActive(true);
-            shitfloor.name = "dogtable";
+            dogtable.name = "dogtable";
             
             baseanim.runtimeAnimatorController = dogtableanim;
 
@@ -550,9 +549,9 @@ public class heroentr : MonoBehaviour
         }
         if(bicho == "friend")
         {
-            topo.SetActive(true);
+            dogtable.SetActive(true);
             ev1.SetActive(true);
-            topo.name = "friend";
+            dogtable.name = "friend";
             
             baseanim.runtimeAnimatorController = friendanim;
             rapsound = rapsoundcat;
@@ -564,9 +563,9 @@ public class heroentr : MonoBehaviour
         }
         if(bicho == "trashrat")
         {
-            skybird.SetActive(true);
+            trashrat.SetActive(true);
             ev1.SetActive(true);
-            skybird.name = "trashrat";
+            trashrat.name = "trashrat";
             
             baseanim.runtimeAnimatorController = trashratanim;
             rapsound = rapsoundcat;
@@ -584,9 +583,9 @@ public class heroentr : MonoBehaviour
         if(bicho == "aghostin")
         {
             
-            madcat1.SetActive(true);
+            ghost.SetActive(true);
             ev1.SetActive(true);
-            madcat1.name = "aghostin";
+            ghost.name = "aghostin";
             
             baseanim.runtimeAnimatorController = ghostanim;
             rapsound = rapsoundcat;
@@ -599,9 +598,9 @@ public class heroentr : MonoBehaviour
         }
         if(bicho == "heavy devil")
         {
-            shitfloor.SetActive(true);
+            heavydevil.SetActive(true);
             ev1.SetActive(true);
-            shitfloor.name = "heavydevil";
+            heavydevil.name = "heavydevil";
             
             baseanim.runtimeAnimatorController = heavydevilanim;
 
@@ -614,9 +613,9 @@ public class heroentr : MonoBehaviour
         }
         if(bicho == "king slug")
         {
-            topo.SetActive(true);
+            kingslug.SetActive(true);
             ev1.SetActive(true);
-            topo.name = "kingslug";
+            kingslug.name = "kingslug";
             
             baseanim.runtimeAnimatorController = kingsluganim;
             rapsound = rapsoundcat;
@@ -628,9 +627,9 @@ public class heroentr : MonoBehaviour
         }
         if(bicho == "pollovion")
         {
-            skybird.SetActive(true);
+            pollovion.SetActive(true);
             ev1.SetActive(true);
-            skybird.name = "pollovion";
+            pollovion.name = "pollovion";
             
             baseanim.runtimeAnimatorController = pollovionanim;
             rapsound = rapsoundcat;
@@ -644,9 +643,9 @@ public class heroentr : MonoBehaviour
         if(bicho == "sadistic ant")
         {
             
-            madcat1.SetActive(true);
+            ant.SetActive(true);
             ev1.SetActive(true);
-            madcat1.name = "sadisticant";
+            ant.name = "sadisticant";
             
             baseanim.runtimeAnimatorController = antanim;
             rapsound = rapsoundcat;
@@ -659,9 +658,9 @@ public class heroentr : MonoBehaviour
         }
         if(bicho == "flanerio")
         {
-            shitfloor.SetActive(true);
+            flanerio.SetActive(true);
             ev1.SetActive(true);
-            shitfloor.name = "flanerio";
+            flanerio.name = "flanerio";
             
             baseanim.runtimeAnimatorController = flanerioanim;
 
@@ -674,9 +673,9 @@ public class heroentr : MonoBehaviour
         }
         if(bicho == "flyera")
         {
-            topo.SetActive(true);
+            flyera.SetActive(true);
             ev1.SetActive(true);
-            topo.name = "flyera";
+            flyera.name = "flyera";
             
             baseanim.runtimeAnimatorController = flyeraanim;
             rapsound = rapsoundcat;
@@ -688,9 +687,9 @@ public class heroentr : MonoBehaviour
         }
         if(bicho == "gunman")
         {
-            skybird.SetActive(true);
+            gunman.SetActive(true);
             ev1.SetActive(true);
-            skybird.name = "gunman";
+            gunman.name = "gunman";
             
             baseanim.runtimeAnimatorController = gunmananim;
             rapsound = rapsoundcat;
@@ -704,9 +703,9 @@ public class heroentr : MonoBehaviour
         if(bicho == "craneovil")
         {
             
-            madcat1.SetActive(true);
+            craneovil.SetActive(true);
             ev1.SetActive(true);
-            madcat1.name = "craneovil";
+            craneovil.name = "craneovil";
             
             baseanim.runtimeAnimatorController = craneovilanim;
             rapsound = rapsoundcat;
@@ -719,9 +718,9 @@ public class heroentr : MonoBehaviour
         }
         if(bicho == "dark knight")
         {
-            shitfloor.SetActive(true);
+            darkknight.SetActive(true);
             ev1.SetActive(true);
-            shitfloor.name = "darkknight";
+            darkknight.name = "darkknight";
             
             baseanim.runtimeAnimatorController = darkknightanim;
 
@@ -734,9 +733,9 @@ public class heroentr : MonoBehaviour
         }
         if(bicho == "lizardo")
         {
-            topo.SetActive(true);
+            lizardo.SetActive(true);
             ev1.SetActive(true);
-            topo.name = "lizardo";
+            lizardo.name = "lizardo";
             
             baseanim.runtimeAnimatorController = lizardoanim;
             rapsound = rapsoundcat;
@@ -748,9 +747,9 @@ public class heroentr : MonoBehaviour
         }
         if(bicho == "trepillo")
         {
-            skybird.SetActive(true);
+            trepillo.SetActive(true);
             ev1.SetActive(true);
-            skybird.name = "trepillo";
+            trepillo.name = "trepillo";
             
             baseanim.runtimeAnimatorController = trepilloanim;
             rapsound = rapsoundcat;
@@ -764,9 +763,9 @@ public class heroentr : MonoBehaviour
         if(bicho == "beestosa")
         {
             
-            madcat1.SetActive(true);
+            bee.SetActive(true);
             ev1.SetActive(true);
-            madcat1.name = "beestosa";
+            bee.name = "beestosa";
             
             baseanim.runtimeAnimatorController = beeanim;
             rapsound = rapsoundcat;
@@ -779,9 +778,9 @@ public class heroentr : MonoBehaviour
         }
         if(bicho == "fenix")
         {
-            shitfloor.SetActive(true);
+            fenix.SetActive(true);
             ev1.SetActive(true);
-            shitfloor.name = "fenixbug";
+            fenix.name = "fenixbug";
             
             baseanim.runtimeAnimatorController = fenixanim;
 
@@ -794,9 +793,9 @@ public class heroentr : MonoBehaviour
         }
         if(bicho == "kraken")
         {
-            topo.SetActive(true);
+            kraken.SetActive(true);
             ev1.SetActive(true);
-            topo.name = "kraken";
+            kraken.name = "kraken";
             
             baseanim.runtimeAnimatorController = krakenanim;
             rapsound = rapsoundcat;
@@ -808,9 +807,9 @@ public class heroentr : MonoBehaviour
         }
         if(bicho == "pesadilla")
         {
-            skybird.SetActive(true);
+            pesadilla.SetActive(true);
             ev1.SetActive(true);
-            skybird.name = "pesadilla";
+            pesadilla.name = "pesadilla";
             
             baseanim.runtimeAnimatorController = pesadillaanim;
             rapsound = rapsoundcat;
@@ -824,9 +823,9 @@ public class heroentr : MonoBehaviour
         if(bicho == "bigfat")
         {
             
-            madcat1.SetActive(true);
+            bigfat.SetActive(true);
             ev1.SetActive(true);
-            madcat1.name = "bigfat";
+            bigfat.name = "bigfat";
             
             baseanim.runtimeAnimatorController = bigfatanim;
             rapsound = rapsoundcat;
@@ -839,9 +838,9 @@ public class heroentr : MonoBehaviour
         }
         if(bicho == "king dragon")
         {
-            shitfloor.SetActive(true);
+            kingdragon.SetActive(true);
             ev1.SetActive(true);
-            shitfloor.name = "king dragon";
+            kingdragon.name = "king dragon";
             
             baseanim.runtimeAnimatorController = kingdragonanim;
 
@@ -854,9 +853,9 @@ public class heroentr : MonoBehaviour
         }
         if(bicho == "mirror-mirror")
         {
-            topo.SetActive(true);
+            mirror.SetActive(true);
             ev1.SetActive(true);
-            topo.name = "mirror-mirror";
+            mirror.name = "mirror-mirror";
             
             baseanim.runtimeAnimatorController = mirroranim;
             rapsound = rapsoundcat;
@@ -868,9 +867,9 @@ public class heroentr : MonoBehaviour
         }
         if(bicho == "cyberpinguino")
         {
-            skybird.SetActive(true);
+            pinguino.SetActive(true);
             ev1.SetActive(true);
-            skybird.name = "cyberpinguino";
+            pinguino.name = "cyberpinguino";
             
             baseanim.runtimeAnimatorController = pinguinoanim;
             rapsound = rapsoundcat;

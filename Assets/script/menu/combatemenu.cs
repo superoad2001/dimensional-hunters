@@ -873,7 +873,7 @@ public class combatemenu : MonoBehaviour
                 }
                 vez1 = true;
                 bicho.text = namebarcelona[i];
-                bichoti.text ="RAZA "+ bichos[i];
+                bichoti.text ="RAZA "+ bichosbarcelona[i];
                 hpt.text = "VIT :"+(float)hpbarcelona[i];
                 mat.text = "STAMINA :"+(float)manabarcelona[i];
                 rect.text = "REC :"+(float)manarecbarcelona[i];
@@ -954,6 +954,7 @@ public class combatemenu : MonoBehaviour
     }
     public void modelos()
     {
+        inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
         if(bichos[i] == "madcat")
         {
             bichom.SetActive(false);

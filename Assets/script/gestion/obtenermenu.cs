@@ -21,6 +21,7 @@ public class obtenermenu : MonoBehaviour
     public string elemento ;
     public float nivel ;
     public float clase ;
+    public float exp;
     public string raza ;
     public float rangor ;
 
@@ -229,7 +230,8 @@ public class obtenermenu : MonoBehaviour
         inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
 
         
-        
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
 
 
         
@@ -447,6 +449,8 @@ public class obtenermenu : MonoBehaviour
                     inv.datosserial.nivel.Add(nivel);
                     inv.datosserial.rango.Add(rangor);
                     inv.datosserial.bichosmios.Add(raza);
+                    inv.datosserial.exp.Add(0);
+                    inv.datosserial.clase.Add(clase);
                     inv.datosserial.indexmax = inv.datosserial.name.Count;
                     inv.guardar();
                     SceneManager.LoadScene("seleccion");

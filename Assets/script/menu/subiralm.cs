@@ -30,6 +30,9 @@ public class subiralm : MonoBehaviour
         inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
         rango = inv.datosserial.rangoplay;
 
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+
         if(inv.datosserial.limite == 5)
         {requisito = 500;}
         if(inv.datosserial.limite == 10)

@@ -92,6 +92,9 @@ public class inventariomenu : MonoBehaviour
         inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
         rango = inv.datosserial.rangoplay;
 
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+
     }
 
     // Update is called once per frame

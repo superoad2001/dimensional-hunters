@@ -51,6 +51,9 @@ public class zonacaza : MonoBehaviour
     }
     void Start()
     {
+
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
         hierb.Add( "hierba comun");
         hierb.Add( "hierba gris");
         hierb.Add( "hierba verde");

@@ -29,6 +29,9 @@ public class subirrangos : MonoBehaviour
         inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
         rango = inv.datosserial.rangoplay;
 
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+
         if(rango == 1)
         {requisito = 500;}
         if(rango == 2)

@@ -241,7 +241,10 @@ public class combatemenu : MonoBehaviour
 
     void Start()
     {
+        
 
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
 
         ciuda = new string[6];
 

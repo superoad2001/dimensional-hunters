@@ -33,6 +33,9 @@ public class zonacazaomega : MonoBehaviour
         bicho.Add( "bicho bloqueado n3");
         bicho.Add( "bicho bloqueado n4");
 
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+
         
     }
 
@@ -61,25 +64,25 @@ public class zonacazaomega : MonoBehaviour
     public void cazar()
     {
         inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
-        if(i == 0 && inv.datosserial.hierbaomega > 0 && inv.datosserial.licencia[i] == "permitida")
+        if(i == 0 && inv.datosserial.hierbaomega > 0 && inv.datosserial.licencia[i] == "obtenida")
         {
             inv.datosserial.hierbaomega--;
             inv._agregar2();
             SceneManager.LoadScene("bicho1");
         }
-        else if(i == 1 && inv.datosserial.hierbaomega > 0 && inv.datosserial.licencia[i] == "permitida")
+        else if(i == 1 && inv.datosserial.hierbaomega > 0 && inv.datosserial.licencia[i] == "obtenida")
         {
             inv.datosserial.hierbaomega--;
             inv._agregar2();
             SceneManager.LoadScene("bicho2");
         }
-        else if(i == 2 && inv.datosserial.hierbaomega > 0 && inv.datosserial.licencia[i] == "permitida")
+        else if(i == 2 && inv.datosserial.hierbaomega > 0 && inv.datosserial.licencia[i] == "obtenida")
         {
             inv.datosserial.hierbaomega--;
             inv._agregar2();
             SceneManager.LoadScene("bicho3");
         }
-        else if(i == 3 && inv.datosserial.hierbaomega > 0 && inv.datosserial.licencia[i] == "permitida")
+        else if(i == 3 && inv.datosserial.hierbaomega > 0 && inv.datosserial.licencia[i] == "obtenida")
         {
             inv.datosserial.hierbaomega--;
             inv._agregar2();

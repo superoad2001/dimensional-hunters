@@ -26,6 +26,8 @@ public class menu3 : MonoBehaviour
     {
         inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
         rango = inv.datosserial.rangoplay;
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
     public void _atras()
     {

@@ -237,6 +237,9 @@ public class combatemenumulti : MonoBehaviour
     {
 
 
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+
         ciuda = new string[6];
 
 

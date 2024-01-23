@@ -29,6 +29,8 @@ public class menu2 : MonoBehaviour
         rango = inv.datosserial.rangoplay;
         if(rangomost == true)
         {rangot.text = ""+rango;}
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
     public void _cazar()
     {

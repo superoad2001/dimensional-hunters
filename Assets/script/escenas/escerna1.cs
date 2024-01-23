@@ -23,6 +23,9 @@ public class escerna1 : MonoBehaviour
     {
         con1.text = "cargando";
         con2.text = "";
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+        
         //video.url = "https://drive.google.com/uc?export=download&id="+url;
     }
     void Awake()

@@ -188,6 +188,7 @@
       <li><a href="#windows-xinput-multiple-devices">Windows, XInput: XInput-compatible device shows up as multiple controllers</a></li>
       <li><a href="#windows-xinput-device-always-connected">Windows, XInput: XInput-compatible device is always connected even after disconnecting the controller and no connect or disconnect events are sent</a></li>
       <li><a href="#windows-xinput-fallback-handler-messages">Windows, XInput: Fallback handler could not load library C:/.../Mono/xinput1_4.dll</a></li>
+      <li><a href="#windows-wgi-fallback-handler-messages">Windows, Windows Gaming Input: Fallback handler could not load library .../Rewired_WindowsGamingInput.dll</a></li>
       <li><a href="#windows-nintendo-switch-pro-controller-usb">Windows: Nintendo Switch Pro Controller doesn't work</a></li>
       <li><a href="#windows-uwp-serialization-errors">Windows 10 Universal: Serialization errors</a></li>
       </ul>
@@ -799,7 +800,7 @@ void CacheRewiredPlayer() {
 <hr />
 <h3><a name="xbox360-triggers" id="dll-not-found-xinput5"></a>Windows: XBox 360 controller L/R triggers can't be pressed at the same time on Windows</h3>
 <p>This is a design issue with the Microsoft XBox 360 controller driver. The XBox 360 controller driver only returns a single byte of data for both the left and right triggers making it impossible to distinguish the two when both are pressed simultaneously when using Raw Input or Direct Input. You can read about this issue and the reasoning behind the design <a href="https://en.wikipedia.org/wiki/DirectInput#Xbox_360_Controller_support" target="_blank">here</a>.</p>
-<p>The solution is to <a href="RewiredEditor.html#Settings">enable XInput in the Rewired Editor - Settings</a>. XInput is able to treat the triggers as separate values.</p>
+<p>The solution is to <a href="RewiredEditor.html#Settings">enable Use Windows Gaming Input or Use XInput in the Rewired Editor - Settings</a>. Both APIs are able to treat the triggers as separate values.</p>
 <p>&nbsp;</p>
 <hr />
 <h3><a name="windows-xinput-multiple-devices" id="windows-xinput-multiple-devices"></a>Windows, XInput: XInput-compatible device shows up as multiple controllers</h3>
@@ -822,7 +823,7 @@ void CacheRewiredPlayer() {
 <p>&nbsp;</p>
 <hr />
 <h3><a name="windows-xinput-fallback-handler-messages" id="windows-xinput-fallback-handler-messages"></a>Windows, XInput: Fallback handler could not load library C:/.../Mono/xinput1_4.dll</h3>
-<p>When XInput is enabled, the build log file will always contain these on Windows XP, Vista, and 7,  and possibly on Windows 8 depending on what version of XInput is installed on the system:</p>
+<p>When XInput is enabled,  the build log file will always contain these on Windows XP, Vista, and 7,  and possibly on Windows 8 depending on what version of XInput is installed on the system:</p>
 <p>Fallback handler could not load library C:/.../Mono/xinput1_4.dll<br />
   Fallback handler could not load library C:/.../Mono/.\xinput1_4.dll<br />
   Fallback handler could not load library C:/.../Mono/xinput1_4.dll<br />
@@ -835,14 +836,11 @@ void CacheRewiredPlayer() {
 <p>Those log messages are completely harmless. Mono makes these log entries the first time you make an extern call to a DLL when it tries to find that DLL. It tries all   permutations of a DLL’s name before giving up and throwing an exception if the DLL was not found. This is   the only way to detect the presence of a DLL in C#.</p>
 <p>Rewired works with all versions of XInput. Rewired will try to detect and use the best possible version of XInput installed on the user's system starting with XInput 1.4 and going backwards to the original release of XInput until it finds one it can use. The more versions it tries before it finds a suitable version, the more entries will be logged.</p>
 <p>These log messages do not indicate any kind of problem with XInput. These log messages are logged by Mono, not Rewired, and cannot be silenced.</p>
-<p><br />
-</p>
+<p>&nbsp;</p>
 <hr />
 <h3><a name="windows-nintendo-switch-pro-controller-usb" id="windows-nintendo-switch-pro-controller-usb"></a>Windows: Nintendo Switch Pro Controller doesn't work</h3>
-<p>The Nintendo Switch Pro Controller cannot be used in Windows via USB. This is documented on the Supported Controllers page:</p>
+<p>The Nintendo Switch Pro Controller can only be used in Windows with Primary Input Source set to Raw Input and Enhanced Device Support enabled. This is documented on the Supported Controllers page:</p>
 <p> <a href="SupportedControllers.html#nintendo-switch-pro-controller">Supported Controllers - Nintendo Switch Pro Controller</a></p>
-<p>The Nintendo Switch Pro Controller does not produce any input when connected via USB. This is not a limitation of Rewired. It is a limitation of the hardware and/or HID driver.</p>
-<p>The only reason it works when using Steam with Pro Controller Configuration Support enabled is the Steam driver which converts it into an XInput device. Windows cannot see the axes or buttons on this device through Raw Input or Direct Input and it is not a native-XInput device, so it will not be handled by XInput without a special driver.</p>
 <p>&nbsp;</p>
 <hr />
 <h3><a name="windows-uwp-serialization-errors" id="windows-uwp-serialization-errors"></a>Windows 10 Universal: Serialization errors</h3>
@@ -894,11 +892,6 @@ Int64* args, IntPtr method)
     Rewired.ReInput.controllers.Keyboard.enabled = false; <span class="comment">// Disable keyboard input on Android platform</span>
 #endif
 }</pre>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<hr />
-<p>&nbsp;</p>
-<p>&nbsp;</p>
 <p>&nbsp;</p>
 <hr />
 <h3>&nbsp;</h3>

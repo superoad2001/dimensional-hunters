@@ -1,3 +1,59 @@
+1.1.47.0:
+  
+  Changes:
+    - Windows Standalone: Added support for Windows.Gaming.Input input source (Requires Windows 10, October 2018 Update version 1809 (10.0.17763.0) or greater. Will fall back to other input sources on older versions of Windows.) Note: This option is now enabled by default on newly created Rewired Input Managers, but existing instances are not modified and the option must be manually enabled in Rewired Editor -> Settings -> Windows.
+    - Added Rewired_WindowsGamingInput.dll native library.
+    - Windows Standalone Raw Input, MacOS Native, Enhanced Device Support: Added DualSense trigger effect support.
+    - MacOS Game Controller Framework: Added DualSense trigger effect support.
+    - MacOS Game Controller Framework: Excluded Nintendo Switch Joy-Cons due to devices not functioning correctly through Game Controller Framework.
+    - Added DualSense Edge support (not tested).
+    - Android: Improved keyfile detection of Dual Shock 4 and Dual Sense controllers due to problems caused by Android fragementation.
+    - Windows UWP, Native: Improved filtering of non-XInput compatible HID controllers that are supported by Windows.Gaming.Input.Gamepad to prevent duplicate devices from appearing when both Gamepad API and HID API are enabled.
+    - Windows UWP, Native: Xbox 360 and Xbox One Controllers and now recognized as distinct controller types instead of being identified as "XInput Gamepad" with limited.
+    - Windows UWP, Native: Added device type and HID product name to joystick.HardwareIdentifier string.
+    - Windows UWP, Native: Updated minimum supported windows version to Windows 10, Fall Creators Update version 1709 (10.0.16299.0).
+    - Rewired Editor: Changed some terminology under Settings -> Windows UWP.
+    - Windows Standalone Raw Input, OSX Native, Enhanced Device Support: Added internal drivers for Nintendo Switch Pro Controller and Joy-Cons to support vibration and certain special controller features.
+    - Windows Standalone Raw Input, OSX Native, Enhanced Device Support: Added workaround for lack of perceptible vibration ramp on Dual Sense.
+    - Added more information to Debug Information.
+  
+  API Changes:
+    - Added ReInput.ConfigHelper.useWindowsGamingInput property.
+    - Added Rewired.ControllerExtensions.IDualSenseExtension interface.
+    - Added Rewired.ControllerExtensions.IDualSenseGamepadTriggerEffect interface.
+    - Added Rewired.ControllerExtensions.DualSenseGamepadTriggerType enum.
+    - Added Rewired.ControllerExtensions.DualSenseGamepadTriggerEffectType enum.
+    - Added Rewired.ControllerExtensions.DualSenseGamepadTriggerEffectState enum.
+    - Added Rewired.ControllerExtensions.DualSenseGamepadTriggerEffectPositionValueSet struct.
+    - Added Rewired.ControllerExtensions.DualSenseGamepadTriggerEffectOff struct.
+    - Added Rewired.ControllerExtensions.DualSenseGamepadTriggerEffectFeedback struct.
+    - Added Rewired.ControllerExtensions.DualSenseGamepadTriggerEffectWeapon struct.
+    - Added Rewired.ControllerExtensions.DualSenseGamepadTriggerEffectVibration struct.
+    - Added Rewired.ControllerExtensions.DualSenseGamepadTriggerEffectMultiplePositionFeedback struct.
+    - Added Rewired.ControllerExtensions.DualSenseGamepadTriggerEffectSlopeFeedback struct.
+    - Added Rewired.ControllerExtensions.DualSenseGamepadTriggerEffectMultiplePositionVibration struct.
+    - Added Rewired.ControllerExtensions.DualSenseGamepadExtension.SetTriggerEffect function.
+    - Added Rewired.ControllerExtensions.IHIDControllerExtension interface.
+    - Added Rewired.ControllerExtensions.NintendoSwitchGamepadExtension class.
+    - Added Rewired.ControllerExtensions.NintendoSwitchProControllerExtension class.
+    - Added Rewired.ControllerExtensions.NintendoSwitchJoyConExtension class.
+    - Added Rewired.ControllerExtensions.NintendoSwitchGamepadVibration struct.
+    - Added Rewired.ControllerExtensions.NintendoSwitchJoyConType enum.
+    - Added Rewired.ControllerExtensions.NintendoSwitchJoyConGripStyle enum.
+    - Added Rewired.Platforms.Apple.GameController.GCControllerDualSenseExtension.SetTriggerEffect function.
+    - Added Rewired.Platforms.Windows.RawInput.RawInputControllerExtension class.
+    - Added Rewired.Platforms.Windows.DirectInput.DirectInputControllerExtension class.
+    - Added ReInput.ConfigHelper.windowsUWPSupportGamepads property.
+    - Added ReInput.ConfigHelper.useAppleGameControllerFramework property.
+    - Added Rewired.ControllerExtensions.IHIDControllerExtension interface to Rewired.ControllerExtensions.DualSenseExtension, Rewired.ControllerExtensions.DualShock4Extension, and Rewired.ControllerExtensions.RailDriverExtension.
+
+  Controller Definitions:
+    - Nintendo Switch Pro Controlller, Apple Game Controller Framework: Added definition.
+    - Windows, Windows Gaming Input: Added Steam-configured variants to Xbox 360 Controller, Xbox One Controller, Sony DualShock 4, Sony DualSense, Nintendo Pro Controller, Nintendo Joy-Con (L), Nintendo Joy-Con (R), Steam Controller.
+    
+  Bug fixes:
+    - Windows Standalone, Raw Input: Fixed bug introduced in 1.1.45.2 causing Raw Input events to not be forwarded to UnityEngine.Input until the application first lost and then received focus again. This only affected UnityEngine.Input mouse axis values.
+
 1.1.46.0:
 
   Changes:

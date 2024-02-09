@@ -229,20 +229,29 @@
     <td valign="top"><a name="settings-windows-input-source" id="settings-windows-input-source"></a>Input Source</td>
     <td valign="top"><p>The primary input source for the Windows Standalone platform.</p>
       <p>Raw Input - Use Raw Input for the input source. Note: Raw Input carries significant advantages over Direct Input such as better Bluetooth controller support, support for more elements on certain controllers, better controller recognition, etc.  Does not require any extra libraries. Windows Control Panel joystick calibration does not affect joystick axes.</p>
-      <p>XInput - Use XInput for the input source. This will use XInput only. All non-XInput compatible controllers will be non-functional. To support both XInput and non-XInput controllers, use Raw Input or Direct Input instead and enable the Use XInput option. Installation of DirectX end-user runtimes is required on Windows XP.</p>
-      <p> Direct Input - Use Direct Input for the input source. Installation of DirectX end-user runtimes may be required for Direct Input support. Windows Control Panel joystick calibration settings affect joystick axes.</p>
+      <p>XInput - Use XInput for the input source. This will use XInput only. All non-XInput compatible controllers will be non-functional. To support both XInput and non-XInput controllers, use Raw Input or Direct Input instead and enable the Use XInput option. Supports XBox Controller 2-motor vibration, independent trigger values, but only supports 4 XInput-compatible controllers at once. Installation of DirectX end-user runtimes is required on Windows XP.</p>
+      <p>Windows Gaming Input - Use Windows.Gaming.Input for the input source. This will use Windows.Gaming.Input only for controllers. All non-WindowsGamingInput compatible controllers will be non-functional. At the present time, only Gamepads are supported. To support all controller types, use Raw Input or Direct Input instead and enable the Use Windows Gaming Input option. Supports XBox Controller 4-motor vibration, independent trigger values, and supports more than 4 XInput-compatible controllers at once. (Requires Windows 10, October 2018 Update version 1809 (10.0.17763.0) or greater.  Will fall back to other input sources on older versions of Windows.)</p>
+<p> Direct Input - Use Direct Input for the input source. Installation of DirectX end-user runtimes may be required for Direct Input support. Windows Control Panel joystick calibration settings affect joystick axes.</p>
 <p> SDL2 - Use SDL2 for the input source. This option requires the SDL2 runtime library to be installed. Note: SDL2 does not support as many devices as other native input sources.</p>
 <p>Unity Input - Use Unity fallback input.</p></td>
   </tr>
   <tr>
-    <td valign="top">Use XInput</td>
-    <td valign="top"><p>On Windows, use XInput for compatible devices. Otherwise fall back to Raw Input or Direct Input. Installation of DirectX end-user runtimes may be required for XInput support. (Windows Vista+ include XInput support without the need for additional drivers.) Required for XBox 360 vibration support.</p>
+    <td valign="top"><a name="settings-windows-use-windows-gaming-input" id="settings-windows-use-windows-gaming-input"></a>Use Windows Gaming Input</td>
+    <td valign="top"><p>On Windows, use Windows.Gaming.Input for compatible devices. Devices not compatible with Windows Gaming Input will be handled by the primary input source. Supports XBox Controller 4-motor vibration, independent trigger values, and supports more than 4 XInput-compatible controllers at once.</p>
+      <p>(Requires Windows 10, October 2018 Update version 1809 (10.0.17763.0) or greater.  Will fall back to other input sources on older versions of Windows.)</p>
+      <p>If both Use XInput and Use Windows Gaming Input are enabled, if Windows Gaming Input is unavalable on the system, XInput will be used as the fallback input source for compatible devices. Otherwise, the primary input source will be used as the fallback input source.</p>
       <p>(Only available when  Input Source is set to Raw Input or Direct Input.)</p></td>
+  </tr>
+  <tr>
+    <td valign="top">Use XInput</td>
+    <td valign="top"><p>On Windows, use XInput for compatible devices. Devices not compatible with XInput will be handled by the primary input source.   Supports XBox Controller 2-motor vibration, independent trigger values, but only supports 4 XInput-compatible controllers at once. Installation of DirectX end-user runtimes is required on Windows XP.</p>
+      <p>If both Use XInput and Use Windows Gaming Input are enabled, if Windows Gaming Input is unavalable on the system, XInput will be used as the fallback input source for compatible devices. Otherwise, the primary input source will be used as the fallback input source.</p>
+      <p>(Only available when  Input Source is set to Raw Input, Direct Input, or Windows Gaming Input.)</p></td>
   </tr>
   <tr>
     <td valign="top">Joystick Refresh Rate</td>
     <td valign="top"><p>The joystick refresh rate in frames per second. Set this to a higher value if you need higher precision input timing at high frame rates such as for a music beat game. Higher values result in higher CPU usage. Note that setting this to a very high value when the game is running at a low frame rate will not result in higher precision input.</p>
-      <p>This settings only applies to input sources that use a separate thread to poll for joystick input values (currently XInput and Direct Input). This setting does not apply to event-based input sources such as Raw Input.</p></td>
+      <p>This settings only applies to input sources that use a separate thread to poll for joystick input values (currently Direct Input, XInput, and Windows Gaming Input). This setting does not apply to event-based input sources such as Raw Input.</p></td>
   </tr>
   <tr>
     <td valign="top"> Native Mouse Handling</td>
@@ -308,12 +317,12 @@
       <p>Unity Input - Use Unity fallback input.</p></td>
   </tr>
   <tr>
-    <td valign="top">Use XInput</td>
-    <td valign="top"><p>Use XInput for compatible devices. Also enables special features for XInput devices such as vibration.</p>
+    <td valign="top">Use Gamepad API</td>
+    <td valign="top"><p>Use Windows.Gaming.Input.Gamepad for compatible devices. Also enables special features for compatible devices such as vibration.</p>
       <p>(Only available when Input Source is set to Native.)</p></td>
   </tr>
   <tr>
-    <td valign="top">Support HID Devices</td>
+    <td valign="top">Use HID API</td>
     <td valign="top"><p>This allows support for older gamepads, gamepads made for Android, flight controllers, racing wheels, etc. In order to use this feature, you must add support for HID gamepads and joysticks to the app manifest file. Please see the Special Platform Support  -&gt; Windows 10 Universal documentation for details.</p>
       <p>(Only available when Input Source is set to Native.)</p></td>
   </tr>

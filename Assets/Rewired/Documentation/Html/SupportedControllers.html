@@ -148,7 +148,7 @@
 			<p>Rewired supports most USB and Bluetooth controllers available, many with extended support. <span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications">1</a>]</span></p>
 			<h3>Controllers with Extended Support</h3>
 			<p>Controllers with hardware definitions are recognized on each platform and are fully mappable by element name, have standardized axis directions, and may be compatible with a <a href="ControllerTemplates.html">Controller Template</a> for easy mapping. For all other controllers that do not appear in the following tables, <a href="#controllers-without-definitions">please see this important note</a>.</p>
-			<p><strong>Rewired currently includes extended support for the following game controllers as of version 1.1.43.0:</strong></p>
+			<p><strong>Rewired currently includes extended support for the following game controllers as of version 1.1.47.0:</strong></p>
 			<table width="100%" border="0" class="supported-controllers-table">
               <tr>
                 <td valign="top">&nbsp;</td>
@@ -156,7 +156,7 @@
                 <td align="center" valign="top"><strong>Windows<br />
                   (Native)
                 </strong></td>
-                <td align="center" valign="top"><strong>OSX<br />
+                <td align="center" valign="top"><strong>MacOS<br />
                   (Native)
                 </strong></td>
                 <td align="center" valign="top"><strong>Windows 8.0 Store<br />
@@ -171,7 +171,7 @@
                 <td align="center" valign="top"><strong>Android <span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications">2</a>]</span></strong></td>
                 <td align="center" valign="top"><strong>Amazon Fire TV <span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications">2</a>]</span></strong></td>
                 <td align="center" valign="top"><strong>Apple iOS / tvOS <span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications">2</a>]</span></strong></td>
-                <td align="center" valign="top"><strong>Webplayer (Windows / OSX Fallback) <span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications">2</a>]</span></strong></td>
+                <td align="center" valign="top"><strong>Webplayer (Windows / MacOS Fallback) <span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications">2</a>]</span></strong></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -194,7 +194,7 @@
                 <td align="center" valign="top"><span class="yes">Yes</span></td>
                 <td align="center" valign="top" class="yes"><span class="no">No</span></td>
                 <td align="center" valign="top"><p>Windows: <span  class="yes">Yes</span><br />
-                OSX: <span class="yes">Yes</span> <span class="note">(<a href="https://github.com/360Controller/360Controller/releases" target="_blank">Driver Required</a>)</span></p></td>
+                MacOS: <span class="yes">Yes</span> <span class="note">(<a href="https://github.com/360Controller/360Controller/releases" target="_blank">Driver Required</a>)</span></p></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -221,13 +221,14 @@
                 <td align="center" valign="top"><span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span  class="yes">Yes</span><br />
-                OSX: <span class="yes">Yes</span> <span class="note">(<a href="https://github.com/360Controller/360Controller/releases" target="_blank">Driver Required)</a></span></td>
+                MacOS: <span class="yes">Yes</span> <span class="note">(<a href="https://github.com/360Controller/360Controller/releases" target="_blank">Driver Required)</a></span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
                 <td valign="top">Microsoft XBox One Controller</td>
-                <td align="center" valign="top"><span class="yes">Yes</span><br/>
-                <span class="note">(Vibration supported)</span></td>
+                <td align="center" valign="top"><p><span class="yes">Yes</span><br/>
+                <span class="note">(Vibration supported)</span></p>
+                <p><span class="note">(Trigger vibration supported using Windows Gaming Input.)</span></p></td>
                 <td align="center" valign="top"><p><span class="yes">Yes<br />
                   </span><span class="note"><a href="https://github.com/360Controller/360Controller/releases" target="_blank">Driver Required for IO Kit</a></span><span class="note"><br/>
                 (Vibration supported)</span></p>
@@ -244,13 +245,14 @@
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span  class="yes">Yes</span><br />
-                OSX: <span class="no">No</span></td>
+                MacOS: <span class="no">No</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
                 <td valign="top">Microsoft XBox One S &amp; Xbox Series S|X Controller</td>
-                <td align="center" valign="top"><span class="yes">Yes</span><br/>
-                  <span class="note">(Vibration supported)</span></td>
+                <td align="center" valign="top"><p><span class="yes">Yes</span><br/>
+                  <span class="note">(Vibration supported)</span></p>
+                  <p><span class="note">(Trigger vibration supported using Windows Gaming Input.)</span></p></td>
                 <td align="center" valign="top"><p><span class="yes">Yes<br />
                   </span><span class="note">
                   (Vibration <u>not</u> supported, Bluetooth only)<br />
@@ -269,7 +271,7 @@
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top"><span class="yes">iOS 13+</span></td>
                 <td align="center" valign="top">Windows: <span  class="yes">Yes</span><br />
-                  OSX:<span  class="yes"> Yes</span></td>
+                  MacOS:<span  class="yes"> Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -286,7 +288,7 @@
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top"><p>Windows: <span  class="yes">Yes</span><br />
-                  OSX: 
+                  MacOS: 
                 <span class="yes">Yes</span></p></td>
               </tr>
               <tr>
@@ -303,7 +305,7 @@
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span  class="yes">Yes</span><br />
-                OSX: <span class="yes">Yes</span></td>
+                MacOS: <span class="yes">Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -319,7 +321,7 @@
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="note"> Not Mapped Yet</span><br />
-                OSX: <span class="note">Not Mapped Yet</span></td>
+                MacOS: <span class="note">Not Mapped Yet</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -338,7 +340,7 @@
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top"><p>Windows: <span class="note">XBox 360 Emulation Required</span> <span class="note">(<a href="https://forums.pcsx2.net/Thread-XInput-Wrapper-for-DS3-and-Play-com-USB-Dual-DS2-Controller" target="_blank">Driver</a>)</span><br />
-                OSX: <span class="yes">Yes</span></p></td>
+                MacOS: <span class="yes">Yes</span></p></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -356,7 +358,7 @@
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="no">No</span><br />
-                OSX: <span class="yes">Yes</span></td>
+                MacOS: <span class="yes">Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -373,7 +375,7 @@
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="no">No</span><br />
-OSX: <span class="yes">Yes</span></td>
+MacOS: <span class="yes">Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -392,15 +394,16 @@ OSX: <span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
-                <td align="center" valign="top">Windows: <span  class="yes">Yes <strong><span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications">14</a>]</span></strong></span>OSX: <span class="yes">Yes</span></td>
+                <td align="center" valign="top">Windows: <span  class="yes">Yes <strong><span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications">14</a>]</span></strong></span><br />                
+                MacOS: <span class="yes">Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
                 <td valign="top">Sony DualShock 4 <span class="note">(Wired)</span></td>
                 <td align="center" valign="top"><p><span class="yes">Yes</span><br/>
-                  <span class="note">(<a href="HowTos.html#dualshock-4-special-features">All features supported</a>)</span></p></td>
+                <span class="note">(<a href="HowTos.html#dualshock-4-special-features">All features supported</a> with Raw Input + Enhanced Device Support</span></p></td>
                 <td align="center" valign="top"><span class="yes">Yes</span><br/>
-                <span class="note">(<a href="HowTos.html#dualshock-4-special-features">All features supported</a>)</span></td>
+                <span class="note">(<a href="HowTos.html#dualshock-4-special-features">All features supported</a> with Enhanced Device Support)</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top"><span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="yes">Yes</span></td>
@@ -410,16 +413,16 @@ OSX: <span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span  class="yes">Yes</span><br />
-                OSX: <span class="yes">Yes</span></td>
+                MacOS: <span class="yes">Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
                 <td valign="top">Sony DualShock 4 <span class="note">(Bluetooth)</span></td>
                 <td align="center" valign="top"><span class="yes">Yes</span><br/>
-                <span class="note">(<a href="HowTos.html#dualshock-4-special-features">All features supported</a>)</span></td>
+                <span class="note">(<a href="HowTos.html#dualshock-4-special-features">All features supported</a> with Raw Input + Enhanced Device Support)</span></td>
                 <td align="center" valign="top"><p><span class="yes">Yes</span><br />
                   <span class="note">(Special features not supported on IO Kit [<a href="#clarifications">18</a>])</span></p>
-                  <p><span class="note">(Special features supported on Game controller Framework)</span></p></td>
+                  <p><span class="note">(Special features supported on Game Controller Framework)</span></p></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top"><span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="yes">Yes</span></td>
@@ -429,7 +432,7 @@ OSX: <span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="yes">iOS 13+</span></td>
                 <td align="center" valign="top"><p>Windows: <span class="no">No</span> <strong><span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications">8</a>]</span></strong><br />
-                  OSX: 
+                  MacOS: 
                       <span class="partial">Partial <strong><span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications">8</a>]</span></strong></span><br />
                 <span class="note">(D-Pad not working</span>)</p></td>
               </tr>
@@ -437,9 +440,9 @@ OSX: <span class="yes">Yes</span></td>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
                 <td valign="top">Sony DualShock 4 <span class="note">(USB Wireless Adaptor)</span></td>
                 <td align="center" valign="top"><p><span class="yes">Yes</span><br/>
-                  <span class="note">(<a href="HowTos.html#dualshock-4-special-features">All features supported</a>)</span></p></td>
+                <span class="note">(<a href="HowTos.html#dualsense-special-features">All features supported</a> with Raw Input + Enhanced Device Support)</span></p></td>
                 <td align="center" valign="top"><span class="yes">Yes</span><br/>
-                  <span class="note">(<a href="HowTos.html#dualshock-4-special-features">All features supported</a>)</span></td>
+                  <span class="note">(<a href="HowTos.html#dualshock-4-special-features">All features supported</a> with Enhanced Device Support)</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top"><span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="yes">Yes</span></td>
@@ -449,47 +452,121 @@ OSX: <span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span  class="yes">Yes</span><br />
-                  OSX:<span class="no"> No</span></td>
+                  MacOS:<span class="no"> No</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
                 <td valign="top">Sony DualSense <span class="note">(Wired)</span></td>
-                <td align="center" valign="top"><p><span class="yes">Yes</span><br/>
-                  <span class="note">(<a href="HowTos.html#dualshock-4-special-features">All features except haptic triggers supported</a>)</span></p></td>
-                <td align="center" valign="top"><span class="yes">Yes</span><br/>
-                <span class="note">(<a href="HowTos.html#dualshock-4-special-features">All features except haptic triggers supported</a>)</span></td>
+                <td align="center" valign="top"><p><span class="yes">Yes <strong><span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications-24">24</a>]</span></strong></span><br/>
+                <span class="note">(<a href="HowTos.html#dualsense-special-features">All features supported</a> with Raw Input + Enhanced Device Support)</span></p></td>
+                <td align="center" valign="top"><p>IO Kit: <span class="yes">Yes <strong><span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications-24">24</a>]</span></strong></span><br/>
+                <span class="note">(<a href="HowTos.html#dualsense-special-features">All features supported</a> with Enhanced Device Support)<br />
+                </span><br/>
+                Game Controller Framework: <span class="note">(<a href="HowTos.html#dualsense-special-features">All features except haptic triggers</a>)</span></p></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top"><span class="maybe">Maybe</span><br />
                 <span class="note">(untested)</span></td>
                 <td align="center" valign="top"><span class="maybe">Maybe</span><br />
                 <span class="note">(untested)</span></td>
                 <td align="center" valign="top"><span class="yes">Yes</span></td>
-                <td align="center" valign="top" class="yes">As DS4</td>
-                <td align="center" valign="top"><span class="yes">As DS4</span></td>
+                <td align="center" valign="top" class="yes">Yes</td>
+                <td align="center" valign="top"><span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="yes"> As DS4</span><br />
-                OSX:<span class="yes"> As DS4</span></td>
+                MacOS:<span class="yes"> As DS4</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
                 <td valign="top">Sony DualSense <span class="note">(Bluetooth)</span></td>
-                <td align="center" valign="top"><span class="yes">Yes</span><br/>
-                <span class="note">(<a href="HowTos.html#dualshock-4-special-features">All features except haptic triggers supported</a>)</span></td>
-                <td align="center" valign="top"><p><span class="yes">Yes</span><br />
-                  <span class="note">(Lights, vibration, haptic triggers, not supported on IO Kit.)</span></p>
-                  <p><span class="note">(All special features except trigger haptics supported on Game controller Framework)</span></p></td>
+                <td align="center" valign="top"><span class="yes">Yes <strong><span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications-24">24</a>]</span></strong></span><br/>
+                <span class="note">(<a href="HowTos.html#dualsense-special-features">All features supported</a> with Raw Input + Enhanced Device Support)</span></td>
+                <td align="center" valign="top"><p>IO Kit: <span class="yes">Yes</span><br />
+                  <span class="note">(Lights, vibration, haptic triggers, not supported)</span></p>
+                  <p>Game Controller Framework: <span class="note">(<a href="HowTos.html#dualsense-special-features">All features except trigger haptics supported</a>)</span></p></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top"><span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="yes">Yes</span></td>
-                <td align="center" valign="top"><span class="yes">As DS4</span></td>
-                <td align="center" valign="top"><span class="yes">As DS4</span></td>
+                <td align="center" valign="top"><span class="yes">Yes</span></td>
+                <td align="center" valign="top"><span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="maybe">Maybe</span><br />
                 <span class="note">(untested)</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top"><p>Windows:<span class="yes"> As DS4</span><br />
-                  OSX:<span class="yes"> As DS4</span></p></td>
+                  MacOS:<span class="yes"> As DS4</span></p></td>
+              </tr>
+              <tr>
+                <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
+                <td valign="top">Nintendo Switch Joy-Con (Left)</td>
+                <td align="center" valign="top"><span class="yes">Yes <strong><span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications-20">20</a>]</span></strong></span><br />
+                  <span class="note">(Raw Input + Enhanced Device Support required for analog axis values and vibration)</span></td>
+                <td align="center" valign="top"><p class="yes">Yes <strong><span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications-20">20</a>]</span></strong><br />
+                  <span class="note">(Enhanced Device Suport Required for analog axis values and vibration)</span></p></td>
+                <td align="center" valign="top"><span class="no">No</span></td>
+                <td align="center" valign="top"><span class="yes">Yes <strong><span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications-20">20</a>]</span></strong></span></td>
+                <td align="center" valign="top"><span class="yes">Yes <strong><span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications-20">20</a>]</span></strong></span></td>
+                <td align="center" valign="top"><span class="yes">Yes <strong><span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications-20">20</a>]</span></strong></span></td>
+                <td align="center" valign="top"><span class="yes">Yes <strong><span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications-20">20</a>]</span></strong></span></td>
+                <td align="center" valign="top"><span class="partial">Partial</span> <strong><span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications-20">20</a>]</span></strong><br />
+                  <span class="note">(ZL not working)</span></td>
+                <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
+                <td align="center" valign="top"><span class="no">No</span></td>
+                <td align="center" valign="top">Windows:<span class="no"> No</span><br />
+                  MacOS:<span class="yes"> Yes</span></td>
+              </tr>
+              <tr>
+                <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
+                <td valign="top">Nintendo Switch Joy-Con (Right)</td>
+                <td align="center" valign="top"><span class="yes">Yes</span><span class="yes"> <strong><span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications-20">20</a>]</span></strong></span><br />
+                  <span class="note">(Raw Input + Enhanced Device Support required for analog axis values and vibration)</span></td>
+                <td align="center" valign="top"><span class="yes">Yes <strong><span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications-20">20</a>]</span></strong></span><br />
+                  <span class="note">(Enhanced Device Suport Required for analog axis values and vibration)</span></td>
+                <td align="center" valign="top"><span class="no">No</span></td>
+                <td align="center" valign="top"><span class="yes">Yes <strong><span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications-20">20</a>]</span></strong></span></td>
+                <td align="center" valign="top"><span class="yes">Yes <strong><span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications-20">20</a>]</span></strong></span></td>
+                <td align="center" valign="top"><span class="yes">Yes <strong><span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications-20">20</a>]</span></strong></span></td>
+                <td align="center" valign="top"><span class="yes">Yes <strong><span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications-20">20</a>]</span></strong></span></td>
+                <td align="center" valign="top"><span class="partial">Partial</span> <strong><span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications-20">20</a>]</span></strong><br />
+                  <span class="note">(ZR not working)</span></td>
+                <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
+                <td align="center" valign="top"><span class="no">No</span></td>
+                <td align="center" valign="top">Windows:<span class="no"> No</span><br />
+                  MacOS:<span class="yes"> Yes <strong><span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications-20">20</a>]</span></strong></span></td>
+              </tr>
+              <tr>
+                <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
+                <td valign="top"><a name="nintendo-switch-pro-controller" id="nintendo-switch-pro-controller"></a>Nintendo Switch Pro Controller <span class="note">(Wired)</span></td>
+                <td align="center" valign="top"><span class="no">No</span></td>
+                <td align="center" valign="top"><p><span class="no">No</span></p></td>
+                <td align="center" valign="top"><span class="no">No</span></td>
+                <td align="center" valign="top"><span class="no">No</span></td>
+                <td align="center" valign="top"><span class="no">No</span></td>
+                <td align="center" valign="top"><span class="yes"><span class="maybe">Unknown</span></span></td>
+                <td align="center" valign="top"><span class="yes"><span class="maybe">Unknown</span></span></td>
+                <td align="center" valign="top"><span class="yes"><span class="maybe">Unknown</span></span></td>
+                <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
+                <td align="center" valign="top"><span class="no">No</span></td>
+                <td align="center" valign="top">Windows:<span class="no"> No</span><br />
+                  MacOS:<span class="no"> No</span></td>
+              </tr>
+              <tr>
+                <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
+                <td valign="top">Nintendo Switch Pro Controller <span class="note">(Wireless)</span></td>
+                <td align="center" valign="top"><span class="yes">Yes</span><br />
+                  <span class="note">(Raw Input + Enhanced Device Support)</span></td>
+                <td align="center" valign="top"><p>IO Kit:<span class="yes"> Yes</span> <span class="note">(Enhanced Device Suport Required)</span></p>
+                  <p>Game Controller Framework: <span class="yes">Yes</span></p></td>
+                <td align="center" valign="top"><span class="no">No</span></td>
+                <td align="center" valign="top"><span class="no">No</span></td>
+                <td align="center" valign="top"><span class="no">No</span></td>
+                <td align="center" valign="top"><span class="yes"><span class="maybe">Unknown</span></span></td>
+                <td align="center" valign="top"><span class="yes"><span class="maybe">Unknown</span></span></td>
+                <td align="center" valign="top"><span class="yes"><span class="maybe">Unknown</span></span></td>
+                <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
+                <td align="center" valign="top"><span class="no">No</span></td>
+                <td align="center" valign="top">Windows:<span class="no"> No</span><br />
+                  MacOS:<span class="no"> No</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -506,7 +583,7 @@ OSX: <span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span  class="yes">Yes</span><br />
-                OSX: <span class="yes">Yes</span></td>
+                MacOS: <span class="yes">Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -522,7 +599,7 @@ OSX: <span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span  class="yes">Yes</span><br />
-                OSX: <span class="yes">Yes</span></td>
+                MacOS: <span class="yes">Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -539,7 +616,7 @@ OSX: <span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span  class="yes">Yes</span><br />
-                OSX: <span class="yes">Yes</span></td>
+                MacOS: <span class="yes">Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -555,7 +632,7 @@ OSX: <span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span  class="yes">Yes</span><br />
-                OSX: <span class="yes">Yes</span></td>
+                MacOS: <span class="yes">Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -571,7 +648,7 @@ OSX: <span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span  class="yes">Yes</span><br />
-                OSX: <span class="yes">Yes</span></td>
+                MacOS: <span class="yes">Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -587,7 +664,7 @@ OSX: <span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="yes">Yes</span><br />
-                  OSX:<span class="yes"> Yes</span></td>
+                  MacOS:<span class="yes"> Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -604,7 +681,7 @@ OSX: <span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="yes">Yes</span><br />
-OSX:<span class="yes"> Yes</span></td>
+MacOS:<span class="yes"> Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -621,7 +698,7 @@ OSX:<span class="yes"> Yes</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span  class="yes">Yes</span><br />
-                OSX: <span class="yes">Yes</span></td>
+                MacOS: <span class="yes">Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -638,7 +715,7 @@ OSX:<span class="yes"> Yes</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span  class="yes">Yes</span><br />
-                OSX: <span class="yes">Yes</span></td>
+                MacOS: <span class="yes">Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -655,7 +732,7 @@ OSX:<span class="yes"> Yes</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span  class="yes">Yes</span><br />
-                OSX: <span class="yes">Yes</span></td>
+                MacOS: <span class="yes">Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -672,7 +749,7 @@ OSX:<span class="yes"> Yes</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span  class="yes">Yes</span><br />
-                OSX: <span class="yes">Yes</span></td>
+                MacOS: <span class="yes">Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -689,7 +766,7 @@ OSX:<span class="yes"> Yes</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="yes">Yes</span><br />
-                OSX: <span class="yes">Yes</span></td>
+                MacOS: <span class="yes">Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -709,7 +786,7 @@ OSX:<span class="yes"> Yes</span></td>
                 <td align="center" valign="top"><span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="no"> No</span><br />
-OSX: <span class="no">No</span></td>
+MacOS: <span class="no">No</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -726,7 +803,7 @@ OSX: <span class="no">No</span></td>
                 <td align="center" valign="top"><span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="yes">Yes</span> <span class="note">(X mode only)</span><br />
-OSX: <span class="yes">Yes<br />
+MacOS: <span class="yes">Yes<br />
 <span class="note">(X mode only)</span></span></td>
               </tr>
               <tr>
@@ -744,7 +821,7 @@ OSX: <span class="yes">Yes<br />
                 <td align="center" valign="top"><span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="yes">Yes</span> <span class="note">(X mode only)</span><br />
-OSX: <span class="yes">Yes<br />
+MacOS: <span class="yes">Yes<br />
 <span class="note">(X mode only)</span></span></td>
               </tr>
               <tr>
@@ -765,7 +842,7 @@ OSX: <span class="yes">Yes<br />
                 <td align="center" valign="top"><span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="yes">Yes</span><br />
-                  OSX: <span class="yes">Yes</span><br />
+                  MacOS: <span class="yes">Yes</span><br />
                   <span class="note">(DI mode)</span><br />
                   <span class="maybe">Maybe</span> <span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications-22">22</a>]</span><br />
                   <span class="note">(X mode)</span></td>
@@ -785,7 +862,7 @@ OSX: <span class="yes">Yes<br />
                 <td align="center" valign="top"><span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="yes">Yes</span> <span class="note">(X mode only)</span><br />
-                  OSX:<span class="yes"> Yes<br />
+                  MacOS:<span class="yes"> Yes<br />
                   </span><span class="note">(X mode only)</span></td>
               </tr>
               <tr>
@@ -803,7 +880,7 @@ OSX: <span class="yes">Yes<br />
                 <td align="center" valign="top"><span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="yes">Yes</span> <span class="note">(X mode only)</span><br />
-OSX: <span class="yes">Yes<br />
+MacOS: <span class="yes">Yes<br />
 <span class="note">(X mode only)</span></span></td>
               </tr>
               <tr>
@@ -821,7 +898,7 @@ OSX: <span class="yes">Yes<br />
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="yes">Yes</span><br />
-OSX: <span class="yes">Yes</span></td>
+MacOS: <span class="yes">Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -837,7 +914,7 @@ OSX: <span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="yes">Yes</span><br />
-OSX:</td>
+MacOS:</td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -853,7 +930,7 @@ OSX:</td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="yes">Yes</span><br />
-OSX: <span class="no">No</span></td>
+MacOS: <span class="no">No</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -869,7 +946,7 @@ OSX: <span class="no">No</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="yes">Yes</span><br />
-                  OSX:<span class="no"> No</span></td>
+                  MacOS:<span class="no"> No</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -885,7 +962,7 @@ OSX: <span class="no">No</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="yes">Yes</span><br />
-                  OSX: <span class="yes">Yes</span></td>
+                  MacOS: <span class="yes">Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -901,7 +978,7 @@ OSX: <span class="no">No</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="yes">Yes</span><br />
-                  OSX: <span class="yes">Yes</span></td>
+                  MacOS: <span class="yes">Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -917,7 +994,7 @@ OSX: <span class="no">No</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="no">No</span><br />
-                  OSX:</td>
+                  MacOS:</td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -934,7 +1011,7 @@ OSX: <span class="no">No</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="yes"> Yes</span> <span class="note">(2/4 port adapters for WiiU &amp; PC only.)</span><br />
-                OSX:<span class="yes"> Yes</span></td>
+                MacOS:<span class="yes"> Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -956,7 +1033,7 @@ OSX: <span class="no">No</span></td>
                 <span class="note">(XInput mode only)</span></span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="yes">Yes</span><br />
-                OSX: <span class="yes">Yes</span></td>
+                MacOS: <span class="yes">Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -973,11 +1050,11 @@ OSX: <span class="no">No</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="partial">Not yet mapped</span><br />
-                OSX: <span class="partial">Not yet mapped</span></td>
+                MacOS: <span class="partial">Not yet mapped</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
-                <td valign="top"><p>Horipad Ultimate HIP-047U <span class="note">(iOS/OSX MFi)</span></p></td>
+                <td valign="top"><p>Horipad Ultimate HIP-047U <span class="note">(iOS/MacOS MFi)</span></p></td>
                 <td align="center" valign="top"><span class="yes">Yes</span><br />
                 <span class="yes"><span class="note">(w/ pressure-sensitive buttons</span><span class="note">)</span></span></td>
                 <td align="center" valign="top"><span class="yes">Yes</span><br />
@@ -993,12 +1070,12 @@ OSX: <span class="no">No</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top"><span class="yes">Yes</span></td>
                 <td align="center" valign="top">Windows: <span class="yes"><span class="no">No</span></span><br />
-OSX:<span class="no"> No</span></td>
+MacOS:<span class="no"> No</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
                 <td valign="top">SteelSeries Stratus XL<br />
-                  <span class="note">(iOS/OSX MFi version)</span></td>
+                  <span class="note">(iOS/MacOS MFi version)</span></td>
                 <td align="center" valign="top"><span class="yes">Yes</span><br />
                 <span class="yes"><span class="note">(w/ pressure-sensitive buttons</span><span class="note">)</span></span></td>
                 <td align="center" valign="top"><span class="yes">Yes</span><br />
@@ -1014,11 +1091,11 @@ OSX:<span class="no"> No</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top"><span class="yes">Yes</span></td>
                 <td align="center" valign="top">Windows: <span class="yes"><span class="no">No</span></span><br />
-                  OSX:<span class="no"> No</span></td>
+                  MacOS:<span class="no"> No</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
-                <td valign="top">SteelSeries Nimbus <span class="note">(iOS/OSX MFi)</span></td>
+                <td valign="top">SteelSeries Nimbus <span class="note">(iOS/MacOS MFi)</span></td>
                 <td align="center" valign="top"><span class="yes">Yes</span><br />
                 <span class="yes"><span class="note">(w/ pressure-sensitive buttons</span><span class="note">)</span></span></td>
                 <td align="center" valign="top"><span class="yes">Yes</span><br />
@@ -1034,11 +1111,11 @@ OSX:<span class="no"> No</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top"><span class="yes">Yes</span></td>
                 <td align="center" valign="top">Windows: <span class="yes"><span class="no">No</span></span><br />
-                  OSX:<span class="no"> No</span></td>
+                  MacOS:<span class="no"> No</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
-                <td valign="top">SteelSeries Nimbus+ <span class="note">(iOS/OSX MFi)</span></td>
+                <td valign="top">SteelSeries Nimbus+ <span class="note">(iOS/MacOS MFi)</span></td>
                 <td align="center" valign="top"><span class="no">No <strong><span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications">4</a>]</span></strong></span></td>
                 <td align="center" valign="top"><span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
@@ -1053,7 +1130,7 @@ OSX:<span class="no"> No</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top"><span class="yes">Yes</span></td>
                 <td align="center" valign="top">Windows: <span class="yes"><span class="no">No</span></span><br />
-                  OSX:<span class="yes"> Yes</span></td>
+                  MacOS:<span class="yes"> Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -1077,7 +1154,7 @@ OSX:<span class="no"> No</span></td>
                   <span class="note">(GameSmart Mode)</span></span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="no">No</span><strong><span style="vertical-align: super; font-size: 65%;"> [<a href="#clarifications">12</a>]</span></strong><br />
-                OSX: <span class="no">No</span></td>
+                MacOS: <span class="no">No</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -1101,7 +1178,7 @@ OSX:<span class="no"> No</span></td>
                   <span class="note">(GameSmart Mode)</span></span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="no">No</span><strong><span style="vertical-align: super; font-size: 65%;"> [<a href="#clarifications">12</a>]</span></strong><br />
-                OSX: <span class="no">No</span></td>
+                MacOS: <span class="no">No</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -1117,7 +1194,7 @@ OSX:<span class="no"> No</span></td>
                 <td align="center" valign="top"><span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="yes">Yes</span><br />
-                OSX: <span class="yes">Yes</span></td>
+                MacOS: <span class="yes">Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -1133,7 +1210,7 @@ OSX:<span class="no"> No</span></td>
                 <td align="center" valign="top"><span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top"><p>Windows:<span class="no"> No</span><strong><span style="vertical-align: super; font-size: 65%;"> [<a href="#clarifications">12</a>]<br />
-                </span></strong>OSX: <span class="yes">Yes</span></p></td>
+                </span></strong>MacOS: <span class="yes">Yes</span></p></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -1166,7 +1243,7 @@ OSX:<span class="no"> No</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="yes">Yes</span><br />
-                  OSX: <span class="yes">Yes</span></td>
+                  MacOS: <span class="yes">Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -1182,7 +1259,7 @@ OSX:<span class="no"> No</span></td>
                 <td align="center" valign="top"><span class="no">No</span> <strong><span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications">10</a>]</span></strong></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="no">No</span> <strong><span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications">10</a>]</span></strong><br />
-                  OSX: <span class="no">No</span> <strong><span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications">10</a>]</span></strong></td>
+                  MacOS: <span class="no">No</span> <strong><span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications">10</a>]</span></strong></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -1204,7 +1281,7 @@ OSX:<span class="no"> No</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="yes"><span class="no">No</span> <strong><span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications">11</a>]</span></strong></span><br />
-                OSX:<span class="no"> No</span></td>
+                MacOS:<span class="no"> No</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -1225,7 +1302,7 @@ OSX:<span class="no"> No</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="yes"><span class="no"> No</span> <strong><span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications">11</a>]</span></strong></span><br />
-                OSX: <span class="no">No</span></td>
+                MacOS: <span class="no">No</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -1247,7 +1324,7 @@ OSX:<span class="no"> No</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="yes"><span class="no"> No</span> <strong><span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications">11</a>]</span></strong></span><br />
-                OSX: <span class="no">No</span></td>
+                MacOS: <span class="no">No</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -1264,7 +1341,7 @@ OSX:<span class="no"> No</span></td>
                 <td align="center" valign="top"><span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="no"> No</span><strong><span style="vertical-align: super; font-size: 65%;"> [<a href="#clarifications">12</a>]</span></strong><br />
-                  OSX:<span class="no"> No</span></td>
+                  MacOS:<span class="no"> No</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -1281,7 +1358,7 @@ OSX:<span class="no"> No</span></td>
                 <td align="center" valign="top"><span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="no"> No</span><strong><span style="vertical-align: super; font-size: 65%;"> [<a href="#clarifications">12</a>]</span></strong><br />
-                  OSX:<span class="no"> No</span></td>
+                  MacOS:<span class="no"> No</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -1297,7 +1374,7 @@ OSX:<span class="no"> No</span></td>
                 <td align="center" valign="top"><span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="no"> No</span><strong><span style="vertical-align: super; font-size: 65%;"> [<a href="#clarifications">12</a>]</span></strong><br />
-                OSX: <span class="yes">Yes</span></td>
+                MacOS: <span class="yes">Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -1321,7 +1398,7 @@ OSX:<span class="no"> No</span></td>
                 <span class="note">(Mode B only)</span></span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="no"> No</span><strong><span style="vertical-align: super; font-size: 65%;"> [<a href="#clarifications">12</a>]</span></strong><br />
-                  OSX:<span class="partial"> Partial</span><br />
+                  MacOS:<span class="partial"> Partial</span><br />
                 <span class="note">(Mode B only, L2, R2 not working</span></td>
               </tr>
               <tr>
@@ -1346,7 +1423,7 @@ OSX:<span class="no"> No</span></td>
                 <span class="note">(Mode B only)</span></span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="no"> No</span><strong><span style="vertical-align: super; font-size: 65%;"> [<a href="#clarifications">12</a>]</span></strong><br />
-                OSX:<span class="partial"> Partial</span><br />
+                MacOS:<span class="partial"> Partial</span><br />
                 <span class="note">(Mode B only, L2, R2 not working)</span></td>
               </tr>
               <tr>
@@ -1370,7 +1447,7 @@ OSX:<span class="no"> No</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="no"> No</span><strong><span style="vertical-align: super; font-size: 65%;"> [<a href="#clarifications">12</a>]</span></strong><br />
-OSX: <span class="no">No<strong><span style="vertical-align: super; font-size: 65%;"> [<a href="#clarifications">12</a>]</span></strong></span></td>
+MacOS: <span class="no">No<strong><span style="vertical-align: super; font-size: 65%;"> [<a href="#clarifications">12</a>]</span></strong></span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -1386,7 +1463,7 @@ OSX: <span class="no">No<strong><span style="vertical-align: super; font-size: 6
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="partial"> Not yet mapped</span><br />
-OSX: <span class="partial">Not yet mapped</span></td>
+MacOS: <span class="partial">Not yet mapped</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -1402,7 +1479,7 @@ OSX: <span class="partial">Not yet mapped</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="yes">Yes</span><br />
-OSX:<span class="no"> No<strong><span style="vertical-align: super; font-size: 65%;"> [<a href="#clarifications">12</a>]</span></strong></span></td>
+MacOS:<span class="no"> No<strong><span style="vertical-align: super; font-size: 65%;"> [<a href="#clarifications">12</a>]</span></strong></span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -1425,7 +1502,7 @@ OSX:<span class="no"> No<strong><span style="vertical-align: super; font-size: 6
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="no"> No</span><strong><span style="vertical-align: super; font-size: 65%;"> [<a href="#clarifications">12</a>]</span></strong><br />
-OSX: <span class="no">No</span></td>
+MacOS: <span class="no">No</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -1442,7 +1519,7 @@ OSX: <span class="no">No</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="yes">Yes</span><br />
-                  OSX: <span class="yes">Yes</span></td>
+                  MacOS: <span class="yes">Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -1458,7 +1535,7 @@ OSX: <span class="no">No</span></td>
                 <td align="center" valign="top"><span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="no">No</span><br />
-                  OSX:<span class="yes"> Yes</span></td>
+                  MacOS:<span class="yes"> Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -1474,7 +1551,7 @@ OSX: <span class="no">No</span></td>
                 <td align="center" valign="top"><span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="no"> No</span><strong><span style="vertical-align: super; font-size: 65%;"> [<a href="#clarifications">12</a>]</span></strong><br />
-                  OSX: <span class="no">No</span></td>
+                  MacOS: <span class="no">No</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -1491,7 +1568,7 @@ OSX: <span class="no">No</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="yes">Yes</span><br />
-                  OSX: <span class="yes">Yes</span></td>
+                  MacOS: <span class="yes">Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -1507,7 +1584,7 @@ OSX: <span class="no">No</span></td>
                 <td align="center" valign="top"><span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="no">No</span><br />
-                  OSX:<span class="yes"> Yes</span></td>
+                  MacOS:<span class="yes"> Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -1523,7 +1600,7 @@ OSX: <span class="no">No</span></td>
                 <td align="center" valign="top"><span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="no"> No</span><strong><span style="vertical-align: super; font-size: 65%;"> [<a href="#clarifications">12</a>]</span></strong><br />
-                  OSX: <span class="no">No</span></td>
+                  MacOS: <span class="no">No</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -1540,7 +1617,7 @@ OSX: <span class="no">No</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="yes">Yes</span><br />
-OSX: <span class="yes">Yes</span></td>
+MacOS: <span class="yes">Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -1557,7 +1634,7 @@ OSX: <span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="no"> No</span><br />
-OSX: <span class="no">No</span></td>
+MacOS: <span class="no">No</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -1612,7 +1689,7 @@ Switch: <span class="no">No</span></td>
                   Mac: <span class="yes">Yes</span><br />
                   Android:  <span class="yes">Yes</span><br />
                   Switch:  <span class="no">No</span></p>
-                <p>OSX:<br />
+                <p>MacOS:<br />
 Modes:<br />
                   Win: <span class="yes">Yes</span><br />
                   Mac: <span class="yes">Yes</span><br />
@@ -1672,7 +1749,7 @@ Switch: <span class="yes">Yes</span></td>
                   Mac:<span class="no"> No</span> <strong><span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications">8</a>]</span></strong><br />
                   Android: <span class="no">No</span><strong><span style="vertical-align: super; font-size: 65%;"> [<a href="#clarifications">12</a>]</span></strong><span class="no"></span><br />
                   Switch:<span class="no"> No</span><strong><span style="vertical-align: super; font-size: 65%;"> [<a href="#clarifications">12</a>]</span></strong><span class="no"></span></p>
-                  <p>OSX:<br />
+                  <p>MacOS:<br />
                     Modes:<br /> 
                     Win:<span class="yes"> Yes</span><br />
                     Mac: <span class="yes">Yes</span><br />
@@ -1694,7 +1771,7 @@ Switch: <span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="yes">Yes</span><br />
-                  OSX: <span class="yes">Yes</span></td>
+                  MacOS: <span class="yes">Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -1711,7 +1788,7 @@ Switch: <span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="no"> No</span><br />
-                  OSX: <span class="no">No</span></td>
+                  MacOS: <span class="no">No</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -1734,7 +1811,7 @@ Switch: <span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="no"> No</span><strong><span style="vertical-align: super; font-size: 65%;"> [<a href="#clarifications">12</a>]</span></strong><br />
-OSX: <span class="no">No</span></td>
+MacOS: <span class="no">No</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -1750,7 +1827,7 @@ OSX: <span class="no">No</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="no"> No</span><strong><span style="vertical-align: super; font-size: 65%;"> [<a href="#clarifications">12</a>]</span></strong><br />
-                OSX:<span class="yes"> Yes</span></td>
+                MacOS:<span class="yes"> Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -1766,7 +1843,7 @@ OSX: <span class="no">No</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="yes">Yes</span><br />
-                  OSX:<span class="yes"> Yes</span></td>
+                  MacOS:<span class="yes"> Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -1783,7 +1860,7 @@ OSX: <span class="no">No</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="yes">Yes</span><br />
-                OSX: <span class="yes">Yes</span></td>
+                MacOS: <span class="yes">Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -1799,7 +1876,7 @@ OSX: <span class="no">No</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="yes">Yes</span><br />
-                OSX: <span class="yes">Yes</span></td>
+                MacOS: <span class="yes">Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -1815,7 +1892,7 @@ OSX: <span class="no">No</span></td>
                 <td align="center" valign="top"><span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="yes">Yes</span><br />
-                OSX: <span class="yes">Yes</span></td>
+                MacOS: <span class="yes">Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -1831,7 +1908,7 @@ OSX: <span class="no">No</span></td>
                 <td align="center" valign="top"><span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="no"> No</span><br />
-                OSX:<span class="no"> No</span></td>
+                MacOS:<span class="no"> No</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -1847,7 +1924,7 @@ OSX: <span class="no">No</span></td>
                 <td align="center" valign="top"><span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="no">No</span><strong><span style="vertical-align: super; font-size: 65%;"> [<a href="#clarifications">12</a>]</span></strong><br />
-                OSX:<span class="no"> No</span></td>
+                MacOS:<span class="no"> No</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -1864,7 +1941,7 @@ OSX: <span class="no">No</span></td>
                 <td align="center" valign="top"><span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="no"> No</span><strong><span style="vertical-align: super; font-size: 65%;"> [<a href="#clarifications">12</a>]</span></strong><br />
-                  OSX:<span class="partial"> Partial</span><br />
+                  MacOS:<span class="partial"> Partial</span><br />
   <span class="note">(L/R triggers not working)</span></td>
               </tr>
               <tr>
@@ -1884,7 +1961,7 @@ OSX: <span class="no">No</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top"><p>Windows:<span class="partial"> Partial</span><br />
                 <span class="note">(L/R triggers not working)</span><br />
-                OSX:<span class="partial"> Partial</span><br />
+                MacOS:<span class="partial"> Partial</span><br />
                 <span class="note">(L/R triggers not working)</span></p></td>
               </tr>
               <tr>
@@ -1902,7 +1979,7 @@ OSX: <span class="no">No</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="partial">Partial</span><br />
                   <span class="note">(L/R triggers not working)</span><br/>
-                OSX: <span class="no">No</span></td>
+                MacOS: <span class="no">No</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -1918,7 +1995,7 @@ OSX: <span class="no">No</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="no"> No</span><br />
-                OSX: <span class="no">No</span></td>
+                MacOS: <span class="no">No</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -1934,62 +2011,7 @@ OSX: <span class="no">No</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="no"> No</span><br />
-                  OSX:</td>
-              </tr>
-              <tr>
-                <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
-                <td valign="top">Nintendo Switch Joy-Con (Left)</td>
-                <td align="center" valign="top"><span class="yes">Yes <strong><span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications-20">20</a>]</span></strong></span></td>
-                <td align="center" valign="top"><span class="yes">Yes <strong><span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications-20">20</a>]</span></strong></span></td>
-                <td align="center" valign="top"><span class="no">No</span></td>
-                <td align="center" valign="top"><span class="yes">Yes <strong><span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications-20">20</a>]</span></strong></span></td>
-                <td align="center" valign="top"><span class="yes">Yes <strong><span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications-20">20</a>]</span></strong></span></td>
-                <td align="center" valign="top"><span class="yes">Yes <strong><span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications-20">20</a>]</span></strong></span></td>
-                <td align="center" valign="top"><span class="yes">Yes <strong><span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications-20">20</a>]</span></strong></span></td>
-                <td align="center" valign="top"><span class="partial">Partial</span> <strong><span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications-20">20</a>]</span></strong><br />
-                <span class="note">(ZL not working)</span></td>
-                <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
-                <td align="center" valign="top"><span class="no">No</span></td>
-                <td align="center" valign="top">Windows:<span class="no"> No</span><br />
-                  OSX:<span class="yes"> Yes</span></td>
-              </tr>
-              <tr>
-                <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
-                <td valign="top">Nintendo Switch Joy-Con (Right)</td>
-                <td align="center" valign="top"><span class="yes">Yes</span> <strong><span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications-20">20</a>]</span></strong></td>
-                <td align="center" valign="top"><span class="yes">Yes <strong><span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications-20">20</a>]</span></strong></span></td>
-                <td align="center" valign="top"><span class="no">No</span></td>
-                <td align="center" valign="top"><span class="yes">Yes <strong><span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications-20">20</a>]</span></strong></span></td>
-                <td align="center" valign="top"><span class="yes">Yes <strong><span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications-20">20</a>]</span></strong></span></td>
-                <td align="center" valign="top"><span class="yes">Yes <strong><span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications-20">20</a>]</span></strong></span></td>
-                <td align="center" valign="top"><span class="yes">Yes <strong><span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications-20">20</a>]</span></strong></span></td>
-                <td align="center" valign="top"><span class="partial">Partial</span> <strong><span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications-20">20</a>]</span></strong><br />
-                <span class="note">(ZR not working)</span></td>
-                <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
-                <td align="center" valign="top"><span class="no">No</span></td>
-                <td align="center" valign="top">Windows:<span class="no"> No</span><br />
-                  OSX:<span class="yes"> Yes <strong><span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications-20">20</a>]</span></strong></span></td>
-              </tr>
-              <tr>
-                <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
-                <td valign="top"><a name="nintendo-switch-pro-controller" id="nintendo-switch-pro-controller"></a>Nintendo Switch Pro Controller <span class="note">(wireless only)</span> <strong><span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications-24">24</a>]</span></strong></td>
-                <td align="center" valign="top"><span class="no">No</span> <strong><span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications-26">26</a>]</span></strong></td>
-                <td align="center" valign="top"><p>IO Kit: <span class="no">No</span> <strong><span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications-25">25</a>]</span></strong></p><p>Game Controller Framework: <span class="yes">Yes</span></p></td>
-                <td align="center" valign="top"><span class="no">No</span></td>
-                <td align="center" valign="top"><span class="no">No</span><br />
-                <strong><span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications-27">27</a>]</span></strong></td>
-                <td align="center" valign="top"><span class="no">No</span><br />
-                <strong><span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications-27">27</a>]</span></strong></td>
-                <td align="center" valign="top"><span class="yes"><span class="maybe">Unknown<br />
-                </span><strong><span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications-27">27</a>]</span></strong></span></td>
-                <td align="center" valign="top"><span class="yes"><span class="maybe">Unknown</span><strong><span style="vertical-align: super; font-size: 65%;"><br />
-                [<a href="#clarifications-27">27</a>]</span></strong></span></td>
-                <td align="center" valign="top"><span class="yes"><span class="maybe">Unknown</span><strong><span style="vertical-align: super; font-size: 65%;"><br />
-                [<a href="#clarifications-27">27</a>]</span></strong></span></td>
-                <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
-                <td align="center" valign="top"><span class="no">No</span></td>
-                <td align="center" valign="top">Windows:<span class="no"> No</span><br />
-                  OSX:<span class="no"> No</span></td>
+                  MacOS:</td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -2007,7 +2029,7 @@ OSX: <span class="no">No</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="yes"> Yes</span><br />
-                OSX:<span class="yes"> Yes</span></td>
+                MacOS:<span class="yes"> Yes</span></td>
               </tr>
               <tr>
               	<td colspan="13">&nbsp;</td>
@@ -2017,7 +2039,7 @@ OSX: <span class="no">No</span></td>
                 <td valign="top"><p class="controller-type"><a name="flight-controllers" id="flight-controllers"></a>Flight Controllers</p></td>
                 <td align="center" valign="top"><strong>Windows<br />
                 (Native)</strong></td>
-                <td align="center" valign="top"><strong>OSX<br />
+                <td align="center" valign="top"><strong>MacOS<br />
                 (Native)</strong></td>
                 <td align="center" valign="top"><strong>Windows 8.0 Store<br />
                   (Native)</strong></td>
@@ -2030,7 +2052,7 @@ OSX: <span class="no">No</span></td>
                 <td align="center" valign="top"><strong>Android <span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications">2</a>]</span></strong></td>
                 <td align="center" valign="top"><strong>Amazon Fire TV <span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications">2</a>]</span></strong></td>
                 <td align="center" valign="top"><strong>Apple iOS / tvOS <span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications">2</a>]</span></strong></td>
-                <td align="center" valign="top"><strong>Webplayer (Windows / OSX Fallback) <span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications">2</a>]</span></strong></td>
+                <td align="center" valign="top"><strong>Webplayer (Windows / MacOS Fallback) <span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications">2</a>]</span></strong></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-hotas" title="Compatible with the HOTAS Template"></a></td>
@@ -2046,7 +2068,7 @@ OSX: <span class="no">No</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="note"> Not Mapped Yet</span><br />
-OSX:<span class="note"> Not Mapped Yet</span></td>
+MacOS:<span class="note"> Not Mapped Yet</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-hotas" title="Compatible with the HOTAS Template"></a></td>
@@ -2063,7 +2085,7 @@ OSX:<span class="note"> Not Mapped Yet</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="yes">Yes</span><br />
-                OSX: <span class="yes">Yes</span></td>
+                MacOS: <span class="yes">Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-hotas" title="Compatible with the HOTAS Template"></a></td>
@@ -2079,7 +2101,7 @@ OSX:<span class="note"> Not Mapped Yet</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="note"> Not Mapped Yet</span><br />
-OSX:<span class="note"> Not Mapped Yet</span></td>
+MacOS:<span class="note"> Not Mapped Yet</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-flight-yoke" title="Compatible with the Flight Yoke Template"></a></td>
@@ -2114,7 +2136,7 @@ OSX:<span class="note"> Not Mapped Yet</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="yes">Yes</span><br />
-                OSX: <span class="yes">Yes</span></td>
+                MacOS: <span class="yes">Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-flight-pedals" title="Compatible with the Flight Pedals Template"></a></td>
@@ -2130,7 +2152,7 @@ OSX:<span class="note"> Not Mapped Yet</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="yes">Yes</span><br />
-                OSX: <span class="yes">Yes</span></td>
+                MacOS: <span class="yes">Yes</span></td>
               </tr>
               <tr>
                 <td valign="top">&nbsp;</td>
@@ -2147,7 +2169,7 @@ OSX:<span class="note"> Not Mapped Yet</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="yes">Yes</span><br />
-                OSX: <span class="yes">Yes</span></td>
+                MacOS: <span class="yes">Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-hotas" title="Compatible with the HOTAS Template"></a></td>
@@ -2163,7 +2185,7 @@ OSX:<span class="note"> Not Mapped Yet</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top"><p>Windows: <span class="partial">Partial<strong><span style="vertical-align: super; font-size: 65%;"> [<a href="#clarifications">2</a>]</span></strong></span><br />
-                  OSX: <span class="partial">Partial<strong><span style="vertical-align: super; font-size: 65%;"> [<a href="#clarifications">2</a>]</span></strong></span></p>
+                  MacOS: <span class="partial">Partial<strong><span style="vertical-align: super; font-size: 65%;"> [<a href="#clarifications">2</a>]</span></strong></span></p>
                 <p><span class="note">(Hat 3 Up/Dn, Mouse Cursor, Mouse Cursor Button not working)</span></p></td>
               </tr>
               <tr>
@@ -2183,7 +2205,7 @@ OSX:<span class="note"> Not Mapped Yet</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top"><p>Windows: <span class="partial">Partial<strong><span style="vertical-align: super; font-size: 65%;"> [<a href="#clarifications">2</a>]</span></strong></span><br />
-                OSX:  <span class="partial">Partial<strong><span style="vertical-align: super; font-size: 65%;"> [<a href="#clarifications">2</a>]</span></strong></span></p>
+                MacOS:  <span class="partial">Partial<strong><span style="vertical-align: super; font-size: 65%;"> [<a href="#clarifications">2</a>]</span></strong></span></p>
                 <p><span class="note">(Buttons 20-34, Mouse Nub not working)</span></p></td>
               </tr>
               <tr>
@@ -2204,7 +2226,7 @@ OSX:<span class="note"> Not Mapped Yet</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top"><p>Windows: <span class="partial">Partial<strong><span style="vertical-align: super; font-size: 65%;"> [<a href="#clarifications">2</a>]</span></strong></span><br />
-                OSX:  <span class="partial">Partial<strong><span style="vertical-align: super; font-size: 65%;"> [<a href="#clarifications">2</a>]</span></strong></span></p>
+                MacOS:  <span class="partial">Partial<strong><span style="vertical-align: super; font-size: 65%;"> [<a href="#clarifications">2</a>]</span></strong></span></p>
                 <p class="note">(Many elements not working)</p></td>
               </tr>
               <tr>
@@ -2222,7 +2244,7 @@ OSX:<span class="note"> Not Mapped Yet</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="yes">Yes</span><br />
-                OSX: <span class="yes">Yes</span></td>
+                MacOS: <span class="yes">Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-hotas" title="Compatible with the HOTAS Template"></a></td>
@@ -2240,7 +2262,7 @@ OSX:<span class="note"> Not Mapped Yet</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top"><p>Windows: <span class="partial">Partial<strong><span style="vertical-align: super; font-size: 65%;"> [<a href="#clarifications">2</a>]</span></strong></span><br />
-                OSX:  <span class="partial">Partial<strong><span style="vertical-align: super; font-size: 65%;"> [<a href="#clarifications">2</a>]</span></strong></span></p>
+                MacOS:  <span class="partial">Partial<strong><span style="vertical-align: super; font-size: 65%;"> [<a href="#clarifications">2</a>]</span></strong></span></p>
                 <p><span class="note">(Hats, slider, pinky wheel, pinky switch, mode dial, mouse nub not working)</span></p></td>
               </tr>
               <tr>
@@ -2259,7 +2281,7 @@ OSX:<span class="note"> Not Mapped Yet</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="note"> Not Mapped Yet</span><br />
-OSX:<span class="note"> Not Mapped Yet</span></td>
+MacOS:<span class="note"> Not Mapped Yet</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-hotas" title="Compatible with the HOTAS Template"></a></td>
@@ -2277,7 +2299,7 @@ OSX:<span class="note"> Not Mapped Yet</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top"><p>Windows:<span class="note"> Not Mapped Yet</span><br />
-OSX:<span class="note"> Not Mapped Yet</span></p></td>
+MacOS:<span class="note"> Not Mapped Yet</span></p></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-hotas" title="Compatible with the HOTAS Template"></a></td>
@@ -2293,7 +2315,7 @@ OSX:<span class="note"> Not Mapped Yet</span></p></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="note"> Not Mapped Yet</span><br />
-                  OSX:<span class="note"> Not Mapped Yet</span></td>
+                  MacOS:<span class="note"> Not Mapped Yet</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-hotas" title="Compatible with the HOTAS Template"></a></td>
@@ -2310,7 +2332,7 @@ OSX:<span class="note"> Not Mapped Yet</span></p></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="yes">Yes</span><br />
-                  OSX: <span class="yes">Yes</span></td>
+                  MacOS: <span class="yes">Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-hotas" title="Compatible with the HOTAS Template"></a></td>
@@ -2327,7 +2349,7 @@ OSX:<span class="note"> Not Mapped Yet</span></p></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="yes">Yes</span><br />
-                  OSX: <span class="yes">Yes</span></td>
+                  MacOS: <span class="yes">Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-flight-yoke" title="Compatible with the Flight Yoke Template"></a></td>
@@ -2345,7 +2367,7 @@ OSX:<span class="note"> Not Mapped Yet</span></p></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top"><p>Windows: <span class="partial">Partial<strong><span style="vertical-align: super; font-size: 65%;"> [<a href="#clarifications">2</a>]</span></strong></span><br />
-                  OSX: <span class="partial">Partial<strong><span style="vertical-align: super; font-size: 65%;"> [<a href="#clarifications">2</a>]</span></strong></span></p>
+                  MacOS: <span class="partial">Partial<strong><span style="vertical-align: super; font-size: 65%;"> [<a href="#clarifications">2</a>]</span></strong></span></p>
   <p><span class="note">(Lever down buttons not working)</span></p></td>
               </tr>
               <tr>
@@ -2363,7 +2385,7 @@ OSX:<span class="note"> Not Mapped Yet</span></p></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="yes">Yes</span><br />
-                OSX: <span class="yes">Yes</span></td>
+                MacOS: <span class="yes">Yes</span></td>
               </tr>
               <tr>
                 <td valign="top">&nbsp;</td>
@@ -2381,7 +2403,7 @@ OSX:<span class="note"> Not Mapped Yet</span></p></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="yes">Yes</span><br />
-                OSX: <span class="yes">Yes</span></td>
+                MacOS: <span class="yes">Yes</span></td>
               </tr>
               <tr>
                 <td valign="top">&nbsp;</td>
@@ -2397,7 +2419,7 @@ OSX:<span class="note"> Not Mapped Yet</span></p></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="yes">Yes</span><br />
-                OSX: <span class="yes">Yes</span></td>
+                MacOS: <span class="yes">Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-flight-pedals" title="Compatible with the Flight Pedals Template"></a></td>
@@ -2413,7 +2435,7 @@ OSX:<span class="note"> Not Mapped Yet</span></p></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="yes">Yes</span><br />
-                OSX: <span class="yes">Yes</span></td>
+                MacOS: <span class="yes">Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-flight-pedals" title="Compatible with the Flight Pedals Template"></a></td>
@@ -2429,7 +2451,7 @@ OSX:<span class="note"> Not Mapped Yet</span></p></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="yes">Yes</span><br />
-                  OSX: <span class="yes">Yes</span></td>
+                  MacOS: <span class="yes">Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-flight-pedals" title="Compatible with the Flight Pedals Template"></a></td>
@@ -2445,7 +2467,7 @@ OSX:<span class="note"> Not Mapped Yet</span></p></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="yes">Yes</span><br />
-                  OSX: <span class="yes">Yes</span></td>
+                  MacOS: <span class="yes">Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-hotas" title="Compatible with the HOTAS Template"></a></td>
@@ -2462,7 +2484,7 @@ OSX:<span class="note"> Not Mapped Yet</span></p></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="yes">Yes</span><br />
-OSX: <span class="yes">Yes</span></td>
+MacOS: <span class="yes">Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-hotas" title="Compatible with the HOTAS Template"></a></td>
@@ -2479,7 +2501,7 @@ OSX: <span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="yes">Yes</span><br />
-                OSX: <span class="yes">Yes</span></td>
+                MacOS: <span class="yes">Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-hotas" title="Compatible with the HOTAS Template"></a></td>
@@ -2497,7 +2519,7 @@ OSX: <span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top"><p>Windows: <span class="partial">Partial<strong><span style="vertical-align: super; font-size: 65%;"> [<a href="#clarifications">2</a>]</span></strong></span><br />
-                OSX: <span class="partial">Partial<strong><span style="vertical-align: super; font-size: 65%;"> [<a href="#clarifications">2</a>]</span></strong></span></p>
+                MacOS: <span class="partial">Partial<strong><span style="vertical-align: super; font-size: 65%;"> [<a href="#clarifications">2</a>]</span></strong></span></p>
                 <p><span class="note">(Buttons 20-32 not working) </span></p></td>
               </tr>
               <tr>
@@ -2515,7 +2537,7 @@ OSX: <span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="yes">Yes</span><br />
-                OSX: <span class="yes">Yes</span></td>
+                MacOS: <span class="yes">Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-hotas" title="Compatible with the HOTAS Template"></a><br /><a href="#template-legend" class="template-icon template-icon-flight-pedals" title="Compatible with the Flight Pedals Template"></a></td>
@@ -2533,7 +2555,7 @@ OSX: <span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="note">Not Mapped Yet</span><br />
-OSX:<span class="note"> Not Mapped Yet</span><span class="yes"></span></td>
+MacOS:<span class="note"> Not Mapped Yet</span><span class="yes"></span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-hotas" title="Compatible with the HOTAS Template"></a></td>
@@ -2551,7 +2573,7 @@ OSX:<span class="note"> Not Mapped Yet</span><span class="yes"></span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="note">Not Mapped Yet</span><br />
-OSX:<span class="note"> Not Mapped Yet</span><span class="yes"></span></td>
+MacOS:<span class="note"> Not Mapped Yet</span><span class="yes"></span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-hotas" title="Compatible with the HOTAS Template"></a></td>
@@ -2568,7 +2590,7 @@ OSX:<span class="note"> Not Mapped Yet</span><span class="yes"></span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="yes">Yes</span><br />
-                  OSX: <span class="yes">Yes</span></td>
+                  MacOS: <span class="yes">Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-hotas" title="Compatible with the HOTAS Template"></a></td>
@@ -2584,7 +2606,7 @@ OSX:<span class="note"> Not Mapped Yet</span><span class="yes"></span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="no">No</span><br />
-                OSX: <span class="yes">Yes</span></td>
+                MacOS: <span class="yes">Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-flight-pedals" title="Compatible with the Flight Pedals Template"></a></td>
@@ -2600,7 +2622,7 @@ OSX:<span class="note"> Not Mapped Yet</span><span class="yes"></span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="note"> Not Mapped Yet</span><br />
-                OSX:<span class="note"> Not Mapped Yet</span></td>
+                MacOS:<span class="note"> Not Mapped Yet</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-hotas" title="Compatible with the HOTAS Template"></a><br /><a href="#template-legend" class="template-icon template-icon-flight-pedals" title="Compatible with the Flight Pedals Template"></a></td>
@@ -2616,7 +2638,7 @@ OSX:<span class="note"> Not Mapped Yet</span><span class="yes"></span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="note"> Not Mapped Yet</span><br />
-                  OSX:<span class="note"> Not Mapped Yet</span></td>
+                  MacOS:<span class="note"> Not Mapped Yet</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-hotas" title="Compatible with the HOTAS Template"></a></td>
@@ -2633,7 +2655,7 @@ OSX:<span class="note"> Not Mapped Yet</span><span class="yes"></span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="yes">Yes</span><br />
-                  OSX: <span class="yes">Yes</span></td>
+                  MacOS: <span class="yes">Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-hotas" title="Compatible with the HOTAS Template"></a></td>
@@ -2650,7 +2672,7 @@ OSX:<span class="note"> Not Mapped Yet</span><span class="yes"></span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="yes">Yes</span><br />
-                OSX: <span class="yes">Yes</span></td>
+                MacOS: <span class="yes">Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-hotas" title="Compatible with the HOTAS Template"></a></td>
@@ -2667,7 +2689,7 @@ OSX:<span class="note"> Not Mapped Yet</span><span class="yes"></span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="yes">Yes</span><br />
-                  OSX: <span class="yes">Yes</span></td>
+                  MacOS: <span class="yes">Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-hotas" title="Compatible with the HOTAS Template"></a></td>
@@ -2684,7 +2706,7 @@ OSX:<span class="note"> Not Mapped Yet</span><span class="yes"></span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="yes"> Yes</span><br />
-                OSX:<span class="yes"> Yes</span></td>
+                MacOS:<span class="yes"> Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-hotas" title="Compatible with the HOTAS Template"></a></td>
@@ -2702,7 +2724,7 @@ OSX:<span class="note"> Not Mapped Yet</span><span class="yes"></span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="no"> No</span><br />
-                OSX:<span class="yes"> Yes</span></td>
+                MacOS:<span class="yes"> Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-hotas" title="Compatible with the HOTAS Template"></a></td>
@@ -2720,7 +2742,7 @@ OSX:<span class="note"> Not Mapped Yet</span><span class="yes"></span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="no"> No</span><br />
-                  OSX:<span class="yes"> Yes</span></td>
+                  MacOS:<span class="yes"> Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-hotas" title="Compatible with the HOTAS Template"></a></td>
@@ -2738,7 +2760,7 @@ OSX:<span class="note"> Not Mapped Yet</span><span class="yes"></span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="no"> No</span><br />
-                  OSX:<span class="yes"> Yes</span></td>
+                  MacOS:<span class="yes"> Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-hotas" title="Compatible with the HOTAS Template"></a></td>
@@ -2754,7 +2776,7 @@ OSX:<span class="note"> Not Mapped Yet</span><span class="yes"></span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="yes"> Yes</span><br />
-                OSX: <span class="yes">Yes</span></td>
+                MacOS: <span class="yes">Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-hotas" title="Compatible with the HOTAS Template"></a></td>
@@ -2771,7 +2793,7 @@ OSX:<span class="note"> Not Mapped Yet</span><span class="yes"></span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="note"> Not Mapped Yet</span><br />
-                  OSX:<span class="note"> Not Mapped Yet</span></td>
+                  MacOS:<span class="note"> Not Mapped Yet</span></td>
               </tr>
               <tr>
                 <td valign="top">&nbsp;</td>
@@ -2789,7 +2811,7 @@ OSX:<span class="note"> Not Mapped Yet</span><span class="yes"></span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="no"> No</span><br />
-OSX: <span class="no">No</span></td>
+MacOS: <span class="no">No</span></td>
               </tr>
               <tr>
               	<td colspan="13">&nbsp;</td>
@@ -2799,7 +2821,7 @@ OSX: <span class="no">No</span></td>
                 <td valign="top"><p class="controller-type"><a name="racing-controllers" id="racing-controllers"></a>Racing Controllers</p></td>
                 <td align="center" valign="top"><strong>Windows<br />
                 (Native)</strong></td>
-                <td align="center" valign="top"><strong>OSX<br />
+                <td align="center" valign="top"><strong>MacOS<br />
                 (Native)</strong></td>
                 <td align="center" valign="top"><strong>Windows 8.0 Store<br />
                   (Native)</strong></td>
@@ -2812,7 +2834,7 @@ OSX: <span class="no">No</span></td>
                 <td align="center" valign="top"><strong>Android <span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications">2</a>]</span></strong></td>
                 <td align="center" valign="top"><strong>Amazon Fire TV <span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications">2</a>]</span></strong></td>
                 <td align="center" valign="top"><strong>Apple iOS / tvOS <span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications">2</a>]</span></strong></td>
-                <td align="center" valign="top"><strong>Webplayer (Windows / OSX Fallback) <span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications">2</a>]</span></strong></td>
+                <td align="center" valign="top"><strong>Webplayer (Windows / MacOS Fallback) <span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications">2</a>]</span></strong></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-racing-wheel" title="Compatible with the Racing Wheel Template"></a></td>
@@ -2828,7 +2850,7 @@ OSX: <span class="no">No</span></td>
                 <td align="center" valign="top"><span class="note">Not Mapped Yet</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="yes">Yes</span><br />
-OSX:<span class="note"> Not Mapped Yet</span></td>
+MacOS:<span class="note"> Not Mapped Yet</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-racing-wheel" title="Compatible with the Racing Wheel Template"></a></td>
@@ -2848,7 +2870,7 @@ OSX:<span class="note"> Not Mapped Yet</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="partial">Partial</span><strong><span style="vertical-align: super; font-size: 65%;"> [<a href="#clarifications">2</a>]</span></strong><br />
-                OSX:<span class="partial"> Partial</span><strong><span style="vertical-align: super; font-size: 65%;"> [<a href="#clarifications">2</a>]</span></strong></td>
+                MacOS:<span class="partial"> Partial</span><strong><span style="vertical-align: super; font-size: 65%;"> [<a href="#clarifications">2</a>]</span></strong></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-racing-wheel" title="Compatible with the Racing Wheel Template"></a></td>
@@ -2867,7 +2889,7 @@ OSX:<span class="note"> Not Mapped Yet</span></td>
                 <td align="center" valign="top"><span class="note">Not Mapped Yet</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="partial">Partial</span><strong><span style="vertical-align: super; font-size: 65%;"> [<a href="#clarifications">2</a>]</span></strong><br />
-OSX: <span class="partial">Partial</span><strong><span style="vertical-align: super; font-size: 65%;"> [<a href="#clarifications">2</a>]</span></strong></td>
+MacOS: <span class="partial">Partial</span><strong><span style="vertical-align: super; font-size: 65%;"> [<a href="#clarifications">2</a>]</span></strong></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-racing-wheel" title="Compatible with the Racing Wheel Template"></a></td>
@@ -2883,7 +2905,7 @@ OSX: <span class="partial">Partial</span><strong><span style="vertical-align: su
                 <td align="center" valign="top"><span class="note">Not Mapped Yet</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="note"> Not Mapped Yet</span><br />
-                  OSX:<span class="note"> Not Mapped Yet</span></td>
+                  MacOS:<span class="note"> Not Mapped Yet</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-racing-wheel" title="Compatible with the Racing Wheel Template"></a></td>
@@ -2902,7 +2924,7 @@ OSX: <span class="partial">Partial</span><strong><span style="vertical-align: su
                 <td align="center" valign="top"><span class="note">Not Mapped Yet</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows<span class="note">: Not Mapped Yet</span><br />
-                  OSX:<span class="note"> Not Mapped Yet</span></td>
+                  MacOS:<span class="note"> Not Mapped Yet</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-racing-wheel" title="Compatible with the Racing Wheel Template"></a></td>
@@ -2921,7 +2943,7 @@ OSX: <span class="partial">Partial</span><strong><span style="vertical-align: su
                 <td align="center" valign="top"><span class="note">Not Mapped Yet</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows<span class="note">: Not Mapped Yet</span><br />
-                OSX:<span class="note"> Not Mapped Yet</span></td>
+                MacOS:<span class="note"> Not Mapped Yet</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-racing-wheel" title="Compatible with the Racing Wheel Template"></a></td>
@@ -2938,7 +2960,7 @@ OSX: <span class="partial">Partial</span><strong><span style="vertical-align: su
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="no">No</span><br />
-                OSX: <span class="yes">Yes</span></td>
+                MacOS: <span class="yes">Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-racing-wheel" title="Compatible with the Racing Wheel Template"></a></td>
@@ -2954,7 +2976,7 @@ OSX: <span class="partial">Partial</span><strong><span style="vertical-align: su
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="no">No</span><br />
-                OSX: <span class="yes">Yes</span></td>
+                MacOS: <span class="yes">Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-racing-wheel" title="Compatible with the Racing Wheel Template"></a></td>
@@ -2978,7 +3000,7 @@ OSX: <span class="partial">Partial</span><strong><span style="vertical-align: su
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="yes">Yes<br />
                   <span class="note">(PS3 Mode only)</span></span><br />
-                  OSX: <span class="yes">Yes<br />
+                  MacOS: <span class="yes">Yes<br />
                     <span class="note">(PS3 Mode only)</span></span></td>
               </tr>
               <tr>
@@ -3003,7 +3025,7 @@ OSX: <span class="partial">Partial</span><strong><span style="vertical-align: su
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="yes">Yes<br />
                     <span class="note">(PS3 Mode only)</span></span><br />
-OSX: <span class="yes">Yes<br />
+MacOS: <span class="yes">Yes<br />
 <span class="note">(PS3 Mode only)</span></span></td>
               </tr>
               <tr>
@@ -3028,7 +3050,7 @@ OSX: <span class="yes">Yes<br />
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="yes">Yes<br />
                   <span class="note">(PS3 Mode only)</span></span><br />
-                  OSX: <span class="yes">Yes<br />
+                  MacOS: <span class="yes">Yes<br />
                     <span class="note">(PS3 Mode only)</span></span></td>
               </tr>
               <tr>
@@ -3047,7 +3069,7 @@ OSX: <span class="yes">Yes<br />
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="yes">Yes</span><br />
-                  OSX:<span class="no"> No</span><strong><span style="vertical-align: super; font-size: 65%;"> [<a href="#clarifications">12</a>]</span></strong></td>
+                  MacOS:<span class="no"> No</span><strong><span style="vertical-align: super; font-size: 65%;"> [<a href="#clarifications">12</a>]</span></strong></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-racing-wheel" title="Compatible with the Racing Wheel Template"></a></td>
@@ -3064,7 +3086,7 @@ OSX: <span class="yes">Yes<br />
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="yes">Yes</span><br />
-OSX: <span class="yes">Yes</span></td>
+MacOS: <span class="yes">Yes</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-racing-wheel" title="Compatible with the Racing Wheel Template"></a></td>
@@ -3080,7 +3102,7 @@ OSX: <span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="note"> Not Mapped Yet</span><br />
-                  OSX:<span class="note"> Not Mapped Yet</span></td>
+                  MacOS:<span class="note"> Not Mapped Yet</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-racing-wheel" title="Compatible with the Racing Wheel Template"></a></td>
@@ -3096,7 +3118,7 @@ OSX: <span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="note"> Not Mapped Yet</span><br />
-                  OSX:<span class="note"> Not Mapped Yet</span></td>
+                  MacOS:<span class="note"> Not Mapped Yet</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-racing-wheel" title="Compatible with the Racing Wheel Template"></a></td>
@@ -3116,7 +3138,7 @@ OSX: <span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="note">Not Mapped Yet</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="note"> Not Mapped Yet</span><br />
-                  OSX:<span class="note"> Not Mapped Yet</span></td>
+                  MacOS:<span class="note"> Not Mapped Yet</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-racing-wheel" title="Compatible with the Racing Wheel Template"></a></td>
@@ -3132,7 +3154,7 @@ OSX: <span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="note">Not Mapped Yet</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="yes">Yes</span><br />
-                  OSX:<span class="note"> Not Mapped Yet</span></td>
+                  MacOS:<span class="note"> Not Mapped Yet</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-racing-wheel" title="Compatible with the Racing Wheel Template"></a></td>
@@ -3148,7 +3170,7 @@ OSX: <span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="note">Not Mapped Yet</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="yes">Yes</span><br />
-                  OSX:<span class="note"> Not Mapped Yet</span></td>
+                  MacOS:<span class="note"> Not Mapped Yet</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-racing-wheel" title="Compatible with the Racing Wheel Template"></a></td>
@@ -3165,7 +3187,7 @@ OSX: <span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="no"> No</span><br />
-                  OSX: <span class="no">No</span></td>
+                  MacOS: <span class="no">No</span></td>
               </tr>
               <tr>
               	<td colspan="13">&nbsp;</td>
@@ -3175,7 +3197,7 @@ OSX: <span class="yes">Yes</span></td>
                 <td valign="top"><p class="controller-type"><a name="specialty-controllers" id="specialty-controllers"></a>Specialty Controllers</p></td>
                 <td align="center" valign="top"><strong>Windows<br />
                 (Native)</strong></td>
-                <td align="center" valign="top"><strong>OSX<br />
+                <td align="center" valign="top"><strong>MacOS<br />
                 (Native)</strong></td>
                 <td align="center" valign="top"><strong>Windows 8.0 Store<br />
                   (Native)</strong></td>
@@ -3188,7 +3210,7 @@ OSX: <span class="yes">Yes</span></td>
                 <td align="center" valign="top"><strong>Android <span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications">2</a>]</span></strong></td>
                 <td align="center" valign="top"><strong>Amazon Fire TV <span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications">2</a>]</span></strong></td>
                 <td align="center" valign="top"><strong>Apple iOS / tvOS <span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications">2</a>]</span></strong></td>
-                <td align="center" valign="top"><strong>Webplayer (Windows / OSX Fallback) <span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications">2</a>]</span></strong></td>
+                <td align="center" valign="top"><strong>Webplayer (Windows / MacOS Fallback) <span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications">2</a>]</span></strong></td>
               </tr>
               <tr>
                 <td valign="top">&nbsp;</td>
@@ -3206,7 +3228,7 @@ OSX: <span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="yes">Yes</span><br />
-                OSX: <span class="yes">Yes</span></td>
+                MacOS: <span class="yes">Yes</span></td>
               </tr>
               <tr>
                 <td valign="top">&nbsp;</td>
@@ -3223,7 +3245,7 @@ OSX: <span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="note"> Not Mapped Yet</span><br />
-                OSX: <span class="note">Not Mapped Yet</span></td>
+                MacOS: <span class="note">Not Mapped Yet</span></td>
               </tr>
               <tr>
                 <td valign="top">&nbsp;</td>
@@ -3239,7 +3261,7 @@ OSX: <span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="no"> No</span><br />
-                OSX: <span class="no">No</span></td>
+                MacOS: <span class="no">No</span></td>
               </tr>
               <tr>
                 <td valign="top">&nbsp;</td>
@@ -3256,7 +3278,7 @@ OSX: <span class="yes">Yes</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="no"> No</span><br />
-OSX: <span class="no">No</span></td>
+MacOS: <span class="no">No</span></td>
               </tr>
               <tr>
                 <td valign="top">&nbsp;</td>
@@ -3272,7 +3294,7 @@ OSX: <span class="no">No</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="no"> No</span><br />
-OSX: <span class="no">No</span></td>
+MacOS: <span class="no">No</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-racing-wheel" title="Compatible with the Racing Wheel Template"></a></td>
@@ -3288,7 +3310,7 @@ OSX: <span class="no">No</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="no"> No</span><br />
-OSX: <span class="no">No</span></td>
+MacOS: <span class="no">No</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-racing-wheel" title="Compatible with the Racing Wheel Template"></a></td>
@@ -3304,7 +3326,7 @@ OSX: <span class="no">No</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="no"> No</span><br />
-OSX: <span class="no">No</span></td>
+MacOS: <span class="no">No</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-6-dof-controller" title="Compatible with the 6 DoF Controller Template"></a></td>
@@ -3320,7 +3342,7 @@ OSX: <span class="no">No</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="no"> No</span><br />
-                  OSX: <span class="no">No</span></td>
+                  MacOS: <span class="no">No</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-6-dof-controller" title="Compatible with the 6 DoF Controller Template"></a></td>
@@ -3338,7 +3360,7 @@ OSX: <span class="no">No</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="no"> No</span><br />
-                  OSX: <span class="no">No</span></td>
+                  MacOS: <span class="no">No</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-6-dof-controller" title="Compatible with the 6 DoF Controller Template"></a></td>
@@ -3356,7 +3378,7 @@ OSX: <span class="no">No</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="no"> No</span><br />
-                  OSX: <span class="no">No</span></td>
+                  MacOS: <span class="no">No</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-6-dof-controller" title="Compatible with the 6 DoF Controller Template"></a></td>
@@ -3373,7 +3395,7 @@ OSX: <span class="no">No</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="no"> No</span><br />
-                  OSX: <span class="no">No</span></td>
+                  MacOS: <span class="no">No</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-6-dof-controller" title="Compatible with the 6 DoF Controller Template"></a></td>
@@ -3391,7 +3413,7 @@ OSX: <span class="no">No</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="no"> No</span><br />
-                  OSX: <span class="no">No</span></td>
+                  MacOS: <span class="no">No</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-6-dof-controller" title="Compatible with the 6 DoF Controller Template"></a></td>
@@ -3407,7 +3429,7 @@ OSX: <span class="no">No</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="no"> No</span><br />
-OSX: <span class="no">No</span></td>
+MacOS: <span class="no">No</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-6-dof-controller" title="Compatible with the 6 DoF Controller Template"></a></td>
@@ -3423,7 +3445,7 @@ OSX: <span class="no">No</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="no"> No</span><br />
-                  OSX: <span class="no">No</span></td>
+                  MacOS: <span class="no">No</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-6-dof-controller" title="Compatible with the 6 DoF Controller Template"></a></td>
@@ -3441,7 +3463,7 @@ OSX: <span class="no">No</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="no"> No</span><br />
-                  OSX: <span class="no">No</span></td>
+                  MacOS: <span class="no">No</span></td>
               </tr>
               <tr>
                 <td valign="top"><a href="#template-legend" class="template-icon template-icon-6-dof-controller" title="Compatible with the 6 DoF Controller Template"></a></td>
@@ -3457,7 +3479,7 @@ OSX: <span class="no">No</span></td>
                 <td align="center" valign="top"><span class="partial">Android Fallback</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows: <span class="yes">Yes</span><br />
-OSX: <span class="no">No</span></td>
+MacOS: <span class="no">No</span></td>
               </tr>
               <tr>
                 <td valign="top">&nbsp;</td>
@@ -3474,7 +3496,7 @@ OSX: <span class="no">No</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top"><span class="no">No</span></td>
                 <td align="center" valign="top">Windows:<span class="no"> No</span><br />
-                  OSX: <span class="no">No</span></td>
+                  MacOS: <span class="no">No</span></td>
               </tr>
               <tr>
               	<td colspan="13">&nbsp;</td>
@@ -3484,7 +3506,7 @@ OSX: <span class="no">No</span></td>
               <td valign="top"><p class="controller-type"><a name="remote-controls" id="remote-controls"></a>Remote Controls</p></td>
               <td align="center" valign="top"><strong>Windows<br />
                 (Native)</strong></td>
-              <td align="center" valign="top"><strong>OSX<br />
+              <td align="center" valign="top"><strong>MacOS<br />
                 (Native)</strong></td>
               <td align="center" valign="top"><strong>Windows 8.0 Store<br />
                 (Native)</strong></td>
@@ -3497,7 +3519,7 @@ OSX: <span class="no">No</span></td>
               <td align="center" valign="top"><strong>Android <span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications">2</a>]</span></strong></td>
               <td align="center" valign="top"><strong>Amazon Fire TV <span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications">2</a>]</span></strong></td>
               <td align="center" valign="top"><strong>Apple iOS / tvOS <span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications">2</a>]</span></strong></td>
-              <td align="center" valign="top"><strong>Webplayer (Windows / OSX Fallback) <span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications">2</a>]</span></strong></td>
+              <td align="center" valign="top"><strong>Webplayer (Windows / MacOS Fallback) <span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications">2</a>]</span></strong></td>
               </tr>
             <tr>
               <td valign="top">&nbsp;</td>
@@ -3513,7 +3535,7 @@ OSX: <span class="no">No</span></td>
               <td align="center" valign="top"><span class="yes">Yes<strong><span style="vertical-align: super; font-size: 65%;"> [<a href="#clarifications">13</a>]</span></strong></span></td>
               <td align="center" valign="top"><span class="no">No</span></td>
               <td align="center" valign="top">Windows: <span class="partial">Keyboard</span><br />
-              OSX: <span class="note">Not Mapped Yet</span></td>
+              MacOS: <span class="note">Not Mapped Yet</span></td>
               </tr>
             <tr>
               <td valign="top">&nbsp;</td>
@@ -3529,7 +3551,7 @@ OSX: <span class="no">No</span></td>
               <td align="center" valign="top"><span class="no">No</span></td>
               <td align="center" valign="top"><span class="no">No</span></td>
               <td align="center" valign="top">Windows:<span class="no"> No</span><br />
-              OSX: <span class="note">Not Mapped Yet</span></td>
+              MacOS: <span class="note">Not Mapped Yet</span></td>
               </tr>
             <tr>
               <td valign="top">&nbsp;</td>
@@ -3545,7 +3567,7 @@ OSX: <span class="no">No</span></td>
               <td align="center" valign="top"><span class="no">No</span></td>
               <td align="center" valign="top"><span class="no">No</span></td>
               <td align="center" valign="top">Windows:<span class="no"> No</span><br />
-OSX: <span class="no">No</span></td>
+MacOS: <span class="no">No</span></td>
             </tr>
             <tr>
               <td valign="top">&nbsp;</td>
@@ -3562,7 +3584,7 @@ OSX: <span class="no">No</span></td>
               <td align="center" valign="top"><span class="no">No</span></td>
               <td align="center" valign="top">tvOS: <span class="yes">Yes</span></td>
               <td align="center" valign="top">Windows:<span class="no"> No</span><br />
-OSX: <span class="no">No</span></td>
+MacOS: <span class="no">No</span></td>
             </tr>
             <tr>
               <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -3579,7 +3601,7 @@ OSX: <span class="no">No</span></td>
               <td align="center" valign="top"><span class="no">No</span></td>
               <td align="center" valign="top"><span class="no">No</span></td>
               <td align="center" valign="top">Windows: <span class="yes">Yes</span><br />
-                OSX: <span class="no">No</span></td>
+                MacOS: <span class="no">No</span></td>
               </tr>
             <tr>
               	<td colspan="13">&nbsp;</td>
@@ -3589,7 +3611,7 @@ OSX: <span class="no">No</span></td>
               <td valign="top"><p class="controller-type"><a name="vr-controllers" id="vr-controllers"></a>VR Controllers</p></td>
               <td align="center" valign="top"><strong>Windows<br />
                 (Native)</strong></td>
-              <td align="center" valign="top"><strong>OSX<br />
+              <td align="center" valign="top"><strong>MacOS<br />
                 (Native)</strong></td>
               <td align="center" valign="top"><strong>Windows 8.0 Store<br />
                 (Native)</strong></td>
@@ -3602,7 +3624,7 @@ OSX: <span class="no">No</span></td>
               <td align="center" valign="top"><strong>Android <span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications">2</a>]</span></strong></td>
               <td align="center" valign="top"><strong>Amazon Fire TV <span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications">2</a>]</span></strong></td>
               <td align="center" valign="top"><strong>Apple iOS / tvOS <span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications">2</a>]</span></strong></td>
-              <td align="center" valign="top"><strong>Webplayer (Windows / OSX Fallback) <span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications">2</a>]</span></strong></td>
+              <td align="center" valign="top"><strong>Webplayer (Windows / MacOS Fallback) <span style="vertical-align: super; font-size: 65%;">[<a href="#clarifications">2</a>]</span></strong></td>
               </tr>
             <tr>
               <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -3619,7 +3641,7 @@ OSX: <span class="no">No</span></td>
               <td align="center" valign="top"><span class="no">No</span></td>
               <td align="center" valign="top"><span class="no">No</span></td>
               <td align="center" valign="top">Windows: <span class="yes">Yes</span><br />
-OSX: <span class="no">No</span></td>
+MacOS: <span class="no">No</span></td>
             </tr>
             <tr>
               <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -3636,7 +3658,7 @@ OSX: <span class="no">No</span></td>
               <td align="center" valign="top"><span class="no">No</span></td>
               <td align="center" valign="top"><span class="no">No</span></td>
               <td align="center" valign="top">Windows: <span class="yes">Yes</span><br />
-OSX: <span class="no">No</span></td>
+MacOS: <span class="no">No</span></td>
             </tr>
             </table>
           <p>&nbsp;</p>
@@ -3847,14 +3869,14 @@ OSX: <span class="no">No</span></td>
             <h3>Controllers not supported at all</h3>
             <ul>
               <li>Serial port or game port controllers.</li>
-              <li>Controllers not supported by Raw Input, Direct Input, or XInput on Windows, I/O Kit on OSX, udev on Linux, or the input API(s) in use on the particular platform in question.</li>
+              <li>Controllers not supported by Raw Input, Direct Input, or XInput on Windows, I/O Kit on MacOS, udev on Linux, or the input API(s) in use on the particular platform in question.</li>
               <li>Controllers not supported by Unity on fallback platforms.</li>
               <li>Controllers that require a special SDK.</li>
               <li>Some very exotic controllers.</li>
             </ul>
             <p>Some of the above controllers may be indirectly supported through the use of <a href="CustomControllers.html">Custom Controllers</a>.</p>
             <h3><a name="SteamController" id="SteamController"></a>Steam Controller</h3>
-            <p>The Steam Controller automatically emulates an XInput gampad (XBox 360) on Windows, OSX, and Linux and is supported as an XInput gamepad. No direct support of the controller's special features is available at this time.</p>
+            <p>The Steam Controller automatically emulates an XInput gampad (XBox 360) on Windows, MacOS, and Linux and is supported as an XInput gamepad. No direct support of the controller's special features is available at this time.</p>
             <p>For more information on using the Steam Controller, see <a href="Troubleshooting.html#steam-controller">Troubleshooting - Steam Controller</a> and <a href="BestPractices.html#steam">Best Practices - Steam.</a></p>
             <h3><a name="android" id="android"></a>Android unknown gamepad support</h3>
             <p>In addition to the devices shown in the table above, Rewired has an option to attempt to support all unknown gamepads. On the <a href="RewiredEditor.html#Settings">Rewired Input Manager - Settings page</a>, enable the option &quot;Support Unknown Gamepads.&quot; <a href="RewiredEditor.html#settings-android">More information about how this option works and caveats can be found here</a>.</p>
@@ -3876,7 +3898,7 @@ OSX: <span class="no">No</span></td>
                 <td><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
                 <td><span class="controller-type">WebGL Gamepad Mappings</span></td>
                 <td><p>Windows 10 (1703)</p></td>
-                <td>OSX 10.12.5 Sierra</td>
+                <td>MacOS 10.12.5 Sierra</td>
                 <td>Ubuntu 14.04</td>
                 <td>Ubuntu 17.04</td>
               </tr>
@@ -4043,14 +4065,14 @@ OSX: <span class="no">No</span></td>
             </table>
             <p>&nbsp;</p>
             <h4><a name="SDL2" id="SDL2"></a>SDL2 Gamepad Support</h4>
-<p>SDL2 is an optional input source for Rewired on Windows Standalone, OSX Standalone, and Linux Standalone builds. Below are the current SDL2 mappings included with Rewired. Note: Controller support through SDL2 is not as robust as with Rewired's custom native support.</p>
+<p>SDL2 is an optional input source for Rewired on Windows Standalone, MacOS Standalone, and Linux Standalone builds. Below are the current SDL2 mappings included with Rewired. Note: Controller support through SDL2 is not as robust as with Rewired's custom native support.</p>
 <table width="100%" border="0" class="supported-controllers-table">
   <tr>
     <td valign="top">&nbsp;</td>
     <td valign="top"><span class="controller-type">SDL2 Gamepad Mappings</span></td>
     <td align="center" valign="top"><strong>Windows</strong></td>
-    <td align="center" valign="top"><strong>OSX</strong></td>
-    <td align="center" valign="top"><strong>Linux</strong></td>
+    <td align="center" valign="top"><strong>MacOS</strong>
+    </td><td align="center" valign="top"><strong>Linux</strong></td>
     </tr>
   <tr>
     <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
@@ -4858,7 +4880,7 @@ OSX: <span class="no">No</span></td>
   </tr>
   <tr>
     <td valign="top"><a href="#template-legend" class="template-icon template-icon-gamepad" title="Compatible with the Gamepad Template"></a></td>
-    <td valign="top">SteelSeries Stratus XL (iOS/OSX version)</td>
+    <td valign="top">SteelSeries Stratus XL (iOS/MacOS version)</td>
     <td align="center" valign="top"><span class="no">No</span></td>
     <td align="center" valign="top"><span class="partial">Partial</span><br />
       <span class="note">(D-pad, all center buttons not working)</span></td>
@@ -5027,7 +5049,7 @@ OSX: <span class="no">No</span></td>
   <li>If you are also using the Logitech Gaming SDK for force feedback, you should be able to use either Raw Input or Direct Input.</li>
   <li>In order to use force feedback on the Logitech G29, you must use the <a href="https://www.assetstore.unity3d.com/en/#!/content/6630" target="_new">Logitech Gaming SDK</a> which can be downloaded free from the Unity Asset Store. The SDK is only available for Windows.</li>
 </ul>
-<p>OSX:</p>
+<p>MacOS:</p>
 <ul>
   <li>The wheel switch must be set to PS3 mode.</li>
   <li>The clutch, shifter, plus, minus, dial, and enter do not function.</li>
@@ -5112,7 +5134,7 @@ OSX: <span class="no">No</span></td>
 </table>
 <p>&nbsp;</p>
 <hr />
-<p style="font-size: 60%"><span style="vertical-align: super"><a name="clarifications" id="clarifications"></a>1</span> Controller must be compatible with underlying system. On Windows the   controller must be compatible with Raw Input, Direct Input, or XInput. On OSX, it   must be compatible with Apple I/O Kit. Support for exotic controller types not guaranteed.</p>
+<p style="font-size: 60%"><span style="vertical-align: super"><a name="clarifications" id="clarifications"></a>1</span> Controller must be compatible with underlying system. On Windows the   controller must be compatible with Raw Input, Direct Input, or XInput. On MacOS, it   must be compatible with Apple I/O Kit. Support for exotic controller types not guaranteed.</p>
 <p style="font-size: 65%">2 This platform uses Unity input as the input source, therefore it is subject to all limitations of Unity's input system such as lack of hot-plugging support, poor controller identification ability, limit of 10 controllers, limit of 20 axes and 20 buttons per controller, etc. For a good input experience, Unity's input system must be replaced with a native input library. This is possible for any platform except Webplayer. If there is enough demand, I can write an input library for the platform to replace Unity's flawed input system.</p>
 <p style="font-size: 60%">4 On Android, Rewired uses Unity's input system as the input source. Unity only supports up to 20 buttons. Many controllers on Android begin mapping their buttons at index 15, leaving only 5 open entries for all remaining buttons. There is no solution to supporting these controllers fully in Android short of writing a native input library to replace Unity as the input source. I will do this if there is enough demand.</p>
 <p style="font-size: 60%">5 On Android and Linux, the Microsoft XBox 360 Wireless Receiver shows up as 4 separate joystick entries. Only one of these joystick entries actually represents the joystick, but Rewired will see it as 4 separate joysticks. The user will have to manually choose from the 4 entries to determine the correct one that represents the XBox 360 controller.</p>
@@ -5128,19 +5150,17 @@ OSX: <span class="no">No</span></td>
 <p style="font-size: 60%">15 Linux native support has been tested under Ubuntu 12.04 amd64, Ubuntu 14.04 x86/amd64, Ubuntu 15.04 amd64, Ubuntu 17.04 amd64, Mint 17.2 amd64, and SteamOS. Compatibility with other distros is not guranteed or implied.</p>
 <p style="font-size: 60%">16 Unity 4.x Android returns a blank string for the name of this joystick. Unity also uses blank strings for any joystick that was previously attached and then removed. There is no way to identify that this controller is connected on Unity 4.x Android, therefore it is not supported. Unity 5+ works correctly, however.</p>
 <p style="font-size: 60%">17 Has definition, but device cannot be opened by HID system in Windows UWP for unknown reason. YMMV.</p>
-<p style="font-size: 60%">18 Sony Dual Shock 4 special features are not supported on OSX via Bluetooth connection. There is no possible way to support these features of the DS4 via Bluetooth 
-  on OSX because the HID reports sent by the device through OSX I/O kit simply do not 
+<p style="font-size: 60%">18 Sony Dual Shock 4 special features are not supported on MacOS via Bluetooth connection. There is no possible way to support these features of the DS4 via Bluetooth 
+  on MacOS because the HID reports sent by the device through MacOS I/O kit simply do not 
   contain gyro or touchpad information and it does not accept output reports 
-  to set vibration or light color. This is a limitation of OSX I/O kit.</p>
+  to set vibration or light color. This is a limitation of MacOS I/O kit.</p>
 <p style="font-size: 60%"><a name="clarifications-19" id="clarifications-19"></a>19 Requires SteelSeries Engine 3+ to be installed and for the device to have the latest firmware as of 3/18/2017.</p>
-<p style="font-size: 60%"><a name="clarifications-20" id="clarifications-20"></a>20 Joy-Con sticks on non-Switch platforms return digital hat values. Analog stick values, gyro, vibration, and other special features not available. Controller layout is based on the horizontal orientation.</p>
+<p style="font-size: 60%"><a name="clarifications-20" id="clarifications-20"></a>20 Joy-Con sticks on non-Switch platforms without Enhanced Device Support enabled return digital hat values. Analog stick values, gyro, vibration, and other special features not available. Controller layout is based on the horizontal orientation.</p>
 <p style="font-size: 60%"><a name="clarifications-21" id="clarifications-21"></a>21  Gyro, vibration, and other special features not available.</p>
-<p style="font-size: 60%"><a name="clarifications-22" id="clarifications-22"></a>22 On OSX, using X mode with a wired connection on Gamesir G3, G3s, G3v, and G3w can cause the entire OS input system to crash requiring a system reboot to fix. It may be related to the XInput driver version in use. YMMV.</p>
-<p style="font-size: 60%"><a name="clarifications-23" id="clarifications-23"></a>23 This device in OSX mode emulates and appears to the system as a Sony DualShock 4 controller. However, if Enhanced Device Support is enabled, the controller will become unusable because the controller does not correctly emulate the Sony input/output report format, therefore Rewired's low-level Enhanced Device Support mode cannot properly communicate with the device. There is no way to determine that the connected device is an 8Bitdo gamepad and not a true Sony DualShock 4, so when Enhanced Device Support is enabled, the device cannot function in OSX mode.</p>
-<p style="font-size: 60%"><a name="clarifications-24" id="clarifications-24"></a>24 The Nintendo Switch Pro Controller does not produce any input when connected via USB. This is not a limitation of Rewired. It is a limitation of the hardware and/or HID driver.</p>
-<p style="font-size: 60%"><a name="clarifications-25" id="clarifications-25"></a>25 The Nintendo Switch Pro Controller no longer works on current versions of MacOS. I/O Kit is unable to get data from the device. The only way to support this controller is through Apple's Game Controller Framework, a separate input API.</p>
-<p style="font-size: 60%"><a name="clarifications-26" id="clarifications-26"></a>26 Nintendo Switch Pro Controllers with current firmware no longer works on Windows wirelessly or wired. There is no fix to this issue. 3rd party XInput drivers may work, and the controller may function through Steam when Pro Controller configuratoin is enabled in Steam.</p>
-<p style="font-size: 60%"><a name="clarifications-27" id="clarifications-27"></a>27 Nintendo Switch Pro Controllers with current firmware no longer works on Windows or MacOS wirelessly or wired. This breaking change in firmware may also prevent the controller from working on other platforms. These platforms have not been tested since this breaking change was made.</p>
+<p style="font-size: 60%"><a name="clarifications-22" id="clarifications-22"></a>22 On MacOS, using X mode with a wired connection on Gamesir G3, G3s, G3v, and G3w can cause the entire OS input system to crash requiring a system reboot to fix. It may be related to the XInput driver version in use. YMMV.</p>
+<p style="font-size: 60%"><a name="clarifications-23" id="clarifications-23"></a>23 This device in MacOS mode emulates and appears to the system as a Sony DualShock 4 controller. However, if Enhanced Device Support is enabled, the controller will become unusable because the controller does not correctly emulate the Sony input/output report format, therefore Rewired's low-level Enhanced Device Support mode cannot properly communicate with the device. There is no way to determine that the connected device is an 8Bitdo gamepad and not a true Sony DualShock 4, so when Enhanced Device Support is enabled, the device cannot function in MacOS mode.</p>
+<p style="font-size: 60%"><a name="clarifications-24" id="clarifications-24"></a>24 The Sony DualSense controller on Windows and MacOS vibration motor intensities are not truly independent. The device seems to vibrate only at maximum intensity  no matter the value sent to the device. A workaround was put in place to vary the overall unified motor intensity based on the max of the two vibration intensities. This leads to some oddities because if one motor is at max and the other motor is at 1%, both motors will vibrate at max intensity. There is no known better workaround for the vibration intensity problem.</p>
+<p style="font-size: 60%">&nbsp;</p>
 <div class="bottom-pager clearfix">
   <a class="back-button" href="Documentation.html" title="Documentation"><span class="button-img"></span>Documentation</a>
 </div>

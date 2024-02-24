@@ -24,7 +24,24 @@ public class managerargame : MonoBehaviour
     void Start()
     {
         inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
+
         plat = inv.datosserial.plat;
+
+        if(plat == "game3dt" || plat == "arcore")
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+        if(plat == "game3d")
+        {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+
+
+
+
+        
         if(plat == "arcore")
         {
             arcore.SetActive(true);

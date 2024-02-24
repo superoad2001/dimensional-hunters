@@ -321,6 +321,10 @@ public class disparoshitfloor : MonoBehaviour
                     {mana = 100;}
                     escudoonda.SetActive(false);
                 }
+                if (temp3 > -1)
+                {temp3 -= 1 * Time.deltaTime;}
+                if (temp < 15)
+                {temp += 1 * Time.deltaTime;}
             }
             if(plat == "game3d" || plat == "game3dt")
             {

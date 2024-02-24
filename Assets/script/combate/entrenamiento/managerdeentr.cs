@@ -24,10 +24,10 @@ public class managerdeentr : MonoBehaviour
     public float iniciotem = 0;
     public GameObject negro;
     public int o;
+
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame

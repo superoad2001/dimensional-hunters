@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.07194343, g: 0.03355332, b: 0.030250829, a: 1}
+  m_IndirectSpecularColor: {r: 0.072146714, g: 0.033691708, b: 0.030305054, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3300,7 +3300,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 30, y: 1}
-  m_SizeDelta: {x: 2757.5, y: 1604.5}
+  m_SizeDelta: {x: 3848, y: 2291}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &501578782
 MonoBehaviour:
@@ -6150,6 +6150,10 @@ MonoBehaviour:
   boton4: {fileID: 1283469430}
   boton5: {fileID: 1857406488}
   boton6: {fileID: 585316460}
+  boton7: {fileID: 0}
+  boton8: {fileID: 0}
+  boton9: {fileID: 0}
+  boton10: {fileID: 0}
 --- !u!4 &772878380
 Transform:
   m_ObjectHideFlags: 0
@@ -6887,7 +6891,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 5, y: -53.009583}
-  m_SizeDelta: {x: 2757.5, y: 1604.5}
+  m_SizeDelta: {x: 3848, y: 2291}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &857503649
 MonoBehaviour:

@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 989
   m_ShowMode: 4
-  m_Title: Animation
+  m_Title: Project
   m_RootView: {fileID: 10}
   m_MinSize: {x: 875, y: 421}
   m_MaxSize: {x: 10000, y: 10000}
@@ -152,7 +152,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 60
+  controlID: 128
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -177,7 +177,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 161
+  controlID: 202
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -668,7 +668,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/juego/animaciones/combate/combate/7/ant
+    - Assets/juego/animaciones/combate/combate/5/trashrat
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -676,16 +676,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/juego/animaciones/combate/combate/7/ant
+  - Assets/juego/animaciones/combate/combate/5/trashrat
   m_LastFoldersGridSize: 16
   m_LastProjectPath: F:\REPO\dimensional-hunters
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 103}
-    m_SelectedIDs: a6dd0000
-    m_LastClickedID: 56742
-    m_ExpandedIDs: 0000000080a9000082a9000084a9000086a9000088a900006eab000000ca9a3b
+    m_SelectedIDs: 7cd70000
+    m_LastClickedID: 55164
+    m_ExpandedIDs: 0000000080a9000082a9000084a9000086a9000088a900008aa9000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -852,24 +852,24 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 189}
-      m_SelectedIDs: 36850000
-      m_LastClickedID: 34102
-      m_ExpandedIDs: 28e6ffff1cf0ffff28f0ffff4cf0ffff58f0ffff26f9ffff26fbffffb884000068850000
+      scrollPos: {x: 0, y: 549}
+      m_SelectedIDs: 7cd70000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 0aecffff3aecffff4aecffff6eecffff72ecffff26fbffffb884000068850000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: manager
+        m_OriginalName: manager
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: 35022
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 2}
       m_SearchString: 
@@ -1287,9 +1287,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.5949478, y: -0.021142574, z: 5.2448435}
+    m_Target: {x: -2.2633412, y: 0.5616707, z: 5.568248}
     speed: 2
-    m_Value: {x: 0.5949478, y: -0.021142574, z: 5.2448435}
+    m_Value: {x: -2.2633412, y: 0.5616707, z: 5.568248}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1335,13 +1335,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.05928349, y: 0.054198205, z: -0.0031535723, w: 0.9968256}
+    m_Target: {x: 0.069790706, y: 0.040709723, z: -0.0027787727, w: 0.9967888}
     speed: 2
-    m_Value: {x: 0.059275046, y: 0.055689957, z: -0.0032422945, w: 0.9966818}
+    m_Value: {x: 0.06979442, y: 0.037716847, z: -0.0025692298, w: 0.9968448}
   m_Size:
-    m_Target: 2.140004
+    m_Target: 2.0466948
     speed: 2
-    m_Value: 2.2408419
+    m_Value: 2.0466948
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1387,9 +1387,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 533
-    width: 1015
-    height: 458
+    y: 542
+    width: 1016
+    height: 449
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1421,9 +1421,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 533
-    width: 1015
-    height: 458
+    y: 542
+    width: 1016
+    height: 449
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1450,7 +1450,7 @@ MonoBehaviour:
   m_UseMipMap: 0
   m_SimulatorState:
     controlPanelVisible: 0
-    controlPanelWidth: NaN
+    controlPanelWidth: 0
     controlPanelFoldoutKeys:
     - UnityEditor.DeviceSimulation.ApplicationSettingsPlugin
     controlPanelFoldoutValues: 00
@@ -1460,7 +1460,7 @@ MonoBehaviour:
     pluginStates:
     - '{}'
     - '{}'
-    scale: 10
+    scale: 32
     fitToScreenEnabled: 1
     rotationDegree: 270
     highlightSafeAreaEnabled: 0

@@ -132,9 +132,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 48044984}
+  - component: {fileID: 48044982}
   - component: {fileID: 48044985}
   - component: {fileID: 48044983}
-  - component: {fileID: 48044982}
   m_Layer: 0
   m_Name: intercdat
   m_TagString: Untagged
@@ -411,6 +411,7 @@ MonoBehaviour:
   nivelr:
     m_InternalValue: 1
   managermulti: {fileID: 849706757}
+  client: 0
 --- !u!4 &48044984
 Transform:
   m_ObjectHideFlags: 0
@@ -675,6 +676,7 @@ MonoBehaviour:
     m_InternalValue: 0
   nivelr:
     m_InternalValue: 1
+  client: 0
 --- !u!1 &50089282
 GameObject:
   m_ObjectHideFlags: 0
@@ -1868,31 +1870,127 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   borrar: 0
-  name: []
-  hp: []
-  mana: []
-  manarec: []
-  fuerza: []
-  elemento: []
-  nivel: []
-  bichosmios: []
-  exp: []
-  rango: []
-  clase: []
-  dinero: 0
-  hierbaomega: 0
-  licencia: []
-  tipohierba: []
-  pocvp: 0
-  pocvm: 0
-  pocvg: 0
-  pocmp: 0
-  pocmm: 0
-  pocmg: 0
-  limite: 5
   indexmax: 0
-  catalogo: []
   o: 0
+  datosserial:
+    rangoplay: 1
+    name: []
+    hp: []
+    mana: []
+    manarec: []
+    fuerza: []
+    elemento: []
+    nivel: []
+    bichosmios: []
+    exp: []
+    rango: []
+    clase: []
+    dinero: 0
+    hierbaomega: 0
+    licencia:
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    tipohierba:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    limite: 5
+    indexmax: 0
+    catalogo: []
+    names: 
+    hps: 0
+    manas: 0
+    manarecs: 0
+    fuerzas: 0
+    elementos: 
+    nivels: 0
+    clases: 0
+    razas: 
+    rangors: 0
+    exps: 0
+    rangoene: 0
+    nivelene: 0
+    hpene: 0
+    manaene: 0
+    manarecene: 0
+    fuerzaene: 0
+    elementoene: 
+    claseene: 0
+    razaene: 
+    nameene: 
+    varsel1: 0
+    client: 0
+    nameinter: 
+    hpinter: 0
+    manainter: 0
+    manarecinter: 0
+    fuerzainter: 0
+    elementointer: 
+    nivelinter: 0
+    claseinter: 0
+    razainter: 
+    rangorinter: 0
+    expinter: 0
+    nameinter2: 
+    hpinter2: 0
+    manainter2: 0
+    manarecinter2: 0
+    fuerzainter2: 0
+    elementointer2: 
+    nivelinter2: 0
+    claseinter2: 0
+    razainter2: 
+    rangorinter2: 0
+    expinter2: 0
+    plat: game3d
+    hierbau: 1
+    bichocaza: 
+    namer: 
+    hpr: 0
+    manar: 0
+    manarecr: 0
+    fuerzar: 0
+    elementor: 
+    nivelr: 0
+    claser: 0
+    razar: 
+    rangorr: 0
+  repath: 
 --- !u!4 &437514560
 Transform:
   m_ObjectHideFlags: 0
@@ -2787,6 +2885,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 926509286}
   m_CullTransparentMesh: 1
+--- !u!1 &937707503
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 937707505}
+  - component: {fileID: 937707504}
+  m_Layer: 0
+  m_Name: musicaid
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &937707504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937707503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10dfb9d39830c6347ad99a7c410e0642, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicaid: 999
+--- !u!4 &937707505
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937707503}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1327.19, y: 986.45386, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1004769988
 GameObject:
   m_ObjectHideFlags: 0
@@ -3653,31 +3796,127 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   borrar: 0
-  name: []
-  hp: []
-  mana: []
-  manarec: []
-  fuerza: []
-  elemento: []
-  nivel: []
-  bichosmios: []
-  exp: []
-  rango: []
-  clase: []
-  dinero: 0
-  hierbaomega: 0
-  licencia: []
-  tipohierba: []
-  pocvp: 0
-  pocvm: 0
-  pocvg: 0
-  pocmp: 0
-  pocmm: 0
-  pocmg: 0
-  limite: 10
   indexmax: 0
-  catalogo: []
   o: 0
+  datosserial:
+    rangoplay: 1
+    name: []
+    hp: []
+    mana: []
+    manarec: []
+    fuerza: []
+    elemento: []
+    nivel: []
+    bichosmios: []
+    exp: []
+    rango: []
+    clase: []
+    dinero: 0
+    hierbaomega: 0
+    licencia:
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    tipohierba:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    limite: 5
+    indexmax: 0
+    catalogo: []
+    names: 
+    hps: 0
+    manas: 0
+    manarecs: 0
+    fuerzas: 0
+    elementos: 
+    nivels: 0
+    clases: 0
+    razas: 
+    rangors: 0
+    exps: 0
+    rangoene: 0
+    nivelene: 0
+    hpene: 0
+    manaene: 0
+    manarecene: 0
+    fuerzaene: 0
+    elementoene: 
+    claseene: 0
+    razaene: 
+    nameene: 
+    varsel1: 0
+    client: 0
+    nameinter: 
+    hpinter: 0
+    manainter: 0
+    manarecinter: 0
+    fuerzainter: 0
+    elementointer: 
+    nivelinter: 0
+    claseinter: 0
+    razainter: 
+    rangorinter: 0
+    expinter: 0
+    nameinter2: 
+    hpinter2: 0
+    manainter2: 0
+    manarecinter2: 0
+    fuerzainter2: 0
+    elementointer2: 
+    nivelinter2: 0
+    claseinter2: 0
+    razainter2: 
+    rangorinter2: 0
+    expinter2: 0
+    plat: game3d
+    hierbau: 1
+    bichocaza: 
+    namer: 
+    hpr: 0
+    manar: 0
+    manarecr: 0
+    fuerzar: 0
+    elementor: 
+    nivelr: 0
+    claser: 0
+    razar: 
+    rangorr: 0
+  repath: 
 --- !u!1 &1835866077
 GameObject:
   m_ObjectHideFlags: 0
@@ -4784,3 +5023,4 @@ SceneRoots:
   - {fileID: 2023666259}
   - {fileID: 48044984}
   - {fileID: 437514560}
+  - {fileID: 937707505}

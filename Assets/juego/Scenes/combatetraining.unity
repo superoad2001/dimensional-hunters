@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.07194343, g: 0.03355332, b: 0.030250829, a: 1}
+  m_IndirectSpecularColor: {r: 0.072146714, g: 0.033691708, b: 0.030305054, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1893,6 +1893,16 @@ MonoBehaviour:
   arcore: {fileID: 166994657}
   game3d: {fileID: 363119438}
   game3dtact: {fileID: 1382229951}
+  boton1: {fileID: 0}
+  boton2: {fileID: 0}
+  boton3: {fileID: 0}
+  boton4: {fileID: 0}
+  boton5: {fileID: 0}
+  boton6: {fileID: 0}
+  boton7: {fileID: 0}
+  boton8: {fileID: 0}
+  boton9: {fileID: 0}
+  boton10: {fileID: 0}
 --- !u!4 &303653307
 Transform:
   m_ObjectHideFlags: 0
@@ -7865,6 +7875,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1712345462}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1638656660
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1638656662}
+  - component: {fileID: 1638656661}
+  m_Layer: 0
+  m_Name: musicaid
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1638656661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638656660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10dfb9d39830c6347ad99a7c410e0642, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicaid: 999
+--- !u!4 &1638656662
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638656660}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1327.19, y: 986.45386, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1654290774
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10160,6 +10215,7 @@ SceneRoots:
   - {fileID: 2036175947}
   - {fileID: 149525401}
   - {fileID: 1727770014}
+  - {fileID: 1638656662}
   - {fileID: 1654290774}
   - {fileID: 408761116}
   - {fileID: 218922518}

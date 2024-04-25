@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.06545995, g: 0.121415466, b: 0.22174154, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7069,6 +7069,51 @@ SkinnedMeshRenderer:
   m_CorrespondingSourceObject: {fileID: 8229380384077224837, guid: 8632ce4d0cd5a3847bd84630e9292988, type: 3}
   m_PrefabInstance: {fileID: 1614065739}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1655769909
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1655769911}
+  - component: {fileID: 1655769910}
+  m_Layer: 0
+  m_Name: musicaid
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1655769910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1655769909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10dfb9d39830c6347ad99a7c410e0642, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicaid: 999
+--- !u!4 &1655769911
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1655769909}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1327.19, y: 986.45386, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1679780430
 GameObject:
   m_ObjectHideFlags: 0
@@ -9878,3 +9923,4 @@ SceneRoots:
   - {fileID: 561078151}
   - {fileID: 499561306}
   - {fileID: 2092717901}
+  - {fileID: 1655769911}

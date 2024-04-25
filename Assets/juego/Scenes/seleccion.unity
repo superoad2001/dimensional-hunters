@@ -67,6 +67,9 @@ LightmapSettings:
     m_LightmapParameters: {fileID: 0}
     m_LightmapsBakeMode: 1
     m_TextureCompression: 1
+    m_FinalGather: 0
+    m_FinalGatherFiltering: 1
+    m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
     m_MixedBakeMode: 2
     m_BakeBackend: 1
@@ -1092,7 +1095,7 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &787279296
 Animator:
-  serializedVersion: 7
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1106,7 +1109,6 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -1261,6 +1263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e82aa38c4fb19aa4ba274fb775a4aba4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rango: 0
   cazar: 0
   combate: 0
   atras: 0
@@ -1268,10 +1271,12 @@ MonoBehaviour:
   tutorial3: 0
   vez1: 0
   jefe1: 0
+  rangot: {fileID: 0}
   com: {fileID: 1926122981}
   tie: {fileID: 0}
   inve: {fileID: 0}
   red: {fileID: 0}
+  rangomost: 0
 --- !u!4 &902821283
 Transform:
   m_ObjectHideFlags: 0
@@ -1300,31 +1305,127 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   borrar: 0
-  name: []
-  hp: []
-  mana: []
-  manarec: []
-  fuerza: []
-  elemento: []
-  nivel: []
-  bichosmios: []
-  exp: []
-  rango: []
-  clase: []
-  dinero: 0
-  hierbaomega: 0
-  licencia: []
-  tipohierba: []
-  pocvp: 0
-  pocvm: 0
-  pocvg: 0
-  pocmp: 0
-  pocmm: 0
-  pocmg: 0
-  limite: 10
   indexmax: 0
-  catalogo: []
   o: 0
+  datosserial:
+    rangoplay: 1
+    name: []
+    hp: []
+    mana: []
+    manarec: []
+    fuerza: []
+    elemento: []
+    nivel: []
+    bichosmios: []
+    exp: []
+    rango: []
+    clase: []
+    dinero: 0
+    hierbaomega: 0
+    licencia:
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    tipohierba:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    limite: 5
+    indexmax: 0
+    catalogo: []
+    names: 
+    hps: 0
+    manas: 0
+    manarecs: 0
+    fuerzas: 0
+    elementos: 
+    nivels: 0
+    clases: 0
+    razas: 
+    rangors: 0
+    exps: 0
+    rangoene: 0
+    nivelene: 0
+    hpene: 0
+    manaene: 0
+    manarecene: 0
+    fuerzaene: 0
+    elementoene: 
+    claseene: 0
+    razaene: 
+    nameene: 
+    varsel1: 0
+    client: 0
+    nameinter: 
+    hpinter: 0
+    manainter: 0
+    manarecinter: 0
+    fuerzainter: 0
+    elementointer: 
+    nivelinter: 0
+    claseinter: 0
+    razainter: 
+    rangorinter: 0
+    expinter: 0
+    nameinter2: 
+    hpinter2: 0
+    manainter2: 0
+    manarecinter2: 0
+    fuerzainter2: 0
+    elementointer2: 
+    nivelinter2: 0
+    claseinter2: 0
+    razainter2: 
+    rangorinter2: 0
+    expinter2: 0
+    plat: game3d
+    hierbau: 1
+    bichocaza: 
+    namer: 
+    hpr: 0
+    manar: 0
+    manarecr: 0
+    fuerzar: 0
+    elementor: 
+    nivelr: 0
+    claser: 0
+    razar: 
+    rangorr: 0
+  repath: 
 --- !u!1 &919642140
 GameObject:
   m_ObjectHideFlags: 0
@@ -1543,6 +1644,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1568701939
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1568701941}
+  - component: {fileID: 1568701940}
+  m_Layer: 0
+  m_Name: musicaid
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1568701940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568701939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10dfb9d39830c6347ad99a7c410e0642, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicaid: 2
+--- !u!4 &1568701941
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568701939}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1327.19, y: 986.45386, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1835291772
 GameObject:
   m_ObjectHideFlags: 0
@@ -1553,9 +1699,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1835291774}
   - component: {fileID: 1835291773}
+  - component: {fileID: 1835291775}
   m_Layer: 0
   m_Name: musica
-  m_TagString: Untagged
+  m_TagString: musica
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1671,6 +1818,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1835291775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1835291772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc816f5ec7ecab343afa5b8ebcd261f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicaid: 2
+  musicaidzona: {fileID: 0}
 --- !u!1 &1878063957
 GameObject:
   m_ObjectHideFlags: 0
@@ -1839,3 +2000,4 @@ SceneRoots:
   - {fileID: 1567961584}
   - {fileID: 902821283}
   - {fileID: 1835291774}
+  - {fileID: 1568701941}

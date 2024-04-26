@@ -109,6 +109,7 @@ public class datos
     public float claser;
     public string razar;
     public float rangorr;
+    public int clip;
 
 
     

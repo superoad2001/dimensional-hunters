@@ -1562,6 +1562,7 @@ MonoBehaviour:
     claser: 0
     razar: 
     rangorr: 0
+    clip: 1
   repath: 
 --- !u!114 &902821285
 MonoBehaviour:
@@ -2127,6 +2128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicaid: 2
   musicaidzona: {fileID: 0}
+  musica2: {fileID: 0}
 --- !u!1 &1878063957
 GameObject:
   m_ObjectHideFlags: 0
@@ -2285,6 +2287,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1926122979}
   m_CullTransparentMesh: 1
+--- !u!1 &1973927881
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1973927883}
+  - component: {fileID: 1973927882}
+  m_Layer: 0
+  m_Name: internetcon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1973927882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1973927881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2db4bd338e84fd4ca9a56378d83fcea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  load: 0
+  Connected_Internet: 0
+--- !u!4 &1973927883
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1973927881}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: -2.3000002}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2296,3 +2344,4 @@ SceneRoots:
   - {fileID: 902821283}
   - {fileID: 1835291774}
   - {fileID: 1547814877}
+  - {fileID: 1973927883}

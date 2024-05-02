@@ -2,15 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class inicio : MonoBehaviour
 {
 
     public bool iniciar = false;
     public int vez1 = 0;
+
+    public Text version;
     // Start is called before the first frame update
     void Start()
     {
+        version.text = "version "+ Application.version;
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
     }

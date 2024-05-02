@@ -28,7 +28,7 @@ public class internetdet : MonoBehaviour
         }
         if(Connected_Internet == false)
         {
-            SceneManager.LoadScene("menu");
+            SceneManager.LoadScene("desconexiongame");
             Destroy(this.gameObject);
         }
     }

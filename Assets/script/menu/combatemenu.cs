@@ -341,6 +341,7 @@ public class combatemenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        combateparametros combparam = UnityEngine.Object.FindObjectOfType<combateparametros>();
 
         inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
         if(inventario1 == true && atras == true)
@@ -1409,55 +1410,8 @@ public class combatemenu : MonoBehaviour
                     if(modogame == "torneo")
                     {
                         iaux = i;
-                        if(i == 0)
-                        {
-                            inv.datosserial.hptorneo[0] = hpbarcelona[1];
-                            inv.datosserial.manatorneo[0] = manabarcelona[1];
-                            inv.datosserial.manarectorneo[0] = manarecbarcelona[1];
-                            inv.datosserial.fuerzatorneo[0] = fuerzabarcelona[1];
-                            inv.datosserial.nametorneo[0] = namebarcelona[1];
-                            inv.datosserial.razatorneo[0] =  bichosbarcelona[1];
-                            inv.datosserial.niveltorneo[0] = (int)nivelbarcelona[1];
-                            inv.datosserial.clasetorneo[0] = clasebarcelona[1];
-                            inv.datosserial.rangotorneo[0] = rangobarcelona[1];
-
-                            inv.datosserial.hptorneo[1] = hpbarcelona[2];
-                            inv.datosserial.manatorneo[1] = manabarcelona[2];
-                            inv.datosserial.manarectorneo[1] = manarecbarcelona[2];
-                            inv.datosserial.fuerzatorneo[1] = fuerzabarcelona[2];
-                            inv.datosserial.nametorneo[1] = namebarcelona[2];
-                            inv.datosserial.razatorneo[1] =  bichosbarcelona[2];
-                            inv.datosserial.niveltorneo[1] = (int)nivelbarcelona[2];
-                            inv.datosserial.clasetorneo[1] = clasebarcelona[2];
-                            inv.datosserial.rangotorneo[1] = rangobarcelona[2];
-
-                            inv.datosserial.hptorneo[2] = hpbarcelona[3];
-                            inv.datosserial.manatorneo[2] = manabarcelona[3];
-                            inv.datosserial.manarectorneo[2] = manarecbarcelona[3];
-                            inv.datosserial.fuerzatorneo[2] = fuerzabarcelona[3];
-                            inv.datosserial.nametorneo[2] = namebarcelona[3];
-                            inv.datosserial.razatorneo[2] =  bichosbarcelona[3];
-                            inv.datosserial.niveltorneo[2] = (int)nivelbarcelona[3];
-                            inv.datosserial.clasetorneo[2] = clasebarcelona[3];
-                            inv.datosserial.rangotorneo[2] = rangobarcelona[3];
-                            inv.datosserial.torneopuesto = 0;
-                            inv.datosserial.modotorneo = true;
-                            inv.guardar();
-
-
-                            inv.datosserial.hpr = (int)Random.Range(900f,1000f)*rangoexp * 1.5f;
-                            inv.datosserial.manar = (int)Random.Range(200f,220f)*rangoexp * 1.5f;
-                            inv.datosserial.manarecr = Random.Range(1.6f,1.7f)*rangoexp * 1.5f;
-                            inv.datosserial.fuerzar = Random.Range(1.8f,2f)*rangoexp * 1.5f;
-                            inv.datosserial.elementor = "dorado rango :"+inv.datosserial.rangoplay;
-                            inv.datosserial.nivelr = 15;
-                            inv.datosserial.claser = 3;
-                            inv.datosserial.razar = "skybird";
-                            inv.datosserial.rangorr = inv.datosserial.rangoplay;
-                            inv.guardar();
-
-                            actheroe = true;
-                        }
+                        combparam._torneo(i);
+                        actheroe = true;
                         
                         
                     }

@@ -245,6 +245,18 @@ public class enemigo : Agent
         bicho = inv.datosserial.razaene;
         nivel = inv.datosserial.nivelene;
 
+        if(inv.datosserial.modotorneo == true)
+        {
+            hp = inv.datosserial.hptorneo[inv.datosserial.torneopuesto];
+            mana = inv.datosserial.manatorneo[inv.datosserial.torneopuesto];
+            manarec = inv.datosserial.manarectorneo[inv.datosserial.torneopuesto];
+            fuerza = inv.datosserial.fuerzatorneo[inv.datosserial.torneopuesto];
+            rango = inv.datosserial.rangotorneo[inv.datosserial.torneopuesto];
+            name = inv.datosserial.nametorneo[inv.datosserial.torneopuesto];
+            bicho = inv.datosserial.razatorneo[inv.datosserial.torneopuesto];
+            nivel = inv.datosserial.niveltorneo[inv.datosserial.torneopuesto];
+        }
+
         if(rango == 1)
         {rangoexp = 1;}
         if(rango == 2)

@@ -53,26 +53,8 @@ public class managerargame : MonoBehaviour
             arcore.SetActive(false);
             game3d.SetActive(true);
             game3dtact.SetActive(false);
-            if(boton1 != null)
-            {boton1.SetActive(false);}
-            if(boton2 != null)
-            {boton2.SetActive(false);}
-            if(boton3 != null)
-            {boton3.SetActive(false);}
-            if(boton4 != null)
-            {boton4.SetActive(false);}
-            if(boton5 != null)
-            {boton5.SetActive(false);}
             if(boton6 != null)
             {boton6.SetActive(false);}
-            if(boton7 != null)
-            {boton7.SetActive(false);}
-            if(boton8 != null)
-            {boton8.SetActive(false);}
-            if(boton9 != null)
-            {boton9.SetActive(false);}
-            if(boton10 != null)
-            {boton10.SetActive(false);}
             Cursor.visible = false;
         	Cursor.lockState = CursorLockMode.Locked;
         }

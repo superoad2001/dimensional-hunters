@@ -111,6 +111,21 @@ public class datos
     public float rangorr;
     public int clip = 1;
 
+    public bool modotorneo;
+
+    public int torneopuesto;
+
+    public string[] nametorneo = new string[5];
+    public float[] hptorneo = new float[5];
+    public float[] manatorneo = new float[5];
+    public float[] manarectorneo = new float[5];
+    public float[] fuerzatorneo = new float[5];
+    public string[] elementotorneo = new string[5];
+    public float[] niveltorneo = new float[5];
+    public string[] razatorneo = new string[5];
+    public float[] rangotorneo = new float[5];
+    public float[] clasetorneo = new float[5];
+
 
     
     

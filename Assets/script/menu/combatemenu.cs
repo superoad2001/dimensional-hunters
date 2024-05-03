@@ -17,6 +17,8 @@ public class combatemenu : MonoBehaviour
     public bool cajonentr;
     public bool actentre;
 
+    public int iaux;
+
     public List<string> name = new List<string>();
     public List<float> hp = new List<float>();
     public List<float> mana = new List<float>();
@@ -47,6 +49,10 @@ public class combatemenu : MonoBehaviour
     public List<string> bichosbarcelona = new List<string>();
 
     public string[] ciuda;
+
+    public string[] ligas;
+
+    public string[] torneos;
 
     public List<string> bichos = new List<string>();
 
@@ -106,6 +112,7 @@ public class combatemenu : MonoBehaviour
     public Text lib;
 
     public Text who;
+    public Text textciudadguia;
 
     public GameObject bichom;
     public GameObject madcat;
@@ -167,7 +174,24 @@ public class combatemenu : MonoBehaviour
 
     public Text tornetext;
     public int tutorial2;
+    public GameObject modoobj;
+    public bool actmodo;
+    public bool modocom;
+    public string modogame;
 
+    public int minliga;
+    public int maxliga;
+
+    public int minligaesc;
+    public int maxligaesc;
+
+    public bool ciudadesliga;
+    public bool ciudadliga;
+
+    public bool ciudadestorneo;
+    public bool ciudadtorneo;
+
+    public string ciudadesc;
 
     // Start is called before the first frame update
 
@@ -181,7 +205,19 @@ public class combatemenu : MonoBehaviour
     }
     public void _cajoncomb()
     {
+        actmodo = true;
+    }
+    public void _combatem()
+    {
         ciudades = true;
+        modogame = "combate";
+        i = 0;
+    }
+    public void _torneom()
+    {
+        ciudades = true;
+        modogame = "torneo";
+        i = 0;
     }
     public void _hist()
     {
@@ -238,123 +274,66 @@ public class combatemenu : MonoBehaviour
 
 
 
-
+    public int rango;
+    public float rangoexp;
     void Start()
     {
-        
+        inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
+        combateparametros combparam = UnityEngine.Object.FindObjectOfType<combateparametros>();
+
+        combparam.carga();
 
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
+        rango = inv.datosserial.rangoplay;
+        if(rango == 1)
+        {rangoexp = 1;}
+        if(rango == 2)
+        {rangoexp = 1.50f;}
+        if(rango == 3)
+        {rangoexp = 2f;}
+        if(rango == 4)
+        {rangoexp = 2.50f;}
+        if(rango == 5)
+        {rangoexp = 3f;}
 
-        ciuda = new string[6];
+        if(rango == 6)
+        {rangoexp = 3.25f;}
+        if(rango == 7)
+        {rangoexp = 3.75f;}
+        if(rango == 8)
+        {rangoexp = 4.25f;}
+        if(rango == 9)
+        {rangoexp = 4.75f;}
+        if(rango == 10)
+        {rangoexp = 5.25f;}
 
+        if(rango == 11)
+        {rangoexp = 5.5f;}
+        if(rango == 12)
+        {rangoexp = 6f;}
+        if(rango == 13)
+        {rangoexp = 6.50f;}
+        if(rango == 14)
+        {rangoexp = 7f;}
+        if(rango == 15)
+        {rangoexp = 7.50f;}
 
-        ciuda[0] = "barcelona";
-        ciuda[1] = "paris";
-        ciuda[2] = "nueva york";
-        ciuda[3] = "pekin";
-        ciuda[4] = "mexico";
-        ciuda[5] = "londres";
+        if(rango == 16)
+        {rangoexp = 7.75f;}
+        if(rango == 17)
+        {rangoexp = 8.25f;}
+        if(rango == 48)
+        {rangoexp = 8.75f;}
+        if(rango == 19)
+        {rangoexp = 9.25f;}
+        if(rango == 20)
+        {rangoexp = 9.75f;}
 
-
-
-
-        namebarcelona = new string[6];
-        hpbarcelona = new float[6];
-        manabarcelona = new float[6];
-        manarecbarcelona = new float[6];
-        fuerzabarcelona = new float[6];
-        elementobarcelona = new string[6];
-        nivelbarcelona = new float[6];
-        rangobarcelona = new float[6];
-        clasebarcelona = new float[6];
+        if(rango == 21)
+        {rangoexp = 10;}
 
         
-        
-
-
-        catalogo.Add( "skybird");
-        catalogo.Add("topo topo");
-        catalogo.Add("shitfloor");
-        catalogo.Add("madcat");
-        
-
-
-        namebarcelona[0] = "paco";
-        hpbarcelona[0] = 100;
-        manabarcelona[0] = 60;
-        manarecbarcelona[0] = 0.5f;
-        fuerzabarcelona[0] = 0.8f;
-        nivelbarcelona[0] = 1;
-        elementobarcelona[0] = "comun rango : 1";
-        rangobarcelona[0] = 1;
-        clasebarcelona[0] = 1;
-        bichosbarcelona.Add( "");
-        bichosbarcelona[0] = catalogo[3];
-
-
-        namebarcelona[1] = "jaume";
-        hpbarcelona[1] = 60;
-        manabarcelona[1] = 100;
-        manarecbarcelona[1] = 0.3f;
-        fuerzabarcelona[1] = 0.8f;
-        elementobarcelona[1] = "comun rango : 1";
-        rangobarcelona[1] = 1;
-        clasebarcelona[1] = 1;
-        nivelbarcelona[1] = 1;
-        bichosbarcelona.Add( "");
-        bichosbarcelona[1] = catalogo[2];
-
-
-        namebarcelona[2] = "agusti";
-        hpbarcelona[2] = 80;
-        manabarcelona[2] = 70;
-        manarecbarcelona[2] = 0.4f;
-        fuerzabarcelona[2] = 1f;
-        elementobarcelona[2] = "comun rango : 1";
-        rangobarcelona[2] = 1;
-        clasebarcelona[2] = 1;
-        nivelbarcelona[2] = 2;
-        bichosbarcelona.Add( "");
-        bichosbarcelona[2] = catalogo[1];
-
-
-        namebarcelona[3] = "enric";
-        hpbarcelona[3] = 120;
-        manabarcelona[3] = 80;
-        manarecbarcelona[3] = 0.7f;
-        fuerzabarcelona[3] = 0.7f;
-        elementobarcelona[3] = "comun rango : 1";
-        rangobarcelona[3] = 1;
-        clasebarcelona[3] = 1;
-        nivelbarcelona[3] = 3;
-        bichosbarcelona.Add( "");
-        bichosbarcelona[3] = catalogo[0];
-
-        namebarcelona[4] = "josep";
-        hpbarcelona[4] = 100;
-        manabarcelona[4] = 110;
-        manarecbarcelona[4] = 0.4f;
-        fuerzabarcelona[4] = 1.1f;
-        elementobarcelona[4] = "comun rango : 1";
-        rangobarcelona[4] = 1;
-        clasebarcelona[4] = 1;
-        nivelbarcelona[4] = 5;
-        bichosbarcelona.Add( "");
-        bichosbarcelona[4] = catalogo[1];
-
-
-        namebarcelona[5] = "maria";
-        hpbarcelona[5] = 130;
-        manabarcelona[5] = 100;
-        manarecbarcelona[5] = 0.8f;
-        fuerzabarcelona[5] = 1f;
-        elementobarcelona[5] = "comun rango : 1";
-        rangobarcelona[5] = 1;
-        clasebarcelona[5] = 1;
-        nivelbarcelona[5] = 5;
-        bichosbarcelona.Add( "");
-        bichosbarcelona[5] = catalogo[3];
 
     }
     public int i = 1; 
@@ -392,7 +371,13 @@ public class combatemenu : MonoBehaviour
             nobich2 = false;
             
             vez1 = false;
-            
+            modoobj.gameObject.SetActive(false);
+            actmodo = false;
+            modocom = false;
+            ciudadesliga = false;
+            ciudadliga = false;  
+            ciudadestorneo = false;
+            ciudadtorneo = false;          
             
             
         }
@@ -417,6 +402,13 @@ public class combatemenu : MonoBehaviour
             nobich = true;
             nobich2 = false;
             actnobichos = false;
+            modoobj.gameObject.SetActive(false);
+            actmodo = false;
+            modocom = false;
+            ciudadesliga = false;
+            ciudadliga = false;
+            ciudadestorneo = false;
+            ciudadtorneo = false;
             
             
             
@@ -440,7 +432,13 @@ public class combatemenu : MonoBehaviour
             bichom.SetActive(false);
             actentre = false;
             cajonentr = false;
-            
+            modoobj.gameObject.SetActive(false);
+            actmodo = false;
+            modocom = false;     
+            ciudadesliga = false;
+            ciudadliga = false;   
+            ciudadestorneo = false;
+            ciudadtorneo = false;    
             
             
         }
@@ -455,7 +453,6 @@ public class combatemenu : MonoBehaviour
             bichno.gameObject.SetActive(false);
             historiacaja.gameObject.SetActive(false);
             bicho = bicho1;
-            i = 0;
             cajon = false;
             cajoncomb = false;
             acta = false;
@@ -465,6 +462,13 @@ public class combatemenu : MonoBehaviour
             actheroe = false;
             vez1 = false;
             actentre = false;
+            modoobj.gameObject.SetActive(false);
+            actmodo = false;
+            modocom = false;
+            ciudadesliga = false;
+            ciudadliga = false;
+            ciudadestorneo = false;
+            ciudadtorneo = false;
             
             
             
@@ -490,6 +494,13 @@ public class combatemenu : MonoBehaviour
             actheroe = false;
             vez1 = false;
             actentre = false;
+            modoobj.gameObject.SetActive(false);
+            actmodo = false;
+            modocom = false;
+            ciudadesliga = false;
+            ciudadliga = false;
+            ciudadestorneo = false;
+            ciudadtorneo = false;
             
             
             
@@ -518,6 +529,13 @@ public class combatemenu : MonoBehaviour
             vez1 = false;
             actentre = false;
             cajonentr = true;
+            modoobj.gameObject.SetActive(false);
+            actmodo = false;
+            modocom = false;
+            ciudadesliga = false;
+            ciudadliga = false;
+            ciudadestorneo = false;
+            ciudadtorneo = false;
             
             
             
@@ -544,7 +562,76 @@ public class combatemenu : MonoBehaviour
             ciudades = false;
             actheroe = false;
             i = 0;
+            modoobj.gameObject.SetActive(false);
+            actmodo = false;
+            modocom = false;
+            ciudadesliga = false;
+            ciudadliga = false;
+            ciudadestorneo = false;
+            ciudadtorneo = false;
             
+            
+            
+            
+        }
+        if (ciudadesliga == true)
+        {
+            if (inv.datosserial.name.Count == 0)
+            {actnobichos2 = true;}
+            elemento_.gameObject.SetActive(false);
+            elemt.gameObject.SetActive(false);
+            ciu.gameObject.SetActive(true);
+            nobichos.gameObject.SetActive(false);
+            botlib.gameObject.SetActive(false);
+            bichno.gameObject.SetActive(false);
+            historiacaja.gameObject.SetActive(false);
+            inventario1 = false;
+            cajon = false;
+            cajonbarcelona = false;
+            cajoncomb = false;
+            acta = false;
+            ciudades1 = false;
+            ciudades1 = false;
+            ciudades = false;
+            actheroe = false;
+            modoobj.gameObject.SetActive(false);
+            actmodo = false;
+            modocom = false;
+            ciudadesliga = false;
+            ciudadliga = true;
+            ciudadestorneo = false;
+            ciudadtorneo = false;
+            
+            
+            
+        }
+        if (ciudadestorneo == true)
+        {
+            if (inv.datosserial.name.Count == 0)
+            {actnobichos2 = true;}
+            elemento_.gameObject.SetActive(false);
+            elemt.gameObject.SetActive(false);
+            ciu.gameObject.SetActive(true);
+            nobichos.gameObject.SetActive(false);
+            botlib.gameObject.SetActive(false);
+            bichno.gameObject.SetActive(false);
+            historiacaja.gameObject.SetActive(false);
+            inventario1 = false;
+            cajon = false;
+            cajonbarcelona = false;
+            cajoncomb = false;
+            acta = false;
+            ciudades1 = false;
+            ciudades1 = false;
+            ciudades = false;
+            actheroe = false;
+            modoobj.gameObject.SetActive(false);
+            actmodo = false;
+            modocom = false;
+            ciudadesliga = false;
+            ciudadliga = false;
+            ciudadestorneo = false;
+            ciudadtorneo = true;
             
             
             
@@ -571,6 +658,46 @@ public class combatemenu : MonoBehaviour
             nobich2 = true;
             actnobichos2 = false;
             cajonentr = false;
+            modoobj.gameObject.SetActive(false);
+            actmodo = false;
+            modocom = false;
+            ciudadesliga = false;
+            ciudadliga = false;
+            ciudadestorneo = false;
+            ciudadtorneo = false;
+            
+            
+            
+        }
+        if (actmodo == true)
+        {
+            inventario1 = false;
+            elemento_.gameObject.SetActive(false);
+            elemt.gameObject.SetActive(false);
+            ciu.gameObject.SetActive(false);
+            nobichos.gameObject.SetActive(false);
+            botlib.gameObject.SetActive(false);
+            bichno.gameObject.SetActive(false);
+            historiacaja.gameObject.SetActive(false);
+            modoobj.gameObject.SetActive(true);
+            bicho = bicho1;
+            cajonbarcelona = false;
+            cajoncomb = false;
+            acta = false;
+            ciudades1 = false;
+            cajon = false;
+            actc = false;
+            actheroe = false;
+            nobich = false;
+            nobich2 = false;
+            actnobichos2 = false;
+            cajonentr = false;
+            actmodo = false;
+            modocom = true;
+            ciudadesliga = false;
+            ciudadliga = false;
+            ciudadestorneo = false;
+            ciudadtorneo = false;
             
             
             
@@ -607,13 +734,21 @@ public class combatemenu : MonoBehaviour
                 if(hist == true && temp > 0.3f)
                 {
                     if(bichos[i] == "madcat")
-                    {SceneManager.LoadScene("escenamadcat");}
+                    {
+                        SceneManager.LoadScene("cargadorescenas");
+                    }
                     if(bichos[i] == "shitfloor")
-                    {SceneManager.LoadScene("escenashitfloor");}
+                    {
+                        SceneManager.LoadScene("cargadorescenas");
+                    }
                     if(bichos[i] == "topo")
-                    {SceneManager.LoadScene("escenatopo");}
+                    {
+                        SceneManager.LoadScene("cargadorescenas");
+                    }
                     if(bichos[i] == "skybird")
-                    {SceneManager.LoadScene("escenaskybird");}
+                    {
+                        SceneManager.LoadScene("cargadorescenas");
+                    }
                     if(bichos[i] == "aghostin")
                     {}
                     if(bichos[i] == "algosaurio")
@@ -863,7 +998,17 @@ public class combatemenu : MonoBehaviour
                 bichos = bichosbarcelona;
                 if(atras == true)
                 {
-                    acta = true;
+
+                    if(modogame == "combate")
+                    {
+                        ciudadesliga = true;
+                        i = iaux;
+                    }
+                    if(modogame == "torneo")
+                    {
+                        ciudadestorneo = true;
+                        i = iaux;
+                    }
                 }
                 if(vez1 == false)
                 {
@@ -893,12 +1038,13 @@ public class combatemenu : MonoBehaviour
                 inv.datosserial.nivelene = (int)nivelbarcelona[i];
                 inv.datosserial.claseene = clasebarcelona[i];
                 inv.datosserial.rangoene = rangobarcelona[i];
+                inv.datosserial.modotorneo = false;
                 inv.guardar();
 
                 actheroe = true;
                 }
         
-            if (izq == true && i > 0 && temp > 0.3f)
+            if (izq == true && i > minliga && temp > 0.3f)
             {
                 i--;
                 temp = 0;
@@ -906,7 +1052,7 @@ public class combatemenu : MonoBehaviour
                 colorbicho2 colorbicho = UnityEngine.Object.FindObjectOfType<colorbicho2>();
                 colorbicho.colorbbarcelona();
             }
-            if (der == true && i < 5 && temp > 0.3f)
+            if (der == true && i < maxliga && temp > 0.3f)
             {
                 i++;
                 temp = 0;
@@ -919,13 +1065,88 @@ public class combatemenu : MonoBehaviour
         {
                 bichom.SetActive(false);
                 if(atras == true)
-                {acta = true;}
+                {actmodo = true;}
+                textciudadguia.text = "ciudades";
                 ciudatext.text = ciuda[i];
                 if(bichoselec == true && temp > 0.3f)
                 {
-                    if(i == 0)
+                    if(modogame == "combate")
                     {
-                        actbarcelona = true;
+                        if(i == 0)
+                        {
+                            i = 0;
+                            minligaesc = 0;
+                            maxligaesc = 5;
+                            ciudadesliga = true;
+                        }
+                        if(i == 1)
+                        {
+                            i = 6;
+                            minligaesc = 6;
+                            maxligaesc = 11;
+                            ciudadesliga = true;
+                        }
+                        if(i == 2)
+                        {
+                            i = 12;
+                            minligaesc = 12;
+                            maxligaesc = 16;
+                            ciudadesliga = true;
+                        }
+                        if(i == 3)
+                        {
+                            i = 17;
+                            minligaesc = 17;
+                            maxligaesc = 21;
+                            ciudadesliga = true;
+                        }
+                        if(i == 4)
+                        {
+                            i = 22;
+                            minligaesc = 22;
+                            maxligaesc = 26;
+                            ciudadesliga = true;
+                        }
+                    }
+                    if(modogame == "torneo")
+                    {
+                        if(i == 0)
+                        {
+                            i = 0;
+                            minligaesc = 0;
+                            maxligaesc = 3;
+                            ciudadestorneo = true;
+                        }
+                        if(i == 1)
+                        {
+
+                            i = 4;
+                            minligaesc = 4;
+                            maxligaesc = 6;
+                            ciudadestorneo = true;
+                        }
+                        if(i == 2)
+                        {
+
+                            i = 7;
+                            minligaesc = 7;
+                            maxligaesc = 9;
+                            ciudadestorneo = true;
+                        }
+                        if(i == 3)
+                        {
+                            i = 10;
+                            minligaesc = 10;
+                            maxligaesc = 12;
+                            ciudadestorneo = true;
+                        }
+                        if(i == 4)
+                        {
+                            i = 13;
+                            minligaesc = 13;
+                            maxligaesc = 15;
+                            ciudadestorneo = true;
+                        }
                     }
                 }
         
@@ -939,6 +1160,325 @@ public class combatemenu : MonoBehaviour
                 i++;
                 temp = 0;
             }
+        }
+        if(ciudadliga == true)
+        {
+                bichom.SetActive(false);
+                if(atras == true)
+                {
+                    ciudades = true;
+                    i = 0;
+                }
+                textciudadguia.text = "ligas de combate";
+                ciudatext.text = ligas[i];
+                if(bichoselec == true && temp > 0.3f)
+                {
+                    iaux = i;
+                    if(modogame == "combate")
+                    {   
+                        if(i == 0)
+                        {
+                            minliga = 0;
+                            maxliga = 5;
+                            i = 0;
+                            actbarcelona = true;
+                        }
+                        if(i == 1)
+                        {
+                            minliga = 6;
+                            maxliga = 10;
+                            i = 6;
+                            actbarcelona = true;
+                        }
+                        if(i == 2)
+                        {
+                            minliga = 11;
+                            maxliga = 15;
+                            i = 11;
+                            actbarcelona = true;
+                        }
+                        if(i == 3)
+                        {
+                            minliga = 16;
+                            maxliga = 20;
+                            i = 16;
+                            actbarcelona = true;
+                        }
+                        if(i == 4)
+                        {
+                            minliga = 21;
+                            maxliga = 25;
+                            i = 21;
+                            actbarcelona = true;
+                        }
+                        if(i == 5)
+                        {
+                            minliga = 26;
+                            maxliga = 30;
+                            i = 26;
+                            actbarcelona = true;
+                        }
+
+
+
+                        if(i == 6)
+                        {
+                            minliga = 31;
+                            maxliga = 35;
+                            i = 31;
+                            actbarcelona = true;
+                        }
+                        if(i == 7)
+                        {
+                            minliga = 36;
+                            maxliga = 40;
+                            i = 36;
+                            actbarcelona = true;
+                        }
+                        if(i == 8)
+                        {
+                            minliga = 41;
+                            maxliga = 45;
+                            i = 41;
+                            actbarcelona = true;
+                        }
+                        if(i == 9)
+                        {
+                            minliga = 46;
+                            maxliga = 50;
+                            i = 46;
+                            actbarcelona = true;
+                        }
+                        if(i == 10)
+                        {
+                            minliga = 51;
+                            maxliga = 55;
+                            i = 51;
+                            actbarcelona = true;
+                        }
+                        if(i == 11)
+                        {
+                            minliga = 56;
+                            maxliga = 60;
+                            i = 56;
+                            actbarcelona = true;
+                        }
+
+
+
+
+                        if(i == 12)
+                        {
+                            minliga = 61;
+                            maxliga = 65;
+                            i = 61;
+                            actbarcelona = true;
+                        }
+                        if(i == 13)
+                        {
+                            minliga = 66;
+                            maxliga = 70;
+                            i = 66;
+                            actbarcelona = true;
+                        }
+                        if(i == 14)
+                        {
+                            minliga = 71;
+                            maxliga = 75;
+                            i = 71;
+                            actbarcelona = true;
+                        }
+                        if(i == 15)
+                        {
+                            minliga = 76;
+                            maxliga = 80;
+                            i = 76;
+                            actbarcelona = true;
+                        }
+                        if(i == 16)
+                        {
+                            minliga = 81;
+                            maxliga = 85;
+                            i = 81;
+                            actbarcelona = true;
+                        }
+
+
+                        if(i == 17)
+                        {
+                            minliga = 86;
+                            maxliga = 90;
+                            i = 86;
+                            actbarcelona = true;
+                        }
+                        if(i == 18)
+                        {
+                            minliga = 91;
+                            maxliga = 95;
+                            i = 91;
+                            actbarcelona = true;
+                        }
+                        if(i == 19)
+                        {
+                            minliga = 96;
+                            maxliga = 100;
+                            i = 96;
+                            actbarcelona = true;
+                        }
+                        if(i == 20)
+                        {
+                            minliga = 101;
+                            maxliga = 105;
+                            i = 101;
+                            actbarcelona = true;
+                        }
+                        if(i == 21)
+                        {
+                            minliga = 106;
+                            maxliga = 110;
+                            i = 106;
+                            actbarcelona = true;
+                        }
+
+
+
+
+
+                        if(i == 22)
+                        {
+                            minliga = 111;
+                            maxliga = 115;
+                            i = 111;
+                            actbarcelona = true;
+                        }
+                        if(i == 23)
+                        {
+                            minliga = 116;
+                            maxliga = 120;
+                            i = 116;
+                            actbarcelona = true;
+                        }
+                        if(i == 24)
+                        {
+                            minliga = 121;
+                            maxliga = 125;
+                            i = 121;
+                            actbarcelona = true;
+                        }
+                        if(i == 25)
+                        {
+                            minliga = 126;
+                            maxliga = 130;
+                            i = 126;
+                            actbarcelona = true;
+                        }
+                        if(i == 26)
+                        {
+                            minliga = 131;
+                            maxliga = 135;
+                            i = 131;
+                            actbarcelona = true;
+                        }
+                        
+                    }
+                }
+        
+            if (izq == true && i > minligaesc && temp > 0.3f)
+            {
+                i--;
+                temp = 0;
+            }
+            if (der == true && i < maxligaesc && temp > 0.3f)
+            {
+                i++;
+                temp = 0;
+            }
+        }
+        if(ciudadtorneo == true)
+        {
+                bichom.SetActive(false);
+                if(atras == true)
+                {
+                    ciudades = true;
+                    i = 0;
+                }
+                textciudadguia.text = "torneos";
+                ciudatext.text = torneos[i];
+                if(bichoselec == true && temp > 0.3f)
+                {
+                    if(modogame == "torneo")
+                    {
+                        iaux = i;
+                        if(i == 0)
+                        {
+                            inv.datosserial.hptorneo[0] = hpbarcelona[1];
+                            inv.datosserial.manatorneo[0] = manabarcelona[1];
+                            inv.datosserial.manarectorneo[0] = manarecbarcelona[1];
+                            inv.datosserial.fuerzatorneo[0] = fuerzabarcelona[1];
+                            inv.datosserial.nametorneo[0] = namebarcelona[1];
+                            inv.datosserial.razatorneo[0] =  bichosbarcelona[1];
+                            inv.datosserial.niveltorneo[0] = (int)nivelbarcelona[1];
+                            inv.datosserial.clasetorneo[0] = clasebarcelona[1];
+                            inv.datosserial.rangotorneo[0] = rangobarcelona[1];
+
+                            inv.datosserial.hptorneo[1] = hpbarcelona[2];
+                            inv.datosserial.manatorneo[1] = manabarcelona[2];
+                            inv.datosserial.manarectorneo[1] = manarecbarcelona[2];
+                            inv.datosserial.fuerzatorneo[1] = fuerzabarcelona[2];
+                            inv.datosserial.nametorneo[1] = namebarcelona[2];
+                            inv.datosserial.razatorneo[1] =  bichosbarcelona[2];
+                            inv.datosserial.niveltorneo[1] = (int)nivelbarcelona[2];
+                            inv.datosserial.clasetorneo[1] = clasebarcelona[2];
+                            inv.datosserial.rangotorneo[1] = rangobarcelona[2];
+
+                            inv.datosserial.hptorneo[2] = hpbarcelona[3];
+                            inv.datosserial.manatorneo[2] = manabarcelona[3];
+                            inv.datosserial.manarectorneo[2] = manarecbarcelona[3];
+                            inv.datosserial.fuerzatorneo[2] = fuerzabarcelona[3];
+                            inv.datosserial.nametorneo[2] = namebarcelona[3];
+                            inv.datosserial.razatorneo[2] =  bichosbarcelona[3];
+                            inv.datosserial.niveltorneo[2] = (int)nivelbarcelona[3];
+                            inv.datosserial.clasetorneo[2] = clasebarcelona[3];
+                            inv.datosserial.rangotorneo[2] = rangobarcelona[3];
+                            inv.datosserial.torneopuesto = 0;
+                            inv.datosserial.modotorneo = true;
+                            inv.guardar();
+
+
+                            inv.datosserial.hpr = (int)Random.Range(900f,1000f)*rangoexp * 1.5f;
+                            inv.datosserial.manar = (int)Random.Range(200f,220f)*rangoexp * 1.5f;
+                            inv.datosserial.manarecr = Random.Range(1.6f,1.7f)*rangoexp * 1.5f;
+                            inv.datosserial.fuerzar = Random.Range(1.8f,2f)*rangoexp * 1.5f;
+                            inv.datosserial.elementor = "dorado rango :"+inv.datosserial.rangoplay;
+                            inv.datosserial.nivelr = 15;
+                            inv.datosserial.claser = 3;
+                            inv.datosserial.razar = "skybird";
+                            inv.datosserial.rangorr = inv.datosserial.rangoplay;
+                            inv.guardar();
+
+                            actheroe = true;
+                        }
+                        
+                        
+                    }
+                }
+        
+            if (izq == true && i > minligaesc && temp > 0.3f)
+            {
+                i--;
+                temp = 0;
+            }
+            if (der == true && i < maxligaesc && temp > 0.3f)
+            {
+                i++;
+                temp = 0;
+            }
+        }
+        if(modocom == true)
+        {
+            bichom.SetActive(false);
+            if(atras == true)
+            {acta = true;}
         }
         if (temp < 15)
         {temp += 1 * Time.deltaTime;}

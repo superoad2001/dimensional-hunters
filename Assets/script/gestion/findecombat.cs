@@ -355,7 +355,23 @@ public class findecombat : MonoBehaviour
     {
         inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
         inv._agregar2();
-        SceneManager.LoadScene("seleccion");
+        if(inv.datosserial.modotorneo == true)
+        {
+            if(inv.datosserial.torneopuesto >= 2)
+            {
+                inv.datosserial.modotorneo = false;
+                inv.guardar();
+                SceneManager.LoadScene("obtener");
+            }
+            else
+            {
+            inv.datosserial.torneopuesto++;
+            inv.guardar();
+            SceneManager.LoadScene("combate");
+            }
+        }
+        else
+        {SceneManager.LoadScene("seleccion");}
     }
     void Update()
     {

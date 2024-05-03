@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Linq;
 
 public class obtenermenu : MonoBehaviour
 {
@@ -439,7 +440,14 @@ public class obtenermenu : MonoBehaviour
                 modelos0();
                 if(bichoselec == true && temp > 0.3f && uitext.text != "" )
                 {
+                    if(nameenviar.text.Length > 0)
+                    {
+                        name = nameenviar.text;
+                    }
+                    else
+                    {
                     name = uitext.text;
+                    }
                     inv.datosserial.name.Add(name);
                     inv.datosserial.hp.Add(hp);
                     inv.datosserial.mana.Add(mana);

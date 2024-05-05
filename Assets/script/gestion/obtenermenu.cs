@@ -436,18 +436,19 @@ public class obtenermenu : MonoBehaviour
         {
                 
                
+                if(nameenviar.text.Length > 0)
+                {
+                    uitext.text = nameenviar.text;
+                }
+                if(nameenviar.text.Length == 0)
+                {
+                    uitext.text = raza;
+                }
                 
                 modelos0();
                 if(bichoselec == true && temp > 0.3f && uitext.text != "" )
                 {
-                    if(nameenviar.text.Length > 0)
-                    {
-                        name = nameenviar.text;
-                    }
-                    else
-                    {
                     name = uitext.text;
-                    }
                     inv.datosserial.name.Add(name);
                     inv.datosserial.hp.Add(hp);
                     inv.datosserial.mana.Add(mana);
@@ -552,8 +553,10 @@ public class obtenermenu : MonoBehaviour
 
     }
     public void enviar()
-    {
-        uitext.text = nameenviar.text;
+    {   if(nameenviar.text.Length > 0)
+        {
+            uitext.text = nameenviar.text;
+        }
     }
     public void modelos0()
     {

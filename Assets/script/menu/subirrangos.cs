@@ -26,22 +26,69 @@ public class subirrangos : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
-        rango = inv.datosserial.rangoplay;
+        
+
 
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
 
+        rangorec();
+
+        
+    }
+    public int rangomaximo;
+
+    public void _atras2()
+    {
+        SceneManager.LoadScene("seleccion2");
+    }
+    public void _subir()
+    {
+        inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
+        if(inv.datosserial.dinero >= requisito && noventa == false && inv.datosserial.rangoplay < rangomaximo)
+        {
+            sibot.Play();
+            inv.datosserial.rangoplay++;
+            inv.datosserial.dinero -= requisito;
+            inv.guardar();
+            rangorec();
+        }
+        else
+        {
+            nobot.Play();
+        }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
+        if(noventa == true)
+        {
+            requsitot.text = "has alcanzado el nivel maximo de rango";
+        }
+        else
+        {
+        requsitot.text = "necesitas "+requisito+" dolares";
+        }
+        dinerot.text = "tus dolares: "+inv.datosserial.dinero;
+        rangot.text = ""+inv.datosserial.rangoplay;
+
+    }
+    public void rangorec()
+    {
+        inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
+        rango = inv.datosserial.rangoplay;
         if(rango == 1)
-        {requisito = 500;}
+        {requisito = 1000;}
         if(rango == 2)
-        {requisito = 500;}
+        {requisito = 2500;}
         if(rango == 3)
-        {requisito = 500;}
+        {requisito = 4000;}
         if(rango == 4)
-        {requisito = 500;}
+        {requisito = 6000;}
         if(rango == 5)
-        {requisito = 500;}
+        {noventa = true;}
 
         if(rango == 6)
         {requisito = 500;}
@@ -78,35 +125,5 @@ public class subirrangos : MonoBehaviour
 
         if(rango == 21)
         {noventa = true;}
-    }
-
-    public void _atras2()
-    {
-        SceneManager.LoadScene("seleccion2");
-    }
-    public void _subir()
-    {
-        inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
-        if(inv.datosserial.dinero >= requisito && noventa == false)
-        {
-            sibot.Play();
-            inv.datosserial.rangoplay++;
-            inv.datosserial.dinero -= requisito;
-            inv.guardar();
-        }
-        else
-        {
-            nobot.Play();
-        }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
-        requsitot.text = "necesitas "+requisito+" dolares";
-        dinerot.text = "tus dolares: "+inv.datosserial.dinero;
-        rangot.text = ""+rango;
-
     }
 }

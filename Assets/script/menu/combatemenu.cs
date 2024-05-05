@@ -18,6 +18,8 @@ public class combatemenu : MonoBehaviour
     public bool actentre;
 
     public int iaux;
+    public int iaux2;
+    public int iaux3;
 
     public List<string> name = new List<string>();
     public List<float> hp = new List<float>();
@@ -562,7 +564,6 @@ public class combatemenu : MonoBehaviour
             ciudades1 = true;
             ciudades = false;
             actheroe = false;
-            i = 0;
             modoobj.gameObject.SetActive(false);
             actmodo = false;
             modocom = false;
@@ -887,11 +888,21 @@ public class combatemenu : MonoBehaviour
                     modelos();
                     colorbicho2 colorbicho = UnityEngine.Object.FindObjectOfType<colorbicho2>();
                     colorbicho.colorbcajon();
+                    vez1 = false;
                 }
                 vez1 = true;
                 if(atras == true)
                 {
-                    acta = true;
+                    if(modogame == "combate")
+                    {
+                        actbarcelona = true;
+                        i = iaux3;
+                    }
+                    if(modogame == "torneo")
+                    {
+                        ciudadestorneo = true;
+                        i = iaux;
+                    }
                 }
                 bicho.text = inv.datosserial.name[i];
                 bichoti.text ="RAZA "+ bichos[i];
@@ -1029,6 +1040,7 @@ public class combatemenu : MonoBehaviour
                 who.text = "QUIEN ES TU ENEMIGO ?";
                 if(bichoselec == true && temp > 0.3f)
                 {
+                iaux3 = i;
                     
                 inv.datosserial.hpene = hpbarcelona[i];
                 inv.datosserial.manaene = manabarcelona[i];
@@ -1066,13 +1078,17 @@ public class combatemenu : MonoBehaviour
         {
                 bichom.SetActive(false);
                 if(atras == true)
-                {actmodo = true;}
+                {
+                    actmodo = true;
+                
+                }
                 textciudadguia.text = "ciudades";
                 ciudatext.text = ciuda[i];
                 if(bichoselec == true && temp > 0.3f)
                 {
                     if(modogame == "combate")
                     {
+                        iaux2 = i;
                         if(i == 0)
                         {
                             i = 0;
@@ -1080,28 +1096,28 @@ public class combatemenu : MonoBehaviour
                             maxligaesc = 5;
                             ciudadesliga = true;
                         }
-                        if(i == 1)
+                        else if(i == 1)
                         {
                             i = 6;
                             minligaesc = 6;
                             maxligaesc = 11;
                             ciudadesliga = true;
                         }
-                        if(i == 2)
+                        else if(i == 2)
                         {
                             i = 12;
                             minligaesc = 12;
                             maxligaesc = 16;
                             ciudadesliga = true;
                         }
-                        if(i == 3)
+                        else if(i == 3)
                         {
                             i = 17;
                             minligaesc = 17;
                             maxligaesc = 21;
                             ciudadesliga = true;
                         }
-                        if(i == 4)
+                        else if(i == 4)
                         {
                             i = 22;
                             minligaesc = 22;
@@ -1118,7 +1134,7 @@ public class combatemenu : MonoBehaviour
                             maxligaesc = 3;
                             ciudadestorneo = true;
                         }
-                        if(i == 1)
+                        else if(i == 1)
                         {
 
                             i = 4;
@@ -1126,7 +1142,7 @@ public class combatemenu : MonoBehaviour
                             maxligaesc = 6;
                             ciudadestorneo = true;
                         }
-                        if(i == 2)
+                        else if(i == 2)
                         {
 
                             i = 7;
@@ -1134,14 +1150,14 @@ public class combatemenu : MonoBehaviour
                             maxligaesc = 9;
                             ciudadestorneo = true;
                         }
-                        if(i == 3)
+                        else if(i == 3)
                         {
                             i = 10;
                             minligaesc = 10;
                             maxligaesc = 12;
                             ciudadestorneo = true;
                         }
-                        if(i == 4)
+                        else if(i == 4)
                         {
                             i = 13;
                             minligaesc = 13;
@@ -1156,7 +1172,7 @@ public class combatemenu : MonoBehaviour
                 i--;
                 temp = 0;
             }
-            if (der == true && i < 6 && temp > 0.3f)
+            if (der == true && i < 4 && temp > 0.3f)
             {
                 i++;
                 temp = 0;
@@ -1168,7 +1184,7 @@ public class combatemenu : MonoBehaviour
                 if(atras == true)
                 {
                     ciudades = true;
-                    i = 0;
+                    i = iaux2;
                 }
                 textciudadguia.text = "ligas de combate";
                 ciudatext.text = ligas[i];
@@ -1184,35 +1200,35 @@ public class combatemenu : MonoBehaviour
                             i = 0;
                             actbarcelona = true;
                         }
-                        if(i == 1)
+                        else if(i == 1)
                         {
                             minliga = 6;
                             maxliga = 10;
                             i = 6;
                             actbarcelona = true;
                         }
-                        if(i == 2)
+                        else if(i == 2)
                         {
                             minliga = 11;
                             maxliga = 15;
                             i = 11;
                             actbarcelona = true;
                         }
-                        if(i == 3)
+                        else if(i == 3)
                         {
                             minliga = 16;
                             maxliga = 20;
                             i = 16;
                             actbarcelona = true;
                         }
-                        if(i == 4)
+                        else if(i == 4)
                         {
                             minliga = 21;
                             maxliga = 25;
                             i = 21;
                             actbarcelona = true;
                         }
-                        if(i == 5)
+                        else if(i == 5)
                         {
                             minliga = 26;
                             maxliga = 30;
@@ -1222,42 +1238,42 @@ public class combatemenu : MonoBehaviour
 
 
 
-                        if(i == 6)
+                        else if(i == 6)
                         {
                             minliga = 31;
                             maxliga = 35;
                             i = 31;
                             actbarcelona = true;
                         }
-                        if(i == 7)
+                        else if(i == 7)
                         {
                             minliga = 36;
                             maxliga = 40;
                             i = 36;
                             actbarcelona = true;
                         }
-                        if(i == 8)
+                        else if(i == 8)
                         {
                             minliga = 41;
                             maxliga = 45;
                             i = 41;
                             actbarcelona = true;
                         }
-                        if(i == 9)
+                        else if(i == 9)
                         {
                             minliga = 46;
                             maxliga = 50;
                             i = 46;
                             actbarcelona = true;
                         }
-                        if(i == 10)
+                        else if(i == 10)
                         {
                             minliga = 51;
                             maxliga = 55;
                             i = 51;
                             actbarcelona = true;
                         }
-                        if(i == 11)
+                        else if(i == 11)
                         {
                             minliga = 56;
                             maxliga = 60;
@@ -1268,35 +1284,35 @@ public class combatemenu : MonoBehaviour
 
 
 
-                        if(i == 12)
+                        else if(i == 12)
                         {
                             minliga = 61;
                             maxliga = 65;
                             i = 61;
                             actbarcelona = true;
                         }
-                        if(i == 13)
+                        else if(i == 13)
                         {
                             minliga = 66;
                             maxliga = 70;
                             i = 66;
                             actbarcelona = true;
                         }
-                        if(i == 14)
+                        else if(i == 14)
                         {
                             minliga = 71;
                             maxliga = 75;
                             i = 71;
                             actbarcelona = true;
                         }
-                        if(i == 15)
+                        else if(i == 15)
                         {
                             minliga = 76;
                             maxliga = 80;
                             i = 76;
                             actbarcelona = true;
                         }
-                        if(i == 16)
+                        else if(i == 16)
                         {
                             minliga = 81;
                             maxliga = 85;
@@ -1305,35 +1321,35 @@ public class combatemenu : MonoBehaviour
                         }
 
 
-                        if(i == 17)
+                        else if(i == 17)
                         {
                             minliga = 86;
                             maxliga = 90;
                             i = 86;
                             actbarcelona = true;
                         }
-                        if(i == 18)
+                        else if(i == 18)
                         {
                             minliga = 91;
                             maxliga = 95;
                             i = 91;
                             actbarcelona = true;
                         }
-                        if(i == 19)
+                        else if(i == 19)
                         {
                             minliga = 96;
                             maxliga = 100;
                             i = 96;
                             actbarcelona = true;
                         }
-                        if(i == 20)
+                        else if(i == 20)
                         {
                             minliga = 101;
                             maxliga = 105;
                             i = 101;
                             actbarcelona = true;
                         }
-                        if(i == 21)
+                        else if(i == 21)
                         {
                             minliga = 106;
                             maxliga = 110;
@@ -1345,35 +1361,35 @@ public class combatemenu : MonoBehaviour
 
 
 
-                        if(i == 22)
+                        else if(i == 22)
                         {
                             minliga = 111;
                             maxliga = 115;
                             i = 111;
                             actbarcelona = true;
                         }
-                        if(i == 23)
+                        else if(i == 23)
                         {
                             minliga = 116;
                             maxliga = 120;
                             i = 116;
                             actbarcelona = true;
                         }
-                        if(i == 24)
+                        else if(i == 24)
                         {
                             minliga = 121;
                             maxliga = 125;
                             i = 121;
                             actbarcelona = true;
                         }
-                        if(i == 25)
+                        else if(i == 25)
                         {
                             minliga = 126;
                             maxliga = 130;
                             i = 126;
                             actbarcelona = true;
                         }
-                        if(i == 26)
+                        else if(i == 26)
                         {
                             minliga = 131;
                             maxliga = 135;
@@ -1401,7 +1417,7 @@ public class combatemenu : MonoBehaviour
                 if(atras == true)
                 {
                     ciudades = true;
-                    i = 0;
+                    i = iaux2;
                 }
                 textciudadguia.text = "torneos";
                 ciudatext.text = torneos[i];

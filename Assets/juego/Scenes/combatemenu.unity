@@ -6829,7 +6829,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 69, y: 480}
+  m_AnchoredPosition: {x: 69, y: 391}
   m_SizeDelta: {x: 881.04266, y: 189.70007}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1058929817
@@ -7988,14 +7988,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1336859460}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0.00005865097, y: -0.000012218952, z: -2.2399998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 461304348}
   m_Father: {fileID: 1856812686}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!95 &1336859463
 Animator:
   serializedVersion: 5
@@ -9559,14 +9559,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1576713037}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0.56000006, y: -0.000012218952, z: -0.40999985}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1937647188}
   m_Father: {fileID: 1856812686}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!95 &1576713040
 Animator:
   serializedVersion: 5
@@ -10082,14 +10082,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1660692259}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -0.42999995, y: 0.26999998, z: -3.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1226772005}
   m_Father: {fileID: 1856812686}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!95 &1660692262
 Animator:
   serializedVersion: 5
@@ -10920,8 +10920,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 74, y: 94}
-  m_SizeDelta: {x: 1693.1, y: 654}
+  m_AnchoredPosition: {x: 74, y: 6}
+  m_SizeDelta: {x: 1693.1, y: 506.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1737855849
 MonoBehaviour:
@@ -11000,6 +11000,9 @@ MonoBehaviour:
   bichoselec: 0
   cajonentr: 0
   actentre: 0
+  iaux: 0
+  iaux2: 0
+  iaux3: 0
   name: []
   hp: []
   mana: []

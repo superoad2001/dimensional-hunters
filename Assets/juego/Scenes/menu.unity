@@ -1780,8 +1780,8 @@ RectTransform:
   - {fileID: 513217873}
   - {fileID: 1189136009}
   - {fileID: 234662348}
-  - {fileID: 1473745608}
   - {fileID: 1935356690}
+  - {fileID: 1473745608}
   - {fileID: 965122043}
   - {fileID: 1159359863}
   m_Father: {fileID: 0}
@@ -1996,6 +1996,68 @@ MonoBehaviour:
     razar: 
     rangorr: 0
     clip: 1
+    modotorneo: 0
+    torneopuesto: 0
+    nametorneo:
+    - 
+    - 
+    - 
+    - 
+    - 
+    hptorneo:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    manatorneo:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    manarectorneo:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    fuerzatorneo:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    elementotorneo:
+    - 
+    - 
+    - 
+    - 
+    - 
+    niveltorneo:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    razatorneo:
+    - 
+    - 
+    - 
+    - 
+    - 
+    rangotorneo:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    clasetorneo:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
   repath: C:/Users/super/AppData/LocalLow/superoad2001/dimensional hunters\DHdata\DHdatainventario.data
 --- !u!1001 &463369175
 PrefabInstance:
@@ -6764,7 +6826,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1935356690
 RectTransform:
   m_ObjectHideFlags: 0

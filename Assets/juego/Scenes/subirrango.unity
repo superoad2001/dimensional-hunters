@@ -1645,6 +1645,69 @@ MonoBehaviour:
     claser: 0
     razar: 
     rangorr: 0
+    clip: 1
+    modotorneo: 0
+    torneopuesto: 0
+    nametorneo:
+    - 
+    - 
+    - 
+    - 
+    - 
+    hptorneo:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    manatorneo:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    manarectorneo:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    fuerzatorneo:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    elementotorneo:
+    - 
+    - 
+    - 
+    - 
+    - 
+    niveltorneo:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    razatorneo:
+    - 
+    - 
+    - 
+    - 
+    - 
+    rangotorneo:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    clasetorneo:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
   repath: 
 --- !u!114 &902821285
 MonoBehaviour:
@@ -1673,6 +1736,7 @@ MonoBehaviour:
   nobot: {fileID: 399108944}
   sibot: {fileID: 158831987}
   noventa: 0
+  rangomaximo: 5
 --- !u!1 &1390676955
 GameObject:
   m_ObjectHideFlags: 0
@@ -2042,6 +2106,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicaid: 2
   musicaidzona: {fileID: 0}
+  musica2: {fileID: 0}
 --- !u!1 &1945647007
 GameObject:
   m_ObjectHideFlags: 0

@@ -27,26 +27,12 @@ public class subiralm : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
-        rango = inv.datosserial.rangoplay;
+        
 
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
-
-        if(inv.datosserial.limite == 5)
-        {requisito = 500;}
-        if(inv.datosserial.limite == 10)
-        {requisito = 500;}
-        if(inv.datosserial.limite == 15)
-        {requisito = 500;}
-        if(inv.datosserial.limite == 20)
-        {requisito = 500;}
-        if(inv.datosserial.limite == 25)
-        {requisito = 500;}
-        if(inv.datosserial.limite == 30)
-        {requisito = 500;}
-        if(inv.datosserial.limite == 35)
-        {noventa = true;}
+        recexp();
+        
 
     }
 
@@ -64,6 +50,7 @@ public class subiralm : MonoBehaviour
             inv.datosserial.dinero -= requisito;
             inv.datosserial.rangoplay++;
             inv.guardar();
+            recexp();
         }
         else
         {
@@ -75,10 +62,45 @@ public class subiralm : MonoBehaviour
     void Update()
     {
         inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
-        requsitot.text = "necesitas "+requisito+" dolares";
+
+        if(noventa == true)
+        {
+            requsitot.text = "has alcanzado el nivel maximo de almacenamiento";
+            rangop.text = ""+(inv.datosserial.limite);
+        }
+        else
+        {
+            requsitot.text = "necesitas "+requisito+" dolares";
+            rangop.text = ""+(inv.datosserial.limite+5);
+        }
         dinerot.text = "tus dolares: "+inv.datosserial.dinero;
         rangot.text = ""+inv.datosserial.limite;
-        rangop.text = ""+(inv.datosserial.limite+5);
 
+    }
+    public void recexp()
+    {
+
+        inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
+        rango = inv.datosserial.rangoplay;
+        if(inv.datosserial.limite == 5)
+        {requisito = 500;}
+        if(inv.datosserial.limite == 10)
+        {requisito = 800;}
+        if(inv.datosserial.limite == 15)
+        {requisito = 1000;}
+        if(inv.datosserial.limite == 20)
+        {requisito = 5000;}
+        if(inv.datosserial.limite == 25)
+        {requisito = 10000;}
+        if(inv.datosserial.limite == 30)
+        {requisito = 15000;}
+        if(inv.datosserial.limite == 35)
+        {requisito = 20000;}
+        if(inv.datosserial.limite == 40)
+        {requisito = 30000;}
+        if(inv.datosserial.limite == 45)
+        {requisito = 40000;}
+        if(inv.datosserial.limite == 50)
+        {noventa = true;}
     }
 }

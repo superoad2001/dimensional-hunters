@@ -154,7 +154,7 @@ public class combateparametros : MonoBehaviour
 
 
         comb.namebarcelona[0] = "paco";
-        comb.hpbarcelona[0] = 100;
+        comb.hpbarcelona[0] = 60;
         comb.manabarcelona[0] = 60;
         comb.manarecbarcelona[0] = 0.5f;
         comb.fuerzabarcelona[0] = 0.8f;
@@ -163,7 +163,7 @@ public class combateparametros : MonoBehaviour
         if(inv.datosserial.rangoplay > comb.rangobarcelona[0])
         {
             comb.rangobarcelona[0] = inv.datosserial.rangoplay;
-            comb.hpbarcelona[0] = 100 * rangoexp;
+            comb.hpbarcelona[0] = 60 * rangoexp;
             comb.manabarcelona[0] = 60 * rangoexp;
             comb.manarecbarcelona[0] = 0.5f * rangoexp;
             comb.fuerzabarcelona[0] = 0.8f * rangoexp;
@@ -177,7 +177,7 @@ public class combateparametros : MonoBehaviour
 
 
         comb.namebarcelona[1] = "jaume";
-        comb.hpbarcelona[1] = 60;
+        comb.hpbarcelona[1] = 110;
         comb.manabarcelona[1] = 100;
         comb.manarecbarcelona[1] = 0.3f;
         comb.fuerzabarcelona[1] = 0.8f;
@@ -185,7 +185,7 @@ public class combateparametros : MonoBehaviour
         if(inv.datosserial.rangoplay > comb.rangobarcelona[1])
         {
             comb.rangobarcelona[1] = inv.datosserial.rangoplay;
-            comb.hpbarcelona[1] = 60* rangoexp;
+            comb.hpbarcelona[1] = 110* rangoexp;
             comb.manabarcelona[1] = 100* rangoexp;
             comb.manarecbarcelona[1] = 0.3f* rangoexp;
             comb.fuerzabarcelona[1] = 0.8f* rangoexp;
@@ -193,13 +193,13 @@ public class combateparametros : MonoBehaviour
         }
         comb.elementobarcelona[1] = "comun rango : "+comb.rangobarcelona[1];
         comb.clasebarcelona[1] = 1;
-        comb.nivelbarcelona[1] = 1;
+        comb.nivelbarcelona[1] = 2;
         comb.bichosbarcelona.Add( "");
         comb.bichosbarcelona[1] = "shitfloor";
 
 
         comb.namebarcelona[2] = "agusti";
-        comb.hpbarcelona[2] = 130;
+        comb.hpbarcelona[2] = 160;
         comb.manabarcelona[2] = 75;
         comb.manarecbarcelona[2] = 0.45f;
         comb.fuerzabarcelona[2] = 1f;
@@ -207,7 +207,7 @@ public class combateparametros : MonoBehaviour
         if(inv.datosserial.rangoplay > comb.rangobarcelona[2])
         {
             comb.rangobarcelona[2] = inv.datosserial.rangoplay;
-            comb.hpbarcelona[2] = 130* rangoexp;
+            comb.hpbarcelona[2] = 160* rangoexp;
             comb.manabarcelona[2] = 75* rangoexp;
             comb.manarecbarcelona[2] = 0.45f* rangoexp;
             comb.fuerzabarcelona[2] = 1f* rangoexp;
@@ -242,40 +242,40 @@ public class combateparametros : MonoBehaviour
         comb.bichosbarcelona[3] = "skybird";
 
         comb.namebarcelona[4] = "josep";
-        comb.hpbarcelona[4] = 310;
-        comb.manabarcelona[4] = 110;
+        comb.hpbarcelona[4] = 220;
+        comb.manabarcelona[4] = 160;
         comb.manarecbarcelona[4] = 1f;
-        comb.fuerzabarcelona[4] = 1.2f;
+        comb.fuerzabarcelona[4] = 1f;
         comb.rangobarcelona[4] = 1;
         if(inv.datosserial.rangoplay > comb.rangobarcelona[4])
         {
             comb.rangobarcelona[4] = inv.datosserial.rangoplay;
-            comb.hpbarcelona[4] = 310* rangoexp;
-            comb.manabarcelona[4] = 110* rangoexp;
+            comb.hpbarcelona[4] = 220* rangoexp;
+            comb.manabarcelona[4] = 160* rangoexp;
             comb.manarecbarcelona[4] = 1f* rangoexp;
-            comb.fuerzabarcelona[4] = 1.2f* rangoexp;
+            comb.fuerzabarcelona[4] = 1f* rangoexp;
             comb.rangobarcelona[4] = 1* rangoexp;
         }
         comb.elementobarcelona[4] = "comun rango : "+comb.rangobarcelona[4];
         comb.clasebarcelona[4] = 1;
-        comb.nivelbarcelona[4] = 5;
+        comb.nivelbarcelona[4] = 4;
         comb.bichosbarcelona.Add( "");
         comb.bichosbarcelona[4] = "topo topo";
 
 
         comb.namebarcelona[5] = "maria";
-        comb.hpbarcelona[5] = 330;
-        comb.manabarcelona[5] = 100;
-        comb.manarecbarcelona[5] = 0.9f;
-        comb.fuerzabarcelona[5] = 1.30f;
+        comb.hpbarcelona[5] = 280;
+        comb.manabarcelona[5] = 180;
+        comb.manarecbarcelona[5] = 1.1f;
+        comb.fuerzabarcelona[5] = 1.20f;
         comb.rangobarcelona[5] = 1;
         if(inv.datosserial.rangoplay > comb.rangobarcelona[5])
         {
             comb.rangobarcelona[5] = inv.datosserial.rangoplay;
-            comb.hpbarcelona[5] = 330* rangoexp;
-            comb.manabarcelona[5] = 100* rangoexp;
-            comb.manarecbarcelona[5] = 0.9f* rangoexp;
-            comb.fuerzabarcelona[5] = 1.3f* rangoexp;
+            comb.hpbarcelona[5] = 280* rangoexp;
+            comb.manabarcelona[5] = 180* rangoexp;
+            comb.manarecbarcelona[5] = 1.1f* rangoexp;
+            comb.fuerzabarcelona[5] = 1.2f* rangoexp;
             comb.rangobarcelona[5] = 1* rangoexp;
         }
         comb.elementobarcelona[5] = "comun rango : "+comb.rangobarcelona[5];
@@ -284,22 +284,18 @@ public class combateparametros : MonoBehaviour
         comb.bichosbarcelona.Add( "");
         comb.bichosbarcelona[5] = "madcat";
 
-
-
-        //liga menor
-
         comb.namebarcelona[6] = "ana";
-        comb.hpbarcelona[6] = 400;
-        comb.manabarcelona[6] = 130;
-        comb.manarecbarcelona[6] = 1.1f;
+        comb.hpbarcelona[6] = 340;
+        comb.manabarcelona[6] = 200;
+        comb.manarecbarcelona[6] = 1.25f;
         comb.fuerzabarcelona[6] = 1.3f;
         comb.rangobarcelona[6] = 1;
         if(inv.datosserial.rangoplay > comb.rangobarcelona[6])
         {
             comb.rangobarcelona[6] = inv.datosserial.rangoplay;
-            comb.hpbarcelona[6] = 400* rangoexp;
-            comb.manabarcelona[6] = 130* rangoexp;
-            comb.manarecbarcelona[6] = 1.1f* rangoexp;
+            comb.hpbarcelona[6] = 340* rangoexp;
+            comb.manabarcelona[6] = 200* rangoexp;
+            comb.manarecbarcelona[6] = 1.25f* rangoexp;
             comb.fuerzabarcelona[6] = 1.3f* rangoexp;
             comb.rangobarcelona[6] = 1* rangoexp;
         }
@@ -312,16 +308,16 @@ public class combateparametros : MonoBehaviour
 
 
         comb.namebarcelona[7] = "alex";
-        comb.hpbarcelona[7] = 470;
-        comb.manabarcelona[7] = 140;
+        comb.hpbarcelona[7] = 400;
+        comb.manabarcelona[7] = 220;
         comb.manarecbarcelona[7] = 1.1f;
         comb.fuerzabarcelona[7] = 1.5f;
         comb.rangobarcelona[7] = 1;
         if(inv.datosserial.rangoplay > comb.rangobarcelona[7])
         {
             comb.rangobarcelona[7] = inv.datosserial.rangoplay;
-            comb.hpbarcelona[7] = 470* rangoexp;
-            comb.manabarcelona[7] = 140* rangoexp;
+            comb.hpbarcelona[7] = 400* rangoexp;
+            comb.manabarcelona[7] = 220* rangoexp;
             comb.manarecbarcelona[7] = 1.1f* rangoexp;
             comb.fuerzabarcelona[7] = 1.5f* rangoexp;
             comb.rangobarcelona[7] = 1* rangoexp;
@@ -335,17 +331,17 @@ public class combateparametros : MonoBehaviour
 
 
         comb.namebarcelona[8] = "claudia";
-        comb.hpbarcelona[8] = 540;
-        comb.manabarcelona[8] = 150;
-        comb.manarecbarcelona[8] = 1.3f;
+        comb.hpbarcelona[8] = 460;
+        comb.manabarcelona[8] = 240;
+        comb.manarecbarcelona[8] = 1.4f;
         comb.fuerzabarcelona[8] = 1.4f;
         comb.rangobarcelona[8] = 1;
         if(inv.datosserial.rangoplay > comb.rangobarcelona[8])
         {
             comb.rangobarcelona[8] = inv.datosserial.rangoplay;
-            comb.hpbarcelona[8] = 130* rangoexp;
-            comb.manabarcelona[8] = 150* rangoexp;
-            comb.manarecbarcelona[8] = 1.3f* rangoexp;
+            comb.hpbarcelona[8] = 460* rangoexp;
+            comb.manabarcelona[8] = 240* rangoexp;
+            comb.manarecbarcelona[8] = 1.4f* rangoexp;
             comb.fuerzabarcelona[8] = 1.4f* rangoexp;
             comb.rangobarcelona[8] = 1* rangoexp;
         }
@@ -356,18 +352,18 @@ public class combateparametros : MonoBehaviour
         comb.bichosbarcelona[8] = "antidog";
 
         comb.namebarcelona[9] = "pepe";
-        comb.hpbarcelona[9] = 600;
-        comb.manabarcelona[9] = 160;
-        comb.manarecbarcelona[9] = 1.4f;
-        comb.fuerzabarcelona[9] = 1.4f;
+        comb.hpbarcelona[9] = 530;
+        comb.manabarcelona[9] = 260;
+        comb.manarecbarcelona[9] = 1.45f;
+        comb.fuerzabarcelona[9] = 1.5f;
         comb.rangobarcelona[9] = 1;
         if(inv.datosserial.rangoplay > comb.rangobarcelona[9])
         {
             comb.rangobarcelona[9] = inv.datosserial.rangoplay;
-            comb.hpbarcelona[9] = 600* rangoexp;
-            comb.manabarcelona[9] = 160* rangoexp;
-            comb.manarecbarcelona[9] = 1.4f* rangoexp;
-            comb.fuerzabarcelona[9] = 1.4f* rangoexp;
+            comb.hpbarcelona[9] = 530* rangoexp;
+            comb.manabarcelona[9] = 260* rangoexp;
+            comb.manarecbarcelona[9] = 1.45f* rangoexp;
+            comb.fuerzabarcelona[9] = 1.5f* rangoexp;
             comb.rangobarcelona[9] = 1* rangoexp;
         }
         comb.elementobarcelona[9] = "comun rango : "+comb.rangobarcelona[9];
@@ -378,18 +374,18 @@ public class combateparametros : MonoBehaviour
 
 
         comb.namebarcelona[10] = "alan";
-        comb.hpbarcelona[10] = 650;
-        comb.manabarcelona[10] = 650;
+        comb.hpbarcelona[10] = 590;
+        comb.manabarcelona[10] = 280;
         comb.manarecbarcelona[10] = 1.8f;
         comb.fuerzabarcelona[10] = 1.3f;
         comb.rangobarcelona[10] = 1;
         if(inv.datosserial.rangoplay > comb.rangobarcelona[10])
         {
             comb.rangobarcelona[10] = inv.datosserial.rangoplay;
-            comb.hpbarcelona[10] = 130* rangoexp;
-            comb.manabarcelona[10] = 100* rangoexp;
-            comb.manarecbarcelona[10] = 0.8f* rangoexp;
-            comb.fuerzabarcelona[10] = 1f* rangoexp;
+            comb.hpbarcelona[10] = 590* rangoexp;
+            comb.manabarcelona[10] = 280* rangoexp;
+            comb.manarecbarcelona[10] = 1.7f* rangoexp;
+            comb.fuerzabarcelona[10] = 1.3f* rangoexp;
             comb.rangobarcelona[10] = 1* rangoexp;
         }
         comb.elementobarcelona[10] = "comun rango : "+comb.rangobarcelona[10];
@@ -397,6 +393,131 @@ public class combateparametros : MonoBehaviour
         comb.nivelbarcelona[10] = 10;
         comb.bichosbarcelona.Add( "");
         comb.bichosbarcelona[10] = "cazafantasmas";
+
+
+
+        //liga mayor
+
+        comb.namebarcelona[11] = "jordi";
+        comb.hpbarcelona[11] = 650;
+        comb.manabarcelona[11] = 300;
+        comb.manarecbarcelona[11] = 1.5f;
+        comb.fuerzabarcelona[11] = 1.7f;
+        comb.rangobarcelona[11] = 1;
+        if(inv.datosserial.rangoplay > comb.rangobarcelona[11])
+        {
+            comb.rangobarcelona[11] = inv.datosserial.rangoplay;
+            comb.hpbarcelona[11] = 650* rangoexp;
+            comb.manabarcelona[11] = 180* rangoexp;
+            comb.manarecbarcelona[11] = 1.50f* rangoexp;
+            comb.fuerzabarcelona[11] = 1.7f* rangoexp;
+            comb.rangobarcelona[11] = 1* rangoexp;
+        }
+        comb.elementobarcelona[11] = "comun rango : "+comb.rangobarcelona[11];
+        comb.clasebarcelona[11] = 1;
+        comb.nivelbarcelona[11] = 11;
+        comb.bichosbarcelona.Add( "");
+        comb.bichosbarcelona[11] = "darkknight";
+
+
+        comb.namebarcelona[12] = "david";
+        comb.hpbarcelona[12] = 710;
+        comb.manabarcelona[12] = 320;
+        comb.manarecbarcelona[12] = 1.55f;
+        comb.fuerzabarcelona[12] = 1.8f;
+        comb.rangobarcelona[12] = 1;
+        if(inv.datosserial.rangoplay > comb.rangobarcelona[12])
+        {
+            comb.rangobarcelona[12] = inv.datosserial.rangoplay;
+            comb.hpbarcelona[12] = 710* rangoexp;
+            comb.manabarcelona[12] = 320* rangoexp;
+            comb.manarecbarcelona[12] = 1.55f* rangoexp;
+            comb.fuerzabarcelona[12] = 1.8f* rangoexp;
+            comb.rangobarcelona[12] = 1* rangoexp;
+        }
+        comb.elementobarcelona[12] = "comun rango : "+comb.rangobarcelona[12];
+        comb.clasebarcelona[12] = 1;
+        comb.nivelbarcelona[12] = 12;
+        comb.bichosbarcelona.Add( "");
+        comb.bichosbarcelona[12] = "roboerto";
+
+        comb.namebarcelona[13] = "marc";
+        comb.hpbarcelona[13] = 770;
+        comb.manabarcelona[13] = 340;
+        comb.manarecbarcelona[13] = 1.60f;
+        comb.fuerzabarcelona[13] = 1.9f;
+        comb.rangobarcelona[13] = 1;
+        if(inv.datosserial.rangoplay > comb.rangobarcelona[13])
+        {
+            comb.rangobarcelona[13] = inv.datosserial.rangoplay;
+            comb.hpbarcelona[13] = 770* rangoexp;
+            comb.manabarcelona[13] = 340* rangoexp;
+            comb.manarecbarcelona[13] = 1.60f* rangoexp;
+            comb.fuerzabarcelona[13] = 1.9f* rangoexp;
+            comb.rangobarcelona[13] = 1* rangoexp;
+        }
+        comb.elementobarcelona[13] = "comun rango : "+comb.rangobarcelona[13];
+        comb.clasebarcelona[13] = 1;
+        comb.nivelbarcelona[13] = 13;
+        comb.bichosbarcelona.Add( "");
+        comb.bichosbarcelona[13] = "vivodado";
+
+        comb.namebarcelona[14] = "carlos";
+        comb.hpbarcelona[14] = 800;
+        comb.manabarcelona[14] = 350;
+        comb.manarecbarcelona[14] = 1.65f;
+        comb.fuerzabarcelona[14] = 2f;
+        comb.rangobarcelona[14] = 1;
+        if(inv.datosserial.rangoplay > comb.rangobarcelona[14])
+        {
+            comb.rangobarcelona[14] = inv.datosserial.rangoplay;
+            comb.hpbarcelona[14] = 800* rangoexp;
+            comb.manabarcelona[14] = 350* rangoexp;
+            comb.manarecbarcelona[14] = 1.65f* rangoexp;
+            comb.fuerzabarcelona[14] = 2f* rangoexp;
+            comb.rangobarcelona[14] = 1* rangoexp;
+        }
+        comb.elementobarcelona[14] = "comun rango : "+comb.rangobarcelona[14];
+        comb.clasebarcelona[14] = 1;
+        comb.nivelbarcelona[14] = 14;
+        comb.bichosbarcelona.Add( "");
+        comb.bichosbarcelona[14] = "cyberpinguino";
+
+        comb.namebarcelona[15] = "albert";
+        comb.hpbarcelona[15] = 850;
+        comb.manabarcelona[15] = 380;
+        comb.manarecbarcelona[15] = 1.6f;
+        comb.fuerzabarcelona[15] = 2.2f;
+        comb.rangobarcelona[15] = 1;
+        if(inv.datosserial.rangoplay > comb.rangobarcelona[15])
+        {
+            comb.rangobarcelona[15] = inv.datosserial.rangoplay;
+            comb.hpbarcelona[15] = 850* rangoexp;
+            comb.manabarcelona[15] = 380* rangoexp;
+            comb.manarecbarcelona[15] = 1.6f* rangoexp;
+            comb.fuerzabarcelona[15] = 2.2f* rangoexp;
+            comb.rangobarcelona[15] = 1* rangoexp;
+        }
+        comb.elementobarcelona[15] = "comun rango : "+comb.rangobarcelona[15];
+        comb.clasebarcelona[15] = 1;
+        comb.nivelbarcelona[15] = 15;
+        comb.bichosbarcelona.Add( "");
+        comb.bichosbarcelona[15] = "gunman";
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
     }
     public void _torneo(int torneo)
     {

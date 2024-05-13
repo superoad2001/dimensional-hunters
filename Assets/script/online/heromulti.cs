@@ -427,7 +427,7 @@ public class heromulti : NetworkBehaviour
         {rangoexp = 7.75f;}
         if(rango == 17)
         {rangoexp = 8.25f;}
-        if(rango == 48)
+        if(rango == 18)
         {rangoexp = 8.75f;}
         if(rango == 19)
         {rangoexp = 9.25f;}
@@ -551,16 +551,16 @@ public class heromulti : NetworkBehaviour
             baseanim.SetBool("atkturbo", false);
 
         
-                if (rapido == true && atb == 100 && mana >= 20  * rangoexp && permiso == false && enemigo.permiso == false)
+                if (rapido == true && atb == 100 && mana >= 10  * rangoexp && permiso == false && enemigo.permiso == false)
                 {
                     activar = true;
                     permiso = true;
                     atkServerRpc(1);
-                    mana -= 20  * rangoexp ;
-                    manarest.Value = 20  * rangoexp ;
+                    mana -= 10  * rangoexp ;
+                    manarest.Value = 10  * rangoexp ;
                     turbobar += 25;
                     turborest.Value = 25;
-                    ataque = Random.Range(5,10) * fuerza;
+                    ataque = Random.Range(5,8) * fuerza;
                     ataquem.Value = ataque;
                     atb = 0;
                     rapsound.Play();
@@ -570,7 +570,7 @@ public class heromulti : NetworkBehaviour
                     botcl.Play();
 
                     DynamicTextManager dtext = UnityEngine.Object.FindObjectOfType<DynamicTextManager>(); 
-                    dtext.CreateText(ev1.transform.position,"-"+(int)(20 * rangoexp),textDatamana);  
+                    dtext.CreateText(ev1.transform.position,"-"+(int)(10 * rangoexp),textDatamana);  
 
                     dtext.CreateText(ev1.transform.position,"+"+(int)(25),textDataturbomas);
                     
@@ -643,7 +643,7 @@ public class heromulti : NetworkBehaviour
                     turbobar = 0;
                     turborest.Value = 100;
                     turbosound.Play();
-                    ataque = Random.Range(40,50) * fuerza;
+                    ataque = Random.Range(37,40) * fuerza;
                     ataquem.Value = ataque;
                     atb = 0;
                     baseanim.SetBool("atkturbo", true);
@@ -947,7 +947,7 @@ public class heromulti : NetworkBehaviour
             dano2 = dano2cat;
             
         }
-        if(bicho == "eleph-ant")
+        if(bicho == "elephant")
         {
             elephant.SetActive(true);
             ev1.SetActive(true);
@@ -1067,7 +1067,7 @@ public class heromulti : NetworkBehaviour
             dano2 = dano2cat;
             
         }
-        if(bicho == "rose dragon")
+        if(bicho == "rosedragon")
         {
             rosedragon.SetActive(true);
             ev1.SetActive(true);
@@ -1191,7 +1191,7 @@ public class heromulti : NetworkBehaviour
             dano2 = dano2cat;
             
         }
-        if(bicho == "heavy devil")
+        if(bicho == "heavydevil")
         {
             heavydevil.SetActive(true);
             ev1.SetActive(true);
@@ -1206,7 +1206,7 @@ public class heromulti : NetworkBehaviour
             dano1 = dano1cat;
             dano2 = dano2cat;
         }
-        if(bicho == "king slug")
+        if(bicho == "kingslug")
         {
             kingslug.SetActive(true);
             ev1.SetActive(true);
@@ -1235,7 +1235,7 @@ public class heromulti : NetworkBehaviour
             dano2 = dano2cat;
         }
         //2
-        if(bicho == "sadistic ant")
+        if(bicho == "sadisticant")
         {
             
             ant.SetActive(true);
@@ -1311,7 +1311,7 @@ public class heromulti : NetworkBehaviour
             dano2 = dano2cat;
             
         }
-        if(bicho == "dark knight")
+        if(bicho == "darkknight")
         {
             darkknight.SetActive(true);
             ev1.SetActive(true);
@@ -1431,7 +1431,7 @@ public class heromulti : NetworkBehaviour
             dano2 = dano2cat;
             
         }
-        if(bicho == "king dragon")
+        if(bicho == "kingdragon")
         {
             kingdragon.SetActive(true);
             ev1.SetActive(true);
@@ -1446,7 +1446,7 @@ public class heromulti : NetworkBehaviour
             dano1 = dano1cat;
             dano2 = dano2cat;
         }
-        if(bicho == "mirror-mirror")
+        if(bicho == "mirror")
         {
             mirror.SetActive(true);
             ev1.SetActive(true);
@@ -1464,7 +1464,7 @@ public class heromulti : NetworkBehaviour
         {
             pinguino.SetActive(true);
             ev1.SetActive(true);
-            pinguino.name = "cyberpinguino";
+            pinguino.name = "cyberpiguino";
             
             baseanim.runtimeAnimatorController = pinguinoanim;
             rapsound = rapsoundcat;

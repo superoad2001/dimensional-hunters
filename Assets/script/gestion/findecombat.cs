@@ -73,7 +73,7 @@ public class findecombat : MonoBehaviour
         {rangoexp = 7.75f;}
         if(rango == 17)
         {rangoexp = 8.25f;}
-        if(rango == 48)
+        if(rango == 18)
         {rangoexp = 8.75f;}
         if(rango == 19)
         {rangoexp = 9.25f;}
@@ -167,7 +167,7 @@ public class findecombat : MonoBehaviour
         {rangoexp3 = 16f;}
         if(rango == 17)
         {rangoexp3 = 17f;}
-        if(rango == 48)
+        if(rango == 18)
         {rangoexp3 = 18f;}
         if(rango == 19)
         {rangoexp3 = 19f;}
@@ -221,7 +221,12 @@ public class findecombat : MonoBehaviour
         {obj = (int)inv.datosserial.exp[o] + Random.Range(680,740) * (int)rangoexp2;
         dobj = (int)inv.datosserial.dinero + Random.Range(700,800) * (int)rangoexp2;}
         if(nivelg == 15)
-        {dobj = (int)inv.datosserial.dinero + Random.Range(800,999) * (int)rangoexp2;}
+        {obj = (int)inv.datosserial.exp[o] + Random.Range(780,840) * (int)rangoexp2;
+        dobj = (int)inv.datosserial.dinero + Random.Range(800,999) * (int)rangoexp2;}
+        if(nivelg == 16)
+        {obj = (int)inv.datosserial.exp[o] + Random.Range(860,999) * (int)rangoexp2;
+        dobj = (int)inv.datosserial.dinero + Random.Range(1000,1200) * (int)rangoexp2;}
+        
 
         
 
@@ -420,7 +425,7 @@ public class findecombat : MonoBehaviour
        
             
         }
-        if(inv.datosserial.exp[o] >= 27 * rangoexp3 && inv.datosserial.nivel[o] == 1)
+        if(inv.datosserial.exp[o] >= 27 * rangoexp && inv.datosserial.nivel[o] == 1)
         {
             
             permiso = false;
@@ -428,7 +433,7 @@ public class findecombat : MonoBehaviour
             inv.datosserial.nivel[o]++;
             nivelt.text = "nivel : "+inv.datosserial.nivel[o];
 
-            obj -= 27 * rangoexp3;
+            obj -= 27 * rangoexp;
             subiste.text = "has subido de nivel";
             
             inv.datosserial.hp[o] +=50*rangoexp;
@@ -453,7 +458,7 @@ public class findecombat : MonoBehaviour
             
             
         }
-        if(inv.datosserial.exp[o] < 65 * rangoexp3 && inv.datosserial.nivel[o]== 2 && permiso == true)
+        if(inv.datosserial.exp[o] < 65 * rangoexp && inv.datosserial.nivel[o]== 2 && permiso == true)
         {
             expv.fillAmount = inv.datosserial.exp[o]/65;
             if(p1 == false)
@@ -479,7 +484,7 @@ public class findecombat : MonoBehaviour
         {
             p1 = true;
         }
-        if(inv.datosserial.exp[o] >= 65 * rangoexp3 && inv.datosserial.nivel[o]== 2 && permiso == true)
+        if(inv.datosserial.exp[o] >= 65 * rangoexp && inv.datosserial.nivel[o]== 2 && permiso == true)
         {
             inv.datosserial.exp[o] = 0;
             
@@ -487,7 +492,7 @@ public class findecombat : MonoBehaviour
             inv.datosserial.nivel[o]++;
             nivelt.text = "nivel : "+inv.datosserial.nivel[o];
 
-            obj -= 65 * rangoexp3;
+            obj -= 65 * rangoexp;
             subiste.text = "has subido de nivel";
             
             inv.datosserial.hp[o] +=50*rangoexp;
@@ -510,7 +515,7 @@ public class findecombat : MonoBehaviour
             sub = false;
             
         }
-        if(inv.datosserial.exp[o] < 120 * rangoexp3 && inv.datosserial.nivel[o]== 3 && permiso == true)
+        if(inv.datosserial.exp[o] < 120 * rangoexp && inv.datosserial.nivel[o]== 3 && permiso == true)
         {
             expv.fillAmount = inv.datosserial.exp[o]/120;
             if(p1 == false)
@@ -536,14 +541,14 @@ public class findecombat : MonoBehaviour
         {
             p1 = true;
         }
-        if(inv.datosserial.exp[o] >= 120 * rangoexp3 && inv.datosserial.nivel[o]== 3 && permiso == true)
+        if(inv.datosserial.exp[o] >= 120 * rangoexp && inv.datosserial.nivel[o]== 3 && permiso == true)
         {
             
             permiso = false;
             inv.datosserial.exp[o] = 0;
             inv.datosserial.nivel[o]++;
             nivelt.text = "nivel : "+inv.datosserial.nivel[o];
-            obj -= 120 * rangoexp3;
+            obj -= 120 * rangoexp;
             subiste.text = "has subido de nivel";
             
             inv.datosserial.hp[o] +=50*rangoexp;
@@ -566,7 +571,7 @@ public class findecombat : MonoBehaviour
             sub = false;
             
         }
-        if(inv.datosserial.exp[o] < 200 * rangoexp3 && inv.datosserial.nivel[o]== 4  && permiso == true)
+        if(inv.datosserial.exp[o] < 200 * rangoexp && inv.datosserial.nivel[o]== 4  && permiso == true)
         {
             expv.fillAmount = inv.datosserial.exp[o]/200;
             if(p1 == false)
@@ -592,14 +597,14 @@ public class findecombat : MonoBehaviour
         {
             p1 = true;
         }
-        if(inv.datosserial.exp[o] >= 200 * rangoexp3 && inv.datosserial.nivel[o]== 4 && permiso == true)
+        if(inv.datosserial.exp[o] >= 200 * rangoexp && inv.datosserial.nivel[o]== 4 && permiso == true)
         {
             
             permiso = false;
             inv.datosserial.exp[o] = 0;
             inv.datosserial.nivel[o]++;
             nivelt.text = "nivel : "+inv.datosserial.nivel[o];
-            obj -= 200 * rangoexp3;
+            obj -= 200 * rangoexp;
             subiste.text = "has subido de nivel";
             
             inv.datosserial.hp[o] +=50*rangoexp;
@@ -622,7 +627,7 @@ public class findecombat : MonoBehaviour
             sub = false;
             
         }
-        if(inv.datosserial.exp[o] < 250 * rangoexp3 && inv.datosserial.nivel[o]== 5 && permiso == true)
+        if(inv.datosserial.exp[o] < 250 * rangoexp && inv.datosserial.nivel[o]== 5 && permiso == true)
         {
             expv.fillAmount = inv.datosserial.exp[o]/250;
             if(p1 == false)
@@ -648,14 +653,14 @@ public class findecombat : MonoBehaviour
         {
             p1 = true;
         }
-        if(inv.datosserial.exp[o] >= 250 * rangoexp3 && inv.datosserial.nivel[o]== 5 && permiso == true)
+        if(inv.datosserial.exp[o] >= 250 * rangoexp && inv.datosserial.nivel[o]== 5 && permiso == true)
         {
             
             permiso = false;
             inv.datosserial.exp[o] = 0;
             inv.datosserial.nivel[o]++;
             nivelt.text = "nivel : "+inv.datosserial.nivel[o];
-            obj -= 250 * rangoexp3;
+            obj -= 250 * rangoexp;
             modelos();
             bichoti.text = "raza : "+inv.datosserial.bichosmios[o];
             inv.datosserial.hp[o] +=50*rangoexp;
@@ -690,7 +695,7 @@ public class findecombat : MonoBehaviour
             sub = false;
             
         }
-        if(inv.datosserial.exp[o] < 340 * rangoexp3 && inv.datosserial.nivel[o]== 6 )
+        if(inv.datosserial.exp[o] < 340 * rangoexp && inv.datosserial.nivel[o]== 6 )
         {
             expv.fillAmount = inv.datosserial.exp[o]/340;
             if(p1 == false)
@@ -716,14 +721,14 @@ public class findecombat : MonoBehaviour
         {
             p1 = true;
         }
-        if(inv.datosserial.exp[o] >= 340 * rangoexp3 && inv.datosserial.nivel[o]== 6 && permiso == true)
+        if(inv.datosserial.exp[o] >= 340 * rangoexp && inv.datosserial.nivel[o]== 6 && permiso == true)
         {
             
             permiso = false;
             inv.datosserial.exp[o] = 0;
             inv.datosserial.nivel[o]++;
             nivelt.text = "nivel : "+inv.datosserial.nivel[o];
-            obj -= 340 * rangoexp3;
+            obj -= 340 * rangoexp;
             subiste.text = "has subido de nivel";
             
 
@@ -773,14 +778,14 @@ public class findecombat : MonoBehaviour
         {
             p1 = true;
         }
-        if(inv.datosserial.exp[o] >= 400 * rangoexp3 && inv.datosserial.nivel[o]== 7 && permiso == true)
+        if(inv.datosserial.exp[o] >= 400 * rangoexp && inv.datosserial.nivel[o]== 7 && permiso == true)
         {
             
             permiso = false;
             inv.datosserial.exp[o] = 0;
             inv.datosserial.nivel[o]++;
             nivelt.text = "nivel : "+inv.datosserial.nivel[o];
-            obj -= 400 * rangoexp3;
+            obj -= 400 * rangoexp;
             subiste.text = "has subido de nivel";
             
             inv.datosserial.hp[o] +=50*rangoexp;
@@ -803,7 +808,7 @@ public class findecombat : MonoBehaviour
             sub = false;
             
         }
-        if(inv.datosserial.exp[o] <520 * rangoexp3 && inv.datosserial.nivel[o]== 8 && permiso == true)
+        if(inv.datosserial.exp[o] <520 * rangoexp && inv.datosserial.nivel[o]== 8 && permiso == true)
         {
             expv.fillAmount = inv.datosserial.exp[o]/520;
             if(p1 == false)
@@ -829,14 +834,14 @@ public class findecombat : MonoBehaviour
         {
             p1 = true;
         }
-        if(inv.datosserial.exp[o] >= 520 * rangoexp3 && inv.datosserial.nivel[o]== 8 && permiso == true)
+        if(inv.datosserial.exp[o] >= 520 * rangoexp && inv.datosserial.nivel[o]== 8 && permiso == true)
         {
             
             permiso = false;
             inv.datosserial.exp[o] = 0;
             inv.datosserial.nivel[o]++;
             nivelt.text = "nivel : "+inv.datosserial.nivel[o];
-            obj -= 520 * rangoexp3;
+            obj -= 520 * rangoexp;
             subiste.text = "has subido de nivel";
             
             inv.datosserial.hp[o] +=50*rangoexp;
@@ -859,7 +864,7 @@ public class findecombat : MonoBehaviour
             sub = false;
             
         }
-        if(inv.datosserial.exp[o] < 600 * rangoexp3 && inv.datosserial.nivel[o]== 9 && permiso == true)
+        if(inv.datosserial.exp[o] < 600 * rangoexp && inv.datosserial.nivel[o]== 9 && permiso == true)
         {
             expv.fillAmount = inv.datosserial.exp[o]/600;
             if(p1 == false)
@@ -885,14 +890,14 @@ public class findecombat : MonoBehaviour
         {
             p1 = true;
         }
-        if(inv.datosserial.exp[o] >= 600 * rangoexp3 && inv.datosserial.nivel[o]== 9 && permiso == true)
+        if(inv.datosserial.exp[o] >= 600 * rangoexp && inv.datosserial.nivel[o]== 9 && permiso == true)
         {
             
             permiso = false;
             inv.datosserial.exp[o] = 0;
             inv.datosserial.nivel[o]++;
             nivelt.text = "nivel : "+inv.datosserial.nivel[o];
-            obj -= 600 * rangoexp3;
+            obj -= 600 * rangoexp;
             subiste.text = "has subido de nivel";
             
             inv.datosserial.hp[o] +=50*rangoexp;
@@ -915,7 +920,7 @@ public class findecombat : MonoBehaviour
             sub = false;
             
         }
-        if(inv.datosserial.exp[o] < 780 * rangoexp3 && inv.datosserial.nivel[o]== 10 && permiso == true)
+        if(inv.datosserial.exp[o] < 780 * rangoexp && inv.datosserial.nivel[o]== 10 && permiso == true)
         {
             expv.fillAmount = inv.datosserial.exp[o]/780;
             if(p1 == false)
@@ -941,14 +946,14 @@ public class findecombat : MonoBehaviour
         {
             p1 = true;
         }
-        if(inv.datosserial.exp[o] >= 780 * rangoexp3 && inv.datosserial.nivel[o]== 10 && permiso == true)
+        if(inv.datosserial.exp[o] >= 780 * rangoexp && inv.datosserial.nivel[o]== 10 && permiso == true)
         {
             
             permiso = false;
             inv.datosserial.exp[o] = 0;
             inv.datosserial.nivel[o]++;
             nivelt.text = "nivel : "+inv.datosserial.nivel[o];
-            obj -= 780 * rangoexp3;
+            obj -= 780 * rangoexp;
             modelos();
             bichoti.text = "raza : "+inv.datosserial.bichosmios[o];
             inv.datosserial.hp[o] +=50*rangoexp;
@@ -980,8 +985,12 @@ public class findecombat : MonoBehaviour
 
 
 
-
-        if(inv.datosserial.exp[o] < 900 * rangoexp3 && inv.datosserial.nivel[o]== 11&& permiso == true)
+        if(inv.datosserial.exp[o] >= obj && inv.datosserial.nivel[o]== 11)
+        {
+            sub = false;
+            
+        }
+        if(inv.datosserial.exp[o] < 900 * rangoexp && inv.datosserial.nivel[o]== 11&& permiso == true)
         {
             expv.fillAmount = inv.datosserial.exp[o]/900;
             if(p1 == false)
@@ -1007,14 +1016,14 @@ public class findecombat : MonoBehaviour
         {
             p1 = true;
         }
-        if(inv.datosserial.exp[o] >= 900 * rangoexp3 && inv.datosserial.nivel[o]== 11 && permiso == true)
+        if(inv.datosserial.exp[o] >= 900 * rangoexp && inv.datosserial.nivel[o]== 11 && permiso == true)
         {
             
             permiso = false;
             inv.datosserial.exp[o] = 0;
             inv.datosserial.nivel[o]++;
             nivelt.text = "nivel : "+inv.datosserial.nivel[o];
-            obj -= 900 * rangoexp3;
+            obj -= 900 * rangoexp;
             subiste.text = "has subido de nivel";
             
             inv.datosserial.hp[o] +=50*rangoexp;
@@ -1032,7 +1041,12 @@ public class findecombat : MonoBehaviour
             
             
         }
-        if(inv.datosserial.exp[o] < 1000 * rangoexp3 && inv.datosserial.nivel[o]== 12 && permiso == true)
+        if(inv.datosserial.exp[o] >= obj && inv.datosserial.nivel[o]== 12)
+        {
+            sub = false;
+            
+        }
+        if(inv.datosserial.exp[o] < 1000 * rangoexp && inv.datosserial.nivel[o]== 12 && permiso == true)
         {
             expv.fillAmount = inv.datosserial.exp[o]/1000;
             if(p1 == false)
@@ -1058,14 +1072,14 @@ public class findecombat : MonoBehaviour
         {
             p1 = true;
         }
-        if(inv.datosserial.exp[o] >= 1000 * rangoexp3 && inv.datosserial.nivel[o]== 12 && permiso == true)
+        if(inv.datosserial.exp[o] >= 1000 * rangoexp && inv.datosserial.nivel[o]== 12 && permiso == true)
         {
             
             permiso = false;
             inv.datosserial.exp[o] = 0;
             inv.datosserial.nivel[o]++;
             nivelt.text = "nivel : "+inv.datosserial.nivel[o];
-            obj -= 1000 * rangoexp3;
+            obj -= 1000 * rangoexp;
             subiste.text = "has subido de nivel";
             
             inv.datosserial.hp[o] +=50*rangoexp;
@@ -1083,7 +1097,12 @@ public class findecombat : MonoBehaviour
             
             
         }
-        if(inv.datosserial.exp[o] < 1260 * rangoexp3 && inv.datosserial.nivel[o]== 13 && permiso == true)
+        if(inv.datosserial.exp[o] >= obj && inv.datosserial.nivel[o]== 13)
+        {
+            sub = false;
+            
+        }
+        if(inv.datosserial.exp[o] < 1260 * rangoexp && inv.datosserial.nivel[o]== 13 && permiso == true)
         {
             expv.fillAmount = inv.datosserial.exp[o]/1260;
             if(p1 == false)
@@ -1109,14 +1128,14 @@ public class findecombat : MonoBehaviour
         {
             p1 = true;
         }
-        if(inv.datosserial.exp[o] >= 1260 * rangoexp3 && inv.datosserial.nivel[o]== 13 && permiso == true)
+        if(inv.datosserial.exp[o] >= 1260 * rangoexp && inv.datosserial.nivel[o]== 13 && permiso == true)
         {
             
             permiso = false;
             inv.datosserial.exp[o] = 0;
             inv.datosserial.nivel[o]++;
             nivelt.text = "nivel : "+inv.datosserial.nivel[o];
-            obj -= 1260 * rangoexp3;
+            obj -= 1260 * rangoexp;
             subiste.text = "has subido de nivel";
             
             inv.datosserial.hp[o] +=50*rangoexp;
@@ -1134,7 +1153,12 @@ public class findecombat : MonoBehaviour
             
             
         }
-        if(inv.datosserial.exp[o] < 1440 * rangoexp3 && inv.datosserial.nivel[o]== 14 && permiso == true)
+        if(inv.datosserial.exp[o] >= obj && inv.datosserial.nivel[o]== 14)
+        {
+            sub = false;
+            
+        }
+        if(inv.datosserial.exp[o] < 1440 * rangoexp && inv.datosserial.nivel[o]== 14 && permiso == true)
         {
             expv.fillAmount = inv.datosserial.exp[o]/1440;
             if(p1 == false)
@@ -1160,14 +1184,14 @@ public class findecombat : MonoBehaviour
         {
             p1 = true;
         }
-        if(inv.datosserial.exp[o] >= 1440 * rangoexp3 && inv.datosserial.nivel[o]== 14 && permiso == true)
+        if(inv.datosserial.exp[o] >= 1440 * rangoexp && inv.datosserial.nivel[o]== 14 && permiso == true)
         {
             
             permiso = false;
             inv.datosserial.exp[o] = 0;
             inv.datosserial.nivel[o]++;
             nivelt.text = "nivel : "+inv.datosserial.nivel[o];
-            obj -= 1440 * rangoexp3;
+            obj -= 1440 * rangoexp;
             subiste.text = "has subido de nivel";
             
             inv.datosserial.hp[o] +=50*rangoexp;
@@ -1185,7 +1209,12 @@ public class findecombat : MonoBehaviour
             
             
         }
-        if(inv.datosserial.exp[o] < 1800 * rangoexp3 && inv.datosserial.nivel[o]== 15 && permiso == true)
+        if(inv.datosserial.exp[o] >= obj && inv.datosserial.nivel[o]== 15)
+        {
+            sub = false;
+            
+        }
+        if(inv.datosserial.exp[o] < 1800 * rangoexp && inv.datosserial.nivel[o]== 15 && permiso == true)
         {
             expv.fillAmount = inv.datosserial.exp[o]/1800;
             if(p1 == false)
@@ -1211,14 +1240,14 @@ public class findecombat : MonoBehaviour
         {
             p1 = true;
         }
-        if(inv.datosserial.exp[o] >= 1800 * rangoexp3 && inv.datosserial.nivel[o]== 15 && permiso == true)
+        if(inv.datosserial.exp[o] >= 1800 * rangoexp && inv.datosserial.nivel[o]== 15 && permiso == true)
         {
             
             permiso = false;
             inv.datosserial.exp[o] = 0;
             inv.datosserial.nivel[o]++;
             nivelt.text = "nivel : "+inv.datosserial.nivel[o];
-            obj -= 1800 * rangoexp3;
+            obj -= 1800 * rangoexp;
             subiste.text = "has subido de nivel";
             
             inv.datosserial.hp[o] +=50*rangoexp;
@@ -1234,6 +1263,11 @@ public class findecombat : MonoBehaviour
             rect.text = "rec "+inv.datosserial.manarec[o].ToString("F2") +" + 0,05";
             fuet.text = "fue "+inv.datosserial.fuerza[o].ToString("F2") +" + 0,10";
             
+            
+        }
+        if(inv.datosserial.exp[o] >= obj && inv.datosserial.nivel[o]== 16)
+        {
+            sub = false;
             
         }
         if(inv.datosserial.nivel[o]== 16 && permiso == true)
@@ -1273,7 +1307,7 @@ public class findecombat : MonoBehaviour
         {
             
             o = (int)inv.datosserial.varsel1;
-            inv.datosserial.hp[o] +=20 * rangoexp3;
+            inv.datosserial.hp[o] +=20 * rangoexp;
             hp.gameObject.SetActive(false);
             ma.gameObject.SetActive(false);
             rec.gameObject.SetActive(false);
@@ -1285,7 +1319,7 @@ public class findecombat : MonoBehaviour
         {
         
             o = (int)inv.datosserial.varsel1;
-            inv.datosserial.mana[o] +=5 * rangoexp3;
+            inv.datosserial.mana[o] +=5 * rangoexp;
             hp.gameObject.SetActive(false);
             ma.gameObject.SetActive(false);
             rec.gameObject.SetActive(false);
@@ -1297,7 +1331,7 @@ public class findecombat : MonoBehaviour
         {
    
             o = (int)inv.datosserial.varsel1;
-            inv.datosserial.manarec[o] +=0.05f * rangoexp3;
+            inv.datosserial.manarec[o] +=0.05f * rangoexp;
             hp.gameObject.SetActive(false);
             ma.gameObject.SetActive(false);
             rec.gameObject.SetActive(false);
@@ -1309,7 +1343,7 @@ public class findecombat : MonoBehaviour
         {
     
             o = (int)inv.datosserial.varsel1;
-            inv.datosserial.fuerza[o] +=0.10f * rangoexp3;
+            inv.datosserial.fuerza[o] +=0.10f * rangoexp;
             hp.gameObject.SetActive(false);
             ma.gameObject.SetActive(false);
             rec.gameObject.SetActive(false);

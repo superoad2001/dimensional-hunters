@@ -2458,9 +2458,9 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 0
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 83df188df70ad56418484186bd9b5b4c, type: 3}
+  m_Model: {fileID: 5022602860645237092, guid: 009a41a0b6207614cacf559104e89564, type: 3}
   m_InferenceDevice: 0
-  m_BehaviorType: 1
+  m_BehaviorType: 0
   m_BehaviorName: enemigo1
   TeamId: 0
   m_UseChildSensors: 1
@@ -3993,9 +3993,9 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 0
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 83df188df70ad56418484186bd9b5b4c, type: 3}
+  m_Model: {fileID: 5022602860645237092, guid: 009a41a0b6207614cacf559104e89564, type: 3}
   m_InferenceDevice: 0
-  m_BehaviorType: 0
+  m_BehaviorType: 2
   m_BehaviorName: enemigo2
   TeamId: 0
   m_UseChildSensors: 1

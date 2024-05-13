@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.072146714, g: 0.033691708, b: 0.030305054, a: 1}
+  m_IndirectSpecularColor: {r: 0.07194343, g: 0.03355332, b: 0.030250829, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -10607,6 +10607,68 @@ MonoBehaviour:
     razar: 
     rangorr: 0
     clip: 0
+    modotorneo: 0
+    torneopuesto: 0
+    nametorneo:
+    - 
+    - 
+    - 
+    - 
+    - 
+    hptorneo:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    manatorneo:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    manarectorneo:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    fuerzatorneo:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    elementotorneo:
+    - 
+    - 
+    - 
+    - 
+    - 
+    niveltorneo:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    razatorneo:
+    - 
+    - 
+    - 
+    - 
+    - 
+    rangotorneo:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    clasetorneo:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
   repath: C:/Users/super/AppData/LocalLow/superoad2001/dimensional hunters\DHdata\DHdatainventario.data
 --- !u!1 &865522998
 GameObject:
@@ -14272,9 +14334,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1172881527}
   - component: {fileID: 1172881530}
+  - component: {fileID: 1172881534}
   - component: {fileID: 1172881533}
   - component: {fileID: 1172881528}
-  - component: {fileID: 1172881534}
   m_Layer: 0
   m_Name: enemigo (1)
   m_TagString: enemigo
@@ -15954,8 +16016,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1319396233}
-  - component: {fileID: 1319396232}
   - component: {fileID: 1319396234}
+  - component: {fileID: 1319396232}
   m_Layer: 0
   m_Name: networkui
   m_TagString: Untagged
@@ -20793,6 +20855,68 @@ MonoBehaviour:
     razar: 
     rangorr: 0
     clip: 0
+    modotorneo: 0
+    torneopuesto: 0
+    nametorneo:
+    - 
+    - 
+    - 
+    - 
+    - 
+    hptorneo:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    manatorneo:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    manarectorneo:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    fuerzatorneo:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    elementotorneo:
+    - 
+    - 
+    - 
+    - 
+    - 
+    niveltorneo:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    razatorneo:
+    - 
+    - 
+    - 
+    - 
+    - 
+    rangotorneo:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    clasetorneo:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
   repath: 
 --- !u!1001 &1750710717
 PrefabInstance:
@@ -23093,7 +23217,7 @@ MonoBehaviour:
     PlayerPrefab: {fileID: 0}
     Prefabs:
       NetworkPrefabsLists: []
-    TickRate: 30
+    TickRate: 10
     ClientConnectionBufferTimeout: 10
     ConnectionApproval: 0
     ConnectionData: 

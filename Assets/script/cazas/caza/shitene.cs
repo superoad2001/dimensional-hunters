@@ -244,7 +244,7 @@ public class shitene : MonoBehaviour
         {rangoexp = 7.75f;}
         if(rango == 17)
         {rangoexp = 8.25f;}
-        if(rango == 48)
+        if(rango == 18)
         {rangoexp = 8.75f;}
         if(rango == 19)
         {rangoexp = 9.25f;}

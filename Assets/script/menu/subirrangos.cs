@@ -116,7 +116,7 @@ public class subirrangos : MonoBehaviour
         {requisito = 500;}
         if(rango == 17)
         {requisito = 500;}
-        if(rango == 48)
+        if(rango == 18)
         {requisito = 500;}
         if(rango == 19)
         {requisito = 500;}

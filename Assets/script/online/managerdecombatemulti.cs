@@ -121,8 +121,19 @@ public class managerdecombatemulti : NetworkBehaviour
         }
         if (temp < 15)
         {temp += 1 * Time.deltaTime;}
-        if(NetworkManager.ConnectedClients.Count != 2)
-        {SceneManager.LoadScene("desconexion");}
+        if(NetworkManager.IsHost == true)
+        {
+            if(NetworkManager.ConnectedClients.Count != 2)
+            {SceneManager.LoadScene("desconexion");}
+        }
+        if(NetworkManager.IsHost == false)
+        {
+            if(NetworkManager.IsConnectedClient == false)
+            {
+                SceneManager.LoadScene("desconexion");
+            }
+        }
+        
         
         
     }

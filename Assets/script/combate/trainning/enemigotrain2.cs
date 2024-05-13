@@ -135,10 +135,10 @@ public class enemigotrain2 : Agent
 
         decision3 = Random.Range(25,35);
 
-        hp = 90;
-        mana = 100;
+        hp = 500;
+        mana = 120;
         manarec = 1;
-        fuerza = 1;
+        fuerza = 2;
         rango = 1;
         name = "ene2";
         bicho = "madcat";
@@ -181,7 +181,7 @@ public class enemigotrain2 : Agent
         {rangoexp = 7.75f;}
         if(rango == 17)
         {rangoexp = 8.25f;}
-        if(rango == 48)
+        if(rango == 18)
         {rangoexp = 8.75f;}
         if(rango == 19)
         {rangoexp = 9.25f;}
@@ -217,19 +217,19 @@ public class enemigotrain2 : Agent
     }
     public override void OnEpisodeBegin()
     {
-        hp = 90;
-        mana = 100;
+        hp = 500;
+        mana = 120;
         manarec = 1;
-        fuerza = 1;
+        fuerza = 2;
         rango = 1;
         name = "ene2";
         bicho = "madcat";
         nivel = 1;
 
-        heroe.hp = 150;
-        heroe.mana = 100;
+        heroe.hp = 500;
+        heroe.mana = 120;
         heroe.manarec = 1;
-        heroe.fuerza = 1;
+        heroe.fuerza = 2;
         heroe.rango = 1;
         heroe.name = "ene2";
         heroe.bicho = "madcat";
@@ -242,7 +242,7 @@ public class enemigotrain2 : Agent
         if(hp < 1)
         {
             SetReward(-1000f);
-            heroe.AddReward(1000f);
+            heroe.AddReward(100f);
             heroe.EndEpisode();
             EndEpisode();
         }
@@ -269,7 +269,6 @@ public class enemigotrain2 : Agent
             {
 
 
-                if(decision2 == decision && decision != 1){AddReward(-70);}
                 if(defusar == true && decision > 1 && decision < 7){AddReward(-70);}
                 if(decision == 3 && mana < 25){AddReward(-1);}
                 if(decision == 1){AddReward(-200);}
@@ -288,7 +287,6 @@ public class enemigotrain2 : Agent
                 if(decision == 4){def = false;fuerte = true;tempesc = 0;}
                 if(decision == 5){def = false;rapfue = true;tempesc = 0;}
                 if(tempesc > 5 && def == true){def = false;tempesc = 0;}
-                decision2 = decision;
 
             }
             
@@ -308,10 +306,10 @@ public class enemigotrain2 : Agent
 
 
 
-            if (rapido == true && atb == 100 && mana >= 20  * rangoexp&& permiso == false && heroe.permiso == false && temp5 > Random.Range(0f,0.2f))
+            if (rapido == true && atb == 100 && mana >= 10  * rangoexp&& permiso == false && heroe.permiso == false && temp5 > Random.Range(0f,0.2f))
             {
-                mana -= 20 * rangoexp;
-                ataque = Random.Range(3,10) * fuerza;
+                mana -= 10 * rangoexp;
+                ataque = Random.Range(3,8) * fuerza;
                 activar = true;
                 permiso = true;
                 turbobar += 25;
@@ -319,13 +317,11 @@ public class enemigotrain2 : Agent
                 rapson.Play();
                 rapsound.Play();
                 baseanim.SetBool("atkvel", true);
-                
+                if(decision2 == decision && decision != 1){AddReward(-1000);}
+                decision2 = decision;
                 dano = Random.Range(0,3);
 
                 DynamicTextManager dtext = UnityEngine.Object.FindObjectOfType<DynamicTextManager>(); 
-                dtext.CreateText(ev1.transform.position,"-"+(int)(20 * rangoexp),textDatamana);  
- 
-                dtext.CreateText(ev1.transform.position,"+"+(int)(25),textDataturbomas);
                 AddReward(0.1f);
             }
             else if (fuerte == true && atb == 100 && mana >= 30 * rangoexp && permiso == false  && heroe.permiso == false && temp5 > Random.Range(0f,0.2f))
@@ -339,11 +335,9 @@ public class enemigotrain2 : Agent
                 fueson.Play();
                 fuesound.Play();
                 baseanim.SetBool("atkfue", true);
-
+                if(decision2 == decision && decision != 1){AddReward(-1000);}
+                decision2 = decision;
                 DynamicTextManager dtext = UnityEngine.Object.FindObjectOfType<DynamicTextManager>(); 
-                dtext.CreateText(ev1.transform.position,"-"+(int)(30 * rangoexp),textDatamana);  
-            
-                dtext.CreateText(ev1.transform.position,"+"+(int)(25),textDataturbomas);
                 AddReward(0.1f);
                 
                 dano = Random.Range(0,3);
@@ -361,11 +355,9 @@ public class enemigotrain2 : Agent
                 baseanim.SetBool("atkrapfue", true);
                 
                 dano = Random.Range(0,3);
-
+                if(decision2 == decision && decision != 1){AddReward(-1000);}
+                decision2 = decision;
                 DynamicTextManager dtext = UnityEngine.Object.FindObjectOfType<DynamicTextManager>(); 
-                dtext.CreateText(ev1.transform.position,"-"+(int)(50 * rangoexp),textDatamana);  
-
-                dtext.CreateText(ev1.transform.position,"+"+(int)(50),textDataturbomas);
                 AddReward(0.1f);
             }
             else if (turbo == true && atb == 100 && turbobar == 100 && permiso == false && heroe.permiso == false && temp5 > Random.Range(0f,0.2f))
@@ -375,14 +367,14 @@ public class enemigotrain2 : Agent
                 turbobar = 0;
                 turbosound.Play();
                 turboson.Play();
-                ataque = Random.Range(40,50) * fuerza;
+                ataque = Random.Range(37,40) * fuerza;
                 atb = 0;
                 baseanim.SetBool("atkturbo", true);
                 
                 dano = Random.Range(0,3);
-
+                if(decision2 == decision && decision != 1){AddReward(-1000);}
+                decision2 = decision;
                 DynamicTextManager dtext = UnityEngine.Object.FindObjectOfType<DynamicTextManager>(); 
-                dtext.CreateText(ev1.transform.position,"-"+(int)(100),textDataturbomenos);
                 AddReward(0.1f);
                 
             }
@@ -413,7 +405,6 @@ public class enemigotrain2 : Agent
                 if(tempdtext > 1f)
                 {
                     DynamicTextManager dtext = UnityEngine.Object.FindObjectOfType<DynamicTextManager>(); 
-                    dtext.CreateText(ev1.transform.position,("-"+(3.5 * rangoexp)).Substring(0, 6),textDatamana);
                     tempdtext = 0;
                 }
                 tempdtext += 1 * Time.deltaTime; 
@@ -429,7 +420,6 @@ public class enemigotrain2 : Agent
                 if(tempdtext > 1f)
                 {
                     DynamicTextManager dtext = UnityEngine.Object.FindObjectOfType<DynamicTextManager>(); 
-                    dtext.CreateText(ev1.transform.position,("-"+(8.5 * rangoexp)).Substring(0, 6),textDatamana);
                     tempdtext = 0;
                 }
                 tempdtext += 1 * Time.deltaTime;
@@ -449,7 +439,6 @@ public class enemigotrain2 : Agent
                         if(tempdtext > 1f)
                         {
                             DynamicTextManager dtext = UnityEngine.Object.FindObjectOfType<DynamicTextManager>(); 
-                            dtext.CreateText(ev1.transform.position,("+"+(1.5f * manarec)),textDatamanamas);
                             tempdtext = 0;
                         }
                     }

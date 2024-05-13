@@ -6,6 +6,7 @@ using Unity.Netcode;
 using System.Net;
 using System.Net.Sockets;
 using Unity.Netcode.Transports.UTP;
+using System.Net.NetworkInformation;
 
 
 public class networkui : NetworkBehaviour
@@ -75,7 +76,7 @@ public class networkui : NetworkBehaviour
     {
         if(activar == false)
         {
-        GetLocalIPAddress();
+        GetLocalIPv4();
         NetworkManager.Singleton.StartHost();
         activar = true;
         manamulti.check1c = true;
@@ -142,5 +143,31 @@ public class networkui : NetworkBehaviour
 		transport = NetworkManager.Singleton.GetComponent<UnityTransport>();
 		transport.ConnectionData.Address = ipAddress;
 	}
+    public string[] GetLocalIPv4(NetworkInterfaceType interfaceType = NetworkInterfaceType.Ethernet)
+    {
+        var ipAddrList = new List<string>();
+            //IPv4
+            foreach (var netInterface in NetworkInterface.GetAllNetworkInterfaces())
+            {
+                if (netInterface.NetworkInterfaceType == interfaceType && netInterface.OperationalStatus == OperationalStatus.Up)
+                {
+                    foreach (var ip in netInterface.GetIPProperties().UnicastAddresses)
+                    {
+                        if (ip.Address.AddressFamily == AddressFamily.InterNetwork)
+                        {
+                            codigo.text = "IP: "+ ip.Address.ToString();
+                            ipAddress = ip.Address.ToString();
+                            SetIpAddress();
+                        }
+                    }
+                }
+ 
+            }
+            if (ipAddrList.Count <= 0)
+            {
+                Debug.Log("NO IPv4 ADDRESS DETECTED, now I should try getting the phone's data's IP address");
+            }
+            return ipAddrList.ToArray();
+    }
 
 }

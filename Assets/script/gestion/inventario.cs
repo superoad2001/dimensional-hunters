@@ -26,22 +26,22 @@ public class inventario : MonoBehaviour
  
     #if UNITY_EDITOR_OSX || UNITY_STANDALONE_OSX
             // mac
-            result = Path.Combine(Application.streamingAssetsPath,"DHdata");
+            result = Path.Combine(Application.streamingAssetsPath,"DHdataDemo");
             result = Path.Combine(result, $"DHdatainventario.data");
     
     #elif UNITY_EDITOR_WIN || UNITY_STANDALONE_WIN
             // windows
-            result = Path.Combine(Application.persistentDataPath,"DHdata");
+            result = Path.Combine(Application.persistentDataPath,"DHdataDemo");
             result = Path.Combine(result, $"DHdatainventario.data");
     
     #elif UNITY_ANDROID
             // android
-            result = Path.Combine(Application.persistentDataPath,"DHdata");
+            result = Path.Combine(Application.persistentDataPath,"DHdataDemo");
             result = Path.Combine(result, $"DHdatainventario.data");
     
     #elif UNITY_IOS
             // ios
-            result = Path.Combine(Application.persistentDataPath,"DHdata");
+            result = Path.Combine(Application.persistentDataPath,"DHdataDemo");
             result = Path.Combine(result, $"DHdatainventario.data");
     #endif
  

@@ -262,7 +262,7 @@ public class inventariomenu : MonoBehaviour
         }
         if(dermod == true)
         {
-            if(tienda < 7)
+            if(tienda < 6)
             {
                 tienda++;
             }

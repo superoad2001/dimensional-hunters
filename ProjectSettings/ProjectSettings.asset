@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: superoad2001
-  productName: dimensional hunters
+  productName: dimensional hunters Beta
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -141,7 +141,7 @@ PlayerSettings:
   loadStoreDebugModeEnabled: 0
   visionOSBundleVersion: 1.0
   tvOSBundleVersion: 1.0
-  bundleVersion: 0.1.1.1
+  bundleVersion: 0.5.0.2
   preloadedAssets:
   - {fileID: 0}
   - {fileID: 0}
@@ -173,6 +173,16 @@ PlayerSettings:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: -1629463217128947388, guid: 82ae8224c94921542875c388a443a215, type: 2}
+  - {fileID: 11400000, guid: dc0b4c90dae6d854988fe42d016c1ec3, type: 2}
+  - {fileID: 4800000, guid: c9f956787b1d945e7b36e0516201fc76, type: 3}
+  - {fileID: 4800000, guid: 0945859e5a1034c2cb6dce53cb4fb899, type: 3}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -201,8 +211,8 @@ PlayerSettings:
     VisionOS: 0
     iPhone: 0
     tvOS: 0
-  overrideDefaultApplicationIdentifier: 0
-  AndroidBundleVersionCode: 2
+  overrideDefaultApplicationIdentifier: 1
+  AndroidBundleVersionCode: 5
   AndroidMinSdkVersion: 25
   AndroidTargetSdkVersion: 34
   AndroidPreferredInstallLocation: 1
@@ -320,7 +330,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 56fb0e80baa095f4281d21868cf39181, type: 3}
+      m_Icon: {fileID: 2800000, guid: 4d281c0b2f66c7b498a7ca1494b65a5b, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
@@ -328,8 +338,8 @@ PlayerSettings:
   - m_BuildTarget: Android
     m_Icons:
     - m_Textures:
-      - {fileID: 2800000, guid: 56fb0e80baa095f4281d21868cf39181, type: 3}
-      - {fileID: 0}
+      - {fileID: 2800000, guid: 4d281c0b2f66c7b498a7ca1494b65a5b, type: 3}
+      - {fileID: 2800000, guid: 4d281c0b2f66c7b498a7ca1494b65a5b, type: 3}
       m_Width: 432
       m_Height: 432
       m_Kind: 2
@@ -356,13 +366,13 @@ PlayerSettings:
       m_SubKind: 
     - m_Textures:
       - {fileID: 0}
-      - {fileID: 2800000, guid: 56fb0e80baa095f4281d21868cf39181, type: 3}
+      - {fileID: 2800000, guid: 4d281c0b2f66c7b498a7ca1494b65a5b, type: 3}
       m_Width: 81
       m_Height: 81
       m_Kind: 2
       m_SubKind: 
     - m_Textures:
-      - {fileID: 2800000, guid: 56fb0e80baa095f4281d21868cf39181, type: 3}
+      - {fileID: 2800000, guid: 4d281c0b2f66c7b498a7ca1494b65a5b, type: 3}
       m_Width: 192
       m_Height: 192
       m_Kind: 1
@@ -398,7 +408,7 @@ PlayerSettings:
       m_Kind: 1
       m_SubKind: 
     - m_Textures:
-      - {fileID: 2800000, guid: 56fb0e80baa095f4281d21868cf39181, type: 3}
+      - {fileID: 2800000, guid: 4d281c0b2f66c7b498a7ca1494b65a5b, type: 3}
       m_Width: 192
       m_Height: 192
       m_Kind: 0

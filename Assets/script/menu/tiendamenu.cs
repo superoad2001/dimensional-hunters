@@ -252,8 +252,8 @@ public class tiendamenu : MonoBehaviour
                 sel6.SetActive(true);}
                 ptext1.text = (int)inv.datosserial.tipohierba[10]+"                 "+((int)50 * rangoexp);
                 ptext2.text = (int)inv.datosserial.tipohierba[20]+"                 "+((int)100 * rangoexp);
-                ptext3.text = (int)inv.datosserial.tipohierba[1]+"                 "+((int)100 * rangoexp);
-                ptext4.text = (int)inv.datosserial.tipohierba[11]+"                 "+((int)100 * rangoexp);
+                ptext3.text = (int)inv.datosserial.tipohierba[1]+"                 "+((int)30 * rangoexp);
+                ptext4.text = (int)inv.datosserial.tipohierba[11]+"                 "+((int)50 * rangoexp);
                 ptext5.text = (int)inv.datosserial.tipohierba[21]+"                 "+((int)100 * rangoexp);
                 ptext6.text = "";
 
@@ -299,41 +299,41 @@ public class tiendamenu : MonoBehaviour
                         nobot.Play();
                     }
 
-                    else if (i == 1 && inv.datosserial.dinero >= ((int)100 * rangoexp) && inv.datosserial.tipohierba[1] < 9)
+                    else if (i == 1 && inv.datosserial.dinero >= ((int)30 * rangoexp) && inv.datosserial.tipohierba[1] < 9)
                     {
                         inv.datosserial.tipohierba[1]++;
-                        inv.datosserial.dinero -= ((int)100 * rangoexp);
+                        inv.datosserial.dinero -= ((int)30 * rangoexp);
                         mensaje.text = "buena compra";
                         inv.guardar();
                         inv._agregar2();
                         sibot.Play();
                     }
-                    else if(i == 1 && inv.datosserial.dinero < ((int)100 * rangoexp) && inv.datosserial.tipohierba[1] < 9)
+                    else if(i == 1 && inv.datosserial.dinero < ((int)30 * rangoexp) && inv.datosserial.tipohierba[1] < 9)
                     {
                         mensaje.text = "no tienes saldo sufieciente";
                         nobot.Play();
                     }
-                    else if(i == 1 && inv.datosserial.dinero >= ((int)100 * rangoexp) && inv.datosserial.tipohierba[1] >= 9)
+                    else if(i == 1 && inv.datosserial.dinero >= ((int)30 * rangoexp) && inv.datosserial.tipohierba[1] >= 9)
                     {
                         mensaje.text = "tienes el limite de este objeto";
                         nobot.Play();
                     }
 
-                    else if (i == 1 && inv.datosserial.dinero >= ((int)100 * rangoexp) && inv.datosserial.tipohierba[11] < 9)
+                    else if (i == 1 && inv.datosserial.dinero >= ((int)50 * rangoexp) && inv.datosserial.tipohierba[11] < 9)
                     {
                         inv.datosserial.tipohierba[11]++;
-                        inv.datosserial.dinero -= ((int)100 * rangoexp);
+                        inv.datosserial.dinero -= ((int)50 * rangoexp);
                         mensaje.text = "buena compra";
                         inv.guardar();
                         inv._agregar2();
                         sibot.Play();
                     }
-                    else if(i == 1 && inv.datosserial.dinero < ((int)100 * rangoexp) && inv.datosserial.tipohierba[11] < 9)
+                    else if(i == 1 && inv.datosserial.dinero < ((int)50 * rangoexp) && inv.datosserial.tipohierba[11] < 9)
                     {
                         mensaje.text = "no tienes saldo sufieciente";
                         nobot.Play();
                     }
-                    else if(i == 1 && inv.datosserial.dinero >= ((int)100 * rangoexp) && inv.datosserial.tipohierba[11] >= 9)
+                    else if(i == 1 && inv.datosserial.dinero >= ((int)50 * rangoexp) && inv.datosserial.tipohierba[11] >= 9)
                     {
                         mensaje.text = "tienes el limite de este objeto";
                         nobot.Play();
@@ -431,51 +431,51 @@ public class tiendamenu : MonoBehaviour
                 sel4.SetActive(false);
                 sel5.SetActive(false);
                 sel6.SetActive(true);}
-                ptext1.text = (int)inv.datosserial.tipohierba[2]+"                 "+((int)100 * rangoexp);
-                ptext2.text = (int)inv.datosserial.tipohierba[12]+"                 "+((int)100 * rangoexp);
+                ptext1.text = (int)inv.datosserial.tipohierba[2]+"                 "+((int)30 * rangoexp);
+                ptext2.text = (int)inv.datosserial.tipohierba[12]+"                 "+((int)50 * rangoexp);
                 ptext3.text = (int)inv.datosserial.tipohierba[22]+"                 "+((int)100 * rangoexp);
-                ptext4.text = (int)inv.datosserial.tipohierba[3]+"                 "+((int)100 * rangoexp);
-                ptext5.text = (int)inv.datosserial.tipohierba[13]+"                 "+((int)100 * rangoexp);
+                ptext4.text = (int)inv.datosserial.tipohierba[3]+"                 "+((int)30 * rangoexp);
+                ptext5.text = (int)inv.datosserial.tipohierba[13]+"                 "+((int)50 * rangoexp);
                 ptext6.text = (int)inv.datosserial.tipohierba[23]+"                 "+((int)100 * rangoexp);
 
                 if(bichoselec == true && temp > 0.3f)
                 {
 
-                    if (i == 0 && inv.datosserial.dinero >= ((int)100 * rangoexp) && inv.datosserial.tipohierba[2] < 9)
+                    if (i == 0 && inv.datosserial.dinero >= ((int)30 * rangoexp) && inv.datosserial.tipohierba[2] < 9)
                     {
                         inv.datosserial.tipohierba[2]++;
-                        inv.datosserial.dinero -= ((int)100 * rangoexp);
+                        inv.datosserial.dinero -= ((int)30 * rangoexp);
                         mensaje.text = "buena compra";
                         inv.guardar();
                         inv._agregar2();
                         sibot.Play();
                     }
-                    else if(i == 0 && inv.datosserial.dinero < ((int)100 * rangoexp) && inv.datosserial.tipohierba[2] < 9)
+                    else if(i == 0 && inv.datosserial.dinero < ((int)30 * rangoexp) && inv.datosserial.tipohierba[2] < 9)
                     {
                         mensaje.text = "no tienes saldo sufieciente";
                         nobot.Play();
                     }
-                    else if(i == 0 && inv.datosserial.dinero >= ((int)100 * rangoexp) && inv.datosserial.tipohierba[2] >= 9)
+                    else if(i == 0 && inv.datosserial.dinero >= ((int)30 * rangoexp) && inv.datosserial.tipohierba[2] >= 9)
                     {
                         mensaje.text = "tienes el limite de este objeto";
                         nobot.Play();
                     }
 
-                    else if (i == 1 && inv.datosserial.dinero >= ((int)100 * rangoexp) && inv.datosserial.tipohierba[12] < 9)
+                    else if (i == 1 && inv.datosserial.dinero >= ((int)50 * rangoexp) && inv.datosserial.tipohierba[12] < 9)
                     {
                         inv.datosserial.tipohierba[12]++;
-                        inv.datosserial.dinero -= ((int)100 * rangoexp);
+                        inv.datosserial.dinero -= ((int)50 * rangoexp);
                         mensaje.text = "buena compra";
                         inv.guardar();
                         inv._agregar2();
                         sibot.Play();
                     }
-                    else if(i == 1 && inv.datosserial.dinero < ((int)100 * rangoexp) && inv.datosserial.tipohierba[12] < 9)
+                    else if(i == 1 && inv.datosserial.dinero < ((int)50 * rangoexp) && inv.datosserial.tipohierba[12] < 9)
                     {
                         mensaje.text = "no tienes saldo sufieciente";
                         nobot.Play();
                     }
-                    else if(i == 1 && inv.datosserial.dinero >= ((int)100 * rangoexp) && inv.datosserial.tipohierba[12] >= 9)
+                    else if(i == 1 && inv.datosserial.dinero >= ((int)50 * rangoexp) && inv.datosserial.tipohierba[12] >= 9)
                     {
                         mensaje.text = "tienes el limite de este objeto";
                         nobot.Play();
@@ -501,41 +501,41 @@ public class tiendamenu : MonoBehaviour
                         nobot.Play();
                     }
 
-                    else if (i == 1 && inv.datosserial.dinero >= ((int)100 * rangoexp) && inv.datosserial.tipohierba[3] < 9)
+                    else if (i == 1 && inv.datosserial.dinero >= ((int)30 * rangoexp) && inv.datosserial.tipohierba[3] < 9)
                     {
                         inv.datosserial.tipohierba[3]++;
-                        inv.datosserial.dinero -= ((int)100 * rangoexp);
+                        inv.datosserial.dinero -= ((int)30 * rangoexp);
                         mensaje.text = "buena compra";
                         inv.guardar();
                         inv._agregar2();
                         sibot.Play();
                     }
-                    else if(i == 1 && inv.datosserial.dinero < ((int)100 * rangoexp) && inv.datosserial.tipohierba[3] < 9)
+                    else if(i == 1 && inv.datosserial.dinero < ((int)30 * rangoexp) && inv.datosserial.tipohierba[3] < 9)
                     {
                         mensaje.text = "no tienes saldo sufieciente";
                         nobot.Play();
                     }
-                    else if(i == 1 && inv.datosserial.dinero >= ((int)100 * rangoexp) && inv.datosserial.tipohierba[3] >= 9)
+                    else if(i == 1 && inv.datosserial.dinero >= ((int)30 * rangoexp) && inv.datosserial.tipohierba[3] >= 9)
                     {
                         mensaje.text = "tienes el limite de este objeto";
                         nobot.Play();
                     }
 
-                    else if (i == 1 && inv.datosserial.dinero >= ((int)100 * rangoexp) && inv.datosserial.tipohierba[13] < 9)
+                    else if (i == 1 && inv.datosserial.dinero >= ((int)50 * rangoexp) && inv.datosserial.tipohierba[13] < 9)
                     {
                         inv.datosserial.tipohierba[13]++;
-                        inv.datosserial.dinero -= ((int)100 * rangoexp);
+                        inv.datosserial.dinero -= ((int)50 * rangoexp);
                         mensaje.text = "buena compra";
                         inv.guardar();
                         inv._agregar2();
                         sibot.Play();
                     }
-                    else if(i == 1 && inv.datosserial.dinero < ((int)100 * rangoexp) && inv.datosserial.tipohierba[13] < 9)
+                    else if(i == 1 && inv.datosserial.dinero < ((int)50 * rangoexp) && inv.datosserial.tipohierba[13] < 9)
                     {
                         mensaje.text = "no tienes saldo sufieciente";
                         nobot.Play();
                     }
-                    else if(i == 1 && inv.datosserial.dinero >= ((int)100 * rangoexp) && inv.datosserial.tipohierba[13] >= 9)
+                    else if(i == 1 && inv.datosserial.dinero >= ((int)50 * rangoexp) && inv.datosserial.tipohierba[13] >= 9)
                     {
                         mensaje.text = "tienes el limite de este objeto";
                         nobot.Play();
@@ -629,50 +629,50 @@ public class tiendamenu : MonoBehaviour
                 sel4.SetActive(false);
                 sel5.SetActive(false);
                 sel6.SetActive(true);}
-                ptext1.text = (int)inv.datosserial.tipohierba[4]+"                 "+((int)100 * rangoexp);
-                ptext2.text = (int)inv.datosserial.tipohierba[14]+"                 "+((int)100 * rangoexp);
+                ptext1.text = (int)inv.datosserial.tipohierba[4]+"                 "+((int)30 * rangoexp);
+                ptext2.text = (int)inv.datosserial.tipohierba[14]+"                 "+((int)50 * rangoexp);
                 ptext3.text = (int)inv.datosserial.tipohierba[24]+"                 "+((int)100 * rangoexp);
-                ptext4.text = (int)inv.datosserial.tipohierba[5]+"                 "+((int)100 * rangoexp);
-                ptext5.text = (int)inv.datosserial.tipohierba[15]+"                 "+((int)100 * rangoexp);
+                ptext4.text = (int)inv.datosserial.tipohierba[5]+"                 "+((int)30 * rangoexp);
+                ptext5.text = (int)inv.datosserial.tipohierba[15]+"                 "+((int)50 * rangoexp);
                 ptext6.text = (int)inv.datosserial.tipohierba[25]+"                 "+((int)100 * rangoexp);
 
                 if(bichoselec == true && temp > 0.3f)
                 {
-                    if (i == 0 && inv.datosserial.dinero >= ((int)100 * rangoexp) && inv.datosserial.tipohierba[4] < 9)
+                    if (i == 0 && inv.datosserial.dinero >= ((int)30 * rangoexp) && inv.datosserial.tipohierba[4] < 9)
                     {
                         inv.datosserial.tipohierba[4]++;
-                        inv.datosserial.dinero -= ((int)100 * rangoexp);
+                        inv.datosserial.dinero -= ((int)30 * rangoexp);
                         mensaje.text = "buena compra";
                         inv.guardar();
                         inv._agregar2();
                         sibot.Play();
                     }
-                    else if(i == 0 && inv.datosserial.dinero < ((int)100 * rangoexp) && inv.datosserial.tipohierba[4] < 9)
+                    else if(i == 0 && inv.datosserial.dinero < ((int)30 * rangoexp) && inv.datosserial.tipohierba[4] < 9)
                     {
                         mensaje.text = "no tienes saldo sufieciente";
                         nobot.Play();
                     }
-                    else if(i == 0 && inv.datosserial.dinero >= ((int)100 * rangoexp) && inv.datosserial.tipohierba[4] >= 9)
+                    else if(i == 0 && inv.datosserial.dinero >= ((int)30 * rangoexp) && inv.datosserial.tipohierba[4] >= 9)
                     {
                         mensaje.text = "tienes el limite de este objeto";
                         nobot.Play();
                     }
 
-                    else if (i == 1 && inv.datosserial.dinero >= ((int)100 * rangoexp) && inv.datosserial.tipohierba[14] < 9)
+                    else if (i == 1 && inv.datosserial.dinero >= ((int)50 * rangoexp) && inv.datosserial.tipohierba[14] < 9)
                     {
                         inv.datosserial.tipohierba[14]++;
-                        inv.datosserial.dinero -= ((int)100 * rangoexp);
+                        inv.datosserial.dinero -= ((int)50 * rangoexp);
                         mensaje.text = "buena compra";
                         inv.guardar();
                         inv._agregar2();
                         sibot.Play();
                     }
-                    else if(i == 1 && inv.datosserial.dinero < ((int)100 * rangoexp) && inv.datosserial.tipohierba[14] < 9)
+                    else if(i == 1 && inv.datosserial.dinero < ((int)50 * rangoexp) && inv.datosserial.tipohierba[14] < 9)
                     {
                         mensaje.text = "no tienes saldo sufieciente";
                         nobot.Play();
                     }
-                    else if(i == 1 && inv.datosserial.dinero >= ((int)100 * rangoexp) && inv.datosserial.tipohierba[14] >= 9)
+                    else if(i == 1 && inv.datosserial.dinero >= ((int)50 * rangoexp) && inv.datosserial.tipohierba[14] >= 9)
                     {
                         mensaje.text = "tienes el limite de este objeto";
                         nobot.Play();
@@ -698,41 +698,41 @@ public class tiendamenu : MonoBehaviour
                         nobot.Play();
                     }
 
-                    else if (i == 1 && inv.datosserial.dinero >= ((int)100 * rangoexp) && inv.datosserial.tipohierba[5] < 9)
+                    else if (i == 1 && inv.datosserial.dinero >= ((int)30 * rangoexp) && inv.datosserial.tipohierba[5] < 9)
                     {
                         inv.datosserial.tipohierba[5]++;
-                        inv.datosserial.dinero -= ((int)100 * rangoexp);
+                        inv.datosserial.dinero -= ((int)30 * rangoexp);
                         mensaje.text = "buena compra";
                         inv.guardar();
                         inv._agregar2();
                         sibot.Play();
                     }
-                    else if(i == 1 && inv.datosserial.dinero < ((int)100 * rangoexp) && inv.datosserial.tipohierba[5] < 9)
+                    else if(i == 1 && inv.datosserial.dinero < ((int)30 * rangoexp) && inv.datosserial.tipohierba[5] < 9)
                     {
                         mensaje.text = "no tienes saldo sufieciente";
                         nobot.Play();
                     }
-                    else if(i == 1 && inv.datosserial.dinero >= ((int)100 * rangoexp) && inv.datosserial.tipohierba[5] >= 9)
+                    else if(i == 1 && inv.datosserial.dinero >= ((int)30 * rangoexp) && inv.datosserial.tipohierba[5] >= 9)
                     {
                         mensaje.text = "tienes el limite de este objeto";
                         nobot.Play();
                     }
 
-                    else if (i == 1 && inv.datosserial.dinero >= ((int)100 * rangoexp) && inv.datosserial.tipohierba[15] < 9)
+                    else if (i == 1 && inv.datosserial.dinero >= ((int)50 * rangoexp) && inv.datosserial.tipohierba[15] < 9)
                     {
                         inv.datosserial.tipohierba[15]++;
-                        inv.datosserial.dinero -= ((int)100 * rangoexp);
+                        inv.datosserial.dinero -= ((int)50 * rangoexp);
                         mensaje.text = "buena compra";
                         inv.guardar();
                         inv._agregar2();
                         sibot.Play();
                     }
-                    else if(i == 1 && inv.datosserial.dinero < ((int)100 * rangoexp) && inv.datosserial.tipohierba[15] < 9)
+                    else if(i == 1 && inv.datosserial.dinero < ((int)50 * rangoexp) && inv.datosserial.tipohierba[15] < 9)
                     {
                         mensaje.text = "no tienes saldo sufieciente";
                         nobot.Play();
                     }
-                    else if(i == 1 && inv.datosserial.dinero >= ((int)100 * rangoexp) && inv.datosserial.tipohierba[15] >= 9)
+                    else if(i == 1 && inv.datosserial.dinero >= ((int)50 * rangoexp) && inv.datosserial.tipohierba[15] >= 9)
                     {
                         mensaje.text = "tienes el limite de este objeto";
                         nobot.Play();
@@ -826,50 +826,50 @@ public class tiendamenu : MonoBehaviour
                 sel4.SetActive(false);
                 sel5.SetActive(false);
                 sel6.SetActive(true);}
-                ptext1.text = (int)inv.datosserial.tipohierba[6]+"                 "+((int)100 * rangoexp);
-                ptext2.text = (int)inv.datosserial.tipohierba[16]+"                 "+((int)100 * rangoexp);
+                ptext1.text = (int)inv.datosserial.tipohierba[6]+"                 "+((int)30 * rangoexp);
+                ptext2.text = (int)inv.datosserial.tipohierba[16]+"                 "+((int)50 * rangoexp);
                 ptext3.text = (int)inv.datosserial.tipohierba[26]+"                 "+((int)100 * rangoexp);
-                ptext4.text = (int)inv.datosserial.tipohierba[7]+"                 "+((int)100 * rangoexp);
-                ptext5.text = (int)inv.datosserial.tipohierba[17]+"                 "+((int)100 * rangoexp);
+                ptext4.text = (int)inv.datosserial.tipohierba[7]+"                 "+((int)30 * rangoexp);
+                ptext5.text = (int)inv.datosserial.tipohierba[17]+"                 "+((int)50 * rangoexp);
                 ptext6.text = (int)inv.datosserial.tipohierba[27]+"                 "+((int)100 * rangoexp);
 
                 if(bichoselec == true && temp > 0.3f)
                 {
-                    if (i == 0 && inv.datosserial.dinero >= ((int)100 * rangoexp) && inv.datosserial.tipohierba[6] < 9)
+                    if (i == 0 && inv.datosserial.dinero >= ((int)30 * rangoexp) && inv.datosserial.tipohierba[6] < 9)
                     {
                         inv.datosserial.tipohierba[6]++;
-                        inv.datosserial.dinero -= ((int)100 * rangoexp);
+                        inv.datosserial.dinero -= ((int)30 * rangoexp);
                         mensaje.text = "buena compra";
                         inv.guardar();
                         inv._agregar2();
                         sibot.Play();
                     }
-                    else if(i == 0 && inv.datosserial.dinero < ((int)100 * rangoexp) && inv.datosserial.tipohierba[6] < 9)
+                    else if(i == 0 && inv.datosserial.dinero < ((int)30 * rangoexp) && inv.datosserial.tipohierba[6] < 9)
                     {
                         mensaje.text = "no tienes saldo sufieciente";
                         nobot.Play();
                     }
-                    else if(i == 0 && inv.datosserial.dinero >= ((int)100 * rangoexp) && inv.datosserial.tipohierba[6] >= 9)
+                    else if(i == 0 && inv.datosserial.dinero >= ((int)30 * rangoexp) && inv.datosserial.tipohierba[6] >= 9)
                     {
                         mensaje.text = "tienes el limite de este objeto";
                         nobot.Play();
                     }
 
-                    else if (i == 1 && inv.datosserial.dinero >= ((int)100 * rangoexp) && inv.datosserial.tipohierba[16] < 9)
+                    else if (i == 1 && inv.datosserial.dinero >= ((int)50 * rangoexp) && inv.datosserial.tipohierba[16] < 9)
                     {
                         inv.datosserial.tipohierba[16]++;
-                        inv.datosserial.dinero -= ((int)100 * rangoexp);
+                        inv.datosserial.dinero -= ((int)50 * rangoexp);
                         mensaje.text = "buena compra";
                         inv.guardar();
                         inv._agregar2();
                         sibot.Play();
                     }
-                    else if(i == 1 && inv.datosserial.dinero < ((int)100 * rangoexp) && inv.datosserial.tipohierba[16] < 9)
+                    else if(i == 1 && inv.datosserial.dinero < ((int)50 * rangoexp) && inv.datosserial.tipohierba[16] < 9)
                     {
                         mensaje.text = "no tienes saldo sufieciente";
                         nobot.Play();
                     }
-                    else if(i == 1 && inv.datosserial.dinero >= ((int)100 * rangoexp) && inv.datosserial.tipohierba[16] >= 9)
+                    else if(i == 1 && inv.datosserial.dinero >= ((int)50 * rangoexp) && inv.datosserial.tipohierba[16] >= 9)
                     {
                         mensaje.text = "tienes el limite de este objeto";
                         nobot.Play();
@@ -895,41 +895,41 @@ public class tiendamenu : MonoBehaviour
                         nobot.Play();
                     }
 
-                    else if (i == 1 && inv.datosserial.dinero >= ((int)100 * rangoexp) && inv.datosserial.tipohierba[7] < 9)
+                    else if (i == 1 && inv.datosserial.dinero >= ((int)30 * rangoexp) && inv.datosserial.tipohierba[7] < 9)
                     {
                         inv.datosserial.tipohierba[7]++;
-                        inv.datosserial.dinero -= ((int)100 * rangoexp);
+                        inv.datosserial.dinero -= ((int)30 * rangoexp);
                         mensaje.text = "buena compra";
                         inv.guardar();
                         inv._agregar2();
                         sibot.Play();
                     }
-                    else if(i == 1 && inv.datosserial.dinero < ((int)100 * rangoexp) && inv.datosserial.tipohierba[7] < 9)
+                    else if(i == 1 && inv.datosserial.dinero < ((int)30 * rangoexp) && inv.datosserial.tipohierba[7] < 9)
                     {
                         mensaje.text = "no tienes saldo sufieciente";
                         nobot.Play();
                     }
-                    else if(i == 1 && inv.datosserial.dinero >= ((int)100 * rangoexp) && inv.datosserial.tipohierba[7] >= 9)
+                    else if(i == 1 && inv.datosserial.dinero >= ((int)30 * rangoexp) && inv.datosserial.tipohierba[7] >= 9)
                     {
                         mensaje.text = "tienes el limite de este objeto";
                         nobot.Play();
                     }
 
-                    else if (i == 1 && inv.datosserial.dinero >= ((int)100 * rangoexp) && inv.datosserial.tipohierba[17] < 9)
+                    else if (i == 1 && inv.datosserial.dinero >= ((int)50 * rangoexp) && inv.datosserial.tipohierba[17] < 9)
                     {
                         inv.datosserial.tipohierba[17]++;
-                        inv.datosserial.dinero -= ((int)100 * rangoexp);
+                        inv.datosserial.dinero -= ((int)50 * rangoexp);
                         mensaje.text = "buena compra";
                         inv.guardar();
                         inv._agregar2();
                         sibot.Play();
                     }
-                    else if(i == 1 && inv.datosserial.dinero < ((int)100 * rangoexp) && inv.datosserial.tipohierba[17] < 9)
+                    else if(i == 1 && inv.datosserial.dinero < ((int)50 * rangoexp) && inv.datosserial.tipohierba[17] < 9)
                     {
                         mensaje.text = "no tienes saldo sufieciente";
                         nobot.Play();
                     }
-                    else if(i == 1 && inv.datosserial.dinero >= ((int)100 * rangoexp) && inv.datosserial.tipohierba[17] >= 9)
+                    else if(i == 1 && inv.datosserial.dinero >= ((int)50 * rangoexp) && inv.datosserial.tipohierba[17] >= 9)
                     {
                         mensaje.text = "tienes el limite de este objeto";
                         nobot.Play();
@@ -1023,50 +1023,50 @@ public class tiendamenu : MonoBehaviour
                 sel4.SetActive(false);
                 sel5.SetActive(false);
                 sel6.SetActive(true);}
-                ptext1.text = (int)inv.datosserial.tipohierba[8]+"                 "+((int)100 * rangoexp);
-                ptext2.text = (int)inv.datosserial.tipohierba[18]+"                 "+((int)100 * rangoexp);
+                ptext1.text = (int)inv.datosserial.tipohierba[8]+"                 "+((int)30 * rangoexp);
+                ptext2.text = (int)inv.datosserial.tipohierba[18]+"                 "+((int)50 * rangoexp);
                 ptext3.text = (int)inv.datosserial.tipohierba[28]+"                 "+((int)100 * rangoexp);
-                ptext4.text = (int)inv.datosserial.tipohierba[9]+"                 "+((int)100 * rangoexp);
-                ptext5.text = (int)inv.datosserial.tipohierba[19]+"                 "+((int)100 * rangoexp);
+                ptext4.text = (int)inv.datosserial.tipohierba[9]+"                 "+((int)30 * rangoexp);
+                ptext5.text = (int)inv.datosserial.tipohierba[19]+"                 "+((int)50 * rangoexp);
                 ptext6.text = (int)inv.datosserial.tipohierba[29]+"                 "+((int)100 * rangoexp);
 
                 if(bichoselec == true && temp > 0.3f)
                 {
-                    if (i == 0 && inv.datosserial.dinero >= ((int)100 * rangoexp) && inv.datosserial.tipohierba[8] < 9)
+                    if (i == 0 && inv.datosserial.dinero >= ((int)30 * rangoexp) && inv.datosserial.tipohierba[8] < 9)
                     {
                         inv.datosserial.tipohierba[8]++;
-                        inv.datosserial.dinero -= ((int)100 * rangoexp);
+                        inv.datosserial.dinero -= ((int)30 * rangoexp);
                         mensaje.text = "buena compra";
                         inv.guardar();
                         inv._agregar2();
                         sibot.Play();
                     }
-                    else if(i == 0 && inv.datosserial.dinero < ((int)100 * rangoexp) && inv.datosserial.tipohierba[8] < 9)
+                    else if(i == 0 && inv.datosserial.dinero < ((int)30 * rangoexp) && inv.datosserial.tipohierba[8] < 9)
                     {
                         mensaje.text = "no tienes saldo sufieciente";
                         nobot.Play();
                     }
-                    else if(i == 0 && inv.datosserial.dinero >= ((int)100 * rangoexp) && inv.datosserial.tipohierba[8] >= 9)
+                    else if(i == 0 && inv.datosserial.dinero >= ((int)30 * rangoexp) && inv.datosserial.tipohierba[8] >= 9)
                     {
                         mensaje.text = "tienes el limite de este objeto";
                         nobot.Play();
                     }
 
-                    else if (i == 1 && inv.datosserial.dinero >= ((int)100 * rangoexp) && inv.datosserial.tipohierba[18] < 9)
+                    else if (i == 1 && inv.datosserial.dinero >= ((int)50 * rangoexp) && inv.datosserial.tipohierba[18] < 9)
                     {
                         inv.datosserial.tipohierba[18]++;
-                        inv.datosserial.dinero -= ((int)100 * rangoexp);
+                        inv.datosserial.dinero -= ((int)50 * rangoexp);
                         mensaje.text = "buena compra";
                         inv.guardar();
                         inv._agregar2();
                         sibot.Play();
                     }
-                    else if(i == 1 && inv.datosserial.dinero < ((int)100 * rangoexp) && inv.datosserial.tipohierba[18] < 9)
+                    else if(i == 1 && inv.datosserial.dinero < ((int)50 * rangoexp) && inv.datosserial.tipohierba[18] < 9)
                     {
                         mensaje.text = "no tienes saldo sufieciente";
                         nobot.Play();
                     }
-                    else if(i == 1 && inv.datosserial.dinero >= ((int)100 * rangoexp) && inv.datosserial.tipohierba[18] >= 9)
+                    else if(i == 1 && inv.datosserial.dinero >= ((int)50 * rangoexp) && inv.datosserial.tipohierba[18] >= 9)
                     {
                         mensaje.text = "tienes el limite de este objeto";
                         nobot.Play();
@@ -1092,41 +1092,41 @@ public class tiendamenu : MonoBehaviour
                         nobot.Play();
                     }
 
-                    else if (i == 1 && inv.datosserial.dinero >= ((int)100 * rangoexp) && inv.datosserial.tipohierba[9] < 9)
+                    else if (i == 1 && inv.datosserial.dinero >= ((int)30 * rangoexp) && inv.datosserial.tipohierba[9] < 9)
                     {
                         inv.datosserial.tipohierba[9]++;
-                        inv.datosserial.dinero -= ((int)100 * rangoexp);
+                        inv.datosserial.dinero -= ((int)30 * rangoexp);
                         mensaje.text = "buena compra";
                         inv.guardar();
                         inv._agregar2();
                         sibot.Play();
                     }
-                    else if(i == 1 && inv.datosserial.dinero < ((int)100 * rangoexp) && inv.datosserial.tipohierba[9] < 9)
+                    else if(i == 1 && inv.datosserial.dinero < ((int)30 * rangoexp) && inv.datosserial.tipohierba[9] < 9)
                     {
                         mensaje.text = "no tienes saldo sufieciente";
                         nobot.Play();
                     }
-                    else if(i == 1 && inv.datosserial.dinero >= ((int)100 * rangoexp) && inv.datosserial.tipohierba[9] >= 9)
+                    else if(i == 1 && inv.datosserial.dinero >= ((int)30 * rangoexp) && inv.datosserial.tipohierba[9] >= 9)
                     {
                         mensaje.text = "tienes el limite de este objeto";
                         nobot.Play();
                     }
 
-                    else if (i == 1 && inv.datosserial.dinero >= ((int)100 * rangoexp) && inv.datosserial.tipohierba[13] < 9)
+                    else if (i == 1 && inv.datosserial.dinero >= ((int)50 * rangoexp) && inv.datosserial.tipohierba[13] < 9)
                     {
                         inv.datosserial.tipohierba[13]++;
-                        inv.datosserial.dinero -= ((int)100 * rangoexp);
+                        inv.datosserial.dinero -= ((int)50 * rangoexp);
                         mensaje.text = "buena compra";
                         inv.guardar();
                         inv._agregar2();
                         sibot.Play();
                     }
-                    else if(i == 1 && inv.datosserial.dinero < ((int)100 * rangoexp) && inv.datosserial.tipohierba[13] < 9)
+                    else if(i == 1 && inv.datosserial.dinero < ((int)50 * rangoexp) && inv.datosserial.tipohierba[13] < 9)
                     {
                         mensaje.text = "no tienes saldo sufieciente";
                         nobot.Play();
                     }
-                    else if(i == 1 && inv.datosserial.dinero >= ((int)100 * rangoexp) && inv.datosserial.tipohierba[13] >= 9)
+                    else if(i == 1 && inv.datosserial.dinero >= ((int)50 * rangoexp) && inv.datosserial.tipohierba[13] >= 9)
                     {
                         mensaje.text = "tienes el limite de este objeto";
                         nobot.Play();

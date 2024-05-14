@@ -80,13 +80,13 @@ public class subirrangos : MonoBehaviour
         inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
         rango = inv.datosserial.rangoplay;
         if(rango == 1)
-        {requisito = 1000;}
+        {requisito = 5000;}
         if(rango == 2)
-        {requisito = 2500;}
+        {requisito = 15000;}
         if(rango == 3)
-        {requisito = 4000;}
+        {requisito = 30000;}
         if(rango == 4)
-        {requisito = 6000;}
+        {requisito = 50000;}
         if(rango == 5)
         {noventa = true;}
 

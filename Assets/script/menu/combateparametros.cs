@@ -329,7 +329,7 @@ public class combateparametros : MonoBehaviour
 
 
 
-        comb.namebarcelona[8] = "roberto";
+        comb.namebarcelona[8] = "gabriel";
         comb.hpbarcelona[8] = 490;
         comb.manabarcelona[8] = 120;
         comb.manarecbarcelona[8] = 1.05f;
@@ -348,7 +348,7 @@ public class combateparametros : MonoBehaviour
         comb.clasebarcelona[8] = 1;
         comb.nivelbarcelona[8] = 8;
         comb.bichosbarcelona.Add( "");
-        comb.bichosbarcelona[8] = "roboerto";
+        comb.bichosbarcelona[8] = "mirror";
 
         comb.namebarcelona[9] = "pepe";
         comb.hpbarcelona[9] = 550;
@@ -369,7 +369,7 @@ public class combateparametros : MonoBehaviour
         comb.clasebarcelona[9] = 1;
         comb.nivelbarcelona[9] = 9;
         comb.bichosbarcelona.Add( "");
-        comb.bichosbarcelona[9] = "aghostin";
+        comb.bichosbarcelona[9] = "kingdragon";
 
 
         comb.namebarcelona[10] = "alan";
@@ -524,6 +524,92 @@ public class combateparametros : MonoBehaviour
         comb.bichosbarcelona.Add( "");
         comb.bichosbarcelona[16] = "pesadilla";
 
+        comb.namebarcelona[17] = "ms nanu";
+        comb.hpbarcelona[17] = 920;
+        comb.manabarcelona[17] = 140;
+        comb.manarecbarcelona[17] = 1.60f;
+        comb.fuerzabarcelona[17] = 5.5f;
+        comb.rangobarcelona[17] = 1;
+        if(inv.datosserial.rangoplay > comb.rangobarcelona[17])
+        {
+            comb.rangobarcelona[17] = inv.datosserial.rangoplay;
+            comb.hpbarcelona[17] = 920* rangoexp;
+            comb.manabarcelona[17] = 140* rangoexp;
+            comb.manarecbarcelona[17] = 1.60f* rangoexp;
+            comb.fuerzabarcelona[17] = 5.5f* rangoexp;
+            comb.rangobarcelona[17] = inv.datosserial.rangoplay;
+        }
+        comb.elementobarcelona[17] = "comun rango : "+comb.rangobarcelona[17];
+        comb.clasebarcelona[17] = 1;
+        comb.nivelbarcelona[17] = 16;
+        comb.bichosbarcelona.Add( "");
+        comb.bichosbarcelona[17] = "aghostin";
+
+
+
+        comb.namebarcelona[18] = "andrea";
+        comb.hpbarcelona[18] = 970;
+        comb.manabarcelona[18] = 145;
+        comb.manarecbarcelona[18] = 1.50f;
+        comb.fuerzabarcelona[18] = 5f;
+        comb.rangobarcelona[18] = 1;
+        if(inv.datosserial.rangoplay > comb.rangobarcelona[18])
+        {
+            comb.rangobarcelona[18] = inv.datosserial.rangoplay;
+            comb.hpbarcelona[18] = 970* rangoexp;
+            comb.manabarcelona[18] = 145* rangoexp;
+            comb.manarecbarcelona[18] = 1.50f* rangoexp;
+            comb.fuerzabarcelona[18] = 5f* rangoexp;
+            comb.rangobarcelona[18] = inv.datosserial.rangoplay;
+        }
+        comb.elementobarcelona[18] = "comun rango : "+comb.rangobarcelona[18];
+        comb.clasebarcelona[18] = 1;
+        comb.nivelbarcelona[18] = 16;
+        comb.bichosbarcelona.Add( "");
+        comb.bichosbarcelona[18] = "kraken";
+
+        comb.namebarcelona[19] = "ester";
+        comb.hpbarcelona[19] = 915;
+        comb.manabarcelona[19] = 155;
+        comb.manarecbarcelona[19] = 1.50f;
+        comb.fuerzabarcelona[19] = 5.1f;
+        comb.rangobarcelona[19] = 1;
+        if(inv.datosserial.rangoplay > comb.rangobarcelona[19])
+        {
+            comb.rangobarcelona[19] = inv.datosserial.rangoplay;
+            comb.hpbarcelona[19] = 915* rangoexp;
+            comb.manabarcelona[19] = 155* rangoexp;
+            comb.manarecbarcelona[19] = 1.50f* rangoexp;
+            comb.fuerzabarcelona[19] = 5.1f* rangoexp;
+            comb.rangobarcelona[19] = inv.datosserial.rangoplay;
+        }
+        comb.elementobarcelona[19] = "comun rango : "+comb.rangobarcelona[19];
+        comb.clasebarcelona[19] = 1;
+        comb.nivelbarcelona[19] = 16;
+        comb.bichosbarcelona.Add( "");
+        comb.bichosbarcelona[19] = "lizardo";
+
+        comb.namebarcelona[20] = "toni";
+        comb.hpbarcelona[20] = 940;
+        comb.manabarcelona[20] = 150;
+        comb.manarecbarcelona[20] = 1.40f;
+        comb.fuerzabarcelona[20] = 5.4f;
+        comb.rangobarcelona[20] = 1;
+        if(inv.datosserial.rangoplay > comb.rangobarcelona[20])
+        {
+            comb.rangobarcelona[20] = inv.datosserial.rangoplay;
+            comb.hpbarcelona[20] = 940* rangoexp;
+            comb.manabarcelona[20] = 150* rangoexp;
+            comb.manarecbarcelona[20] = 1.40f* rangoexp;
+            comb.fuerzabarcelona[20] = 5.4f* rangoexp;
+            comb.rangobarcelona[20] = inv.datosserial.rangoplay;
+        }
+        comb.elementobarcelona[20] = "comun rango : "+comb.rangobarcelona[20];
+        comb.clasebarcelona[20] = 1;
+        comb.nivelbarcelona[20] = 16;
+        comb.bichosbarcelona.Add( "");
+        comb.bichosbarcelona[20] = "dogtable";
+
 
 
 
@@ -580,14 +666,158 @@ public class combateparametros : MonoBehaviour
             inv.guardar();
 
 
-            inv.datosserial.hpr = (int)Random.Range(900f,1000f)*comb.rangoexp * 1.5f;
-            inv.datosserial.manar = (int)Random.Range(200f,220f)*comb.rangoexp * 1.5f;
-            inv.datosserial.manarecr = Random.Range(1.6f,1.7f)*comb.rangoexp * 1.5f;
-            inv.datosserial.fuerzar = Random.Range(1.8f,2f)*comb.rangoexp * 1.5f;
+            inv.datosserial.hpr = (int)Random.Range(750f,950f)*comb.rangoexp * 1.5f;
+            inv.datosserial.manar = (int)Random.Range(130f,160f)*comb.rangoexp * 1.5f;
+            inv.datosserial.manarecr = Random.Range(1.3f,1.6f)*comb.rangoexp * 1.5f;
+            inv.datosserial.fuerzar = Random.Range(4f,5f)*comb.rangoexp * 1.5f;
             inv.datosserial.elementor = "dorado rango :"+inv.datosserial.rangoplay;
-            inv.datosserial.nivelr = 15;
+            inv.datosserial.nivelr = 16;
             inv.datosserial.claser = 3;
             inv.datosserial.razar = "skybird";
+            inv.datosserial.rangorr = inv.datosserial.rangoplay;
+            inv.guardar();
+        }
+        if(torneo == 1)
+        {
+
+            inv.datosserial.hptorneo[0] = comb.hpbarcelona[7];
+            inv.datosserial.manatorneo[0] = comb.manabarcelona[7];
+            inv.datosserial.manarectorneo[0] = comb.manarecbarcelona[7];
+            inv.datosserial.fuerzatorneo[0] = comb.fuerzabarcelona[7];
+            inv.datosserial.nametorneo[0] = comb.namebarcelona[7];
+            inv.datosserial.razatorneo[0] =  comb.bichosbarcelona[7];
+            inv.datosserial.niveltorneo[0] = (int)comb.nivelbarcelona[7];
+            inv.datosserial.clasetorneo[0] = comb.clasebarcelona[7];
+            inv.datosserial.rangotorneo[0] = comb.rangobarcelona[7];
+
+            inv.datosserial.hptorneo[1] = comb.hpbarcelona[9];
+            inv.datosserial.manatorneo[1] = comb.manabarcelona[9];
+            inv.datosserial.manarectorneo[1] = comb.manarecbarcelona[9];
+            inv.datosserial.fuerzatorneo[1] = comb.fuerzabarcelona[9];
+            inv.datosserial.nametorneo[1] = comb.namebarcelona[9];
+            inv.datosserial.razatorneo[1] =  comb.bichosbarcelona[9];
+            inv.datosserial.niveltorneo[1] = (int)comb.nivelbarcelona[9];
+            inv.datosserial.clasetorneo[1] = comb.clasebarcelona[9];
+            inv.datosserial.rangotorneo[1] = comb.rangobarcelona[9];
+
+            inv.datosserial.hptorneo[2] = comb.hpbarcelona[10];
+            inv.datosserial.manatorneo[2] = comb.manabarcelona[10];
+            inv.datosserial.manarectorneo[2] = comb.manarecbarcelona[10];
+            inv.datosserial.fuerzatorneo[2] = comb.fuerzabarcelona[10];
+            inv.datosserial.nametorneo[2] = comb.namebarcelona[10];
+            inv.datosserial.razatorneo[2] =  comb.bichosbarcelona[10];
+            inv.datosserial.niveltorneo[2] = (int)comb.nivelbarcelona[10];
+            inv.datosserial.clasetorneo[2] = comb.clasebarcelona[10];
+            inv.datosserial.rangotorneo[2] = comb.rangobarcelona[10];
+            inv.datosserial.torneopuesto = 0;
+            inv.datosserial.modotorneo = true;
+            inv.guardar();
+
+
+            inv.datosserial.hpr = (int)Random.Range(750f,950f)*comb.rangoexp * 1.5f;
+            inv.datosserial.manar = (int)Random.Range(130f,160f)*comb.rangoexp * 1.5f;
+            inv.datosserial.manarecr = Random.Range(1.3f,1.6f)*comb.rangoexp * 1.5f;
+            inv.datosserial.fuerzar = Random.Range(4f,5f)*comb.rangoexp * 1.5f;
+            inv.datosserial.elementor = "dorado rango :"+inv.datosserial.rangoplay;
+            inv.datosserial.nivelr = 16;
+            inv.datosserial.claser = 3;
+            inv.datosserial.razar = "algosaurio";
+            inv.datosserial.rangorr = inv.datosserial.rangoplay;
+            inv.guardar();
+        }
+        if(torneo == 2)
+        {
+
+            inv.datosserial.hptorneo[0] = comb.hpbarcelona[11];
+            inv.datosserial.manatorneo[0] = comb.manabarcelona[11];
+            inv.datosserial.manarectorneo[0] = comb.manarecbarcelona[11];
+            inv.datosserial.fuerzatorneo[0] = comb.fuerzabarcelona[11];
+            inv.datosserial.nametorneo[0] = comb.namebarcelona[11];
+            inv.datosserial.razatorneo[0] =  comb.bichosbarcelona[11];
+            inv.datosserial.niveltorneo[0] = (int)comb.nivelbarcelona[11];
+            inv.datosserial.clasetorneo[0] = comb.clasebarcelona[11];
+            inv.datosserial.rangotorneo[0] = comb.rangobarcelona[11];
+
+            inv.datosserial.hptorneo[1] = comb.hpbarcelona[12];
+            inv.datosserial.manatorneo[1] = comb.manabarcelona[12];
+            inv.datosserial.manarectorneo[1] = comb.manarecbarcelona[12];
+            inv.datosserial.fuerzatorneo[1] = comb.fuerzabarcelona[12];
+            inv.datosserial.nametorneo[1] = comb.namebarcelona[12];
+            inv.datosserial.razatorneo[1] =  comb.bichosbarcelona[12];
+            inv.datosserial.niveltorneo[1] = (int)comb.nivelbarcelona[12];
+            inv.datosserial.clasetorneo[1] = comb.clasebarcelona[12];
+            inv.datosserial.rangotorneo[1] = comb.rangobarcelona[12];
+
+            inv.datosserial.hptorneo[2] = comb.hpbarcelona[13];
+            inv.datosserial.manatorneo[2] = comb.manabarcelona[13];
+            inv.datosserial.manarectorneo[2] = comb.manarecbarcelona[13];
+            inv.datosserial.fuerzatorneo[2] = comb.fuerzabarcelona[13];
+            inv.datosserial.nametorneo[2] = comb.namebarcelona[13];
+            inv.datosserial.razatorneo[2] =  comb.bichosbarcelona[13];
+            inv.datosserial.niveltorneo[2] = (int)comb.nivelbarcelona[13];
+            inv.datosserial.clasetorneo[2] = comb.clasebarcelona[13];
+            inv.datosserial.rangotorneo[2] = comb.rangobarcelona[13];
+            inv.datosserial.torneopuesto = 0;
+            inv.datosserial.modotorneo = true;
+            inv.guardar();
+
+
+            inv.datosserial.hpr = (int)Random.Range(750f,950f)*comb.rangoexp * 1.5f;
+            inv.datosserial.manar = (int)Random.Range(130f,160f)*comb.rangoexp * 1.5f;
+            inv.datosserial.manarecr = Random.Range(1.3f,1.6f)*comb.rangoexp * 1.5f;
+            inv.datosserial.fuerzar = Random.Range(4f,5f)*comb.rangoexp * 1.5f;
+            inv.datosserial.elementor = "dorado rango :"+inv.datosserial.rangoplay;
+            inv.datosserial.nivelr = 16;
+            inv.datosserial.claser = 3;
+            inv.datosserial.razar = "vivodado";
+            inv.datosserial.rangorr = inv.datosserial.rangoplay;
+            inv.guardar();
+        }
+        if(torneo == 3)
+        {
+
+            inv.datosserial.hptorneo[0] = comb.hpbarcelona[17];
+            inv.datosserial.manatorneo[0] = comb.manabarcelona[17];
+            inv.datosserial.manarectorneo[0] = comb.manarecbarcelona[17];
+            inv.datosserial.fuerzatorneo[0] = comb.fuerzabarcelona[17];
+            inv.datosserial.nametorneo[0] = comb.namebarcelona[17];
+            inv.datosserial.razatorneo[0] =  comb.bichosbarcelona[17];
+            inv.datosserial.niveltorneo[0] = (int)comb.nivelbarcelona[17];
+            inv.datosserial.clasetorneo[0] = comb.clasebarcelona[17];
+            inv.datosserial.rangotorneo[0] = comb.rangobarcelona[17];
+
+            inv.datosserial.hptorneo[1] = comb.hpbarcelona[16];
+            inv.datosserial.manatorneo[1] = comb.manabarcelona[16];
+            inv.datosserial.manarectorneo[1] = comb.manarecbarcelona[16];
+            inv.datosserial.fuerzatorneo[1] = comb.fuerzabarcelona[16];
+            inv.datosserial.nametorneo[1] = comb.namebarcelona[16];
+            inv.datosserial.razatorneo[1] =  comb.bichosbarcelona[16];
+            inv.datosserial.niveltorneo[1] = (int)comb.nivelbarcelona[16];
+            inv.datosserial.clasetorneo[1] = comb.clasebarcelona[16];
+            inv.datosserial.rangotorneo[1] = comb.rangobarcelona[16];
+
+            inv.datosserial.hptorneo[2] = comb.hpbarcelona[20];
+            inv.datosserial.manatorneo[2] = comb.manabarcelona[20];
+            inv.datosserial.manarectorneo[2] = comb.manarecbarcelona[20];
+            inv.datosserial.fuerzatorneo[2] = comb.fuerzabarcelona[20];
+            inv.datosserial.nametorneo[2] = comb.namebarcelona[20];
+            inv.datosserial.razatorneo[2] =  comb.bichosbarcelona[20];
+            inv.datosserial.niveltorneo[2] = (int)comb.nivelbarcelona[20];
+            inv.datosserial.clasetorneo[2] = comb.clasebarcelona[20];
+            inv.datosserial.rangotorneo[2] = comb.rangobarcelona[20];
+            inv.datosserial.torneopuesto = 0;
+            inv.datosserial.modotorneo = true;
+            inv.guardar();
+
+
+            inv.datosserial.hpr = (int)Random.Range(750f,950f)*comb.rangoexp * 1.5f;
+            inv.datosserial.manar = (int)Random.Range(130f,160f)*comb.rangoexp * 1.5f;
+            inv.datosserial.manarecr = Random.Range(1.3f,1.6f)*comb.rangoexp * 1.5f;
+            inv.datosserial.fuerzar = Random.Range(4f,5f)*comb.rangoexp * 1.5f;
+            inv.datosserial.elementor = "dorado rango :"+inv.datosserial.rangoplay;
+            inv.datosserial.nivelr = 16;
+            inv.datosserial.claser = 3;
+            inv.datosserial.razar = "rosedragon";
             inv.datosserial.rangorr = inv.datosserial.rangoplay;
             inv.guardar();
         }

@@ -1093,7 +1093,8 @@ public class combatemenu : MonoBehaviour
                         {
                             i = 0;
                             minligaesc = 0;
-                            maxligaesc = 5;
+                            maxligaesc = 3;
+                            //maxligaesc = 5;
                             ciudadesliga = true;
                         }
                         else if(i == 1)
@@ -1172,11 +1173,16 @@ public class combatemenu : MonoBehaviour
                 i--;
                 temp = 0;
             }
-            if (der == true && i < 4 && temp > 0.3f)
+            if (der == true && i < 0 && temp > 0.3f)
             {
                 i++;
                 temp = 0;
             }
+            /*if (der == true && i < 4 && temp > 0.3f)
+            {
+                i++;
+                temp = 0;
+            }*/
         }
         if(ciudadliga == true)
         {

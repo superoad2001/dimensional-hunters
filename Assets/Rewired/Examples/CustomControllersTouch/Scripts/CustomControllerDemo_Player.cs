@@ -21,7 +21,7 @@ namespace Rewired.Demos {
         private Player player {
             get {
                 // Get the Rewired Player object for this player. Refresh it as needed so it will get the new reference after a script recompile in the editor.
-                if(_player == null) _player = ReInput.players.GetPlayer(playerId);
+                if(_player == null) _
                 return _player;
             }
         }

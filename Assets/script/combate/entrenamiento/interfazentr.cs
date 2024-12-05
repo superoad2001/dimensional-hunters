@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.XR.ARFoundation;
-using Rewired;
+
 
 public class interfazentr : MonoBehaviour
 {
@@ -41,7 +41,7 @@ public class interfazentr : MonoBehaviour
     {
         if(plat == "game3d")
         {
-         player = ReInput.players.GetPlayer(playerID);
+         
         }
     }
     

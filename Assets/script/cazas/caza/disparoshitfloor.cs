@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
-using Rewired;
+
 
 public class disparoshitfloor : MonoBehaviour
 {
@@ -69,7 +69,7 @@ public class disparoshitfloor : MonoBehaviour
         }
         if(plat == "game3d" || plat == "game3dt")
         {
-         player = ReInput.players.GetPlayer(playerID);
+         
         }
         rango = inv.datosserial.rangoplay;
         if(rango == 1)

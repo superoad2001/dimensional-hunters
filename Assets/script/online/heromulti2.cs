@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Unity.Collections;
 using Unity.Netcode;
-using Rewired;
+
 
 
 public class heromulti2  : NetworkBehaviour
@@ -292,7 +292,7 @@ public class heromulti2  : NetworkBehaviour
         inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
         plat = inv.datosserial.plat;
         if(plat == "game3d")
-        {player = ReInput.players.GetPlayer(playerID);}
+        {}
         
 
         

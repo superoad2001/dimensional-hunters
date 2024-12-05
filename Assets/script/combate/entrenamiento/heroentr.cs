@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using Rewired;
+
 
 
 public class heroentr : MonoBehaviour
@@ -213,7 +213,7 @@ public class heroentr : MonoBehaviour
         inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
         plat = inv.datosserial.plat;
         if(plat == "game3d")
-        {player = ReInput.players.GetPlayer(playerID);}
+        {}
 
 
         

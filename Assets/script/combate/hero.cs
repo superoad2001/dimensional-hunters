@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using Rewired;
+
 
 
 public class hero : MonoBehaviour
@@ -220,7 +220,7 @@ public class hero : MonoBehaviour
         inventario inv = UnityEngine.Object.FindObjectOfType<inventario>();
         plat = inv.datosserial.plat;
         if(plat == "game3d")
-        {player = ReInput.players.GetPlayer(playerID);}
+        {}
 
         
 

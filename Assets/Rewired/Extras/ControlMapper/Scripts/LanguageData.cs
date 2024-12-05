@@ -256,7 +256,7 @@ namespace Rewired.UI.ControlMapper {
         // Translation of Rewired core items
 
         public override string GetPlayerName(int playerId) {
-            Player player = ReInput.players.GetPlayer(playerId);
+            Player 
             if(player == null) throw new ArgumentException("Invalid player id: " + playerId);
             return player.descriptiveName;
         }

@@ -31,7 +31,7 @@ namespace Rewired.Demos {
 
         private void Initialize() {
             // Get the Rewired Player object for this player.
-            player = ReInput.players.GetPlayer(playerId);
+            
             
             initialized = true;
         }

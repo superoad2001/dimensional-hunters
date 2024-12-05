@@ -420,7 +420,7 @@ namespace Rewired.Data {
         /// <param name="controllerMap">The Controller Map</param>
         public override void SaveControllerMap(int playerId, ControllerMap controllerMap) {
             if (controllerMap == null) return;
-            Player player = ReInput.players.GetPlayer(playerId);
+            Player 
             if (player == null) return;
             SaveControllerMap(player, controllerMap);
         }
@@ -434,7 +434,7 @@ namespace Rewired.Data {
         /// <param name="layoutId">The Layout id of the Controller Map</param>
         /// <returns>Controller Map</returns>
         public override ControllerMap LoadControllerMap(int playerId, ControllerIdentifier controllerIdentifier, int categoryId, int layoutId) {
-            Player player = ReInput.players.GetPlayer(playerId);
+            Player 
             if (player == null) return null;
             return LoadControllerMap(player, controllerIdentifier, categoryId, layoutId);
         }
@@ -556,7 +556,7 @@ namespace Rewired.Data {
 
         private int LoadControllerMaps(int playerId, ControllerType controllerType, int controllerId) {
             int count = 0;
-            Player player = ReInput.players.GetPlayer(playerId);
+            Player 
             if(player == null) return count;
 
             Controller controller = ReInput.controllers.GetController(controllerType, controllerId);
@@ -604,7 +604,7 @@ namespace Rewired.Data {
         }
 
         private int LoadInputBehaviors(int playerId) {
-            Player player = ReInput.players.GetPlayer(playerId);
+            Player 
             if(player == null) return 0;
 
             int count = 0;
@@ -619,7 +619,7 @@ namespace Rewired.Data {
         }
 
         private int LoadInputBehaviorNow(int playerId, int behaviorId) {
-            Player player = ReInput.players.GetPlayer(playerId);
+            Player 
             if(player == null) return 0;
 
             InputBehavior behavior = ReInput.mapping.GetInputBehavior(playerId, behaviorId);
@@ -932,7 +932,7 @@ namespace Rewired.Data {
             }
         }
         private void SaveControllerMaps(int playerId, ControllerType controllerType, int controllerId) {
-            Player player = ReInput.players.GetPlayer(playerId);
+            Player 
             if(player == null) return;
 
             // Save controller maps in this player for this controller id
@@ -968,7 +968,7 @@ namespace Rewired.Data {
         }
 
         private void SaveInputBehaviorNow(int playerId, int behaviorId) {
-            Player player = ReInput.players.GetPlayer(playerId);
+            Player 
             if(player == null) return;
 
             InputBehavior behavior = ReInput.mapping.GetInputBehavior(playerId, behaviorId);
@@ -1288,7 +1288,7 @@ namespace Rewired.Data {
         }
 
         private void RefreshLayoutManager(int playerId) {
-            Player player = ReInput.players.GetPlayer(playerId);
+            Player 
             if (player == null) return;
             player.controllers.maps.layoutManager.Apply();
         }

@@ -67,7 +67,7 @@ namespace Rewired.Demos {
             buttonValues = new bool[buttonCount];
 
             // Find the controller we want to manage
-            Player player = ReInput.players.GetPlayer(playerId); // get the player
+            Player  // get the player
             controller = player.controllers.GetControllerWithTag<CustomController>(controllerTag); // get the controller
 
             if(controller == null) {
